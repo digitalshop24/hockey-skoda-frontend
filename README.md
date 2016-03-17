@@ -1,3 +1,4 @@
-bower install
-npm install
-sh start.sh
+bower install <br />
+npm install <br />
+sh start.sh <br />
+localhost:5555
