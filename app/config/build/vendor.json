@@ -1,0 +1,20 @@
+{
+    "scripts": {
+        "src": [
+            "bower_components/angular/angular.js",
+            "bower_components/angular-ui-router/release/angular-ui-router.js"
+        ],
+        "dest": "vendor.min.js"
+    },
+    "styles": {
+        "src": [
+            "bower_components/bootstrap/dist/css/bootstrap.min.css",
+            "node_modules/font-awesome/css/font-awesome.min.css"
+        ],
+        "dest": "vendor.min.css"
+    },
+    "fonts": {
+        "src": [
+        ]
+    }
+}

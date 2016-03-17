@@ -1,0 +1,7 @@
+public/*
+!public/index.html
+node_modules/*
+npm-debug.log
+.idea/*
+templates/
+bower_components/

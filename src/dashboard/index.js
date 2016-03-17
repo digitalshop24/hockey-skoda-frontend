@@ -1,0 +1,32 @@
+'use strict';
+
+import angular from 'angular';
+
+import headerCtrl from './header/controller.js';
+import news from './news/index';
+import tdrive from './test-drive/index';
+
+export default angular.module('dashboard',
+    [
+        news.name,
+        tdrive.name
+    ])
+    .config($stateProvider => {
+        $stateProvider
+            .state('dashboard', {
+                abstract: true,
+                views: {
+                    '': {
+                        template: require('./template.html')
+                    },
+                    'dashboard-header@dashboard': {
+                        template: require('./header/template.html'),
+                        controller: headerCtrl,
+                        controllerAs: 'ctrl'
+                    },
+                    'dashboard-footer@dashboard': {
+                        template: require('./footer/template.html')
+                    }
+                }
+            });
+    });

@@ -1,0 +1,278 @@
+body {
+  font-family: "SkodaProRegular", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialised; }
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0; }
+
+a, a:hover, a:focus {
+  text-decoration: none;
+  color: #000;
+  outline: none; }
+
+button, button:active, button:focus {
+  outline: none !important; }
+
+ul {
+  list-style-type: none; }
+
+h1 {
+  font-size: 6rem;
+  font-family: "SkodaProExtraBold", sans-serif; }
+
+h2 {
+  font-size: 5rem;
+  font-family: "SkodaProExtraBold", sans-serif; }
+
+h3 {
+  font-size: 4rem; }
+
+h4 {
+  font-size: 3rem; }
+
+h5 {
+  font-size: 2.5rem;
+  font-family: "SkodaProBold", sans-serif; }
+
+h6 {
+  font-size: 2rem;
+  font-family: "SkodaProBold", sans-serif; }
+
+.btn {
+  border: none;
+  border-radius: 2px;
+  font-family: "SkodaProBold", sans-serif;
+  transition-duration: 0.3s; }
+
+.main {
+  height: 50px;
+  min-width: 160px;
+  padding: 0 25px;
+  font-size: 1.4em; }
+
+.small {
+  height: 40px;
+  min-width: 110px;
+  padding: 0 20px;
+  font-size: 1.2em; }
+
+.tiny {
+  height: 30px;
+  min-width: 90px;
+  padding: 0 15px;
+  font-size: 1.2em; }
+
+.btn_primary {
+  color: #fff;
+  background-color: #4ba82e; }
+
+.btn_primary:hover {
+  background-color: #299926;
+  color: #fff; }
+
+.btn_primary:active {
+  color: #fff;
+  background-color: #4ba82e; }
+
+.btn_primary:focus {
+  color: #fff;
+  background-color: #4ba82e; }
+
+.btn_secondary {
+  color: #fff;
+  background-color: #000; }
+
+.btn_secondary:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000; }
+
+.btn_secondary:active {
+  color: #fff;
+  background-color: #000; }
+
+.btn_secondary:focus {
+  color: #fff;
+  background-color: #000; }
+
+.btn_secondary_inverse {
+  color: #000;
+  background-color: #fff; }
+
+.btn_secondary_inverse:hover {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff; }
+
+.btn_secondary_inverse:active {
+  color: #000;
+  background-color: #fff; }
+
+.btn_secondary_inverse:focus {
+  color: #000;
+  background-color: #fff; }
+
+.btn_disable {
+  background-color: #cccccc;
+  color: #fff; }
+
+.btn_disable:hover {
+  background-color: #cccccc;
+  color: #fff;
+  cursor: not-allowed; }
+
+.btn_disable:active {
+  background-color: #cccccc;
+  color: #fff;
+  box-shadow: none; }
+
+.btn_disable:focus {
+  background-color: #cccccc;
+  color: #fff;
+  box-shadow: none; }
+
+.btn_common {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000; }
+
+.btn_common:hover {
+  background-color: #000;
+  color: #fff; }
+
+.btn_common:active {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000; }
+
+.btn_common:focus {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000; }
+
+.btn_common_inverse {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff; }
+
+.btn_common_inverse:hover {
+  background-color: #fff;
+  color: #000; }
+
+.btn_common_inverse:active {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff; }
+
+.btn_common_inverse:focus {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff; }
+
+.btn_common_disable {
+  background-color: #fff;
+  color: #cccccc;
+  border: 1px solid #cccccc;
+  cursor: not-allowed; }
+
+.btn_common_disable:hover {
+  background-color: #fff;
+  color: #cccccc;
+  border: 1px solid #cccccc;
+  cursor: not-allowed; }
+
+.btn_common_disable:active {
+  background-color: #fff;
+  color: #cccccc;
+  border: 1px solid #cccccc;
+  cursor: not-allowed;
+  box-shadow: none; }
+
+.btn_common_disable:focus {
+  background-color: #fff;
+  color: #cccccc;
+  border: 1px solid #cccccc;
+  cursor: not-allowed;
+  box-shadow: none; }
+
+.btn_common_disable_inveres {
+  background-color: #000;
+  color: #555555;
+  border: 1px solid #555555;
+  cursor: not-allowed; }
+
+.btn_common_disable_inveres:hover {
+  background-color: #000;
+  color: #555555;
+  border: 1px solid #555555;
+  cursor: not-allowed; }
+
+.btn_common_disable_inveres:active {
+  background-color: #000;
+  color: #555555;
+  border: 1px solid #555555;
+  cursor: not-allowed;
+  box-shadow: none; }
+
+.btn_common_disable_inveres:focus {
+  background-color: #000;
+  color: #555555;
+  border: 1px solid #555555;
+  cursor: not-allowed;
+  box-shadow: none; }
+
+.link_default {
+  color: #4ba82e; }
+
+.link_default:hover {
+  color: #377220; }
+
+.input_default {
+  border-radius: 2px;
+  font-weight: "SkodaProRegular", sans-serif;
+  border: 1px solid #cccccc;
+  color: #000; }
+
+.input_large {
+  height: 60px;
+  padding-left: 20px;
+  font-size: 1.4em; }
+
+.input_medium {
+  height: 50px;
+  padding-left: 15px;
+  font-size: 1.4em; }
+
+.input_small {
+  height: 40px;
+  padding-left: 10px;
+  font-size: 1.2em; }
+
+.input_default:active, .input_default:focus {
+  border: 1px solid #4ba82e; }
+
+.select_default {
+  display: inline-block;
+  min-width: 170px;
+  padding-left: 20px;
+  background: url(../img/arrow.png) no-repeat transparent;
+  background-position: 95% 50%;
+  background-color: #fff;
+  margin-right: 20px;
+  -webkit-appearance: none;
+  /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none !important; }
+
+.select_default::-ms-expand {
+  display: none; }
