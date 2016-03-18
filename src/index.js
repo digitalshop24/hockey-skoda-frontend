@@ -10,6 +10,7 @@ import Api from './api';
 export default angular.module('app',
     [
         'ui.router',
+        'ui.bootstrap',
         index.name,
         dashboard.name
     ])

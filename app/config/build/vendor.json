@@ -1,14 +1,16 @@
 {
     "scripts": {
         "src": [
-            "bower_components/angular/angular.js",
-            "bower_components/angular-ui-router/release/angular-ui-router.js"
+            "bower_components/angular/angular.min.js",
+            "bower_components/angular-ui-router/release/angular-ui-router.min.js",
+            "bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"
         ],
         "dest": "vendor.min.js"
     },
     "styles": {
         "src": [
             "bower_components/bootstrap/dist/css/bootstrap.min.css",
+            "bower_components/angular-bootstrap/ui-bootstrap-css.js",
             "node_modules/font-awesome/css/font-awesome.min.css"
         ],
         "dest": "vendor.min.css"
