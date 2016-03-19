@@ -1,369 +1,514 @@
 @charset "UTF-8";
 header {
-  border-bottom: 1px solid #000;
-  font-family: "SkodaProBold", sans-serif; }
-  header .left_head img {
+    border-bottom: 1px solid #000;
+    font-family: "SkodaProBold", sans-serif;
+}
+
+header .left_head img {
     display: inline-block !important;
-    margin: 0 auto; }
-  header .left_head ul {
+    margin: 0 auto;
+}
+
+header .left_head ul {
     display: inline;
-    width: 100%; }
-    header .left_head ul li {
-      display: inline-block;
-      text-transform: uppercase;
-      padding: 22px 0 !important;
-      margin-left: 3.3%;
-      font-size: 1.41rem; }
-  header .left_head .active_li {
-    border-bottom: 3px solid #4ba82e; }
-  header .right_head {
+    width: 100%;
+}
+
+header .left_head ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 22px 0 !important;
+    margin-left: 3.3%;
+    font-size: 1.41rem;
+}
+
+header .left_head .active_li {
+    border-bottom: 3px solid #4ba82e;
+}
+
+header .right_head {
     position: absolute;
-    right: 0; }
-    header .right_head ul {
-      display: inline-flex; }
-      header .right_head ul li {
-        display: inline-flex;
-        text-transform: uppercase;
-        padding: 17px 19px !important;
-        border-left: 1px solid #cccccc; }
-  header .logo img {
+    right: 0;
+}
+
+header .right_head ul {
+    display: inline-flex;
+}
+
+header .right_head ul li {
+    display: inline-flex;
+    text-transform: uppercase;
+    padding: 17px 19px !important;
+    border-left: 1px solid #cccccc;
+}
+
+header .logo img {
     margin: 18px 0 17px 7px;
     margin-left: 7px;
     margin-top: 17px;
-    margin-bottom: 18px; }
+    margin-bottom: 18px;
+}
 
 footer {
-  background-color: #000; }
-  footer h6 {
+    background-color: #000;
+}
+
+footer h6 {
     text-transform: uppercase;
     margin-bottom: 15px;
     color: #fff;
-    margin-top: 60px; }
-  footer ul {
-    margin-top: 20px; }
-    footer ul li {
-      display: inline-block;
-      width: 20%; }
-      footer ul li a {
-        text-decoration: underline;
-        color: #fff;
-        font-size: 1.4rem;
-        font-family: "SkodaProBold", sans-serif; }
-      footer ul li a:hover {
-        color: #fff; }
-  footer .footer_margin_top {
+    margin-top: 60px;
+}
+
+footer ul {
+    margin-top: 20px;
+}
+
+footer ul li {
+    display: inline-block;
+    width: 20%;
+}
+
+footer ul li a {
+    text-decoration: underline;
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: "SkodaProBold", sans-serif;
+}
+
+footer ul li a:hover {
+    color: #fff;
+}
+
+footer .footer_margin_top {
     margin-top: 100px;
-    padding-bottom: 30px; }
-    footer .footer_margin_top img, footer .footer_margin_top p {
-      display: inline-block;
-      color: #fff; }
-    footer .footer_margin_top p {
-      margin-right: 40px;
-      font-size: 1.4rem;
-      font-family: "SkodaProLight", sans-serif; }
-    footer .footer_margin_top img {
-      margin-left: 10px; }
+    padding-bottom: 30px;
+}
+
+footer .footer_margin_top img, footer .footer_margin_top p {
+    display: inline-block;
+    color: #fff;
+}
+
+footer .footer_margin_top p {
+    margin-right: 40px;
+    font-size: 1.4rem;
+    font-family: "SkodaProLight", sans-serif;
+}
+
+footer .footer_margin_top img {
+    margin-left: 10px;
+}
 
 .wrapp_search input {
-  float: left;
-  width: 348px;
-  margin: 20px 0 24px 73px;
-  font-size: 1.6rem; }
+    float: left;
+    width: 348px;
+    margin: 20px 0 24px 73px;
+    font-size: 1.6rem;
+}
 
 .wrapp_search p {
-  display: inline;
-  float: right;
-  margin: 27px 76px 24px 0;
-  font-size: 1.6rem; }
-  .wrapp_search p span {
+    display: inline;
+    float: right;
+    margin: 27px 76px 24px 0;
+    font-size: 1.6rem;
+}
+
+.wrapp_search p span {
     font-family: "SkodaProBold", sans-serif;
-    margin-left: 7px; }
+    margin-left: 7px;
+}
 
 .wrapp_main_new {
-  background-image: url(img/resources/img/bg_star.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center; }
-  .wrapp_main_new .main_new {
-    margin-left: 72px; }
-    .wrapp_main_new .main_new h2 {
-      text-transform: uppercase;
-      color: #fff;
-      padding-top: 215px; }
-    .wrapp_main_new .main_new h6 {
-      margin: 30px 0 3px 0; }
-    .wrapp_main_new .main_new ul {
-      padding-top: 90px;
-      padding-bottom: 37px; }
-      .wrapp_main_new .main_new ul li {
-        font-size: 1.6rem;
-        font-family: "SkodaProBold", sans-serif; }
+    background-image: url(img/resources/img/bg_star.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.wrapp_main_new .main_new {
+    margin-left: 72px;
+}
+
+.wrapp_main_new .main_new h2 {
+    text-transform: uppercase;
+    color: #fff;
+    padding-top: 215px;
+}
+
+.wrapp_main_new .main_new h6 {
+    margin: 30px 0 3px 0;
+}
+
+.wrapp_main_new .main_new ul {
+    padding-top: 90px;
+    padding-bottom: 37px;
+}
+
+.wrapp_main_new .main_new ul li {
+    font-size: 1.6rem;
+    font-family: "SkodaProBold", sans-serif;
+}
 
 .wrapp_new .news {
-  margin-left: 70px;
-  margin-right: 70px; }
-  .wrapp_new .news .foto {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.wrapp_new .news .foto {
     margin-top: 30px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 300px; }
-  .wrapp_new .news .foto_set {
+    height: 300px;
+}
+
+.wrapp_new .news .foto_set {
     display: none;
     position: absolute;
     top: 70px;
     width: 90%;
     text-transform: uppercase;
     color: #fff;
-    height: auto; }
-  .wrapp_new .news .foto_set:hover {
-    display: inline-block; }
-  .wrapp_new .news .foto:hover + .foto_set {
-    display: inline-block; }
-  .wrapp_new .news .description {
+    height: auto;
+}
+
+.wrapp_new .news .foto_set:hover {
+    display: inline-block;
+}
+
+.wrapp_new .news .foto:hover + .foto_set {
+    display: inline-block;
+}
+
+.wrapp_new .news .description {
     width: 100%;
     height: 90px;
-    background-color: #ececec; }
-    .wrapp_new .news .description h6 {
-      padding-top: 10px;
-      padding-left: 10px; }
-    .wrapp_new .news .description p {
-      padding-top: 5px;
-      padding-left: 10px; }
+    background-color: #ececec;
+}
+
+.wrapp_new .news .description h6 {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.wrapp_new .news .description p {
+    padding-top: 5px;
+    padding-left: 10px;
+}
 
 .wrapp_new .show_to {
-  margin: 50px 0 100px 0; }
-  .wrapp_new .show_to .btn_common {
-    margin-left: 18%; }
-  .wrapp_new .show_to span {
+    margin: 50px 0 100px 0;
+}
+
+.wrapp_new .show_to .btn_common {
+    margin-left: 18%;
+}
+
+.wrapp_new .show_to span {
     margin-left: 10px;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+}
 
 .social {
-  background-image: url(img/resources/img/soc/social_bg.jpg);
-  min-height: 400px; }
-  .social h5 {
+    background-image: url(img/resources/img/soc/social_bg.jpg);
+    min-height: 400px;
+}
+
+.social h5 {
     color: #fff;
     font-family: "SkodaProLight", sans-serif;
-    margin-top: 100px; }
-  .social h2 {
+    margin-top: 100px;
+}
+
+.social h2 {
     color: #4ba82e;
     font-family: "SkodaProBold", sans-serif;
-    margin-top: 30px; }
-  .social p {
+    margin-top: 30px;
+}
+
+.social p {
     color: #fff;
     font-size: 1.5rem;
-    margin-top: 40px; }
+    margin-top: 40px;
+}
 
 .wrapper {
-  position: relative;
-  background: #fff;
-  overflow: hidden; }
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+}
 
 .timeline {
-  position: absolute;
-  width: 4px;
-  top: 25px;
-  bottom: 25px;
-  left: 50%;
-  margin-left: -2px;
-  background: #4ba82e;
-  transition: 600ms cubic-bezier(0.68, -0.67, 0.14, 1.51);
-  min-height: 1500px; }
+    position: absolute;
+    width: 4px;
+    top: 25px;
+    bottom: 25px;
+    left: 50%;
+    margin-left: -2px;
+    background: #4ba82e;
+    transition: 600ms cubic-bezier(0.68, -0.67, 0.14, 1.51);
+    min-height: 1500px;
+}
 
 .timeline:before {
-  content: "Сегодня";
-  width: 90px;
-  height: 90px;
-  position: absolute;
-  background: #4ba82e;
-  border-radius: 50%;
-  left: -43px;
-  top: 0;
-  text-align: center;
-  padding-top: 28px;
-  font-size: 1.9rem;
-  color: #fff; }
+    content: "Сегодня";
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    background: #4ba82e;
+    border-radius: 50%;
+    left: -43px;
+    top: 0;
+    text-align: center;
+    padding-top: 28px;
+    font-size: 1.9rem;
+    color: #fff;
+}
 
 .tag_right_hokey {
-  text-transform: uppercase;
-  font-family: "SkodaProBold", sans-serif;
-  font-size: 2rem;
-  background-color: #4ba82e;
-  padding: 10px 20px;
-  border-radius: 50px;
-  position: absolute;
-  color: #fff;
-  right: 24%;
-  margin-top: 42px; }
+    text-transform: uppercase;
+    font-family: "SkodaProBold", sans-serif;
+    font-size: 2rem;
+    background-color: #4ba82e;
+    padding: 10px 20px;
+    border-radius: 50px;
+    position: absolute;
+    color: #fff;
+    right: 24%;
+    margin-top: 42px;
+}
 
 .tag_right_hokey:before {
-  content: "";
-  width: 100px;
-  height: 1px;
-  background-color: #4ba82e;
-  position: absolute;
-  margin-left: -106px;
-  margin-top: 16px; }
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #4ba82e;
+    position: absolute;
+    margin-left: -106px;
+    margin-top: 16px;
+}
 
 .tag_left_hokey {
-  text-transform: uppercase;
-  font-family: "SkodaProBold", sans-serif;
-  font-size: 2rem;
-  background-color: #fff;
-  padding: 10px 20px;
-  border: 1px solid #cccccc;
-  border-radius: 50px;
-  position: absolute;
-  color: #cccccc;
-  left: 19%;
-  margin-top: 42px; }
+    text-transform: uppercase;
+    font-family: "SkodaProBold", sans-serif;
+    font-size: 2rem;
+    background-color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #cccccc;
+    border-radius: 50px;
+    position: absolute;
+    color: #cccccc;
+    left: 19%;
+    margin-top: 42px;
+}
 
 .momentscontainer {
-  padding-top: 160px;
-  margin: auto;
-  max-width: 1200px;
-  transition: 800ms cubic-bezier(0.68, -0.67, 0.14, 1.51);
-  margin-bottom: 200px; }
-  .momentscontainer .min_h_op {
-    margin-top: 15px; }
-  .momentscontainer .min_h {
-    margin-top: 40px; }
-  .momentscontainer .min_h_1x {
-    margin-top: 80px; }
-  .momentscontainer .min_h_2x {
-    margin-top: 160px; }
-  .momentscontainer .min_h_3x {
-    margin-top: 240px; }
-  .momentscontainer .post {
+    padding-top: 160px;
+    margin: auto;
+    max-width: 1200px;
+    transition: 800ms cubic-bezier(0.68, -0.67, 0.14, 1.51);
+    margin-bottom: 200px;
+}
+
+.momentscontainer .min_h_op {
+    margin-top: 15px;
+}
+
+.momentscontainer .min_h {
+    margin-top: 40px;
+}
+
+.momentscontainer .min_h_1x {
+    margin-top: 80px;
+}
+
+.momentscontainer .min_h_2x {
+    margin-top: 160px;
+}
+
+.momentscontainer .min_h_3x {
+    margin-top: 240px;
+}
+
+.momentscontainer .post {
     text-align: center;
-    position: relative; }
-    .momentscontainer .post .post_content {
-      width: 40%;
-      position: absolute;
-      top: 0;
-      padding: 20px;
-      border: 1px solid #cccccc;
-      border-radius: 2px;
-      z-index: 2; }
-      .momentscontainer .post .post_content .title img {
-        float: left; }
-      .momentscontainer .post .post_content .title h5 {
-        float: left;
-        margin-left: 20px;
-        margin-right: 20px;
-        font-family: "SkodaProLight", sans-serif; }
-      .momentscontainer .post .post_content .title p {
-        margin-top: 0;
-        font-family: "SkodaProBold", sans-serif;
-        font-size: 1.6rem; }
-      .momentscontainer .post .post_content .main_content {
-        font-size: 1.5rem;
-        padding-bottom: 10px;
-        color: #555555;
-        min-height: 150px; }
-        .momentscontainer .post .post_content .main_content p {
-          margin-top: 20px;
-          margin-bottom: 20px; }
-        .momentscontainer .post .post_content .main_content img {
-          margin: 10px auto; }
-      .momentscontainer .post .post_content .dop_info {
-        border-top: 1px solid #cccccc; }
-        .momentscontainer .post .post_content .dop_info li {
-          display: inline-block;
-          font-size: 1.6rem;
-          margin-top: 10px;
-          padding-top: 5px;
-          padding-bottom: 5px; }
-        .momentscontainer .post .post_content .dop_info li:nth-child(1) {
-          padding-right: 8%; }
-        .momentscontainer .post .post_content .dop_info li:nth-child(2) {
-          padding-left: 8%;
-          padding-right: 8%;
-          border-right: 1px solid #cccccc;
-          border-left: 1px solid #cccccc; }
-        .momentscontainer .post .post_content .dop_info li:nth-child(3) {
-          padding-left: 8%; }
-    .momentscontainer .post .post_content.right {
-      right: 4%;
-      text-align: left; }
-    .momentscontainer .post .post_content.left {
-      left: 4%;
-      text-align: left; }
-    .momentscontainer .post .post_content.right:after {
-      content: " ";
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      top: 30px;
-      left: -11px;
-      border-bottom: 1px solid #cccccc;
-      border-left: 1px solid #cccccc;
-      transform: rotate(45deg);
-      background-color: #fff; }
-    .momentscontainer .post .post_content.left:after {
-      content: " ";
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      top: 30px;
-      right: -11px;
-      border-bottom: 1px solid #cccccc;
-      border-left: 1px solid #cccccc;
-      transform: rotate(-135deg);
-      background-color: #fff; }
+    position: relative;
+}
+
+.momentscontainer .post .post_content {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    z-index: 2;
+}
+
+.momentscontainer .post .post_content .title img {
+    float: left;
+}
+
+.momentscontainer .post .post_content .title h5 {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: "SkodaProLight", sans-serif;
+}
+
+.momentscontainer .post .post_content .title p {
+    margin-top: 0;
+    font-family: "SkodaProBold", sans-serif;
+    font-size: 1.6rem;
+}
+
+.momentscontainer .post .post_content .main_content {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    color: #555555;
+    min-height: 150px;
+}
+
+.momentscontainer .post .post_content .main_content p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.momentscontainer .post .post_content .main_content img {
+    margin: 10px auto;
+}
+
+.momentscontainer .post .post_content .dop_info {
+    border-top: 1px solid #cccccc;
+}
+
+.momentscontainer .post .post_content .dop_info li {
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.momentscontainer .post .post_content .dop_info li:nth-child(1) {
+    padding-right: 8%;
+}
+
+.momentscontainer .post .post_content .dop_info li:nth-child(2) {
+    padding-left: 8%;
+    padding-right: 8%;
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+}
+
+.momentscontainer .post .post_content .dop_info li:nth-child(3) {
+    padding-left: 8%;
+}
+
+.momentscontainer .post .post_content.right {
+    right: 4%;
+    text-align: left;
+}
+
+.momentscontainer .post .post_content.left {
+    left: 4%;
+    text-align: left;
+}
+
+.momentscontainer .post .post_content.right:after {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 30px;
+    left: -11px;
+    border-bottom: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    transform: rotate(45deg);
+    background-color: #fff;
+}
+
+.momentscontainer .post .post_content.left:after {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 30px;
+    right: -11px;
+    border-bottom: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    transform: rotate(-135deg);
+    background-color: #fff;
+}
 
 .wrapp_toggle h4 {
-  display: inline-block;
-  text-transform: uppercase;
-  color: #4ba82e;
-  font-family: "SkodaProBold", sans-serif;
-  position: relative;
-  top: -6px; }
+    display: inline-block;
+    text-transform: uppercase;
+    color: #4ba82e;
+    font-family: "SkodaProBold", sans-serif;
+    position: relative;
+    top: -6px;
+}
 
 .wrapp_toggle ul {
-  margin-top: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #cccccc; }
-  .wrapp_toggle ul li {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.wrapp_toggle ul li {
     display: inline-block;
     width: 120px;
     height: 50px;
     border: 1px solid #cccccc;
     border-radius: 50px;
     text-align: right;
-    margin-right: 60px; }
-    .wrapp_toggle ul li .on {
-      position: absolute;
-      margin-left: -62px;
-      margin-top: 12.5px;
-      z-index: 2;
-      color: #fff;
-      font-family: "SkodaProBold", sans-serif; }
-    .wrapp_toggle ul li .off {
-      position: absolute;
-      margin-left: -38px;
-      margin-top: 12.5px;
-      z-index: 2;
-      color: #fff;
-      font-family: "SkodaProBold", sans-serif; }
-    .wrapp_toggle ul li img {
-      position: absolute;
-      margin-left: -100px;
-      z-index: 2;
-      margin-top: -2px;
-      margin-left: -65px; }
-  .wrapp_toggle ul li:nth-child(1) {
+    margin-right: 60px;
+}
+
+.wrapp_toggle ul li .on {
+    position: absolute;
+    margin-left: -62px;
+    margin-top: 12.5px;
+    z-index: 2;
+    color: #fff;
+    font-family: "SkodaProBold", sans-serif;
+}
+
+.wrapp_toggle ul li .off {
+    position: absolute;
+    margin-left: -38px;
+    margin-top: 12.5px;
+    z-index: 2;
+    color: #fff;
+    font-family: "SkodaProBold", sans-serif;
+}
+
+.wrapp_toggle ul li img {
+    position: absolute;
+    margin-left: -100px;
+    z-index: 2;
+    margin-top: -2px;
+    margin-left: -65px;
+}
+
+.wrapp_toggle ul li:nth-child(1) {
     border: none;
-    width: auto; }
-    .wrapp_toggle ul li:nth-child(1) label {
-      margin-left: 30px; }
+    width: auto;
+}
+
+.wrapp_toggle ul li:nth-child(1) label {
+    margin-left: 30px;
+}
 
 .wrapp_toggle input.sw {
-  opacity: 0;
-  position: absolute;
-  left: -9999px; }
-  .wrapp_toggle input.sw + label {
+    opacity: 0;
+    position: absolute;
+    left: -9999px;
+}
+
+.wrapp_toggle input.sw + label {
     margin-top: 9px;
     margin-right: 10px;
     user-select: none;
@@ -374,138 +519,200 @@ footer {
     position: relative;
     border-radius: 60px;
     background-color: #cccccc;
-    /* White toggle */ }
-    .wrapp_toggle input.sw + label:before {
-      content: "";
-      position: absolute;
-      display: block;
-      height: 26px;
-      width: 26px;
-      top: 0;
-      left: 0;
-      border-radius: 13px;
-      background: rgba(76, 217, 100, 0);
-      transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1); }
-    .wrapp_toggle input.sw + label:after {
-      content: " ";
-      position: absolute;
-      display: block;
-      height: 24px;
-      width: 29px;
-      top: 50%;
-      margin-top: -12px;
-      left: 1px;
-      border-radius: 60px;
-      background: #fff;
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0px 0 rgba(0, 0, 0, 0.04), 0 4px 9px rgba(0, 0, 0, 0.13), 0 3px 3px rgba(0, 0, 0, 0.05);
-      transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
-      z-index: 3; }
-    .wrapp_toggle input.sw + label span {
-      white-space: nowrap;
-      height: 26px;
-      line-height: 26px;
-      margin-left: 60px;
-      padding-left: 16px; }
-  .wrapp_toggle input.sw:checked + label:before {
+    /* White toggle */
+}
+
+.wrapp_toggle input.sw + label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 26px;
+    width: 26px;
+    top: 0;
+    left: 0;
+    border-radius: 13px;
+    background: rgba(76, 217, 100, 0);
+    transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+}
+
+.wrapp_toggle input.sw + label:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    height: 24px;
+    width: 29px;
+    top: 50%;
+    margin-top: -12px;
+    left: 1px;
+    border-radius: 60px;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0px 0 rgba(0, 0, 0, 0.04), 0 4px 9px rgba(0, 0, 0, 0.13), 0 3px 3px rgba(0, 0, 0, 0.05);
+    transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+    z-index: 3;
+}
+
+.wrapp_toggle input.sw + label span {
+    white-space: nowrap;
+    height: 26px;
+    line-height: 26px;
+    margin-left: 60px;
+    padding-left: 16px;
+}
+
+.wrapp_toggle input.sw:checked + label:before {
     width: 60px;
     background: #4ba82e;
-    transition: width 0.2s cubic-bezier(0, 0, 0, 0.1) !important; }
-  .wrapp_toggle input.sw:checked + label:after {
-    left: 30px; }
-  .wrapp_toggle input.sw:checked + label {
+    transition: width 0.2s cubic-bezier(0, 0, 0, 0.1) !important;
+}
+
+.wrapp_toggle input.sw:checked + label:after {
+    left: 30px;
+}
+
+.wrapp_toggle input.sw:checked + label {
     box-shadow: inset 0 0 0px 25px #e4e4e4;
-    transition: box-shadow 2.5s cubic-bezier(0, 1.2, 0.94, 0.95); }
+    transition: box-shadow 2.5s cubic-bezier(0, 1.2, 0.94, 0.95);
+}
 
 .add_topic {
-  background-color: #efefef; }
-  .add_topic button {
-    margin: 40px 10px; }
-  .add_topic p {
+    background-color: #efefef;
+}
+
+.add_topic button {
+    margin: 40px 10px;
+}
+
+.add_topic p {
     display: inline-block;
     color: #757575;
     position: relative;
     top: 10px;
-    font-size: 1.4rem; }
-    .add_topic p a {
-      color: #000; }
+    font-size: 1.4rem;
+}
+
+.add_topic p a {
+    color: #000;
+}
 
 .topics .post_hover:hover {
-  background-color: #f8f8f8; }
+    background-color: #f8f8f8;
+}
 
 .topics .menu_border_bottom {
-  border-bottom: 1px solid #cccccc; }
+    border-bottom: 1px solid #cccccc;
+}
 
 .topics .wrapp_filt {
-  padding: 20px 0; }
-  .topics .wrapp_filt ul li {
+    padding: 20px 0;
+}
+
+.topics .wrapp_filt ul li {
     display: inline-block;
     font-size: 1.4rem;
     margin-left: 20px;
-    font-family: "SkodaProBold", sans-serif; }
-    .topics .wrapp_filt ul li a {
-      color: #cccccc; }
-    .topics .wrapp_filt ul li .active {
-      color: #000; }
+    font-family: "SkodaProBold", sans-serif;
+}
+
+.topics .wrapp_filt ul li a {
+    color: #cccccc;
+}
+
+.topics .wrapp_filt ul li .active {
+    color: #000;
+}
 
 .topics .wrapp_topic {
-  float: left;
-  padding: 20px 0 20px 35px; }
-  .topics .wrapp_topic h4 {
-    font-family: "SkodaProBold", sans-serif; }
-  .topics .wrapp_topic p {
-    color: #cccccc; }
-    .topics .wrapp_topic p span {
-      color: #000; }
-  .topics .wrapp_topic ul {
-    margin-top: 20px; }
-    .topics .wrapp_topic ul li {
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-      font-family: "SkodaProBold", sans-serif; }
+    float: left;
+    padding: 20px 0 20px 35px;
+}
+
+.topics .wrapp_topic h4 {
+    font-family: "SkodaProBold", sans-serif;
+}
+
+.topics .wrapp_topic p {
+    color: #cccccc;
+}
+
+.topics .wrapp_topic p span {
+    color: #000;
+}
+
+.topics .wrapp_topic ul {
+    margin-top: 20px;
+}
+
+.topics .wrapp_topic ul li {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-family: "SkodaProBold", sans-serif;
+}
 
 .topics .wrapp_col {
-  float: right;
-  padding-top: 27px; }
-  .topics .wrapp_col ul li {
-    display: inline-block; }
+    float: right;
+    padding-top: 27px;
+}
+
+.topics .wrapp_col ul li {
+    display: inline-block;
+}
 
 .topics .wrapp_static {
-  text-align: right;
-  margin-top: 10px;
-  padding-right: 35px; }
-  .topics .wrapp_static ul li {
+    text-align: right;
+    margin-top: 10px;
+    padding-right: 35px;
+}
+
+.topics .wrapp_static ul li {
     display: inline-block;
     font-size: 3rem;
     color: #000;
     text-align: center;
-    margin-left: 30px; }
-    .topics .wrapp_static ul li p {
-      color: #cccccc;
-      font-size: 1.4rem; }
+    margin-left: 30px;
+}
+
+.topics .wrapp_static ul li p {
+    color: #cccccc;
+    font-size: 1.4rem;
+}
 
 .topics .load_more {
-  margin: 40px 0; }
+    margin: 40px 0;
+}
 
 .wrapp_shet .fix_bottom {
-  margin-bottom: 30px; }
+    margin-bottom: 30px;
+}
 
 .wrapp_shet .mounth {
-  padding: 20px 0 70px 0; }
-  .wrapp_shet .mounth .mounth_arrow {
+    padding: 20px 0 70px 0;
+}
+
+.wrapp_shet .mounth .mounth_arrow {
     display: inline-block;
-    margin-top: 6px; }
-    .wrapp_shet .mounth .mounth_arrow li {
-      display: inline-block; }
-    .wrapp_shet .mounth .mounth_arrow li:nth-child(2) {
-      position: relative;
-      top: -7px;
-      margin: 0 10px; }
-  .wrapp_shet .mounth ul {
-    display: inline-block; }
-  .wrapp_shet .mounth p {
+    margin-top: 6px;
+}
+
+.wrapp_shet .mounth .mounth_arrow li {
     display: inline-block;
-    font-size: 1.4rem; }
-  .wrapp_shet .mounth select {
+}
+
+.wrapp_shet .mounth .mounth_arrow li:nth-child(2) {
+    position: relative;
+    top: -7px;
+    margin: 0 10px;
+}
+
+.wrapp_shet .mounth ul {
+    display: inline-block;
+}
+
+.wrapp_shet .mounth p {
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.wrapp_shet .mounth select {
     display: inline-block;
     min-width: 170px;
     padding-left: 20px;
@@ -520,568 +727,868 @@ footer {
     text-overflow: '';
     /* for IE */
     -ms-appearance: none;
-    appearance: none !important; }
-  .wrapp_shet .mounth select::-ms-expand {
-    display: none; }
-  .wrapp_shet .mounth .group {
-    margin-right: 6px; }
-    .wrapp_shet .mounth .group li:nth-child(1) {
-      position: relative;
-      top: 13px; }
-    .wrapp_shet .mounth .group li:nth-child(2) {
-      position: relative;
-      bottom: -3px; }
+    appearance: none !important;
+}
+
+.wrapp_shet .mounth select::-ms-expand {
+    display: none;
+}
+
+.wrapp_shet .mounth .group {
+    margin-right: 6px;
+}
+
+.wrapp_shet .mounth .group li:nth-child(1) {
+    position: relative;
+    top: 13px;
+}
+
+.wrapp_shet .mounth .group li:nth-child(2) {
+    position: relative;
+    bottom: -3px;
+}
 
 .wrapp_shet .tabel_game .date_game {
-  margin-bottom: 30px;
-  padding-top: 20px;
-  border-top: 1px solid #cccccc; }
-  .wrapp_shet .tabel_game .date_game h3 {
+    margin-bottom: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #cccccc;
+}
+
+.wrapp_shet .tabel_game .date_game h3 {
     float: left;
-    color: #757575; }
-  .wrapp_shet .tabel_game .date_game p {
+    color: #757575;
+}
+
+.wrapp_shet .tabel_game .date_game p {
     font-size: 1.2rem;
     margin-left: 30px;
-    color: #757575; }
-  .wrapp_shet .tabel_game .date_game .b {
-    font-family: "SkodaProBold", sans-serif; }
+    color: #757575;
+}
+
+.wrapp_shet .tabel_game .date_game .b {
+    font-family: "SkodaProBold", sans-serif;
+}
 
 .wrapp_shet .tabel_game .game {
-  margin-bottom: 30px; }
-  .wrapp_shet .tabel_game .game h3 {
+    margin-bottom: 30px;
+}
+
+.wrapp_shet .tabel_game .game h3 {
     font-family: "SkodaProBold", sans-serif;
     padding-top: 30px;
-    letter-spacing: 10px; }
-  .wrapp_shet .tabel_game .game h6 {
+    letter-spacing: 10px;
+}
+
+.wrapp_shet .tabel_game .game h6 {
     font-size: 1.7rem;
-    padding-top: 30px; }
-  .wrapp_shet .tabel_game .game p {
+    padding-top: 30px;
+}
+
+.wrapp_shet .tabel_game .game p {
     font-size: 1.4rem;
     padding-top: 20px;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+}
 
 .wrapp_shet .tabel_game .active {
-  background-color: #4ba82e; }
-  .wrapp_shet .tabel_game .active h3 {
-    color: #fff; }
-  .wrapp_shet .tabel_game .active h6 {
-    color: #fff; }
-  .wrapp_shet .tabel_game .active p {
-    color: #fff; }
+    background-color: #4ba82e;
+}
+
+.wrapp_shet .tabel_game .active h3 {
+    color: #fff;
+}
+
+.wrapp_shet .tabel_game .active h6 {
+    color: #fff;
+}
+
+.wrapp_shet .tabel_game .active p {
+    color: #fff;
+}
 
 .wrapp_shet .tabel_game .last {
-  background-color: #e8e8e8; }
-  .wrapp_shet .tabel_game .last h3 {
-    color: #4ba82e; }
-  .wrapp_shet .tabel_game .last h6 {
-    color: #000; }
-  .wrapp_shet .tabel_game .last p {
-    color: #555555; }
+    background-color: #e8e8e8;
+}
+
+.wrapp_shet .tabel_game .last h3 {
+    color: #4ba82e;
+}
+
+.wrapp_shet .tabel_game .last h6 {
+    color: #000;
+}
+
+.wrapp_shet .tabel_game .last p {
+    color: #555555;
+}
 
 .wrapp_shet .tabel_game .next {
-  background-color: #f1f1f1; }
+    background-color: #f1f1f1;
+}
 
 .about_first {
-  background-image: url("img/resources/img/about/bg_first.jpg");
-  background-repeat: no-repeat; }
-  .about_first .wrapp_titel {
+    background-image: url("img/resources/img/about/bg_first.jpg");
+    background-repeat: no-repeat;
+}
+
+.about_first .wrapp_titel {
     float: right;
     margin-right: 9%;
-    color: #5d5d5d; }
-    .about_first .wrapp_titel h4 {
-      color: #5d5d5d;
-      margin-bottom: 30px;
-      margin-top: 245px;
-      font-size: 2.4rem; }
-    .about_first .wrapp_titel h2 {
-      margin-bottom: 31px;
-      font-size: 4.7rem; }
-    .about_first .wrapp_titel p {
-      font-size: 1.4rem;
-      margin-bottom: 270px; }
+    color: #5d5d5d;
+}
+
+.about_first .wrapp_titel h4 {
+    color: #5d5d5d;
+    margin-bottom: 30px;
+    margin-top: 245px;
+    font-size: 2.4rem;
+}
+
+.about_first .wrapp_titel h2 {
+    margin-bottom: 31px;
+    font-size: 4.7rem;
+}
+
+.about_first .wrapp_titel p {
+    font-size: 1.4rem;
+    margin-bottom: 270px;
+}
 
 .form {
-  color: #5d5d5d; }
-  .form h4 {
+    color: #5d5d5d;
+}
+
+.form h4 {
     margin: 80px 0 60px 0;
     color: #7d7d7d;
-    font-family: "SkodaProLight", sans-serif; }
-  .form input {
+    font-family: "SkodaProLight", sans-serif;
+}
+
+.form input {
     margin-bottom: 38px;
     display: block;
-    width: 350px; }
-  .form .left {
-    padding-left: 9%; }
-  .form .form_grey {
+    width: 350px;
+}
+
+.form .left {
+    padding-left: 9%;
+}
+
+.form .form_grey {
     background-color: #f1f1f1;
-    padding-bottom: 70px; }
-  .form .form_white {
+    padding-bottom: 70px;
+}
+
+.form .form_white {
     background-color: #fff;
-    padding-bottom: 70px; }
-    .form .form_white ul {
-      margin-bottom: 30px; }
-      .form .form_white ul li {
-        display: inline-block;
-        margin: 0 70px; }
-      .form .form_white ul li:nth-child(1) {
-        margin-right: 70px;
-        margin-left: 0; }
-      .form .form_white ul li:nth-child(4) {
-        margin-right: 0;
-        margin-left: 70px; }
-  .form .btn {
-    margin: 50px 0; }
+    padding-bottom: 70px;
+}
+
+.form .form_white ul {
+    margin-bottom: 30px;
+}
+
+.form .form_white ul li {
+    display: inline-block;
+    margin: 0 70px;
+}
+
+.form .form_white ul li:nth-child(1) {
+    margin-right: 70px;
+    margin-left: 0;
+}
+
+.form .form_white ul li:nth-child(4) {
+    margin-right: 0;
+    margin-left: 70px;
+}
+
+.form .btn {
+    margin: 50px 0;
+}
 
 .wrapp_mainpage_slider #owl-main .item img {
-  display: block;
-  width: 100%;
-  height: auto; }
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 .wrapp_mainpage_slider .owl-pagination {
-  position: absolute;
-  left: 46%;
-  margin-top: -60px; }
+    position: absolute;
+    left: 46%;
+    margin-top: -60px;
+}
 
 .wrapp_mainpage_slider #owl-main-2 .item {
-  min-height: 500px; }
+    min-height: 500px;
+}
 
 .wrapp_mainpage_slider #owl-main-2 .owl-prev {
-  background-image: url("img/resources/img/arrow_left_white.png");
-  position: absolute;
-  left: 20px;
-  top: 35vh; }
+    background-image: url("img/resources/img/arrow_left_white.png");
+    position: absolute;
+    left: 20px;
+    top: 35vh;
+}
 
 .wrapp_mainpage_slider #owl-main-2 .owl-next {
-  background-image: url("img/resources/img/arrow_right_white.png");
-  position: absolute;
-  right: 20px;
-  top: 35vh; }
+    background-image: url("img/resources/img/arrow_right_white.png");
+    position: absolute;
+    right: 20px;
+    top: 35vh;
+}
 
 .wrapp_mainpage_slider .item {
-  min-height: 700px;
-  color: #fff;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .wrapp_mainpage_slider .item h5 {
+    min-height: 700px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapp_mainpage_slider .item h5 {
     font-family: "SkodaProLight", sans-serif;
-    margin: 100px 0 10px 0; }
-  .wrapp_mainpage_slider .item h2 {
-    margin: 0 0 20px 0; }
-  .wrapp_mainpage_slider .item p {
-    font-size: 1.4rem; }
-  .wrapp_mainpage_slider .item .left {
+    margin: 100px 0 10px 0;
+}
+
+.wrapp_mainpage_slider .item h2 {
+    margin: 0 0 20px 0;
+}
+
+.wrapp_mainpage_slider .item p {
+    font-size: 1.4rem;
+}
+
+.wrapp_mainpage_slider .item .left {
     float: left;
-    margin-left: 150px; }
-  .wrapp_mainpage_slider .item .right {
+    margin-left: 150px;
+}
+
+.wrapp_mainpage_slider .item .right {
     float: right;
-    margin-right: 150px; }
-    .wrapp_mainpage_slider .item .right ul li {
-      font-size: 1.4rem;
-      margin-bottom: 5px; }
-      .wrapp_mainpage_slider .item .right ul li a {
-        text-decoration: underline;
-        color: #fff; }
-  .wrapp_mainpage_slider .item .stars {
-    margin-left: 150px; }
-    .wrapp_mainpage_slider .item .stars h5 {
-      padding-top: 160px;
-      margin: 0; }
-    .wrapp_mainpage_slider .item .stars h2 {
-      margin-top: 60px;
-      text-transform: uppercase; }
-      .wrapp_mainpage_slider .item .stars h2 a {
-        color: #fff; }
-    .wrapp_mainpage_slider .item .stars h6 {
-      margin-top: 20px;
-      color: #000; }
-    .wrapp_mainpage_slider .item .stars p {
-      font-size: 1.4rem;
-      color: #000; }
-    .wrapp_mainpage_slider .item .stars ul {
-      margin-top: 45px;
-      padding-bottom: 80px; }
-      .wrapp_mainpage_slider .item .stars ul li {
-        margin-top: 15px;
-        font-size: 1.6rem;
-        color: #000;
-        font-family: "SkodaProBold", sans-serif; }
+    margin-right: 150px;
+}
+
+.wrapp_mainpage_slider .item .right ul li {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.wrapp_mainpage_slider .item .right ul li a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.wrapp_mainpage_slider .item .stars {
+    margin-left: 150px;
+}
+
+.wrapp_mainpage_slider .item .stars h5 {
+    padding-top: 160px;
+    margin: 0;
+}
+
+.wrapp_mainpage_slider .item .stars h2 {
+    margin-top: 60px;
+    text-transform: uppercase;
+}
+
+.wrapp_mainpage_slider .item .stars h2 a {
+    color: #fff;
+}
+
+.wrapp_mainpage_slider .item .stars h6 {
+    margin-top: 20px;
+    color: #000;
+}
+
+.wrapp_mainpage_slider .item .stars p {
+    font-size: 1.4rem;
+    color: #000;
+}
+
+.wrapp_mainpage_slider .item .stars ul {
+    margin-top: 45px;
+    padding-bottom: 80px;
+}
+
+.wrapp_mainpage_slider .item .stars ul li {
+    margin-top: 15px;
+    font-size: 1.6rem;
+    color: #000;
+    font-family: "SkodaProBold", sans-serif;
+}
 
 .wrapp_mainpage_slider .owl-theme .owl-controls .owl-page.active span, .wrapp_mainpage_slider .owl-theme .owl-controls .owl-theme .owl-controls.clickable .owl-page:hover span {
-  background-color: #4ba82e !important; }
+    background-color: #4ba82e !important;
+}
 
 .wrapp_mainpage_slider .owl-theme .owl-controls .owl-page span {
-  background-color: #fff !important;
-  opacity: 1 !important; }
+    background-color: #fff !important;
+    opacity: 1 !important;
+}
 
 .wrapp_mainpage_slider .owl-theme .owl-controls .owl-buttons div {
-  border-radius: 0;
-  background-color: RGBA(134, 151, 145, 0);
-  height: 47px;
-  width: 25px; }
+    border-radius: 0;
+    background-color: RGBA(134, 151, 145, 0);
+    height: 47px;
+    width: 25px;
+}
 
 .wrapp_mainpage_slider .owl-theme .owl-controls .owl-buttons .owl-prev {
-  background-image: url("img/resources/img/arrow_left_white.png");
-  position: absolute;
-  left: 20px;
-  top: 30vh; }
+    background-image: url("img/resources/img/arrow_left_white.png");
+    position: absolute;
+    left: 20px;
+    top: 30vh;
+}
 
 .wrapp_mainpage_slider .owl-theme .owl-controls .owl-buttons .owl-next {
-  background-image: url("img/resources/img/arrow_right_white.png");
-  position: absolute;
-  right: 20px;
-  top: 30vh; }
+    background-image: url("img/resources/img/arrow_right_white.png");
+    position: absolute;
+    right: 20px;
+    top: 30vh;
+}
 
 .wrapp_mainpage_new h3 {
-  color: #4ba82e; }
-  .wrapp_mainpage_new h3 span {
-    font-size: 1.4rem; }
+    color: #4ba82e;
+}
+
+.wrapp_mainpage_new h3 span {
+    font-size: 1.4rem;
+}
 
 .wrapp_mainpage_data {
-  padding: 50px 0px 50px 30px; }
-  .wrapp_mainpage_data ul {
+    padding: 50px 0px 50px 30px;
+}
+
+.wrapp_mainpage_data ul {
     display: inline-block;
     width: 90%;
-    margin: 0 auto; }
-    .wrapp_mainpage_data ul li {
-      display: inline-block;
-      font-size: 2rem;
-      width: 9%; }
-      .wrapp_mainpage_data ul li a:hover {
-        color: #4ba82e; }
-      .wrapp_mainpage_data ul li .match_hover {
-        display: none;
-        border: 1px solid #4ba82e;
-        z-index: 1000;
-        background-color: #fff;
-        position: absolute;
-        margin-left: -6%;
-        margin-top: 2%; }
-        .wrapp_mainpage_data ul li .match_hover ul {
-          width: auto;
-          padding: 10px 30px; }
-          .wrapp_mainpage_data ul li .match_hover ul li {
-            display: inline-block;
-            width: auto; }
-      .wrapp_mainpage_data ul li .match_hover:after {
-        content: " ";
-        width: 20px;
-        height: 20px;
-        background-color: #fff;
-        border-top: 1px solid #4ba82e;
-        border-left: 1px solid #4ba82e;
-        transform: rotate(45deg);
-        position: absolute;
-        z-index: 1001;
-        margin-left: -55%;
-        margin-top: -19%; }
-    .wrapp_mainpage_data ul li:hover .match_hover {
-      display: block; }
-    .wrapp_mainpage_data ul .today a {
-      color: #4ba82e; }
-    .wrapp_mainpage_data ul .today:after {
-      content: " ";
-      color: #4ba82e;
-      position: absolute;
-      margin-top: 36px;
-      margin-left: -0.8%;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background-color: #4ba82e; }
+    margin: 0 auto;
+}
+
+.wrapp_mainpage_data ul li {
+    display: inline-block;
+    font-size: 2rem;
+    width: 9%;
+}
+
+.wrapp_mainpage_data ul li a:hover {
+    color: #4ba82e;
+}
+
+.wrapp_mainpage_data ul li .match_hover {
+    display: none;
+    border: 1px solid #4ba82e;
+    z-index: 1000;
+    background-color: #fff;
+    position: absolute;
+    margin-left: -6%;
+    margin-top: 2%;
+}
+
+.wrapp_mainpage_data ul li .match_hover ul {
+    width: auto;
+    padding: 10px 30px;
+}
+
+.wrapp_mainpage_data ul li .match_hover ul li {
+    display: inline-block;
+    width: auto;
+}
+
+.wrapp_mainpage_data ul li .match_hover:after {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-top: 1px solid #4ba82e;
+    border-left: 1px solid #4ba82e;
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: 1001;
+    margin-left: -55%;
+    margin-top: -19%;
+}
+
+.wrapp_mainpage_data ul li:hover .match_hover {
+    display: block;
+}
+
+.wrapp_mainpage_data ul .today a {
+    color: #4ba82e;
+}
+
+.wrapp_mainpage_data ul .today:after {
+    content: " ";
+    color: #4ba82e;
+    position: absolute;
+    margin-top: 36px;
+    margin-left: -0.8%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #4ba82e;
+}
 
 .wrapp_mainpage_menublock .wrapp_block {
-  padding: 1px; }
-  .wrapp_mainpage_menublock .wrapp_block .block {
+    padding: 1px;
+}
+
+.wrapp_mainpage_menublock .wrapp_block .block {
     background-repeat: no-repeat;
-    background-size: cover; }
-    .wrapp_mainpage_menublock .wrapp_block .block h2 {
-      padding: 80px 0 80px 40px;
-      text-transform: uppercase; }
-      .wrapp_mainpage_menublock .wrapp_block .block h2 a {
-        color: #fff; }
+    background-size: cover;
+}
+
+.wrapp_mainpage_menublock .wrapp_block .block h2 {
+    padding: 80px 0 80px 40px;
+    text-transform: uppercase;
+}
+
+.wrapp_mainpage_menublock .wrapp_block .block h2 a {
+    color: #fff;
+}
 
 .wrapp_mainpage_present h2 {
-  color: #4ba82e;
-  margin: 70px 0 30px 0;
-  text-transform: uppercase; }
+    color: #4ba82e;
+    margin: 70px 0 30px 0;
+    text-transform: uppercase;
+}
 
 .wrapp_mainpage_present p {
-  font-size: 1.4rem;
-  margin-bottom: 60px; }
+    font-size: 1.4rem;
+    margin-bottom: 60px;
+}
 
 .wrapp_mainpage_present ul {
-  margin-top: 70px; }
-  .wrapp_mainpage_present ul li {
+    margin-top: 70px;
+}
+
+.wrapp_mainpage_present ul li {
     display: inline-block;
-    width: 33%; }
-    .wrapp_mainpage_present ul li h3 {
-      font-family: "SkodaProBold", sans-serif; }
-    .wrapp_mainpage_present ul li h6 {
-      color: #4ba82e;
-      margin-top: 30px;
-      margin-bottom: 20px; }
+    width: 33%;
+}
+
+.wrapp_mainpage_present ul li h3 {
+    font-family: "SkodaProBold", sans-serif;
+}
+
+.wrapp_mainpage_present ul li h6 {
+    color: #4ba82e;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
 
 .wrapp_mainpage_timeline {
-  padding-top: 65px; }
-  .wrapp_mainpage_timeline .timeline_horisond {
+    padding-top: 65px;
+}
+
+.wrapp_mainpage_timeline .timeline_horisond {
     height: 2px;
     width: 100%;
     background-color: #4ba82e;
     position: relative;
-    z-index: 2; }
-  .wrapp_mainpage_timeline ul {
+    z-index: 2;
+}
+
+.wrapp_mainpage_timeline ul {
     height: 300px;
-    background-color: #fff; }
-    .wrapp_mainpage_timeline ul li {
-      display: inline-block;
-      width: 150px;
-      position: relative;
-      margin-top: -60px;
-      z-index: 2; }
-      .wrapp_mainpage_timeline ul li p {
-        font-size: 1.4rem;
-        color: #4ba82e;
-        margin-left: 20px; }
-        .wrapp_mainpage_timeline ul li p a {
-          color: #4ba82e; }
-      .wrapp_mainpage_timeline ul li img {
-        border-radius: 50%;
-        margin: 0 auto;
-        margin-bottom: 10px; }
-      .wrapp_mainpage_timeline ul li .tag {
-        font-size: 1.5rem; }
-      .wrapp_mainpage_timeline ul li .messege {
-        color: #cccccc;
-        font-size: 1.5rem; }
-    .wrapp_mainpage_timeline ul .min_l_min {
-      margin-left: 1%; }
-    .wrapp_mainpage_timeline ul .min_l_1x {
-      margin-left: 4%; }
-    .wrapp_mainpage_timeline ul .min_l_2x {
-      margin-left: 8%; }
-    .wrapp_mainpage_timeline ul .min_l_3x {
-      margin-left: 16%; }
+    background-color: #fff;
+}
+
+.wrapp_mainpage_timeline ul li {
+    display: inline-block;
+    width: 150px;
+    position: relative;
+    margin-top: -60px;
+    z-index: 2;
+}
+
+.wrapp_mainpage_timeline ul li p {
+    font-size: 1.4rem;
+    color: #4ba82e;
+    margin-left: 20px;
+}
+
+.wrapp_mainpage_timeline ul li p a {
+    color: #4ba82e;
+}
+
+.wrapp_mainpage_timeline ul li img {
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.wrapp_mainpage_timeline ul li .tag {
+    font-size: 1.5rem;
+}
+
+.wrapp_mainpage_timeline ul li .messege {
+    color: #cccccc;
+    font-size: 1.5rem;
+}
+
+.wrapp_mainpage_timeline ul .min_l_min {
+    margin-left: 1%;
+}
+
+.wrapp_mainpage_timeline ul .min_l_1x {
+    margin-left: 4%;
+}
+
+.wrapp_mainpage_timeline ul .min_l_2x {
+    margin-left: 8%;
+}
+
+.wrapp_mainpage_timeline ul .min_l_3x {
+    margin-left: 16%;
+}
 
 .wrapp_mainpage_tantam {
-  background-color: #f5f5f5; }
-  .wrapp_mainpage_tantam .left {
-    margin-left: 150px; }
-    .wrapp_mainpage_tantam .left h4 {
-      margin-top: 90px;
-      font-family: "SkodaProLight", sans-serif; }
-    .wrapp_mainpage_tantam .left h2 {
-      text-transform: uppercase;
-      color: #4ba82e;
-      margin-top: 30px; }
-    .wrapp_mainpage_tantam .left p {
-      margin-top: 30px;
-      font-size: 1.4rem; }
-  .wrapp_mainpage_tantam img {
-    margin: 0 auto; }
+    background-color: #f5f5f5;
+}
+
+.wrapp_mainpage_tantam .left {
+    margin-left: 150px;
+}
+
+.wrapp_mainpage_tantam .left h4 {
+    margin-top: 90px;
+    font-family: "SkodaProLight", sans-serif;
+}
+
+.wrapp_mainpage_tantam .left h2 {
+    text-transform: uppercase;
+    color: #4ba82e;
+    margin-top: 30px;
+}
+
+.wrapp_mainpage_tantam .left p {
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+
+.wrapp_mainpage_tantam img {
+    margin: 0 auto;
+}
 
 .wrapp_mainpage_game {
-  background-color: #def0fa; }
-  .wrapp_mainpage_game .left {
-    margin-left: 150px; }
-    .wrapp_mainpage_game .left h4 {
-      margin-top: 90px;
-      font-family: "SkodaProLight", sans-serif; }
-    .wrapp_mainpage_game .left h2 {
-      text-transform: uppercase;
-      color: #4ba82e;
-      margin-top: 30px; }
-    .wrapp_mainpage_game .left p {
-      margin-top: 30px;
-      font-size: 1.4rem; }
-  .wrapp_mainpage_game img {
-    margin: 0 auto; }
+    background-color: #def0fa;
+}
+
+.wrapp_mainpage_game .left {
+    margin-left: 150px;
+}
+
+.wrapp_mainpage_game .left h4 {
+    margin-top: 90px;
+    font-family: "SkodaProLight", sans-serif;
+}
+
+.wrapp_mainpage_game .left h2 {
+    text-transform: uppercase;
+    color: #4ba82e;
+    margin-top: 30px;
+}
+
+.wrapp_mainpage_game .left p {
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+
+.wrapp_mainpage_game img {
+    margin: 0 auto;
+}
 
 .wrapp_mainpage_end {
-  background-image: url(img/resources/img/main/slide1.jpg);
-  background-position: center center;
-  background-size: cover; }
-  .wrapp_mainpage_end p {
+    background-image: url(img/resources/img/main/slide1.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.wrapp_mainpage_end p {
     color: #fff;
     font-family: "SkodaProLight", sans-serif;
     margin-top: 115px;
-    font-size: 2.8rem; }
-  .wrapp_mainpage_end h1 {
+    font-size: 2.8rem;
+}
+
+.wrapp_mainpage_end h1 {
     text-transform: uppercase;
     color: #fff;
     margin-top: 30px;
-    font-size: 8rem; }
-  .wrapp_mainpage_end ul {
+    font-size: 8rem;
+}
+
+.wrapp_mainpage_end ul {
     margin-top: 250px;
-    margin-bottom: 50px; }
-  .wrapp_mainpage_end span {
+    margin-bottom: 50px;
+}
+
+.wrapp_mainpage_end span {
     display: inline-flex;
     color: #fff;
     font-size: 1.4rem;
-    margin-left: 20px; }
-  .wrapp_mainpage_end img {
+    margin-left: 20px;
+}
+
+.wrapp_mainpage_end img {
     display: inline-flex;
     margin-top: 40px;
-    margin-left: 40px; }
+    margin-left: 40px;
+}
 
 .wrapp_news_all {
-  min-height: 100vh; }
-  .wrapp_news_all .menu_line {
+    min-height: 100vh;
+}
+
+.wrapp_news_all .menu_line {
     position: absolute;
     background-color: #000;
     display: inline-block;
     height: 100vh;
-    width: 100px; }
-    .wrapp_news_all .menu_line ul {
-      margin-top: 30vh; }
-      .wrapp_news_all .menu_line ul li {
-        margin-bottom: 30px; }
-        .wrapp_news_all .menu_line ul li img {
-          margin: 0 auto; }
-  .wrapp_news_all .menu_date {
+    width: 100px;
+}
+
+.wrapp_news_all .menu_line ul {
+    margin-top: 30vh;
+}
+
+.wrapp_news_all .menu_line ul li {
+    margin-bottom: 30px;
+}
+
+.wrapp_news_all .menu_line ul li img {
+    margin: 0 auto;
+}
+
+.wrapp_news_all .menu_date {
     position: absolute;
     background-color: #4ba82e;
     display: inline-block;
     height: 100vh;
     width: 150px;
-    left: 100px; }
-    .wrapp_news_all .menu_date ul {
-      margin: 25px 0 25px 20px; }
-      .wrapp_news_all .menu_date ul li {
-        height: 6.9vh;
-        -webkit-transition-duration: 700ms;
-        -moz-transition-duration: 700ms;
-        -o-transition-duration: 700ms;
-        transition-duration: 700ms; }
-        .wrapp_news_all .menu_date ul li p {
-          text-align: left;
-          font-size: 1.4rem;
-          font-family: "SkodaProLight", sans-serif; }
-          .wrapp_news_all .menu_date ul li p a {
-            color: #fff; }
-            .wrapp_news_all .menu_date ul li p a span {
-              font-size: 2.1rem; }
-      .wrapp_news_all .menu_date ul li:hover p {
-        font-size: 1.9rem; }
-        .wrapp_news_all .menu_date ul li:hover p span {
-          font-size: 2.6rem; }
-  .wrapp_news_all .default {
-    position: relative; }
-  .wrapp_news_all .fixed {
+    left: 100px;
+}
+
+.wrapp_news_all .menu_date ul {
+    margin: 25px 0 25px 20px;
+}
+
+.wrapp_news_all .menu_date ul li {
+    height: 6.9vh;
+    -webkit-transition-duration: 700ms;
+    -moz-transition-duration: 700ms;
+    -o-transition-duration: 700ms;
+    transition-duration: 700ms;
+}
+
+.wrapp_news_all .menu_date ul li p {
+    text-align: left;
+    font-size: 1.4rem;
+    font-family: "SkodaProLight", sans-serif;
+}
+
+.wrapp_news_all .menu_date ul li p a {
+    color: #fff;
+}
+
+.wrapp_news_all .menu_date ul li p a span {
+    font-size: 2.1rem;
+    padding-right: 5px;
+}
+
+.wrapp_news_all .menu_date ul li:hover p {
+    font-size: 1.9rem;
+}
+
+.wrapp_news_all .menu_date ul li:hover p span {
+    font-size: 2.6rem;
+}
+
+.wrapp_news_all .default {
+    position: relative;
+}
+
+.wrapp_news_all .fixed {
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px; }
-  .wrapp_news_all .wrapp_contant_main {
+    width: 300px;
+}
+
+.wrapp_news_all .wrapp_contant_main {
     margin-left: 250px;
-    background-color: #ececec; }
-    .wrapp_news_all .wrapp_contant_main .new {
-      margin: 20px 0; }
-      .wrapp_news_all .wrapp_contant_main .new h5 {
-        font-family: "SkodaProLight", sans-serif;
-        color: #cccccc;
-        margin-bottom: 10px; }
-      .wrapp_news_all .wrapp_contant_main .new p {
-        font-size: 1.4rem; }
-      .wrapp_news_all .wrapp_contant_main .new img {
-        margin-bottom: 10px; }
-    .wrapp_news_all .wrapp_contant_main .timeline_news {
-      position: absolute;
-      width: 4px;
-      top: 25px;
-      bottom: 25px;
-      left: 50%;
-      margin-left: -2px;
-      background: #fff;
-      transition: 600ms cubic-bezier(0.68, -0.67, 0.14, 1.51); }
-    .wrapp_news_all .wrapp_contant_main .timeline_news_day {
-      margin-top: 50px; }
-      .wrapp_news_all .wrapp_contant_main .timeline_news_day li {
-        height: 10%; }
-        .wrapp_news_all .wrapp_contant_main .timeline_news_day li div {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          background-color: #fff;
-          text-align: center;
-          padding-top: 15px;
-          text-transform: uppercase;
-          font-size: 1.4rem;
-          margin: 0 auto;
-          position: relative; }
-      .wrapp_news_all .wrapp_contant_main .timeline_news_day .activ_day {
-        width: 75px;
-        height: 75px;
-        padding-top: 25px;
-        color: #4ba82e; }
-      .wrapp_news_all .wrapp_contant_main .timeline_news_day .noactiv_day {
-        height: 3%; }
-        .wrapp_news_all .wrapp_contant_main .timeline_news_day .noactiv_day div {
-          width: 20px;
-          height: 20px; }
-  .wrapp_news_all .fix_padding {
-    padding-right: 0; }
-  .wrapp_news_all .wrapp_social_lent {
+    background-color: #ececec;
+}
+
+.wrapp_news_all .wrapp_contant_main .new {
+    margin: 20px 0;
+}
+
+.wrapp_news_all .wrapp_contant_main .new h5 {
+    font-family: "SkodaProLight", sans-serif;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+.wrapp_news_all .wrapp_contant_main .new p {
+    font-size: 1.4rem;
+}
+
+.wrapp_news_all .wrapp_contant_main .new img {
+    margin-bottom: 10px;
+}
+
+.wrapp_news_all .wrapp_contant_main .timeline_news {
+    position: absolute;
+    width: 4px;
+    top: 25px;
+    bottom: 25px;
+    left: 50%;
+    margin-left: -2px;
+    background: #fff;
+    transition: 600ms cubic-bezier(0.68, -0.67, 0.14, 1.51);
+}
+
+.wrapp_news_all .wrapp_contant_main .timeline_news_day {
+    margin-top: 50px;
+}
+
+.wrapp_news_all .wrapp_contant_main .timeline_news_day li {
+    height: 10%;
+}
+
+.wrapp_news_all .wrapp_contant_main .timeline_news_day li div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     background-color: #fff;
-    min-height: 100vh; }
-    .wrapp_news_all .wrapp_social_lent .soc_post {
-      text-align: left;
-      padding: 30px 5px 10px 10px; }
-      .wrapp_news_all .wrapp_social_lent .soc_post img {
-        margin-bottom: 5px; }
-      .wrapp_news_all .wrapp_social_lent .soc_post ul li {
-        font-size: 1.2rem;
-        font-family: "SkodaProBold", sans-serif; }
-      .wrapp_news_all .wrapp_social_lent .soc_post ul li:nth-child(3) {
-        font-family: "SkodaProRegular", sans-serif;
-        margin-top: 10px; }
-        .wrapp_news_all .wrapp_social_lent .soc_post ul li:nth-child(3) img {
-          padding-right: 10px; }
+    text-align: center;
+    padding-top: 15px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.wrapp_news_all .wrapp_contant_main .timeline_news_day .activ_day {
+    width: 75px;
+    height: 75px;
+    padding-top: 25px;
+    color: #4ba82e;
+}
+
+.wrapp_news_all .wrapp_contant_main .timeline_news_day .noactiv_day {
+    height: 3%;
+}
+
+.wrapp_news_all .wrapp_contant_main .timeline_news_day .noactiv_day div {
+    width: 20px;
+    height: 20px;
+}
+
+.wrapp_news_all .fix_padding {
+    padding-right: 0;
+}
+
+.wrapp_news_all .wrapp_social_lent {
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.wrapp_news_all .wrapp_social_lent .soc_post {
+    text-align: left;
+    padding: 30px 5px 10px 10px;
+}
+
+.wrapp_news_all .wrapp_social_lent .soc_post img {
+    margin-bottom: 5px;
+}
+
+.wrapp_news_all .wrapp_social_lent .soc_post ul li {
+    font-size: 1.2rem;
+    font-family: "SkodaProBold", sans-serif;
+}
+
+.wrapp_news_all .wrapp_social_lent .soc_post ul li:nth-child(3) {
+    font-family: "SkodaProRegular", sans-serif;
+    margin-top: 10px;
+}
+
+.wrapp_news_all .wrapp_social_lent .soc_post ul li:nth-child(3) img {
+    padding-right: 10px;
+}
 
 .wrapp_t_drive {
-  background-image: url("img/resources/img/t_drive/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 1100px; }
-  .wrapp_t_drive h1 {
+    background-image: url("img/resources/img/t_drive/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 1100px;
+}
+
+.wrapp_t_drive h1 {
     font-family: "SkodaProLight", sans-serif;
     color: #4ba82e;
-    margin: 30px 0 50px 0; }
-  .wrapp_t_drive .auto {
+    margin: 30px 0 50px 0;
+}
+
+.wrapp_t_drive .auto {
     padding: 10px;
-    background-color: #f8f8f8; }
-    .wrapp_t_drive .auto p {
-      font-size: 1.4rem;
-      color: #555555; }
-    .wrapp_t_drive .auto img {
-      margin: 0 auto;
-      padding: 20px 0 20px 0; }
-  .wrapp_t_drive .active_auto {
+    background-color: #f8f8f8;
+}
+
+.wrapp_t_drive .auto p {
+    font-size: 1.4rem;
+    color: #555555;
+}
+
+.wrapp_t_drive .auto img {
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+}
+
+.wrapp_t_drive .active_auto {
     border-radius: 2px;
-    border: 1px solid #4ba82e; }
-    .wrapp_t_drive .active_auto p {
-      color: #4ba82e; }
-  .wrapp_t_drive .form_t_drive {
-    margin-top: 50px; }
-    .wrapp_t_drive .form_t_drive input, .wrapp_t_drive .form_t_drive select, .wrapp_t_drive .form_t_drive button {
-      margin: 0 0 35px 0;
-      width: 300px; }
-    .wrapp_t_drive .form_t_drive input[type='checkbox'] {
-      width: auto;
-      display: none; }
-    .wrapp_t_drive .form_t_drive input[type="checkbox"] + label span {
-      display: inline-block;
-      width: 19px;
-      height: 19px;
-      margin: -1px 20px 0 0;
-      vertical-align: middle;
-      background: url(img/resources/img/t_drive/checkbox.png) left top no-repeat;
-      cursor: pointer; }
-    .wrapp_t_drive .form_t_drive input[type="checkbox"]:checked + label span {
-      background: url(img/resources/img/t_drive/checkbox_activ.png) left top no-repeat; }
-    .wrapp_t_drive .form_t_drive label {
-      margin-left: 50px;
-      margin-bottom: 35px;
-      font-size: 1.4rem;
-      font-family: "SkodaProRegular", sans-serif;
-      font-weight: 300;
-      color: #555555; }
+    border: 1px solid #4ba82e;
+}
+
+.wrapp_t_drive .active_auto p {
+    color: #4ba82e;
+}
+
+.wrapp_t_drive .form_t_drive {
+    margin-top: 50px;
+}
+
+.wrapp_t_drive .form_t_drive input, .wrapp_t_drive .form_t_drive select, .wrapp_t_drive .form_t_drive button {
+    margin: 0 0 35px 0;
+    width: 300px;
+}
+
+.wrapp_t_drive .form_t_drive input[type='checkbox'] {
+    width: auto;
+    display: none;
+}
+
+.wrapp_t_drive .form_t_drive input[type="checkbox"] + label span {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: -1px 20px 0 0;
+    vertical-align: middle;
+    background: url(img/resources/img/t_drive/checkbox.png) left top no-repeat;
+    cursor: pointer;
+}
+
+.wrapp_t_drive .form_t_drive input[type="checkbox"]:checked + label span {
+    background: url(img/resources/img/t_drive/checkbox_activ.png) left top no-repeat;
+}
+
+.wrapp_t_drive .form_t_drive label {
+    margin-left: 50px;
+    margin-bottom: 35px;
+    font-size: 1.4rem;
+    font-family: "SkodaProRegular", sans-serif;
+    font-weight: 300;
+    color: #555555;
+}
