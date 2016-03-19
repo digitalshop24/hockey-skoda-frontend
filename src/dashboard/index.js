@@ -9,6 +9,7 @@ import registration from './registration/index';
 import main from './main/index';
 import profile from './profile/index';
 import forum from './forum/index';
+import tantamareska from './tantamareska/index';
 
 export default angular.module('dashboard',
     [
@@ -17,7 +18,8 @@ export default angular.module('dashboard',
         registration.name,
         main.name,
         profile.name,
-        forum.name
+        forum.name,
+        tantamareska.name
     ])
     .config($stateProvider => {
         $stateProvider
