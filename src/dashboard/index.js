@@ -8,6 +8,7 @@ import tdrive from './test-drive/index';
 import registration from './registration/index';
 import main from './main/index';
 import profile from './profile/index';
+import forum from './forum/index';
 
 export default angular.module('dashboard',
     [
@@ -15,7 +16,8 @@ export default angular.module('dashboard',
         tdrive.name,
         registration.name,
         main.name,
-        profile.name
+        profile.name,
+        forum.name
     ])
     .config($stateProvider => {
         $stateProvider
