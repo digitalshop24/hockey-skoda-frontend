@@ -52,7 +52,7 @@ export default class Api {
         }
 
         if (this.isExternalServerError(response)) {
-            return this.state.go('error');
+            return this.state.go('error-pages.external-server-error');
         }
 
         throw response;
