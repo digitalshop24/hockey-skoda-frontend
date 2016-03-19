@@ -7,13 +7,15 @@ import news from './news/index';
 import tdrive from './test-drive/index';
 import registration from './registration/index';
 import main from './main/index';
+import profile from './profile/index';
 
 export default angular.module('dashboard',
     [
         news.name,
         tdrive.name,
         registration.name,
-        main.name
+        main.name,
+        profile.name
     ])
     .config($stateProvider => {
         $stateProvider

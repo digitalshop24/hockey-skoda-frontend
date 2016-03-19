@@ -74,6 +74,68 @@
         -ms-animation: none !important;
         animation: none !important;
     }
+
+    .wrapp_lk .lk_info {
+        min-height: 0;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .wrapp_lk .lk_info ul li {
+        display: inline-block;
+        width: 32%;
+    }
+
+    .wrapp_lk .lk_info ul li ul li {
+        text-align: left;
+        display: block;
+        width: 100%;
+    }
+
+    .wrapp_lk .lk_plus {
+        min-height: 0;
+        height: auto;
+        display: none;
+    }
+
+    .wrapp_lk .lk_menu {
+        min-height: 0;
+        height: auto;
+    }
+
+    .wrapp_lk .lk_menu ul li {
+        display: inline-block;
+        width: 30%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .wrapp_lk .lk_menu ul li a img {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .wrapp_lk .lk_content {
+        min-height: 0;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .wrapp_lk .lk_content .avatar {
+        padding-bottom: 40px;
+    }
+
+    .wrapp_lk .lk_content .avatar li h6 {
+        top: 0;
+    }
+
+    .wrapp_lk .lk_content .avatar li .gir {
+        font-size: 3rem;
+        font-family: "SkodaProBold", sans-serif;
+        text-transform: uppercase;
+    }
 }
 
 @media only screen and (max-width: 664px) {
@@ -99,7 +161,27 @@
 }
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 440px) {
+    h6 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
 /* Custom, iPhone Retina */
+@media only screen and (max-width: 389px) {
+    .fix_left {
+        margin-left: 0px !important;
+    }
+
+    .wrapp_lk .lk_info ul li .fix_left {
+        margin-left: 10px;
+    }
+}
+
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
 /* Extra Small Devices, Phones */

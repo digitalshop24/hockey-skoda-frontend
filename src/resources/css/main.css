@@ -120,7 +120,7 @@ footer .footer_margin_top img {
 }
 
 .wrapp_main_new {
-    background-image: url(img/resources/img/bg_star.png);
+    background-image: url(/img/resources/img/bg_star.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -211,7 +211,7 @@ footer .footer_margin_top img {
 }
 
 .social {
-    background-image: url(img/resources/img/soc/social_bg.jpg);
+    background-image: url(/img/resources/img/soc/social_bg.jpg);
     min-height: 400px;
 }
 
@@ -502,78 +502,6 @@ footer .footer_margin_top img {
     margin-left: 30px;
 }
 
-.wrapp_toggle input.sw {
-    opacity: 0;
-    position: absolute;
-    left: -9999px;
-}
-
-.wrapp_toggle input.sw + label {
-    margin-top: 9px;
-    margin-right: 10px;
-    user-select: none;
-    transition: .2s ease;
-    display: inline-block;
-    height: 26px;
-    width: 60px;
-    position: relative;
-    border-radius: 60px;
-    background-color: #cccccc;
-    /* White toggle */
-}
-
-.wrapp_toggle input.sw + label:before {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 26px;
-    width: 26px;
-    top: 0;
-    left: 0;
-    border-radius: 13px;
-    background: rgba(76, 217, 100, 0);
-    transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
-}
-
-.wrapp_toggle input.sw + label:after {
-    content: " ";
-    position: absolute;
-    display: block;
-    height: 24px;
-    width: 29px;
-    top: 50%;
-    margin-top: -12px;
-    left: 1px;
-    border-radius: 60px;
-    background: #fff;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0px 0 rgba(0, 0, 0, 0.04), 0 4px 9px rgba(0, 0, 0, 0.13), 0 3px 3px rgba(0, 0, 0, 0.05);
-    transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
-    z-index: 3;
-}
-
-.wrapp_toggle input.sw + label span {
-    white-space: nowrap;
-    height: 26px;
-    line-height: 26px;
-    margin-left: 60px;
-    padding-left: 16px;
-}
-
-.wrapp_toggle input.sw:checked + label:before {
-    width: 60px;
-    background: #4ba82e;
-    transition: width 0.2s cubic-bezier(0, 0, 0, 0.1) !important;
-}
-
-.wrapp_toggle input.sw:checked + label:after {
-    left: 30px;
-}
-
-.wrapp_toggle input.sw:checked + label {
-    box-shadow: inset 0 0 0px 25px #e4e4e4;
-    transition: box-shadow 2.5s cubic-bezier(0, 1.2, 0.94, 0.95);
-}
-
 .add_topic {
     background-color: #efefef;
 }
@@ -712,28 +640,6 @@ footer .footer_margin_top img {
     font-size: 1.4rem;
 }
 
-.wrapp_shet .mounth select {
-    display: inline-block;
-    min-width: 170px;
-    padding-left: 20px;
-    background: url(img/resources/img/arrow.png) no-repeat transparent;
-    background-position: 95% 50%;
-    background-color: #fff;
-    margin-right: 20px;
-    -webkit-appearance: none;
-    /* for FF */
-    -moz-appearance: none;
-    text-indent: 0.01px;
-    text-overflow: '';
-    /* for IE */
-    -ms-appearance: none;
-    appearance: none !important;
-}
-
-.wrapp_shet .mounth select::-ms-expand {
-    display: none;
-}
-
 .wrapp_shet .mounth .group {
     margin-right: 6px;
 }
@@ -827,7 +733,7 @@ footer .footer_margin_top img {
 }
 
 .about_first {
-    background-image: url("img/resources/img/about/bg_first.jpg");
+    background-image: url("/img/resources/img/about/bg_first.jpg");
     background-repeat: no-repeat;
 }
 
@@ -924,14 +830,14 @@ footer .footer_margin_top img {
 }
 
 .wrapp_mainpage_slider #owl-main-2 .owl-prev {
-    background-image: url("img/resources/img/arrow_left_white.png");
+    background-image: url("/img/resources/img/arrow_left_white.png");
     position: absolute;
     left: 20px;
     top: 35vh;
 }
 
 .wrapp_mainpage_slider #owl-main-2 .owl-next {
-    background-image: url("img/resources/img/arrow_right_white.png");
+    background-image: url("/img/resources/img/arrow_right_white.png");
     position: absolute;
     right: 20px;
     top: 35vh;
@@ -1034,14 +940,14 @@ footer .footer_margin_top img {
 }
 
 .wrapp_mainpage_slider .owl-theme .owl-controls .owl-buttons .owl-prev {
-    background-image: url("img/resources/img/arrow_left_white.png");
+    background-image: url("/img/resources/img/arrow_left_white.png");
     position: absolute;
     left: 20px;
     top: 30vh;
 }
 
 .wrapp_mainpage_slider .owl-theme .owl-controls .owl-buttons .owl-next {
-    background-image: url("img/resources/img/arrow_right_white.png");
+    background-image: url("/img/resources/img/arrow_right_white.png");
     position: absolute;
     right: 20px;
     top: 30vh;
@@ -1300,7 +1206,7 @@ footer .footer_margin_top img {
 }
 
 .wrapp_mainpage_end {
-    background-image: url(img/resources/img/main/slide1.jpg);
+    background-image: url(/img/resources/img/main/slide1.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -1394,7 +1300,6 @@ footer .footer_margin_top img {
 
 .wrapp_news_all .menu_date ul li p a span {
     font-size: 2.1rem;
-    padding-right: 5px;
 }
 
 .wrapp_news_all .menu_date ul li:hover p {
@@ -1421,21 +1326,31 @@ footer .footer_margin_top img {
     background-color: #ececec;
 }
 
-.wrapp_news_all .wrapp_contant_main .new {
-    margin: 20px 0;
+.wrapp_news_all .wrapp_contant_main .left_news {
+    float: left;
 }
 
-.wrapp_news_all .wrapp_contant_main .new h5 {
+.wrapp_news_all .wrapp_contant_main .right_news {
+    float: right;
+}
+
+.wrapp_news_all .wrapp_contant_main .news_one {
+    margin: 20px 0;
+    width: 49%;
+    padding: 0 10px;
+}
+
+.wrapp_news_all .wrapp_contant_main .news_one h5 {
     font-family: "SkodaProLight", sans-serif;
     color: #cccccc;
     margin-bottom: 10px;
 }
 
-.wrapp_news_all .wrapp_contant_main .new p {
+.wrapp_news_all .wrapp_contant_main .news_one p {
     font-size: 1.4rem;
 }
 
-.wrapp_news_all .wrapp_contant_main .new img {
+.wrapp_news_all .wrapp_contant_main .news_one img {
     margin-bottom: 10px;
 }
 
@@ -1520,7 +1435,7 @@ footer .footer_margin_top img {
 }
 
 .wrapp_t_drive {
-    background-image: url("img/resources/img/t_drive/bg.jpg");
+    background-image: url("/img/resources/img/t_drive/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 1100px;
@@ -1576,12 +1491,12 @@ footer .footer_margin_top img {
     height: 19px;
     margin: -1px 20px 0 0;
     vertical-align: middle;
-    background: url(img/resources/img/t_drive/checkbox.png) left top no-repeat;
+    background: url(/img/resources/img/t_drive/checkbox.png) left top no-repeat;
     cursor: pointer;
 }
 
 .wrapp_t_drive .form_t_drive input[type="checkbox"]:checked + label span {
-    background: url(img/resources/img/t_drive/checkbox_activ.png) left top no-repeat;
+    background: url(/img/resources/img/t_drive/checkbox_activ.png) left top no-repeat;
 }
 
 .wrapp_t_drive .form_t_drive label {
@@ -1591,4 +1506,289 @@ footer .footer_margin_top img {
     font-family: "SkodaProRegular", sans-serif;
     font-weight: 300;
     color: #555555;
+}
+
+.wrapp_lk .name_mobile_lk {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 250px;
+    position: relative;
+    z-index: 1;
+}
+
+.wrapp_lk .name_mobile_lk h4, .wrapp_lk .name_mobile_lk h5 {
+    color: #fff;
+}
+
+.wrapp_lk .name_mobile_lk h4 {
+    font-family: "SkodaProBold", sans-serif;
+    padding-top: 40px;
+}
+
+.wrapp_lk .name_mobile_lk h5 {
+    padding-top: 40px;
+}
+
+.wrapp_lk .lk_info {
+    background-color: #181818;
+    height: 100vh;
+    min-height: 680px;
+    padding-top: 30px;
+}
+
+.wrapp_lk .lk_info h6 {
+    color: #fff;
+}
+
+.wrapp_lk .lk_info ul li {
+    margin-top: 20px;
+}
+
+.wrapp_lk .lk_info ul li .fix_left {
+    margin-left: 10px;
+}
+
+.wrapp_lk .lk_info ul li img {
+    display: inline-block;
+}
+
+.wrapp_lk .lk_info ul li h6 {
+    margin-top: 15px;
+}
+
+.wrapp_lk .lk_info ul li ul li {
+    display: inline-block;
+    width: 45%;
+    color: #8c8c8c;
+    margin-top: 15px;
+}
+
+.wrapp_lk .lk_info ul li ul li:nth-child(1) {
+    font-size: 1.4rem;
+}
+
+.wrapp_lk .lk_info ul li ul li:nth-child(2) {
+    font-size: 3rem;
+}
+
+.wrapp_lk .lk_menu {
+    background-color: #555555;
+    height: 100vh;
+    min-height: 680px;
+}
+
+.wrapp_lk .lk_menu ul .active {
+    color: #4ba82e;
+}
+
+.wrapp_lk .lk_menu ul li {
+    padding-top-top: 10vh;
+}
+
+.wrapp_lk .lk_menu ul li a p {
+    font-size: 1.4rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "SkodaProRegular", sans-serif;
+}
+
+.wrapp_lk .lk_menu ul li a img {
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.wrapp_lk .lk_content {
+    background-color: #ececec;
+    height: 100vh;
+    min-height: 680px;
+    padding-top: 30px;
+}
+
+.wrapp_lk .lk_content .avatar li {
+    display: inline-block;
+    width: auto;
+}
+
+.wrapp_lk .lk_content .avatar li img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.wrapp_lk .lk_content .avatar li h6 {
+    margin-left: 20px;
+    position: relative;
+    top: -20px;
+}
+
+.wrapp_lk .lk_content ul li {
+    width: 23%;
+    display: inline-block;
+}
+
+.wrapp_lk .lk_content ul li h5 {
+    font-size: 2.8rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    padding-top: 9px;
+}
+
+.wrapp_lk .lk_content ul li p {
+    font-size: 1.4rem;
+    color: #4ba82e;
+}
+
+.wrapp_lk .lk_content ul li .vertical {
+    display: inline-block;
+    width: 10px;
+    height: 45vh;
+    border-radius: 0;
+}
+
+.wrapp_lk .lk_content ul li .vertical .progress_bg_color {
+    background-color: #fff;
+}
+
+.wrapp_lk .lk_content ul li .yellow_progress {
+    background-color: #ebcf42;
+}
+
+.wrapp_lk .lk_content ul li .green_progress {
+    background-color: #4ba82e;
+}
+
+.wrapp_lk .lk_content ul li .blue_progress {
+    background-color: #6ecceb;
+}
+
+.wrapp_lk .lk_content ul li .purple_progress {
+    background-color: #8f4b9b;
+}
+
+.wrapp_lk .lk_plus {
+    background-color: #fff;
+    height: 100vh;
+    min-height: 680px;
+    padding-top: 30px;
+}
+
+.wrapp_lk .lk_plus h6 {
+    color: #000;
+}
+
+.wrapp_lk .lk_plus .fix_big {
+    font-size: 2.6rem !important;
+}
+
+.wrapp_lk .lk_plus ul li img {
+    margin: 10px auto;
+}
+
+.wrapp_lk .lk_plus ul li ul li {
+    display: inline-block;
+    width: 45%;
+    color: #8c8c8c;
+    margin-top: 15px;
+}
+
+.wrapp_lk .lk_plus ul li ul li:nth-child(1) {
+    font-size: 1.4rem;
+}
+
+.wrapp_lk .lk_plus ul li ul li:nth-child(2) {
+    font-size: 3rem;
+}
+
+.wrapp_tantamareska {
+    padding: 33px 0 30px;
+}
+
+.wrapp_tantamareska h2 {
+    font-size: 5rem;
+    font-family: "SkodaProBold", sans-serif;
+    color: #4ba82e;
+    padding-left: 1.4rem;
+    letter-spacing: -2px;
+}
+
+.wrapp_tantamareska .btn {
+    font-family: "SkodaProRegular", sans-serif;
+    padding: 0 28px;
+}
+
+.wrapp_tantamareska .but-pos {
+    padding-top: 10px;
+}
+
+.wrapp_tantamareska .but-pos button {
+    margin-left: 5px;
+}
+
+.wh {
+    height: 100% !important;
+}
+
+.ww {
+    width: 100% !important;
+}
+
+.wrapp_slider {
+    width: 100%;
+    min-width: 270px;
+}
+
+.wrapp_slider .single-item {
+    position: relative;
+}
+
+.wrapp_slider .single-item .block-slid {
+    max-height: 672px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.wrapp_slider .single-item .block-slid img {
+    width: 100%;
+}
+
+.wrapp_slider .slick-arrow {
+    position: absolute;
+    font-size: 0px;
+    width: 57px;
+    height: 119px;
+    z-index: 3;
+    top: 50%;
+    margin-top: -59px;
+    border: none;
+}
+
+.wrapp_slider .slick-prev {
+    background: #000 url(/img/resources/img/arrow_left_white.png) no-repeat center center;
+    left: 0px;
+}
+
+.wrapp_slider .slick-next {
+    background: #000 url(/img/resources/img/arrow_right_white.png) no-repeat center center;
+    right: 0px;
+}
+
+.wrapp_toggle_share ul li:nth-child(1) {
+    width: 340px;
+}
+
+.toggle_button {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.toggle_button .tiny {
+    padding: 20px 200px;
+    font-size: 3rem;
+    font-family: "SkodaProLight", sans-serif;
+    height: auto;
 }
