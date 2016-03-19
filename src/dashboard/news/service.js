@@ -6,8 +6,8 @@ export default class NewsService {
     }
 
     getNewsByDate(date) {
-        return this.api.get('/posts/news',
-            {
+        return this.api.
+            get('/posts/news', {
                 params: {
                     date: date
                 }
@@ -22,12 +22,7 @@ export default class NewsService {
 
     getDaysContainedNewsByDate(date) {
 
-        return this.api.get(`/posts/news/${date ? date : ''}`,
-            {
-                params: {
-                    date: date
-                }
-            })
+        return this.api.get(`/posts/news/days_with_news/${date ? date : ''}`)
             .then(response => {
                 return response.data;
             }).catch(response => {

@@ -10,10 +10,9 @@ export default class Api {
         this.state = $state;
     }
 
-    get(url) {
-        return this.http.get(this.api + url, {
-            headers: this.headers
-        }).catch(response => {
+    get(url, config) {
+        const configObj = Object.assign(config || {}, {headers: this.headers});
+        return this.http.get(this.api + url, configObj).catch(response => {
             this.handleResponse(response);
         });
     }

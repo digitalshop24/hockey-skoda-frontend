@@ -21,7 +21,7 @@ export default angular.module('dashboard.news',
                     day: "",
                     loadExactlyDayNews: false
                 },
-                /*resolve: {
+                resolve: {
                     daysWithNews: ($stateParams, newsService) => {
                         if ($stateParams.loadExactlyDayNews) {
                             return [];
@@ -37,8 +37,7 @@ export default angular.module('dashboard.news',
                             return newsService.getNewsByDate(dayWithNews);
                         } else {
                             if (daysWithNews.length) {
-                                const lastDayWithNews = moment().month($stateParams.month).
-                                    date(daysWithNews[daysWithNews.length - 1]).format('YYYY-MM-DD');
+                                const lastDayWithNews = daysWithNews[daysWithNews.length - 1];
                                 return newsService.getNewsByDate(lastDayWithNews);
                             }
                             return [];
@@ -47,7 +46,7 @@ export default angular.module('dashboard.news',
                     month: ($stateParams) => {
                         return $stateParams.month;
                     }
-                },*/
+                },
                 url: '/news',
                 controller: NewsCtrl,
                 controllerAs: 'ctrl'
