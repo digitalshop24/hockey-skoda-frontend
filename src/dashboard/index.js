@@ -6,12 +6,14 @@ import headerCtrl from './header/controller.js';
 import news from './news/index';
 import tdrive from './test-drive/index';
 import registration from './registration/index';
+import main from './main/index';
 
 export default angular.module('dashboard',
     [
         news.name,
         tdrive.name,
-        registration.name
+        registration.name,
+        main.name
     ])
     .config($stateProvider => {
         $stateProvider
