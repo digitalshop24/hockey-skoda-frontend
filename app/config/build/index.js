@@ -9,7 +9,7 @@ var sources = {
 };
 
 var styles = {
-    src: "src/**/*.css",
+    src: "src/**/*.scss",
     dest: "app.min.css"
 };
 
