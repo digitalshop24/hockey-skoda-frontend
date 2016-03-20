@@ -4,12 +4,8 @@
             <div class="col-sm-12 col-md-12 left_head text-left">
                 <a ui-sref="index" class="logo"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
                 <ul>
-                    <li><a href="">Новости</a></li>
-                    <li><a href="">Прогнозы</a></li>
-                    <li><a href="">Обзоры</a></li>
-                    <li class="active_li"><a href="">Календарь</a></li>
-                    <li><a href="">О звездах</a></li>
-                    <li><a href="">Форум</a></li>
+                    <li><a ui-sref="dashboard.news" ng-class="{'active_li': $state.includes('dashboard.news')}">Новости</a></li>
+                    <li><a ui-sref="dashboard.forum" ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a></li>
                 </ul>
             </div>
             <div class="right_head text-right hidden-xs">
