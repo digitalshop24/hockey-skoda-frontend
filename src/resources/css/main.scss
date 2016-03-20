@@ -178,7 +178,7 @@ footer {
 }
 
 .wrapp_main_new {
-  background-image: url(../img/bg_star.png);
+  background-image: url(img/resources/img/bg_star.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -269,7 +269,7 @@ footer {
 
 
 .social {
-  background-image: url(../img/soc/social_bg.jpg);
+  background-image: url(img/resources/img/soc/social_bg.jpg);
   min-height: 400px;
   // padding-left: 120px;
   h5 {
@@ -758,7 +758,7 @@ footer {
 $grey_about: #5d5d5d;
 
 .about_first {
-  background-image: url("../img/about/bg_first.jpg");
+  background-image: url("img/resources/img/about/bg_first.jpg");
   background-repeat: no-repeat;
   .wrapp_titel {
     float: right;
@@ -849,13 +849,13 @@ $grey_about: #5d5d5d;
       min-height: 500px;
     }
     .owl-prev  {
-        background-image: url('../img/arrow_left_white.png');
+        background-image: url('img/resources/img/arrow_left_white.png');
         position: absolute;
         left: 20px;
         top: 35vh;
       }
     .owl-next  {
-      background-image: url('../img/arrow_right_white.png');
+      background-image: url('img/resources/img/arrow_right_white.png');
       position: absolute;
       right: 20px;
       top: 35vh;
@@ -946,13 +946,13 @@ $grey_about: #5d5d5d;
         width: 25px;
       }  
       .owl-prev  {
-        background-image: url('../img/arrow_left_white.png');
+        background-image: url('img/resources/img/arrow_left_white.png');
         position: absolute;
         left: 20px;
         top: 30vh;
       }
       .owl-next  {
-        background-image: url('../img/arrow_right_white.png');
+        background-image: url('img/resources/img/arrow_right_white.png');
         position: absolute;
         right: 20px;
         top: 30vh;
@@ -1185,7 +1185,7 @@ $grey_about: #5d5d5d;
   }
 }
 .wrapp_mainpage_end {
-  background-image: url(../img/main/slide1.jpg);
+  background-image: url(img/resources/img/main/slide1.jpg);
   background-position: center center;
   background-size:cover;
   p {
@@ -1546,7 +1546,7 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- t-drive
 
 .wrapp_t_drive {
-  background-image: url("../img/t_drive/bg.jpg");
+  background-image: url("img/resources/img/t_drive/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 1100px;
@@ -1592,13 +1592,13 @@ $grey_about: #5d5d5d;
         height:19px;
         margin:-1px 20px 0 0;
         vertical-align:middle;
-        background:url(../img/t_drive/checkbox.png) left top no-repeat;
+        background:url(img/resources/img/t_drive/checkbox.png) left top no-repeat;
         // border: 1px solid $black;
         cursor:pointer;
         // 
     }
     input[type="checkbox"]:checked + label span {
-      background:url(../img/t_drive/checkbox_activ.png) left top no-repeat;
+      background:url(img/resources/img/t_drive/checkbox_activ.png) left top no-repeat;
     }
     label {
       margin-left: 50px;
@@ -1865,11 +1865,11 @@ $grey_about: #5d5d5d;
     
   }
   .slick-prev {
-    background:#000 url(../img/arrow_left_white.png) no-repeat center center;
+    background:#000 url(img/resources/img/arrow_left_white.png) no-repeat center center;
     left:0px;
   }
   .slick-next {
-    background:#000 url(../img/arrow_right_white.png) no-repeat center center;
+    background:#000 url(img/resources/img/arrow_right_white.png) no-repeat center center;
     right:0px;
   }
 }
@@ -1954,7 +1954,7 @@ $grey_about: #5d5d5d;
         width:24px;
         height:46px;
         content:"";
-        background:url(../img/icon_arrow_right.png) no-repeat center center;
+        background:url(img/resources/img/icon_arrow_right.png) no-repeat center center;
       }
       &:nth-child(1) {
         margin-right: 127px;
@@ -2022,15 +2022,15 @@ $grey_about: #5d5d5d;
       left:50%;
       margin-left:-23px;
       z-index: 2;
-      background:url(../img/icon-arrow_top.png) no-repeat center center;
+      background:url(img/resources/img/icon-arrow_top.png) no-repeat center center;
     }
     .slick-prev {
       top:-35px;
-      background:url(../img/icon-arrow_top.png) no-repeat center center;
+      background:url(img/resources/img/icon-arrow_top.png) no-repeat center center;
    }
     .slick-next {
       bottom:-35px;
-      background:url(../img/icon-arrow-bottom.png) no-repeat center center;
+      background:url(img/resources/img/icon-arrow-bottom.png) no-repeat center center;
 
     }
     .from_block {
