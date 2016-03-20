@@ -3,7 +3,7 @@
 import moment from 'moment';
 
 
-export default class NewsCtrl {
+export default class GeneralNewsCtrl {
     constructor(newsService, news) {
         this.service = newsService;
         this.news = news;

@@ -1,6 +1,6 @@
 'use strict';
 
-export default class NewsService {
+export default class GeneralNewsService {
     constructor(api) {
         this.api = api;
     }

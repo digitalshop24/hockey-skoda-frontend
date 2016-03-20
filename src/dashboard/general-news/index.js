@@ -1,18 +1,18 @@
 'use strict';
 
 import angular from 'angular';
-import NewsCtrl from './controller.js';
-import NewsService from './service.js';
+import GeneralNewsCtrl from './controller.js';
+import GeneralNewsService from './service.js';
 import news from './news/index.js';
 
-export default angular.module('dashboard.news',
+export default angular.module('dashboard.general-news',
     [
         news.name
     ])
-    .service('newsService', NewsService)
+    .service('newsService', GeneralNewsService)
     .config(function ($stateProvider) {
         $stateProvider
-            .state('dashboard.news', {
+            .state('dashboard.general-news', {
                 template: require('./template.html'),
                 params: {
                     month: "",
@@ -46,8 +46,8 @@ export default angular.module('dashboard.news',
                         return $stateParams.month;
                     }
                 },
-                url: '/news',
-                controller: NewsCtrl,
+                url: '/general-news',
+                controller: GeneralNewsCtrl,
                 controllerAs: 'ctrl'
             });
     });

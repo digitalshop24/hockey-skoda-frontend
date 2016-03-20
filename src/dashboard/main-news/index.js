@@ -22,11 +22,10 @@ export default angular.module('dashboard.main-news',
                 resolve: {
                     news: ($stateParams, $location, mainNewsService, moment) => {
                         return mainNewsService.getNewsByDate(moment().format('YYYY-MM-DD')).then(news => {
-                            //news = [];
                             if (news.length) {
                                 return news;
                             } else {
-                                $location.url('/');
+                                $location.url('/general-news');
                             }
                         });
                     },

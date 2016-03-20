@@ -9,6 +9,6 @@ export default class NewsCtrl {
     showNews() {
         const month = this.moment(this.mainNews.published_at).month();
         const day = this.moment(this.mainNews.published_at).date();
-        this.state.go('dashboard.news', {month: month, day: day, loadExactlyDayNews: true});
+        this.state.go('dashboard.general-news', {month: month, day: day, loadExactlyDayNews: true});
     }
 }

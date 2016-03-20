@@ -3,7 +3,7 @@
 import angular from 'angular';
 
 import headerCtrl from './header/controller.js';
-import news from './news/index';
+import generalNews from './general-news/index';
 import mainNews from './main-news/index';
 import tdrive from './test-drive/index';
 import registration from './registration/index';
@@ -14,13 +14,13 @@ import tantamareska from './tantamareska/index';
 
 export default angular.module('dashboard',
     [
-        news.name,
         tdrive.name,
         registration.name,
         main.name,
         profile.name,
         forum.name,
         tantamareska.name,
+        generalNews.name,
         mainNews.name
     ])
     .config($stateProvider => {
