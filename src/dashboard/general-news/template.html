@@ -1,112 +1,236 @@
-<section class="wrapp_news_all" infinite-scroll>
-    <div class="wrapp_menu default" id='menu'>
-        <div class="menu_line ">
+<section class="wrapp_news_all">
+    <div class="wrapp_menu " id='menu'>
+        <div class="menu_line hidden-xs">
             <ul>
                 <li><a href=""><img src="img/resources/img/news/ico_menu1.png" alt="" class="img-responsive"></a></li>
                 <li><a href=""><img src="img/resources/img/news/ico_menu2.png" alt="" class="img-responsive"></a></li>
                 <li><a href=""><img src="img/resources/img/news/ico_menu3.png" alt="" class="img-responsive"></a></li>
             </ul>
         </div>
-        <div class="menu_date">
+        <div class="menu_date hidden-xs">
             <ul>
                 <li ng-repeat="month in ctrl.months">
                     <p><a href="#"><span>{{month.viewIndex}}</span>{{month.name}}</a></p>
                 </li>
             </ul>
         </div>
+        <!-- Слайдер для мобильных -->
+        <div class="date_slider hidden-md hidden-lg">
+            <div><a href="#"><span>01</span> январь</a></div>
+            <div><a href="#"><span>02</span> февраль </a></div>
+            <div><a href="#"><span>03</span> март </a></div>
+            <div><a href="#"><span>04</span> апрель</a></div>
+            <div><a href="#"><span>05</span> май</a></div>
+            <div><a href="#"><span>06</span> июнь</a></div>
+            <div><a href="#"><span>07</span> июль</a></div>
+            <div><a href="#"><span>08</span> август</a></div>
+            <div><a href="#"><span>09</span> сентябрь</a></div>
+            <div><a href="#"><span>10</span> октябрь</a></div>
+            <div><a href="#"><span>11</span> ноябрь</a></div>
+            <div><a href="#"><span>12</span> декбрь</a></div>
+        </div>
     </div>
+    <!--<div class="col-xs-12 col-sm-12 col-md-8 text-left grid" id="news">
+        <div general-news="news" class="news_one grid-item" ng-repeat="news in ctrl.news"/>
+    </div>-->
     <div class="wrapp_contant_main">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2 hidden-xs hidden-sm">
-                    <div class="timeline_news" style="height: 2000px;"></div>
-                    <!-- Нужно высчитывать высоту timeline  в зависимости от высоты всех постов. -->
-                    <ul class="timeline_news_day" style="height: 2000px;">
-                        <!-- Высчитывать высоту отступа каждого кружочка взависимости от высоты всей линии -->
-                        <li>
-                            <div class="activ_day">Сегодня</div>
-                        </li>
-                        <li>
-                            <div>24</div>
-                        </li>
-                        <li>
-                            <div class="activ_day ">24</div>
-                        </li>
-                        <li>
-                            <div>24</div>
-                        </li>
-                        <li class="noactiv_day">
-                            <div></div>
-                        </li>
-                        <li class="noactiv_day">
-                            <div></div>
-                        </li>
-                        <li>
-                            <div>24</div>
-                        </li>
-                    </ul>
+                <div scroll-init class="col-md-2 hidden-xs hidden-sm">
+
+                    <div class="wrapp_timeline default" id="timeline_wrapp">
+                        <div class="timeline_news" id="timeline_main" style="height: 3000px"></div>
+                        <!-- Нужно высчитывать высоту timeline  в зависимости от высоты всех постов. -->
+                        <ul class="timeline_news_day" id="timeline_main_ul" style="height: 3000px">
+                            <li class="activ_day"><a href="">
+                                <div><p>Сегодня</p></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>24</p></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>23</p></div>
+                            </a></li>
+                            <li class="noactiv_day"><a href="">
+                                <div></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>22</p></div>
+                            </a></li>
+                            <li class="activ_day"><a href="">
+                                <div><p>Сегодня</p></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>24</p></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>23</p></div>
+                            </a></li>
+                            <li class="noactiv_day"><a href="">
+                                <div></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>22</p></div>
+                            </a></li>
+                            <li class="activ_day"><a href="">
+                                <div><p>Сегодня</p></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>24</p></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>23</p></div>
+                            </a></li>
+                            <li class="noactiv_day"><a href="">
+                                <div></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>22</p></div>
+                            </a></li>
+                            <li class="activ_day"><a href="">
+                                <div><p>Сегодня</p></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>24</p></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>23</p></div>
+                            </a></li>
+                            <li class="noactiv_day"><a href="">
+                                <div></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>22</p></div>
+                            </a></li>
+                            <li class="activ_day"><a href="">
+                                <div><p>Сегодня</p></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>24</p></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>23</p></div>
+                            </a></li>
+                            <li class="noactiv_day"><a href="">
+                                <div></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>22</p></div>
+                            </a></li>
+                            <li class="activ_day"><a href="">
+                                <div><p>Сегодня</p></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>24</p></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>23</p></div>
+                            </a></li>
+                            <li class="noactiv_day"><a href="">
+                                <div></div>
+                            </a></li>
+                            <li><a href="">
+                                <div><p>22</p></div>
+                            </a></li>
+
+                        </ul>
+                    </div>
 
                 </div>
-                <div>
 
-                <div class="col-xs-12 col-sm-12 col-md-8 text-left grid" id="news">
-                    <div general-news="news" class="news_one grid-item" ng-repeat="news in ctrl.news"/>
+                <div class="col-xs-12 col-sm-12 col-md-8 text-left " id="news">
+                    <div class="row">
+                        <div class="col-md-12 grid">
+                            <div class="news_one grid-item">
+                                <h5>14:52</h5>
+                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
+
+                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
+
+                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
+                                    НХЛ </p>
+                            </div>
+                            <div class="news_one grid-item">
+                                <h5>14:52</h5>
+                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
+
+                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
+
+                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
+                                    НХЛ </p>
+                            </div>
+                            <div class="news_one grid-item">
+                                <h5>14:52</h5>
+                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
+
+                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
+
+                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
+                                    НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре
+                                    дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в
+                                    обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы
+                                    в обзоре дня НХЛ </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 grid">
+                            <div class="news_one grid-item">
+                                <h5>14:52</h5>
+                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
+
+                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
+
+                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
+                                    НХЛ </p>
+                            </div>
+                            <div class="news_one grid-item">
+                                <h5>14:52</h5>
+                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
+
+                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
+
+                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
+                                    НХЛ </p>
+                            </div>
+                            <div class="news_one grid-item">
+                                <h5>14:52</h5>
+                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
+
+                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
+
+                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
+                                    НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре
+                                    дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в
+                                    обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы
+                                    в обзоре дня НХЛ </p>
+                            </div>
+                            <div class="news_one grid-item">
+                                <h5>14:52</h5>
+                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
+
+                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
+
+                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
+                                    НХЛ </p>
+                            </div>
+                            <div class="news_one grid-item">
+                                <h5>14:52</h5>
+                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
+
+                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
+
+                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
+                                    НХЛ </p>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-                <!--<div class="col-xs-12 col-sm-12 col-md-8 text-left grid" id="news">
-                    &lt;!&ndash; <div class="wrapp_news default" > &ndash;&gt;
-                    <div class="news_one grid-item">
-                        <h5>14:52</h5>
-                        <img src="img/news/new.jpg" alt="" class="img-responsive">
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
-                    </div>
-                    <div  class="col-xs-12 col-sm-6 col-md-4 text-left">
-                        <div news="news" ng-repeat="news in ctrl.news"/>
-                    <div class="news_one grid-item">
-                        <h5>14:52</h5>
-                        <img src="img/news/new.jpg" alt="" class="img-responsive">
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
-                    </div>
-                    <div class="news_one grid-item">
-                        <h5>14:52</h5>
-                        <img src="img/news/new.jpg" alt="" class="img-responsive">
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
-                    </div>
-                    <div class="news_one grid-item">
-                        <h5>14:52</h5>
-                        <img src="img/news/new.jpg" alt="" class="img-responsive">
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
-                    </div>
-                    <div class="news_one grid-item">
-                        <h5>14:52</h5>
-                        <img src="img/news/new.jpg" alt="" class="img-responsive">
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
-                    </div>
-                    <div class="news_one grid-item">
-                        <h5>14:52</h5>
-                        <img src="img/news/new.jpg" alt="" class="img-responsive">
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
-                    </div>
-                    <div class="news_one grid-item">
-                        <h5>14:52</h5>
-                        <img src="img/news/new.jpg" alt="" class="img-responsive">
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
-                    </div>
-                    <div class="news_one grid-item">
-                        <h5>14:52</h5>
-                        <img src="img/news/new.jpg" alt="" class="img-responsive">
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
-                    </div>
-                    &lt;!&ndash; </div> &ndash;&gt;
-                </div>
-                <div class="hidden-xs hidden-sm col-md-2 fix_padding" ng-show="false">
+
+                <div class="hidden-xs hidden-sm col-md-2 fix_padding">
                     <div class="wrapp_social_lent">
                         <div class="soc_post">
                             <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
@@ -157,7 +281,7 @@
                     </div>
                 </div>
 
-            </div>-->
+            </div>
         </div>
     </div>
 </section>
