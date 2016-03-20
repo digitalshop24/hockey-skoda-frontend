@@ -1,0 +1,265 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+	
+}
+@media only screen and (max-width : 1100px) {
+	.wrapp_search p {
+		display: none;
+	}
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.left_head {
+		text-align:center;
+	}
+	.right_head {
+		border-bottom: 1px solid #b2b5b7;
+	}
+	
+	footer {
+		h5 {
+			padding-top: 10px;
+		}
+	}
+	.about_first { // about
+		background-image: url("none.png");
+		.wrapp_titel {
+    		float: none;
+   			margin-right: 0;
+   			text-align: center; 
+   			h4 {
+   				margin-top: 100px;
+   			}
+   			p {
+   				margin-bottom: 100px;
+   			}
+   		}	
+	}
+	.form {
+		h4 {
+			text-align: center;
+		}
+		input {
+			margin: 40px auto;
+		}
+	}
+	//-------------------------------------------------- t-drive
+
+	.form_t_drive {
+		div {
+			text-align: center;
+		}
+		
+	}
+
+	//-------------------------------------------------- end t-drive
+
+	
+	
+	
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+//-------------------------------------------------- lk
+
+
+	.wrapp_lk {
+		.lk_info {
+			min-height: 0;
+			height: auto;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			ul {
+      			li {
+      				display: inline-block;
+					width: 32%;
+					ul {
+						li {
+							text-align: left;
+							display: block;
+							width: 100%;
+						}
+					}
+      			}
+      		}		
+		}
+		.lk_plus {
+			min-height: 0;
+			height: auto;
+			display: none;
+		}
+		.lk_menu {
+			min-height: 0;
+			height: auto;
+			ul {
+				li {
+					display: inline-block;
+					width: 30%;
+					padding-top: 25px;
+					padding-bottom: 25px;
+					a {
+						img {
+							padding-top: 20px;
+							padding-bottom: 20px;
+						}
+					}
+					
+				}
+			}
+		}
+		.lk_content {
+			min-height: 0;
+			height: auto;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			.avatar {
+				padding-bottom: 40px;
+				li {
+					h6 {
+						top: 0;
+					}
+					.gir {
+						font-size: 3rem;
+						font-family: "SkodaProBold", sans-serif;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+	//-------------------------------------------------- end lk
+
+	//-------------------------------------------------- news
+	.wrapp_news_all {
+		.wrapp_contant_main {
+			margin-left: 20px;
+			text-align: center;
+			.grid-item {
+				width: 100%;
+				
+			}
+			.news_one {
+				
+				img{
+					margin: 0 auto; 
+				}
+			}
+		}
+	}		
+
+	//-------------------------------------------------- news
+
+}
+
+@media only screen and (max-width : 664px) {
+	.form{
+		.form_white {
+		    ul {
+		        li {
+		            margin: 0 10px;
+		      	}
+			    li:nth-child(1) {
+			    	margin-right: 10px;
+			        margin-left: 0;
+			    }
+			    li:nth-child(4) {
+			    	margin-right: 0;
+			        margin-left: 10px;
+			    }
+		    }
+	  	}
+	}
+	  
+	
+}	
+@media only screen and (max-width : 600px) {
+	  .timeline { left: 5%; }	
+}	
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 486px) {
+	
+}	
+@media only screen and (max-width : 440px) {
+	h6{
+		font-size: 1.7rem;
+	}
+	p{
+		font-size: 1.2rem;
+	}
+}	
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 389px) {
+	.fix_left {
+		margin-left: 0px !important;
+	}	
+	.wrapp_lk {
+		.lk_info {
+			 ul {
+			 	li {
+			 		.fix_left{
+			 			margin-left: 10px;
+			 		}
+			 	}
+			}
+		}
+	}		 
+}	
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
