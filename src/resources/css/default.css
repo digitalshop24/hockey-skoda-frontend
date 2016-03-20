@@ -356,7 +356,7 @@ select {
     display: inline-block;
     min-width: 170px;
     padding-left: 20px;
-    background: url(/img/resources/img/arrow.png) no-repeat transparent;
+    background: url(img/resources/imgarrow.png) no-repeat transparent;
     background-position: 95% 50%;
     background-color: #fff;
     margin-right: 20px;

@@ -4,6 +4,7 @@ import angular from 'angular';
 
 import headerCtrl from './header/controller.js';
 import news from './news/index';
+import mainNews from './main-news/index';
 import tdrive from './test-drive/index';
 import registration from './registration/index';
 import main from './main/index';
@@ -19,7 +20,8 @@ export default angular.module('dashboard',
         main.name,
         profile.name,
         forum.name,
-        tantamareska.name
+        tantamareska.name,
+        mainNews.name
     ])
     .config($stateProvider => {
         $stateProvider

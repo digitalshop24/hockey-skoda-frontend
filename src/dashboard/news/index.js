@@ -1,7 +1,6 @@
 'use strict';
 
 import angular from 'angular';
-import moment from 'moment';
 import NewsCtrl from './controller.js';
 import NewsService from './service.js';
 import news from './news/index.js';
@@ -31,7 +30,7 @@ export default angular.module('dashboard.news',
                             return newsService.getDaysContainedNewsByDate(moment().month(monthIndex).format('YYYY-MM'));
                         }
                     },
-                    news: ($stateParams, newsService, daysWithNews) => {
+                    news: ($stateParams, newsService, daysWithNews, moment) => {
                         if ($stateParams.loadExactlyDayNews) {
                             const dayWithNews = moment().month($stateParams.month).date($stateParams.day).format('YYYY-MM-DD');
                             return newsService.getNewsByDate(dayWithNews);

@@ -16,6 +16,7 @@ export default angular.module('app',
         'ui.router',
         'ui.bootstrap',
         'ngCookies',
+        'angularMoment',
         skodaLocalStorage.name,
         errorPages.name,
         index.name,
@@ -26,6 +27,9 @@ export default angular.module('app',
     .service('auth', auth)
     .config(($locationProvider) => {
         $locationProvider.html5Mode(true);
+    })
+    .run(amMoment=> {
+        amMoment.changeLocale('ru');
     })
     .run(($rootScope, $state, auth) => {
         $rootScope.$state = $state;

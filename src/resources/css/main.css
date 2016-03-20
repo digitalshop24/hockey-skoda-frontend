@@ -2,6 +2,8 @@
 header {
     border-bottom: 1px solid #000;
     font-family: "SkodaProBold", sans-serif;
+    position: relative;
+    z-index: 1001;
 }
 
 header .left_head img {
@@ -120,7 +122,7 @@ footer .footer_margin_top img {
 }
 
 .wrapp_main_new {
-    background-image: url(/img/resources/img/bg_star.png);
+    background-image: url(img/resources/imgbg_star.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -211,7 +213,7 @@ footer .footer_margin_top img {
 }
 
 .social {
-    background-image: url(/img/resources/img/soc/social_bg.jpg);
+    background-image: url(img/resources/imgsoc/social_bg.jpg);
     min-height: 400px;
 }
 
@@ -733,7 +735,7 @@ footer .footer_margin_top img {
 }
 
 .about_first {
-    background-image: url("/img/resources/img/about/bg_first.jpg");
+    background-image: url("img/resources/imgabout/bg_first.jpg");
     background-repeat: no-repeat;
 }
 
@@ -830,14 +832,14 @@ footer .footer_margin_top img {
 }
 
 .wrapp_mainpage_slider #owl-main-2 .owl-prev {
-    background-image: url("/img/resources/img/arrow_left_white.png");
+    background-image: url("img/resources/imgarrow_left_white.png");
     position: absolute;
     left: 20px;
     top: 35vh;
 }
 
 .wrapp_mainpage_slider #owl-main-2 .owl-next {
-    background-image: url("/img/resources/img/arrow_right_white.png");
+    background-image: url("img/resources/imgarrow_right_white.png");
     position: absolute;
     right: 20px;
     top: 35vh;
@@ -940,14 +942,14 @@ footer .footer_margin_top img {
 }
 
 .wrapp_mainpage_slider .owl-theme .owl-controls .owl-buttons .owl-prev {
-    background-image: url("/img/resources/img/arrow_left_white.png");
+    background-image: url("img/resources/imgarrow_left_white.png");
     position: absolute;
     left: 20px;
     top: 30vh;
 }
 
 .wrapp_mainpage_slider .owl-theme .owl-controls .owl-buttons .owl-next {
-    background-image: url("/img/resources/img/arrow_right_white.png");
+    background-image: url("img/resources/imgarrow_right_white.png");
     position: absolute;
     right: 20px;
     top: 30vh;
@@ -1206,7 +1208,7 @@ footer .footer_margin_top img {
 }
 
 .wrapp_mainpage_end {
-    background-image: url(/img/resources/img/main/slide1.jpg);
+    background-image: url(img/resources/imgmain/slide1.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -1267,6 +1269,18 @@ footer .footer_margin_top img {
     margin: 0 auto;
 }
 
+.wrapp_news_all .menu_line_main {
+    width: 150px;
+}
+
+.wrapp_news_all .menu_line_main p {
+    color: #8b8b8b;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
 .wrapp_news_all .menu_date {
     position: absolute;
     background-color: #4ba82e;
@@ -1321,6 +1335,61 @@ footer .footer_margin_top img {
     width: 300px;
 }
 
+.wrapp_news_all .fixed_content {
+    position: fixed;
+    top: 0;
+}
+
+.wrapp_news_all .wrapp_contant_main_page_news {
+    margin-left: 150px !important;
+}
+
+.wrapp_news_all .wrapp_contant_main_page_news .wrapp_main_post_news {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    z-index: 10;
+    padding-left: 50px;
+}
+
+.wrapp_news_all .wrapp_contant_main_page_news .wrapp_main_post_news h5 {
+    font-family: "SkodaProLight", sans-serif;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding-top: 15vh;
+}
+
+.wrapp_news_all .wrapp_contant_main_page_news .wrapp_main_post_news h5 a {
+    color: #fff;
+}
+
+.wrapp_news_all .wrapp_contant_main_page_news .wrapp_main_post_news h3 {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-family: "SkodaProBold", sans-serif;
+    padding-top: 10vh;
+}
+
+.wrapp_news_all .wrapp_contant_main_page_news .wrapp_main_post_news h3 a {
+    color: #fff;
+}
+
+.wrapp_news_all .wrapp_contant_main_page_news .wrapp_main_post_news p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.5rem;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.wrapp_news_all .wrapp_contant_main_page_news .wrapp_main_post_news p a {
+    color: #fff;
+}
+
 .wrapp_news_all .wrapp_contant_main {
     margin-left: 250px;
     background-color: #ececec;
@@ -1334,9 +1403,13 @@ footer .footer_margin_top img {
     float: right;
 }
 
+.wrapp_news_all .wrapp_contant_main .grid-item {
+    width: 46%;
+    float: left;
+}
+
 .wrapp_news_all .wrapp_contant_main .news_one {
     margin: 20px 0;
-    width: 49%;
     padding: 0 10px;
 }
 
@@ -1354,11 +1427,20 @@ footer .footer_margin_top img {
     margin-bottom: 10px;
 }
 
+.wrapp_news_all .wrapp_contant_main .wrapp_timeline_main_page {
+    position: absolute;
+    z-index: 101;
+    right: 80px;
+}
+
+.wrapp_news_all .wrapp_contant_main .wrapp_timeline {
+    width: 150px;
+}
+
 .wrapp_news_all .wrapp_contant_main .timeline_news {
     position: absolute;
+    height: 1000px;
     width: 4px;
-    top: 25px;
-    bottom: 25px;
     left: 50%;
     margin-left: -2px;
     background: #fff;
@@ -1366,7 +1448,8 @@ footer .footer_margin_top img {
 }
 
 .wrapp_news_all .wrapp_contant_main .timeline_news_day {
-    margin-top: 50px;
+    padding-top: 50px;
+    height: 1000px;
 }
 
 .wrapp_news_all .wrapp_contant_main .timeline_news_day li {
@@ -1386,7 +1469,21 @@ footer .footer_margin_top img {
     position: relative;
 }
 
-.wrapp_news_all .wrapp_contant_main .timeline_news_day .activ_day {
+.wrapp_news_all .wrapp_contant_main .timeline_news_day li div:hover {
+    width: 75px;
+    height: 75px;
+    padding-top: 25px !important;
+    color: #4ba82e;
+}
+
+.wrapp_news_all .wrapp_contant_main .timeline_news_day .activ_day div {
+    width: 75px;
+    height: 75px;
+    padding-top: 25px !important;
+    color: #4ba82e;
+}
+
+.wrapp_news_all .wrapp_contant_main .timeline_news_day .activ_day div:hover {
     width: 75px;
     height: 75px;
     padding-top: 25px;
@@ -1398,8 +1495,20 @@ footer .footer_margin_top img {
 }
 
 .wrapp_news_all .wrapp_contant_main .timeline_news_day .noactiv_day div {
-    width: 20px;
-    height: 20px;
+    width: 20px !important;
+    height: 20px !important;
+    padding-top: 0 !important;
+}
+
+.wrapp_news_all .wrapp_contant_main .timeline_news_day .noactiv_day div:hover {
+    width: 20px !important;
+    height: 20px !important;
+    padding-top: 0 !important;
+}
+
+.wrapp_news_all .wrapp_contant_main .timeline_news_day .with_main_news div {
+    border: 2px solid #4ba82e;
+    padding-top: 12px;
 }
 
 .wrapp_news_all .fix_padding {
@@ -1435,7 +1544,7 @@ footer .footer_margin_top img {
 }
 
 .wrapp_t_drive {
-    background-image: url("/img/resources/img/t_drive/bg.jpg");
+    background-image: url("img/resources/imgt_drive/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 1100px;
@@ -1491,12 +1600,12 @@ footer .footer_margin_top img {
     height: 19px;
     margin: -1px 20px 0 0;
     vertical-align: middle;
-    background: url(/img/resources/img/t_drive/checkbox.png) left top no-repeat;
+    background: url(img/resources/imgt_drive/checkbox.png) left top no-repeat;
     cursor: pointer;
 }
 
 .wrapp_t_drive .form_t_drive input[type="checkbox"]:checked + label span {
-    background: url(/img/resources/img/t_drive/checkbox_activ.png) left top no-repeat;
+    background: url(img/resources/imgt_drive/checkbox_activ.png) left top no-repeat;
 }
 
 .wrapp_t_drive .form_t_drive label {
@@ -1768,12 +1877,12 @@ footer .footer_margin_top img {
 }
 
 .wrapp_slider .slick-prev {
-    background: #000 url(/img/resources/img/arrow_left_white.png) no-repeat center center;
+    background: #000 url(img/resources/imgarrow_left_white.png) no-repeat center center;
     left: 0px;
 }
 
 .wrapp_slider .slick-next {
-    background: #000 url(/img/resources/img/arrow_right_white.png) no-repeat center center;
+    background: #000 url(img/resources/imgarrow_right_white.png) no-repeat center center;
     right: 0px;
 }
 

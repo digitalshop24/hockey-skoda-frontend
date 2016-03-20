@@ -9,18 +9,9 @@
         </div>
         <div class="menu_date">
             <ul>
-                <li><p><a href="#"><span>12</span> декабрь</a></p></li>
-                <li><p><a href="#"><span>11</span> ноябрь</a></p></li>
-                <li><p><a href="#"><span>10</span> октябрь</a></p></li>
-                <li><p><a href="#"><span>09</span> сентябрь</a></p></li>
-                <li><p><a href="#"><span>08</span> август</a></p></li>
-                <li><p><a href="#"><span>07</span> июль</a></p></li>
-                <li><p><a href="#"><span>06</span> июнь</a></p></li>
-                <li><p><a href="#"><span>05</span> май</a></p></li>
-                <li><p><a href="#"><span>04</span> апрель</a></p></li>
-                <li><p><a href="#"><span>03</span> март </a></p></li>
-                <li><p><a href="#"><span>02</span> февраль </a></p></li>
-                <li><p><a href="#"><span>01</span> январь</a></p></li>
+                <li ng-repeat="month in ctrl.months">
+                    <p><a href="#"><span>{{month.viewIndex}}</span>{{month.name}}</a></p>
+                </li>
             </ul>
         </div>
     </div>
@@ -56,96 +47,64 @@
                     </ul>
 
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 text-left">
-                    <div class="new">
-                        <h5>14:52</h5>
-                        <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
+                <div>
 
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
-                    </div>
-                    <div class="new">
-                        <h5>14:52</h5>
-                        <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
-                    </div>
-                    <div class="new">
-                        <h5>14:52</h5>
-                        <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                            НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                            НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                            НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                            НХЛ </p>
-                    </div>
-                    <div class="new">
-                        <h5>14:52</h5>
-                        <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
-                    </div>
-                    <div class="new">
-                        <h5>14:52</h5>
-                        <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
-                    </div>
+                <div class="col-xs-12 col-sm-12 col-md-8 text-left grid" id="news">
+                    <div news="news" class="news_one grid-item" ng-repeat="news in ctrl.news"/>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="new">
+                <!--<div class="col-xs-12 col-sm-12 col-md-8 text-left grid" id="news">
+                    &lt;!&ndash; <div class="wrapp_news default" > &ndash;&gt;
+                    <div class="news_one grid-item">
                         <h5>14:52</h5>
-                        <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
+                        <img src="img/news/new.jpg" alt="" class="img-responsive">
                         <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
                         <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
                     </div>
-                    <div class="new">
+                    <div  class="col-xs-12 col-sm-6 col-md-4 text-left">
+                        <div news="news" ng-repeat="news in ctrl.news"/>
+                    <div class="news_one grid-item">
                         <h5>14:52</h5>
-                        <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
+                        <img src="img/news/new.jpg" alt="" class="img-responsive">
                         <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
                         <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
                     </div>
-                    <div class="new">
+                    <div class="news_one grid-item">
                         <h5>14:52</h5>
-                        <img src="img/resources/img/bg.png" alt="" class="img-responsive">
-
+                        <img src="img/news/new.jpg" alt="" class="img-responsive">
                         <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
+                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
+                    </div>
+                    <div class="news_one grid-item">
+                        <h5>14:52</h5>
+                        <img src="img/news/new.jpg" alt="" class="img-responsive">
+                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
                         <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
                     </div>
-                    <div class="new">
+                    <div class="news_one grid-item">
                         <h5>14:52</h5>
-                        <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
+                        <img src="img/news/new.jpg" alt="" class="img-responsive">
                         <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                            НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                            НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                            НХЛ </p>
-                    </div>
-                    <div class="new">
-                        <h5>14:52</h5>
-                        <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
                         <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
                     </div>
+                    <div class="news_one grid-item">
+                        <h5>14:52</h5>
+                        <img src="img/news/new.jpg" alt="" class="img-responsive">
+                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
+                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
+                    </div>
+                    <div class="news_one grid-item">
+                        <h5>14:52</h5>
+                        <img src="img/news/new.jpg" alt="" class="img-responsive">
+                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
+                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
+                    </div>
+                    <div class="news_one grid-item">
+                        <h5>14:52</h5>
+                        <img src="img/news/new.jpg" alt="" class="img-responsive">
+                        <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
+                        <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня НХЛ </p>
+                    </div>
+                    &lt;!&ndash; </div> &ndash;&gt;
                 </div>
                 <div class="hidden-xs hidden-sm col-md-2 fix_padding" ng-show="false">
                     <div class="wrapp_social_lent">
@@ -198,7 +157,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div>-->
         </div>
     </div>
 </section>

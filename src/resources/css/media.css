@@ -136,6 +136,10 @@
         font-family: "SkodaProBold", sans-serif;
         text-transform: uppercase;
     }
+
+    .wrapp_news_all .wrapp_contant_main .grid-item {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 664px) {

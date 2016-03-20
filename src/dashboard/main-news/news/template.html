@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 text-left wrapp_main_post_news"
+         style="background-image: url({{ctrl.mainNews.image}})">
+        <!-- <img src="" alt="" class="img-responsive"> -->
+        <h5 ng-bind="ctrl.mainNews.published_at | amDateFormat:'DD MMMM'"/>
+        <h3 ng-bind="ctrl.mainNews.name"/>
+        <p>Сегодня 24 года исполнилось главной звезде <br> "Чикаго" прошедшего месяца - Артемию Панамарину</p>
+        <h5><a ng-click="ctrl.showNews()">Другие новости</a></h5>
+    </div>
+</div>
