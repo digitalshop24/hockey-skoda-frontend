@@ -11,7 +11,7 @@
   "author": "Skoda",
   "license": "Proprietary",
   "devDependencies": {
-
+    "gulp-sass": "^2.2.0"
   },
   "dependencies": {
     "babel-runtime": "^6.2.0",
