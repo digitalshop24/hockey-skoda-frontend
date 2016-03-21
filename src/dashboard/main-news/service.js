@@ -15,4 +15,15 @@ export default class MainNewsService {
                 throw response.data.error;
             });
     }
+
+
+    getDaysContainedNewsByDate(date) {
+
+        return this.api.get(`/posts/news/days_with_news/${date ? date : ''}`)
+            .then(response => {
+                return response.data.reverse();
+            }).catch(response => {
+                throw response.data.error;
+            });
+    }
 }

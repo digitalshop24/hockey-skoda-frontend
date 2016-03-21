@@ -35,7 +35,7 @@
 
 function initTimeline() {
     $(function () {
-        $('.wrapp_timeline').jScrollPane({
+        $('.wrapp_timeline,.wrapp_timeline_main_page').jScrollPane({
                 autoReinitialise: true
             }
         );
@@ -72,7 +72,7 @@ function initTimeline() {
     slidesToScroll: 1
 });
 
-// form-slider 
+// form-slider
 $('.slider-for').slick({
     infinite: true,
     speed: 300,

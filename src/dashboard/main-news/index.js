@@ -4,10 +4,13 @@ import angular from 'angular';
 import MainNewsCtrl from './controller.js';
 import MainNewsService from './service.js';
 import news from './news/index.js';
+import timeline from './timeline/index.js';
+
 
 export default angular.module('dashboard.main-news',
     [
-        news.name
+        news.name,
+        timeline.name
     ])
     .service('mainNewsService', MainNewsService)
     .config(function ($stateProvider) {
@@ -20,6 +23,12 @@ export default angular.module('dashboard.main-news',
                     day: ""
                 },
                 resolve: {
+                    daysWithNews: ($stateParams, mainNewsService) => {
+                        const monthIndex = moment().month() + 1;
+                        $stateParams.month = monthIndex;
+                        const momentMonthIndex = monthIndex - 1;
+                        return mainNewsService.getDaysContainedNewsByDate(moment().month(momentMonthIndex).format('YYYY-MM'));
+                    },
                     news: ($stateParams, $location, mainNewsService, moment) => {
                         return mainNewsService.getNewsByDate(moment().format('YYYY-MM-DD')).then(news => {
                             if (news.length) {
@@ -28,16 +37,7 @@ export default angular.module('dashboard.main-news',
                                 $location.url('/general-news');
                             }
                         });
-                    },
-                    /*daysWithNews: ($stateParams, newsService) => {
-                     if ($stateParams.loadExactlyDayNews) {
-                     return [];
-                     } else {
-                     const monthIndex = $stateParams.month ? $stateParams.month : moment().month();
-                     $stateParams.month = monthIndex;
-                     return newsService.getDaysContainedNewsByDate(moment().month(monthIndex).format('YYYY-MM'));
-                     }
-                     }*/
+                    }
                 },
                 url: '/main-news',
                 controller: MainNewsCtrl,

@@ -19,6 +19,7 @@ export default angular.module('dashboard.general-news.timeline', [])
 
                 $scope.$on('generalNews:activeDayChanged', (event, data) => {
 
+                    data = +data;
                     $scope.$apply(() => {
                         $scope.ctrl.currentDay = data;
                     });
