@@ -12,6 +12,8 @@ import profile from './profile/index';
 import forum from './forum/index';
 import tantamareska from './tantamareska/index';
 import scrollInit from './scroll-init/index.js';
+import facts from './interesting-facts/index';
+
 
 export default angular.module('dashboard',
     [
@@ -23,7 +25,8 @@ export default angular.module('dashboard',
         tantamareska.name,
         generalNews.name,
         mainNews.name,
-        scrollInit.name
+        scrollInit.name,
+        facts.name
     ])
     .config($stateProvider => {
         $stateProvider
