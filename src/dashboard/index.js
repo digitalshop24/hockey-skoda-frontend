@@ -12,6 +12,7 @@ import profile from './profile/index';
 import forum from './forum/index';
 import tantamareska from './tantamareska/index';
 import scrollInit from './scroll-init/index.js';
+import sliderInit from './slider-init/index.js';
 import facts from './interesting-facts/index';
 import blog from './blog/index';
 
@@ -27,6 +28,7 @@ export default angular.module('dashboard',
         generalNews.name,
         mainNews.name,
         scrollInit.name,
+        sliderInit.name,
         facts.name,
         blog.name
     ])
