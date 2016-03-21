@@ -14,7 +14,7 @@ export default class GeneralNewsService {
             })
             .then(response => {
                 return {
-                    id: date.substring(8),  // YYYY-MM-DD we need only day.
+                    id: +date.substring(8),  // YYYY-MM-DD we need only day.
                     news: response.data
                 };
             })

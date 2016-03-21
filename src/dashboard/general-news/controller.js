@@ -25,16 +25,16 @@ export default class GeneralNewsCtrl {
         });
         this.months = this.months.reverse();
         this.daysWithNews = daysWithNews;
-        this.loadingPerformed = false;
+        this.shouldLoad = true;
     }
 
     loadNext() {
-        if (!this.loadingPerformed) {
-            this.loadingPerformed = true;
+        if (this.shouldLoad) {
+            this.shouldLoad = false;
             if (this.generalNewsLogicService.hasNextDay()) {
                 this.service.getNewsByDate(this.generalNewsLogicService.getNextDate()).then(res => {
                     this.days.push(res);
-                    this.loadingPerformed = false;
+                    this.shouldLoad = true;
                 });
             } else if (this.generalNewsLogicService.hasNextMonth()) {
                 this.state.go('dashboard.general-news', {month: this.generalNewsLogicService.getNextMonth()}, {reload: true});
@@ -43,7 +43,7 @@ export default class GeneralNewsCtrl {
 
     }
 
-    changeMonth(month){
+    changeMonth(month) {
         this.state.go('dashboard.general-news', {month: month.monthIndex}, {reload: true});
     }
 
