@@ -13,7 +13,10 @@ export default class GeneralNewsService {
                 }
             })
             .then(response => {
-                return response.data;
+                return {
+                    id: date.substring(8),  // YYYY-MM-DD we need only day.
+                    news: response.data
+                };
             })
             .catch(response => {
                 throw response.data.error;
@@ -24,7 +27,7 @@ export default class GeneralNewsService {
 
         return this.api.get(`/posts/news/days_with_news/${date ? date : ''}`)
             .then(response => {
-                return response.data;
+                return response.data.reverse();
             }).catch(response => {
                 throw response.data.error;
             });

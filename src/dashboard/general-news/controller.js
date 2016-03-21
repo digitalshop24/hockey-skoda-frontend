@@ -4,9 +4,12 @@ import moment from 'moment';
 
 
 export default class GeneralNewsCtrl {
-    constructor(newsService, news) {
+    constructor(newsService, news, daysWithNews, month, day, generalNewsLogicService, $state) {
+        generalNewsLogicService.init(daysWithNews, month, day);
+        this.generalNewsLogicService = generalNewsLogicService;
         this.service = newsService;
-        this.news = news;
+        this.state = $state;
+        this.days = [news];
         this.months = [];
         this.monthNames = ['январь', 'февраль', 'март', 'апрель', 'май',
             'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
@@ -19,5 +22,23 @@ export default class GeneralNewsCtrl {
             })
         });
         this.months = this.months.reverse();
+        this.daysWithNews = daysWithNews;
+        this.loadingPerformed = false;
     }
+
+    loadNext() {
+        if (!this.loadingPerformed) {
+            this.loadingPerformed = true;
+            if (this.generalNewsLogicService.hasNextDay()) {
+                this.service.getNewsByDate(this.generalNewsLogicService.getNextDate()).then(res => {
+                    this.days.push(res);
+                    this.loadingPerformed = false;
+                });
+            } else if (this.generalNewsLogicService.hasNextMonth()) {
+                this.state.go('dashboard.general-news', {month: this.generalNewsLogicService.getNextMonth()}, {reload: true});
+            }
+        }
+
+    }
+
 }

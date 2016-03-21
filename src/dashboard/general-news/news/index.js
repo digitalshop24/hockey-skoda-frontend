@@ -9,7 +9,7 @@ export default angular.module('dashboard.general-news.directive', [])
             bindToController: true,
             restrict: 'EA',
             scope: {
-                news: '='
+                generalNews: '='
             },
             template: require('./template.html'),
             controller: NewsCtrl,

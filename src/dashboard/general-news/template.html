@@ -139,99 +139,15 @@
 
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-8 text-left " id="news">
-                    <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8 text-left " id="news" general-news-scroll load-next="ctrl.loadNext()">
+                    <div class="row" data-day-id="{{day.id}}" ng-repeat="day in ctrl.days">
                         <div class="col-md-12 grid">
-                            <div class="news_one grid-item">
-                                <h5>14:52</h5>
-                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                                    НХЛ </p>
-                            </div>
-                            <div class="news_one grid-item">
-                                <h5>14:52</h5>
-                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                                    НХЛ </p>
-                            </div>
-                            <div class="news_one grid-item">
-                                <h5>14:52</h5>
-                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                                    НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре
-                                    дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в
-                                    обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы
-                                    в обзоре дня НХЛ </p>
-                            </div>
+                            <div general-news="news" class="news_one grid-item" ng-repeat="news in day.news" />
                         </div>
-
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 grid">
-                            <div class="news_one grid-item">
-                                <h5>14:52</h5>
-                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                                    НХЛ </p>
-                            </div>
-                            <div class="news_one grid-item">
-                                <h5>14:52</h5>
-                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                                    НХЛ </p>
-                            </div>
-                            <div class="news_one grid-item">
-                                <h5>14:52</h5>
-                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                                    НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре
-                                    дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в
-                                    обзоре дня НХЛИсторическая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы
-                                    в обзоре дня НХЛ </p>
-                            </div>
-                            <div class="news_one grid-item">
-                                <h5>14:52</h5>
-                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                                    НХЛ </p>
-                            </div>
-                            <div class="news_one grid-item">
-                                <h5>14:52</h5>
-                                <img src="img/resources/img/news/new.jpg" alt="" class="img-responsive">
-
-                                <p><a href="#" class="link_default">Бойня в Нижнем - вновь за Торпедо!</a></p>
-
-                                <p>Историческая шайба Овечкина, эффектный гол Орлова и сухая победа Тампы в обзоре дня
-                                    НХЛ </p>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
 
-                <div class="hidden-xs hidden-sm col-md-2 fix_padding">
+                <div class="hidden-xs hidden-sm col-md-2 fix_padding" ng-show="false">
                     <div class="wrapp_social_lent">
                         <div class="soc_post">
                             <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
