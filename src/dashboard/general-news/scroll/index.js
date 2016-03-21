@@ -21,10 +21,7 @@ export default angular.module('dashboard.general-news.scroll', [])
                         const needLoadNextDay = checkLoadNeeded();
 
                         if (needLoadNextDay) {
-                            if($scope.shouldLoad){
-                                $scope.loadNext();
-                            }
-
+                            $scope.loadNext();
                         }
 
                         let st = $(document).scrollTop();
