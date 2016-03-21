@@ -4,7 +4,7 @@ $black: #000;
 $white: #fff;
 $grey_lite: #ececec;
 $grey: #cccccc;
-$grey_dark: #555555;
+$grey_dark: #555555; 
 //Additional colors
 $green_add_: #299926;
 $green_add_pale: #a5d396;
@@ -1397,10 +1397,18 @@ $grey_about: #5d5d5d;
       }
     }
     .wrapp_timeline_main_page {
-      position: absolute;
+      position: fixed;
       z-index: 101;
       right: 80px;
-
+      overflow: auto;
+      height: 100vh;
+      width: 150px;
+      top: 0;
+      .jspContainer {
+        .jspVerticalBar {
+          width: 0px;
+        }
+      }
     }
     .wrapp_timeline {
       width: 150px;
@@ -1409,7 +1417,6 @@ $grey_about: #5d5d5d;
       position: fixed;
       top: 0;
       .jspContainer {
-
         .jspVerticalBar {
           width: 0px;
         }
@@ -1604,9 +1611,13 @@ $grey_about: #5d5d5d;
   }
 }
 
+
 //-------------------------------------------------- end t-drive
 
+
+
 //-------------------------------------------------- lk
+
 
 .wrapp_lk {
   .name_mobile_lk {
@@ -2058,3 +2069,138 @@ $grey_about: #5d5d5d;
 // <!--end form_suggestions -->
 
 //-------------------------------------------------- end СЕРГЕЙ УШАНСЬКИЙ
+
+//-------------------------------------------------- ANDREY FEDOROVICH
+
+.factSection {
+  padding: 30px 60px 60px 60px;
+  figure {
+    margin:0 0 30px 0;
+    .factImgWrap {
+      height: 400px;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    figcaption {
+      height: 100px;
+      margin-top: -100px;
+      background-color: rgba(255,255,255,.85);
+      p {
+        font-family:$bold;
+        font-size:$p_size;
+        padding:10px 0 0;
+      }
+    }
+  }
+  figure.half {
+    .factImgWrap {
+      height: 200px;
+    }
+    figcaption {
+      height: 80px;
+      margin-top: -80px;
+    }
+  }
+  ul {
+    li {
+      display: inline-block;
+    }
+    li:nth-child(2) {
+      margin:15px 20px;
+      position: absolute;
+    }
+  }
+}
+.prizesSection {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+ 
+  .wrapper {
+    margin:150px 0 50px;
+    background-color: transparent;
+    color: #fff;
+    h5 {
+      font-family:$light;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    h2 {
+      font-family: $bold;
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size:$p_size;
+      margin-bottom: 120px;
+      max-width: 400px;
+    }
+    .imgWrap {
+      height: 150px;
+    }
+  }
+  .wrapper.white {
+    margin: 60px 0;
+    h5 {
+      color:$grey_dark
+    }
+    h2 {
+      color:$green_main
+    }
+    p {
+      color:$grey_dark;
+      margin-bottom:0
+    }
+  }
+  .wrapper.black {
+    padding: 50px 0;
+    margin: 0;
+    ul {
+      li {
+        display: inline-flex;
+        margin-right: 30px;
+        h2,p,img {
+          margin-bottom: 0;
+        }
+      }
+      li:nth-child(2){
+       top: 50%;
+       transform: translateY(-50%);
+      }
+      li:nth-last-child(1) {
+          margin-top: -30px;
+          margin-right: 0;
+          font-size:$p_size;
+          top: 50%;
+          transform: translateY(-120%);
+        }
+    }
+  } 
+}
+.prizesSection.step1 {
+  background-image: url('img/resources/img/prizesPage/bg1.png');
+
+}
+.prizesSection.step2 {
+  background-color:#04090d;
+  background-image: url('img/resources/img/prizesPage/bg2.png');
+}
+.prizesSection.step3 {
+  background-image: url('img/resources/img/prizesPage/bg3.png');
+}
+.prizesSection.step4 {
+  background-color: black;
+background-image: url('img/resources/img/prizesPage/bg4.png');
+}
+.prizesSection.imgBottom {
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+
+//-------------------------------------------------- end ANDREY FEDOROVICH
