@@ -25,7 +25,7 @@ export default angular.module('dashboard',
         tantamareska.name,
         generalNews.name,
         mainNews.name,
-        scrollInit.name
+        scrollInit.name,
         facts.name
     ])
     .config($stateProvider => {

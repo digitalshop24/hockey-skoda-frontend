@@ -1,11 +1,11 @@
 'use strict';
 
 import angular from 'angular';
-import MainCtrl from './controller.js';
-import MainService from './service.js';
+import FactsCtrl from './controller.js';
+import FactsService from './service.js';
 
 export default angular.module('dashboard.facts', [])
-    .service('factsService', FactsService)
+    .service('factService', FactsService)
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.facts', {
