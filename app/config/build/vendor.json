@@ -13,7 +13,8 @@
             "src/resources/js/jscrollpane/mousewheel.js",
             "src/resources/js/jscrollpane/jscrollpane.min.js",
             "src/resources/js/common.js",
-            "src/resources/libs/owl/owl.carousel.min.js"
+            "src/resources/libs/owl/owl.carousel.min.js",
+            "src/resources/libs/slick/slick.min.js"
         ],
         "dest": "vendor.min.js"
     },
@@ -24,7 +25,8 @@
             "node_modules/font-awesome/css/font-awesome.min.css",
             "src/resources/js/jscrollpane/jscrollpane.css",
             "src/resources/libs/owl/owl.carousel.css",
-            "src/resources/libs/owl/owl.theme.css"
+            "src/resources/libs/owl/owl.theme.css",
+            "src/resources/libs/slick/slick.css"
         ],
         "dest": "vendor.min.css"
     },
