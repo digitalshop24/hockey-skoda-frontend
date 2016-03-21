@@ -29,22 +29,21 @@ export default class GeneralNewsCtrl {
     }
 
     loadNext() {
-        if (this.shouldLoad) {
-            this.shouldLoad = false;
-            if (this.generalNewsLogicService.hasNextDay()) {
-                this.service.getNewsByDate(this.generalNewsLogicService.getNextDate()).then(res => {
-                    this.days.push(res);
-                    this.shouldLoad = true;
-                });
-            } else if (this.generalNewsLogicService.hasNextMonth()) {
-                this.state.go('dashboard.general-news', {month: this.generalNewsLogicService.getNextMonth()}, {reload: true});
-            }
+        this.shouldLoad = false;
+        if (this.generalNewsLogicService.hasNextDay()) {
+            this.service.getNewsByDate(this.generalNewsLogicService.getNextDate()).then(res => {
+                this.days.push(res);
+                this.shouldLoad = true;
+            });
+        } else if (this.generalNewsLogicService.hasNextMonth()) {
+            this.state.go('dashboard.general-news', {month: this.generalNewsLogicService.getNextMonth()}, {reload: true});
         }
-
     }
 
     changeMonth(month) {
-        this.state.go('dashboard.general-news', {month: month.monthIndex}, {reload: true});
+        if(month.monthIndex <= moment().month() + 1) {
+            this.state.go('dashboard.general-news', {month: month.monthIndex}, {reload: true});
+        }
     }
 
 }
