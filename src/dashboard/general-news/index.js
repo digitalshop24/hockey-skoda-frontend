@@ -6,11 +6,13 @@ import GeneralNewsService from './service.js';
 import GeneralNewsLogicService from './generalNewsLogicService.js';
 import news from './news/index.js';
 import scroll from './scroll/index.js';
+import timeline from './timeline/index.js';
 
 export default angular.module('dashboard.general-news',
     [
         news.name,
-        scroll.name
+        scroll.name,
+        timeline.name
     ])
     .service('generalNewsLogicService', GeneralNewsLogicService)
     .service('newsService', GeneralNewsService)

@@ -1,0 +1,13 @@
+<div scroll-init class="wrapp_timeline default" id="timeline_wrapp">
+
+    <div class="timeline_news" id="timeline_main" style="height: 3500px"></div>
+    <ul class="timeline_news_day" id="timeline_main_ul" style="height: 3500px">
+        <li ng-repeat="day in ctrl.timelineDays"
+            ng-class="{'noactiv_day': !day.name, 'activ_day': day.id == ctrl.currentDay}">
+            <a href="">
+                <div data-timeline-day-id="{{day.id}}" ng-click="ctrl.chooseExactDate(day)"><p ng-bind="day.name"></p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

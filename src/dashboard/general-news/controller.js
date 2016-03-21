@@ -11,12 +11,14 @@ export default class GeneralNewsCtrl {
         this.state = $state;
         this.days = [news];
         this.months = [];
+        this.activeMonth = month;
         this.monthNames = ['январь', 'февраль', 'март', 'апрель', 'май',
             'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
         Array.from(new Array(12), (e, i) => i).forEach((monthIndex, index) => {
-            const viewIndex = (monthIndex + 1) < 10 ? '0' + (monthIndex + 1) : (monthIndex + 1);
+            var humanMonthIndex = monthIndex + 1;
+            const viewIndex = humanMonthIndex < 10 ? '0' + humanMonthIndex : humanMonthIndex;
             this.months.push({
-                monthIndex: monthIndex,
+                monthIndex: humanMonthIndex,
                 viewIndex: viewIndex,
                 name: this.monthNames[index]
             })
@@ -39,6 +41,10 @@ export default class GeneralNewsCtrl {
             }
         }
 
+    }
+
+    changeMonth(month){
+        this.state.go('dashboard.general-news', {month: month.monthIndex}, {reload: true});
     }
 
 }

@@ -3,6 +3,10 @@
 export default class GeneralNewsLogicService {
     constructor(moment) {
         this.moment = moment;
+        this.day = undefined;
+        this.month = undefined;
+        this.daysWithNews = undefined;
+        this.nextDay = undefined;
     }
 
     init(daysWithNews, month, day) {

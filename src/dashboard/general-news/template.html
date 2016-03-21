@@ -7,10 +7,10 @@
                 <li><a href=""><img src="img/resources/img/news/ico_menu3.png" alt="" class="img-responsive"></a></li>
             </ul>
         </div>
-        <div class="menu_date hidden-xs"> 
+        <div class="menu_date hidden-xs">
             <ul>
-                <li ng-repeat="month in ctrl.months">
-                    <p><a href="#"><span>{{month.viewIndex}}</span>{{month.name}}</a></p>
+                <li ng-repeat="month in ctrl.months" ng-class="{'active_month': month.viewIndex==ctrl.activeMonth}">
+                    <p ng-click="ctrl.changeMonth(month)"><a href="#"><span>{{month.viewIndex}}</span>{{month.name}}</a></p>
                 </li>
             </ul>
         </div>
@@ -30,119 +30,17 @@
             <div><a href="#"><span>12</span> декбрь</a></div>
         </div>
     </div>
-    <!--<div class="col-xs-12 col-sm-12 col-md-8 text-left grid" id="news">
-        <div general-news="news" class="news_one grid-item" ng-repeat="news in ctrl.news"/>
-    </div>-->
     <div class="wrapp_contant_main">
         <div class="container-fluid">
             <div class="row">
-                <div scroll-init class="col-md-2 hidden-xs hidden-sm">
-
-                    <div class="wrapp_timeline default" id="timeline_wrapp">
-
-                        <div class="timeline_news" id="timeline_main" style="height: 3500px"></div>
-                        <!-- Нужно высчитывать высоту timeline  в зависимости от высоты всех постов. -->
-                        <ul class="timeline_news_day" id="timeline_main_ul" style="height: 3500px">
-                            <li class="activ_day"><a href="">
-                                <div><p>Сегодня</p></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>24</p></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>23</p></div>
-                            </a></li>
-                            <li class="noactiv_day"><a href="">
-                                <div></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>22</p></div>
-                            </a></li>
-                            <li class="activ_day"><a href="">
-                                <div><p>Сегодня</p></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>24</p></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>23</p></div>
-                            </a></li>
-                            <li class="noactiv_day"><a href="">
-                                <div></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>22</p></div>
-                            </a></li>
-                            <li class="activ_day"><a href="">
-                                <div><p>Сегодня</p></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>24</p></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>23</p></div>
-                            </a></li>
-                            <li class="noactiv_day"><a href="">
-                                <div></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>22</p></div>
-                            </a></li>
-                            <li class="activ_day"><a href="">
-                                <div><p>Сегодня</p></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>24</p></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>23</p></div>
-                            </a></li>
-                            <li class="noactiv_day"><a href="">
-                                <div></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>22</p></div>
-                            </a></li>
-                            <li class="activ_day"><a href="">
-                                <div><p>Сегодня</p></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>24</p></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>23</p></div>
-                            </a></li>
-                            <li class="noactiv_day"><a href="">
-                                <div></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>22</p></div>
-                            </a></li>
-                            <li class="activ_day"><a href="">
-                                <div><p>Сегодня</p></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>24</p></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>23</p></div>
-                            </a></li>
-                            <li class="noactiv_day"><a href="">
-                                <div></div>
-                            </a></li>
-                            <li><a href="">
-                                <div><p>22</p></div>
-                            </a></li>
-
-                        </ul>
-                    </div>
-
+                <div general-news-timeline days-with-news="ctrl.daysWithNews" class="col-md-2 hidden-xs hidden-sm">
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-8 text-left " id="news" general-news-scroll load-next="ctrl.loadNext()">
-                    <div class="row" data-day-id="{{day.id}}" ng-repeat="day in ctrl.days">
+                <div class="col-xs-12 col-sm-12 col-md-8 text-left " id="news" general-news-scroll
+                     load-next="ctrl.loadNext()">
+                    <div class="row" data-day-id="{{day.id}}" ng-repeat="day in ctrl.days | orderBy:'-id'">
                         <div class="col-md-12 grid">
-                            <div general-news="news" class="news_one grid-item" ng-repeat="news in day.news" />
+                            <div general-news="news" class="news_one grid-item" ng-repeat="news in day.news"/>
                         </div>
                     </div>
                 </div>

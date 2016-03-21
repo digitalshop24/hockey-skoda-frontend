@@ -26,13 +26,13 @@ export default angular.module('dashboard.general-news.scroll', [])
 
                         let st = $(document).scrollTop();
                         let activeDayChanged;
-                        if (st > lastScrollTop) {
+                        if (st >= lastScrollTop) {
                             activeDayChanged = handleScrollDown();
                         } else if (st < lastScrollTop) {
                             activeDayChanged = handleScrollUp();
                         }
                         if (activeDayChanged) {
-                            $rootScope.$emit('generalNews:activeDayChanged', currentActiveDay);
+                            $rootScope.$broadcast('generalNews:activeDayChanged', currentActiveDay);
                         }
                         lastScrollTop = st;
                     });
@@ -40,7 +40,7 @@ export default angular.module('dashboard.general-news.scroll', [])
                     $(document).trigger('scroll');
 
                     function checkLoadNeeded() {
-                        const daysWithNews = $($element).find('.row');
+                        const daysWithNews = $('#news').find('.row');
                         if (daysWithNews.length) {
                             return elementIntoTheView(daysWithNews[daysWithNews.length - 1]);
                         }
@@ -54,7 +54,7 @@ export default angular.module('dashboard.general-news.scroll', [])
 
                         const windowBottom = $(window).scrollTop() + $(window).height();
 
-                        return elementBottom < windowBottom;
+                        return elementBottom < windowBottom + 50;
                     }
 
                     let currentActiveDay;
