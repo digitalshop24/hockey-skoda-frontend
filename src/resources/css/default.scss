@@ -7,10 +7,10 @@ $grey: #cccccc;
 $grey_dark: #555555;
 $grey_text: #999;
 //Additional colors
-$green_add_: #299926;
+$green_add_: #299926; 
 $green_add_pale: #a5d396;
-$red: #da0000;
-$link_default_hover: #377220;
+$red: #da0000; 
+$link_default_hover:#377220;
 //fonts
 $extra_bold: "SkodaProExtraBold", sans-serif;
 $bold: "SkodaProBold", sans-serif;
@@ -19,59 +19,51 @@ $light: "SkodaProLight", sans-serif;
 $p_size: 1.4rem;
 
 body {
-  font-family: "SkodaProRegular", sans-serif;
-  font-weight: normal;
-  font-size: 12px;
-  min-width: 320px;
-  position: relative;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialised;
-  // overflow-x: hidden;
-  // height: 100%;
-  //overflow: hidden;
-}
+	font-family: "SkodaProRegular", sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialised;
+	// overflow-x: hidden;
+	// height: 100%;
+	//overflow: hidden;
+} 
 
-h1, h2, h3, h4, h5, h6, p, ul, li {
-  margin: 0;
-  padding: 0;
+h1,h2,h3,h4,h5,h6,p,ul,li {
+  margin:0;
+  padding:0; 
 }
 
 a, a:hover, a:focus {
-  text-decoration: none;
-  color: #000;
-  outline: none;
+  	text-decoration: none; 
+  	color: #000;
+  	outline: none;
 }
-
 button, button:active, button:focus {
   outline: none !important;
 }
-
-ul {
-  list-style-type: none;
+ul { 
+  	list-style-type: none;
 }
-
 h1 {
-  font-size: 6rem;
+  	font-size: 6rem;
 }
-
 h2 {
-  font-size: 5rem;
+	font-size: 5rem; 
 }
-
 h3 {
-  font-size: 4rem;
-}
-
+  	font-size: 4rem; 
+} 
 h4 {
-  font-size: 3rem;
+  	font-size: 3rem; 
 }
-
 h5 {
-  font-size: 2.5rem;
+  	font-size: 2.5rem;
 }
-
 h6 {
-  font-size: 2rem;
+  	font-size: 2rem; 
 }
 
 .bold {
@@ -84,37 +76,31 @@ h6 {
   height: 100px;
   width: 100px;
 }
-
 .green_add_ {
   background-color: $green_add_;
   height: 100px;
   width: 100px;
 }
-
 .green_add_pale {
   background-color: $green_add_pale;
   height: 100px;
   width: 100px;
 }
-
 .grey_lite {
   background-color: $grey_lite;
   height: 100px;
   width: 100px;
 }
-
 .grey {
   background-color: $grey;
   height: 100px;
   width: 100px;
 }
-
 .grey_dark {
   background-color: $grey_dark;
   height: 100px;
   width: 100px;
 }
-
 .red {
   background-color: $red;
   height: 100px;
@@ -123,28 +109,27 @@ h6 {
 
 //this is class is no prodaction version(only css-framework)
 
+
 //-----------------------------------------------------btn
+
 
 .btn {
   border: none;
   border-radius: 2px;
   font-family: $bold;
-}
-
+}  
 .main {
   height: 50px;
   min-width: 160px;
   padding: 0 25px;
   font-size: 1.4em;
 }
-
 .small {
   height: 40px;
   min-width: 110px;
   padding: 0 20px;
   font-size: 1.2em;
 }
-
 .tiny {
   height: 30px;
   min-width: 90px;
@@ -152,143 +137,138 @@ h6 {
   font-size: 1.2em;
 }
 
+
 // btn_primary
+
 
 .btn_primary {
   color: $white;
   background-color: $green_main;
 }
-
 .btn_primary:hover {
   background-color: $green_add_;
   color: $white;
 }
-
 .btn_primary:active {
   color: $white;
   background-color: $green_main;
 }
-
 .btn_primary:focus {
   color: $white;
   background-color: $green_main;
 }
 
+
+
 //btn_secondary
+
 
 .btn_secondary {
   color: $white;
   background-color: $black;
 }
-
 .btn_secondary:hover {
   background-color: $white;
   color: $black;
-  border: 1px solid $black;
+  border:1px solid $black;
 }
-
 .btn_secondary:active {
   color: $white;
   background-color: $black;
 }
-
 .btn_secondary:focus {
   color: $white;
   background-color: $black;
 }
 
+
 //btn_secondary inverse
+
 
 .btn_secondary_inverse {
   color: $black;
   background-color: $white;
 }
-
 .btn_secondary_inverse:hover {
   background-color: $black;
   color: $white;
-  border: 1px solid $white;
+  border:1px solid $white;
 }
-
 .btn_secondary_inverse:active {
   color: $black;
   background-color: $white;
 }
-
 .btn_secondary_inverse:focus {
   color: $black;
   background-color: $white;
 }
 
+
 //btn_disable, primary and secondary
+
 
 .btn_disable {
   background-color: $grey;
   color: $white;
 }
-
 .btn_disable:hover {
   background-color: $grey;
   color: $white;
-  cursor: not-allowed;
+  cursor:not-allowed;
 }
-
 .btn_disable:active {
   background-color: $grey;
   color: $white;
   box-shadow: none;
 }
-
 .btn_disable:focus {
   background-color: $grey;
   color: $white;
   box-shadow: none;
 }
 
+
 //common buttons
+
 
 .btn_common {
   color: $black;
   background-color: $white;
   border: 1px solid $black;
 }
-
 .btn_common:hover {
   background-color: $black;
   color: $white;
 }
-
 .btn_common:active {
   color: $black;
   background-color: $white;
   border: 1px solid $black;
 }
-
 .btn_common:focus {
   color: $black;
   background-color: $white;
   border: 1px solid $black;
 }
 
+
 //common buttons inverse
+
 
 .btn_common_inverse {
   color: $white;
   background-color: $black;
   border: 1px solid $white;
 }
-
 .btn_common_inverse:hover {
   background-color: $white;
   color: $black;
 }
-
 .btn_common_inverse:active {
   color: $white;
   background-color: $black;
   border: 1px solid $white;
 }
-
 .btn_common_inverse:focus {
   color: $white;
   background-color: $black;
@@ -297,142 +277,137 @@ h6 {
 
 //common buttons disable
 
+
 .btn_common_disable {
   background-color: $white;
   color: $grey;
   border: 1px solid $grey;
-  cursor: not-allowed;
+  cursor:not-allowed;
 }
-
 .btn_common_disable:hover {
   background-color: $white;
   color: $grey;
   border: 1px solid $grey;
-  cursor: not-allowed;
+  cursor:not-allowed;
 }
-
 .btn_common_disable:active {
   background-color: $white;
   color: $grey;
   border: 1px solid $grey;
-  cursor: not-allowed;
+  cursor:not-allowed;
   box-shadow: none;
 }
-
 .btn_common_disable:focus {
   background-color: $white;
   color: $grey;
   border: 1px solid $grey;
-  cursor: not-allowed;
+  cursor:not-allowed;
   box-shadow: none;
 }
 
+
 //common buttons disable
+
 
 .btn_common_disable_inveres {
   background-color: $black;
   color: $grey_dark;
   border: 1px solid $grey_dark;
-  cursor: not-allowed;
+  cursor:not-allowed;
 }
-
 .btn_common_disable_inveres:hover {
   background-color: $black;
   color: $grey_dark;
   border: 1px solid $grey_dark;
-  cursor: not-allowed;
+  cursor:not-allowed;
 }
-
 .btn_common_disable_inveres:active {
   background-color: $black;
   color: $grey_dark;
   border: 1px solid $grey_dark;
-  cursor: not-allowed;
+  cursor:not-allowed;
   box-shadow: none;
 }
-
 .btn_common_disable_inveres:focus {
   background-color: $black;
   color: $grey_dark;
   border: 1px solid $grey_dark;
-  cursor: not-allowed;
+  cursor:not-allowed;
   box-shadow: none;
 }
-
 //-----------------------------------------------------btn end
+
 
 //-----------------------------------------------------link
 .link_default {
-  color: $green_main;
+  color:$green_main;
 }
-
 .link_default:hover {
   color: $link_default_hover;
 }
 
 //-----------------------------------------------------link end
 
+
 //-----------------------------------------------------input
 .input_default {
-  border-radius: 2px;
+  border-radius:2px;
   font-weight: $regular;
   border: 1px solid $grey;
   color: $black;
 }
-
-.input_large {
+.input_large{
   height: 60px;
   padding-left: 20px;
   font-size: 1.4em;
 }
-
 .input_medium {
   height: 50px;
   padding-left: 15px;
   font-size: 1.4em;
 }
-
 .input_small {
   height: 40px;
   padding-left: 10px;
   font-size: 1.2em;
 }
-
 .input_default:active, .input_default:focus {
   border: 1px solid $green_main;
 }
-
 //-----------------------------------------------------end input
 
+
+
 //----------------------------------------------------- select
+
 
 select {
   display: inline-block;
   min-width: 170px;
   padding-left: 20px;
-  background: url(img/resources/img/arrow.png) no-repeat transparent;
+  background: url(../img/arrow.png) no-repeat transparent;
   background-position: 95% 50%;
   background-color: $white;
   margin-right: 20px;
   -webkit-appearance: none;
   /* for FF */
   -moz-appearance: none;
-  text-indent: 0.01px;
+  text-indent: 0.01px; 
   text-overflow: '';
   /* for IE */
   -ms-appearance: none;
-  appearance: none !important;
+  appearance: none!important;
 }
-
 select::-ms-expand {
   display: none;
 }
 
 //-----------------------------------------------------end select
 
+
 //----------------------------------------------------- toogle
 
-.on {
+.on { 
   position: absolute;
   margin-left: -62px;
   margin-top: 12.5px;
@@ -440,7 +415,6 @@ select::-ms-expand {
   color: $white;
   font-family: $bold;
 }
-
 .off {
   position: absolute;
   margin-left: -38px;
@@ -449,79 +423,75 @@ select::-ms-expand {
   color: $white;
   font-family: $bold;
 }
-
 $sw-height: 26px;
 $sw-width: 60px;
-input {
-  &.sw {
-    opacity: 0;
-    position: absolute;
-    left: -9999px;
-    & + label {
-      margin-top: 9px;
-      margin-right: 10px;
-      user-select: none;
-      transition: .2s ease;
-      display: inline-block;
-      height: $sw-height;
-      width: $sw-width;
-      position: relative;
-      // box-shadow: inset 0 0 0px 2px #e4e4e4;
-      border-radius: 60px;
-      background-color: $grey;
-      &:before {
-        content: "";
-        position: absolute;
-        display: block;
+  input{
+    &.sw{
+      opacity: 0; position:absolute; left: -9999px;
+      & + label{
+        margin-top: 9px;
+        margin-right: 10px;
+        user-select: none;
+        transition: .2s ease;
+        display: inline-block;
         height: $sw-height;
-        width: $sw-height;
-        top: 0;
-        left: 0;
-        border-radius: $sw-height/2;
-        background: rgba(76, 217, 100, 0);
-        transition: .2s cubic-bezier(.24, 0, .5, 1);
-      }
-
-      /* White toggle */
-      &:after {
-        content: " ";
-        position: absolute;
-        display: block;
-        height: 24px;
-        width: 29px;
-        top: 50%;
-        margin-top: -12px;
-        left: 1px;
-        border-radius: 60px;
-        background: #fff;
-        box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 0px 0 hsla(0, 0%, 0%, .04), 0 4px 9px hsla(0, 0%, 0%, .13), 0 3px 3px hsla(0, 0%, 0%, .05);
-        transition: .35s cubic-bezier(.54, 1.60, .5, 1);
-        z-index: 3;
-      }
-      span {
-        white-space: nowrap;
-        height: $sw-height;
-        line-height: $sw-height;
-        margin-left: $sw-width;
-        padding-left: 16px;
-      }
-    }
-    &:checked {
-      & + label:before {
         width: $sw-width;
-        background: $green_main;
-        transition: width .2s cubic-bezier(0, 0, 0, .1) !important;
+        position:relative;
+        // box-shadow: inset 0 0 0px 2px #e4e4e4;
+        border-radius: 60px;
+        background-color: $grey;
+        &:before{
+          content: "";
+          position: absolute;
+          display: block;
+          height: $sw-height;
+          width: $sw-height;
+          top: 0;
+          left: 0;
+          border-radius: $sw-height/2;
+          background: rgba(76,217,100,0);
+          transition: .2s cubic-bezier(.24,0,.5,1);
+        }
+        
+        /* White toggle */
+        &:after {
+          content: " ";
+          position: absolute;
+          display: block;
+          height: 24px;
+          width: 29px;
+          top: 50%;
+          margin-top:-12px;
+          left: 1px;
+          border-radius: 60px;
+          background: #fff;
+          box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 0px 0 hsla(0,0%,0%,.04), 0 4px 9px hsla(0,0%,0%,.13), 0 3px 3px hsla(0,0%,0%,.05);
+          transition: .35s cubic-bezier(.54,1.60,.5,1);
+          z-index: 3;
+        }
+        span{
+          white-space:nowrap;
+          height:$sw-height;
+          line-height:$sw-height;
+          margin-left: $sw-width;
+          padding-left:16px;
+        }
       }
-
-      & + label:after {
-        left: 30px;
+      &:checked{
+        & + label:before {
+          width: $sw-width;
+          background: $green_main;
+          transition: width .2s cubic-bezier(0,0,0,.1) !important;
+        }
+        
+        & + label:after{
+          left: 30px;
+        }
+        
+        & + label{
+          box-shadow: inset 0 0 0px 25px #e4e4e4;
+          transition: box-shadow 2.5s cubic-bezier(0,1.2,.94,.95)}
       }
-
-      & + label {
-        box-shadow: inset 0 0 0px 25px #e4e4e4;
-        transition: box-shadow 2.5s cubic-bezier(0, 1.2, .94, .95)
-      }
-    }
   }
 }
 
