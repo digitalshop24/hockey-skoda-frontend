@@ -7,7 +7,7 @@ export default angular.module('index',
     .config($stateProvider => {
         $stateProvider
             .state('index', {
-                url: '/',
+                url: '/index',
                 template: require("./template.html")
             });
     });
