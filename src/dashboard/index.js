@@ -36,7 +36,6 @@ export default angular.module('dashboard',
         blog.name,
         forecast.name,
         prize.name,
-        regsuccess.name,
         forumpage.name,
         forumtopic.name
     ])
