@@ -12,6 +12,22 @@ export default angular.module('dashboard.blog', [])
                 template: require('./template.html'),
                 url: '/blog',
                 controller: BlogCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                params: {
+                    page: 1,
+                    perPage: 10,
+                    blogs: []
+                },
+                resolve: {
+                    blogs: ($stateParams, blogService) => {
+                        return blogService.getBlogs($stateParams.page, $stateParams.perPage)
+                            .then((res) => {
+                                return $stateParams.blogs.concat(res);
+                            });
+                    },
+                    page: ($stateParams) => {
+                        return $stateParams.page;
+                    }
+                }
             });
     });

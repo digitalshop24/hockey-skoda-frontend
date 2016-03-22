@@ -42,7 +42,7 @@ export default angular.module('app',
     .run(($rootScope) => {
 
         $rootScope.$on('$stateChangeStart', (event, toState) => {
-            if (['dashboard.forum'].indexOf(toState.name) == -1) {
+            if (['dashboard.forum', 'dashboard.blog'].indexOf(toState.name) == -1) {
                 window.scrollTo(0, 0);
             }
         });
