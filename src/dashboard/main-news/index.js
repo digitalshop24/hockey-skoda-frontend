@@ -32,7 +32,7 @@ export default angular.module('dashboard.main-news',
                     news: ($stateParams, $location, mainNewsService, moment) => {
                         return mainNewsService.getNewsByDate(moment().format('YYYY-MM-DD')).then(news => {
                             if (news.length) {
-                                return news;
+                                return news.reverse();
                             } else {
                                 $location.url('/general-news');
                             }

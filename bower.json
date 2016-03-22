@@ -19,6 +19,7 @@
     "angular-cookies": "~1.4.1",
     "jquery": "~2.2.2",
     "moment": "~2.12.0",
-    "angular-moment": "1.0.0-beta.3"
+    "angular-moment": "1.0.0-beta.3",
+    "masonry": "~4.0.0"
   }
 }

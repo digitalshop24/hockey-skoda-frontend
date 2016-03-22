@@ -12,7 +12,7 @@ export default angular.module('dashboard.general-news.scroll', [])
 
                 angular.element(document).ready(() => {
 
-
+                    initMasonry();
                     $scope.$on('$destroy', function () {
                         $(document).off('scroll', handler);
                     });
