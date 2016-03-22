@@ -21,5 +21,7 @@
     "moment": "~2.12.0",
     "angular-moment": "1.0.0-beta.3",
     "bootstrap-select": "~1.10.0"
+    "angular-moment": "1.0.0-beta.3",
+    "masonry": "~4.0.0"
   }
 }

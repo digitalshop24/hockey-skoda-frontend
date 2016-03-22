@@ -59,6 +59,16 @@ function initSlider() {
     });
 }
 
+function initMasonry() {
+    $('.grid').masonry({
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        itemSelector: '.grid-item',
+        percentPosition: true
+    });
+}
+
 /*$('.box').each(function () {
  //set size
  var th = $(this).height(),//box height

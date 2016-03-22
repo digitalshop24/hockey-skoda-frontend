@@ -2,12 +2,10 @@
 
 import angular from "angular";
 
-export default angular.module('dashboard.general-news.scroll', [])
-    .directive('generalNewsScroll', function ($rootScope) {
+export default angular.module('dashboard.main-news.scroll', [])
+    .directive('mainNewsScroll', function ($rootScope) {
         return {
-            scope: {
-                loadNext: '&'
-            },
+            scope: {},
             link: function ($scope, $element, $attrs, controller) {
 
                 angular.element(document).ready(() => {
@@ -23,45 +21,25 @@ export default angular.module('dashboard.general-news.scroll', [])
                             return;
                         }
 
-                        const needLoadNextDay = checkLoadNeeded();
-
-                        if (needLoadNextDay) {
-                            $scope.loadNext();
-                        }
-
                         let st = $(document).scrollTop();
                         let activeDayChanged;
-                        if (st >= lastScrollTop) {
+                        const scrollDown = st >= lastScrollTop;
+                        if (scrollDown) {
                             activeDayChanged = handleScrollDown();
                         } else if (st < lastScrollTop) {
                             activeDayChanged = handleScrollUp();
                         }
                         if (activeDayChanged) {
-                            $rootScope.$broadcast('generalNews:activeDayChanged', currentActiveDay);
+                            $rootScope.$broadcast('mainNews:activeDayChanged', {
+                                day: currentActiveDay,
+                                scrollDown: scrollDown
+                            });
                         }
                         lastScrollTop = st;
                     };
                     $(document).on('scroll', handler);
 
                     $(document).trigger('scroll');
-
-                    function checkLoadNeeded() {
-                        const daysWithNews = $('#news').find('.row');
-                        if (daysWithNews.length) {
-                            return elementIntoTheView(daysWithNews[daysWithNews.length - 1]);
-                        }
-                        return false;
-                    }
-
-                    function elementIntoTheView(elem) {
-                        const elementOffsetTop = $(elem).offset().top;
-                        const elementHeight = $(elem).height();
-                        const elementBottom = elementOffsetTop + elementHeight;
-
-                        const windowBottom = $(window).scrollTop() + $(window).height();
-
-                        return elementBottom < windowBottom + 50;
-                    }
 
                     let currentActiveDay;
                     let newActiveDay;
@@ -74,7 +52,7 @@ export default angular.module('dashboard.general-news.scroll', [])
                             const elementOffsetTop = $(day).offset().top;
                             const windowMiddle = $(window).scrollTop() + $(window).height() / 2;
                             if (elementOffsetTop < windowMiddle) {
-                                newActiveDay = $(day).data("dayId");
+                                newActiveDay = $(day).data("newsId");
                             }
                         });
 
@@ -94,7 +72,7 @@ export default angular.module('dashboard.general-news.scroll', [])
                             const elementOffsetBottom = $(day).offset().top + $(day).height();
                             const windowMiddle = $(window).scrollTop() + $(window).height() / 2;
                             if (elementOffsetBottom > windowMiddle) {
-                                newActiveDay = $(day).data("dayId");
+                                newActiveDay = $(day).data("newsId");
                             }
                         });
                         let activeDayChanged = false;
