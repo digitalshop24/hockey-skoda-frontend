@@ -42,7 +42,7 @@ export default class GeneralNewsCtrl {
 
     changeMonth(month) {
         if(month.monthIndex <= moment().month() + 1) {
-            this.state.go('dashboard.general-news', {month: month.monthIndex}, {reload: true});
+            this.state.go('dashboard.general-news', {month: month.monthIndex, loadExactlyDayNews:false}, {reload: true});
         }
     }
 
