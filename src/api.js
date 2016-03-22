@@ -4,10 +4,11 @@ const UNAUTHORIZED = 401;
 const EXTERNAL_SERVER_ERROR = 500;
 
 export default class Api {
-    constructor($http, $state) {
+    constructor($http, $state, session) {
         this.api = "http://skoda-hockey.herokuapp.com/api/v1";
         this.http = $http;
         this.state = $state;
+        this.session = session;
     }
 
     get(url, config) {
@@ -34,7 +35,7 @@ export default class Api {
     }
 
     get headers() {
-        return {};
+        return {'Auth-Token': this.session.token};
     }
 
     isAuthorized(response) {
