@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <button class="btn btn_primary main">Создать тему</button>
+                <button disabled="true" class="btn btn_primary main">Создать тему</button>
                 <p>Чтобы создать тему или оставить комментарий <br>нужно <a href="#">Авторизироваться</a></p>
             </div>
         </div>
@@ -30,7 +30,8 @@
 
                         <p>13 минут назад <span>Дмитрием Ивановым</span></p>
                         <ul>
-                            <li><a href="#" class="link_default">Общие правила</a>
+                            <li ng-repeat="topic in ctrl.topics">
+                                <a href="#" class="link_default" ng-bind="topic.name">Общие правила</a>
                                 <ul>
                                     <li><img src="img/resources/img/page.png" alt=""></li>
                                     <li><a href="#">1,</a></li>
@@ -38,37 +39,10 @@
                                     <li><a href="#">3</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#" class="link_default">Назначение модератором</a>
-                                <ul>
-                                    <li><img src="img/resources/img/page.png" alt=""></li>
-                                    <li><a href="#">1,</a></li>
-                                    <li><a href="#">2,</a></li>
-                                    <li><a href="#">3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#" class="link_default">Общие правила</a>
-                                <ul>
-                                    <li><img src="img/resources/img/page.png" alt=""></li>
-                                    <li><a href="#">1,</a></li>
-                                    <li><a href="#">2,</a></li>
-                                    <li><a href="#">3</a></li>
-                                </ul>  
-                            </li>
-                            <li><a href="#" class="link_default">Назначение модератором</a></li>
-                            <li><a href="#" class="link_default">Общие правила</a></li>
-                            <li><a href="#" class="link_default">Назначение модератором</a></li>
-                            <li><a href="#" class="link_default">Общие правила</a></li>
-                            <li><a href="#" class="link_default">Назначение модератором</a></li>
 
                         </ul>
                     </div>
                     <div class="wrapp_col">
-                        <!-- <ul>
-                            <li><img src="img/resources/img/page.png" alt=""></li>
-                            <li><a href="#">1,</a></li>
-                            <li><a href="#">2,</a></li>
-                            <li><a href="#">3</a></li>
-                        </ul> -->
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -81,10 +55,6 @@
 
                 </div>
             </div>
-          
-            <!-- <div class="row text-center">
-                <button class="btn btn_common main load_more">Показать еще</button>
-            </div> -->
         </div>
     </div>
 </section>
