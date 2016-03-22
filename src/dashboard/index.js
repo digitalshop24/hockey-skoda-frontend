@@ -21,7 +21,6 @@ import regsuccess from './regsuccess/index';
 import forumpage from './forum-page/index';
 import forumtopic from './forum-topic/index';
 
-
 export default angular.module('dashboard',
     [
         tdrive.name,

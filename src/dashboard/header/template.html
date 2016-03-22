@@ -1,5 +1,24 @@
 <header>
-    <div class="container-fluid">
+
+<nav class="mobile-menu hidden-md hidden-lg">
+    <label for="show-menu" class="show-menu">
+        <img src="img/resources/img/logo.png" alt="" class="img-responsive">
+        <div class="lines" id="mobile_menu"></div>
+        
+    </label>
+    <input type="checkbox" id="show-menu">
+    <ul id="menu">
+        <li><a ui-sref="dashboard.general-news" ng-class="{'active_li': $state.includes('dashboard.main-news')
+                    || $state.includes('dashboard.general-news') }">Новости</a></li>
+        <li><a ui-sref="dashboard.forecast"
+                           ng-class="{'active_li': $state.includes('dashboard.forecast')}">Прогнозы</a></li>
+        <li><a ui-sref="dashboard.forum"
+                           ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a></li>
+        <li><a ui-sref="dashboard.tdrive"
+                           ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a></li>
+    </ul>
+</nav>
+    <div class="container-fluid hidden-xs hidden-sm">
         <div class="row">
             <div class="col-sm-12 col-md-12 left_head text-left">
                 <a ui-sref="index" class="logo"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>

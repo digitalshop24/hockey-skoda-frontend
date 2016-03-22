@@ -32,6 +32,16 @@
 	.wrapp_search p {
 		display: none;
 	}
+	//-------------------------------------------------- main
+	.wrapp_mainpage_slider {
+		.left {
+			margin-left: 10px;
+		}
+		.right {
+			margin-right: 10px; 
+		}
+	}
+	//-------------------------------------------------- end main
 }
 
 
@@ -81,6 +91,30 @@
 	}
 
 	//-------------------------------------------------- end t-drive
+
+
+	//-------------------------------------------------- main
+	.wrapp_mainpage_present {
+		text-align: center;
+	}
+	.wrapp_mainpage_tantam {
+		text-align: center;
+		.left {
+			margin-left: 0px;
+		}
+	}
+	.wrapp_mainpage_slider {
+		
+		.right {
+			text-align: center;
+			
+			margin-right: 0 !important;
+			width: 100%;
+		}
+	}
+
+	//-------------------------------------------------- end main
+
 //-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
 // <!-- share -->
 	.wrapp_toggle_share {
