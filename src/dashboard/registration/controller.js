@@ -2,10 +2,11 @@
 
 
 export default class RegistrationCtrl {
-    constructor(auth, $modal, profileService) {
+    constructor(auth, $modal, profileService, $state) {
         this.auth = auth;
         this.modal = $modal;
         this.profileService = profileService;
+        this.state = $state;
     }
 
     send() {
@@ -22,9 +23,7 @@ export default class RegistrationCtrl {
             return this.profileService.update(this.form);
         }).then(() => {
             this.form = {};
-            this.modal.open({
-                template: '<div class="modal-body">Вы успешно зарегистрировались !</div>'
-            });
+            this.state.go('dashboard.registration.success');
         })
             .catch((err) => {
                 let info = '';
