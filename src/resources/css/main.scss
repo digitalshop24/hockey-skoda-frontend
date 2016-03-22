@@ -1224,6 +1224,7 @@ $grey_about: #5d5d5d;
 
 .wrapp_news_all {
   min-height: 100vh;
+  background-color: #ececec;
   .date_slider {
 
   }
@@ -1267,7 +1268,7 @@ $grey_about: #5d5d5d;
       width: 150px;
       left:100px;
       ul {
-        margin: 17vh 0 25vh 20px; 
+        margin: 25vh 0 0 20px;
         li {
           height:7vh;
           transition: all .2s ease-in-out;
@@ -1407,7 +1408,6 @@ $grey_about: #5d5d5d;
       }
     }
     .wrapp_timeline_main_page {
-   
       z-index: 101;
       right: 80px;
       width: 150px;
@@ -1426,7 +1426,7 @@ $grey_about: #5d5d5d;
     .wrapp_timeline {
       width: 150px;
       overflow: auto;
-      height: 110vh;
+      height: 100vh;
       position: fixed;
       top:0;
       .jspContainer {
@@ -1450,6 +1450,7 @@ $grey_about: #5d5d5d;
     }
     .timeline_news_day {
       padding-top: 120px;
+      padding-bottom: 120px;
       // height: 1000px;
       li {
         height: 3.3%;
