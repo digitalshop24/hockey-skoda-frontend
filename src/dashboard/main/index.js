@@ -12,6 +12,11 @@ export default angular.module('dashboard.main', [])
                 template: require('./template.html'),
                 url: '/main',
                 controller: MainCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                resolve: {
+                    lightingNews: (mainService) => {
+                        return mainService.getLightingNews(3);
+                    }
+                }
             });
     });
