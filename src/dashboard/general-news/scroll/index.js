@@ -12,8 +12,13 @@ export default angular.module('dashboard.general-news.scroll', [])
 
                 angular.element(document).ready(() => {
 
+
+                    $scope.$on('$destroy', function () {
+                        $(document).off('scroll', handler);
+                    });
+
                     let lastScrollTop = 0;
-                    $(document).on('scroll', (event)=> {
+                    const handler = (event)=> {
                         if (isTimeline(event.target)) {
                             return;
                         }
@@ -35,7 +40,8 @@ export default angular.module('dashboard.general-news.scroll', [])
                             $rootScope.$broadcast('generalNews:activeDayChanged', currentActiveDay);
                         }
                         lastScrollTop = st;
-                    });
+                    };
+                    $(document).on('scroll', handler);
 
                     $(document).trigger('scroll');
 
