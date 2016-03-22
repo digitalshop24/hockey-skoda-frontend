@@ -10,6 +10,7 @@
             "bower_components/moment/moment.js",
             "bower_components/angular-moment/angular-moment.js",
             "bower_components/moment/locale/ru.js",
+            "bower_components/bootstrap-select/dist/js/bootstrap-select.js",
             "bower_components/masonry/dist/masonry.pkgd.min.js",
             "src/resources/js/jscrollpane/mousewheel.js",
             "src/resources/js/jscrollpane/jscrollpane.min.js",
@@ -23,6 +24,7 @@
         "src": [
             "bower_components/bootstrap/dist/css/bootstrap.min.css",
             "bower_components/angular-bootstrap/ui-bootstrap-css.js",
+             "bower_components/bootstrap-select/dist/css/bootstrap-select.css",
             "node_modules/font-awesome/css/font-awesome.min.css",
             "src/resources/js/jscrollpane/jscrollpane.css",
             "src/resources/libs/owl/owl.carousel.css",

@@ -232,7 +232,7 @@
 // -------------------------------------------------- facts (ANDREY)
 
 	.factSection {
-		padding: 30px 20px 60px 20px;
+		padding: 60px 20px;
 		figure {
 			figcaption {
 				p {
@@ -246,8 +246,64 @@
 			}
 		}
 	}
+	.prizesSection {
+		.wrapper {
+			margin:30px 0;
+			h5 {
+				margin-bottom: 20px;
+				font-size: 18px;
+			}
+			h2 {
+				margin-bottom: 20px;
+				color: #39b54a;
+				text-transform: uppercase;
+				font-size: 26px;
+				max-width:200px;
+			}
+			p {
+				margin-bottom: 50px;
+				font-size: 14px;
+			}
+			img {
+				width:70px;
+			}
+		}
+
+	}
+	.prizesSection.score1 {
+			background-image: url('img/resources/img/prizesPage/priz10mob.png');
+			background-repeat: no-repeat;
+			background-position: center right 23px;
+			background-size: 40%;
+
+	}
+	.prizesSection.score2 {
+			background-image: url('img/resources/img/prizesPage/priz20mob.png');
+			background-repeat: no-repeat;
+			background-position: center right 23px;
+			background-size: 40%;
+	}
+	.prizesSection.score3 {
+			background-image: url('img/resources/img/prizesPage/priz30mob.png');
+			background-repeat: no-repeat;
+			background-position: center right 23px;
+			background-size: 40%;
+	}
+	.prizesSection.step4 {
+		.wrapper.black {
+			padding:50px 0;
+			h2 {
+				color: #fff;
+				margin-bottom: 0;
+				font-size: 24px;
+			}
+			p {margin-bottom: 0;}
+		}
+	}
+
 
 	// -------------------------------------------------- end facts (ANDREY)
+
 }
 
 @media only screen and (max-width : 664px) {
