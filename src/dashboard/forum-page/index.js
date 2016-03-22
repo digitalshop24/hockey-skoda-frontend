@@ -18,6 +18,9 @@ export default angular.module('dashboard.forum-page', [])
                     topicsPerPage: 15
                 },
                 resolve: {
+                    section: ($stateParams, forumpageService) => {
+                        return forumpageService.getForumPage($stateParams.id);
+                    },
                     topics: ($stateParams, forumpageService) => {
                         return forumpageService.getTopicsBySectionId($stateParams.id, $stateParams.page,
                             $stateParams.topicsPerPage, $stateParams.topicNumber);

@@ -2,7 +2,8 @@
 
 
 export default class ForumpageCtrl {
-    constructor(topics) {
+    constructor(section, topics) {
+        this.section = section;
         this.topics = topics;
     }
 }

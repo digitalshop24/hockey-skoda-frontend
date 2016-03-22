@@ -6,11 +6,15 @@ export default class ForumpageService {
     }
 
     getForumPage(id) {
-
+        return this.api.get(`/forum/sections/${id}`, {
+            params: {}
+        }).then((res) => {
+            return res.data;
+        })
     }
 
     getTopicsBySectionId(id, page, perPage) {
-        return this.api.get(`/forum/sections/${id}/topics`,{
+        return this.api.get(`/forum/sections/${id}/topics`, {
             params: {
                 page: page,
                 per_page: perPage

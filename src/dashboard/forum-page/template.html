@@ -26,7 +26,7 @@
             <div class="row post_hover">
                 <div class="col-md-9">
                     <div class="wrapp_topic">
-                        <h4><a href="#" class="link_default">Объявления</a></h4>
+                        <h4><a href="#" class="link_default" ng-bind="ctrl.section.name">Объявления</a></h4>
 
                         <p>13 минут назад <span>Дмитрием Ивановым</span></p>
                         <ul>
@@ -48,8 +48,8 @@
                 <div class="col-md-3">
                     <div class="wrapp_static">
                         <ul>
-                            <li>504 <p>Просмотров</p></li>
-                            <li>446 <p>Ответ</p></li>
+                            <li>{{ctrl.section.count_view}} <p>Просмотров</p></li>
+                            <li>{{ctrl.section.messages_count}} <p>Ответ</p></li>
                         </ul>
                     </div>
 
