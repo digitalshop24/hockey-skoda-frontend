@@ -16,6 +16,7 @@ import sliderInit from './slider-init/index.js';
 import facts from './interesting-facts/index';
 import blog from './blog/index';
 import forecast from './forecast/index';
+import priz from './priz/index';
 
 
 export default angular.module('dashboard',
@@ -32,7 +33,8 @@ export default angular.module('dashboard',
         sliderInit.name,
         facts.name,
         blog.name,
-        forecast.name
+        forecast.name,
+        priz.name
     ])
     .config($stateProvider => {
         $stateProvider
