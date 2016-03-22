@@ -3,16 +3,16 @@
 import angular from "angular";
 
 export default angular.module('dashboard.general-news.scroll', [])
-    .directive('generalNewsScroll', function ($rootScope) {
+    .directive('generalNewsScroll', function ($rootScope,generalNewsLogicService) {
         return {
             scope: {
-                loadNext: '&'
+                loadNext: '&',
+                loadPrevious: '&'
             },
             link: function ($scope, $element, $attrs, controller) {
 
                 angular.element(document).ready(() => {
 
-                    //initMasonry();
                     $scope.$on('$destroy', function () {
                         $(document).off('scroll', handler);
                     });
@@ -22,22 +22,36 @@ export default angular.module('dashboard.general-news.scroll', [])
                         if (isTimeline(event.target)) {
                             return;
                         }
+                        let st = $(document).scrollTop();
+                        const scrollDown = st >= lastScrollTop;
 
-                        const needLoadNextDay = checkLoadNeeded();
+                        if (scrollDown) {
+                            const needLoadNextDay = checkLoadNeeded();
 
-                        if (needLoadNextDay) {
-                            $scope.loadNext();
+                            if (needLoadNextDay) {
+                                $scope.loadNext();
+                            }
+                        } else {
+                            const needLoadPreviousDay = checkLoadPreviousDayNeeded();
+
+                            if (needLoadPreviousDay) {
+                                $scope.loadPrevious();
+                            }
                         }
 
-                        let st = $(document).scrollTop();
+
                         let activeDayChanged;
-                        if (st >= lastScrollTop) {
+                        if (scrollDown) {
                             activeDayChanged = handleScrollDown();
                         } else if (st < lastScrollTop) {
                             activeDayChanged = handleScrollUp();
                         }
                         if (activeDayChanged) {
-                            $rootScope.$broadcast('generalNews:activeDayChanged', currentActiveDay);
+                            generalNewsLogicService.day = +currentActiveDay;
+                            $rootScope.$broadcast('generalNews:activeDayChanged', {
+                                day: currentActiveDay,
+                                scrollDown: scrollDown
+                            });
                         }
                         lastScrollTop = st;
                     };
@@ -49,6 +63,14 @@ export default angular.module('dashboard.general-news.scroll', [])
                         const daysWithNews = $('#news').find('.row');
                         if (daysWithNews.length) {
                             return elementIntoTheView(daysWithNews[daysWithNews.length - 1]);
+                        }
+                        return false;
+                    }
+
+                    function checkLoadPreviousDayNeeded() {
+                        const daysWithNews = $('#news').find('.row');
+                        if (daysWithNews.length) {
+                            return $(daysWithNews[0]).offset().top > $(window).scrollTop();
                         }
                         return false;
                     }

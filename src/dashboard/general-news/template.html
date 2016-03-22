@@ -9,7 +9,8 @@
         </div>
         <div class="menu_date hidden-xs">
             <ul>
-                <li ng-repeat="month in ctrl.months" ng-class="{'active_month': month.viewIndex==ctrl.activeMonth}">
+                <li><h5>Месяц</h5></li>
+                <li ng-repeat="month in ctrl.months" ng-show="month.monthIndex <= ctrl.currentMonthIndex" ng-class="{'active_month': month.viewIndex==ctrl.activeMonth}">
                     <p ng-click="ctrl.changeMonth(month)"><a href="#"><span>{{month.viewIndex}}</span>{{month.name}}</a></p>
                 </li>
             </ul>
@@ -37,7 +38,7 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-8 text-left " id="news" general-news-scroll
-                     load-next="ctrl.loadNext()">
+                     load-next="ctrl.loadNext()" load-previous="ctrl.loadPrevious()">
                     <div class="row" data-day-id="{{day.id}}" ng-repeat="day in ctrl.days | orderBy:'-id'">
                         <div class="col-md-12 grid">
                             <div general-news="news" class="news_one grid-item" ng-repeat="news in day.news"/>

@@ -12,6 +12,7 @@ export default class GeneralNewsCtrl {
         this.days = [news];
         this.months = [];
         this.activeMonth = month;
+        this.currentMonthIndex = new Date().getMonth() + 1;
         this.monthNames = ['январь', 'февраль', 'март', 'апрель', 'май',
             'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
         Array.from(new Array(12), (e, i) => i).forEach((monthIndex, index) => {
@@ -38,6 +39,21 @@ export default class GeneralNewsCtrl {
                 });
             } else if (this.generalNewsLogicService.hasNextMonth()) {
                 this.state.go('dashboard.general-news', {month: this.generalNewsLogicService.getNextMonth()}, {reload: true});
+            }
+        }
+
+    }
+
+    loadPrevious() {
+        if (this.shouldLoad) {
+            this.shouldLoad = false;
+            if (this.generalNewsLogicService.hasPreviousDay()) {
+                this.service.getNewsByDate(this.generalNewsLogicService.getPreviousDate()).then(res => {
+                    this.days.unshift(res);
+                    this.shouldLoad = true;
+                });
+            } else if (this.generalNewsLogicService.hasPreviousMonth()) {
+                this.state.go('dashboard.general-news', {month: this.generalNewsLogicService.getPreviousMonth()}, {reload: true});
             }
         }
 
