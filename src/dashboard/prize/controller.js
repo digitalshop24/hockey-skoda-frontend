@@ -1,7 +1,7 @@
 'use strict';
 
 
-export default class PrizCtrl {
+export default class PrizeCtrl {
     constructor() {
     }
 }

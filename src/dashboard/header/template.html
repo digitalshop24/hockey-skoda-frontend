@@ -4,10 +4,14 @@
             <div class="col-sm-12 col-md-12 left_head text-left">
                 <a ui-sref="index" class="logo"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
                 <ul>
-                    <li><a ui-sref="dashboard.main-news" ng-class="{'active_li': $state.includes('dashboard.main-news')
+                    <li><a ui-sref="dashboard.general-news" ng-class="{'active_li': $state.includes('dashboard.main-news')
                     || $state.includes('dashboard.general-news') }">Новости</a></li>
+                    <li><a ui-sref="dashboard.forecast"
+                           ng-class="{'active_li': $state.includes('dashboard.forecast')}">Прогнозы</a></li>
                     <li><a ui-sref="dashboard.forum"
                            ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a></li>
+                    <li><a ui-sref="dashboard.tdrive"
+                           ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a></li>
                 </ul>
             </div>
             <div class="right_head text-right hidden-xs">
