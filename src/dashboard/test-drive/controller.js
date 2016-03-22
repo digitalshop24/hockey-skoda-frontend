@@ -6,9 +6,9 @@ export default class TestDriveCtrl {
         this.cities = ['Москва', 'Санкт-Петербург', 'Томск'];
         this.service = tdriveService;
         this.cars = [
-            {img: 'img/resources/img/t_drive/auto2.jpg', name: 'ŠKODA Superb', id: '1'},
-            {img: 'img/resources/img/t_drive/auto1.jpg', name: 'ŠKODA Octavia', id: '2'},
-            {img: 'img/resources/img/t_drive/auto3.jpg', name: 'ŠKODA Rapid', id: '3'},
+            {img: 'img/resources/img/t_drive/auto2.jpg', name: 'ŠKODA Superb', id: '5'},
+            {img: 'img/resources/img/t_drive/auto1.jpg', name: 'ŠKODA Octavia', id: '3'},
+            {img: 'img/resources/img/t_drive/auto3.jpg', name: 'ŠKODA Rapid', id: '1'},
             {img: 'img/resources/img/t_drive/auto4.jpg', name: 'ŠKODA Yeti', id: '4'},
         ];
         this.carId = '1';
