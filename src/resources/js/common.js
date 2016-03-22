@@ -59,7 +59,6 @@ function initSlider() {
             singleItem: true,
             navigationText: false
         });
-
         $('.single-item').slick({
             infinite: true,
             slidesToShow: 1,
@@ -101,6 +100,12 @@ function initSlider() {
             // settings: "unslick"
             // instead of a settings object
           ]
+        });
+        $('.date_slider_news').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
         });
     });
 }

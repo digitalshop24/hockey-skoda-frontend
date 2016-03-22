@@ -1402,8 +1402,35 @@ $grey_about: #5d5d5d;
 .wrapp_news_all {
   min-height: 100vh;
   background-color: #ececec;
-  .date_slider {
-
+  .date_slider_news {
+    .slick-track {
+      height: 100px;
+      background-color: $green_main;
+      text-align: center;
+    }
+    .slick-next {
+      background: $green_main url("img/resources/img/arrow_right_white.png") no-repeat center center;
+      right: 0;
+    }
+    .slick-prev {
+      background: $green_main url("img/resources/img/arrow_left_white.png") no-repeat center center;
+      left: 0;
+    }
+    .slick-arrow {
+      position: absolute;
+      font-size: 0;
+      width: 57px;
+      height: 100px;
+      z-index: 3;
+      top: 50%;
+      margin-top: -59px;
+      border: 0;
+    }
+    p {
+      padding-top: 30px;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
   }
   .menu_line {
       // position: absolute;
