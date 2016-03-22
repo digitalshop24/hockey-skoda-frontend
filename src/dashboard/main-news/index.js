@@ -5,12 +5,15 @@ import MainNewsCtrl from './controller.js';
 import MainNewsService from './service.js';
 import news from './news/index.js';
 import timeline from './timeline/index.js';
+import scroll from './scroll/index.js';
+
 
 
 export default angular.module('dashboard.main-news',
     [
         news.name,
-        timeline.name
+        timeline.name,
+        scroll.name
     ])
     .service('mainNewsService', MainNewsService)
     .config(function ($stateProvider) {

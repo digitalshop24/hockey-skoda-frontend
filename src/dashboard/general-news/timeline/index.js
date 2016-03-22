@@ -17,7 +17,7 @@ export default angular.module('dashboard.general-news.timeline', [])
             link: function ($scope) {
 
 
-                const handler = (event, data) => {
+                $scope.$on('generalNews:activeDayChanged', (event, data) => {
 
                     data = +data;
                     $scope.$apply(() => {
@@ -30,9 +30,9 @@ export default angular.module('dashboard.general-news.timeline', [])
                         elem = $("div[data-timeline-day-id='" + data + "']");
                     }
                     $('.wrapp_timeline').data('jsp').scrollToElement(elem, false, {animateScroll: true});
-                };
-                $scope.$on('generalNews:activeDayChanged', handler);
-                $scope.$on('$destroy', handler);
+                });
+
+
             }
         }
     });

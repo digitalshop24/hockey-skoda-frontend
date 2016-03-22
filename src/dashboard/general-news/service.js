@@ -27,7 +27,7 @@ export default class GeneralNewsService {
 
         return this.api.get(`/posts/news/days_with_news/${date ? date : ''}`)
             .then(response => {
-                return response.data.reverse();
+                return response.data;
             }).catch(response => {
                 throw response.data.error;
             });
