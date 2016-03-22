@@ -41,6 +41,10 @@ export default angular.module('app',
     })
     .run(($rootScope) => {
 
+        $rootScope.$on("$stateChangeSuccess", function () {
+            window.scrollTo(0, 0);
+        });
+
         $rootScope.$on('$stateChangeError', (err) => {
             console.log("error !!!");
         });

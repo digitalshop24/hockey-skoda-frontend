@@ -19,12 +19,16 @@ export default angular.module('dashboard.general-news.timeline', [])
 
                 $scope.$on('generalNews:activeDayChanged', (event, data) => {
 
-                    data = +data;
+                    const day = +data.day;
                     $scope.$apply(() => {
-                        $scope.ctrl.currentDay = data;
+                        $scope.ctrl.currentDay = day;
                     });
-
-                    const tempData = data >= 5 ? data - 5 : data;
+                    let tempData;
+                    if(data.scrollDown) {
+                        tempData = day >= 4 ? day - 3 : day;
+                    } else {
+                        tempData = day <= 25 ? day + 3 : day;
+                    }
                     var elem = $("div[data-timeline-day-id='" + tempData + "']");
                     if (!elem) {
                         elem = $("div[data-timeline-day-id='" + data + "']");
