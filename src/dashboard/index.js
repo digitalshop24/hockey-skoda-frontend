@@ -17,7 +17,6 @@ import facts from './interesting-facts/index';
 import blog from './blog/index';
 import forecast from './forecast/index';
 import prize from './prize/index';
-import regsuccess from './regsuccess/index';
 import forumpage from './forum-page/index';
 import forumtopic from './forum-topic/index';
 

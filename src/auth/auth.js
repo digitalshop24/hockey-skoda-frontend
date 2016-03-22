@@ -11,17 +11,17 @@ export default class AuthService {
 
     register(credentials) {
         return this.api.post('/users', credentials).then(response => {
-            this.session.token = response.data.user.authentication_token;
+            this.session.token = response.data.user.token;
             this.session.user = Object.assign(this.session.user, response.data.user);
             return this.session;
         }).catch(response => {
-            throw response.data.error;
+            throw response.data;
         });
     }
 
     login(credentials) {
         return this.api.post('/users', credentials).then(response => {
-            this.session.token = response.data.user.authentication_token;
+            this.session.token = response.data.user.token;
             this.session.user = Object.assign(this.session.user, response.data.user);
             return this.session;
         }).catch(response => {

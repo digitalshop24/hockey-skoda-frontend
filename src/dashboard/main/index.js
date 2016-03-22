@@ -10,7 +10,7 @@ export default angular.module('dashboard.main', [])
         $stateProvider
             .state('dashboard.main', {
                 template: require('./template.html'),
-                url: '/main',
+                url: '/',
                 controller: MainCtrl,
                 controllerAs: 'ctrl',
                 resolve: {

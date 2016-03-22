@@ -2,6 +2,22 @@
 
 
 export default class ForumCtrl {
-    constructor() {
+    constructor($state, sections, page) {
+        this.sections = sections;
+        this.sections.forEach((section) => {
+            const lastActiveTopic = section.recently_active_topics[0];
+            const name = (lastActiveTopic.last_active_user.last_name || '') + ' ' + (lastActiveTopic.last_active_user.first_name || '');
+            section.lastActivityUserName = name;
+            section.lastActivityTime = moment(lastActiveTopic.last_activity).format('MM.DD h:ss');
+        });
+        this.currentPage = page;
+        this.state = $state;
+    }
+
+    loadMore() {
+        this.state.go('dashboard.forum', {
+            sections: this.sections,
+            page: ++this.currentPage,
+        });
     }
 }
