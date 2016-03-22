@@ -28,10 +28,10 @@
     </div>
 
     <div class="wrapp_contant_main wrapp_contant_main_page_news">
-        <div class="container-fluid" id="news">
+        <div class="container-fluid" main-news-scroll id="news">
             <div main-news-timeline scroll-init class="wrapp_timeline_main_page default"
                  days-with-news="ctrl.daysWithNews"></div>
-            <div main-news="news" class="row" ng-repeat="news in ctrl.news"></div>
+            <div main-news="news" class="row" data-news-id="{{news.dayId}}" ng-repeat="news in ctrl.news"></div>
         </div>
     </div>
 </section>
