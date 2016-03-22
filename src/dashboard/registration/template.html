@@ -1,4 +1,4 @@
-<form ng-submit="ctrl.send()">
+<form ng-submit="ctrl.send()" ng-init="ctrl.form = {}">
     <section class="about_first">
         <div class="container-fluid">
             <div class="row">
@@ -21,18 +21,18 @@
                 <div class="row">
                     <div class="col-md-6 left">
                         <h4>Как вас зовут?</h4>
-                        <input type="text" ng-model="ctrl.lastName" class="input_default input_small"
+                        <input type="text" ng-model="ctrl.form.last_name" class="input_default input_small"
                                placeholder="Фамилия">
-                        <input type="text" ng-model="ctrl.firstName" class="input_default input_small"
+                        <input type="text" ng-model="ctrl.form.first_name" class="input_default input_small"
                                placeholder="Имя">
-                        <input type="text" ng-model="ctrl.surname" class="input_default input_small"
+                        <input type="text" ng-model="ctrl.form.middle_name" class="input_default input_small"
                                placeholder="Отчество">
                     </div>
                     <div class="col-md-6 left">
                         <h4>Как вас зовут?</h4>
-                        <input type="text" ng-model="ctrl.index" class="input_default input_small" placeholder="Индекс">
-                        <input type="text" ng-model="ctrl.city" class="input_default input_small" placeholder="Город">
-                        <input type="text" ng-model="ctrl.address" class="input_default input_small"
+                        <input type="text" ng-model="ctrl.form.zip_code" class="input_default input_small" placeholder="Индекс">
+                        <input type="text" ng-model="ctrl.form.city" class="input_default input_small" placeholder="Город">
+                        <input type="text" ng-model="ctrl.form.address" class="input_default input_small"
                                placeholder="Адрес">
                     </div>
                 </div>
@@ -43,19 +43,19 @@
                 <div class="row">
                     <div class="col-md-6 left">
                         <h4>Можно вашу почту?</h4>
-                        <input type="email" ng-model="ctrl.email" class="input_default input_small"
+                        <input type="email" ng-model="ctrl.form.email" class="input_default input_small"
                                placeholder="E-mail">
                     </div>
                     <div class="col-md-6 left">
                         <h4>И телефон?</h4>
-                        <input type="text" ng-model="ctrl.mobilephone" class="input_default input_small"
+                        <input type="text" ng-model="ctrl.form.phone" class="input_default input_small"
                                placeholder="+7">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 left">
                         <h4>Пароль?</h4>
-                        <input type="email" ng-model="ctrl.password" class="input_default input_small"
+                        <input type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"
                                placeholder="Пароль">
                     </div>
                 </div>
@@ -67,11 +67,11 @@
                 <div class="row">
                     <div class="col-md-6 left">
                         <h4>Ваш возраст?</h4>
-                        <input type="number" ng-model="ctrl.age" class="input_default input_small" placeholder="">
+                        <input type="number" ng-model="ctrl.form.age" class="input_default input_small" placeholder="">
                     </div>
                     <div class="col-md-6 left">
                         <h4>Вы состоите в браке?</h4>
-                        <input type="text" ng-model="ctrl.marriage" class="input_default input_small" placeholder="">
+                        <input type="text" ng-model="ctrl.form.marital_status" class="input_default input_small" placeholder="">
                     </div>
                 </div>
             </div>
@@ -98,11 +98,11 @@
                 <div class="row">
                     <div class="col-md-6 left">
                         <h4>Ваша машина?</h4>
-                        <input type="text" ng-model="ctrl.currentCar" class="input_default input_small" placeholder="">
+                        <input type="text" ng-model="ctrl.form.current_car" class="input_default input_small" placeholder="">
                     </div>
                     <div class="col-md-6 left">
                         <h4>А прошлая?</h4>
-                        <input type="text" ng-model="ctrl.previousCar" class="input_default input_small" placeholder="">
+                        <input type="text" ng-model="ctrl.form.last_car" class="input_default input_small" placeholder="">
                     </div>
                 </div>
             </div>

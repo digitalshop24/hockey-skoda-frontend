@@ -28,7 +28,6 @@ export default class TestDriveCtrl {
             city: this.city
         };
         this.service.sendRequest(data).then((response)=> {
-            console.log(response);
             this.modal.open({
                 template: '<div class="modal-body">Заявка на тест-драйв успешно отправлена</div>'
             });
