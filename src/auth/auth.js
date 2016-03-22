@@ -9,9 +9,19 @@ export default class AuthService {
         this.session = session;
     }
 
+    register(credentials) {
+        return this.api.post('/users', credentials).then(response => {
+            this.session.token = response.data.user.authentication_token;
+            this.session.user = Object.assign(this.session.user, response.data.user);
+            return this.session;
+        }).catch(response => {
+            throw response.data.error;
+        });
+    }
+
     login(credentials) {
-        return this.api.post('login', credentials).then(response => {
-            this.session.token = response.data.token;
+        return this.api.post('/users', credentials).then(response => {
+            this.session.token = response.data.user.authentication_token;
             this.session.user = Object.assign(this.session.user, response.data.user);
             return this.session;
         }).catch(response => {
