@@ -18,6 +18,8 @@ import blog from './blog/index';
 import forecast from './forecast/index';
 import prize from './prize/index';
 import regsuccess from './regsuccess/index';
+import forumpage from './forum-page/index';
+import forumtopic from './forum-topic/index';
 
 
 export default angular.module('dashboard',
@@ -36,7 +38,9 @@ export default angular.module('dashboard',
         blog.name,
         forecast.name,
         prize.name,
-        regsuccess.name
+        regsuccess.name,
+        forumpage.name,
+        forumtopic.name
     ])
     .config($stateProvider => {
         $stateProvider

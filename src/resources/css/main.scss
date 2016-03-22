@@ -586,6 +586,7 @@ footer {
   .wrapp_topic {
     float: left;
     padding: 20px 0 20px 35px;
+    width: 100%;
     h4 {
       font-family: $bold;
     }
@@ -601,6 +602,18 @@ footer {
         margin-bottom: 10px;
         font-size: $p_size;
         font-family: $bold;
+        ul {
+          float:right;
+          margin-top: 0px;
+          li {
+            display: inline-block;
+            margin-bottom: 0px;
+            a {
+              font-family: $light;
+            }
+            
+          }
+        }
       }
     }
   }
