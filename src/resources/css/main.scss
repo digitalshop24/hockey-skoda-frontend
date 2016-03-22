@@ -1996,11 +1996,11 @@ $grey_about: #5d5d5d;
     
   }
   .slick-prev {
-    background:#000 url(img/resources/img/arrow_left_white.png) no-repeat center center;
+    background:#000 url('img/resources/img/arrow_left_white.png') no-repeat center center;
     left:0px;
   }
   .slick-next {
-    background:#000 url(img/resources/img/arrow_right_white.png) no-repeat center center;
+    background:#000 url('img/resources/img/arrow_right_white.png') no-repeat center center;
     right:0px;
   }
 }
@@ -2085,7 +2085,7 @@ $grey_about: #5d5d5d;
         width:24px;
         height:46px;
         content:"";
-        background:url(img/resources/img/icon_arrow_right.png) no-repeat center center;
+        background:url('img/resources/img/icon_arrow_right.png') no-repeat center center;
       }
       &:nth-child(1) {
         margin-right: 127px;
@@ -2153,15 +2153,15 @@ $grey_about: #5d5d5d;
       left:50%;
       margin-left:-23px;
       z-index: 2;
-      background:url(img/resources/img/icon-arrow_top.png) no-repeat center center;
+      background:url('img/resources/img/icon-arrow_top.png') no-repeat center center;
     }
     .slick-prev {
       top:-35px;
-      background:url(img/resources/img/icon-arrow_top.png) no-repeat center center;
+      background:url('img/resources/img/icon-arrow_top.png') no-repeat center center;
    }
     .slick-next {
       bottom:-35px;
-      background:url(img/resources/img/icon-arrow-bottom.png) no-repeat center center;
+      background:url('img/resources/img/icon-arrow-bottom.png') no-repeat center center;
 
     }
     .from_block {
@@ -2338,19 +2338,19 @@ $grey_about: #5d5d5d;
         height:39px;
         margin:0 2px;
         &-is {
-          background:url(img/resources/img/insta.png) no-repeat center center;
+          background:url('img/resources/img/insta.png') no-repeat center center;
           background-size:cover;
         }
         &-fb {
-          background:url(img/resources/img/fb.png) no-repeat center center;
+          background:url('img/resources/img/fb.png') no-repeat center center;
           background-size:cover;
         }
         &-tw {
-          background:url(img/resources/img/twiter.png) no-repeat center center;
+          background:url('img/resources/img/twiter.png') no-repeat center center;
           background-size:cover;
         }
         &-vk {
-          background:url(img/resources/img/vk.png) no-repeat center center;
+          background:url('img/resources/img/vk.png') no-repeat center center;
           background-size:cover;
         }
       }
@@ -2463,14 +2463,14 @@ $grey_about: #5d5d5d;
     }
     .open {
       .caret {
-        background:url(img/resources/img/icon-select-arrow-active.png) no-repeat center center;
+        background:url('img/resources/img/icon-select-arrow-active.png') no-repeat center center;
       }
     }
     .caret {
       border:none;
       width:20px;
       height:8px;
-      background:url(img/resources/img/icon-select-arrow-invers.png) no-repeat center center;
+      background:url('img/resources/img/icon-select-arrow-invers.png') no-repeat center center;
     }
     .dropdown-menu {
       background:#333333;
@@ -2490,6 +2490,8 @@ $grey_about: #5d5d5d;
  // end choice_one
 
 //-------------------------------------------------- end СЕРГЕЙ УШАНСЬКИЙ
+
+
 
 
 //-------------------------------------------------- ANDREY FEDOROVICH
@@ -2553,6 +2555,7 @@ $grey_about: #5d5d5d;
       font-family: $bold;
       font-size: 48px;
       margin-bottom: 30px;
+
     }
     p {
       font-size:$p_size;
@@ -2601,6 +2604,11 @@ $grey_about: #5d5d5d;
     }
   } 
 }
+.prizesSection.step1,.prizesSection.step2,.prizesSection.step3 {
+    -webkit-box-shadow: inset 200px -134px 300px 55px rgba(0,0,0,0.72);
+    -moz-box-shadow: inset 200px -134px 300px 55px rgba(0,0,0,0.72);
+    box-shadow: inset 200px -134px 300px 55px rgba(0,0,0,0.72); 
+  }
 .prizesSection.step1 {
   background-image: url('img/resources/img/prizesPage/bg1.png');
 
