@@ -1270,8 +1270,10 @@ $grey_about: #5d5d5d;
       ul {
         margin: 25vh 0 0 20px;
         li {
-          height:7vh;
+          // height:7vh;
           transition: all .2s ease-in-out;
+          padding-top: 5px;
+          padding-bottom: 5px;
           h5 {
             text-transform: uppercase;
             color: $white;
@@ -1298,11 +1300,11 @@ $grey_about: #5d5d5d;
           }  
         }
         .active_month {
-          margin-top: -5px;
+          // margin-top: -12px;
           p {
-            font-size: $p_size+0.5rem;
+            font-size: $p_size+0.8rem;
             span {
-              font-size: $p_size*1.5+0.5rem;
+              font-size: $p_size*1.5+0.8rem;
             }
           }  
         }
@@ -1941,6 +1943,32 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- end blog
 
 
+//-------------------------------------------------- reg_success
+.reg_success {
+   height: 80vh;
+   h2 {
+    text-transform: uppercase;
+    color: $green_main;
+    font-family: $bold;
+    padding-top: 10vh;
+   }
+   p {
+    font-size: $p_size;
+    padding-top: 30px;
+   }
+   ul {
+    padding-top: 60px;
+    li {
+      a {
+        font-size: $p_size;
+        font-family: $bold;
+        text-decoration: underline;
+      }
+    }
+   }
+}
+
+//-------------------------------------------------- end reg_success
 
 //-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
 // <!-- tantamareska -->

@@ -17,6 +17,7 @@ import facts from './interesting-facts/index';
 import blog from './blog/index';
 import forecast from './forecast/index';
 import prize from './prize/index';
+import regsuccess from './regsuccess/index';
 
 
 export default angular.module('dashboard',
@@ -34,7 +35,8 @@ export default angular.module('dashboard',
         facts.name,
         blog.name,
         forecast.name,
-        prize.name
+        prize.name,
+        regsuccess.name
     ])
     .config($stateProvider => {
         $stateProvider
