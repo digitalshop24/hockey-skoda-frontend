@@ -20,8 +20,8 @@
 
         <div ng-click="ctrl.openLoginPopup()" class="right_head_mobile">
             <a href="">
-                <img src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive">
-                <span ng-bind="ctrl.name"></span>
+                <img ng-click="ctrl.openLoginPopup()" src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive">
+                <span ng-click="ctrl.state.go('dashboard.profile')" ng-bind="ctrl.user.name"></span>
             </a>
         </div>
 
@@ -44,10 +44,10 @@
             </div>
             <div class="right_head text-right hidden-xs">
                 <ul>
-                    <li ng-click="ctrl.openLoginPopup()">
+                    <li>
                         <a href="">
-                            <img src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive">
-                            <span ng-bind="ctrl.name"></span>
+                            <img ng-click="ctrl.openLoginPopup()" src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive">
+                            <span ng-click="ctrl.state.go('dashboard.profile')" ng-bind="ctrl.user.name"></span>
                         </a>
                     </li>
                     <!--<li><a href=""><img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive"></a></li>-->
