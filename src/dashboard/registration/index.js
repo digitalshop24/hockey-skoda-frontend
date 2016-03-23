@@ -3,11 +3,9 @@
 import angular from 'angular';
 import RegistrationCtrl from './controller.js';
 import RegistrationService from './service.js';
-import success from './success/index';
 
 
 export default angular.module('dashboard.registration', [
-    success.name
 ])
     .service('regService', RegistrationService)
     .config(function ($stateProvider) {

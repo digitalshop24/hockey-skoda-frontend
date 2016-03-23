@@ -16,17 +16,23 @@ export default angular.module('dashboard.blog', [])
                 params: {
                     page: 1,
                     perPage: 10,
-                    blogs: []
+                    blogs: [],
+                    tags: [],
+                    tagFilter: false
                 },
                 resolve: {
                     blogs: ($stateParams, blogService) => {
-                        return blogService.getBlogs($stateParams.page, $stateParams.perPage)
+                        return blogService.getBlogs($stateParams.page, $stateParams.perPage, $stateParams.tags)
                             .then((res) => {
-                                return $stateParams.blogs.concat(res);
+                                const blogs = $stateParams.tagFilter ? [] : $stateParams.blogs;
+                                return blogs.concat(res);
                             });
                     },
                     page: ($stateParams) => {
                         return $stateParams.page;
+                    },
+                    tags: ($stateParams) => {
+                        return $stateParams.tags;
                     }
                 }
             });

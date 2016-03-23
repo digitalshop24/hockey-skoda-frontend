@@ -21,6 +21,8 @@ import forumpage from './forum-page/index';
 import forumtopic from './forum-topic/index';
 import login from './login/index';
 import newspage from './news-page/index';
+import success from './success/index';
+
 
 export default angular.module('dashboard',
     [
@@ -40,7 +42,8 @@ export default angular.module('dashboard',
         prize.name,
         forumpage.name,
         forumtopic.name,
-        newspage.name
+        newspage.name,
+        success.name
     ])
     .service('login', login)
     .config($stateProvider => {
