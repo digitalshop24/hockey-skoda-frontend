@@ -20,6 +20,7 @@ import prize from './prize/index';
 import forumpage from './forum-page/index';
 import forumtopic from './forum-topic/index';
 import login from './login/index';
+import newspage from './news-page/index';
 
 export default angular.module('dashboard',
     [
@@ -38,7 +39,8 @@ export default angular.module('dashboard',
         forecast.name,
         prize.name,
         forumpage.name,
-        forumtopic.name
+        forumtopic.name,
+        newspage.name
     ])
     .service('login', login)
     .config($stateProvider => {
