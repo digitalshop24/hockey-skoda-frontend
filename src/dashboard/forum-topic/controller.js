@@ -2,6 +2,8 @@
 
 
 export default class ForumtopicCtrl {
-    constructor() {
+    constructor(topic, messages) {
+        this.topic = topic;
+        this.messages = messages;
     }
 }

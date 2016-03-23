@@ -18,7 +18,7 @@
                         <ul>
                             <li><a href="#" class="link_default">Форум </a></li>
                             <li> > </li>
-                            <li><a href="#" class="link_default">Как болеют в разных странах</a></li>
+                            <li><a href="#" class="link_default" ng-bind="ctrl.topic.name"></a></li>
                             
                         </ul>
                     </div>
@@ -27,12 +27,11 @@
             <div class="row post_hover">
                 <div class="col-md-9">
                     <div class="wrapp_topic">
-                        <h4><a href="#" class="link_default">Как болеют в разных странах</a></h4>
+                        <h4><a href="#" class="link_default" ng-bind="ctrl.topic.name"></a></h4>
                         
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Ответить</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Ответить</button>
                         <ul>
-                            <li>Автор: Дмитрий </li>
-                            <li>Автор: Дмитрий </li>
+                            <li ng-bind="ctrl.topic.last_active_user.name"></li>
                         </ul>
                     </div>
                     
@@ -47,35 +46,21 @@
 
                 </div>
             </div>
-            <div class="row">
+            <div class="row" ng-repeat="message in ctrl.messages">
                 <div class="col-md-3">
                     <p>№1</p>
                     <img src="img/resources/img/bg_star.png" alt="" class="img-responsive">
-                    <p>Дмитрий Иванов</p>
+                    <p ng-bind="message.user.name"></p>
                 </div>
                 <div class="col-md-9">
-                    <p>02.10.2010 18-49</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit debitis iusto esse sint quam vel saepe, cumque totam eveniet, provident harum minus corrupti sequi omnis dolorem, doloremque laboriosam. Odit, incidunt.</p>
+                    <p ng-bind="message.created_at | amDateFormat:'DD.MM.YYYY h:mm'"/>
+                    <p ng-bind="message.message"></p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <p>№1</p>
-                    <img src="img/resources/img/bg_star.png" alt="" class="img-responsive">
-                    <p>Дмитрий Иванов</p>
-                </div>
-                <div class="col-md-9">
-                    <p>02.10.2010 18-49</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit debitis iusto esse sint quam vel saepe, cumque totam eveniet, provident harum minus corrupti sequi omnis dolorem, doloremque laboriosam. Odit, incidunt.</p>
-                </div>
-            </div>
+
             <div class="row text-center">
                 <button class="btn btn_common main load_more">Показать еще</button>
             </div>
-          
-            <!-- <div class="row text-center">
-                <button class="btn btn_common main load_more">Показать еще</button>
-            </div> -->
         </div>
     </div>
 </section>
