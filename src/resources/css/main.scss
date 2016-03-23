@@ -751,7 +751,7 @@ footer {
     border-bottom: 1px solid $grey;
   }
   .wrapp_filt {
-    padding: 20px 0;
+     padding: 20px 20px;
     
     ul{
       li {
@@ -770,7 +770,7 @@ footer {
     }
   }
   .wrapp_topic {
-    float: left;
+    // float: left;
     padding: 20px 0 20px 35px;
     width: 100%;
     h4 {
@@ -803,8 +803,11 @@ footer {
       }
     }
   }
+  .wrapp_topic_page, .wrapp_static_page {
+    margin-bottom: 50px;
+  }
   .wrapp_col { 
-      float: right;
+      // float: right;
       padding-top: 27px;
       ul {
         li {
@@ -816,6 +819,7 @@ footer {
     text-align: right;
     margin-top: 10px;
     padding-right: 35px;
+    padding-bottom: 20px;
     ul {
       li {
         display: inline-block;
@@ -1882,7 +1886,7 @@ $grey_about: #5d5d5d;
     }
   .lk_info {
     background-color: #181818;
-    height: 100vh;
+    height: 110vh;
     min-height: 680px;
     padding-top:30px;
 
@@ -1923,7 +1927,7 @@ $grey_about: #5d5d5d;
   }
   .lk_menu {
     background-color: $grey_dark;
-    height: 100vh;
+    height: 110vh;
     min-height: 680px;
     ul {
       .active {
@@ -1949,7 +1953,7 @@ $grey_about: #5d5d5d;
   }
   .lk_content {
     background-color: $grey_lite;
-    height: 100vh;
+    height: 110vh;
     min-height: 680px;
     padding-top:30px;
     .avatar {
@@ -2016,7 +2020,7 @@ $grey_about: #5d5d5d;
   }
   .lk_plus {
     background-color: $white;
-    height: 100vh;
+    height: 110vh;
     min-height: 680px;
     padding-top:30px;
     h6 {
@@ -2174,6 +2178,51 @@ $grey_about: #5d5d5d;
 
 //-------------------------------------------------- end blog
 
+
+//-------------------------------------------------- one news
+
+.wrapp_one_news {
+  padding: 50px 0;
+  h3 {
+    padding: 20px 0;
+  }
+  p {
+      font-size: $p_size;
+      padding-top: 15px;
+  }
+  img {
+    margin: 50px auto; 
+  }
+  ul {
+    display: inline-block;
+    padding: 20px 0; 
+    li{
+      display: inline-block;
+       img {
+        margin: 0; 
+       } 
+      p {
+        position: relative;
+        top: -13px;
+      }
+    }
+  }
+  .breadcrumbs {
+    li, a {
+      
+      font-size: $p_size;
+    } 
+  }
+  .soc {
+      margin-top: 50px; 
+      li {
+        padding-right: 10px;
+      }
+  }
+}
+
+
+//-------------------------------------------------- end one news
 
 //-------------------------------------------------- reg_success
 .reg_success {

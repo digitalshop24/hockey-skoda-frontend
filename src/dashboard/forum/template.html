@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="row post_hover" ng-repeat="section in ctrl.sections">
-                <div class="col-md-9">
+                <div class="col-md-8 col-sm-8 col-xs-12">
                     <div class="wrapp_topic">
                         <h4><a ui-sref="dashboard.forum-page({id:section.id})" class="link_default" ng-bind="section.name"></a></h4>
 
@@ -36,7 +36,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="wrapp_static">
                         <ul>
                             <li>{{section.count_view}} <p>Просмотров</p></li>
