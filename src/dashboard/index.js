@@ -38,9 +38,9 @@ export default angular.module('dashboard',
         forecast.name,
         prize.name,
         forumpage.name,
-        forumtopic.name,
-        login.name
+        forumtopic.name
     ])
+    .service('login', login)
     .config($stateProvider => {
         $stateProvider
             .state('dashboard', {

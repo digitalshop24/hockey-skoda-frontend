@@ -2,11 +2,12 @@
 
 
 export default class RegistrationCtrl {
-    constructor(auth, $modal, profileService, $state) {
+    constructor(auth, $modal, profileService, $state, login) {
         this.auth = auth;
         this.modal = $modal;
         this.profileService = profileService;
         this.state = $state;
+        login.open();
     }
 
     send() {
