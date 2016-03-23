@@ -12,6 +12,15 @@ export default angular.module('dashboard.profile', [])
                 template: require('./template.html'),
                 url: '/profile',
                 controller: ProfileCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                params: {},
+                resolve: {
+                    achievements: ($stateParams, profileService) => {
+                        return profileService.getAchievements();
+                    },
+                    lastAchievements: ($stateParams, profileService) => {
+                        return profileService.getLastAchievements();
+                    }
+                }
             });
     });
