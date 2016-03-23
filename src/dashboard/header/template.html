@@ -1,27 +1,32 @@
 <header>
 
-<nav class="mobile-menu hidden-md hidden-lg">
-    <img src="img/resources/img/logo.png" alt="" class="img-responsive">
-    <label for="show-menu" class="show-menu">
-        <div class="lines" id="mobile_menu"></div>
-    </label>
-    <input type="checkbox" id="show-menu">
-    <ul id="menu">
-        <li><a ui-sref="dashboard.general-news" ng-class="{'active_li': $state.includes('dashboard.main-news')
+    <nav class="mobile-menu hidden-md hidden-lg">
+        <img ui-sref="index" src="img/resources/img/logo.png" alt="" class="img-responsive">
+        <label for="show-menu" class="show-menu">
+            <div class="lines" id="mobile_menu"></div>
+        </label>
+        <input type="checkbox" id="show-menu">
+        <ul id="menu">
+            <li><a ui-sref="dashboard.general-news" ng-class="{'active_li': $state.includes('dashboard.main-news')
                     || $state.includes('dashboard.general-news') }">Новости</a></li>
-        <li><a ui-sref="dashboard.forecast"
-                           ng-class="{'active_li': $state.includes('dashboard.forecast')}">Прогнозы</a></li>
-        <li><a ui-sref="dashboard.forum"
-                           ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a></li>
-        <li><a ui-sref="dashboard.tdrive"
-                           ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a></li>
-    </ul>
-    
+            <li><a ui-sref="dashboard.forecast"
+                   ng-class="{'active_li': $state.includes('dashboard.forecast')}">Прогнозы</a></li>
+            <li><a ui-sref="dashboard.forum"
+                   ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a></li>
+            <li><a ui-sref="dashboard.tdrive"
+                   ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a></li>
+        </ul>
 
-    <div ng-click="ctrl.openLoginPopup()" class="right_head_mobile"><a href=""><img src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive"><span>Дмитрий Иванов</span></a></div>
-        
-    
-</nav>
+
+        <div ng-click="ctrl.openLoginPopup()" class="right_head_mobile">
+            <a href="">
+                <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive">
+                <span ng-click="ctrl.state.go('dashboard.profile')" ng-bind="ctrl.user.name"></span>
+            </a>
+        </div>
+
+
+    </nav>
     <div class="container-fluid hidden-xs hidden-sm">
         <div class="row">
             <div class="col-sm-12 col-md-12 left_head text-left">
@@ -39,7 +44,12 @@
             </div>
             <div class="right_head text-right hidden-xs">
                 <ul>
-                    <li ng-click="ctrl.openLoginPopup()"><a href=""><img src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive"><span>Дмитрий Иванов</span></a></li>
+                    <li>
+                        <a href="">
+                            <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive">
+                            <span ng-click="ctrl.state.go('dashboard.profile')" ng-bind="ctrl.user.name"></span>
+                        </a>
+                    </li>
                     <!--<li><a href=""><img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive"></a></li>-->
                     <li><a href=""><img src="img/resources/img/skoda_serch.jpg" alt="" class="img-responsive"></a></li>
                 </ul>

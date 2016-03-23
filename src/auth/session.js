@@ -6,11 +6,6 @@ export default class Session {
     constructor($cookies, skodaLocalStorage) {
         this.cookies = $cookies;
         this.localStorage = skodaLocalStorage;
-
-        /*  Cleaning up   */
-        if (this.user && this.user.isGuest()) {
-            this.cleanupCookies();
-        }
     }
 
     cleanupCookies() {
@@ -43,5 +38,13 @@ export default class Session {
 
     set user(value) {
         this.localStorage.user = value;
+    }
+
+    get isAuthenticated() {
+        return this.localStorage.isAuthenticated;
+    }
+
+    set isAuthenticated(value) {
+        this.localStorage.isAuthenticated = value;
     }
 }

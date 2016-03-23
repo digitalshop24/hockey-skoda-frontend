@@ -1,29 +1,32 @@
 <section class="wrapp_blog_all">
     <div class="wrapp_menu">
-        <div class="menu_line " >
+        <div class="menu_line ">
             <ul>
                 <li>
                     <a ui-sref="dashboard.general-news">
                         <img src="img/resources/img/news/ico_menu1.png" alt="" class="img-responsive">
-                        <p>События</p>  
+
+                        <p>События</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <img src="img/resources/img/news/ico_menu2.png" alt="" class="img-responsive">
-                        <p>Факты</p>    
+
+                        <p>Факты</p>
                     </a>
                 </li>
                 <li>
                     <a ui-sref="dashboard.blog">
                         <img src="img/resources/img/news/ico_menu3.png" alt="" class="img-responsive">
+
                         <p>Аналитика</p>
                     </a>
                 </li>
             </ul>
         </div>
-    </div>  
-    
+    </div>
+
     <div class="wrapp_blog_contant ">
         <div class="container-fluid">
             <div class="row">
@@ -41,14 +44,16 @@
                 <div class="col-xs-12 col-sm-12 col-md-4 text-left wrapp_blog_posts" ng-repeat="blog in ctrl.blogs">
                     <ul class="blog_post">
                         <li><img src="img/resources/img/news/main_news.jpg" alt="" class="img-responsive"></li>
-                        <li><p class="bold">Дмитрий Ерыкалов</p><p class="prof">Корреспондент</p></li>
+                        <li><p class="bold">Дмитрий Ерыкалов</p>
+
+                            <p class="prof">Корреспондент</p></li>
                         <li><h3 ng-bind="blog.name"></h3></li>
                         <li><p ng-bind="blog.short_content"></p></li>
                         <li><p ng-bind="blog.published_at | amDateFormat:'MM.DD h:ss'"></p></li>
                         <li><img src="img/resources/img/news/main_news.jpg" alt="" class="img-responsive"></li>
                     </ul>
-                    <ul class="tag_post" ng-repeat="tag in blog.tags">
-                        <li><p><a href="" ng-bind="tag"></a></p></li>
+                    <ul class="tag_post">
+                        <li ng-repeat="tag in blog.tags"><p><a href="" ng-bind="tag"></a></p></li>
                     </ul>
                 </div>
 
@@ -57,7 +62,7 @@
             <div class="row text-center">
                 <button ng-click="ctrl.loadMore()" class="btn btn_common main load_more">Показать еще</button>
             </div>
-            
+
         </div>
     </div>
 </section>

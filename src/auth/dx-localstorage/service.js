@@ -5,10 +5,20 @@ import User from '../user';
 export default class SkodaLocalStorage {
     constructor($localStorage) {
         this.localStorage = $localStorage.$default({
-            user: new User()
+            user: new User(),
+            isAuthenticated: false
         });
 
         this.user = this.localStorage.user;
+        this.isAuthenticated = this.localStorage.isAuthenticated;
+    }
+
+    get isAuthenticated(){
+        return this._isAuthenticated;
+    }
+
+    set isAuthenticated(value){
+        this.localStorage.isAuthenticated = this._isAuthenticated = value;
     }
 
     get user(){
