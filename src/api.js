@@ -4,11 +4,13 @@ const UNAUTHORIZED = 401;
 const EXTERNAL_SERVER_ERROR = 500;
 
 export default class Api {
-    constructor($http, $state, session, login) {
+    constructor($http, $state, session, login, $rootScope) {
         this.api = "http://skoda-hockey.herokuapp.com/api/v1";
         this.http = $http;
         this.state = $state;
         this.session = session;
+        this.login = login;
+        this.rootscope = $rootScope;
     }
 
     get(url, config) {
@@ -47,9 +49,8 @@ export default class Api {
     }
 
     handleResponse(response) {
-        if (!this.isAuthorized(response)) {
-            login.open();
-            //this.state.go('dashboard.login', {message: response.data.error_message});
+        if (!this.isAuthorized(response) && !this.rootscope.alreadyInLoginModal) {
+            this.login.open();
         }
 
         if (this.isExternalServerError(response)) {

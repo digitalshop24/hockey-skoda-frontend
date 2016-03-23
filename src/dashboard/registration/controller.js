@@ -7,7 +7,6 @@ export default class RegistrationCtrl {
         this.modal = $modal;
         this.profileService = profileService;
         this.state = $state;
-        login.open();
     }
 
     send() {

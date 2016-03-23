@@ -11,21 +11,22 @@
                             <input required="true" type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"
                                    placeholder="Пароль">
                             <p><a href="">Я забыл пароль</a></p>
+                            <h3 ng-bind="ctrl.message"></h3>
                             <button class="btn btn_secondary small">Войти</button>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="right">
                             <h6>Я здесь впервые</h6>
-                            <p>ТЕкст о то, зачем нужна регистраци и какеие полезности можо получить</p>
-                            <button class="btn btn_secondary small">Регистрация</button>
+                            <!--<p>ТЕкст о то, зачем нужна регистраци и какеие полезности можо получить</p>-->
+                            <button class="btn btn_secondary small" ng-click="ctrl.goToRegistration()">Регистрация</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <button type="button" class="close" ng-click="ctrl.close()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
        
         <div class="container">
             <div class="row">
