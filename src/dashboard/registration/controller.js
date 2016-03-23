@@ -10,7 +10,7 @@ export default class RegistrationCtrl {
     }
 
     send() {
-        if(this.form.password != this.form.confirmPassword) {
+        if (this.form.password != this.form.confirmPassword) {
             this.modal.open({
                 template: '<div class="modal-body">Введенные пароли не совпадают!</div>'
             });
@@ -26,12 +26,12 @@ export default class RegistrationCtrl {
             this.state.go('dashboard.registration.success');
         })
             .catch((err) => {
-                let info = '';
+                let info = 'Во время регистрации произошла ошибка!';
                 if (err.error_message.email) {
-                    info = " Данный email уже существует."
+                    info = "Данный email уже существует"
                 }
                 this.modal.open({
-                    template: '<div class="modal-body">Во время регистрации произошла ошибка!' + info + '</div>'
+                    template: '<div class="modal-body">' + info + '</div>'
                 });
             });
     }
