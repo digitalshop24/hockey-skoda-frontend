@@ -48,11 +48,11 @@ export default class Api {
 
     handleResponse(response) {
         if (!this.isAuthorized(response)) {
-            return this.state.go('login');
+            this.state.go('dashboard.login', {message: response.data.error_message});
         }
 
         if (this.isExternalServerError(response)) {
-            return this.state.go('error-pages.external-server-error');
+            this.state.go('error-pages.external-server-error');
         }
 
         throw response;
