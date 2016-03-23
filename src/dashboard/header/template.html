@@ -20,7 +20,7 @@
 
         <div ng-click="ctrl.openLoginPopup()" class="right_head_mobile">
             <a href="">
-                <img ng-click="ctrl.openLoginPopup()" src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive">
+                <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive">
                 <span ng-click="ctrl.state.go('dashboard.profile')" ng-bind="ctrl.user.name"></span>
             </a>
         </div>
@@ -46,7 +46,7 @@
                 <ul>
                     <li>
                         <a href="">
-                            <img ng-click="ctrl.openLoginPopup()" src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive">
+                            <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive">
                             <span ng-click="ctrl.state.go('dashboard.profile')" ng-bind="ctrl.user.name"></span>
                         </a>
                     </li>
