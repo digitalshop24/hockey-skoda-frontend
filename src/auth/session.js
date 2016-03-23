@@ -44,4 +44,12 @@ export default class Session {
     set user(value) {
         this.localStorage.user = value;
     }
+
+    get isAuthenticated() {
+        return this.localStorage.isAuthenticated;
+    }
+
+    set isAuthenticated(value) {
+        this.localStorage.isAuthenticated = value;
+    }
 }

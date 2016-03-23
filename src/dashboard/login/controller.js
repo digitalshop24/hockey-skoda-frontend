@@ -23,6 +23,7 @@ export default class LoginCtrl {
             .then(() => {
                 this.form = {};
                 this.rootscope.alreadyInLoginModal = false;
+                this.close();
             }).catch((err) => {
                 this.rootscope.alreadyInLoginModal = false;
                 this.message = err.error_code == 401 ? "Неверный логин или пароль" : "";

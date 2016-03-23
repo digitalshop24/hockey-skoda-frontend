@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <button ng-disabled="true" class="btn btn_primary main">Создать тему</button>
-                <p>Чтобы создать тему или оставить комментарий <br>нужно <a href="#">Авторизироваться</a></p>
+                <button ng-disabled="!ctrl.session.isAuthenticated" class="btn btn_primary main">Создать тему</button>
+                <p ng-show="!ctrl.session.isAuthenticated">Чтобы создать тему или оставить комментарий <br>нужно <a ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
             </div>
         </div>
     </div>

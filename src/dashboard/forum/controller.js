@@ -2,7 +2,7 @@
 
 
 export default class ForumCtrl {
-    constructor($state, sections, page) {
+    constructor($state, sections, page, login, session) {
         this.sections = sections;
         this.sections.forEach((section) => {
             const lastActiveTopic = section.recently_active_topics[0];
@@ -12,6 +12,8 @@ export default class ForumCtrl {
         });
         this.currentPage = page;
         this.state = $state;
+        this.login = login;
+        this.session = session;
     }
 
     loadMore() {
