@@ -2431,6 +2431,11 @@ $grey_about: #5d5d5d;
   display:block;
   width:100%;
   background:#181818;
+  .input_default {
+    position: relative;
+    z-index: 100;
+    margin-top: -5px;
+  }
 
 }
 // <!-- wrapp_forecast_all -->
