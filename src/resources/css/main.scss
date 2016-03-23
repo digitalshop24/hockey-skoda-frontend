@@ -964,7 +964,7 @@ $grey_about: #5d5d5d;
     width:350px;
   }
   .left {
-    padding-left: 9%;
+    padding-left: 9%; 
   }
   .form_grey {
     background-color: #f1f1f1;
@@ -2175,7 +2175,6 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- end reg_success
 
 
-
 //-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
 // <!-- tantamareska -->
 .wrapp_tantamareska {
@@ -2429,15 +2428,18 @@ $grey_about: #5d5d5d;
 // <!--end form_suggestions -->
 .wrapp_forecast {
   position:relative;
-  display:table;
+  display:block;
+  width:100%;
+  background:#181818;
+
 }
 // <!-- wrapp_forecast_all -->
 
 
 .wrapp_forecast_all {
   width:165px;
-  display:table-cell;
-  table-layout: fixed;
+  display:block;
+  float:left;
   background:#181818;
   position:relative;
   padding-left:31px;
@@ -2505,13 +2507,12 @@ $grey_about: #5d5d5d;
 // <!--end wrapp_forecast_all -->
 // <!-- wrapp_forecast_all -->
 
-
+ 
 .wrapp_forecast_content {
-  display:table-cell;
-  background:red;
-  table-layout: fixed;
+  display:block;
   overflow:hidden;
-  width:100%;
+  position:relative;
+
   .forecast_content_block {
     position:relative;
     .backg-1 {
@@ -2536,6 +2537,12 @@ $grey_about: #5d5d5d;
       margin-left:58px;
       text-transform: uppercase;
       margin-top:30px;
+    }
+    .bac-forecast-two {
+      background:#ececec;
+    }
+    .height-no {
+      height:auto;
     }
   }
   .forecast {
@@ -2638,13 +2645,9 @@ $grey_about: #5d5d5d;
     top:211px;
   &-item {
     margin-bottom:104px;
+
     &:after {
-      position: absolute;
-      height: 152px;
-      right: 0px;
-      border: 1px solid #000000;
-      content: '';
-      top: 16px;
+      display:none;
     }
     &-bor:after {
       position:absolute;
@@ -2719,11 +2722,203 @@ $grey_about: #5d5d5d;
     }
   }
 }
-
+.wrapp_forecast_content_mob {
+  display:none;
+}
 
 
  // end choice_one
 
+
+ //wrapp_forecast_content_mob
+
+.wrapp_forecast_content_mob {
+  .forecast_slider {
+    .slick-list {
+      padding:0px !important;
+    }
+    .slider-nav_forecast {
+      height:100px;
+      background:#39b54a;
+      position:relative;
+      .nav_block {
+        padding-top:20px;
+        h4 {
+          font-family: $extra_bold;
+          color:$white;
+          font-size:5rem;
+          text-align:center;
+        }
+      }
+      .slick-arrow {
+        position:absolute;
+        top:50%;
+        font-size:0px;
+        border:none;
+        width:21px;
+        height:38px;
+        margin-top:-19px;
+        z-index: 2;
+      }
+      .slick-prev {
+        background:url('img/resources/img/icon-arrow-left-forecast.png') no-repeat center center;
+        left:15px;
+      }
+      .slick-next {
+        background:url('img/resources/img/icon-arrow-right-forecast.png') no-repeat center center;
+        right:15px;
+      }
+    }
+    .slider-for_block {
+      height:610px;
+      .choice_one {
+        position:relative;
+        height:auto;
+        .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+          width:68%;
+        }
+        .btn {
+          border:1px solid #a1a1a1;
+        }
+        
+      }
+      .backg-1 {
+        background:#f1f1f1;
+        height:762px;
+        padding-top:50px;
+      }
+      .backg-2 {
+        background:#f1f1f1;
+        height:762px;
+        padding-top:50px;
+      }
+      .backg-3 {
+        background:#f1f1f1;
+        height:762px;
+        padding-top:50px;
+      }
+      .pos_col-2 .choice_one {
+        top:30px;
+      }
+      .pos_col-3 .choice_one {
+        top:100px;
+      }
+    }
+  }
+}
+
+ //wrapp_forecast_content_mob end
+
+
+ .forecast_two {
+  border-bottom:1px solid #8b8b8b;
+  padding:100px 0; 
+  &:last-child {
+    border-bottom:none;
+  }
+  .date {
+    float:left;
+    color:#8b8b8b;
+    font-size:7rem;
+    font-family: $light;
+  }
+  .block {
+    float:left;
+    padding-top: 24px;
+    padding-left: 6px;
+    .month {
+      color:#8b8b8b;
+      font-size:1.7rem;
+      font-family: $extra_bold;
+          padding-bottom: 11px;
+    }
+    .time {
+      color:#8b8b8b;
+      font-size:1.7rem;
+      font-family: $light;
+    }
+  }
+  .score {
+    p {
+      color:#4aa82e;
+      font-size:3rem;
+      font-family: $light;
+      text-align:center;
+      padding-top:32px;
+    }
+  }
+  .bootstrap-touchspin {
+    display:block;
+    height:142px;
+    .input-group-btn {
+      height:142px;
+      position:initial;
+    }
+
+    .bootstrap-touchspin-down {
+      position:absolute;
+      bottom:5px;
+      width:36px;
+      height:14px;
+      display:block;
+      font-size:0px;
+      left:5px;
+      background:url('img/resources/img/icon-arrow-input-bottom.png') no-repeat center center;
+    }
+    .bootstrap-touchspin-up {
+      position:absolute;
+      top:0px;
+      width:36px;
+      height:14px;
+      display:block;
+      font-size:0px;
+      left:5px;
+      background:url('img/resources/img/icon-arrow-input-top.png') no-repeat center center;
+    }
+
+
+  }
+  .form-control {
+      position:absolute;
+      top:22px;
+      background: rgba(255,255,255,0);
+      border: none;
+      box-shadow: none;
+      color:#4ba82e;
+      font-size:7rem;
+      height:88px;
+      width:73px;
+      line-height:0px;
+      padding:0px;
+      font-family: $extra_bold;
+    }
+    .toc {
+      color:#4ba82e;
+      font-size:7rem;
+      float:left;
+      font-family: $extra_bold;
+      width:39px;
+    }
+    .input-sn {
+      float:left;
+      width: 61px;
+    }
+
+ }
+     .btn-forecast {
+      padding-top:36px;
+      .main {
+        min-width:111px;
+        height:44px;
+        float:right;
+        color:$white;
+        font-size:1.7rem;
+        font-family: $light;
+      }
+    }
+.mob-forece {
+  display:none;
+}
 //-------------------------------------------------- end СЕРГЕЙ УШАНСЬКИЙ
 
 
