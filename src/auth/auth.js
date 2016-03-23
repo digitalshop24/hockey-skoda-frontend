@@ -20,12 +20,12 @@ export default class AuthService {
     }
 
     login(credentials) {
-        return this.api.post('/users', credentials).then(response => {
+        return this.api.post('/users/sign_in', credentials).then(response => {
             this.session.token = response.data.user.token;
             this.session.user = Object.assign(this.session.user, response.data.user);
             return this.session;
         }).catch(response => {
-            throw response.data.error;
+            throw response.data;
         });
     }
 
