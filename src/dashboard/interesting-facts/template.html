@@ -1,111 +1,21 @@
 <section class="factSection">
         <div class="container-fluid">
             <div class="row">
-               <div class="col-sm-12 col-md-3">
+               <div class="col-sm-12 col-md-3" ng-repeat="fact in ctrl.facts | limitTo:4">
                     <figure>
                         <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/2.png');">
                         </div>
                         <figcaption class="col-md-12">
-                            <p>Первая шайба для хоккея имела<br/>форму квадрата</p>
+                            <p ng-bind="fact.name"></p>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="col-sm-12 col-md-3">
-                    <figure>
-                        <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/2.png');">
-                        </div>
-                        <figcaption class="col-md-12">
-                            <p>Первая шайба для хоккея имела<br/>форму квадрата</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <figure>
-                        <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/2.png');">
-                        </div>
-                        <figcaption class="col-md-12">
-                            <p>Первая шайба для хоккея имела<br/>форму квадрата</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <figure>
-                        <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/3.png');">
-                        </div>
-                        <figcaption class="col-md-12">
-                            <p>Сборная Советского Союза, принимавшая участие в чемпионате мира 1954 года...</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-12 col-md-3">
+                <div class="col-sm-12 col-md-3" ng-repeat="fact in ctrl.facts | limitTo:1000:4">
                     <figure class="half">
                         <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/3.png');">
                         </div>
                         <figcaption class="col-md-12">
-                            <p>Первая шайба для хоккея имела<br/>форму квадрата</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <figure class="half">
-                        <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/3.png');">
-                        </div>
-                        <figcaption class="col-md-12">
-                            <p>Первая шайба для хоккея имела<br/>форму квадрата</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <figure class="half">
-                        <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/3.png');">
-                        </div>
-                        <figcaption class="col-md-12">
-                            <p>Первая шайба для хоккея имела<br/>форму квадрата</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <figure class="half">
-                        <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/3.png');">
-                        </div>
-                        <figcaption class="col-md-12">
-                            <p>Первая шайба для хоккея имела<br/>форму квадрата</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <figure class="half">
-                        <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/3.png');">
-                        </div>
-                        <figcaption class="col-md-12">
-                            <p>Первая шайба для хоккея имела<br/>форму квадрата</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <figure class="half">
-                        <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/3.png');">
-                        </div>
-                        <figcaption class="col-md-12">
-                            <p>Первая шайба для хоккея имела<br/>форму квадрата</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <figure class="half">
-                        <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/3.png');">
-                        </div>
-                        <figcaption class="col-md-12">
-                            <p>Первая шайба для хоккея имела<br/>форму квадрата</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <figure class="half">
-                        <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/3.png');">
-                        </div>
-                        <figcaption class="col-md-12">
-                            <p>Первая шайба для хоккея имела<br/>форму квадрата</p>
+                            <p ng-bind="fact.name"></p>
                         </figcaption>
                     </figure>
                 </div>
@@ -116,7 +26,7 @@
                 <div class="col-md-12 text-center">
                     <ul>
                         <li>
-                            <button class="btn btn_common main">Показать ещё</button>
+                            <button ng-click="ctrl.loadMore()" class="btn btn_common main">Показать ещё</button>
                         </li>
                         <li>Показано 100 фактов из 1000</li>
                     </ul>

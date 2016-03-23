@@ -12,6 +12,21 @@ export default angular.module('dashboard.facts', [])
                 template: require('./template.html'),
                 url: '/interesting-facts',
                 controller: FactsCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                params: {
+                    page: 1,
+                    perPage: 15,
+                    facts: []
+                },
+                resolve: {
+                    facts: ($stateParams, factService) => {
+                        return factService.getFacts($stateParams.page, $stateParams.perPage).then((res) =>{
+                            return $stateParams.facts.concat(res);
+                        });
+                    },
+                    page: ($stateParams) => {
+                        return $stateParams.page;
+                    }
+                }
             });
     });
