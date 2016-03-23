@@ -1,3 +1,23 @@
+//Main colors
+$green_main: #4ba82e;
+$black: #000;
+$white: #fff;
+$grey_lite: #ececec;
+$grey: #cccccc;
+$grey_dark: #555555;
+//Additional colors
+$green_add_: #299926;
+$green_add_pale: #a5d396;
+$red: #da0000; 
+$link_default_hover:#377220; 
+//fonts
+$extra_bold: "SkodaProExtraBold", sans-serif;
+$bold: "SkodaProBold", sans-serif;
+$regular: "SkodaProRegular", sans-serif;
+$light: "SkodaProLight", sans-serif;
+$p_size: 1.4rem;
+
+
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
@@ -529,3 +549,315 @@
 @media only screen and (min-width : 1200px) {
 
 }
+
+
+
+/// СЕРГЕЙ
+@media only screen and (max-width : 1150px) {
+	.forecast_two {
+		.input-sn {
+		 width:45px;
+		}
+		.toc {
+			width:18px;
+		}
+	} 
+ }
+
+
+
+
+ @media only screen and (max-width : 1075px) {
+	.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+		width:75%;
+	}
+	.wrapp_forecast_content .forecast_content_block h4 {
+		margin-left:0px;
+	}
+	.wrapp_forecast_content .forecast .main {
+		width:200px;
+		height:50px;
+		font-size: 1.6rem;
+		font-family: "SkodaProBold", sans-serif;
+	}
+	.wrapp_forecast_content .forecast .share {
+		width:100%;
+		padding-top:25px;
+	}
+	.wrapp_forecast_content .forecast .fri {
+		display: block;
+	}
+	.wrapp_forecast_content .forecast .pos-fre {
+		padding-left:0px;
+	}
+	.wrapp_forecast_content .forecast .share .icon {
+		margin:0 5%;
+	}
+ 
+
+
+	.wrapp_forecast_all {
+		float:none;
+		width:100%;
+		padding-bottom:25px;
+		.nav_forecast {
+			.header-title {
+				margin-bottom:40px;
+				h3 {
+					font-family: $extra_bold;
+					font-size:5rem;
+					text-align:center;
+				}
+			}
+			.nav_forecast_block {
+				text-align:center;
+			}
+			.nav_forecast_block_item {
+				
+				
+				.text {
+					
+				}
+				.active .text {
+					color:#4ba82e;
+				}
+			}
+			&_block {
+      &_item {
+      	display:inline-block;
+				width:150px;
+				margin:0 2%;
+				text-align:center;
+				&:nth-child(2) {
+					position:relative;
+					top:-19px;
+				}
+        &_link {
+          text-decoration: none;
+          .number {
+            color:$white;
+          }
+          .text {
+            font-family: $extra_bold;
+						font-size:1.7rem;
+						line-height:1.9rem;
+						color:$white;
+          }
+          &:hover {
+            .number {
+              color: $green_main;             
+            }
+            .text {
+              color: $green_main;
+            }
+          }
+
+        }
+
+      }
+    }
+		}
+	.active {
+     .number {
+      color: $green_main;             
+    }
+    .text {
+      color: $green_main;
+    }
+  }
+	}
+
+
+ }
+
+
+ @media only screen and (max-width : 846px) {
+	.mob-forece {
+		display:block;
+		 .score {
+	    p {
+	      font-size:2rem;
+	    }
+	  }
+
+	}
+	.destop-force {
+		display:none;
+	}
+	.orecast_two_block {
+		padding:0 30px 0 60px;
+	}
+	.orecast_two-6 {
+		float:left;
+		width:50%;
+	}
+	.orecast_two-12_block {
+		width:85%;
+		margin:0 auto;
+		.left {
+	  	p {
+	  		text-align: right;
+	  		padding-top:48px;
+	  	}
+	  }
+	  .right {
+	  	p {
+	  		text-align: left;
+	  		padding-top:48px;
+	  	}
+	  }
+	}
+	.orecast_two-3 {
+		float:left;
+		width:33.333%;
+	}
+	.orecast_two-3.right {
+		float:right;
+	}
+	.orecast_two-2 {
+		position:absolute;
+		left:50%;
+		margin-left:-56px;
+	}
+	.orecast_two-7 {
+		float:right;
+		width:66.6666%;
+	}
+	.orecast_two_mob_block {
+		padding:0 36px 90px;
+	}
+ .orecast_two_mob_block:nth-child(2n) {
+ 	background:#fff;
+	}
+	.forecast_two {
+		border:none;
+	}
+	.forecast_two.mobile:nth-child(2n) {
+		background:#fff;
+	}
+ }
+
+
+
+
+
+
+
+
+
+
+ @media only screen and (max-width : 769px) {
+	.destop {
+		display:none;
+	}
+	.wrapp_forecast_content_mob {
+		display:block;
+		background: #fff;
+	}
+	.wrapp_forecast_content {
+		.forecast {
+			background:#f1f1f1;
+		}
+	}
+	.wrapp_forecast_content .forecast .pos-fre {
+		padding-top:75px;
+	} 
+ }
+
+
+@media only screen and (max-width:642px) {
+	.wrapp_forecast_content  {
+		
+			.bac-forecast-two .col-sm-7 { 
+				.main {
+					display:none;
+				}
+			}
+	}
+}
+
+ @media only screen and (max-width : 600px) {
+		 	.wrapp_forecast_all {
+		float:none;
+		width:100%;
+		.nav_forecast {
+			.header-title {
+				margin-bottom:25px;
+				h3 {
+					font-family: $extra_bold;
+					font-size:3rem;
+					text-align:center;
+				}
+			}
+
+	&_block {
+		margin-bottom:25px;
+      &_item {
+      	display:block;
+				width:150px;
+				margin:0 auto 25px;
+				text-align:center;
+				&:nth-child(2) {
+					position:relative;
+					top:0px;
+				}
+        &_link {
+          text-decoration: none;
+          .number {
+            color:$white;
+          }
+          .text {
+            font-family: $extra_bold;
+						font-size:1.7rem;
+						line-height:1.9rem;
+						color:$white;
+          }
+          &:hover {
+            .number {
+              color: $green_main;             
+            }
+            .text {
+              color: $green_main;
+            }
+          }
+
+        }
+
+      }
+    }
+		}
+	.active {
+     .number {
+      color: $green_main;             
+    }
+    .text {
+      color: $green_main;
+    }
+  }
+	}
+
+ //wrapp_forecast_content_mob
+
+.wrapp_forecast_content_mob {
+  .forecast_slider {
+    .slick-list {
+    }
+    .slider-nav_forecast {
+      .nav_block {
+      	padding-top:35px;
+        h4 {
+          font-size:3rem;
+        }
+      }
+    }
+  }
+}
+
+ //wrapp_forecast_content_mob end
+ }
+
+ @media only screen and (max-width : 450px) {
+ 	.orecast_two-12_block { 
+		width:100%;
+ 	}
+ }

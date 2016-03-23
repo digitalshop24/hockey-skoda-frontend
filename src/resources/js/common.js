@@ -107,6 +107,25 @@ function initSlider() {
             slidesToScroll: 1,
             dots: false,
         });
+
+        // forecast slider
+        $('.slider-for_block').slick({
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            asNavFor: '.slider-nav_forecast',
+        });
+        $('.slider-nav_forecast').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            centerMode: true,
+            focusOnSelect: true,
+            arrows: true,
+            asNavFor: '.slider-for_block'
+        });
     });
 }
 
