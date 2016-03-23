@@ -52,13 +52,7 @@ function initTimeline() {
 
 function initSlider() {
     $(function () {
-        $("#owl-main, #owl-main-2").owlCarousel({
-            navigation: true, // Show next and prev buttons
-            slideSpeed: 300,
-            paginationSpeed: 400,
-            singleItem: true,
-            navigationText: false
-        });
+     
         $('.single-item').slick({
             infinite: true,
             slidesToShow: 1,

@@ -1064,6 +1064,24 @@ $grey_about: #5d5d5d;
       top: 35vh;
     }
   }
+  .date_slider_news .slick-next {
+    background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_right_white.png") no-repeat center center;
+    right: 0;
+  }
+  .date_slider_news .slick-prev {
+    background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat center center;
+    left: 0;
+  }
+  .date_slider_news .slick-arrow {
+    position: absolute;
+    font-size: 0;
+    width: 57px;
+    height: 100px;
+    z-index: 3;
+    top: 50%;
+    margin-top: -59px;
+    border: 0;
+  }
   .item {
     min-height: 700px;
     color: $white;
