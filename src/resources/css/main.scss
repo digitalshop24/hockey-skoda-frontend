@@ -60,6 +60,8 @@ header {
         span {
           color: $green_main;
           text-transform: uppercase;
+          position: relative;
+          top: 8px;
         }
       }
     }
@@ -78,7 +80,7 @@ header {
       color: $green_main;
       text-transform: uppercase;
       position: relative;
-      top: 3px;
+      top: 35px;
     }
   }
   .logo {
