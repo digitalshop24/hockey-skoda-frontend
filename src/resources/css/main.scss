@@ -54,6 +54,13 @@ header {
         text-transform: uppercase;
         padding: 17px 19px !important;
         border-left: 1px solid $grey;
+        img {
+          display: inline-block;
+        }
+        span {
+          color: $green_main;
+          text-transform: uppercase;
+        }
       }
     }
   }
@@ -64,6 +71,15 @@ header {
     height: 87px;
     padding-right: 20px;
     border-right: 1px solid $grey;
+    img {
+      display: inline-block;
+    }
+    span {
+      color: $green_main;
+      text-transform: uppercase;
+      position: relative;
+      top: 3px;
+    }
   }
   .logo {
     img {
@@ -2214,7 +2230,7 @@ $grey_about: #5d5d5d;
     right: 10px;
     
   }
-  
+
   h6 {
     padding-top: 50px;
     font-family: $bold;
