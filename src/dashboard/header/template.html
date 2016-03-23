@@ -1,10 +1,9 @@
 <header>
 
 <nav class="mobile-menu hidden-md hidden-lg">
+    <img src="img/resources/img/logo.png" alt="" class="img-responsive">
     <label for="show-menu" class="show-menu">
-        <img src="img/resources/img/logo.png" alt="" class="img-responsive">
         <div class="lines" id="mobile_menu"></div>
-        
     </label>
     <input type="checkbox" id="show-menu">
     <ul id="menu">
@@ -17,6 +16,11 @@
         <li><a ui-sref="dashboard.tdrive"
                            ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a></li>
     </ul>
+    
+
+    <div ng-click="ctrl.openLoginPopup()" class="right_head_mobile"><a href=""><img src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive"></a></div>
+        
+    
 </nav>
     <div class="container-fluid hidden-xs hidden-sm">
         <div class="row">
