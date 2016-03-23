@@ -14,7 +14,8 @@
             "src/resources/js/jscrollpane/mousewheel.js",
             "src/resources/js/jscrollpane/jscrollpane.min.js",
             "src/resources/js/common.js",
-            "src/resources/libs/slick/slick.min.js"
+            "bower_components/slick-carousel/slick/slick.js",
+            "bower_components/angular-slick/dist/slick.js"
         ],
         "dest": "vendor.min.js"
     },
@@ -24,7 +25,9 @@
             "bower_components/angular-bootstrap/ui-bootstrap-css.js",
             "node_modules/font-awesome/css/font-awesome.min.css",
             "src/resources/js/jscrollpane/jscrollpane.css",
-            "src/resources/libs/slick/slick.css"
+            "bower_components/slick-carousel/slick/slick.css",
+            "bower_components/slick-carousel/slick/slick-theme.css"
+
         ],
         "dest": "vendor.min.css"
     },
