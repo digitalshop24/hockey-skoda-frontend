@@ -1,21 +1,32 @@
 <form ng-submit="ctrl.send()" ng-init="ctrl.form = {}">
-    <aside class="form">
+    <aside class="form_popup">
         <div class="form_white">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6 left">
-                        <h4>Почта</h4>
-                        <input required="true" type="email" ng-model="ctrl.form.email" class="input_default input_small"
-                               placeholder="E-mail">
+                    <div class="col-md-6">
+                        <div class="left">
+                            <h6>Я уже зарегистрирован(а)</h6>
+                            <input required="true" type="email" ng-model="ctrl.form.email" class="input_default input_small"
+                                   placeholder="E-mail">
+                            <input required="true" type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"
+                                   placeholder="Пароль">
+                            <p><a href="">Я забыл пароль</a></p>
+                            <button class="btn btn_secondary small">Войти</button>
+                        </div>
                     </div>
-                    <div class="col-md-6 left">
-                        <h4>Пароль</h4>
-                        <input required="true" type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"
-                               placeholder="Пароль">
+                    <div class="col-md-6">
+                        <div class="right">
+                            <h6>Я здесь впервые</h6>
+                            <p>ТЕкст о то, зачем нужна регистраци и какеие полезности можо получить</p>
+                            <button class="btn btn_secondary small">Регистрация</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -23,12 +34,6 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <button class="btn btn_common main">Войти</button>
-                </div>
-            </div>
-        </div>
+        <!-- ы -->
     </aside>
 </form>

@@ -57,6 +57,14 @@ header {
       }
     }
   }
+  .right_head_mobile {
+    position: absolute;
+    top: 0px;
+    right: 100px;
+    height: 87px;
+    padding-right: 20px;
+    border-right: 1px solid $grey;
+  }
   .logo {
     img {
       margin:18px 0 17px 7px;
@@ -81,6 +89,9 @@ width:100%;
 text-align:center;
   position: relative;
   margin:0 auto;
+  img {
+    padding: 26px 0 20px 20px;
+  }
 }
 /*Strip the ul of padding and list styling*/
 .mobile-menu ul {
@@ -163,9 +174,10 @@ transition: all 0.4s ease 0s;
   color: #fff;
   background: #fff;
   text-align: center;
-  padding: 10px 15px;
+  // padding: 10px 15px;
   display: none;
     cursor: pointer;
+    height: 1px;
 }
 
 .mobile-menu .show-menu span{
@@ -195,8 +207,8 @@ transition: all 0.4s ease 0s;
     float: right;
     padding-top: 5px;
     position: absolute;
-    top:20px;
-    right: 20px;
+    top: 29px;
+    right: 35px;
 }
   /*Make dropdown links appear inline*/
   .mobile-menu ul {
@@ -2173,6 +2185,64 @@ $grey_about: #5d5d5d;
 }
 
 //-------------------------------------------------- end reg_success
+
+
+
+//-------------------------------------------------- end reg_success
+
+.form_popup {
+  margin-left: 20px;
+  margin-right: 20px;
+  .left {
+    margin-top: 20px;
+    border-right: 2px solid $grey;
+  }
+  .right {
+    margin-top: 20px;
+  }
+  .close {
+    padding: 0;
+    margin:0; 
+    color: #fff;
+    background-color: #000;
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    font-size: 42px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+  }
+  
+  h6 {
+    padding-top: 50px;
+    font-family: $bold;
+    font-size: 1.5rem;
+  }
+  input {
+    margin-top: 30px;
+    width: 80%
+  }
+  p {
+    padding-top: 20px;
+    a{
+      color: $grey;
+      text-decoration: underline;
+      font-size: $p_size - 0.1rem;
+    }
+    
+  }
+ 
+  button {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+}
+
+
+//-------------------------------------------------- end reg_success
+
 
 
 //-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
