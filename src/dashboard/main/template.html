@@ -2,9 +2,9 @@
     <div class="container-fluid">
         <div class="row">
             <!-- <div class="col-md-12"> -->
-            <div slider-init class="date_slider_news">
+            <slick>
                 <div class="item" style="background-image: url('img/resources/img/main/slide1.jpg');">
-                       <div class="left hidden-sm hidden-xs">
+                    <div class="left hidden-sm hidden-xs">
                         <h5>Промо-блок</h5>
 
                         <h2>22-й раз мы вместе<br> со сборной россии</h2>
@@ -21,42 +21,6 @@
                     </div>
                 </div>
                 <div class="item" style="background-image: url('img/resources/img/main/slide1.jpg');">
-                       <div class="left hidden-sm hidden-xs">
-                        <h5>Промо-блок</h5>
-
-                        <h2>22-й раз мы вместе<br> со сборной россии</h2>
-
-                        <p>В безудержном соревновании "Порробуй догони" первенствовал<br> нападающий "Эдмонд Ойлера"
-                            Коннор макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную
-                            в карьере. Но покази <br> себя и ряд других игроков, поддержавшие почит форварда. </p>
-                    </div>
-                    <div class="right">
-                        <h5>Молния!</h5>
-                        <ul>
-                            <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.name"></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('img/resources/img/main/slide1.jpg');">
-                       <div class="left hidden-sm hidden-xs">
-                        <h5>Промо-блок</h5>
-
-                        <h2>22-й раз мы вместе<br> со сборной россии</h2>
-
-                        <p>В безудержном соревновании "Порробуй догони" первенствовал<br> нападающий "Эдмонд Ойлера"
-                            Коннор макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную
-                            в карьере. Но покази <br> себя и ряд других игроков, поддержавшие почит форварда. </p>
-                    </div>
-                    <div class="right">
-                        <h5>Молния!</h5>
-                        <ul>
-                            <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.name"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-         <!--    <div slider-init id="owl-main" class="owl-carousel owl-theme">
-                <div class="item" >
                     <div class="left hidden-sm hidden-xs">
                         <h5>Промо-блок</h5>
 
@@ -86,33 +50,14 @@
                     <div class="right">
                         <h5>Молния!</h5>
                         <ul>
-                            <li><a href="">У виктора Тихонова родилась дочь</a></li>
-                            <li><a href="">4:3 Торонто Мейпл Лифс - Нью-Йорк Айленлерс</a></li>
-                            <li><a href="">2:6 Калгари Флеймэ - Нэгвилл Предаторз</a></li>
+                            <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.name"></a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="item" style="background-image: url('img/resources/img/main/slide1.jpg');">
-                    <div class="left hidden-sm hidden-xs">
-                        <h5>Промо-блок</h5>
+            </slick>
+            <!--<div slider-init class="date_slider_news">
 
-                        <h2>22-й раз мы вместе<br> со сборной россии</h2>
-
-                        <p>В безудержном соревновании "Порробуй догони" первенствовал<br> нападающий "Эдмонд Ойлера"
-                            Коннор макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную
-                            в карьере. Но покази <br> себя и ряд других игроков, поддержавшие почит форварда. </p>
-                    </div>
-                    <div class="right">
-                        <h5>Молния!</h5>
-                        <ul>
-                            <li><a href="">У виктора Тихонова родилась дочь</a></li>
-                            <li><a href="">4:3 Торонто Мейпл Лифс - Нью-Йорк Айленлерс</a></li>
-                            <li><a href="">2:6 Калгари Флеймэ - Нэгвилл Предаторз</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div> -->
-            <!-- </div> -->
+            </div>-->
         </div>
     </div>
 </section>
