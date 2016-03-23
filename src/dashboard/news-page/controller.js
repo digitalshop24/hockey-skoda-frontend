@@ -2,6 +2,7 @@
 
 
 export default class NewspageCtrl {
-    constructor() {
+    constructor(news) {
+        this.news = news;
     }
 }

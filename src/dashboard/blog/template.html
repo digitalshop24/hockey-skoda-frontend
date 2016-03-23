@@ -44,7 +44,7 @@
                         <li><p class="bold" ng-bind="blog.user.name">Дмитрий Ерыкалов</p>
 
                             <p class="prof">Корреспондент</p></li>
-                        <li><h3 ng-bind="blog.name"></h3></li>
+                        <li><h3 ><a ng-bind="blog.name" ui-sref="dashboard.newspage({news:blog})"></a></h3></li>
                         <li><p ng-bind="blog.short_content"></p></li>
                         <li><p ng-bind="blog.published_at | amDateFormat:'MM.DD h:ss'"></p></li>
                         <li><img src="img/resources/img/news/main_news.jpg" alt="" class="img-responsive"></li>

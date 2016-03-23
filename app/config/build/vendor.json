@@ -15,7 +15,8 @@
             "src/resources/js/jscrollpane/jscrollpane.min.js",
             "src/resources/js/common.js",
             "bower_components/slick-carousel/slick/slick.js",
-            "bower_components/angular-slick/dist/slick.js"
+            "bower_components/angular-slick/dist/slick.js",
+            "bower_components/angular-sanitize/angular-sanitize.min.js"
         ],
         "dest": "vendor.min.js"
     },

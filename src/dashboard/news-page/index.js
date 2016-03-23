@@ -12,6 +12,14 @@ export default angular.module('dashboard.newspage', [])
                 template: require('./template.html'),
                 url: '/news-page',
                 controller: NewspageCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                params: {
+                    news: {}
+                },
+                resolve: {
+                    news: ($stateParams) => {
+                        return $stateParams.news;
+                    }
+                }
             });
     });
