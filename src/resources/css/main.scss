@@ -1066,6 +1066,9 @@ $grey_about: #5d5d5d;
       top: 35vh;
     }
   }
+  .date_slider_news {
+
+  }
   .date_slider_news .slick-next {
     background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_right_white.png") no-repeat center center;
     right: 0;
@@ -1482,6 +1485,9 @@ $grey_about: #5d5d5d;
       padding-top: 30px;
       font-size: 2rem;
       text-transform: uppercase;
+      .link_slider {
+        color: $white;
+      }
     }
   }
   .menu_line {
