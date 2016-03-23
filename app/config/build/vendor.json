@@ -1,20 +1,19 @@
 {
     "scripts": {
         "src": [
-            "bower_components/angular/angular.js",
-            "bower_components/jquery/dist/jquery.js",
-            "bower_components/angular-ui-router/release/angular-ui-router.js",
-            "bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
-            "bower_components/ngstorage/ngStorage.js",
-            "bower_components/angular-cookies/angular-cookies.js",
+            "bower_components/angular/angular.min.js",
+            "bower_components/jquery/dist/jquery.min.js",
+            "bower_components/angular-ui-router/release/angular-ui-router.min.js",
+            "bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
+            "bower_components/ngstorage/ngStorage.min.js",
+            "bower_components/angular-cookies/angular-cookies.min.js",
             "bower_components/moment/moment.js",
-            "bower_components/angular-moment/angular-moment.js",
+            "bower_components/angular-moment/angular-moment.min.js",
             "bower_components/moment/locale/ru.js",
             "bower_components/masonry/dist/masonry.pkgd.min.js",
             "src/resources/js/jscrollpane/mousewheel.js",
             "src/resources/js/jscrollpane/jscrollpane.min.js",
             "src/resources/js/common.js",
-            "src/resources/libs/owl/owl.carousel.min.js",
             "src/resources/libs/slick/slick.min.js"
         ],
         "dest": "vendor.min.js"
@@ -25,8 +24,6 @@
             "bower_components/angular-bootstrap/ui-bootstrap-css.js",
             "node_modules/font-awesome/css/font-awesome.min.css",
             "src/resources/js/jscrollpane/jscrollpane.css",
-            "src/resources/libs/owl/owl.carousel.css",
-            "src/resources/libs/owl/owl.theme.css",
             "src/resources/libs/slick/slick.css"
         ],
         "dest": "vendor.min.css"
