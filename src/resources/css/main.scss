@@ -2093,6 +2093,22 @@ $grey_about: #5d5d5d;
     margin-left: 100px ;
     background-color: #f1f1f1;
     padding: 20px 40px;
+      .tag_post {
+        li {
+          margin: 5px 15px 5px 0;
+          padding: 5px 10px;
+          background-color: $white;
+          display: inline-block;
+          p {
+            text-transform: uppercase;
+            font-family: $bold;
+            font-size: $p_size - 0.2rem;
+            a{
+              color: $green_main;
+            }
+          }
+        }
+      }
     .wrapp_blog_posts {
       padding-top: 30px; 
       min-height: 650px;
@@ -2156,22 +2172,7 @@ $grey_about: #5d5d5d;
         }
 
       }
-      .tag_post {
-        li {
-          margin: 5px 15px 5px 0;
-          padding: 5px 10px;
-          background-color: $white;
-          display: inline-block;
-          p {
-            text-transform: uppercase;
-            font-family: $bold;
-            font-size: $p_size - 0.2rem;
-            a{
-              color: $green_main;
-            }
-          }
-        }
-      }
+    
     }
   }
 }
