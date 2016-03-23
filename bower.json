@@ -23,6 +23,7 @@
     "masonry": "~4.0.0",
     "bootstrap-select": "~1.10.0",
     "angular-slick": "~0.2.1",
-    "angular-sanitize": "~1.5.2"
+    "angular-sanitize": "~1.5.2",
+    "textAngular": "~1.5.0"
   }
 }

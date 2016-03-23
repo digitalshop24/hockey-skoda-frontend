@@ -29,7 +29,12 @@
                     <div class="wrapp_topic">
                         <h4><a href="#" class="link_default" ng-bind="ctrl.topic.name"></a></h4>
                         
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Ответить</button>
+                        <button ng-click="ctrl.openEditor()" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Ответить</button>
+                        <div ng-show="ctrl.isEditorOpen">
+                            <div  text-angular ng-model="ctrl.answer"></div>
+                            <button ng-click="ctrl.sendMessage()" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Отправить</button>
+
+                        </div>
                         <ul>
                             <li ng-bind="ctrl.topic.last_active_user.name"></li>
                         </ul>
@@ -54,11 +59,12 @@
                 </div>
                 <div class="col-md-9">
                     <p ng-bind="message.created_at | amDateFormat:'DD.MM.YYYY h:mm'"/>
-                    <p ng-bind="message.message"></p>
+                    <p ng-bind-html="message.message"></p>
                 </div>
             </div>
 
             <div class="row text-center">
+
                 <button class="btn btn_common main load_more">Показать еще</button>
             </div>
         </div>

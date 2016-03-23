@@ -16,7 +16,9 @@
             "src/resources/js/common.js",
             "bower_components/slick-carousel/slick/slick.js",
             "bower_components/angular-slick/dist/slick.js",
-            "bower_components/angular-sanitize/angular-sanitize.min.js"
+            "bower_components/textAngular/dist/textAngular-rangy.min.js",
+            "bower_components/textAngular/dist/textAngular-sanitize.min.js",
+            "bower_components/textAngular/dist/textAngular.min.js"
         ],
         "dest": "vendor.min.js"
     },
@@ -27,8 +29,8 @@
             "node_modules/font-awesome/css/font-awesome.min.css",
             "src/resources/js/jscrollpane/jscrollpane.css",
             "bower_components/slick-carousel/slick/slick.css",
-            "bower_components/slick-carousel/slick/slick-theme.css"
-
+            "bower_components/slick-carousel/slick/slick-theme.css",
+            "bower_components/textAngular/dist/textAngular.css"
         ],
         "dest": "vendor.min.css"
     },
