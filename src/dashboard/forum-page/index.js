@@ -15,7 +15,8 @@ export default angular.module('dashboard.forum-page', [])
                 controllerAs: 'ctrl',
                 params: {
                     page: 1,
-                    topicsPerPage: 15
+                    topicsPerPage: 15,
+                    topics: []
                 },
                 resolve: {
                     section: ($stateParams, forumpageService) => {
@@ -23,10 +24,16 @@ export default angular.module('dashboard.forum-page', [])
                     },
                     topicInfo: ($stateParams, forumpageService) => {
                         return forumpageService.getTopicsBySectionId($stateParams.id, $stateParams.page,
-                            $stateParams.topicsPerPage, $stateParams.topicNumber);
+                            $stateParams.topicsPerPage, $stateParams.topicNumber).then((res) => {
+                                res.topics = $stateParams.topics.concat(res.topics);
+                                return res;
+                            });
                     },
-                    page: ($stateParams) => {
+                    page: $stateParams => {
                         return $stateParams.page;
+                    },
+                    id: $stateParams => {
+                        return $stateParams.id;
                     }
                 }
             });

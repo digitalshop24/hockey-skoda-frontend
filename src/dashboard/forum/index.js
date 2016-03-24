@@ -20,10 +20,11 @@ export default angular.module('dashboard.forum', [])
                     sections: []
                 },
                 resolve: {
-                    sections: ($stateParams, forumService) => {
+                    sectionInfo: ($stateParams, forumService) => {
                         return forumService.getSections($stateParams.page, $stateParams.perPage, $stateParams.topicNumber)
                             .then((res) => {
-                                return $stateParams.sections.concat(res.sections);
+                                res.sections = $stateParams.sections.concat(res.sections);
+                                return res;
                             });
                     },
                     page: ($stateParams) => {

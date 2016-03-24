@@ -55,6 +55,9 @@
 
                 </div>
             </div>
+            <div ng-show="ctrl.currentPage < ctrl.totalPages" class="row text-center">
+                <button ng-click="ctrl.loadMore()" class="btn btn_common main load_more">Показать еще</button>
+            </div>
         </div>
     </div>
 </section>
