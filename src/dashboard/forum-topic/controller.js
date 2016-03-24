@@ -2,9 +2,9 @@
 
 
 export default class ForumtopicCtrl {
-    constructor(topic, messages, forumtopicService) {
+    constructor(topic, messageInfo, forumtopicService) {
         this.topic = topic;
-        this.messages = messages;
+        this.messages = messageInfo.messages;
         this.isEditorOpen = false;
         this.forumtopicService = forumtopicService;
     }

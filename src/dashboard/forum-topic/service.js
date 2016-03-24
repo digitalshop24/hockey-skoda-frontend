@@ -10,7 +10,7 @@ export default class ForumtopicService {
 
     getTopic(id) {
         return this.api.get(`/forum/topics/${id}`).then((res) => {
-            res.data.last_active_user = Object.assign(new TopicUser(), res.data.last_active_user);
+            res.data.last_active_user = Object.assign(new TopicUser(), res.data.last_message.user);
             return res.data;
         })
     }
@@ -22,7 +22,9 @@ export default class ForumtopicService {
                 per_page: perPage
             }
         }).then((res) => {
-            res.data.user = Object.assign(new TopicUser(), res.data.user);
+            res.data.messages.forEach((message) => {
+                message.user = Object.assign(new TopicUser(), message.user);
+            });
             return res.data;
         })
     }
