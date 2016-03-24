@@ -21,7 +21,7 @@ export default angular.module('dashboard.forum-page', [])
                     section: ($stateParams, forumpageService) => {
                         return forumpageService.getForumPage($stateParams.id);
                     },
-                    topics: ($stateParams, forumpageService) => {
+                    topicInfo: ($stateParams, forumpageService) => {
                         return forumpageService.getTopicsBySectionId($stateParams.id, $stateParams.page,
                             $stateParams.topicsPerPage, $stateParams.topicNumber);
                     },
