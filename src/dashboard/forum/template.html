@@ -31,7 +31,7 @@
                         <p>{{section.lastActivityTime}} <span ng-bind="section.lastActivityUserName"></span></p>
                         <ul>
                             <li ng-repeat="topic in section.recently_active_topics">
-                                <a href="#" class="link_default" ng-bind="topic.name"></a>
+                                <a ui-sref="dashboard.forumtopic({id:topic.id})" class="link_default" ng-bind="topic.name"></a>
                             </li>
                         </ul>
                     </div>

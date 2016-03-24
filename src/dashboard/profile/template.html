@@ -1,7 +1,8 @@
 <section class="wrapp_lk">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 visible-xs name_mobile_lk text-center" style="background-image: url(img/resources/img/bg_star.png)">
+            <div class="col-xs-12 visible-xs name_mobile_lk text-center"
+                 style="background-image: url(img/resources/img/bg_star.png)">
                 <h5>Михаил Клюшкин</h5>
                 <h4>1000<br>баллов</h4>
 
@@ -70,67 +71,32 @@
                     </li>
                 </ul>
                 <ul class="text-center">
-                    <li>
-                        <h5>5</h5>
 
-                        <div class="progress vertical yellow_progress">
-                            <div class="progress_bg_color" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                                 aria-valuemax="100" style="height: 50%; width: 10px;">
-                            </div>
-                        </div>
-                        <p class="bold">Участие в опросе</p>
-
-                        <p>завершено 30%</p>
-                    </li>
-                    <li>
-                        <h5>5</h5>
+                    <li ng-repeat="achievement in ctrl.achievements">
+                        <h5 ng-bind="achievement.max_points"></h5>
 
                         <div class="progress vertical green_progress">
                             <div class="progress_bg_color" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                                 aria-valuemax="100" style="height: 50%; width: 10px;">
+                                 aria-valuemax="100"
+                                 style="height: {{achievement.progressBarPercentage}}% ;width: 10px;">
                             </div>
                         </div>
 
-                        <p class="bold">Участие в опросе</p>
+                        <p class="bold" ng-bind="achievement.name"></p>
 
-                        <p>завершено 30%</p>
-                    </li>
-                    <li>
-                        <h5>5</h5>
-
-                        <div class="progress vertical blue_progress">
-                            <div class="progress_bg_color" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                                 aria-valuemax="100" style="height: 50%; width: 10px;">
-                            </div>
-                        </div>
-
-                        <p class="bold">Участие в опросе</p>
-
-                        <p>завершено 30%</p>
-                    </li>
-                    <li>
-                        <h5>5</h5>
-
-                        <div class="progress vertical purple_progress">
-                            <div class="progress_bg_color" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                                 aria-valuemax="100" style="height: 50%; width: 10px;">
-                            </div>
-                        </div>
-
-                        <p class="bold">Участие в опросе</p>
-
-                        <p>завершено 30%</p>
+                        <p>Завершено {{achievement.percentage}}%</p>
                     </li>
                 </ul>
             </div>
             <div class="col-sm-2 col-md-2 lk_plus ">
                 <h6 class="text-center">Мои баллы</h6>
                 <ul>
-                    <li>
+                    <li ng-repeat="achievement in ctrl.lastAchievements">
+                        <img ng-src="{{achievement.achievment_category.icon}}" alt="" class="img-responsive">
                         <a href="#">
                             <ul>
-                                <li>Получено сегодня</li>
-                                <li class="text-center">+180</li>
+                                <li ng-bind="achievement.achievment_category.name"></li>
+                                <li class="text-center">+20</li>
                             </ul>
                         </a>
                     </li>
@@ -149,24 +115,6 @@
                             <ul>
                                 <li>Флэш-игра на сайте</li>
                                 <li class="text-center">+30</li>
-                            </ul>
-                        </a>
-                    </li>
-                    <li>
-                        <img src="img/resources/img/lk/cm.png" alt="" class="img-responsive">
-                        <a href="#">
-                            <ul>
-                                <li class="fix_big">ЧМ</li>
-                                <li class="text-center">+40</li>
-                            </ul>
-                        </a>
-                    </li>
-                    <li>
-                        <img src="img/resources/img/lk/pod.png" alt="" class="img-responsive">
-                        <a href="#">
-                            <ul>
-                                <li>Поддержка сборной</li>
-                                <li class="text-center">+90</li>
                             </ul>
                         </a>
                     </li>

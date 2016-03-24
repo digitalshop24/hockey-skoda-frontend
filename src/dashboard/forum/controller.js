@@ -22,4 +22,6 @@ export default class ForumCtrl {
             page: ++this.currentPage,
         });
     }
+
+
 }
