@@ -23,7 +23,7 @@ export default angular.module('dashboard.forum', [])
                     sections: ($stateParams, forumService) => {
                         return forumService.getSections($stateParams.page, $stateParams.perPage, $stateParams.topicNumber)
                             .then((res) => {
-                                return $stateParams.sections.concat(res);
+                                return $stateParams.sections.concat(res.sections);
                             });
                     },
                     page: ($stateParams) => {
