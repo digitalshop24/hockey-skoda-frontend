@@ -61,8 +61,12 @@ header {
           color: $green_main;
           text-transform: uppercase;
           position: relative;
-          top: 8px;
+          top: 3px;
+          margin-left: 15px;
         }
+      }
+      li:nth-child(1) {
+        padding-top: 21px !important;
       }
     }
   }
@@ -1039,43 +1043,21 @@ $grey_about: #5d5d5d;
 
 .wrapp_mainpage_slider {
   // background-color: #f1f1f1;
-  #owl-main .item img{
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  .owl-pagination {
-    position: absolute;
-    left: 46%;
-    margin-top: -60px;
-  }
-  #owl-main-2 {
-    .item {
-      min-height: 500px;
-    }
-    .owl-prev  {
-        background-image: url('img/resources/img/arrow_left_white.png');
-        position: absolute;
-        left: 20px;
-        top: 35vh;
-      }
-    .owl-next  {
-      background-image: url('img/resources/img/arrow_right_white.png');
-      position: absolute;
-      right: 20px;
-      top: 35vh;
-    }
-  }
-  .date_slider_news {
+
+  .date_slider_mainpage {
 
   }
   .date_slider_news .slick-next {
-    background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_right_white.png") no-repeat center center;
-    right: 0;
+    background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 0 center;
+    right: -60px;
+    width: 100px;
+    height: 100px;
   }
   .date_slider_news .slick-prev {
-    background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat center center;
-    left: 0;
+    background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat 100% center;
+    left: -60px;
+    width: 100px;
+    height: 100px;
   }
   .date_slider_news .slick-arrow {
     position: absolute;
@@ -1197,6 +1179,7 @@ $grey_about: #5d5d5d;
     padding: 30px 0;
     img {
       padding: 0 10px;
+      margin:  0 auto;
     }
   }
 }
@@ -3231,3 +3214,16 @@ background-image: url('img/resources/img/prizesPage/bg4.png');
 
 
 //-------------------------------------------------- end ANDREY FEDOROVICH
+
+
+
+/// error page 
+
+.error-header  {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.error-message {
+  margin-bottom: 50px;
+}
+/// end error page

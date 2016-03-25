@@ -343,10 +343,10 @@ h6 {
 
 //-----------------------------------------------------link
 .link_default {
-  color:$green_main;
+  color:$green_main !important;
 }
 .link_default:hover {
-  color: $link_default_hover;
+  color: $link_default_hover !important;
 }
 
 //-----------------------------------------------------link end
