@@ -15,7 +15,7 @@ export default class BlogService {
                 tag_list: tags
             }
         }).then((res) => {
-            res.data.forEach((blog) => {
+            res.data.posts.forEach((blog) => {
                 blog.user = Object.assign(new TopicUser(), blog.user);
             });
             return res.data;

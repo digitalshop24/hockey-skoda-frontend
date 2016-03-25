@@ -21,11 +21,12 @@ export default angular.module('dashboard.blog', [])
                     tagFilter: false
                 },
                 resolve: {
-                    blogs: ($stateParams, blogService) => {
+                    blogsInfo: ($stateParams, blogService) => {
                         return blogService.getBlogs($stateParams.page, $stateParams.perPage, $stateParams.tags)
                             .then((res) => {
                                 const blogs = $stateParams.tagFilter ? [] : $stateParams.blogs;
-                                return blogs.concat(res);
+                                res.posts = blogs.concat(res.posts);
+                                return res;
                             });
                     },
                     page: ($stateParams) => {

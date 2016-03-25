@@ -2,8 +2,9 @@
 
 
 export default class BlogCtrl {
-    constructor(blogs, $state, page, tags) {
-        this.blogs = blogs;
+    constructor(blogsInfo, $state, page, tags) {
+        this.blogs = blogsInfo.posts;
+        this.blogsAmount = blogsInfo.posts_count;
         this.state = $state;
         this.currentPage = page;
         this.tags = tags;
@@ -22,9 +23,23 @@ export default class BlogCtrl {
             this.tags.push(tag)
         }
         this.state.go('dashboard.blog', {
+            blogs: this.blogs, // it's magic. don't remove this. otherwise state.go doesn't work
+            tags: this.tags,
+            tagFilter: true,
+            page: 1
+        });
+    }
+
+    removeTag(tag) {
+        const index = this.tags.indexOf(tag);
+        if (index != -1) {
+            this.tags.splice(index,1);
+        }
+        this.state.go('dashboard.blog', {
             blogs: this.blogs,
             tags: this.tags,
-            tagFilter: true
+            tagFilter: true,
+            page: 1
         });
     }
 }
