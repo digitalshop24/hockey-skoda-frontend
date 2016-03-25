@@ -34,9 +34,7 @@
                                 <span><a ui-sref="dashboard.forumtopic({id:topic.id})" class="link_default" ng-bind="topic.name"></a></span>
                                 <ul>
                                     <li><img src="img/resources/img/page.png" alt=""></li>
-                                    <li><a href="#">1,</a></li>
-                                    <li><a href="#">2,</a></li>
-                                    <li><a href="#">3</a></li>
+                                    <li ng-repeat="page in topic.pages"><a href="#" ng-bind="page"></a></li>
                                 </ul>
                             </li>
 
