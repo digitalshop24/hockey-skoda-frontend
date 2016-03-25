@@ -567,7 +567,19 @@ $p_size: 1.4rem;
 
 
 /// СЕРГЕЙ
-@media only screen and (max-width : 1150px) {
+@media only screen and (max-width : 1350px) {
+	.forecast_two .toc {
+		width: 22px;
+	}		
+	.forecast_two .input-sn {
+	    float: left;
+	    width: 46px;
+	}
+}
+
+
+
+ @media only screen and (max-width : 1150px) {
 	.forecast_two {
 		.input-sn {
 		 width:45px;
@@ -592,7 +604,7 @@ $p_size: 1.4rem;
 		width:200px;
 		height:50px;
 		font-size: 1.6rem;
-		font-family: "SkodaProBold", sans-serif;
+		font-family: $bold; 
 	}
 	.wrapp_forecast_content .forecast .share {
 		width:100%;
@@ -683,6 +695,15 @@ $p_size: 1.4rem;
 
 
  }
+
+
+  @media only screen and (max-width : 994px) {
+  	.wrapp_visits .visits_block .visits_number {
+  		position:relative;
+  		margin-top:15px;
+
+  	}
+  }
 
 
  @media only screen and (max-width : 846px) {
@@ -869,6 +890,32 @@ $p_size: 1.4rem;
 
  //wrapp_forecast_content_mob end
  }
+
+	@media only screen and (max-width : 590px) {
+		.visits_number {
+			display:none;
+		}
+		.wrapp_visits .im_block_visits .visits-block {
+			padding:0px;
+			width:auto;
+		}
+		.wrapp_forum-topic .forum-block {
+			width:auto;
+		}
+		.wrapp_visits .im_block_visits {
+			padding:0px;
+		}
+		.wrapp_visits .im_block_visits .visits-block {
+			margin:0px;
+		}
+		.wrapp_breadcrumbs {
+			display:none;
+		}
+		.wrapp_content_bl .content_bl_br .content_bl_im .photo {
+			margin:0 auto;
+		}
+	}
+
 
  @media only screen and (max-width : 450px) {
  	.orecast_two-12_block { 

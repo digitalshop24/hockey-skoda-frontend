@@ -5,7 +5,7 @@
                 <button ng-disabled="!ctrl.session.isAuthenticated" class="btn btn_primary main">Создать тему</button>
                 <p ng-show="!ctrl.session.isAuthenticated">Чтобы создать тему или оставить комментарий <br>нужно <a ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
             </div>
-        </div>
+        </div> 
     </div>
 </section>
 
@@ -31,7 +31,7 @@
                         <p>13 минут назад <span>Дмитрием Ивановым</span></p>
                         <ul>
                             <li ng-repeat="topic in ctrl.topics">
-                                <a ui-sref="dashboard.forumtopic({id:topic.id})" class="link_default" ng-bind="topic.name"></a>
+                                <span><a ui-sref="dashboard.forumtopic({id:topic.id})" class="link_default" ng-bind="topic.name"></a></span>
                                 <ul>
                                     <li><img src="img/resources/img/page.png" alt=""></li>
                                     <li><a href="#">1,</a></li>
