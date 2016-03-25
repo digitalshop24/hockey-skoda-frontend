@@ -79,12 +79,13 @@ header {
     border-right: 1px solid $grey;
     img {
       display: inline-block;
+      margin-right: 15px;
     }
     span {
       color: $green_main;
       text-transform: uppercase;
       position: relative;
-      top: 35px;
+      top: 5px;
     }
   }
   .logo {
@@ -806,9 +807,10 @@ footer {
         font-family: $bold;
         display: inline-block;
         margin-right: 10px;
+        width: 100%;
         span {
           width: 80%;
-          display: inline-block;
+          
         }
         ul {
           float: right;
@@ -820,6 +822,11 @@ footer {
           li {
             display: inline-block;
             margin-bottom: 0px;
+            width: 1px;
+            img {
+              position: relative;
+              left: -5px;
+            }
             a {
               font-family: $light;
             }
@@ -1463,6 +1470,7 @@ $grey_about: #5d5d5d;
 .wrapp_news_all {
   min-height: 100vh;
   background-color: #ececec;
+
   .date_slider_news {
     .slick-track {
       height: 100px;
@@ -1470,12 +1478,18 @@ $grey_about: #5d5d5d;
       text-align: center;
     }
     .slick-next {
-      background: $green_main url("img/resources/img/arrow_right_white.png") no-repeat center center;
-      right: 0;
+      background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 0 center;
+      right: -60px;
+      width: 100px;
+      height: 100px;
+      top: 11px;
     }
     .slick-prev {
-      background: $green_main url("img/resources/img/arrow_left_white.png") no-repeat center center;
-      left: 0;
+      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat 100% center;
+      left: -60px;
+      width: 100px;
+      height: 100px;
+      top: 11px;
     }
     .slick-arrow {
       position: absolute;
@@ -2342,6 +2356,24 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- end reg_success
 
 
+//-------------------------------------------------- priznew
+.prizes_use_date {
+  h2 {
+    color: $green_main;
+  }
+  p {
+    font-size: $p_size;
+    color: $black;
+  }
+  span {
+    font-family: $bold;
+  }
+}
+
+//-------------------------------------------------- end priznew
+
+
+prizes_use_date
 
 //-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
 // <!-- tantamareska -->
@@ -2398,11 +2430,11 @@ $grey_about: #5d5d5d;
     
   }
   .slick-prev {
-    background:#000 url(../img/arrow_left_white.png) no-repeat center center;
+    background:#000 url("img/resources/img/arrow_left_white.png") no-repeat center center;
     left:0px;
   }
   .slick-next {
-    background:#000 url(../img/arrow_right_white.png) no-repeat center center;
+    background:#000 url("img/resources/img/arrow_right_white.png") no-repeat center center;
     right:0px;
   }
 }
@@ -2487,7 +2519,7 @@ $grey_about: #5d5d5d;
         width:24px;
         height:46px;
         content:"";
-        background:url(../img/icon_arrow_right.png) no-repeat center center;
+        background:url("img/resources/img/icon_arrow_right.png") no-repeat center center;
       }
       &:nth-child(1) {
         margin-right: 127px;
@@ -2555,15 +2587,15 @@ $grey_about: #5d5d5d;
       left:50%;
       margin-left:-23px;
       z-index: 2;
-      background:url(../img/icon-arrow_top.png) no-repeat center center;
+      background:url("img/resources/img/icon-arrow_top.png") no-repeat center center;
     }
     .slick-prev {
       top:-35px;
-      background:url(../img/icon-arrow_top.png) no-repeat center center;
+      background:url("img/resources/img/icon-arrow_top.png") no-repeat center center;
    }
     .slick-next {
       bottom:-35px;
-      background:url(../img/icon-arrow-bottom.png) no-repeat center center;
+      background:url("img/resources/img/icon-arrow-bottom.png") no-repeat center center;
 
     }
     .from_block {
@@ -2748,19 +2780,19 @@ $grey_about: #5d5d5d;
         height:39px;
         margin:0 2px;
         &-is {
-          background:url(../img/insta.png) no-repeat center center;
+          background:url("img/resources/img/insta.png") no-repeat center center;
           background-size:cover;
         }
         &-fb {
-          background:url(../img/fb.png) no-repeat center center;
+          background:url("img/resources/img/fb.png") no-repeat center center;
           background-size:cover;
         }
         &-tw {
-          background:url(../img/twiter.png) no-repeat center center;
+          background:url("img/resources/img/twiter.png") no-repeat center center;
           background-size:cover;
         }
         &-vk {
-          background:url(../img/vk.png) no-repeat center center;
+          background:url("img/resources/img/vk.png") no-repeat center center;
           background-size:cover;
         }
       }
@@ -2865,18 +2897,18 @@ $grey_about: #5d5d5d;
       top:16px;
     }
     &-bor:nth-child(1) {
-      margin-bottom:26px;
+      margin-bottom:22px;
     }
     .open {
       .caret {
-        background:url(../img/icon-select-arrow-active.png) no-repeat center center;
+        background:url("img/resources/img/icon-select-arrow-active.png") no-repeat center center;
       }
     }
     .caret {
       border:none;
       width:20px;
       height:8px;
-      background:url(../img/icon-select-arrow-invers.png) no-repeat center center;
+      background:url("img/resources/img/icon-select-arrow-invers.png") no-repeat center center;
     }
     .dropdown-menu {
       background:#333333;
@@ -2918,24 +2950,30 @@ $grey_about: #5d5d5d;
           text-align:center;
         }
       }
-      .slick-arrow {
-        position:absolute;
-        top:50%;
-        font-size:0px;
-        border:none;
-        width:21px;
-        height:38px;
-        margin-top:-19px;
-        z-index: 2;
-      }
-      .slick-prev {
-        background:url(../img/icon-arrow-left-forecast.png) no-repeat center center;
-        left:15px;
-      }
-      .slick-next {
-        background:url(../img/icon-arrow-right-forecast.png) no-repeat center center;
-        right:15px;
-      }
+        .slick-next {
+          background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 0 center;
+          right: -60px;
+          width: 100px;
+          height: 100px;
+           top: 5px;
+        }
+        .slick-prev {
+          background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat 100% center;
+          left: -60px;
+          width: 100px;
+          height: 100px;
+          top: 5px;
+        }
+        .slick-arrow {
+          position: absolute;
+          font-size: 0;
+          width: 57px;
+          height: 100px;
+          z-index: 3;
+          top: 50%;
+          margin-top: -59px;
+          border: 0;
+        }
     }
     .slider-for_block {
       height:610px;
@@ -3046,7 +3084,7 @@ $grey_about: #5d5d5d;
       display:block;
       font-size:0px;
       left:5px;
-      background:url(../img/icon-arrow-input-bottom.png) no-repeat center center;
+      background:url("img/resources/img/icon-arrow-input-bottom.png") no-repeat center center;
     }
     .bootstrap-touchspin-up {
       position:absolute;
@@ -3056,7 +3094,7 @@ $grey_about: #5d5d5d;
       display:block;
       font-size:0px;
       left:5px;
-      background:url(../img/icon-arrow-input-top.png) no-repeat center center;
+      background:url("img/resources/img/icon-arrow-input-top.png") no-repeat center center;
     }
 
 
@@ -3151,7 +3189,7 @@ $grey_about: #5d5d5d;
           right:-25px;
           top:6px;
           content:"";
-          background:url(../img/icon-breadcrumbs.png) no-repeat center center;
+          background:url("img/resources/img/icon-breadcrumbs.png") no-repeat center center;
           width:10px;
           height:16px;
         }
@@ -3261,7 +3299,7 @@ $grey_about: #5d5d5d;
           }
           .cricle {
             border-radius: 90%;
-            background:#f1f1f1 url(../img/img-skode.png) no-repeat center center;
+            background:#f1f1f1 url("img/resources/img/img-skode.png") no-repeat center center;
             overflow:hidden;
             width:160px;
             height:160px;

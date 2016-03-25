@@ -50,6 +50,28 @@ function initTimeline() {
     });
 }
 
+function initSpinedit() {
+    $(function () {
+        $("input[name='demo3']").TouchSpin({
+                min: 0,
+                max: 9,
+                step: 1,
+                boostat: 5,
+            });
+    });
+}
+
+// function initSpinedit() {
+//     $(function () {
+//         $("input[name='demo3']").spinedit({
+//             minimum: 0,
+//             maximum: 9,
+//             step: 1,
+//         });
+//     });
+// }
+
+
 function initSlider() {
     
     $(function () {

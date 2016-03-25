@@ -650,7 +650,7 @@ $p_size: 1.4rem;
 			}
 			&_block {
       &_item {
-      	display:inline-block;
+      			display:inline-block;
 				width:150px;
 				margin:0 2%;
 				text-align:center;
@@ -828,7 +828,7 @@ $p_size: 1.4rem;
 	&_block {
 		margin-bottom:25px;
       &_item {
-      	display:block;
+      	display:inline-block;
 				width:150px;
 				margin:0 auto 25px;
 				text-align:center;
