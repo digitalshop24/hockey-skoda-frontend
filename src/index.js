@@ -30,6 +30,7 @@ export default angular.module('app',
     .service('auth', auth)
     .config(($locationProvider) => {
         $locationProvider.html5Mode(true);
+        NProgress.configure({trickleRate: 0.1, trickleSpeed: 200, showSpinner: true });
     })
     .run(amMoment=> {
         amMoment.changeLocale('ru');
@@ -50,7 +51,13 @@ export default angular.module('app',
             }
         });
 
-        $rootScope.$on('$stateChangeError', (err) => {
-            console.log("error !!!");
+        $rootScope.$on('$stateChangeStart', () => {
+            NProgress.start();
+        });
+        $rootScope.$on('$stateChangeSuccess', () => {
+            NProgress.done();
+        });
+        $rootScope.$on('$stateChangeError', () => {
+            NProgress.done();
         });
     });
