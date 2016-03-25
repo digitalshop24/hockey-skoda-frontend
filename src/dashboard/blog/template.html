@@ -40,14 +40,14 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-4 text-left wrapp_blog_posts" ng-repeat="blog in ctrl.blogs">
                     <ul class="blog_post">
-                        <li><img src="img/resources/img/news/main_news.jpg" alt="" class="img-responsive"></li>
-                        <li><p class="bold" ng-bind="blog.user.name">Дмитрий Ерыкалов</p>
+                        <li><img src="{{blog.user.avatar.thumb}}" alt="" class="img-responsive"></li>
+                        <li><p class="bold" ng-bind="blog.user.name"></p>
 
-                            <p class="prof">Корреспондент</p></li>
+                            <p class="prof" ng-bind="blog.user.user_type"></p></li>
                         <li><h3 ><a ng-bind="blog.name" ui-sref="dashboard.newspage({news:blog})"></a></h3></li>
                         <li><p ng-bind="blog.short_content"></p></li>
                         <li><p ng-bind="blog.published_at | amDateFormat:'MM.DD h:ss'"></p></li>
-                        <li><img src="img/resources/img/news/main_news.jpg" alt="" class="img-responsive"></li>
+                        <li><img src="{{blog.image.medium}}" alt="" class="img-responsive"></li>
                     </ul>
                     <ul class="tag_post">
                         <li ng-repeat="tag in blog.tags"><p><a ng-click="ctrl.addTagToFilter(tag)" href="" ng-bind="tag"></a></p></li>
