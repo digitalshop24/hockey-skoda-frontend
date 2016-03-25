@@ -15,7 +15,7 @@ export default class FactsService {
                 per_page: perPage
             }
         }).then((res) => {
-            res.data.forEach((fact) => {
+            res.data.posts.forEach((fact) => {
                 fact.user = Object.assign(new TopicUser(), fact.user);
             });
             return res.data;

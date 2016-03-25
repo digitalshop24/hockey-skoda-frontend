@@ -2,8 +2,9 @@
 
 
 export default class FactsCtrl {
-    constructor(facts, page, $state) {
-        this.facts = facts;
+    constructor(factInfo, page, $state) {
+        this.facts = factInfo.posts;
+        this.factsAmount = factInfo.posts_count;
         this.state = $state;
         this.currentPage = page;
     }
