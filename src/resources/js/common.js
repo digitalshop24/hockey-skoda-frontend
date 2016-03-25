@@ -51,8 +51,8 @@ function initTimeline() {
 }
 
 function initSlider() {
+    
     $(function () {
-     
         $('.single-item').slick({
             infinite: true,
             slidesToShow: 1,
@@ -63,7 +63,7 @@ function initSlider() {
           arrows: false,
           infinite: true,
           slidesToShow: 6,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
           responsive: [
             {
               breakpoint: 1024,
