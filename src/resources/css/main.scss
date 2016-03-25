@@ -1463,6 +1463,7 @@ $grey_about: #5d5d5d;
 .wrapp_news_all {
   min-height: 100vh;
   background-color: #ececec;
+
   .date_slider_news {
     .slick-track {
       height: 100px;
@@ -1470,12 +1471,18 @@ $grey_about: #5d5d5d;
       text-align: center;
     }
     .slick-next {
-      background: $green_main url("img/resources/img/arrow_right_white.png") no-repeat center center;
-      right: 0;
+      background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 0 center;
+      right: -60px;
+      width: 100px;
+      height: 100px;
+      top: 11px;
     }
     .slick-prev {
-      background: $green_main url("img/resources/img/arrow_left_white.png") no-repeat center center;
-      left: 0;
+      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat 100% center;
+      left: -60px;
+      width: 100px;
+      height: 100px;
+      top: 11px;
     }
     .slick-arrow {
       position: absolute;
