@@ -21,7 +21,7 @@ export default angular.module('dashboard.forumtopic', [])
                     topic: ($stateParams, forumtopicService) => {
                         return forumtopicService.getTopic($stateParams.id);
                     },
-                    messages: ($stateParams, forumtopicService) => {
+                    messageInfo: ($stateParams, forumtopicService) => {
                         return forumtopicService.getTopicMessages($stateParams.id, $stateParams.page,
                             $stateParams.messagesPerPage);
                     },

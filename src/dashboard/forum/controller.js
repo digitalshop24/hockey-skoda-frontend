@@ -2,15 +2,16 @@
 
 
 export default class ForumCtrl {
-    constructor($state, sections, page, login, session) {
-        this.sections = sections;
+    constructor($state, sectionInfo, page, login, session) {
+        this.sections = sectionInfo.sections;
         this.sections.forEach((section) => {
-            const lastActiveTopic = section.recently_active_topics[0];
-            const name = (lastActiveTopic.last_active_user.last_name || '') + ' ' + (lastActiveTopic.last_active_user.first_name || '');
+            const lastMessage = section.last_message;
+            const name = (lastMessage.user.last_name || '') + ' ' + (lastMessage.user.first_name || '');
             section.lastActivityUserName = name;
-            section.lastActivityTime = moment(lastActiveTopic.last_activity).format('MM.DD h:ss');
+            section.lastActivityTime = moment(lastMessage.created_at).format('MM.DD h:ss');
         });
         this.currentPage = page;
+        this.totalPages = sectionInfo.total_pages;
         this.state = $state;
         this.login = login;
         this.session = session;
@@ -19,7 +20,7 @@ export default class ForumCtrl {
     loadMore() {
         this.state.go('dashboard.forum', {
             sections: this.sections,
-            page: ++this.currentPage,
+            page: this.currentPage + 1
         });
     }
 

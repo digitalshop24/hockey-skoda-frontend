@@ -64,4 +64,15 @@ export default angular.module('dashboard',
                     }
                 }
             });
+    })
+    .config($provide => {
+        $provide.decorator('taOptions', ['$delegate', function(taOptions){
+            taOptions.toolbar = [
+                ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'pre', 'quote'],
+                ['bold', 'italics', 'underline', 'ul', 'ol', 'redo', 'undo', 'clear'],
+                ['justifyLeft','justifyCenter','justifyRight', 'justifyFull'],
+                ['html', 'insertImage', 'insertLink', 'wordcount', 'charcount']
+            ];
+            return taOptions;
+        }]);
     });
