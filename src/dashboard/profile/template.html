@@ -71,8 +71,9 @@
                     </li>
                 </ul>
                 <ul class="text-center">
-
-                    <li ng-repeat="achievement in ctrl.achievements">
+                <slick slides-to-show=1>
+                <div ng-repeat="achievement in ctrl.achievements">
+                    <li>
                         <h5 ng-bind="achievement.max_points"></h5>
 
                         <div class="progress vertical green_progress">
@@ -83,9 +84,10 @@
                         </div>
 
                         <p class="bold" ng-bind="achievement.name"></p>
-
                         <p>Завершено {{achievement.percentage}}%</p>
                     </li>
+                </div>
+                </slick>
                 </ul>
             </div>
             <div class="col-sm-2 col-md-2 lk_plus ">

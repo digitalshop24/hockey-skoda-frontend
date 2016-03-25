@@ -79,12 +79,13 @@ header {
     border-right: 1px solid $grey;
     img {
       display: inline-block;
+      margin-right: 15px;
     }
     span {
       color: $green_main;
       text-transform: uppercase;
       position: relative;
-      top: 35px;
+      top: 5px;
     }
   }
   .logo {
@@ -806,9 +807,10 @@ footer {
         font-family: $bold;
         display: inline-block;
         margin-right: 10px;
+        width: 100%;
         span {
           width: 80%;
-          display: inline-block;
+          
         }
         ul {
           float: right;
@@ -820,6 +822,11 @@ footer {
           li {
             display: inline-block;
             margin-bottom: 0px;
+            width: 1px;
+            img {
+              position: relative;
+              left: -5px;
+            }
             a {
               font-family: $light;
             }
@@ -2349,6 +2356,24 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- end reg_success
 
 
+//-------------------------------------------------- priznew
+.prizes_use_date {
+  h2 {
+    color: $green_main;
+  }
+  p {
+    font-size: $p_size;
+    color: $black;
+  }
+  span {
+    font-family: $bold;
+  }
+}
+
+//-------------------------------------------------- end priznew
+
+
+prizes_use_date
 
 //-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
 // <!-- tantamareska -->
