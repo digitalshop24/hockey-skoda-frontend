@@ -1,9 +1,16 @@
 <section class="add_topic">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <button ng-disabled="!ctrl.session.isAuthenticated" class="btn btn_primary main">Создать тему</button>
-                <p ng-show="!ctrl.session.isAuthenticated">Чтобы создать тему или оставить комментарий <br>нужно <a ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
+            <button ng-show="!ctrl.isEditorOpen" ng-click="ctrl.openEditor()" type="button" class="btn btn_primary main"
+                    data-toggle="modal" data-target="#myModal">Ответить
+            </button>
+
+            <div ng-show="ctrl.isEditorOpen" class="textEdit">
+                <div text-angular ng-model="ctrl.answer"></div>
+                <button ng-click="ctrl.sendMessage()" type="button" class="btn btn_primary main"
+                        data-toggle="modal" data-target="#myModal">Отправить
+                </button>
+
             </div>
         </div>
     </div>
@@ -13,37 +20,31 @@
     <div class="container">
         <div class="row">
             <!-- <div class="row menu_border_bottom"> -->
-                <div class="col-md-12 text-left menu_border_bottom">
-                    <div class="wrapp_filt">
-                        <ul>
-                            <li><a ui-sref="dashboard.forum" class="link_default">Форум </a></li>
-                            <li> > </li>
-                            <li><a ui-sref="dashboard.forum-page({id:ctrl.topic.section.id})" class="link_default" ng-bind="ctrl.topic.section.name"></a></li>
-                            <li> > </li>
-                            <li><a href="#" class="link_default" ng-bind="ctrl.topic.name"></a></li>
+            <div class="col-md-12 text-left menu_border_bottom">
+                <div class="wrapp_filt">
+                    <ul>
+                        <li><a ui-sref="dashboard.forum" class="link_default">Форум </a></li>
+                        <li> ></li>
+                        <li><a ui-sref="dashboard.forum-page({id:ctrl.topic.section.id})" class="link_default"
+                               ng-bind="ctrl.topic.section.name"></a></li>
+                        <li> ></li>
+                        <li><a href="#" class="link_default" ng-bind="ctrl.topic.name"></a></li>
 
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
+            </div>
             <!-- </div> -->
             <div class="row ">
                 <div class="col-md-9">
                     <div class="wrapp_topic">
                         <h4><a href="#" class="link_default" ng-bind="ctrl.topic.name"></a></h4>
 
-                        <button ng-click="ctrl.openEditor()" type="button" class="btn btn_primary main" data-toggle="modal" data-target="#myModal">Ответить</button>
-                        
-                        <div ng-show="ctrl.isEditorOpen" class="textEdit">
-                            <div  text-angular ng-model="ctrl.answer"></div>
-                            <button ng-click="ctrl.sendMessage()" type="button" class="btn btn_primary main" data-toggle="modal" data-target="#myModal">Отправить</button>
-
-                        </div>
                         <ul>
                             <li>Автор:</li>
                             <li ng-bind="ctrl.topic.last_active_user.name"></li>
                         </ul>
                     </div>
-                    
+
                 </div>
                 <div class="col-md-3">
                     <div class="wrapp_static">
@@ -55,49 +56,38 @@
 
                 </div>
             </div>
- <!--            <div class="row" ng-repeat="message in ctrl.messages">
-                <div class="col-md-3">
-                    <img src="{{message.user.avatar.thumb}}" alt="" class="img-responsive">
-                    <p ng-bind="message.user.name"></p>
-                </div>
-                <div class="col-md-9">
-                    <p ng-bind="message.created_at | amDateFormat:'DD.MM.YYYY h:mm'"/>
-                    <p ng-bind-html="message.message"></p>
-                </div>
-            </div> -->
 
 
-<section class="wrapp_content_bl">
-    <div class="container content_bor">
-            <div class="row post_hover" ng-repeat="message in ctrl.messages">
-                <div class="content_bl_br">
-                    <div class="content_bl_im clearfix">
-                        <div class="col-md-3">
-                            <div class="photo">
-                                <div class="nam">
-                                    №1
+            <section class="wrapp_content_bl">
+                <div class="container content_bor">
+                    <div class="row post_hover" ng-repeat="message in ctrl.messages">
+                        <div class="content_bl_br">
+                            <div class="content_bl_im clearfix">
+                                <div class="col-md-3">
+                                    <div class="photo">
+                                        <div class="nam">
+                                            №1
+                                        </div>
+                                        <div class="img">
+                                            <img src="{{message.user.avatar.thumb}}" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="name">
+                                            <p ng-bind="message.user.name"></p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="img">
-                                   <img src="{{message.user.avatar.thumb}}" alt="" class="img-responsive">
-                                </div>
-                                <div class="name">
-                                    <p ng-bind="message.user.name"></p>
+                                <div class="col-md-9">
+                                    <div class="date">
+                                        <p ng-bind="message.created_at | amDateFormat:'DD.MM.YYYY h:mm'"/>
+                                    </div>
+                                    <p ng-bind-html="message.message"></p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-9">
-                            <div class="date">
-                                <p ng-bind="message.created_at | amDateFormat:'DD.MM.YYYY h:mm'"/>
-                            </div>
-                            <p ng-bind-html="message.message"></p> 
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>  
-</section>
-<!--end wrapp_visits -->
-
+            </section>
+            <!--end wrapp_visits -->
 
 
             <div class="row text-center">
