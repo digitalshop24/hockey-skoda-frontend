@@ -10,15 +10,15 @@ export default angular.module('dashboard.newspage', [])
         $stateProvider
             .state('dashboard.newspage', {
                 template: require('./template.html'),
-                url: '/news-page',
+                url: '/news-page/:rubric/:id',
                 controller: NewspageCtrl,
                 controllerAs: 'ctrl',
                 params: {
-                    news: {}
+                    rubric: ''
                 },
                 resolve: {
-                    news: ($stateParams) => {
-                        return $stateParams.news;
+                    news: ($stateParams, newspageService) => {
+                        return newspageService.getNewsById($stateParams.rubric, $stateParams.id);
                     }
                 }
             });
