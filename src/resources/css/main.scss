@@ -2358,16 +2358,21 @@ $grey_about: #5d5d5d;
 
 //-------------------------------------------------- priznew
 .prizes_use_date {
-  h2 {
+  .user_info {
+    height: 100px;
+     h2 {
     color: $green_main;
+    }
+    p {
+      font-size: $p_size;
+      color: $black;
+    }
+    span {
+      font-family: $bold;
+    }
   }
-  p {
-    font-size: $p_size;
-    color: $black;
-  }
-  span {
-    font-family: $bold;
-  }
+ 
+
 }
 
 //-------------------------------------------------- end priznew
