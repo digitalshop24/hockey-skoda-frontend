@@ -1,28 +1,6 @@
-<section class="add_topic">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <button ng-disabled="!ctrl.session.isAuthenticated" class="btn btn_primary main">Создать тему</button>
-                <p ng-show="!ctrl.session.isAuthenticated">Чтобы создать тему или оставить комментарий <br>нужно <a ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="topics">
     <div class="container">
         <div class="row">
-            <div class="row menu_border_bottom">
-                <div class="col-md-12 text-right">
-                    <div class="wrapp_filt">
-                        <ul>
-                            <li><a href="#" class="active">Новые</a></li>
-                            <li><a href="#">Популярные</a></li>
-                            <li><a href="#">Лучшие</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <div class="row post_hover" ng-repeat="section in ctrl.sections">
                 <div class="col-md-8 col-sm-8 col-xs-12">
                     <div class="wrapp_topic">
