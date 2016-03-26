@@ -42,7 +42,7 @@
                      load-next="ctrl.loadNext()" load-previous="ctrl.loadPrevious()">
                     <div class="row" data-day-id="{{day.id}}" ng-repeat="day in ctrl.days | orderBy:'-id'">
                         <div class="col-md-12 grid">
-                            <div general-news="news" class="news_one grid-item" ng-repeat="news in day.news"/>
+                            <div general-news="news" class="news_one grid-item" ng-repeat="news in day.news.posts"/>
                         </div>
                     </div>
                 </div>

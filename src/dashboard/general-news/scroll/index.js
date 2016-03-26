@@ -82,7 +82,7 @@ export default angular.module('dashboard.general-news.scroll', [])
 
                         const windowBottom = $(window).scrollTop() + $(window).height();
 
-                        return elementBottom < windowBottom + 50;
+                        return elementBottom < windowBottom + 100;
                     }
 
                     let currentActiveDay;
