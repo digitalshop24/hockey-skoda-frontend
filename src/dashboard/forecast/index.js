@@ -1,17 +1,18 @@
 'use strict';
 
 import angular from 'angular';
-import ForecastCtrl from './controller.js';
-import ForecastService from './service.js';
+import playoff from './playoff/index';
+import companionship from './companionship/index';
 
-export default angular.module('dashboard.forecast', [])
-    .service('forecastService', ForecastService)
+export default angular.module('dashboard.forecast', [
+    playoff.name,
+    companionship.name
+])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.forecast', {
                 template: require('./template.html'),
                 url: '/forecast',
-                controller: ForecastCtrl,
-                controllerAs: 'ctrl'
+                abstract: true
             });
     });

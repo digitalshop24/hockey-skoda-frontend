@@ -22,7 +22,6 @@ import forumtopic from './forum-topic/index';
 import login from './login/index';
 import newspage from './news-page/index';
 import success from './success/index';
-import forecasttwo from './forecast-two/index';
 import spineditInit from './spinedit-init/index.js';
 import prizenew from './prize-new/index';
 
@@ -47,9 +46,8 @@ export default angular.module('dashboard',
         forumtopic.name,
         newspage.name,
         success.name,
-        forecasttwo.name,
         spineditInit.name,
-        prizenew.name,
+        prizenew.name
     ])
     .service('login', login)
     .config($stateProvider => {
