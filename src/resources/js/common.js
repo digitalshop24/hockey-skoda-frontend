@@ -54,9 +54,9 @@ function initSpinedit() {
     $(function () {
         $("input[name='demo3']").TouchSpin({
                 min: 0,
-                max: 9,
+                max: 20,
                 step: 1,
-                boostat: 5,
+                boostat: 5
             });
     });
 }

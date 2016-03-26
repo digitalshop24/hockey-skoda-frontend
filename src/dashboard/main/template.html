@@ -68,41 +68,9 @@
             <div class="col-md-12">
                 <div class="mainpage_news_slider" slider-init>
                 
-                    <div>
-                        <h3>27<span>февраля</span></h3>
-                        <img src="img/resources/img/main/new.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div>
-                        <h3>27<span>февраля</span></h3>
-                        <img src="img/resources/img/main/new.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div>
-                        <h3>27<span>февраля</span></h3>
-                        <img src="img/resources/img/main/new.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div>
-                        <h3>27<span>февраля</span></h3>
-                        <img src="img/resources/img/main/new.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div>
-                        <h3>27<span>февраля</span></h3>
-                        <img src="img/resources/img/main/new.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div>
-                        <h3>27<span>февраля</span></h3>
-                        <img src="img/resources/img/main/new.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div>
-                        <h3>27<span>февраля</span></h3>
-                        <img src="img/resources/img/main/new.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div>
-                        <h3>27<span>февраля</span></h3>
-                        <img src="img/resources/img/main/new.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div>
-                        <h3>27<span>февраля</span></h3>
-                        <img src="img/resources/img/main/new.jpg" alt="" class="img-responsive">
+                    <div ng-repeat="news in ctrl.lastNews">
+                        <h3 ng-bind="news.published_at | amDateFormat:'DD MMMM'"></h3>
+                        <img ui-sref="dashboard.newspage({news:news})" src="{{news.image.thumb}}" alt="" class="img-responsive">
                     </div>
                 </div>
             </div>

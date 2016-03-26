@@ -12,6 +12,22 @@ export default class MainService {
             }
         }).then((res) => {
             return res.data;
-        })
+        });
+    }
+
+    getLastNews(page, amount) {
+        return this.api.
+            get('/posts/news', {
+                params: {
+                    per_page: amount,
+                    page: page
+                }
+            })
+            .then(response => {
+                return response.data;
+            })
+            .catch(response => {
+                throw response.data.error;
+            });
     }
 }

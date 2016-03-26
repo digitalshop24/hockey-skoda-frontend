@@ -13,9 +13,17 @@ export default angular.module('dashboard.main', [])
                 url: '/',
                 controller: MainCtrl,
                 controllerAs: 'ctrl',
+                params: {
+                    page: 1,
+                    lastNewsAmount: 15,
+                    lightingNewsAmount: 3
+                },
                 resolve: {
-                    lightingNews: (mainService) => {
-                        return mainService.getLightingNews(3);
+                    lightingNews: ($stateParams, mainService) => {
+                        return mainService.getLightingNews($stateParams.lightingNewsAmount);
+                    },
+                    lastNewsInfo: ($stateParams, mainService) => {
+                        return mainService.getLastNews($stateParams.page, $stateParams.lastNewsAmount);
                     }
                 }
             });
