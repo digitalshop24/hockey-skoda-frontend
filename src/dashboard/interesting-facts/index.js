@@ -19,9 +19,10 @@ export default angular.module('dashboard.facts', [])
                     facts: []
                 },
                 resolve: {
-                    facts: ($stateParams, factService) => {
+                    factInfo: ($stateParams, factService) => {
                         return factService.getFacts($stateParams.page, $stateParams.perPage).then((res) =>{
-                            return $stateParams.facts.concat(res);
+                            res.posts = $stateParams.facts.concat(res.posts);
+                            return res;
                         });
                     },
                     page: ($stateParams) => {

@@ -1,4 +1,6 @@
 'use strict';
+import config from '../../config.json';
+
 
 export default class ForumpageService {
     constructor(api) {
@@ -20,6 +22,10 @@ export default class ForumpageService {
                 per_page: perPage
             }
         }).then((res) => {
+            res.data.topics.forEach((topic) => {
+                const pagesAmount = Math.ceil(topic.messages_count / config.forum.messagesPerPage);
+                topic.pages = Array.from(new Array(pagesAmount), (x, i) => i + 1);
+            });
             return res.data;
         })
     }

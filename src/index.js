@@ -30,7 +30,7 @@ export default angular.module('app',
     .service('auth', auth)
     .config(($locationProvider) => {
         $locationProvider.html5Mode(true);
-        NProgress.configure({trickleRate: 0.1, trickleSpeed: 200, showSpinner: true });
+        NProgress.configure({trickleRate: 0.1, trickleSpeed: 200, showSpinner: false });
     })
     .run(amMoment=> {
         amMoment.changeLocale('ru');

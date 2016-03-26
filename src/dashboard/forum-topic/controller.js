@@ -10,7 +10,7 @@ export default class ForumtopicCtrl {
     }
 
     openEditor() {
-        this.isEditorOpen = true;
+        this.isEditorOpen = !this.isEditorOpen;
     }
 
     sendMessage() {

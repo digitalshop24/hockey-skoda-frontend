@@ -38,7 +38,7 @@ export default class AuthService {
     }
 
     logout() {
-        return this.api.post('/logout').then(response => {
+        return this.api.delete('/users/sign_out').then(response => {
             this.session.invalidate();
             return this.session;
         }).catch(response => {

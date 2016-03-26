@@ -36,6 +36,14 @@ export default class Api {
         });
     }
 
+    delete(url, data) {
+        return this.http.delete(this.api + url, {
+            headers: this.headers
+        }).catch(response => {
+            this.handleResponse(response);
+        });
+    }
+
     get headers() {
         return {'Auth-Token': this.session.token};
     }

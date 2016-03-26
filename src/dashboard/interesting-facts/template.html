@@ -3,7 +3,7 @@
             <div class="row">
                <div class="col-sm-12 col-md-3" ng-repeat="fact in ctrl.facts | limitTo:4">
                     <figure>
-                        <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/2.png');">
+                        <div class="factImgWrap" style="background-image: url('{{fact.image.medium}}');">
                         </div>
                         <figcaption class="col-md-12">
                             <p ng-bind="fact.name"></p>
@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-sm-12 col-md-3" ng-repeat="fact in ctrl.facts | limitTo:1000:4">
                     <figure class="half">
-                        <div class="factImgWrap" style="background-image: url('img/resources/img/factPage/3.png');">
+                        <div class="factImgWrap" style="background-image: url('{{fact.image.medium}}');">
                         </div>
                         <figcaption class="col-md-12">
                             <p ng-bind="fact.name"></p>
@@ -25,10 +25,10 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ul>
-                        <li>
+                        <li ng-show="ctrl.facts.length < ctrl.factsAmount">
                             <button ng-click="ctrl.loadMore()" class="btn btn_common main">Показать ещё</button>
                         </li>
-                        <li>Показано 100 фактов из 1000</li>
+                        <li>Показано {{ctrl.facts.length}} фактов из {{ctrl.factsAmount}}</li>
                     </ul>
                     
                 </div>

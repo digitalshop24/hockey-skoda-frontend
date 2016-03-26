@@ -3,6 +3,7 @@
 import angular from 'angular';
 import ForumpageCtrl from './controller.js';
 import ForumpageService from './service.js';
+import config from '../../config.json';
 
 export default angular.module('dashboard.forum-page', [])
     .service('forumpageService', ForumpageService)
@@ -15,7 +16,7 @@ export default angular.module('dashboard.forum-page', [])
                 controllerAs: 'ctrl',
                 params: {
                     page: 1,
-                    topicsPerPage: 15,
+                    topicsPerPage: config.forum.messagesPerPage,
                     topics: []
                 },
                 resolve: {
