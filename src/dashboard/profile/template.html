@@ -72,9 +72,9 @@
                 </ul>
                 <ul class="text-center">
                 <slick slides-to-show=1>
-                <div>
-                    <li ng-repeat="achievement in ctrl.achievements">
-                        <h5 ng-bind="achievement.max_points"></h5>
+                <div ng-repeat="achievement in ctrl.achievements">
+                    <li>
+                        <h5 ng-bind-html="achievement.max_points"></h5>
 
                         <div class="progress vertical green_progress">
                             <div class="progress_bg_color" role="progressbar" aria-valuenow="50" aria-valuemin="0"
@@ -84,7 +84,7 @@
                         </div>
 
                         <p class="bold" ng-bind="achievement.name"></p>
-                        <p>Завершено {{achievement.percentage}}%</p>
+                        <p>Набрано {{achievement.currentBallAmount}}</p>
                     </li>
                 </div>
                 </slick>
