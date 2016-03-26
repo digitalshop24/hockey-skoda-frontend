@@ -31,5 +31,6 @@ export default class SkodaLocalStorage {
 
     resetDefaults() {
         this.user = new User();
+        this.isAuthenticated = false;
     }
 }

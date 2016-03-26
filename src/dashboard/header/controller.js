@@ -14,6 +14,8 @@ export default class HeaderCtrl {
     }
 
     logout() {
-        this.auth.logout();
+        this.auth.logout().then(()=> {
+            this.state.go('dashboard.main');
+        });
     }
 }
