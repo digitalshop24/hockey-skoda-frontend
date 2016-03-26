@@ -30,17 +30,23 @@ export default angular.module('app',
     .service('auth', auth)
     .config(($locationProvider) => {
         $locationProvider.html5Mode(true);
-        NProgress.configure({trickleRate: 0.1, trickleSpeed: 200, showSpinner: false });
+        NProgress.configure({trickleRate: 0.1, trickleSpeed: 200, showSpinner: false});
     })
     .run(amMoment=> {
         amMoment.changeLocale('ru');
     })
-    .run(($rootScope, $state, auth) => {
+    .run(($rootScope, $state, login, session) => {
         $rootScope.$state = $state;
         $rootScope.$on('$stateChangeStart', authHandling);
 
         function authHandling(event, toState) {
-            //
+            if (toState.access) {
+                if(!session.isAuthenticated) {
+                    event.preventDefault();
+                    NProgress.done();
+                    login.open();
+                }
+            }
         }
     })
     .run(($rootScope) => {

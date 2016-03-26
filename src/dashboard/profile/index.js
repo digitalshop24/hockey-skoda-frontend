@@ -13,6 +13,9 @@ export default angular.module('dashboard.profile', [])
                 url: '/profile',
                 controller: ProfileCtrl,
                 controllerAs: 'ctrl',
+                access: {
+                    requiresLogin: true
+                },
                 params: {},
                 resolve: {
                     achievements: ($stateParams, profileService) => {
