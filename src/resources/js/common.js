@@ -40,7 +40,6 @@
 // }
 
 
-
 function initTimeline() {
     $(function () {
         $('.wrapp_timeline,.wrapp_timeline_main_page').jScrollPane({
@@ -53,11 +52,11 @@ function initTimeline() {
 function initSpinedit() {
     $(function () {
         $("input[name='demo3']").TouchSpin({
-                min: 0,
-                max: 20,
-                step: 1,
-                boostat: 5
-            });
+            min: 0,
+            max: 20,
+            step: 1,
+            boostat: 5
+        });
     });
 }
 
@@ -72,56 +71,59 @@ function initSpinedit() {
 // }
 
 
-function initSlider() {
-    
+function initSlider(month) {
+
     $(function () {
         $('.single-item').slick({
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1
         });
+
         $('.mainpage_news_slider').slick({
-          dots: false,
-          arrows: false,
-          infinite: true,
-          slidesToShow: 6,
-          slidesToScroll: 3,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: false
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: false
-              }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-          ]
+            dots: false,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 6,
+            slidesToScroll: 3,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: false
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
         });
+
         $('.date_slider_news').slick({
             infinite: true,
             slidesToShow: 1,
+            initialSlide: month - 1,
             slidesToScroll: 1,
-            dots: false,
+            dots: false
         });
 
         // forecast slider
@@ -131,8 +133,9 @@ function initSlider() {
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
-            asNavFor: '.slider-nav_forecast',
+            asNavFor: '.slider-nav_forecast'
         });
+
         $('.slider-nav_forecast').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
