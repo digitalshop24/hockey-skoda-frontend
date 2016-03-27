@@ -34,4 +34,9 @@ export default class LoginCtrl {
         this.close();
         this.state.go('dashboard.registration');
     }
+
+    recoverPassword() {
+        this.close();
+        this.state.go('dashboard.recover-password');
+    }
 }
