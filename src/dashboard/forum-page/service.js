@@ -29,4 +29,13 @@ export default class ForumpageService {
             return res.data;
         })
     }
+
+    createTopic(sectionId, topicName, message) {
+        return this.api.post(`/forum/sections/${sectionId}/topics`, {
+            name: topicName,
+            message: message
+        }).then((res) => {
+            return res.data;
+        });
+    }
 }
