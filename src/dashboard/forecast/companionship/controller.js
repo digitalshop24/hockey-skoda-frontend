@@ -2,11 +2,13 @@
 
 
 export default class ForecasttwoCtrl {
-    constructor(matches) {
+    constructor(matches, companionshipService) {
         this.matches = matches.matches;
+        this.service = companionshipService;
     }
 
     forecast(match) {
-        console.log(match);
+        match.isDisabled = true;
+        this.service.sendForecast(match.id, match.redScore, match.blueScore);
     }
 }

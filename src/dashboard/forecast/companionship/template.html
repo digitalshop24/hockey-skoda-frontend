@@ -1,33 +1,32 @@
 <section class="wrapp_forecast_content ">
     <div class="forecast_content_block">
         <div class="forecast_content_block_im  bac-forecast-two height-no clearfix">
-            <div class="forecast_two mobile mob-forece clearfix" ng-repeat="match in ctrl.matches">
-                <div class="orecast_two_block mob-forece clearfix">
+            <div class="forecast_two mobile mob-forece clearfix" ng-repeat="match in ctrl.matches" spinedit-init>
+                <div class="orecast_two_block mob-forece clearfix" ng-init="match.redScore = 0; match.blueScore = 0;">
                     <div class="orecast_two-6 clearfix">
                         <div class="date" ng-bind="match.when | amDateFormat:'DD'">
-                            6
                         </div>
                         <div class="block clearfix">
-                            <div class="month" ng-bind="match.when | amDateFormat:'MMMM'">мая</div>
-                            <div class="time" ng-bind="match.when | amDateFormat:'h:mm'">14:45</div>
+                            <div class="month" ng-bind="match.when | amDateFormat:'MMMM'"></div>
+                            <div class="time" ng-bind="match.when | amDateFormat:'h:mm'"></div>
                         </div>
                     </div>
                     <div class="orecast_two-6 btn-forecast clearfix">
-                        <button class="btn btn_primary main">Угадать</button>
+                        <button ng-disabled="match.isDisabled" ng-click="ctrl.forecast(match)" class="btn btn_primary main">Угадать</button>
                     </div>
                 </div>
                 <div class="orecast_two-12_block mob-forece clearfix">
                     <div class="orecast_two-3 left score">
                         <p ng-bind="match.redteam.country"></p>
                     </div>
-                    <div class="orecast_two-2 ">
+                    <div class="orecast_two-2">
                         <div class="input-sn">
-                            <input spinedit-init id="demo3" type="text" value="0" name="demo3" readonly>
+                            <spin value="match.redScore" disabled="match.isDisabled"/>
                         </div>
                         <span class="toc">:</span>
 
                         <div class="input-sn">
-                            <input spinedit-init id="demo3" type="text" value="0" name="demo3" readonly>
+                            <spin value="match.blueScore" disabled="match.isDisabled"/>
                         </div>
                     </div>
                     <div class="orecast_two-3 right score">
@@ -53,19 +52,19 @@
                 </div>
                 <div class="col-sm-2 destop-force">
                     <div class="input-sn">
-                        <input id="demo3" ng-model="match.redScore" type="text" value="0" name="demo3" readonly>
+                        <spin value="match.redScore" disabled="match.isDisabled"/>
                     </div>
                     <span class="toc">:</span>
 
                     <div class="input-sn">
-                        <input id="demo3" ng-model="match.blueScore" type="text" value="0" name="demo3" readonly>
+                        <spin value="match.blueScore" disabled="match.isDisabled"/>
                     </div>
                 </div>
                 <div class="col-sm-3 destop-force score">
                     <p ng-bind="match.blueteam.country"></p>
                 </div>
                 <div class="col-sm-2 destop-force btn-forecast clearfix">
-                    <button ng-click="ctrl.forecast(match)" class="btn btn_primary main">Угадать</button>
+                    <button ng-disabled="match.isDisabled" ng-click="ctrl.forecast(match)" class="btn btn_primary main">Угадать</button>
                 </div>
             </div>
 

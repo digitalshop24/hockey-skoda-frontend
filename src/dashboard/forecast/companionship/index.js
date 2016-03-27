@@ -3,8 +3,11 @@
 import angular from 'angular';
 import CompanionshipCtrl from './controller.js';
 import CompanionshipService from './service.js';
+import spin from './spin.js';
 
-export default angular.module('dashboard.forecast.companionship', [])
+export default angular.module('dashboard.forecast.companionship', [
+    spin.name
+])
     .service('companionshipService', CompanionshipService)
     .config(function ($stateProvider) {
         $stateProvider
