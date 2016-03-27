@@ -2,34 +2,42 @@
     <div class="wrapp_menu " id='menu'>
         <div class="menu_line hidden-xs ">
             <ul>
-                <li><a ui-sref="dashboard.general-news"><img src="img/resources/img/news/ico_menu1.png" alt="" class="img-responsive"></a></li>
-                <li><a ui-sref="dashboard.facts"><img src="img/resources/img/news/ico_menu2.png" alt="" class="img-responsive"></a></li>
-                <li><a ui-sref="dashboard.blog"><img src="img/resources/img/news/ico_menu3.png" alt="" class="img-responsive"></a></li>
+                <li><a ui-sref="dashboard.general-news"><img src="img/resources/img/news/ico_menu1.png" alt=""
+                                                             class="img-responsive"></a></li>
+                <li><a ui-sref="dashboard.facts"><img src="img/resources/img/news/ico_menu2.png" alt=""
+                                                      class="img-responsive"></a></li>
+                <li><a ui-sref="dashboard.blog"><img src="img/resources/img/news/ico_menu3.png" alt=""
+                                                     class="img-responsive"></a></li>
             </ul>
         </div>
         <div class="menu_date hidden-xs ">
             <ul>
                 <li><h5>Месяц</h5></li>
-                <li ng-repeat="month in ctrl.months" ng-show="month.monthIndex <= ctrl.currentMonthIndex" ng-class="{'active_month': month.viewIndex==ctrl.activeMonth}">
-                    <p ng-click="ctrl.changeMonth(month)"><a href="#"><span>{{month.viewIndex}}</span>{{month.name}}</a></p>
+                <li ng-repeat="month in ctrl.months" ng-show="month.monthIndex <= ctrl.currentMonthIndex"
+                    ng-class="{'active_month': month.viewIndex==ctrl.activeMonth}">
+                    <p ng-click="ctrl.changeMonth(month)"><a href="#"><span>{{month.viewIndex}}</span>{{month.name}}</a>
+                    </p>
                 </li>
             </ul>
         </div>
         <!-- Слайдер для мобильных -->
 
-        <div class="date_slider_news hidden-sm hidden-md hidden-lg" slider-init>
-            <div><p><a href="#" class="link_slider"><span>01</span> январь</a></p></div>
-            <div><p><a href="#" class="link_slider"><span>02</span> февраль </a></p></div>
-            <div><p><a href="#" class="link_slider"><span>03</span> март </a></p></div>
-            <div><p><a href="#" class="link_slider"><span>04</span> апрель</a></p></div>
-            <div><p><a href="#" class="link_slider"><span>05</span> май</a></p></div>
-            <div><p><a href="#" class="link_slider"><span>06</span> июнь</a></p></div>
-            <div><p><a href="#" class="link_slider"><span>07</span> июль</a></p></div>
-            <div><p><a href="#" class="link_slider"><span>08</span> август</a></p></div>
-            <div><p><a href="#" class="link_slider"><span>09</span> сентябрь</a></p></div>
-            <div><p><a href="#" class="link_slider"><span>10</span> октябрь</a></p></div>
-            <div><p><a href="#" class="link_slider"><span>11</span> ноябрь</a></p></div>
-            <div><p><a href="#" class="link_slider"><span>12</span> декабрь</a></p></div>
+        <div class="date_slider_news hidden-sm hidden-md hidden-lg">
+            <slick infinite="true" arrows="true" slides-to-show="1" slides-to-scroll="1">
+                <div><p><a href="#" class="link_slider"><span>01</span> январь</a></p></div>
+                <div><p><a href="#" class="link_slider"><span>02</span> февраль </a></p></div>
+                <div><p><a href="#" class="link_slider"><span>03</span> март </a></p></div>
+                <div><p><a href="#" class="link_slider"><span>04</span> апрель</a></p></div>
+                <div><p><a href="#" class="link_slider"><span>05</span> май</a></p></div>
+                <div><p><a href="#" class="link_slider"><span>06</span> июнь</a></p></div>
+                <div><p><a href="#" class="link_slider"><span>07</span> июль</a></p></div>
+                <div><p><a href="#" class="link_slider"><span>08</span> август</a></p></div>
+                <div><p><a href="#" class="link_slider"><span>09</span> сентябрь</a></p></div>
+                <div><p><a href="#" class="link_slider"><span>10</span> октябрь</a></p></div>
+                <div><p><a href="#" class="link_slider"><span>11</span> ноябрь</a></p></div>
+                <div><p><a href="#" class="link_slider"><span>12</span> декабрь</a></p></div>
+            </slick>
+
         </div>
     </div>
     <div class="wrapp_contant_main">

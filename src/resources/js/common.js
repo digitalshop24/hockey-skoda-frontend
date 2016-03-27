@@ -71,7 +71,7 @@ function initSpinedit() {
 // }
 
 
-function initSlider(month) {
+function initSlider() {
 
     $(function () {
         $('.single-item').slick({
@@ -121,7 +121,6 @@ function initSlider(month) {
         $('.date_slider_news').slick({
             infinite: true,
             slidesToShow: 1,
-            initialSlide: month - 1,
             slidesToScroll: 1,
             dots: false
         });
