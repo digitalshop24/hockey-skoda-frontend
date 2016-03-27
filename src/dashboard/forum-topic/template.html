@@ -1,21 +1,3 @@
-<section class="add_topic">
-    <div class="container">
-        <div class="row">
-            <button ng-show="!ctrl.isEditorOpen" ng-click="ctrl.openEditor()" type="button" class="btn btn_primary main"
-                    data-toggle="modal" data-target="#myModal">Ответить
-            </button>
-
-            <div ng-show="ctrl.isEditorOpen" class="textEdit">
-                <div text-angular ng-model="ctrl.answer"></div>
-                <button ng-click="ctrl.sendMessage()" type="button" class="btn btn_primary main"
-                        data-toggle="modal" data-target="#myModal">Отправить
-                </button>
-
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="topics">
     <div class="container">
         <div class="row">
@@ -53,7 +35,10 @@
                             <li>{{ctrl.topic.messages_count}} <p>Ответ</p></li>
                         </ul>
                     </div>
-
+                    <pagination ng-show="ctrl.showPagination" total-items="ctrl.topicMessagesAmount" rotate="false" ng-model="ctrl.page"
+                                ng-change="ctrl.changePage()" previous-text=" < " next-text=" > "
+                                max-size="5" items-per-page="ctrl.messagesPerPage"
+                                direction-links="true" class="pagination-sm"></pagination>
                 </div>
             </div>
 
@@ -87,32 +72,25 @@
                     </div>
                 </div>
             </section>
-            <!--end wrapp_visits -->
 
+        </div>
+    </div>
+</section>
 
-            <div class="row text-center">
+<section class="add_topic">
+    <div class="container">
+        <div class="row">
+            <button ng-show="!ctrl.isEditorOpen" ng-click="ctrl.openEditor()" type="button" class="btn btn_primary main"
+                    data-toggle="modal" data-target="#myModal">Ответить
+            </button>
 
-                <button class="btn btn_common main load_more">Показать еще</button>
+            <div ng-show="ctrl.isEditorOpen" class="textEdit">
+                <div text-angular ng-model="ctrl.answer"></div>
+                <button ng-click="ctrl.sendMessage()" type="button" class="btn btn_primary main"
+                        data-toggle="modal" data-target="#myModal">Отправить
+                </button>
+
             </div>
         </div>
     </div>
 </section>
-<!-- Modal -->
-<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-         <textarea name="" id="" cols="50" rows="50"></textarea>
-         <button>Ответить</button>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div> -->

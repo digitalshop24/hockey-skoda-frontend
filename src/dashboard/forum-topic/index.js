@@ -15,19 +15,24 @@ export default angular.module('dashboard.forumtopic', [])
                 controller: ForumtopicCtrl,
                 controllerAs: 'ctrl',
                 params: {
-                    page: 1,
+                    page: undefined,
                     messagesPerPage: config.forum.messagesPerPage
                 },
                 resolve: {
                     topic: ($stateParams, forumtopicService) => {
                         return forumtopicService.getTopic($stateParams.id);
                     },
-                    messageInfo: ($stateParams, forumtopicService) => {
-                        return forumtopicService.getTopicMessages($stateParams.id, $stateParams.page,
-                            $stateParams.messagesPerPage);
-                    },
                     page: ($stateParams) => {
                         return $stateParams.page;
+                    },
+                    messagesPerPage: ($stateParams) => {
+                        return $stateParams.messagesPerPage;
+                    },
+                    messageInfo: ($stateParams, forumtopicService, topic, page) => {
+                        const resultPage = $stateParams.page ? $stateParams.page : Math.ceil(topic.messages_count / $stateParams.messagesPerPage);
+                        $stateParams.page = resultPage;
+                        return forumtopicService.getTopicMessages($stateParams.id, $stateParams.page,
+                            $stateParams.messagesPerPage);
                     }
                 }
             });

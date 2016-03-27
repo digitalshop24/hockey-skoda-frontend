@@ -2,11 +2,16 @@
 
 
 export default class ForumtopicCtrl {
-    constructor(topic, messageInfo, forumtopicService) {
+    constructor(topic, messageInfo, forumtopicService, messagesPerPage, $state, $stateParams) {
         this.topic = topic;
         this.messages = messageInfo.messages;
         this.isEditorOpen = false;
         this.forumtopicService = forumtopicService;
+        this.topicMessagesAmount = topic.messages_count;
+        this.page = $stateParams.page;
+        this.messagesPerPage = messagesPerPage;
+        this.state = $state;
+        this.showPagination = topic.messages_count > messagesPerPage;
     }
 
     openEditor() {
@@ -14,10 +19,16 @@ export default class ForumtopicCtrl {
     }
 
     sendMessage() {
-        console.log(this.answer);
         this.forumtopicService.sendMessage(this.topic.id,this.answer).then((res) =>{
-            this.messages.push(res);
-            this.isEditorOpen = false;
+            this.state.go('dashboard.forumtopic', {
+                page: undefined
+            });
+        });
+    }
+
+    changePage() {
+        this.state.go('dashboard.forumtopic',{
+            page: this.page
         });
     }
 }
