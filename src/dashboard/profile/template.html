@@ -53,8 +53,10 @@
             </div>
             <div class="col-sm-6 col-md-6 lk_content">
                 <ul class="avatar">
-                    <li ngf-select="ctrl.uploadAvatar($file)"><img src="{{ctrl.user.avatar.thumb}}" alt="" class="img-responsive hidden-xs"></li>
-                    <li>
+
+                    <li ngf-select="ctrl.uploadAvatar($file)" class="edit_hover"><img src="{{ctrl.user.avatar.thumb}}" alt="" class="img-responsive hidden-xs">
+                    <button class="edit btn btn_common tiny">Изменить</button>
+                    </li>
                         <h6 class="gir">Моя активность</h6>
                         <h6>Сегодня, 5 марта</h6>
                     </li>
