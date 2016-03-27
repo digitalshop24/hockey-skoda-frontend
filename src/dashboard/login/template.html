@@ -10,7 +10,7 @@
                                    placeholder="E-mail">
                             <input required="true" type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"
                                    placeholder="Пароль">
-                            <p><a href="">Я забыл пароль</a></p>
+                            <p><a href="" ng-click="ctrl.recoverPassword()">Я забыл пароль</a></p>
                             <h3 ng-bind="ctrl.message"></h3>
                             <button class="btn btn_secondary small">Войти</button>
                         </div>

@@ -24,7 +24,7 @@ import newspage from './news-page/index';
 import success from './success/index';
 import spineditInit from './spinedit-init/index.js';
 import prizenew from './prize-new/index';
-import emailnew from './email-new/index';
+import emailnew from './recover-password/index';
 
 
 
