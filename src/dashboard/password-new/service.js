@@ -14,6 +14,6 @@ export default class Passwordnew {
             return res.data;
         }).catch(response => {
             throw response.data;
-        });;
+        });
     }
 }
