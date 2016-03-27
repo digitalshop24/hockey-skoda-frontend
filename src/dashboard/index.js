@@ -25,6 +25,7 @@ import success from './success/index';
 import spineditInit from './spinedit-init/index.js';
 import prizenew from './prize-new/index';
 import emailnew from './recover-password/index';
+import passwordnew from './password-new/index';
 
 
 
@@ -50,7 +51,8 @@ export default angular.module('dashboard',
         success.name,
         spineditInit.name,
         prizenew.name,
-        emailnew.name
+        emailnew.name,
+        passwordnew.name
     ])
     .service('login', login)
     .config($stateProvider => {
