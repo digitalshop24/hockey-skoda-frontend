@@ -42,12 +42,13 @@
 
 function initTimeline() {
     $(function () {
-        $('.wrapp_timeline,.wrapp_timeline_main_page').jScrollPane({
+        $('.wrapp_timeline,.wrapp_timeline_main_page,.achif_wrapp').jScrollPane({
                 autoReinitialise: true
             }
         );
     });
 }
+
 
 function initSpinedit() {
     $(function () {
