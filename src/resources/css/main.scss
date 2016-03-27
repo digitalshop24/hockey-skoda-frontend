@@ -2046,9 +2046,23 @@ $grey_about: #5d5d5d;
           position: relative;
           top: -20px;
         }
-
       }
-      
+    }
+    .edit {
+      display: none;      
+    }
+    .edit_hover:hover {
+        .edit {
+            display: block;
+            position: absolute; 
+            top: 50px;
+            margin-left: -13px;
+            z-index: 100; 
+        }
+        .edit:hover {
+            display: block;
+            position: absolute;  
+        }
     }
     
     ul {
