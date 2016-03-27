@@ -47,14 +47,13 @@
                 <ul>
                     <li>
                         <a href=""><img src="img/resources/img/lk/roket.png" alt="" class="img-responsive">
-
                             <p class="active">Моя активность</p></a>
                     </li>
                 </ul>
             </div>
             <div class="col-sm-6 col-md-6 lk_content">
                 <ul class="avatar">
-                    <li><img src="img/resources/img/bg_star.png" alt="" class="img-responsive hidden-xs"></li>
+                    <li ngf-select="ctrl.uploadAvatar($file)"><img src="{{ctrl.user.avatar.thumb}}" alt="" class="img-responsive hidden-xs"></li>
                     <li>
                         <h6 class="gir">Моя активность</h6>
                         <h6>Сегодня, 5 марта</h6>
