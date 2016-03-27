@@ -23,6 +23,9 @@ export default angular.module('dashboard.profile', [])
                     },
                     lastAchievements: ($stateParams, profileService) => {
                         return profileService.getLastAchievements();
+                    },
+                    user: (profileService) => {
+                        return profileService.getCurrentUser();
                     }
                 }
             });

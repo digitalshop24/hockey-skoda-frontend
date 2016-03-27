@@ -67,5 +67,10 @@ export default class Api {
 
         throw response;
     }
+
+
+    get url() {
+        return this.api;
+    }
 }
 
