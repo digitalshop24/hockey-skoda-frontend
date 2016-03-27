@@ -68,9 +68,12 @@
             <div class="col-md-12">
                 <div class="mainpage_news_slider" slider-init>
                 
-                    <div ng-repeat="news in ctrl.lastNews">
+                    <div ng-repeat="news in ctrl.lastNews" style="padding-left:5px; padding-right: 5px;">
                         <h3 ng-bind="news.published_at | amDateFormat:'DD MMMM'"></h3>
-                        <img ui-sref="dashboard.newspage({news:news})" src="{{news.image.thumb}}" alt="" class="img-responsive">
+                        <div class="news_one_slider" style="background-image: url({{news.image.medium}})"></div>
+                        <!-- <img ui-sref="dashboard.newspage({news:news})" src="{{news.image.medium}}" alt="" class="img-responsive"> -->
+                         <p class="news_titel">Lorem ipsum dolor sit amet, consectetur</p>
+                         <p class="news_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iure ipsa dolore saepe, maxime.</p>
                     </div>
                 </div>
             </div>
