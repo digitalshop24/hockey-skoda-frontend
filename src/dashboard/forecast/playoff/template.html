@@ -1,4 +1,4 @@
-<section class="wrapp_forecast_content_mob mobile"  slider-init>
+<section class="wrapp_forecast_content_mob mobile" slider-init>
     <div class="forecast_slider">
         <div class="slider-nav_forecast">
             <div class="nav_block">
@@ -14,211 +14,67 @@
         <div class="slider-for_block">
             <div class=" backg-1">
                 <div class="choice_one">
-                    <div class="choice_one-item">
+                    <div class="choice_one-item" ng-init="ctrl.forecast.firstQuarter = {}">
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> 111111</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.firstQuarter.red" required>
+                                <option disabled selected value> Выберите команду</option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.firstQuarter.blue" required>
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                     </div>
-                    <div class="choice_one-item">
+                    <div class="choice_one-item" ng-init="ctrl.forecast.secondQuarter = {}">
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.secondQuarter.red" required>
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.secondQuarter.blue" required>
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                     </div>
-                    <div class="choice_one-item">
+                    <div class="choice_one-item" ng-init="ctrl.forecast.thirdQuarter = {}">
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.thirdQuarter.red" required>
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.thirdQuarter.blue" required>
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                     </div>
-                    <div class="choice_one-item">
+                    <div class="choice_one-item" ng-init="ctrl.forecast.forthQuarter = {}">
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.forthQuarter.red" required>
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.forthQuarter.blue" required>
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                     </div>
@@ -226,107 +82,36 @@
             </div>
             <div class="backg-2 pos_col-2">
                 <div class="choice_one">
-                    <div class="choice_one-item">
+                    <div class="choice_one-item" ng-init="ctrl.forecast.firstSemi = {}">
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.firstSemi.red">
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.firstSemi.blue">
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                     </div>
-                    <div class="choice_one-item">
+
+                    <div class="choice_one-item" ng-init="ctrl.forecast.secondSemi = {}">
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.secondSemi.red">
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.secondSemi.blue">
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                     </div>
@@ -334,55 +119,19 @@
             </div>
             <div class="backg-3 pos_col-3">
                 <div class="choice_one">
-                    <div class="choice_one-item">
+                    <div class="choice_one-item" ng-init="ctrl.forecast.final = {}">
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.final.red">
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
+                            <select class="input_default input_small"
+                                    ng-options="team.country for team in ctrl.teams track by team.id"
+                                    ng-model="ctrl.forecast.final.blue">
                                 <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
                             </select>
                         </div>
                     </div>
@@ -393,156 +142,156 @@
 </section>
 <section class="wrapp_forecast_content ">
     <div class="forecast_content_block">
-        <div class="forecast_content_block_im destop clearfix">
-            <div class="col-sm-4 backg-1">
-                <h4>Четвертьфинал</h4>
+        <form ng-submit="ctrl.sendForecast()" ng-init="ctrl.forecast = {}">
+            <div class="forecast_content_block_im destop clearfix">
+                <div class="col-sm-4 backg-1">
+                    <h4>Четвертьфинал</h4>
 
-                <div class="choice_one">
-                    <div class="choice_one-item">
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-
-                            </select>
+                    <div class="choice_one">
+                        <div class="choice_one-item" ng-init="ctrl.forecast.firstQuarter = {}">
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.firstQuarter.red" required>
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.firstQuarter.blue" required>
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-
-                            </select>
+                        <div class="choice_one-item" ng-init="ctrl.forecast.secondQuarter = {}">
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.secondQuarter.red" required>
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.secondQuarter.blue" required>
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="choice_one-item" ng-init="ctrl.forecast.thirdQuarter = {}">
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.thirdQuarter.red" required>
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.thirdQuarter.blue" required>
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="choice_one-item" ng-init="ctrl.forecast.forthQuarter = {}">
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.forthQuarter.red" required>
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.forthQuarter.blue" required>
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <div class="choice_one-item">
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                            </select>
+                </div>
+                <div class="col-sm-4 backg-2 pos_col-2">
+                    <h4>Полуфинал</h4>
+
+                    <div class="choice_one">
+                        <div class="choice_one-item" ng-init="ctrl.forecast.firstSemi = {}">
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.firstSemi.red">
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.firstSemi.blue">
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                            </select>
+
+                        <div class="choice_one-item" ng-init="ctrl.forecast.secondSemi = {}">
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.secondSemi.red">
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.secondSemi.blue">
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
                         </div>
+
                     </div>
-                    <div class="choice_one-item">
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                            </select>
-                        </div>
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="choice_one-item">
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                            </select>
-                        </div>
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                            </select>
+                </div>
+                <div class="col-sm-4 backg-3 pos_col-3">
+                    <h4>Финал</h4>
+
+                    <div class="choice_one">
+                        <div class="choice_one-item" ng-init="ctrl.forecast.final = {}">
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.final.red">
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
+                            <div class="choice_one-item-bor">
+                                <select class="input_default input_small"
+                                        ng-options="team.country for team in ctrl.teams track by team.id"
+                                        ng-model="ctrl.forecast.final.blue">
+                                    <option disabled selected value> Выберите команду</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 backg-2 pos_col-2">
-                <h4>Полуфинал</h4>
+            <div class="forecast clearfix">
+                <div class="col-sm-7">
+                    <button class="btn btn_primary main">Таков мой прогноз!</button>
+                </div>
+                <div class="col-sm-5 pos-fre">
+                    <span class="fri">Обсудить с друзьями:</span>
 
-                <div class="choice_one">
-                    <div class="choice_one-item">
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                            </select>
-                        </div>
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="choice_one-item">
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                            </select>
-                        </div>
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                            </select>
-                        </div>
+                    <div class="share">
+                        <a href="" class="icon icon-is"></a>
+                        <a href="" class="icon icon-fb"></a>
+                        <a href="" class="icon icon-tw"></a>
+                        <a href="" class="icon icon-vk"></a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 backg-3 pos_col-3">
-                <h4>Финал</h4>
-
-                <div class="choice_one">
-                    <div class="choice_one-item">
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                            </select>
-                        </div>
-                        <div class="choice_one-item-bor">
-                            <select class="input_default input_small" data-size="12">
-                                <option disabled selected value> Выберите команду</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                                <option>Ketchup</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="forecast clearfix">
-            <div class="col-sm-7">
-                <button class="btn btn_primary main">Таков мой прогноз!</button>
-            </div>
-            <div class="col-sm-5 pos-fre">
-                <span class="fri">Обсудить с друзьями:</span>
-
-                <div class="share">
-                    <a href="" class="icon icon-is"></a>
-                    <a href="" class="icon icon-fb"></a>
-                    <a href="" class="icon icon-tw"></a>
-                    <a href="" class="icon icon-vk"></a>
-                </div>
-            </div>
-        </div>
+        </form>
     </div>
 </section>

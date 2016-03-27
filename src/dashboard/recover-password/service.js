@@ -1,6 +1,6 @@
 'use strict';
 
-export default class EmailnewService {
+export default class RecoverService {
     constructor(api) {
         this.api = api;
     }

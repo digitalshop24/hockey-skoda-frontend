@@ -12,6 +12,11 @@ export default angular.module('dashboard.forecast.playoff', [])
                 template: require('./template.html'),
                 url: '',
                 controller: ForecastCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                resolve: {
+                    table: (forecastService) => {
+                        return forecastService.getTable();
+                    }
+                }
             });
     });
