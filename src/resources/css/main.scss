@@ -310,6 +310,8 @@ footer {
   // background-repeat: no-repeat;
   // background-size: cover;
   background-color: $black;
+  position: relative;
+  z-index: 100;
   h6 {
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -1985,6 +1987,8 @@ $grey_about: #5d5d5d;
     background-color: $grey_dark;
     height: 110vh;
     min-height: 680px;
+    position:relative;
+    z-index: 5;
     ul {
       .active {
         color: $green_main;
@@ -2012,6 +2016,22 @@ $grey_about: #5d5d5d;
     height: 110vh;
     min-height: 680px;
     padding-top:30px;
+    .slick-prev {
+      left: -80px;
+      width: 100px;
+      height: 100px;
+      top: 40%;
+      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat scroll 100% center;
+      z-index: 1;
+    }
+    .slick-next {
+      background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 0 center;
+      right: -82px;
+      width: 100px;
+      height: 100px;
+      top: 40%;
+      z-index: 1;
+    }
     .avatar {
       li{
         display: inline-block;
@@ -2079,9 +2099,26 @@ $grey_about: #5d5d5d;
     height: 110vh;
     min-height: 680px;
     padding-top:30px;
+     position:relative;
+    z-index: 5;
     h6 {
       color: $black;
       
+    }
+    .achif_wrapp {
+      width: 100%;
+      overflow: auto;
+      height: 100vh;
+      position: absolute;
+      top:0;
+      margin-top: 50px;
+      z-index: 1;
+      .jspContainer {
+
+        .jspVerticalBar {
+          width:0px;
+        }
+      }
     }
     .fix_big {
       font-size: 2.6rem !important;
@@ -2305,6 +2342,7 @@ $grey_about: #5d5d5d;
       }
     }
    }
+
 }
 
 //-------------------------------------------------- end reg_success
@@ -2398,6 +2436,10 @@ $grey_about: #5d5d5d;
     min-width: 300px;
     display: block;
   }
+  button {
+    margin-top: 30px;
+  }
+
 }
 
 //-------------------------------------------------- end email_recover
@@ -3411,8 +3453,8 @@ $grey_about: #5d5d5d;
       background-repeat: no-repeat;
     }
     figcaption {
-      height: 100px;
-      margin-top: -100px;
+      height: 200px;
+      margin-top: -200px;
       background-color: rgba(255,255,255,.85);
       p {
         font-family:$bold;
@@ -3426,8 +3468,8 @@ $grey_about: #5d5d5d;
       height: 200px;
     }
     figcaption {
-      height: 80px;
-      margin-top: -80px;
+      height: 100px;
+      margin-top: -100px;
     }
   }
   ul {

@@ -266,6 +266,22 @@ $p_size: 1.4rem;
 	//-------------------------------------------------- end lk
 
 	//-------------------------------------------------- news
+	.wrapp_news_all .menu_line ul {
+		margin-top: 10px;
+	}
+	.wrapp_news_all .menu_line {
+	    position: relative;
+	    height: 127px;
+	    width: 100%;
+	    top: 0px;
+	}
+	.wrapp_news_all .menu_line ul li {
+	    margin-bottom: 30px;
+	    display: inline-block;
+	    width: 30%;
+	    text-align: center;
+	    margin-top: 20px;
+	}
 	.wrapp_news_all {
 		.wrapp_contant_main {
 			margin-left: 20px;
