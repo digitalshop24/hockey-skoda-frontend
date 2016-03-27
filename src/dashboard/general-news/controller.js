@@ -13,9 +13,11 @@ export default class GeneralNewsCtrl {
         this.months = [];
         this.activeMonth = month;
         this.currentMonthIndex = new Date().getMonth() + 1;
+        this.slickCurrentMonthIndex = month - 1;
+        this.mobileCurrentIndex = month - 1;
         this.monthNames = ['январь', 'февраль', 'март', 'апрель', 'май',
             'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
-        Array.from(new Array(12), (e, i) => i).forEach((monthIndex, index) => {
+        Array.from(new Array(this.currentMonthIndex), (e, i) => i).forEach((monthIndex, index) => {
             var humanMonthIndex = monthIndex + 1;
             const viewIndex = humanMonthIndex < 10 ? '0' + humanMonthIndex : humanMonthIndex;
             this.months.push({
@@ -24,6 +26,7 @@ export default class GeneralNewsCtrl {
                 name: this.monthNames[index]
             })
         });
+        this.mobileMonths = this.months.slice(0);
         this.months = this.months.reverse();
         this.daysWithNews = daysWithNews;
         this.shouldLoad = true;
@@ -60,9 +63,19 @@ export default class GeneralNewsCtrl {
     }
 
     changeMonth(month) {
-        if(month.monthIndex <= moment().month() + 1) {
-            this.state.go('dashboard.general-news', {month: month.monthIndex, loadExactlyDayNews:false}, {reload: true});
+        if (month.monthIndex <= moment().month() + 1) {
+            this.state.go('dashboard.general-news', {
+                month: month.monthIndex,
+                loadExactlyDayNews: false
+            }, {reload: true});
         }
+    }
+
+    changeMobileMonth() {
+        this.state.go('dashboard.general-news', {
+            month: this.mobileCurrentIndex,
+            loadExactlyDayNews: false
+        });
     }
 
 }
