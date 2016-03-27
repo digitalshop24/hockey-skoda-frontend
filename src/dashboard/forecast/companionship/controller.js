@@ -2,6 +2,11 @@
 
 
 export default class ForecasttwoCtrl {
-    constructor() {
+    constructor(matches) {
+        this.matches = matches.matches;
+    }
+
+    forecast(match) {
+        console.log(match);
     }
 }
