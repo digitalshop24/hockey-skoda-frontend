@@ -1,5 +1,7 @@
 'use strict';
 
+import User from '../../auth/user.js';
+
 export default class ProfileService {
     constructor(api, Upload) {
         this.api = api;
@@ -8,6 +10,7 @@ export default class ProfileService {
 
     getCurrentUser() {
         return this.api.get('/users/current').then((res) => {
+            res.data = Object.assign(new User(), res.data);
             return res.data;
         });
     }
