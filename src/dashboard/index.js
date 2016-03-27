@@ -24,6 +24,8 @@ import newspage from './news-page/index';
 import success from './success/index';
 import spineditInit from './spinedit-init/index.js';
 import prizenew from './prize-new/index';
+import emailnew from './email-new/index';
+
 
 
 export default angular.module('dashboard',
@@ -47,7 +49,8 @@ export default angular.module('dashboard',
         newspage.name,
         success.name,
         spineditInit.name,
-        prizenew.name
+        prizenew.name,
+        emailnew.name
     ])
     .service('login', login)
     .config($stateProvider => {
