@@ -4,9 +4,10 @@ import angular from 'angular';
 import config from './config';
 
 export default class AuthService {
-    constructor(api, session) {
+    constructor(api, session, $rootScope) {
         this.api = api;
         this.session = session;
+        this.$rootScope = $rootScope;
     }
 
     register(credentials) {
@@ -40,6 +41,7 @@ export default class AuthService {
     logout() {
         return this.api.delete('/users/sign_out').then(response => {
             this.session.invalidate();
+            this.$rootScope.$broadcast('user:updated', this.session.user);
             return this.session;
         }).catch(response => {
             throw response.data.error;
