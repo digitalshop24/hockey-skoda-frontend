@@ -2,8 +2,8 @@
     <div class="container-fluid">
         <div class="row date_slider_news">
             <!-- <div class="col-md-12"> -->
-   
-            <slick infinite=true arrows=true dots=true slides-to-show=1 slides-to-scroll=1 >
+
+            <slick infinite=true arrows=true dots=true slides-to-show=1 slides-to-scroll=1>
                 <div class="item" style="background-image: url('img/resources/img/main/slide1.jpg');">
                     <div class="left hidden-sm hidden-xs">
                         <h5>Промо-блок</h5>
@@ -66,14 +66,17 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="mainpage_news_slider" slider-init>
-                
+                <div class="mainpage_news_slider" slick current-index="ctrl.newsCurrentIndex" on-after-change="ctrl.loadMoreNews()" infinite="false" arrows="false"
+                     dots="false" slides-to-show="{{ctrl.slidesToShow}}" data="ctrl.lastNews" slides-to-scroll="3">
+
                     <div ng-repeat="news in ctrl.lastNews" style="padding-left:5px; padding-right: 5px;">
                         <h3 ng-bind="news.published_at | amDateFormat:'DD MMMM'"></h3>
+
                         <div class="news_one_slider" style="background-image: url({{news.image.medium}})"></div>
                         <!-- <img ui-sref="dashboard.newspage({news:news})" src="{{news.image.medium}}" alt="" class="img-responsive"> -->
-                         <p class="news_titel">Lorem ipsum dolor sit amet, consectetur</p>
-                         <p class="news_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iure ipsa dolore saepe, maxime.</p>
+                        <a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" class="news_titel"
+                           ng-bind="news.name"></a>
+                        <!--<p class="news_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iure ipsa dolore saepe, maxime.</p>-->
                     </div>
                 </div>
             </div>

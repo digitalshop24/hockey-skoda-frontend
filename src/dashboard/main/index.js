@@ -24,6 +24,12 @@ export default angular.module('dashboard.main', [])
                     },
                     lastNewsInfo: ($stateParams, mainService) => {
                         return mainService.getLastNews($stateParams.page, $stateParams.lastNewsAmount);
+                    },
+                    page: ($stateParams) => {
+                        return $stateParams.page;
+                    },
+                    lastNewsAmount: ($stateParams) => {
+                        return $stateParams.lastNewsAmount;
                     }
                 }
             });

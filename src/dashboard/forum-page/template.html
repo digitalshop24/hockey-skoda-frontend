@@ -2,10 +2,23 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <button ng-disabled="!ctrl.session.isAuthenticated" class="btn btn_primary main">Создать тему</button>
-                <p ng-show="!ctrl.session.isAuthenticated">Чтобы создать тему или оставить комментарий <br>нужно <a ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
+                <button ng-show="!ctrl.isEditorOpen" ng-disabled="!ctrl.session.isAuthenticated"
+                        ng-click="ctrl.openEditor()" class="btn btn_primary main">Создать тему
+                </button>
+                <p ng-show="!ctrl.session.isAuthenticated">Чтобы создать тему или оставить комментарий <br>нужно <a
+                        ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
+
+                <div ng-show="ctrl.isEditorOpen" class="textEdit">
+                    <form ng-submit="ctrl.createTopic()">
+                        <input ng-model="ctrl.topicName" type="text" class="input_default input_large"
+                               placeholder="Тема" required>
+
+                        <div text-angular ng-model="ctrl.message"></div>
+                        <button class="btn btn_primary main">Создать</button>
+                    </form>
+                </div>
             </div>
-        </div> 
+        </div>
     </div>
 </section>
 
@@ -17,8 +30,8 @@
                     <div class="wrapp_filt">
                         <ul>
                             <li><a href="#" class="active">Новые</a></li>
-                            <li><a href="#">Популярные</a></li>
-                            <li><a href="#">Лучшие</a></li>
+                            <!--<li><a href="#">Популярные</a></li>
+                            <li><a href="#">Лучшие</a></li>-->
                         </ul>
                     </div>
                 </div>
@@ -31,7 +44,8 @@
                         <p>13 минут назад <span>Дмитрием Ивановым</span></p>
                         <ul>
                             <li ng-repeat="topic in ctrl.topics">
-                                <span><a ui-sref="dashboard.forumtopic({id:topic.id})" class="link_default" ng-bind="topic.name"></a></span>
+                                <span><a ui-sref="dashboard.forumtopic({id:topic.id})" class="link_default"
+                                         ng-bind="topic.name"></a></span>
                                 <ul>
                                     <li><img src="img/resources/img/page.png" alt=""></li>
                                     <li ng-repeat="page in topic.pages"><a href="#" ng-bind="page"></a></li>
