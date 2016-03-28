@@ -2,7 +2,7 @@
     <div class="forecast_content_block">
         <div class="forecast_content_block_im  bac-forecast-two height-no clearfix">
             <div class="forecast_two mobile mob-forece clearfix" ng-repeat="match in ctrl.matches" spinedit-init>
-                <div class="orecast_two_block mob-forece clearfix" ng-init="match.redScore = 0; match.blueScore = 0;">
+                <div class="orecast_two_block mob-forece clearfix">
                     <div class="orecast_two-6 clearfix">
                         <div class="date" ng-bind="match.when | amDateFormat:'DD'">
                         </div>
@@ -38,7 +38,7 @@
 
 
             <div class="forecast_two destop clearfix" ng-repeat="match in ctrl.matches">
-                <div class="col-sm-2 destop-force clearfix" ng-init="match.redScore = 0; match.blueScore = 0;">
+                <div class="col-sm-2 destop-force clearfix">
                     <div class="date" ng-bind="match.when | amDateFormat:'DD'">
                         6
                     </div>
