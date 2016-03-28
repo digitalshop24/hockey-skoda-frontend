@@ -41,14 +41,16 @@
                     <div class="wrapp_topic wrapp_topic_page">
                         <h4><a href="#" class="link_default" ng-bind="ctrl.section.name"></a></h4>
 
-                        <p>13 минут назад <span>Дмитрием Ивановым</span></p>
+                        <p>{{ctrl.section.last_message.created_at | amDateFormat:'DD MMMM h:mm'}} <span ng-bind="ctrl.section.last_message.user.name"></span></p>
                         <ul>
                             <li ng-repeat="topic in ctrl.topics">
                                 <span><a ui-sref="dashboard.forumtopic({id:topic.id})" class="link_default"
                                          ng-bind="topic.name"></a></span>
                                 <ul>
                                     <li><img src="img/resources/img/page.png" alt=""></li>
-                                    <li ng-repeat="page in topic.pages"><a href="#" ng-bind="page"></a></li>
+                                    <li ng-repeat="page in topic.pages"><a
+                                            ui-sref="dashboard.forumtopic({id: topic.id, page: page})"
+                                            ng-bind="page"></a></li>
                                 </ul>
                             </li>
 

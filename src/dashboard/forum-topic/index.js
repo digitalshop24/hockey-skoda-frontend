@@ -11,7 +11,7 @@ export default angular.module('dashboard.forumtopic', [])
         $stateProvider
             .state('dashboard.forumtopic', {
                 template: require('./template.html'),
-                url: '/forum/topics/:id',
+                url: '/forum/topics/:id/page/:page',
                 controller: ForumtopicCtrl,
                 controllerAs: 'ctrl',
                 params: {
