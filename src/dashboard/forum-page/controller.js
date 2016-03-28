@@ -33,6 +33,8 @@ export default class ForumpageCtrl {
             then((res) => {
                 this.state.go('dashboard.forum-page', {
                     id: this.id
+                }, {
+                    reload: true
                 });
             });
     }
