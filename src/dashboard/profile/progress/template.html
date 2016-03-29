@@ -1,0 +1,21 @@
+<ul class="text-center">
+    <slick slides-to-show=4>
+        <div ng-repeat="achievement in ctrl.achievements">
+            <li>
+                <h5 ng-bind-html="achievement.max_points"></h5>
+
+                <div class="progress vertical green_progress">
+                    <div class="progress_bg_color" role="progressbar" aria-valuenow="50"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         style="height: {{achievement.progressBarPercentage}}% ;width: 10px;">
+                    </div>
+                </div>
+
+                <p class="bold" ng-bind="achievement.name"></p>
+
+                <p>Набрано {{achievement.currentBallAmount}}</p>
+            </li>
+        </div>
+    </slick>
+</ul>

@@ -24,7 +24,7 @@
                     <li ng-repeat="hint in ctrl.hints">
                         <img src="img/resources/img/lk/addres.png" alt="" class="img-responsive hidden-xs">
                         <h6></h6>
-                        <a href="#">
+                        <a ui-sref="dashboard.profile.edit">
                             <ul>
                                 <li ng-bind="hint.achievment_type.hint"></li>
                                 <li class="text-center" ng-bind="'+' + hint.achievment_type.points"></li>
@@ -50,34 +50,17 @@
                                                                                       class="img-responsive hidden-xs">
                         <button class="edit btn btn_common tiny">Изменить</button>
                     </li>
-                    <h6 class="gir">Моя активность</h6>
-                    <h6>Сегодня, 5 марта</h6>
+                    <!--<h6 class="gir">Моя активность</h6>-->
+                    <h5 ng-bind="'Сегодня, ' + ctrl.today"/>
                     </li>
                 </ul>
-                <ul class="text-center">
-                    <slick slides-to-show=4>
-                        <div ng-repeat="achievement in ctrl.achievements">
-                            <li>
-                                <h5 ng-bind-html="achievement.max_points"></h5>
+                <div style="overflow-y: visible" ui-view="">
+                </div>
 
-                                <div class="progress vertical green_progress">
-                                    <div class="progress_bg_color" role="progressbar" aria-valuenow="50"
-                                         aria-valuemin="0"
-                                         aria-valuemax="100"
-                                         style="height: {{achievement.progressBarPercentage}}% ;width: 10px;">
-                                    </div>
-                                </div>
-
-                                <p class="bold" ng-bind="achievement.name"></p>
-
-                                <p>Набрано {{achievement.currentBallAmount}}</p>
-                            </li>
-                        </div>
-                    </slick>
-                </ul>
             </div>
             <div class="col-sm-2 col-md-2 lk_plus ">
                 <div scroll-init class="achif_wrapp">
+                    <h6 class="text-center" ng-bind="'Баллов набрано: ' + ctrl.user.achievments_score"></h6>
                     <h6 class="text-center">Мои баллы</h6>
                     <ul>
                         <li ng-repeat="achievement in ctrl.lastAchievements">
