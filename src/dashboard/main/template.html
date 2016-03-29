@@ -4,7 +4,7 @@
             <!-- <div class="col-md-12"> -->
 
             <slick infinite=true arrows=true dots=true slides-to-show=1 slides-to-scroll=1>
-                <div class="item" style="background-image: url('img/resources/img/main/slide1.jpg');">
+                <div class="item" style="background-image: url('img/resources/img/main-showcase.jpg');">
                     <div class="left hidden-sm hidden-xs">
                         <h5>Промо-блок</h5>
 
@@ -72,13 +72,62 @@
                     <div ng-repeat="news in ctrl.lastNews" style="padding-left:5px; padding-right: 5px;">
                         <h3 ng-bind="news.published_at | amDateFormat:'DD MMMM'"></h3>
 
-                        <div class="news_one_slider" style="background-image: url({{news.image.medium}})"></div>
+                        <div class="news_one_slider" style="background-image: url({{news.image.medium}})">
+                            <div class="news_one_slider_bg"></div>
+                        </div>
                         <!-- <img ui-sref="dashboard.newspage({news:news})" src="{{news.image.medium}}" alt="" class="img-responsive"> -->
                         <a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" class="news_titel"
                            ng-bind="news.name"></a>
                         <!--<p class="news_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iure ipsa dolore saepe, maxime.</p>-->
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="wrapp_mainpage_data">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <select name="" id="" class="input_default input_small select_default">
+                    <option value="">Все события</option>
+                    <option value="">Не все события</option>
+                    <option value="">Часть событий</option>
+                </select>   
+            </div>
+            <div class="col-md-10 text-center">
+                <img src="img/resources/img/arrow_left.png" alt="">
+                <ul>
+                    <li>
+                        <a href="">11</a>
+                        <div class="match_hover text-center">
+                            <p>14:56, МСК</p>
+                            <ul>
+                                <li>
+                                    <img src="img/resources/img/main/shved.png" alt="">
+                                    <p>Швеция</p>
+                                </li>
+                                <li>
+                                    <p>-</p>
+                                </li>
+                                <li>
+                                    <img src="img/resources/img/main/shved.png" alt="">
+                                    <p>Швеция</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">12</a></li>
+                    <li class="today"><a href="">13</a></li>
+                    <li><a href="">14</a></li>
+                    <li><a href="">15</a></li>
+                    <li><a href="">16</a></li>
+                    <li><a href="">17</a></li>
+                    <li><a href="">18</a></li>
+                    <li><a href="">19</a></li>
+                    <li><a href="">20</a></li>
+                </ul>
+                <img src="img/resources/img/arrow_right.png" alt="">
             </div>
         </div>
     </div>
@@ -93,12 +142,27 @@
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu5.jpg');">
-                    <h2><a ui-sref="dashboard.forecast">Прогнозы</a></h2>
+                    <h2><a ui-sref="dashboard.forecast.playoff">Прогнозы</a></h2>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu1.jpg');">
                     <h2><a ui-sref="dashboard.forum">Форум</a></h2>
+                </div>
+            </div>
+                <div class="col-md-4 wrapp_block">
+                <div class="block" style="background-image: url('img/resources/img/main/menu3.jpg');">
+                    <h2><a href="" ui-sref="dashboard.blog" >Блог</a></h2>
+                </div>
+            </div>
+            <div class="col-md-4 wrapp_block">
+                <div class="block" style="background-image: url('img/resources/img/main/menu2.jpg');">
+                    <h2><a href="">Календарь</a></h2>
+                </div>
+            </div>
+            <div class="col-md-4 wrapp_block">
+                <div class="block" style="background-image: url('img/resources/img/main/menu4.jpg');">
+                    <h2><a href="">Обзоры</a></h2>
                 </div>
             </div>
         </div>
@@ -145,8 +209,104 @@
         </div>
     </div>
 </section>
+<section class="wrapp_mainpage_slider">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- <div class="col-md-12"> -->
+                <slick infinite=true arrows=true dots=true slides-to-show=1 slides-to-scroll=1>
+                  <div class="item" style="background-image: url('img/resources/img/bg_star.png');">
+                        <div class="stars">
+                            <h5>Рубрика о звездах</h5>
+                            <h2><a href="#">Прерваный<br>полет</a></h2>
+                            <h6><a href="#">Валерий Харламов</a></h6>
+                            <p>(1948-1981)</p>
+                            <ul>
+                                <li><a href="#">Биография</a></li>
+                                <li><a href="#">Интервью</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="item" style="background-image: url('img/resources/img/bg_star.png');">
+                        <div class="stars">
+                            <h5>Рубрика о звездах</h5>
+                            <h2><a href="#">Прерваный<br>полет</a></h2>
+                            <h6><a href="#">Валерий Харламов</a></h6>
+                            <p>(1948-1981)</p>
+                            <ul>
+                                <li><a href="#">Биография</a></li>
+                                <li><a href="#">Интервью</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('img/resources/img/bg_star.png');">
+                        <div class="stars">
+                            <h5>Рубрика о звездах</h5>
+                            <h2><a href="#">Прерваный<br>полет</a></h2>
+                            <h6><a href="#">Валерий Харламов</a></h6>
+                            <p>(1948-1981)</p>
+                            <ul>
+                                <li><a href="#">Биография</a></li>
+                                <li><a href="#">Интервью</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </slick>
+            <!-- </div> -->
+        </div>
+    </div>
+</section> 
+<section class="wrapp_mainpage_timeline">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="top_"></div>
+            <div class="timeline_horisond"></div>
+            <ul>
+                <li class="min_l_min"> 
+                    <p>20 февраля</p>
+                    <p>20:12</p>
+                    <a href="#"><img src="img/resources/img/twiter_green.png" alt="" class="img-responsive"></a>
+                    <a href="#"><img src="img/resources/img/main/t_l_avatar.jpg" alt="" class="img-responsive"></a>
+                    <p class="tag"><a href="#">@verlamov</a></p>
+                    <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
+                </li>
+                <li class="min_l_3x"> 
+                    <p>20 февраля</p>
+                    <p>20:12</p>
+                    <img src="img/resources/img/twiter_green.png" alt="" class="img-responsive">
+                    <img src="img/resources/img/main/t_l_avatar.jpg" alt="" class="img-responsive">
+                    <p class="tag">@verlamov</p>
+                    <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
+                </li>
+                <li class="min_l_1x"> 
+                    <p>20 февраля</p>
+                    <p>20:12</p>
+                    <img src="img/resources/img/twiter_green.png" alt="" class="img-responsive">
+                    <img src="img/resources/img/main/t_l_avatar.jpg" alt="" class="img-responsive">
+                    <p class="tag">@verlamov</p>
+                    <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
+                </li>
+                <li class="min_l_2x"> 
+                    <p>20 февраля</p>
+                    <p>20:12</p>
+                    <img src="img/resources/img/twiter_green.png" alt="" class="img-responsive">
+                    <img src="img/resources/img/main/t_l_avatar.jpg" alt="" class="img-responsive">
+                    <p class="tag">@verlamov</p>
+                    <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
+                </li>
+                <li class="min_l_1x"> 
+                    <p>20 февраля</p>
+                    <p>20:12</p>
+                    <img src="img/resources/img/twiter_green.png" alt="" class="img-responsive">
+                    <img src="img/resources/img/main/t_l_avatar.jpg" alt="" class="img-responsive">
+                    <p class="tag">@verlamov</p>
+                    <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
+                </li>
 
-<!--<section class="wrapp_mainpage_tantam">
+            </ul>
+        </div>
+    </div>
+</section> 
+<section class="wrapp_mainpage_tantam">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
@@ -165,7 +325,23 @@
             </div>
         </div>
     </div>
-</section>-->
+</section>
+<section class="wrapp_mainpage_game hidden-xs">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="left">
+                    <h4>Флэш-игра</h4>
+                    <h2>Выбей шубу ;)</h2>
+                    <p>В безудержном соревновании "Порробуй догони" первенствовал<br> нападающий "Эдмонд Ойлера" Коннор макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную в карьере. Но покази <br> себя и ряд других игроков, поддержавшие почит форварда.  </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="img/resources/img/main/game.png" alt="" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</section>
 <section class="wrapp_mainpage_end">
     <div class="container-fluid">
         <div class="row">

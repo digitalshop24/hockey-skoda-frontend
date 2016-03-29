@@ -49,6 +49,10 @@ header {
     right:0;
     ul {
       display: inline-flex;
+      .activ_drop {
+        border-bottom: 3px solid $green_main;
+        
+      }
       li {
         display: inline-flex;
         text-transform: uppercase;
@@ -66,7 +70,7 @@ header {
         }
       }
       li:nth-child(1) {
-        padding-top: 21px !important;
+        padding-top: 16px !important;
       }
     }
   }
@@ -96,6 +100,24 @@ header {
       margin-bottom: 18px;
     }
   }
+  .dropdown_menu {
+    background-color: $white;
+    margin: 0 14px;
+    position: absolute;
+    width: 98%;
+    padding-bottom: 60px;
+    padding-top: 30px;
+    margin-top: 1px;
+    ul {
+      li {
+        padding: 10px 0 10px 10px;
+        border-bottom: 1px solid $grey;
+        a {
+          font-size: $p_size;
+        }
+      }
+    }
+  }
 }
 
 
@@ -118,13 +140,18 @@ text-align:center;
 }
 /*Strip the ul of padding and list styling*/
 .mobile-menu ul {
-  list-style-type:none;
+    list-style-type:none;
     margin: 0 auto;
     padding-left:0;
     text-align:center;
     width:100%;
-   position: absolute;
+    position: absolute;
     background: #fff;
+    .input_default {
+      width: 93%;
+      margin: 15px 0 15px 5px; 
+      font-family: $regular;
+    }
 }
 
 /*Create a horizontal list with spacing*/
@@ -132,6 +159,13 @@ text-align:center;
   display:inline-block;
   /*float: left;
   margin-right: 1px;*/
+  .arrows {
+    position: absolute;
+    padding: 0;
+    right: 12px;
+    margin-top: -33px;
+    width: 10px;
+  }
 }
 
 /*Style for menu links*/
@@ -139,18 +173,18 @@ text-align:center;
   display:block;
   min-width:140px;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #000;
   background: #fff;
   text-decoration: none;
   margin-left:-5px;
-  padding: 15px 20px;
-  font-size: 1.3rem;
--webkit-transition: all 0.4s ease 0s;
--moz-transition: all 0.4s ease 0s;
--ms-transition: all 0.4s ease 0s;
--o-transition: all 0.4s ease 0s;
-transition: all 0.4s ease 0s;
+  padding: 15px 30px;
+  font-size: $p_size;
+  font-family: $regular;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 /*Hover state for top level links*/
@@ -322,14 +356,14 @@ footer {
     margin-top: 20px;
     li{
       display:inline-block;
-      width: 27%;
+      width: 25%;
       a {
         text-decoration: underline;
         color: $white;
         font-size: $p_size;
         font-family: $bold;
       }
-      a:hover {
+      a:hover, a:focus {
         color: $white;
       }
     }
@@ -1102,7 +1136,7 @@ $grey_about: #5d5d5d;
     border: 0;
   }
   .item {
-    min-height: 700px;
+    min-height: 470px;
     color: $white;
     background-repeat:no-repeat;
     background-size: cover;
@@ -1112,6 +1146,7 @@ $grey_about: #5d5d5d;
     }
     h2 {
       margin: 0 0 20px 0;
+      text-transform: uppercase;
       
     }
     p {
@@ -1215,12 +1250,23 @@ $grey_about: #5d5d5d;
       height: 220px;
       background-size: cover;
       background-repeat: no-repeat;
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%);
-      -moz-filter: grayscale(100%);
-      -o-filter: grayscale(100%);
-      -ms-filter: grayscale(100%);
-     
+      opacity:1; -moz-opacity:1;
+    
+      .news_one_slider_bg {
+        background-color: #000;
+        height: 220px;
+        width: 100%;
+        position: relative;
+        z-index: 0;
+        opacity: 0.5;
+        -webkit-transition-duration: .3s;
+        -o-transition-duration: .3s;
+        -moz-transition-duration: .3s;
+        transition-duration: .3s;
+      }
+      .news_one_slider_bg:hover {
+        opacity: 0.2;
+      }
     }
     img {
       padding: 0 10px;
@@ -2404,6 +2450,14 @@ $grey_about: #5d5d5d;
   .left {
     margin-top: 20px;
     border-right: 2px solid $grey;
+    .soc_icon {
+      margin-top: 10px;
+      img {
+        display: inline-block;
+        padding-right: 5px;
+      }
+    }
+    
   }
   .right {
     margin-top: 20px;

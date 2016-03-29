@@ -7,16 +7,30 @@
         </label>
         <input type="checkbox" id="show-menu">
         <ul id="menu">
-            <li><a ui-sref="dashboard.general-news" ng-class="{'active_li': $state.includes('dashboard.main-news')
-                    || $state.includes('dashboard.general-news') }">Новости</a></li>
-            <li><a ui-sref="dashboard.forecast"
-                   ng-class="{'active_li': $state.includes('dashboard.forecast')}">Прогнозы</a></li>
+            <li><input type="text" class="input_default input_small" placeholder="Я ищу... "></li>
+            <li><a ui-sref="dashboard.general-news" ng-class="{'active_li': $state.includes('dashboard.general-news') }">Новости</a>
+              <img class="arrows" src="img/resources/img/arrow_right.png" alt="">      
+            </li>
+            <li><a ui-sref="dashboard.forecast.playoff"
+                   ng-class="{'active_li': $state.includes('dashboard.forecast.playoff') ||
+                   $state.includes('dashboard.forecast.companionship') }">Прогнозы</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""> </li>
             <li><a ui-sref="dashboard.forum"
-                   ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a></li>
+                   ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""> </li>
             <li><a ui-sref="dashboard.tdrive"
-                   ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a></li>
-            <li><a ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Призы</a></li>
-            <li><a ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Расписание матчей</a></li>
+                   ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""> </li>
+            <li><a ng-class="{'active_li': $state.includes('dashboard.prize')}">Призы</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""> </li>
+            <li><a href="">Расписание</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
+            <li><a href="">Календарь</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
+            <li><a href="">Тантамарезка</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
+            <li><a href="">Пожелание сборной России</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
+            <li><a href="">Инфографика сборной России</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
+            <li><a href="">Агрегатор соцсетей хоккеистов</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
+            <li><a href="">Хоккейные видео</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
+            <li><a href="">О звездах хоккея</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
+            <li><a href="">Junior Ice Hockey Cup</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
+            <li><a href="">Флэш-игра</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
+            <li><a href="">Девушки-Чирлидиры</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
+
         </ul>
 
 
@@ -25,6 +39,7 @@
                 <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive">
                 <img ng-show="ctrl.session.isAuthenticated" ng-click="ctrl.logout()" src="img/resources/img/log_out.png" alt="" class="img-responsive">
                 <span ng-click="ctrl.state.go('dashboard.profile')" ng-bind="ctrl.user.name"></span>
+
             </a>
         </div>
 
@@ -35,20 +50,24 @@
             <div class="col-sm-12 col-md-12 left_head text-left">
                 <a ui-sref="dashboard.main" class="logo"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
                 <ul>
-                    <li><a ui-sref="dashboard.general-news" ng-class="{'active_li': $state.includes('dashboard.main-news')
-                    || $state.includes('dashboard.general-news') }">Новости</a></li>
+                    <li><a ui-sref="dashboard.general-news" ng-class="{'active_li': $state.includes('dashboard.general-news') }">Новости</a></li>
                     <li><a ui-sref="dashboard.forecast.playoff"
-                           ng-class="{'active_li': $state.includes('dashboard.forecast')}">Прогнозы</a></li>
+                           ng-class="{'active_li': $state.includes('dashboard.forecast.playoff')}">Прогнозы</a></li>
                     <li><a ui-sref="dashboard.forum"
                            ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a></li>
                     <li><a ui-sref="dashboard.tdrive"
                            ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a></li>
                     <li><a href="#">Призы</a></li>
-            <li><a href="#">Расписание матчей</a></li>       
+                    <li><a href="#">Расписание </a></li>       
                 </ul>
             </div>
             <div class="right_head text-right hidden-xs">
                 <ul>
+                    <li ng-mouseover="ctrl.isMenuOpen = true">
+                        <a href="">
+                            <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
+                        </a>
+                    </li>
                     <li>
                         <a href="">
                             <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/singin.png" alt="" class="img-responsive">
@@ -56,10 +75,46 @@
                             <span ng-click="ctrl.state.go('dashboard.profile')" ng-bind="ctrl.user.name"></span>
                         </a>
                     </li>
-                    <!--<li><a href=""><img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive"></a></li>-->
-                    <!-- <li><a href=""><img src="img/resources/img/skoda_serch.jpg" alt="" class="img-responsive"></a></li> -->
                 </ul>
             </div>
+            
         </div>
     </div>
+        <div class="dropdown_menu" ng-mouseleave="ctrl.isMenuOpen = false" ng-show="ctrl.isMenuOpen">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <ul>
+                                <li><a href="" class="link_default">Календарь</a></li>
+                                <li><a href="" class="link_default">Тантамарезка</a></li>
+                                <li><a href="" class="link_default">Пожелание сборной России</a></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li><a href="" class="link_default">Инфографика сборной России</a></li>
+                                <li><a href="" class="link_default">Агрегатор соцсетей хоккеистов</a></li>
+                                <li><a href="" class="link_default">Хоккейные видео</a></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li><a href="" class="link_default">О звездах хоккея</a></li>
+                                <li><a href="" class="link_default">Junior Ice Hockey Cup</a></li>
+                                <li><a href="" class="link_default">Флэш-игра</a></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li><a href="" class="link_default">Девушки-Чирлидиры</a></li>
+                                
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>  
 </header>
