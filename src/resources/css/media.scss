@@ -19,7 +19,50 @@ $p_size: 1.4rem;
 
 
 /*==========  Desktop First Method  ==========*/
-
+@media only screen and (max-width : 2500px) {
+	.wrapp_mainpage_slider {
+			.item {
+				min-height: 1100px;
+			}
+	}	
+	.wrapp_mainpage_end {
+		min-height: 980px;
+	}	
+}
+@media only screen and (max-width : 1900px) {
+	.wrapp_mainpage_slider {
+			.item {
+				min-height: 1000px;
+			}
+	}
+	.wrapp_mainpage_end {
+		min-height: 900px;
+	}		
+}
+@media only screen and (max-width : 1700px) {
+	.wrapp_mainpage_slider {
+			.item {
+				min-height: 850px;
+			}
+	}		
+}
+@media only screen and (max-width : 1600px) {
+	.wrapp_mainpage_slider {
+			.item {
+				min-height: 780px;
+			}
+	}		
+	.wrapp_mainpage_end {
+		min-height: 800px;
+	}
+}
+@media only screen and (max-width : 1450px) {
+	.wrapp_mainpage_slider {
+			.item {
+				min-height: 750px;
+			}
+	}		
+}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 	//-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
@@ -54,6 +97,9 @@ $p_size: 1.4rem;
 	}
 	//-------------------------------------------------- main
 	.wrapp_mainpage_slider {
+		.item {
+			min-height: 750px;
+		}
 		.left {
 			margin-left: 10px;
 		}
