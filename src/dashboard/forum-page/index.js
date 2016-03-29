@@ -17,24 +17,32 @@ export default angular.module('dashboard.forum-page', [])
                 params: {
                     page: 1,
                     topicsPerPage: config.forum.messagesPerPage,
-                    topics: []
+                    topics: [],
+                    sort: 'last_activity'
                 },
                 resolve: {
                     section: ($stateParams, forumpageService) => {
                         return forumpageService.getForumPage($stateParams.id);
                     },
+
                     topicInfo: ($stateParams, forumpageService) => {
                         return forumpageService.getTopicsBySectionId($stateParams.id, $stateParams.page,
-                            $stateParams.topicsPerPage).then((res) => {
+                            $stateParams.topicsPerPage, $stateParams.sort).then((res) => {
                                 res.topics = $stateParams.topics.concat(res.topics);
                                 return res;
                             });
                     },
+
                     page: $stateParams => {
                         return $stateParams.page;
                     },
+
                     id: $stateParams => {
                         return $stateParams.id;
+                    },
+
+                    sort: $stateParams => {
+                        return $stateParams.sort;
                     }
                 }
             });

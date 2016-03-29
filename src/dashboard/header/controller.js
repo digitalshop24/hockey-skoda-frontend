@@ -1,12 +1,15 @@
 'use strict';
 
 export default class HeaderCtrl {
-    constructor(login, session, $state, auth) {
+    constructor(login, session, $state, auth, $scope) {
         this.loginService = login;
         this.user = session.user;
         this.session = session;
         this.state = $state;
         this.auth = auth;
+        $scope.$on('user:updated', (event,data) => {
+            this.user = data;
+        });
     }
 
     openLoginPopup() {

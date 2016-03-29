@@ -2,7 +2,7 @@
 
 
 export default class ForumpageCtrl {
-    constructor(section, topicInfo, login, session, id, page, $state, forumpageService, $modal) {
+    constructor(section, topicInfo, login, session, id, page, $state, forumpageService, $modal, sort) {
         this.section = section;
         this.topics = topicInfo.topics;
         this.totalPages = topicInfo.total_pages;
@@ -14,6 +14,7 @@ export default class ForumpageCtrl {
         this.service = forumpageService;
         this.message = "";
         this.modal = $modal;
+        this.sort = sort;
     }
 
     openEditor() {

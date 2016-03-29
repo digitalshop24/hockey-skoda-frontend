@@ -2,7 +2,7 @@
 
 
 export default class ProfileCtrl {
-    constructor(achievements, lastAchievements, profileService, user) {
+    constructor(achievements, lastAchievements, profileService, user, hints) {
         this.service = profileService;
         this.lastAchievements = lastAchievements;
         this.achievements = achievements;
@@ -14,6 +14,7 @@ export default class ProfileCtrl {
             achievement.currentBallAmount = achievement.current_points;
         });
         this.user = user;
+        this.hints = hints;
     }
 
     uploadAvatar(file) {

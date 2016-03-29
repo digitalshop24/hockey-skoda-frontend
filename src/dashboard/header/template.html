@@ -1,7 +1,7 @@
 <header>
 
     <nav class="mobile-menu hidden-md hidden-lg">
-        <img ui-sref="index" src="img/resources/img/logo.png" alt="" class="img-responsive">
+        <img ui-sref="dashboard.main" src="img/resources/img/logo.png" alt="" class="img-responsive">
         <label for="show-menu" class="show-menu">
             <div class="lines" id="mobile_menu"></div>
         </label>
@@ -33,7 +33,7 @@
     <div class="container-fluid hidden-xs hidden-sm">
         <div class="row">
             <div class="col-sm-12 col-md-12 left_head text-left">
-                <a ui-sref="index" class="logo"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
+                <a ui-sref="dashboard.main" class="logo"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
                 <ul>
                     <li><a ui-sref="dashboard.general-news" ng-class="{'active_li': $state.includes('dashboard.main-news')
                     || $state.includes('dashboard.general-news') }">Новости</a></li>

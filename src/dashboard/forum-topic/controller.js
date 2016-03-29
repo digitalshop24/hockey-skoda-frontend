@@ -5,6 +5,10 @@ export default class ForumtopicCtrl {
     constructor(topic, messageInfo, forumtopicService, messagesPerPage, $state, $stateParams) {
         this.topic = topic;
         this.messages = messageInfo.messages;
+        let counter = ($stateParams.page - 1) * messagesPerPage;
+        this.messages.forEach((message) => {
+            message.index = ++counter;
+        });
         this.isEditorOpen = false;
         this.forumtopicService = forumtopicService;
         this.topicMessagesAmount = topic.messages_count;
