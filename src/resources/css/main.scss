@@ -139,13 +139,18 @@ text-align:center;
 }
 /*Strip the ul of padding and list styling*/
 .mobile-menu ul {
-  list-style-type:none;
+    list-style-type:none;
     margin: 0 auto;
     padding-left:0;
     text-align:center;
     width:100%;
-   position: absolute;
+    position: absolute;
     background: #fff;
+    .input_default {
+      width: 93%;
+      margin: 15px 0 15px 5px; 
+      font-family: $regular;
+    }
 }
 
 /*Create a horizontal list with spacing*/
@@ -153,6 +158,13 @@ text-align:center;
   display:inline-block;
   /*float: left;
   margin-right: 1px;*/
+  .arrows {
+    position: absolute;
+    padding: 0;
+    right: 12px;
+    margin-top: -33px;
+    width: 10px;
+  }
 }
 
 /*Style for menu links*/
@@ -160,18 +172,18 @@ text-align:center;
   display:block;
   min-width:140px;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #000;
   background: #fff;
   text-decoration: none;
   margin-left:-5px;
-  padding: 15px 20px;
-  font-size: 1.3rem;
--webkit-transition: all 0.4s ease 0s;
--moz-transition: all 0.4s ease 0s;
--ms-transition: all 0.4s ease 0s;
--o-transition: all 0.4s ease 0s;
-transition: all 0.4s ease 0s;
+  padding: 15px 30px;
+  font-size: $p_size;
+  font-family: $regular;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 /*Hover state for top level links*/
