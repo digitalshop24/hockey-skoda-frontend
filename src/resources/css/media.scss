@@ -22,7 +22,7 @@ $p_size: 1.4rem;
 @media only screen and (max-width : 2500px) {
 	.wrapp_mainpage_slider {
 			.item {
-				min-height: 1100px;
+				min-height: 830px;
 			}
 	}	
 	.wrapp_mainpage_end {
@@ -32,7 +32,7 @@ $p_size: 1.4rem;
 @media only screen and (max-width : 1900px) {
 	.wrapp_mainpage_slider {
 			.item {
-				min-height: 1000px;
+				min-height: 770px;
 			}
 	}
 	.wrapp_mainpage_end {
@@ -42,14 +42,14 @@ $p_size: 1.4rem;
 @media only screen and (max-width : 1700px) {
 	.wrapp_mainpage_slider {
 			.item {
-				min-height: 850px;
+				min-height: 620px;
 			}
 	}		
 }
 @media only screen and (max-width : 1600px) {
 	.wrapp_mainpage_slider {
 			.item {
-				min-height: 780px;
+				min-height: 550px;
 			}
 	}		
 	.wrapp_mainpage_end {
@@ -59,7 +59,7 @@ $p_size: 1.4rem;
 @media only screen and (max-width : 1450px) {
 	.wrapp_mainpage_slider {
 			.item {
-				min-height: 750px;
+				min-height: 520px;
 			}
 	}		
 }
@@ -91,7 +91,7 @@ $p_size: 1.4rem;
 //-------------------------------------------------- end СЕРГЕЙ УШАНСЬКИЙ	
 	.wrapp_mainpage_slider {
 		.item {
-			min-height: 660px;
+			min-height: 430px;
 		}	 
 	}
 }
@@ -101,9 +101,7 @@ $p_size: 1.4rem;
 	}
 	//-------------------------------------------------- main
 	.wrapp_mainpage_slider {
-		.item {
-			min-height: 500px;
-		}
+		
 		.left {
 			margin-left: 10px;
 		}
@@ -172,7 +170,9 @@ $p_size: 1.4rem;
 		}
 	}
 	.wrapp_mainpage_slider {
-		
+		 .item {
+		 	min-height: 350px;
+		 }
 		.right {
 			text-align: center;
 			
@@ -215,7 +215,7 @@ $p_size: 1.4rem;
 @media only screen and (max-width : 768px) {
 	.wrapp_mainpage_slider {
 		.item {
-			min-height: 346px;
+			min-height: 300px;
 		}	 
 	}
 
@@ -449,7 +449,7 @@ $p_size: 1.4rem;
 @media only screen and (max-width : 664px) {
 	.wrapp_mainpage_slider {
 		.item {
-			min-height: 330px;
+			min-height: 250px;
 		}	 
 	}
 
@@ -535,7 +535,7 @@ $p_size: 1.4rem;
 }
 .wrapp_mainpage_slider {
 		.item {
-			min-height: 320px;
+			min-height: 260px;
 		}	 
 	}
 //	<!-- tantamareska -->
@@ -577,7 +577,7 @@ $p_size: 1.4rem;
 	  .timeline { left: 5%; }	
 	  .wrapp_mainpage_slider {
 		.item {
-			min-height: 300px;
+			min-height: 230px;
 		}	 
 	}
 }	
@@ -587,7 +587,7 @@ $p_size: 1.4rem;
 @media only screen and (max-width : 486px) {
 	.wrapp_mainpage_slider {
 		.item {
-			min-height: 250px;
+			min-height: 230px;
 		}	 
 	}
 }	
