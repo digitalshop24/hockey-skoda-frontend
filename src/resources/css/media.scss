@@ -89,7 +89,11 @@ $p_size: 1.4rem;
 }
 //<!--end tantamareska -->
 //-------------------------------------------------- end СЕРГЕЙ УШАНСЬКИЙ	
-	 
+	.wrapp_mainpage_slider {
+		.item {
+			min-height: 660px;
+		}	 
+	}
 }
 @media only screen and (max-width : 1100px) {
 	.wrapp_search p {
@@ -98,7 +102,7 @@ $p_size: 1.4rem;
 	//-------------------------------------------------- main
 	.wrapp_mainpage_slider {
 		.item {
-			min-height: 750px;
+			min-height: 500px;
 		}
 		.left {
 			margin-left: 10px;
@@ -209,6 +213,11 @@ $p_size: 1.4rem;
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	.wrapp_mainpage_slider {
+		.item {
+			min-height: 346px;
+		}	 
+	}
 
 	/*Disable Animation on Mobile Devices*/
 	.animated {
@@ -231,6 +240,7 @@ $p_size: 1.4rem;
 		-ms-animation: none !important;
 		animation: none !important;
 	}
+	
 //-------------------------------------------------- forum
 
 .topics {
@@ -437,6 +447,12 @@ $p_size: 1.4rem;
 }
 
 @media only screen and (max-width : 664px) {
+	.wrapp_mainpage_slider {
+		.item {
+			min-height: 330px;
+		}	 
+	}
+
 	.form{
 		.form_white {
 		    ul {
@@ -517,7 +533,11 @@ $p_size: 1.4rem;
 .col-xs-mob {
 	width:100%;
 }
-
+.wrapp_mainpage_slider {
+		.item {
+			min-height: 320px;
+		}	 
+	}
 //	<!-- tantamareska -->
 .wrapp_tantamareska {
 	h2 {
@@ -555,12 +575,21 @@ $p_size: 1.4rem;
 }	
 @media only screen and (max-width : 600px) {
 	  .timeline { left: 5%; }	
+	  .wrapp_mainpage_slider {
+		.item {
+			min-height: 300px;
+		}	 
+	}
 }	
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 486px) {
-	
+	.wrapp_mainpage_slider {
+		.item {
+			min-height: 250px;
+		}	 
+	}
 }	
 @media only screen and (max-width : 440px) {
 	h6{
@@ -769,6 +798,7 @@ $p_size: 1.4rem;
 
 
  @media only screen and (max-width : 846px) {
+ 	
 	.mob-forece {
 		display:block;
 		 .score {
