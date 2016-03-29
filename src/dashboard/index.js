@@ -19,7 +19,8 @@ import forecast from './forecast/index';
 import prize from './prize/index';
 import forumpage from './forum-page/index';
 import forumtopic from './forum-topic/index';
-import login from './login/index';
+import Login from './login/index';
+import Modal from './modal/index';
 import newspage from './news-page/index';
 import success from './success/index';
 import prizenew from './prize-new/index';
@@ -52,7 +53,8 @@ export default angular.module('dashboard',
         emailnew.name,
         passwordnew.name
     ])
-    .service('login', login)
+    .service('login', Login)
+    .service('modal', Modal)
     .config($stateProvider => {
         $stateProvider
             .state('dashboard', {
