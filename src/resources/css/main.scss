@@ -2450,6 +2450,14 @@ $grey_about: #5d5d5d;
   .left {
     margin-top: 20px;
     border-right: 2px solid $grey;
+    .soc_icon {
+      margin-top: 10px;
+      img {
+        display: inline-block;
+        padding-right: 5px;
+      }
+    }
+    
   }
   .right {
     margin-top: 20px;
