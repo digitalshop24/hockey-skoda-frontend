@@ -7,6 +7,7 @@ export default class HeaderCtrl {
         this.session = session;
         this.state = $state;
         this.auth = auth;
+        this.isMenuOpen = false;
         $scope.$on('user:updated', (event,data) => {
             this.user = data;
         });

@@ -64,7 +64,11 @@
             </div>
             <div class="right_head text-right hidden-xs">
                 <ul>
-                    <li class="activ_drop"><a href=""><img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive"></a></li>
+                    <li class="activ_drop" >
+                        <a href="" ng-mouseover="ctrl.isMenuOpen = true">
+                            <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
+                        </a>
+                    </li>
                     <li>
                         <a href="">
                             <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/singin.png" alt="" class="img-responsive">
@@ -76,43 +80,44 @@
                     <!-- <li><a href=""><img src="img/resources/img/skoda_serch.jpg" alt="" class="img-responsive"></a></li> -->
                 </ul>
             </div>
+            
         </div>
     </div>
-    <div class="dropdown_menu hidden">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3">
-                    <ul>
-                        <li><a href="" class="link_default">Календарь</a></li>
-                        <li><a href="" class="link_default">Тантамарезка</a></li>
-                        <li><a href="" class="link_default">Пожелание сборной России</a></li>
-                       
-                    </ul>
+        <div class="dropdown_menu" ng-mouseleave="ctrl.isMenuOpen = false" ng-show="ctrl.isMenuOpen">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <ul>
+                                <li><a href="" class="link_default">Календарь</a></li>
+                                <li><a href="" class="link_default">Тантамарезка</a></li>
+                                <li><a href="" class="link_default">Пожелание сборной России</a></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li><a href="" class="link_default">Инфографика сборной России</a></li>
+                                <li><a href="" class="link_default">Агрегатор соцсетей хоккеистов</a></li>
+                                <li><a href="" class="link_default">Хоккейные видео</a></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li><a href="" class="link_default">О звездах хоккея</a></li>
+                                <li><a href="" class="link_default">Junior Ice Hockey Cup</a></li>
+                                <li><a href="" class="link_default">Флэш-игра</a></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li><a href="" class="link_default">Девушки-Чирлидиры</a></li>
+                                
+                               
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <ul>
-                        <li><a href="" class="link_default">Инфографика сборной России</a></li>
-                        <li><a href="" class="link_default">Агрегатор соцсетей хоккеистов</a></li>
-                        <li><a href="" class="link_default">Хоккейные видео</a></li>
-                       
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <ul>
-                        <li><a href="" class="link_default">О звездах хоккея</a></li>
-                        <li><a href="" class="link_default">Junior Ice Hockey Cup</a></li>
-                        <li><a href="" class="link_default">Флэш-игра</a></li>
-                       
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <ul>
-                        <li><a href="" class="link_default">Девушки-Чирлидиры</a></li>
-                        
-                       
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+            </div>  
 </header>
