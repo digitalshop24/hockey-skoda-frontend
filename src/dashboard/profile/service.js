@@ -20,7 +20,7 @@ export default class ProfileService {
     update(data) {
         return this.api.put('/users/edit', data).then((res) => {
             this.session.user = Object.assign(this.session.user, res.data.user);
-            this.$rootScope.$broadcast('user:updated', res.data.user);
+            this.$rootScope.$broadcast('user:updated', this.session.user);
             return res.data;
         });
     }
