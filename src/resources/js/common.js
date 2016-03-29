@@ -39,6 +39,13 @@
 //     });
 // }
 
+function dropdownInit() {
+    $(function () {
+        $('#dropdown').click(function () {
+            $('.dropdown_menu').toggleClass('hidden');
+        });
+    });
+}
 
 function initTimeline() {
     $(function () {
