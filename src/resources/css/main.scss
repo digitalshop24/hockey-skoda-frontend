@@ -49,6 +49,9 @@ header {
     right:0;
     ul {
       display: inline-flex;
+      .activ_drop {
+        border-bottom: 3px solid $green_main;
+      }
       li {
         display: inline-flex;
         text-transform: uppercase;
@@ -66,7 +69,7 @@ header {
         }
       }
       li:nth-child(1) {
-        padding-top: 21px !important;
+        padding-top: 16px !important;
       }
     }
   }
@@ -94,6 +97,24 @@ header {
       margin-left: 7px;
       margin-top: 17px;
       margin-bottom: 18px;
+    }
+  }
+  .dropdown_menu {
+    background-color: $white;
+    margin: 0 14px;
+    position: absolute;
+    width: 98%;
+    padding-bottom: 60px;
+    padding-top: 30px;
+    margin-top: 1px;
+    ul {
+      li {
+        padding: 10px 0 10px 10px;
+        border-bottom: 1px solid $grey;
+        a {
+          font-size: $p_size;
+        }
+      }
     }
   }
 }
