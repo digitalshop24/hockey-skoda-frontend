@@ -9,6 +9,8 @@ export default class ProgressCtrl {
     }
 
     update() {
+        delete this.form.role;  // cause server doesn't except it
+        delete this.form.avatar;
         this.service.update(this.form).
             then(() => {
                 this.form = {};
