@@ -17,11 +17,12 @@ export default class ForumpageService {
         })
     }
 
-    getTopicsBySectionId(id, page, perPage) {
+    getTopicsBySectionId(id, page, perPage, sort) {
         return this.api.get(`/forum/sections/${id}/topics`, {
             params: {
                 page: page,
-                per_page: perPage
+                per_page: perPage,
+                sort: sort
             }
         }).then((res) => {
             res.data.topics.forEach((topic) => {

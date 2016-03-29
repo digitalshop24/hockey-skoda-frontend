@@ -29,9 +29,11 @@
                 <div class="col-md-12 text-right">
                     <div class="wrapp_filt">
                         <ul>
-                            <li><a href="#" class="active">Новые</a></li>
-                            <!--<li><a href="#">Популярные</a></li>
-                            <li><a href="#">Лучшие</a></li>-->
+                            <li><a ui-sref="dashboard.forum-page({sort:'last_activity'})" ui-sref-opts="{reload: true}"
+                                   ng-class="{'active': ctrl.sort == 'last_activity'}">Новые</a></li>
+                            <li><a ui-sref="dashboard.forum-page({sort:'count_view'})" ui-sref-opts="{reload: true}"
+                                   ng-class="{'active': ctrl.sort == 'count_view'}">Популярные</a></li>
+                            <!--<li><a href="#">Лучшие</a></li>-->
                         </ul>
                     </div>
                 </div>
