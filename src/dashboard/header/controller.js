@@ -8,7 +8,6 @@ export default class HeaderCtrl {
         this.state = $state;
         this.auth = auth;
         this.isMenuOpen = false;
-        console.log('this.isMenuOpen',this.isMenuOpen);
         $scope.$on('user:updated', (event,data) => {
             this.user = data;
         });

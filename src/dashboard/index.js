@@ -19,10 +19,10 @@ import forecast from './forecast/index';
 import prize from './prize/index';
 import forumpage from './forum-page/index';
 import forumtopic from './forum-topic/index';
-import login from './login/index';
+import Login from './login/index';
+import Modal from './modal/index';
 import newspage from './news-page/index';
 import success from './success/index';
-import spineditInit from './spinedit-init/index.js';
 import prizenew from './prize-new/index';
 import emailnew from './recover-password/index';
 import passwordnew from './password-new/index';
@@ -49,12 +49,12 @@ export default angular.module('dashboard',
         forumtopic.name,
         newspage.name,
         success.name,
-        spineditInit.name,
         prizenew.name,
         emailnew.name,
         passwordnew.name
     ])
-    .service('login', login)
+    .service('login', Login)
+    .service('modal', Modal)
     .config($stateProvider => {
         $stateProvider
             .state('dashboard', {

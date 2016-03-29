@@ -1,10 +1,8 @@
 'use strict';
 
 
-export default class ProfileCtrl {
-    constructor(achievements, lastAchievements, profileService, user, hints, moment) {
-        this.service = profileService;
-        this.lastAchievements = lastAchievements;
+export default class ProgressCtrl {
+    constructor(achievements) {
         this.achievements = achievements;
         this.achievements.forEach((achievement) => {
             achievement.max_points = achievement.max_points || '&#8734;'; // infinity sign
@@ -12,15 +10,6 @@ export default class ProfileCtrl {
                 Math.round((achievement.current_points / achievement.max_points) * 100) : 66;
             achievement.progressBarPercentage = 100 - achievement.percentage;
             achievement.currentBallAmount = achievement.current_points;
-        });
-        this.user = user;
-        this.hints = hints;
-        this.today = moment().format('DD MMMM');
-    }
-
-    uploadAvatar(file) {
-        this.service.uploadAvatar(file).then((res) => {
-            this.user.avatar = res.user.avatar;
         });
     }
 }
