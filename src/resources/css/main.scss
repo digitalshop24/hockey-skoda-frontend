@@ -363,7 +363,7 @@ footer {
         font-size: $p_size;
         font-family: $bold;
       }
-      a:hover {
+      a:hover, a:focus {
         color: $white;
       }
     }
