@@ -26,6 +26,9 @@ export default angular.module('dashboard.profile', [])
                     },
                     user: (profileService) => {
                         return profileService.getCurrentUser();
+                    },
+                    hints: (profileService) => {
+                        return profileService.getHints();
                     }
                 }
             });

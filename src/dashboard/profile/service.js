@@ -37,6 +37,12 @@ export default class ProfileService {
         });
     }
 
+    getHints() {
+        return this.api.get('/users/achievments/hints').then((res) => {
+            return res.data;
+        });
+    }
+
     uploadAvatar(file) {
 
         return this.Upload.upload({

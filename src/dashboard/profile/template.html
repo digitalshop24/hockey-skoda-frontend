@@ -11,7 +11,7 @@
                 <a href="#" class="hidden-xs"><h6 ng-bind="ctrl.user.name"></h6></a>
 
                 <ul>
-                    <li>
+                    <!--<li>
                         <a href="#"><img src="img/resources/img/fb.png" alt="" class="img-responsive"></a>
                         <a href="#"><img src="img/resources/img/twiter.png" alt="" class="img-responsive fix_left"></a>
                         <a href="#">
@@ -20,24 +20,14 @@
                                 <li class="text-center">+25</li>
                             </ul>
                         </a>
-                    </li>
-                    <li>
+                    </li>-->
+                    <li ng-repeat="hint in ctrl.hints">
                         <img src="img/resources/img/lk/addres.png" alt="" class="img-responsive hidden-xs">
-                        <h6>Россия, Калуга</h6>
+                        <h6></h6>
                         <a href="#">
                             <ul>
-                                <li>Добавить адрес</li>
-                                <li class="text-center">+50</li>
-                            </ul>
-                        </a>
-                    </li>
-                    <li>
-                        <img src="img/resources/img/lk/hobbi.png" alt="" class="img-responsive hidden-xs">
-                        <h6>Шкода Йети</h6>
-                        <a href="#">
-                            <ul>
-                                <li>Добавить хобби</li>
-                                <li class="text-center">+10</li>
+                                <li ng-bind="hint.achievment_type.hint"></li>
+                                <li class="text-center" ng-bind="'+' + hint.achievment_type.points"></li>
                             </ul>
                         </a>
                     </li>
@@ -47,6 +37,7 @@
                 <ul>
                     <li>
                         <a href=""><img src="img/resources/img/lk/roket.png" alt="" class="img-responsive">
+
                             <p class="active">Моя активность</p></a>
                     </li>
                 </ul>
@@ -54,31 +45,35 @@
             <div class="col-sm-6 col-md-6 lk_content">
                 <ul class="avatar">
 
-                    <li ngf-select="ctrl.uploadAvatar($file)" class="edit_hover"><img src="{{ctrl.user.avatar.thumb}}" alt="" class="img-responsive hidden-xs">
-                    <button class="edit btn btn_common tiny">Изменить</button>
+                    <li ngf-select="ctrl.uploadAvatar($file)" class="edit_hover"><img src="{{ctrl.user.avatar.thumb}}"
+                                                                                      alt=""
+                                                                                      class="img-responsive hidden-xs">
+                        <button class="edit btn btn_common tiny">Изменить</button>
                     </li>
-                        <h6 class="gir">Моя активность</h6>
-                        <h6>Сегодня, 5 марта</h6>
+                    <h6 class="gir">Моя активность</h6>
+                    <h6>Сегодня, 5 марта</h6>
                     </li>
                 </ul>
                 <ul class="text-center">
-                <slick slides-to-show=1>
-                <div ng-repeat="achievement in ctrl.achievements">
-                    <li>
-                        <h5 ng-bind-html="achievement.max_points"></h5>
+                    <slick slides-to-show=4>
+                        <div ng-repeat="achievement in ctrl.achievements">
+                            <li>
+                                <h5 ng-bind-html="achievement.max_points"></h5>
 
-                        <div class="progress vertical green_progress">
-                            <div class="progress_bg_color" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                                 aria-valuemax="100"
-                                 style="height: {{achievement.progressBarPercentage}}% ;width: 10px;">
-                            </div>
+                                <div class="progress vertical green_progress">
+                                    <div class="progress_bg_color" role="progressbar" aria-valuenow="50"
+                                         aria-valuemin="0"
+                                         aria-valuemax="100"
+                                         style="height: {{achievement.progressBarPercentage}}% ;width: 10px;">
+                                    </div>
+                                </div>
+
+                                <p class="bold" ng-bind="achievement.name"></p>
+
+                                <p>Набрано {{achievement.currentBallAmount}}</p>
+                            </li>
                         </div>
-
-                        <p class="bold" ng-bind="achievement.name"></p>
-                        <p>Набрано {{achievement.currentBallAmount}}</p>
-                    </li>
-                </div>
-                </slick>
+                    </slick>
                 </ul>
             </div>
             <div class="col-sm-2 col-md-2 lk_plus ">
@@ -94,7 +89,7 @@
                                 </ul>
                             </a>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
