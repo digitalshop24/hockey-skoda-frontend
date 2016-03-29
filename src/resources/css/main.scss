@@ -51,9 +51,7 @@ header {
       display: inline-flex;
       .activ_drop {
         border-bottom: 3px solid $green_main;
-        #dropdown:hover + .dropdown_menu {
-          display:block;
-        }
+        
       }
       li {
         display: inline-flex;
@@ -110,7 +108,6 @@ header {
     padding-bottom: 60px;
     padding-top: 30px;
     margin-top: 1px;
-    display: none;
     ul {
       li {
         padding: 10px 0 10px 10px;
