@@ -80,6 +80,15 @@ export default angular.module('app',
     })
     .run(($rootScope) => {
 
+        $rootScope.$on('$stateChangeSuccess', (event, toState) => {
+            if (toState.meta) {
+                $rootScope.metaTitle = toState.meta.title;
+                $rootScope.metaDescription = toState.meta.description;
+            }
+        });
+    })
+    .run(($rootScope) => {
+
         $rootScope.$on('$stateChangeStart', (event, toState) => {
             if (['dashboard.forum', 'dashboard.blog', 'dashboard.facts'].indexOf(toState.name) == -1) {
                 window.scrollTo(0, 0);

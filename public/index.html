@@ -2,7 +2,8 @@
 <html lang="ru" ng-app="app">
     <head>
         <meta charset="utf-8">
-        <title>Skoda-Hockey</title>
+        <title ng-bind="metaTitle"></title>
+        <meta property="og:description" content="{{metaDescription}}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/vendor.min.css" type="text/css"/>
         <link rel="stylesheet" href="/app.min.css" type="text/css"/>
