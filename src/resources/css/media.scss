@@ -65,8 +65,7 @@ $p_size: 1.4rem;
 }
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-	//-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
-// <!-- share -->
+
 	.wrapp_toggle_share {
 		ul {
 			li {
@@ -77,18 +76,14 @@ $p_size: 1.4rem;
 			}
 		}
 	}
-	// <!--end share -->
-//	<!-- tantamareska -->
-.wrapp_tantamareska {
-	h2 {
-		font-size:4rem;
+	.wrapp_tantamareska {
+		h2 {
+			font-size:4rem;
+		}
+		.btn {
+			float:right;
+		}
 	}
-	.btn {
-		float:right;
-	}
-}
-//<!--end tantamareska -->
-//-------------------------------------------------- end СЕРГЕЙ УШАНСЬКИЙ	
 	.wrapp_mainpage_slider {
 		.item {
 			min-height: 430px;
@@ -99,7 +94,6 @@ $p_size: 1.4rem;
 	.wrapp_search p {
 		display: none;
 	}
-	//-------------------------------------------------- main
 	.wrapp_mainpage_slider {
 		
 		.left {
@@ -109,7 +103,7 @@ $p_size: 1.4rem;
 			margin-right: 10px; 
 		}
 	}
-	//-------------------------------------------------- end main
+	
 }
 
 
@@ -118,14 +112,12 @@ $p_size: 1.4rem;
 	.left_head {
 		text-align:center;
 	}
-
-	
 	footer {
 		h5 {
 			padding-top: 10px;
 		}
 	}
-	.about_first { // about
+	.about_first { 
 		background-image: url("none.png");
 		.wrapp_titel {
     		float: none;
@@ -147,19 +139,12 @@ $p_size: 1.4rem;
 			margin: 40px auto;
 		}
 	}
-	//-------------------------------------------------- t-drive
-
 	.form_t_drive {
 		div {
 			text-align: center;
 		}
 		
 	}
-
-	//-------------------------------------------------- end t-drive
-
-
-	//-------------------------------------------------- main
 	.wrapp_mainpage_present {
 		text-align: center;
 	}
@@ -185,11 +170,6 @@ $p_size: 1.4rem;
 			border: none;
 		}
 	}
-
-	//-------------------------------------------------- end main
-
-//-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
-// <!-- share -->
 	.wrapp_toggle_share {
 		ul {
 			text-align:center;
@@ -204,11 +184,6 @@ $p_size: 1.4rem;
 			}
 		}
 	}
-	// <!--end share -->
-//-------------------------------------------------- end СЕРГЕЙ УШАНСЬКИЙ
-	
-	
-	
 }
 
 /* Small Devices, Tablets */
@@ -219,6 +194,12 @@ $p_size: 1.4rem;
 		}	 
 	}
 	.wrapp_slider_stars {
+		.slick-next {
+			background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 14% center;
+		}
+		.slick-prev {
+			background: rgba(0,0,0,1) url("img/resources/img/arrow_left_white.png") no-repeat 86% center;
+		}
 		.stars {
 			text-align: center;
 		}
@@ -246,21 +227,11 @@ $p_size: 1.4rem;
 		-ms-animation: none !important;
 		animation: none !important;
 	}
-	
-//-------------------------------------------------- forum
-
-.topics {
-	.wrapp_static {
-		text-align: left;
-	}
-}	
-
-
-
-//-------------------------------------------------- end forum	
-//-------------------------------------------------- lk
-
-
+	.topics {
+		.wrapp_static {
+			text-align: left;
+		}
+	}	
 	.wrapp_lk {
 		.lk_info {
 			min-height: 0;
@@ -325,9 +296,6 @@ $p_size: 1.4rem;
 			}
 		}
 	}
-	//-------------------------------------------------- end lk
-
-	//-------------------------------------------------- news
 	.wrapp_news_all .menu_line ul {
 		margin-top: 10px;
 	}
@@ -360,10 +328,6 @@ $p_size: 1.4rem;
 			}
 		}
 	}		
-
-	//-------------------------------------------------- news
-//-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
-// <!-- share -->
  	.wrapp_toggle_share {
 		ul {
 			li {
@@ -372,11 +336,6 @@ $p_size: 1.4rem;
 			}
 		}
 	}
-	// <!--end share -->
-//-------------------------------------------------- end СЕРГЕЙ УШАНСЬКИЙ
-
-// -------------------------------------------------- facts (ANDREY)
-
 	.factSection {
 		padding: 60px 20px;
 		figure {
@@ -414,7 +373,6 @@ $p_size: 1.4rem;
 				width:70px;
 			}
 		}
-
 	}
 	.prizesSection.score1 {
 			background-image: url('img/resources/img/prizesPage/priz10mob.png');
@@ -446,10 +404,6 @@ $p_size: 1.4rem;
 			p {margin-bottom: 0;}
 		}
 	}
-
-
-	// -------------------------------------------------- end facts (ANDREY)
-
 }
 
 @media only screen and (max-width : 664px) {
@@ -502,42 +456,36 @@ $p_size: 1.4rem;
 		   margin-left: 0px ;
 		}
 	}	
-//-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
-//	<!-- tantamareska -->
-.wrapp_tantamareska {
-	h2 {
-		font-size:5rem;
-		text-transform: uppercase;
-		font-family: 'SkodaProExtraBold';
+	.wrapp_tantamareska {
+		h2 {
+			font-size:5rem;
+			text-transform: uppercase;
+			font-family: 'SkodaProExtraBold';
+		}
+		.btn {
+			float:right;
+			position:relative;
+			top:5px;
+		}
 	}
-	.btn {
-		float:right;
-		position:relative;
-		top:5px;
-	}
-}
 
-//<!--end tantamareska -->
-// <!-- share -->
- .wrapp_toggle_share {
- 	.toggle_button {
- 		.tiny {
- 			padding:15px 56px;
- 			font-size:1.7rem;
+	 .wrapp_toggle_share {
+	 	.toggle_button {
+	 		.tiny {
+	 			padding:15px 56px;
+	 			font-size:1.7rem;
 
- 			font-size:'SkodaProBold';
- 		}
- 	}
- }
-	// <!--end share -->
-// <!-- slider -->
- .wrapp_slider .slick-arrow {
- 	display:none !important;
- }
-	// <!--end slider -->
-//-------------------------------------------------- end СЕРГЕЙ УШАНСЬКИЙ	  
+	 			font-size:'SkodaProBold';
+	 		}
+	 	}
+	 }
+
+	 .wrapp_slider .slick-arrow {
+	 	display:none !important;
+	 }
+		  
 @media only screen and (max-width : 635px) {
-	//-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
+	
 .col-xs-mob {
 	width:100%;
 }
@@ -562,23 +510,16 @@ $p_size: 1.4rem;
 		float:none;
 	}
 }
+	.wrapp_toggle_share {
+	 	.toggle_button {
+	 		.tiny {
+	 			padding:15px 56px;
+	 			font-size:1.7rem;
 
-//<!--end tantamareska -->
-// <!-- share -->
- .wrapp_toggle_share {
- 	.toggle_button {
- 		.tiny {
- 			padding:15px 56px;
- 			font-size:1.7rem;
-
- 			font-size:'SkodaProBold';
- 		}
- 	}
- }
-	// <!--end share -->
-
-//-------------------------------------------------- end СЕРГЕЙ УШАНСЬКИЙ
-
+	 			font-size:'SkodaProBold';
+	 		}
+	 	}
+	}
 }		
 }	
 @media only screen and (max-width : 600px) {
@@ -606,15 +547,11 @@ $p_size: 1.4rem;
 	p{
 		font-size: 1.2rem;
 	}
-
-
-//-------------------------------------------------- about
 	.form {
 		input {
 			width: 90%
 		}
 	}
-//-------------------------------------------------- end about
 }	
 
 /* Custom, iPhone Retina */

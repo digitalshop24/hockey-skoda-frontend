@@ -26,6 +26,8 @@ import success from './success/index';
 import prizenew from './prize-new/index';
 import emailnew from './recover-password/index';
 import passwordnew from './password-new/index';
+import stars from './stars/index';
+import score from './score/index';
 
 
 
@@ -51,7 +53,9 @@ export default angular.module('dashboard',
         success.name,
         prizenew.name,
         emailnew.name,
-        passwordnew.name
+        passwordnew.name,
+        stars.name,
+        score.name
     ])
     .service('login', Login)
     .service('modal', Modal)
