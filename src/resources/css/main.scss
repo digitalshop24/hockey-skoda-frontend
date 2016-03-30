@@ -1107,13 +1107,25 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- main
 
 .wrapp_slider_stars {
+  .slick-next {
+    background: rgba(0,0,0,0) url("img/resources/img/arrow_right_white.png") no-repeat 14% center;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+  }
+  .slick-prev {
+    background: rgba(0, 0, 0, 0) url("img/resources/img/arrow_left_white.png") no-repeat 86% center;
+    left: -60px;
+    width: 100px;
+    height: 100px;
+  }
   .stars {
     min-height: 470px;
     color: $white;
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center center;
-    padding: 0 30px;
+    padding: 0 70px;
     min-height: 500px;
     h5 {
       font-family: $light;  
@@ -1346,19 +1358,25 @@ $grey_about: #5d5d5d;
             display: block;
       }
       .match_hover {
-          display:none;
+          display: none;
           border: 1px solid $green_main;
           z-index: 1000;
           background-color: #fff;
           position: absolute;
-          margin-left: -6%;
-          margin-top: 2%;
+          margin-top: 20px;
+          p {
+            font-size: $p_size;
+            padding-top: 5px;
+          }
           ul {
-            width: auto;
-            padding: 10px 30px;
+            width: 200px;
+            padding: 20px 0;
             li {
               display: inline-block;
-              width: auto;
+              width: 30%;
+              img {
+                margin: 0 auto;
+              }
             }
           }
       }
@@ -1372,9 +1390,10 @@ $grey_about: #5d5d5d;
         border-left: 1px solid $green_main;
         transform: rotate(45deg);
         position: absolute;
-        z-index: 1001;
-        margin-left: -55%;
-        margin-top: -19%;
+        z-index: -1;
+        top: -11px;
+        margin-left: -54px;
+        
       }
       .today {
         color: $green_main; 
@@ -1395,6 +1414,7 @@ $grey_about: #5d5d5d;
 
 .wrapp_mainpage_menublock {
   position:relative;
+  z-index: -1;
   .wrapp_block {
     padding: 1px;
     .block {
@@ -1483,13 +1503,13 @@ $grey_about: #5d5d5d;
      margin-left: 1%;
     }
     .min_l_1x {
-      margin-left: 4%;
+      margin-left: 2%;
     }
     .min_l_2x {
-      margin-left: 8%;
+      margin-left: 4%;
     }
     .min_l_3x {
-      margin-left: 16%;
+      margin-left: 13%;
     }
   }
 }
