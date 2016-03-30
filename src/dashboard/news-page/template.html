@@ -1,22 +1,37 @@
 <section class="wrapp_one_news">
     <div class="container">
         <div class="row">
-            <div class="col-md-12"> 
+            <div class="col-md-12">
                 <h6 ng-bind="ctrl.news.published_at | amDateFormat:'DD MMMM'"></h6>
                 <ul class="breadcrumbs">
                     <li><a ui-sref="{{ctrl.rubricState}}" ng-bind="ctrl.rubric.name" class="link_default"></a></li>
-                    <li> > </li>
+                    <li> ></li>
                     <li><a href="" ng-bind="ctrl.news.name" class="link_default">Заголовок типовой новости</a></li>
                 </ul>
 
                 <h3 ng-bind="ctrl.news.name"></h3>
+
                 <div ng-bind-html="ctrl.news.content"></div>
                 <ul class="soc">
                     <li><p>Рассказать друзьям:</p></li>
-                    <li><a href="#"><img src="img/resources/img/insta_grey.png" alt="" class="img-responsive"></a></li>
-                    <li><a href="#"><img src="img/resources/img/fb_grey.png" alt="" class="img-responsive"></a></li>
-                    <li><a href="#"><img src="img/resources/img/twiter_grey.png" alt="" class="img-responsive"></a></li>
-                    <li><a href="#"><img src="img/resources/img/vk_grey.png" alt="" class="img-responsive"></a></li>
+                    <!--<li><a socialshare socialshare-provider="facebook"
+                           socialshare-text="{{ctrl.news.title}} + {{ctrl.news.description}}"
+                           socialshare-hashtags="#хоккей"
+                           socialshare-url="{{ctrl.socialShareUrl}}" >
+                        <img src="img/resources/img/insta_grey.png" alt="" class="img-responsive"></a></li>-->
+                    <li><a socialshare socialshare-provider="facebook"
+                           socialshare-text="{{ctrl.socialShareText}}"
+                           socialshare-url="{{ctrl.socialShareUrl}}">
+                        <img src="img/resources/img/fb_grey.png" alt="" class="img-responsive"></a></li>
+                    <li><a socialshare socialshare-provider="twitter"
+                           socialshare-text="{{ctrl.news.title}} + {{ctrl.news.description}}"
+                           socialshare-hashtags="хоккей"
+                           socialshare-url="{{ctrl.socialShareUrl}}">
+                        <img src="img/resources/img/twiter_grey.png" alt="" class="img-responsive"></a></li>
+                    <li><a socialshare socialshare-provider="vk"
+                           socialshare-text="{{ctrl.socialShareText}}"
+                           socialshare-url="{{ctrl.socialShareUrl}}">
+                        <img src="img/resources/img/vk_grey.png" alt="" class="img-responsive"></a></li>
                 </ul>
             </div>
         </div>
