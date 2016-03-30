@@ -1106,7 +1106,44 @@ $grey_about: #5d5d5d;
 
 //-------------------------------------------------- main
 
-
+.wrapp_slider_stars {
+  .stars {
+    min-height: 470px;
+    color: $white;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 0 30px;
+    min-height: 500px;
+    h5 {
+      font-family: $light;  
+      margin: 100px 0 10px 0;
+    }
+    h2 {
+      margin: 20px 0 20px 0;
+      text-transform: uppercase;
+      font-family: $bold;
+      a {
+        color: $white;
+      }
+      
+    }
+    p {
+      font-size: $p_size;
+      padding-top:10px;
+    }
+    ul {
+      padding-top: 20px;
+      li {
+        padding-top: 5px;
+        a {
+          font-size: $p_size;
+          font-family: $bold;
+        }
+      }
+    }
+  }
+}
 .wrapp_mainpage_slider {
   // background-color: #f1f1f1;
 
@@ -1170,6 +1207,15 @@ $grey_about: #5d5d5d;
         }
       }
     }
+    .mob_h2 {
+      margin-top: 50px;
+      h2 {
+        font-family: $bold;
+        a {
+          color: $green_main;
+        }
+      }
+    }
     .stars {
       margin-left: 150px;
       h5 {
@@ -1205,35 +1251,7 @@ $grey_about: #5d5d5d;
     }
   }
 
-  .owl-theme .owl-controls  {
-    .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
-      background-color: $green_main !important;; 
-    }
-    .owl-page span {
-      background-color: $white !important;
-      opacity: 1 !important;
-    }
-    .owl-buttons {
-      div {
-        border-radius: 0;
-        background-color: RGBA(134, 151, 145, 0);
-        height: 47px;
-        width: 25px;
-      }  
-      .owl-prev  {
-        background-image: url('img/resources/img/arrow_left_white.png');
-        position: absolute;
-        left: 20px;
-        top: 30vh;
-      }
-      .owl-next  {
-        background-image: url('img/resources/img/arrow_right_white.png');
-        position: absolute;
-        right: 20px;
-        top: 30vh;
-      }
-    }
-  }
+
 }
 .wrapp_mainpage_new {
   h3 {
@@ -1295,35 +1313,54 @@ $grey_about: #5d5d5d;
   }
 }
 .wrapp_mainpage_data {
-  padding: 50px 0px 50px 30px;
-  ul {
-    display: inline-block;
-    width: 90%;
-    margin: 0 auto;
-    li {
-      display: inline-block;
-      font-size: 2rem;
-      // margin: 0 20px 0 20px;
-      width: 9%;
+  padding: 50px 0 50px 0;
+  slick {
+    height: 50px;
+    .slick-slide {
+      height: 200px;
+    }
+    .slick-next {
+      background: rgba(75,168,46,0) url("img/resources/img/arrow_right.png") no-repeat 0 center;
+      right: -40px;
+      width: 55px;
+      height: 51px;
+      top: 0;
+    }
+    .slick-prev {
+      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left.png") no-repeat 100% center;
+      left: -40px;
+      width: 55px;
+      height: 51px;
+      top: 0;
+    }
+      a {
+        font-size: 2rem;
+      }
       a:hover {
-        color: $green_main;
-      }  
+          color: $green_main;
+          .match_hover {
+            display: block;
+       }
+      }
+      a:hover ~ .match_hover {
+            display: block;
+      }
       .match_hover {
-        display:none;
-        border: 1px solid $green_main;
-        z-index: 1000;
-        background-color: #fff;
-        position: absolute;
-        margin-left: -6%;
-        margin-top: 2%;
-        ul {
-          width: auto;
-          padding: 10px 30px;
-          li {
-            display: inline-block;
+          display:none;
+          border: 1px solid $green_main;
+          z-index: 1000;
+          background-color: #fff;
+          position: absolute;
+          margin-left: -6%;
+          margin-top: 2%;
+          ul {
             width: auto;
+            padding: 10px 30px;
+            li {
+              display: inline-block;
+              width: auto;
+            }
           }
-        }
       }
       
       .match_hover:after {
@@ -1339,32 +1376,25 @@ $grey_about: #5d5d5d;
         margin-left: -55%;
         margin-top: -19%;
       }
-    }
-    li:hover {
-      .match_hover {
-        display: block;
+      .today {
+        color: $green_main; 
       }
-    }
-    .today {
-      a {
-          color: $green_main; 
+      .today:after {
+        content: " ";
+        color: #4ba82e;
+        position: absolute;
+        margin-top: 36px;
+        margin-left: -10px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #4ba82e;
       }
-    }
-    .today:after {
-      content: " ";
-      color: #4ba82e;
-      position: absolute;
-      margin-top: 36px;
-      margin-left: -0.8%;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background-color: #4ba82e;
-    }
-    
+    }  
   }
-}
+
 .wrapp_mainpage_menublock {
+  position:relative;
   .wrapp_block {
     padding: 1px;
     .block {

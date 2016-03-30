@@ -14,51 +14,15 @@
                             Коннор макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную
                             в карьере. Но покази <br> себя и ряд других игроков, поддержавшие почит форварда. </p>
                     </div>
-                    <div class="right">
+                    <div class="right hidden-sm hidden-xs">
                         <h5>Молния!</h5>
                         <ul>
                             <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.lighting_text"></a></li>
                         </ul>
                     </div>
+                    <div class="text-center mob_h2 hidden-md hidden-lg"> <h2><a href="">22-й раз мы вместе<br> со сборной россии</a></h2></div>
                 </div>
-                <!-- <div class="item" style="background-image: url('img/resources/img/main/slide1.jpg');">
-                    <div class="left hidden-sm hidden-xs">
-                        <h5>Промо-блок</h5>
-
-                        <h2>22-й раз мы вместе<br> со сборной россии</h2>
-
-                        <p>В безудержном соревновании "Порробуй догони" первенствовал<br> нападающий "Эдмонд Ойлера"
-                            Коннор макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную
-                            в карьере. Но покази <br> себя и ряд других игроков, поддержавшие почит форварда. </p>
-                    </div>
-                    <div class="right">
-                        <h5>Молния!</h5>
-                        <ul>
-                            <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.name"></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('img/resources/img/main/slide1.jpg');">
-                    <div class="left hidden-sm hidden-xs">
-                        <h5>Промо-блок</h5>
-
-                        <h2>22-й раз мы вместе<br> со сборной россии</h2>
-
-                        <p>В безудержном соревновании "Порробуй догони" первенствовал<br> нападающий "Эдмонд Ойлера"
-                            Коннор макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную
-                            в карьере. Но покази <br> себя и ряд других игроков, поддержавшие почит форварда. </p>
-                    </div>
-                    <div class="right">
-                        <h5>Молния!</h5>
-                        <ul>
-                            <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.name"></a></li>
-                        </ul>
-                    </div>
-                </div> -->
             </slick>
-            <!--<div slider-init class="date_slider_news">
-
-            </div>-->
         </div>
     </div>
 </section>
@@ -88,17 +52,16 @@
 <section class="wrapp_mainpage_data">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-2 hidden-xs hidden-sm">
                 <select name="" id="" class="input_default input_small select_default">
                     <option value="">Все события</option>
                     <option value="">Не все события</option>
                     <option value="">Часть событий</option>
                 </select>   
             </div>
-            <div class="col-md-10 text-center">
-                <img src="img/resources/img/arrow_left.png" alt="">
-                <ul>
-                    <li>
+            <div class="col-xs-12 col-sm-12 col-md-10 text-center">
+                <slick infinite=true arrows=true  slides-to-show=10 slides-to-scroll=4>   
+                    <div>
                         <a href="">11</a>
                         <div class="match_hover text-center">
                             <p>14:56, МСК</p>
@@ -116,18 +79,63 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
-                    <li><a href="">12</a></li>
-                    <li class="today"><a href="">13</a></li>
-                    <li><a href="">14</a></li>
-                    <li><a href="">15</a></li>
-                    <li><a href="">16</a></li>
-                    <li><a href="">17</a></li>
-                    <li><a href="">18</a></li>
-                    <li><a href="">19</a></li>
-                    <li><a href="">20</a></li>
-                </ul>
-                <img src="img/resources/img/arrow_right.png" alt="">
+
+                    </div>
+                    <div><a href="" class="today">12</a></div>
+                    <div><a href="">13</a></div>
+                    <div><a href="">14</a></div>
+                    <div><a href="">15</a></div>
+                    <div><a href="">16</a></div>
+                    <div><a href="">17</a></div>
+                    <div><a href="">18</a></div>
+                    <div><a href="">19</a></div>
+                    <div><a href="">20</a></div>
+                    <div><a href="">21</a></div>
+                    <div><a href="">22</a></div>
+                    <div><a href="">23</a></div>
+                    <div><a href="">24</a></div>
+                    <div><a href="">25</a></div>
+                    <div><a href="" >26</a></div>
+                    <div><a href="">27</a></div>
+                    <div><a href="">28</a></div>
+                    <div><a href="">29</a></div>
+                    <div><a href="">30</a></div>
+                    <div><a href="">31</a></div>
+                    <div><a href="">1</a></div>
+                    <div><a href="">2</a></div>
+                    <div><a href="">3</a></div>
+                    <!-- <ul>
+                        <li>
+                            
+                            <div class="match_hover text-center">
+                                <p>14:56, МСК</p>
+                                <ul>
+                                    <li>
+                                        <img src="img/resources/img/main/shved.png" alt="">
+                                        <p>Швеция</p>
+                                    </li>
+                                    <li>
+                                        <p>-</p>
+                                    </li>
+                                    <li>
+                                        <img src="img/resources/img/main/shved.png" alt="">
+                                        <p>Швеция</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="">12</a></li>
+                        <li class="today"><a href="">13</a></li>
+                        <li><a href="">14</a></li>
+                        <li><a href="">15</a></li>
+                        <li class="hidden-xs hidden-sm"><a href="">16</a></li>
+                        <li class="hidden-xs hidden-sm"><a href="">17</a></li>
+                        <li class="hidden-xs hidden-sm"><a href="">18</a></li>
+                        <li class="hidden-xs hidden-sm"><a href="">19</a></li>
+                        <li class="hidden-xs hidden-sm"><a href="">20</a></li>
+                    </ul> -->
+                </slick>       
+               
             </div>
         </div>
     </div>
@@ -209,13 +217,13 @@
         </div>
     </div>
 </section>
-<section class="wrapp_mainpage_slider">
+<section class="wrapp_slider_stars">
     <div class="container-fluid">
         <div class="row">
             <!-- <div class="col-md-12"> -->
-                <slick infinite=true arrows=true dots=true slides-to-show=1 slides-to-scroll=1>
-                  <div class="item" style="background-image: url('img/resources/img/bg_star.png');">
-                        <div class="stars">
+                <slick infinite=true arrows=true slides-to-show=1 slides-to-scroll=1>
+
+                        <div class="stars" style="background-image: url('img/resources/img/bg_star.png');">
                             <h5>Рубрика о звездах</h5>
                             <h2><a href="#">Прерваный<br>полет</a></h2>
                             <h6><a href="#">Валерий Харламов</a></h6>
@@ -225,9 +233,7 @@
                                 <li><a href="#">Интервью</a></li>
                             </ul>
                         </div>
-                    </div>
-                     <div class="item" style="background-image: url('img/resources/img/bg_star.png');">
-                        <div class="stars">
+                        <div class="stars" style="background-image: url('img/resources/img/bg_star.png');">
                             <h5>Рубрика о звездах</h5>
                             <h2><a href="#">Прерваный<br>полет</a></h2>
                             <h6><a href="#">Валерий Харламов</a></h6>
@@ -237,9 +243,7 @@
                                 <li><a href="#">Интервью</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="item" style="background-image: url('img/resources/img/bg_star.png');">
-                        <div class="stars">
+                        <div class="stars" style="background-image: url('img/resources/img/bg_star.png');">
                             <h5>Рубрика о звездах</h5>
                             <h2><a href="#">Прерваный<br>полет</a></h2>
                             <h6><a href="#">Валерий Харламов</a></h6>
@@ -249,8 +253,7 @@
                                 <li><a href="#">Интервью</a></li>
                             </ul>
                         </div>
-                    </div>
-                </slick>
+                 </slick>
             <!-- </div> -->
         </div>
     </div>
@@ -277,7 +280,7 @@
                     <p class="tag">@verlamov</p>
                     <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
                 </li>
-                <li class="min_l_1x"> 
+                <li class="min_l_1x hidden-xs"> 
                     <p>20 февраля</p>
                     <p>20:12</p>
                     <img src="img/resources/img/twiter_green.png" alt="" class="img-responsive">
@@ -285,7 +288,7 @@
                     <p class="tag">@verlamov</p>
                     <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
                 </li>
-                <li class="min_l_2x"> 
+                <li class="min_l_2x hidden-xs hidden-sm"> 
                     <p>20 февраля</p>
                     <p>20:12</p>
                     <img src="img/resources/img/twiter_green.png" alt="" class="img-responsive">
@@ -293,7 +296,7 @@
                     <p class="tag">@verlamov</p>
                     <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
                 </li>
-                <li class="min_l_1x"> 
+                <li class="min_l_1x hidden-xs hidden-sm"> 
                     <p>20 февраля</p>
                     <p>20:12</p>
                     <img src="img/resources/img/twiter_green.png" alt="" class="img-responsive">
@@ -326,7 +329,7 @@
         </div>
     </div>
 </section>
-<section class="wrapp_mainpage_game hidden-xs">
+<section class="wrapp_mainpage_game">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
