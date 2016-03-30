@@ -218,6 +218,12 @@ $p_size: 1.4rem;
 			min-height: 300px;
 		}	 
 	}
+	.wrapp_slider_stars {
+		.stars {
+			text-align: center;
+		}
+		
+	}
 
 	/*Disable Animation on Mobile Devices*/
 	.animated {
@@ -452,7 +458,9 @@ $p_size: 1.4rem;
 			min-height: 250px;
 		}	 
 	}
-
+	.wrapp_mainpage_present {
+		text-align: left;
+	}
 	.form{
 		.form_white {
 		    ul {
