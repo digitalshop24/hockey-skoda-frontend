@@ -22,6 +22,7 @@ export default angular.module('app',
         'textAngular',
         'ngFileUpload',
         '720kb.socialshare',
+        'satellizer',
         skodaLocalStorage.name,
         errorPages.name,
         index.name,
@@ -30,6 +31,32 @@ export default angular.module('app',
     .service('api', Api)
     .service('session', session)
     .service('auth', auth)
+    .config($authProvider => {
+
+        $authProvider.authToken = '';
+        $authProvider.facebook({
+            clientId: '1563436463985643',
+            responseType: 'token'
+        });
+
+        $authProvider.instagram({
+            clientId: '633676f1f025495fba751c8eef59c392'
+        });
+
+        $authProvider.twitter({
+            clientId: '0n8MJuRKkn7PdEnoaK5VZRGmG'
+        });
+
+        $authProvider.oauth2({
+            name: 'vk',
+            url: '/auth/vk',
+            clientId: '5367930',
+            redirectUri: window.location.origin,
+            authorizationEndpoint: 'https://oauth.vk.com/authorize',
+            display: 'popup',
+            response_type: 'token'
+        });
+    })
     .config(($locationProvider) => {
         $locationProvider.html5Mode(true);
         NProgress.configure({trickleRate: 0.1, trickleSpeed: 200, showSpinner: false});
@@ -43,7 +70,7 @@ export default angular.module('app',
 
         function authHandling(event, toState) {
             if (toState.access) {
-                if(!session.isAuthenticated) {
+                if (!session.isAuthenticated) {
                     event.preventDefault();
                     NProgress.done();
                     login.open();
