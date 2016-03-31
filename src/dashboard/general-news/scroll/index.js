@@ -32,11 +32,11 @@ export default angular.module('dashboard.general-news.scroll', [])
                                 $scope.loadNext();
                             }
                         } else {
-                            const needLoadPreviousDay = checkLoadPreviousDayNeeded();
+                            /*const needLoadPreviousDay = checkLoadPreviousDayNeeded();
 
                             if (needLoadPreviousDay) {
                                 $scope.loadPrevious();
-                            }
+                            }*/
                         }
 
 
