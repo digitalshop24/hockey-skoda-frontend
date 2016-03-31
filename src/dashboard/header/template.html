@@ -19,7 +19,7 @@
             <li><a ui-sref="dashboard.tdrive"
                    ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""> </li>
             <li><a ng-class="{'active_li': $state.includes('dashboard.prize')}">Призы</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""> </li>
-            <li><a href="">Расписание</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
+            <li><a ui-sref="dashboard.schedule" ng-class="{'active_li': $state.includes('dashboard.schedule')}">Расписание</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
             <li><a href="">Календарь</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
             <li><a href="">Тантамарезка</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
             <li><a href="">Пожелание сборной России</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
@@ -51,14 +51,11 @@
                 <a ui-sref="dashboard.main" class="logo"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
                 <ul>
                     <li><a ui-sref="dashboard.general-news" ng-class="{'active_li': $state.includes('dashboard.general-news') }">Новости</a></li>
-                    <li><a ui-sref="dashboard.forecast.playoff"
-                           ng-class="{'active_li': $state.includes('dashboard.forecast.playoff')}">Прогнозы</a></li>
-                    <li><a ui-sref="dashboard.forum"
-                           ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a></li>
-                    <li><a ui-sref="dashboard.tdrive"
-                           ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a></li>
+                    <li><a ui-sref="dashboard.forecast.playoff" ng-class="{'active_li': $state.includes('dashboard.forecast.playoff')}">Прогнозы</a></li>
+                    <li><a ui-sref="dashboard.forum" ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a></li>
+                    <li><a ui-sref="dashboard.tdrive" ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a></li>
                     <li><a href="#">Призы</a></li>
-                    <li><a href="#">Расписание </a></li>       
+                    <li><a ui-sref="dashboard.schedule" ng-class="{'active_li': $state.includes('dashboard.schedule')}">Расписание </a></li>
                 </ul>
             </div>
             <div class="right_head text-right hidden-xs">
