@@ -57,11 +57,9 @@ export default angular.module('dashboard',
         passwordnew.name,
         stars.name,
         score.name,
-<<<<<<< HEAD
-        video.name
-=======
+        video.name,
         masonry.name
->>>>>>> refs/remotes/origin/master
+
     ])
     .service('login', Login)
     .service('modal', Modal)
