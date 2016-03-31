@@ -7,7 +7,7 @@ export default class NewspageCtrl {
         this.rubric = news.rubric;
         this.rubricState = this.getRubricState(this.rubric.api_path);
         this.socialShareText = news.title + "\n" + news.description;
-        this.socialShareUrl = "http://www.skoda-auto.com/_layouts/Skoda.K2/images/social/logo-skoda-share-fb.jpg";
+        this.socialShareUrl = "https://s3.eu-central-1.amazonaws.com/skodahockey/public/imgpsh_fullsize.jpeg";
     }
 
     getRubricState(stateApiName) {

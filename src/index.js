@@ -36,6 +36,7 @@ export default angular.module('app',
         $authProvider.authToken = '';
         $authProvider.authHeader = 'Auth-Code';
         $authProvider.facebook({
+            url: 'http://skoda-hockey.herokuapp.com:80/api/v1/auth/facebook',
             clientId: '1563436463985643',
             responseType: 'token'
         });

@@ -28,6 +28,7 @@ import emailnew from './recover-password/index';
 import passwordnew from './password-new/index';
 import stars from './stars/index';
 import score from './schedule/index';
+import masonry from './masonry-init/index';
 
 
 
@@ -55,7 +56,8 @@ export default angular.module('dashboard',
         emailnew.name,
         passwordnew.name,
         stars.name,
-        score.name
+        score.name,
+        masonry.name
     ])
     .service('login', Login)
     .service('modal', Modal)

@@ -12,7 +12,7 @@
                         </div>
                     </div>
                     <div class="orecast_two-6 btn-forecast clearfix">
-                        <button ng-disabled="match.isDisabled" ng-click="ctrl.forecast(match)" class="btn btn_primary main">Угадать</button>
+                        <button ng-disabled="match.isDisabled" ng-bind="match.isDisabled ? 'Прогноз сделан' : 'Угадать'" ng-click="ctrl.forecast(match)" class="btn btn_primary main"></button>
                     </div>
                 </div>
                 <div class="orecast_two-12_block mob-forece clearfix">
@@ -64,7 +64,7 @@
                     <p ng-bind="match.blueteam.country"></p>
                 </div>
                 <div class="col-sm-2 destop-force btn-forecast clearfix">
-                    <button ng-disabled="match.isDisabled" ng-click="ctrl.forecast(match)" class="btn btn_primary main">Угадать</button>
+                    <button ng-disabled="match.isDisabled" ng-bind="match.isDisabled ? 'Прогноз сделан' : 'Угадать'"  ng-click="ctrl.forecast(match)" class="btn btn_primary main"></button>
                 </div>
             </div>
 
