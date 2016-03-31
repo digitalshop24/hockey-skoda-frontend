@@ -11,23 +11,17 @@
                 <a href="#" class="hidden-xs"><h6 ng-bind="ctrl.user.name"></h6></a>
 
                 <ul>
-                    <!--<li>
-                        <a href="#"><img src="img/resources/img/fb.png" alt="" class="img-responsive"></a>
-                        <a href="#"><img src="img/resources/img/twiter.png" alt="" class="img-responsive fix_left"></a>
-                        <a href="#">
-                            <ul>
-                                <li>Добавить соцсеть</li>
-                                <li class="text-center">+25</li>
-                            </ul>
-                        </a>
-                    </li>-->
                     <li ng-repeat="hint in ctrl.hints">
-                        <img src="img/resources/img/lk/addres.png" alt="" class="img-responsive hidden-xs">
+                        <img src="{{hint.achievment_type.icon.thumb}}" alt="" class="img-responsive hidden-xs">
                         <h6></h6>
                         <a ui-sref="dashboard.profile.edit">
-                            <ul>
+                            <ul ng-show="!hint.has_achievment">
                                 <li ng-bind="hint.achievment_type.hint"></li>
                                 <li class="text-center" ng-bind="'+' + hint.achievment_type.points"></li>
+                            </ul>
+
+                            <ul ng-show="hint.has_achievment">
+                                <li ng-bind="hint.value"></li>
                             </ul>
                         </a>
                     </li>
@@ -50,7 +44,6 @@
                                                                                       class="img-responsive hidden-xs">
                         <button class="edit btn btn_common tiny">Изменить</button>
                     </li>
-                    <!--<h6 class="gir">Моя активность</h6>-->
                     <h5 ng-bind="'Сегодня, ' + ctrl.today"/>
                     </li>
                 </ul>

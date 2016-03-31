@@ -1,0 +1,57 @@
+<section class="wrapp_shet">
+    <div class="container">
+        <div class="row">
+            <div class="mounth">
+                <div class="col-md-6">
+                    <ul class="mounth_arrow">
+                        <li>
+                            <img src="img/resources/img/arrow_left.png" alt="" class="img-responsive">
+                        </li>
+                        <li>
+                            <h3 class="b" ng-bind="ctrl.currentDay | amDateFormat:'MMMM'"></h3>
+                        </li>
+                        <li>
+                            <img src="img/resources/img/arrow_right.png" alt="" class="img-responsive">
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-right">
+                    <select class="input_default input_small"
+                            ng-options="team.country for team in ctrl.teams track by team.id"
+                            ng-model="ctrl.teamFilter" required>
+                        <option selected value>Все команды</option>
+                    </select>
+                    <select class="input_default input_small"
+                            ng-options="category.name for category in ctrl.categories"
+                            ng-model="ctrl.categoryFilter" required>
+                        <option selected value>Все игры</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row fix_bottom" ng-repeat="day in ctrl.schedule" ng-show="(day.matches | filter:ctrl.filterByTeam | filter:ctrl.filterByCategory).length">
+            <div class="tabel_game">
+                <div class="col-md-12 date_game">
+                    <h3 ng-bind="day.matches[0].when | amDateFormat:'DD'"></h3>
+
+                    <p class="b" ng-bind="day.matches[0].when | amDateFormat:'MMMM'"></p>
+
+                    <p>({{(day.matches | filter:ctrl.filterByTeam | filter:ctrl.filterByCategory).length}} игры)</p>
+                </div>
+                <div class="col-md-3 text-center"
+                     ng-repeat="match in day.matches | filter:ctrl.filterByTeam | filter:ctrl.filterByCategory">
+                    <div class="game last" ng-class="{'last':match.stage == 'completed', 'active' : match.stage == 'current',
+                      'next' : match.stage == 'future'}">
+                        <h3 ng-show="match.stage != 'future'"
+                            ng-bind="match.redteam_score + ':' + match.blueteam_score"></h3>
+
+                        <h3 ng-show="match.stage == 'future'">&#8212;:&#8212;</h3>
+                        <h6 ng-bind="match.redteam.country +' - ' + match.blueteam.country"></h6>
+
+                        <p ng-bind="match.when | amDateFormat:'H:mm'"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

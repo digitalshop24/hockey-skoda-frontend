@@ -1,5 +1,5 @@
 <!-- search -->
-<section class="wrapp_search">
+<!--<section class="wrapp_search">
     <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -8,18 +8,18 @@
                 </div>
             </div>
         </div>  
-</section>
+</section>-->
 <!--end search -->
 
 <!-- main new -->
-<section class="wrapp_main_new">
+<section class="wrapp_main_new" style="background-image: url('{{ctrl.mainNews.image.original}}');">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="main_new">
                     <h2>Прерваный<br>полет</h2>
-                    <h6>Валерий Харламов</h6>
-                    <p>(1948-1981)</p>
+                    <h6 ng-bind="ctrl.mainNews.short_content"></h6>
+                    <p ng-bind="ctrl.mainNews.middle_content"></p>
                     <ul>
                         <li>Биография</li>
                         <li>Интервью</li>
@@ -34,69 +34,22 @@
     <div class="container-fluid">
         <div class="row">
             <div class="news">
-                <div class="col-md-3">
-                    <div class="foto" style="background-image: url(img/resources/img/bg_star.png);"></div>
-                    <h2 class="foto_set text-center">The <br> great<br> one</h2>
+                <div class="col-md-3" ng-repeat="news in ctrl.news">
+                    <div class="foto" style="background-image: url('{{news.image.medium}}');"></div>
+                    <h2 class="foto_set text-center" ng-bind="news.name">The <br> great<br> one</h2>
                     <div class="description">
-                        <h6>Анатолий Фитисов</h6>
-                        <p>(1941-2000)</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="foto" style="background-image: url(img/resources/img/new_item2.png);"></div>
-                    <h2 class="foto_set text-center">The <br> great<br> one</h2>
-                    <div class="description">
-                        <h6>Анатолий Фитисов</h6>
-                        <p>(1941-2000)</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="foto" style="background-image: url(img/resources/img/new_item3.png);"></div>
-                    <h2 class="foto_set text-center">The <br> great<br> one</h2>
-                    <div class="description">
-                        <h6>Анатолий Фитисов</h6>
-                        <p>(1941-2000)</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="foto" style="background-image: url(img/resources/img/bg_star.png);"></div>
-                    <h2 class="foto_set text-center">The <br> great<br> one</h2>
-                    <div class="description">
-                        <h6>Анатолий Фитисов</h6>
-                        <p>(1941-2000)</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="foto" style="background-image: url(img/resources/img/bg_star.png);"></div>
-                    <h2 class="foto_set text-center">The <br> great<br> one</h2>
-                    <div class="description">
-                        <h6>Анатолий Фитисов</h6>
-                        <p>(1941-2000)</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="foto" style="background-image: url(img/resources/img/bg_star.png);"></div>
-                    <h2 class="foto_set text-center">The <br> great<br> one</h2>
-                    <div class="description">
-                        <h6>Анатолий Фитисов</h6>
-                        <p>(1941-2000)</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="foto" style="background-image: url(img/resources/img/bg_star.png);"></div>
-                    <h2 class="foto_set text-center">The <br> great<br> one</h2>
-                    <div class="description">
-                        <h6>Анатолий Фитисов</h6>
-                        <p>(1941-2000)</p>
+                        <h6 ng-bind="news.short_content"></h6>
+                        <p ng-bind="news.middle_content"></p>
                     </div>
                 </div>
 
             </div>
         </div>
         <div class="row">
+
         <div class="col-md-12 text-center show_to">
-            <button class="btn btn_common main">Показать еще</button>
-            <span>Показано 200 хоккеистов из 1768</span>
+            <button class="btn btn_common main" ng-click="ctrl.loadMore()" ng-show="ctrl.news.length < ctrl.newsAmount">Показать еще</button>
+            <span>Показано {{ctrl.news.length}} хоккеистов из {{ctrl.newsAmount}}</span>
         </div>
             
         </div>
