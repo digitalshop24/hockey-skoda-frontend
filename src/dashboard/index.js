@@ -28,6 +28,8 @@ import emailnew from './recover-password/index';
 import passwordnew from './password-new/index';
 import stars from './stars/index';
 import score from './score/index';
+import video from './video/index';
+
 
 
 
@@ -55,7 +57,8 @@ export default angular.module('dashboard',
         emailnew.name,
         passwordnew.name,
         stars.name,
-        score.name
+        score.name,
+        video.name
     ])
     .service('login', Login)
     .service('modal', Modal)

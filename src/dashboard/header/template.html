@@ -18,7 +18,7 @@
                    ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""> </li>
             <li><a ui-sref="dashboard.tdrive"
                    ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""> </li>
-            <li><a ng-class="{'active_li': $state.includes('dashboard.prize')}">Призы</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""> </li>
+            <li><a ng-class="{'active_li': $state.includes('dashboard.prize-new')}">Призы</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""> </li>
             <li><a href="">Расписание</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
             <li><a href="">Календарь</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
             <li><a href="">Тантамарезка</a><img class="arrows" src="img/resources/img/arrow_right.png" alt=""></li>
@@ -57,7 +57,8 @@
                            ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a></li>
                     <li><a ui-sref="dashboard.tdrive"
                            ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a></li>
-                    <li><a href="#">Призы</a></li>
+                    <li><a ui-sref="dashboard.prizenew"
+                           ng-class="{'active_li': $state.includes('dashboard.prizenew')}">Призы</a></li>
                     <li><a href="#">Расписание </a></li>       
                 </ul>
             </div>

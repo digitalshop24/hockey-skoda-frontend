@@ -2754,6 +2754,109 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- end email_recover
 
 
+//-------------------------------------------------- video
+
+.main_video {
+   .slick-next {
+    background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 15% center;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+  }
+  .slick-prev {
+    background: rgba(0, 0, 0, 1) url("img/resources/img/arrow_left_white.png") no-repeat 85% center;
+    left: -60px;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+  }
+  .video_item {
+    min-height: 640px;
+    text-align: center;
+    div {
+      background-color: rgba(0, 0, 0, .5);
+      min-height: 640px;
+      h5 {
+        color: $white;
+        font-family: $bold;
+        padding-top: 150px;
+      }
+      img {
+        margin: 20px auto;
+        display: inline-block;
+      }
+      p {
+        color: $white;
+        font-size: $p_size;
+        padding-top: 10px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+    }
+    .share {
+      margin-top: 50px;
+    }
+    .play {
+      margin: 50px auto 0;
+    }
+  }
+}
+.desc_video {
+  padding: 0 60px;
+  .bord_bottom {
+    border-bottom: 2px solid $grey;
+  }
+  h4 {
+      color: $green_main;
+      font-family: $bold;
+      padding: 10px 0;
+  }
+  p {
+    color: $grey;
+    padding: 10px 0;
+    font-size: $p_size;
+  }
+  .date {
+    color: $black;
+  }
+  input {
+    width: 100%;
+  }
+}
+.other_video {
+  padding: 0 60px;
+  .col-md-3 {
+    div {
+      height: 200px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin-top: 50px;
+    }
+    p {
+      padding: 10px 0;
+      font-size: $p_size;
+    }
+    .bold {
+      min-height: 70px;
+    }
+  }
+  .btn_common {
+    margin: 30px 0 70px 0;
+  }
+}
+
+
+//-------------------------------------------------- end video
+
+
+
+
+
 //-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
 // <!-- tantamareska -->
 .wrapp_tantamareska {
