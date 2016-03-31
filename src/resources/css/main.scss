@@ -2558,21 +2558,150 @@ $grey_about: #5d5d5d;
 
 //-------------------------------------------------- priznew
 .prizes_use_date {
+  height: 300px;
   .user_info {
-    height: 100px;
-     h2 {
-    color: $green_main;
-    }
     p {
       font-size: $p_size;
       color: $black;
+      padding-top: 150px;
+      a {
+        font-family: $bold;
+      }
     }
-    span {
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-top: 50px;
+      float: left;
+      margin-right: 20px; 
+    }
+    h5 {
+      color: $green_main;
+      margin-top: 60px;
       font-family: $bold;
     }
-  }
- 
+    h6 {
+      color: $green_main;
+    }
+    h3 {
+      font-family: $bold;
+      color: $black;
+      padding: 10px 0;
 
+    }
+
+    
+  }
+  .text_titel {
+    padding-top: 50px;
+    h3 {
+      color: $green_main;
+      text-transform: uppercase;
+      font-family: $bold;
+    }
+    p {
+      padding-top: 10px;
+      font-size: $p_size;
+    }
+  }
+}
+
+.slider_prizes {
+  .main_slider_priz {
+    .slick-slide  {
+      background-color: $grey;
+      padding-top: 30px;
+      height:90px
+    }
+     .slick-next {
+          background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 10% center;
+          right: -60px;
+          width: 100px;
+          height: 90px;
+          top: 10px;
+        }
+        .slick-prev {
+          background: rgba(0,0,0,1) url("img/resources/img/arrow_left_white.png") no-repeat 90% center;
+          left: -60px;
+          width: 100px;
+          height: 90px;
+          top: 10px;
+        }
+  }
+  .second_slider_priz {
+    margin-bottom: 0px;
+    
+    .slick-center {
+
+    }
+    .itep_priz {
+      height: 150px;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat; 
+      margin: 0 1px;
+      p {
+        color: $white;
+        padding-top: 60px;
+        font-size: $p_size + .2rem;
+      }
+    }
+
+  }
+  button {
+    position: absolute;
+    right: 20%;
+    top: 173px;
+  }
+  .info_priz {
+    li {
+      padding-top:2px;
+      padding-bottom: 2px;
+    }
+    li:nth-child(1) {
+      color: $grey;
+      span {
+        color: $black;
+        font-family: $bold;
+      }
+    }
+    li:nth-child(2) {
+      text-transform: uppercase;
+      color: $green_main;
+      font-family: $extra_bold;
+      font-size: 2.4rem;
+    }
+    li:nth-child(3) {
+      font-size: $p_size;
+    }
+    li:nth-child(4) {
+      font-family: $extra_bold;
+      font-size: 4rem;
+    }
+    li:nth-child(5) {
+      position: relative;
+      top: -16px;
+    }
+  }
+
+  .page_prizs_priz {
+    padding-top: 50px;
+    .col-md-3 {
+      height: 300px;
+    }
+    .slick-dots {
+      li {
+        width: 10px;
+        height: 10px;
+        background-color: $grey;
+        border-radius: 50%;
+      }
+      .slick-active {
+        background-color: $green_main;
+      }
+    }
+  }
 }
 
 //-------------------------------------------------- end priznew
