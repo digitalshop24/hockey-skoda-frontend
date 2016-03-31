@@ -24,7 +24,13 @@ header {
   position: relative;
   z-index: 1001;
   background-color: #fff;
+  min-height: 70px;
   .left_head {
+    background-color: $white;
+    position: fixed;
+    -webkit-box-shadow: 0px 6px 7px -1px rgba(0,0,0,0.38);
+    -moz-box-shadow: 0px 6px 7px -1px rgba(0,0,0,0.38);
+    box-shadow: 0px 6px 7px -1px rgba(0,0,0,0.38);
     img {
       display: inline-block !important;
       margin: 0 auto; 
@@ -45,7 +51,7 @@ header {
     }
   }
   .right_head {
-    position:absolute;
+    position:fixed;
     right:0;
     ul {
       display: inline-flex;
@@ -102,12 +108,11 @@ header {
   }
   .dropdown_menu {
     background-color: $white;
-    margin: 0 14px;
-    position: absolute;
+    margin: 70px 14px 0 14px;
+    position: fixed;
     width: 98%;
     padding-bottom: 60px;
     padding-top: 30px;
-    margin-top: 1px;
     ul {
       li {
         padding: 10px 0 10px 10px;
@@ -120,7 +125,9 @@ header {
   }
 }
 
-
+.modal-window {
+  padding-top: 35px;
+}
 //--------------------------------------------mobile menu
 
 
@@ -1275,7 +1282,21 @@ $grey_about: #5d5d5d;
     }
   }
   .mainpage_news_slider {
-    padding: 30px 0;
+    padding: 30px 20px;
+    .slick-next {
+      background: rgba(75,168,46,0) url("img/resources/img/arrow_right.png") no-repeat 0 center;
+      right: -82px;
+      width: 92px;
+      height: 51px;
+      
+    }
+    .slick-prev {
+      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left.png") no-repeat 100% center;
+      left: -78px;
+      width: 92px;
+      height: 51px;
+     
+    }
     .news_one_slider {
       height: 220px;
       background-size: cover;
@@ -2558,7 +2579,7 @@ $grey_about: #5d5d5d;
 
 //-------------------------------------------------- priznew
 .prizes_use_date {
-  height: 300px;
+ 
   .user_info {
     p {
       font-size: $p_size;
@@ -2608,6 +2629,7 @@ $grey_about: #5d5d5d;
 }
 
 .slider_prizes {
+  padding-top: 70px;
   .main_slider_priz {
     .slick-slide  {
       background-color: $grey;
