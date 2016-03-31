@@ -2,10 +2,11 @@
 
 
 export default class LoginCtrl {
-    constructor($modalInstance, message, auth, $rootScope, $state){
+    constructor($modalInstance, message, auth, $rootScope, $state, $auth) {
         this.message = message;
         this.modalInstance = $modalInstance;
         this.auth = auth;
+        this.$auth = $auth;
         this.rootscope = $rootScope;
         this.state = $state;
     }
@@ -28,6 +29,14 @@ export default class LoginCtrl {
                 this.rootscope.alreadyInLoginModal = false;
                 this.message = err.error_code == 401 ? "Неверный логин или пароль" : "";
             });
+    }
+
+    authViaSocial(provider) {
+        this.$auth.authenticate(provider)
+            .then(res => {
+            })
+            .catch(err => {
+            })
     }
 
     goToRegistration() {

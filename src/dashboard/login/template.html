@@ -11,10 +11,10 @@
                             <input required="true" type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"
                                    placeholder="Пароль">
                                 <div class="soc_icon">
-                                    <a href=""><img src="img/resources/img/insta_grey.png" alt="" class="img-responsive"></a>
-                                    <a href=""><img src="img/resources/img/fb_grey.png" alt="" class="img-responsive"></a>
-                                    <a href=""><img src="img/resources/img/twiter_grey.png" alt="" class="img-responsive"></a>
-                                    <a href=""><img src="img/resources/img/vk_grey.png" alt="" class="img-responsive"></a>
+                                    <a ng-click="ctrl.authViaSocial('instagram')"><img src="img/resources/img/insta_grey.png" alt="" class="img-responsive"></a>
+                                    <a ng-click="ctrl.authViaSocial('facebook')"><img src="img/resources/img/fb_grey.png" alt="" class="img-responsive"></a>
+                                    <!--<a ng-click="ctrl.authViaSocial('twitter')"><img src="img/resources/img/twiter_grey.png" alt="" class="img-responsive"></a>-->
+                                    <a ng-click="ctrl.authViaSocial('vk')"><img src="img/resources/img/vk_grey.png" alt="" class="img-responsive"></a>
                                 </div>
                             <p><a href="" ng-click="ctrl.recoverPassword()">Я забыл пароль?</a></p>
                             <h3 ng-bind="ctrl.message"></h3>
