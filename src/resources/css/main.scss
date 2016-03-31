@@ -2655,7 +2655,10 @@ $grey_about: #5d5d5d;
     margin-bottom: 0px;
     
     .slick-center {
-
+      div {
+        background-color: rgba(69, 228, 20, 0.5) !important;
+        height: 150px;
+      }
     }
     .itep_priz {
       height: 150px;
@@ -2663,6 +2666,10 @@ $grey_about: #5d5d5d;
       background-size: cover;
       background-repeat: no-repeat; 
       margin: 0 1px;
+      div {
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 150px;
+      }
       p {
         color: $white;
         padding-top: 60px;
