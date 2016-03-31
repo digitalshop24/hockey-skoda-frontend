@@ -1198,11 +1198,24 @@ $grey_about: #5d5d5d;
     background-size: cover;
     h5 {
       font-family: $light;  
-      margin: 100px 0 10px 0;
+      margin: 30px 0 20px 0;
+      span {
+        font-size: 1.5rem;
+        padding: 0 10px; 
+        button {
+          text-transform: uppercase;
+          color: $green_main;
+          border: none;
+          margin-left: 10px;
+          border-radius: 0px;
+        }
+      }
     }
     h2 {
       margin: 0 0 20px 0;
       text-transform: uppercase;
+      color: $green_main;
+      font-family: $extra_bold;
       
     }
     p {
@@ -1213,8 +1226,6 @@ $grey_about: #5d5d5d;
       margin-left: 70px;
     }
     .right {
-      float: right;
-      margin-right: 70px;
       ul {
         li{
           font-size: $p_size;

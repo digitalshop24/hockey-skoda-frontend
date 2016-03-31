@@ -5,21 +5,31 @@
 
             <slick infinite=true arrows=true dots=true slides-to-show=1 slides-to-scroll=1>
                 <div class="item" style="background-image: url('img/resources/img/main-showcase.jpg');">
-                    <div class="left hidden-sm hidden-xs">
-                        <h5>Промо-блок</h5>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="left hidden-sm hidden-xs">
+                                    <h5>Промо-блок <span>Хэшьтеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
+                                    
+                                    <h2>24-й раз мы вместе<br> со сборной россии</h2>
 
-                        <h2>22-й раз мы вместе<br> со сборной россии</h2>
-
-                        <p>В безудержном соревновании "Порробуй догони" первенствовал<br> нападающий "Эдмонд Ойлера"
-                            Коннор макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную
-                            в карьере. Но покази <br> себя и ряд других игроков, поддержавшие почит форварда. </p>
+                                    <p>В безудержном соревновании "Порробуй догони" первенствовал<br> нападающий "Эдмонд Ойлера"
+                                        Коннор макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную
+                                        в карьере. Но покази <br> себя и ряд других игроков, поддержавшие почит форварда. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="right hidden-sm hidden-xs">
+                                    <h5>Молния!</h5>
+                                    <ul>
+                                        <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.lighting_text"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="right hidden-sm hidden-xs">
-                        <h5>Молния!</h5>
-                        <ul>
-                            <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.lighting_text"></a></li>
-                        </ul>
-                    </div>
+                    
+                    
                     <div class="text-center mob_h2 hidden-md hidden-lg"> <h2><a href="">22-й раз мы вместе<br> со сборной россии</a></h2></div>
                 </div>
             </slick>
