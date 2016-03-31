@@ -12,6 +12,23 @@ export default angular.module('dashboard.stars', [])
                 template: require('./template.html'),
                 url: '/stars',
                 controller: StarsCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                params: {
+                    page: 1,
+                    perPage: 15,
+                    news: []
+                },
+                resolve: {
+                    newsInfo: ($stateParams, starsService) => {
+                        return starsService.getNews($stateParams.page, $stateParams.perPage).then((res) =>{
+                            res.posts = $stateParams.news.concat(res.posts);
+                            return res;
+                        });
+                    },
+
+                    page: ($stateParams) => {
+                        return $stateParams.page;
+                    }
+                }
             });
     });
