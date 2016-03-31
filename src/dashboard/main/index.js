@@ -15,7 +15,7 @@ export default angular.module('dashboard.main', [])
                 controllerAs: 'ctrl',
                 params: {
                     page: 1,
-                    lastNewsAmount: 15,
+                    lastNewsAmount: 25,
                     lightingNewsAmount: 3
                 },
                 resolve: {

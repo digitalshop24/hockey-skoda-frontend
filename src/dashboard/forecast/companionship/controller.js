@@ -5,10 +5,12 @@ export default class ForecasttwoCtrl {
     constructor(matches, companionshipService) {
         this.matches = matches.matches;
         this.userPredictions = matches.predictions;
+        this.matches.forEach((match) => {
+            match.redScore = 0;
+            match.blueScore = 0;
+        });
         if (this.userPredictions) {
             this.matches.forEach((match) => {
-                match.redScore = 0;
-                match.blueScore = 0;
                 const id = match.id;
                 const userPrediction = this.userPredictions.find(x => x.match.id == id);
                 if (userPrediction) {
