@@ -28,8 +28,8 @@ import emailnew from './recover-password/index';
 import passwordnew from './password-new/index';
 import stars from './stars/index';
 import score from './schedule/index';
+import video from './video/index';
 import masonry from './masonry-init/index';
-
 
 
 export default angular.module('dashboard',
@@ -57,7 +57,9 @@ export default angular.module('dashboard',
         passwordnew.name,
         stars.name,
         score.name,
+        video.name,
         masonry.name
+
     ])
     .service('login', Login)
     .service('modal', Modal)

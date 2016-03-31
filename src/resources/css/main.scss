@@ -1198,11 +1198,26 @@ $grey_about: #5d5d5d;
     background-size: cover;
     h5 {
       font-family: $light;  
-      margin: 100px 0 10px 0;
+      margin: 30px 0 20px 0;
+      span {
+        font-size: 1.5rem;
+        padding-left: 50px; 
+        position: relative;
+        top: -3px;
+        button {
+          text-transform: uppercase;
+          color: $green_main;
+          border: none;
+          margin-left: 10px;
+          border-radius: 0px;
+        }
+      }
     }
     h2 {
       margin: 0 0 20px 0;
       text-transform: uppercase;
+      color: $green_main;
+      font-family: $extra_bold;
       
     }
     p {
@@ -1213,8 +1228,6 @@ $grey_about: #5d5d5d;
       margin-left: 70px;
     }
     .right {
-      float: right;
-      margin-right: 70px;
       ul {
         li{
           font-size: $p_size;
@@ -1346,7 +1359,7 @@ $grey_about: #5d5d5d;
   }
 }
 .wrapp_mainpage_data {
-  padding: 50px 0 50px 0;
+  padding: 5px 0 50px 0;
   slick {
     height: 50px;
     .slick-slide {
@@ -1435,27 +1448,36 @@ $grey_about: #5d5d5d;
 
 .wrapp_mainpage_menublock {
   position:relative;
-  z-index: -1;
+  z-index: 1;
   .wrapp_block {
     padding: 1px;
     .block {
       background-repeat:no-repeat;
       background-size: cover;
       h2 {
-        padding: 80px 0 80px 40px;
+        padding: 40px 0 5px 40px;
         text-transform: uppercase;
+        font-family: $extra_bold;
         a {
           color: $white;
         }
+      }
+      p {
+        height: 130px;
+        padding: 10px 0 10px 40px;
+        color: $white;
+        font-size: $p_size;
       }
     }
   }
 }
 .wrapp_mainpage_present {
+  padding-bottom: 50px;
   h2 {
     color: $green_main;
     margin: 70px 0 30px 0;
     text-transform: uppercase;
+    font-family: $extra_bold;
   }
   p {
     font-size: $p_size;
@@ -1469,11 +1491,18 @@ $grey_about: #5d5d5d;
       width: 32%;
       h3 {
         font-family: $bold;
+        display: inline;
       }
       h6 {
         color: $green_main;
         margin-top: 30px;
         margin-bottom: 20px;
+      }
+      img {
+        display: inline;
+        position: relative;
+        top: -11px;
+        margin-left: 10px; 
       }
     }
   }
@@ -1539,18 +1568,44 @@ $grey_about: #5d5d5d;
   background-color: #f5f5f5;
   .left {
     margin-left: 150px;
+    padding-top: 40px;
+    .p_h {
+      font-size: 1.5rem; 
+      position: relative;
+      margin-top: 30px;
+      color: $black;
+      button {
+        text-transform: uppercase;
+        color: $green_main;
+        border: none;
+        margin-left: 10px;
+        border-radius: 0px;
+      }
+    }
+    .img_ball {
+      display: inline;
+      position: relative;
+      top: -5px;
+    }
     h4 {
-      margin-top: 90px;
       font-family: $light;
+      display: inline;
+      span {
+        font-size: 2.5rem;
+        font-family: $bold;
+        color: $green_main;
+        padding-left: 20px;
+      }
     }
     h2 {
       text-transform: uppercase;
       color: $green_main;
       margin-top: 30px;
+      font-family: $extra_bold;
     }
     p {
       margin-top: 30px;
-      
+      color: $grey;
       font-size: $p_size;
     }
   }
@@ -1562,14 +1617,40 @@ $grey_about: #5d5d5d;
   background-color: #def0fa;
   .left {
     margin-left: 150px;
+    padding-top: 40px;
     h4 {
-      margin-top: 90px;
       font-family: $light;
+      display: inline;
+      span {
+        font-size: 2.5rem;
+        font-family: $bold;
+        color: $green_main;
+        padding-left: 20px;
+      }
+    }
+    .p_h {
+      font-size: 1.5rem; 
+      position: relative;
+      margin-top: 30px;
+      color: $black;
+      button {
+        text-transform: uppercase;
+        color: $green_main;
+        border: none;
+        margin-left: 10px;
+        border-radius: 0px;
+      }
+    }
+    .img_ball {
+      display: inline;
+      position: relative;
+      top: -5px;
     }
     h2 {
       text-transform: uppercase;
       color: $green_main;
       margin-top: 30px;
+      font-family: $extra_bold;
     }
     p {
       margin-top: 30px;
@@ -2752,6 +2833,109 @@ $grey_about: #5d5d5d;
 }
 
 //-------------------------------------------------- end email_recover
+
+
+//-------------------------------------------------- video
+
+.main_video {
+   .slick-next {
+    background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 15% center;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+  }
+  .slick-prev {
+    background: rgba(0, 0, 0, 1) url("img/resources/img/arrow_left_white.png") no-repeat 85% center;
+    left: -60px;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+  }
+  .video_item {
+    min-height: 640px;
+    text-align: center;
+    div {
+      background-color: rgba(0, 0, 0, .5);
+      min-height: 640px;
+      h5 {
+        color: $white;
+        font-family: $bold;
+        padding-top: 150px;
+      }
+      img {
+        margin: 20px auto;
+        display: inline-block;
+      }
+      p {
+        color: $white;
+        font-size: $p_size;
+        padding-top: 10px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+    }
+    .share {
+      margin-top: 50px;
+    }
+    .play {
+      margin: 50px auto 0;
+    }
+  }
+}
+.desc_video {
+  padding: 0 60px;
+  .bord_bottom {
+    border-bottom: 2px solid $grey;
+  }
+  h4 {
+      color: $green_main;
+      font-family: $bold;
+      padding: 10px 0;
+  }
+  p {
+    color: $grey;
+    padding: 10px 0;
+    font-size: $p_size;
+  }
+  .date {
+    color: $black;
+  }
+  input {
+    width: 100%;
+  }
+}
+.other_video {
+  padding: 0 60px;
+  .col-md-3 {
+    div {
+      height: 200px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin-top: 50px;
+    }
+    p {
+      padding: 10px 0;
+      font-size: $p_size;
+    }
+    .bold {
+      min-height: 70px;
+    }
+  }
+  .btn_common {
+    margin: 30px 0 70px 0;
+  }
+}
+
+
+//-------------------------------------------------- end video
+
+
+
 
 
 //-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))

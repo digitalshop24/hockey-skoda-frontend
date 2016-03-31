@@ -5,21 +5,31 @@
 
             <slick infinite=true arrows=true dots=true slides-to-show=1 slides-to-scroll=1>
                 <div class="item" style="background-image: url('img/resources/img/main-showcase.jpg');">
-                    <div class="left hidden-sm hidden-xs">
-                        <h5>Промо-блок</h5>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="left hidden-sm hidden-xs">
+                                    <h5>Промо-блок <span>Хэшьтеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
+                                    
+                                    <h2>24-й раз мы вместе<br> со сборной россии</h2>
 
-                        <h2>22-й раз мы вместе<br> со сборной россии</h2>
-
-                        <p>В безудержном соревновании "Порробуй догони" первенствовал<br> нападающий "Эдмонд Ойлера"
-                            Коннор макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную
-                            в карьере. Но покази <br> себя и ряд других игроков, поддержавшие почит форварда. </p>
+                                    <p>В безудержном соревновании "Порробуй догони" первенствовал<br> нападающий "Эдмонд Ойлера"
+                                        Коннор макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную
+                                        в карьере. Но покази <br> себя и ряд других игроков, поддержавшие почит форварда. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="right hidden-sm hidden-xs">
+                                    <h5>Молния!</h5>
+                                    <ul>
+                                        <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.lighting_text"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="right hidden-sm hidden-xs">
-                        <h5>Молния!</h5>
-                        <ul>
-                            <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.lighting_text"></a></li>
-                        </ul>
-                    </div>
+                    
+                    
                     <div class="text-center mob_h2 hidden-md hidden-lg"> <h2><a href="">22-й раз мы вместе<br> со сборной россии</a></h2></div>
                 </div>
             </slick>
@@ -114,32 +124,38 @@
         <div class="row">
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu6.jpg');">
-                    <a ui-sref="dashboard.general-news"><h2>Новости</h2></a>
+                    <h2><a ui-sref="dashboard.general-news">Новости</a></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laborum quos molestiae, reiciendis nostrum accusamus, nam error adipisci, amet vitae unde soluta aperiam sequi. Iusto cupiditate rem earum architecto autem!</p>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu5.jpg');">
                     <h2><a ui-sref="dashboard.forecast.playoff">Прогнозы</a></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laborum quos molestiae, reiciendis nostrum accusamus, nam error adipisci, amet vitae unde soluta aperiam sequi. Iusto cupiditate rem earum architecto autem!</p>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu1.jpg');">
                     <h2><a ui-sref="dashboard.forum">Форум</a></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laborum quos molestiae, reiciendis nostrum accusamus, nam error adipisci, amet vitae unde soluta aperiam sequi. Iusto cupiditate rem earum architecto autem!</p>
                 </div>
             </div>
                 <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu3.jpg');">
                     <h2><a href="" ui-sref="dashboard.blog" >Блог</a></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laborum quos molestiae, reiciendis nostrum accusamus, nam error adipisci, amet vitae unde soluta aperiam sequi. Iusto cupiditate rem earum architecto autem!</p>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu2.jpg');">
                     <h2><a href="">Календарь</a></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laborum quos molestiae</p>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu4.jpg');">
                     <h2><a href="">Обзоры</a></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas laborum quos molestiae, reiciendis nostrum accusamus, nam error adipisci, amet vitae unde soluta aperiam sequi. Iusto cupiditate rem earum architecto autem!</p>
                 </div>
             </div>
         </div>
@@ -160,26 +176,20 @@
                     <li>
                         <img src="img/resources/img/main/present1.png" alt="" class="img-responsive">
                         <h6>Джерси</h6>
-
                         <h3>500</h3>
-
-                        <p>баллов</p>
+                        <img src="img/resources/img/balls.png" alt="" class="img-responsive">
                     </li>
                     <li>
                         <img src="img/resources/img/main/present2.png" alt="" class="img-responsive">
                         <h6>Шайба</h6>
-
                         <h3>100</h3>
-
-                        <p>баллов</p>
+                        <img src="img/resources/img/balls.png" alt="" class="img-responsive">
                     </li>
                     <li>
                         <img src="img/resources/img/main/present3.png" alt="" class="img-responsive">
                         <h6>Эспандер</h6>
-
                         <h3>300</h3>
-
-                        <p>баллов</p>
+                        <img src="img/resources/img/balls.png" alt="" class="img-responsive">
                     </li>
                 </ul>
             </div>
@@ -283,13 +293,14 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="left">
-                    <h4>Тантамареска</h4>
-
+                    <h4>Тантамареска <span>+20</span></h4>
+                    <img src="img/resources/img/balls.png" alt="" class="img-responsive img_ball">
                     <h2>Передай привет друзьям!</h2>
 
                     <p>В безудержном соревновании "Порробуй догони" первенствовал<br> нападающий "Эдмонд Ойлера" Коннор
                         макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную в карьере.
                         Но покази <br> себя и ряд других игроков, поддержавшие почит форварда. </p>
+                    <p class="p_h">Хэшьтеги: <button class="btn ">#хоккейвкаждом</button></p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -303,9 +314,11 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="left">
-                    <h4>Флэш-игра</h4>
+                    <h4>Флэш-игра <span>+20</span></h4>
+                    <img src="img/resources/img/balls.png" alt="" class="img-responsive img_ball">
                     <h2>Выбей шубу ;)</h2>
                     <p>В безудержном соревновании "Порробуй догони" первенствовал<br> нападающий "Эдмонд Ойлера" Коннор макдейвид, установивший планку <br> на высоте в пять очков за матч - первую подобную в карьере. Но покази <br> себя и ряд других игроков, поддержавшие почит форварда.  </p>
+                    <p class="p_h">Хэшьтеги: <button class="btn ">#выбейшубу</button></p>
                 </div>
             </div>
             <div class="col-md-6">
