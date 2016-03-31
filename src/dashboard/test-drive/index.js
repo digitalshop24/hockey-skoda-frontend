@@ -12,6 +12,16 @@ export default angular.module('dashboard.tdrive', [])
                 template: require('./template.html'),
                 url: '/tdrive',
                 controller: TestDriveCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                resolve: {
+
+                    cities: (tdriveService) => {
+                        return tdriveService.getCities();
+                    },
+
+                    cars: (tdriveService) => {
+                        return tdriveService.getCars();
+                    }
+                }
             });
     });

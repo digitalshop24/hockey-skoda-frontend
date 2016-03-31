@@ -34,6 +34,7 @@ export default angular.module('app',
     .config($authProvider => {
 
         $authProvider.authToken = '';
+        $authProvider.authHeader = 'Auth-Code';
         $authProvider.facebook({
             clientId: '1563436463985643',
             responseType: 'token'
@@ -49,12 +50,14 @@ export default angular.module('app',
 
         $authProvider.oauth2({
             name: 'vk',
-            url: '/auth/vk',
+            url: 'http://skoda-hockey.herokuapp.com:80/api/v1/auth/vk',
             clientId: '5367930',
             redirectUri: window.location.origin,
             authorizationEndpoint: 'https://oauth.vk.com/authorize',
             display: 'popup',
-            response_type: 'token'
+            oauthType: '2.0',
+            responseType: 'token',
+            scope: ['email']
         });
     })
     .config(($locationProvider) => {

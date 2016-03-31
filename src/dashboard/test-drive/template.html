@@ -6,8 +6,8 @@
             </div>
             <div class="col-md-3 text-center" ng-repeat="car in ctrl.cars">
                 <a href="#">
-                    <div class="auto" ng-click="ctrl.chooseCar(car)" ng-class="{ 'active_auto': ctrl.carId == car.id}">
-                        <img src="{{car.img}}" class="img-responsive"/>
+                    <div class="auto" ng-click="ctrl.chooseCar(car)" ng-class="{ 'active_auto': ctrl.carId == car.skoda_id}">
+                        <img src="{{car.image}}" class="img-responsive"/>
 
                         <p ng-bind="car.name"/>
                     </div>
@@ -34,8 +34,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <select name="city" ng-options="city for city in ctrl.cities | orderBy"
-                                class="input_default input_small select_default" ng-model="ctrl.city">
+                        <select name="city" ng-options="city.name for city in ctrl.cities | orderBy: 'name'"
+                                class="input_default input_small select_default" ng-change="ctrl.loadDealer()" ng-model="ctrl.city">
                             <option disabled selected value>Выберите город</option>
                         </select>
                     </div>
@@ -43,10 +43,12 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <input type="checkbox" id="c1" ng-model="ctrl.ispdagreed">
-                        <label for="c1"><span></span>Соглашаюсь с обработкой персональных данных</label>
-
+                        <select name="city" ng-options="dealer.name for dealer in ctrl.dealers | orderBy: 'name'"
+                                class="input_default input_small select_default" ng-model="ctrl.dealer">
+                            <option disabled selected value>Выберите филиал</option>
+                        </select>
                     </div>
+
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
