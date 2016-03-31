@@ -28,7 +28,7 @@ import emailnew from './recover-password/index';
 import passwordnew from './password-new/index';
 import stars from './stars/index';
 import score from './schedule/index';
-import score from './score/index';
+// import score from './score/index';
 import video from './video/index';
 
 
