@@ -12,6 +12,8 @@ export default class TestDriveCtrl {
 
     send() {
 
+        const dealerId = this.dealer ? this.dealer.skoda_id : undefined;
+        const cityName = this.city ? this.city.name : undefined;
         const data = {
             mobilephone: this.mobilephone,
             ispdagreed: this.ispdagreed,
@@ -19,8 +21,8 @@ export default class TestDriveCtrl {
             lastname: this.lastName,
             firstname: this.firstName,
             email: this.email,
-            city: this.city.skoda_id,
-            dealer_id: this.dealer.skoda_id
+            city: cityName,
+            dealer_id: dealerId
         };
 
         this.service.sendRequest(data).then(()=> {

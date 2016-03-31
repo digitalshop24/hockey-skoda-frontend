@@ -43,7 +43,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <select name="city" ng-options="dealer.name for dealer in ctrl.dealers | orderBy: 'name'"
+                        <select name="city" ng-options="dealer.info for dealer in ctrl.dealers | orderBy: 'info'"
                                 class="input_default input_small select_default" ng-model="ctrl.dealer">
                             <option disabled selected value>Выберите филиал</option>
                         </select>
