@@ -3196,6 +3196,18 @@ $grey_about: #5d5d5d;
 .wrapp_slider {
   width:100%;
   min-width:270px;
+  .slick-next {
+    background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 14% center;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+  }
+  .slick-prev {
+    background: rgba(0, 0, 0, 1) url("img/resources/img/arrow_left_white.png") no-repeat 86% center;
+    left: -60px;
+    width: 100px;
+    height: 100px;
+  }
   .single-item {
     position:relative;
     .block-slid {
@@ -3218,14 +3230,14 @@ $grey_about: #5d5d5d;
     border:none;
     
   }
-  .slick-prev {
-    background:#000 url("img/resources/img/arrow_left_white.png") no-repeat center center;
-    left:0px;
-  }
-  .slick-next {
-    background:#000 url("img/resources/img/arrow_right_white.png") no-repeat center center;
-    right:0px;
-  }
+  // .slick-prev {
+  //   background:#000 url("img/resources/img/arrow_left_white.png") no-repeat center center;
+  //   left:0px;
+  // }
+  // .slick-next {
+  //   background:#000 url("img/resources/img/arrow_right_white.png") no-repeat center center;
+  //   right:0px;
+  // }
 }
 
 
@@ -3507,6 +3519,34 @@ $grey_about: #5d5d5d;
     .backg-1 {
       background:#e5e5e5;
       height:100%;
+      .group_a {
+        margin-top: 50px;
+        li {
+          padding: 5px 0 5px 40px;
+          font-size: $p_size;
+          font-family: $bold;
+        }
+      }
+      .group_a:before {
+        content: "А";
+        position: absolute;
+        left: 10%;
+        font-size: 2rem;
+      }
+      .group_b {
+        margin-top: 50px;
+        li {
+          padding: 5px 0 5px 40px;
+          font-size: $p_size;
+          font-family: $bold;
+        }
+      }
+      .group_b:before {
+        content: "Б";
+        position: absolute;
+        left: 10%;
+        font-size: 2rem;
+      }
     }
     .backg-2 {
       background:#ececec;
@@ -3784,6 +3824,34 @@ $grey_about: #5d5d5d;
         .choice_one {
           margin-right:2%;
         }
+        .group_a {
+        margin-top: 10px;
+        li {
+          padding: 3px 0 3px 40px;
+          font-size: $p_size;
+          font-family: $bold;
+        }
+      }
+      .group_a:before {
+        content: "А";
+        position: absolute;
+        margin-left: -100px;
+        font-size: 2rem;
+      }
+      .group_b {
+        margin-top: 10px;
+        li {
+          padding: 3px 0 3px 40px;
+          font-size: $p_size;
+          font-family: $bold;
+        }
+      }
+      .group_b:before {
+        content: "Б";
+        position: absolute;
+        margin-left: -100px;
+        font-size: 2rem;
+      }
 
       }
       .backg-2 {
