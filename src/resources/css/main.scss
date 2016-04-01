@@ -1038,10 +1038,16 @@ footer {
 
 
 $grey_about: #5d5d5d;
-
+.plus_ball {
+    color: $green_main;
+    font-family: $bold;
+    font-size: 2rem;
+    padding-left: 10px;
+}
 .about_first {
   background-image: url("img/resources/img/about/bg_first.jpg");
   background-repeat: no-repeat;
+
   .wrapp_titel {
     float: right;
     margin-right: 9%;
@@ -1472,7 +1478,7 @@ $grey_about: #5d5d5d;
   }
 }
 .wrapp_mainpage_present {
-  padding-bottom: 50px;
+  padding: 0 40px 50px 40px;
   h2 {
     color: $green_main;
     margin: 70px 0 30px 0;
@@ -1486,6 +1492,9 @@ $grey_about: #5d5d5d;
   }
   ul {
     margin-top: 70px;
+    .lg_priz, .lg_m_priz {
+      display: none;
+    }
     li {
       display: inline-block;
       width: 32%;
@@ -1497,6 +1506,7 @@ $grey_about: #5d5d5d;
         color: $green_main;
         margin-top: 30px;
         margin-bottom: 20px;
+        font-family: $bold;
       }
       img {
         display: inline;
@@ -1569,6 +1579,7 @@ $grey_about: #5d5d5d;
   .left {
     margin-left: 150px;
     padding-top: 40px;
+    padding-bottom: 40px;
     .p_h {
       font-size: 1.5rem; 
       position: relative;
@@ -1618,6 +1629,7 @@ $grey_about: #5d5d5d;
   .left {
     margin-left: 150px;
     padding-top: 40px;
+    padding-bottom: 40px;
     h4 {
       font-family: $light;
       display: inline;
@@ -1672,11 +1684,18 @@ $grey_about: #5d5d5d;
     margin-top: 115px;
     font-size: $p_size*2;
   }
+  h3 {
+    color: $white;
+    font-family: $bold;
+    margin-top: 115px;
+    
+  }
   h1 {
     text-transform: uppercase;
     color:$white;
     margin-top: 30px;
     font-size: 8rem;
+    font-family: $bold;
   }
   ul {
     margin-top: 250px;
@@ -2934,9 +2953,216 @@ $grey_about: #5d5d5d;
 
 //-------------------------------------------------- end video
 
+//-------------------------------------------------- tantamarezka
+
+#uploadButton{
+  overflow:hidden;
+  cursor:pointer;
+  position: relative;
+  line-height:40px;
+}
+#uploadButton input {
+  opacity:0;
+  // filter: alpha(opacity:0);
+  cursor:pointer;
+  padding:0px;
+  margin:0px;
+  border:none;
+  position: absolute;
+  top:0;
+  left:0;
+  line-height:100%;
+  width:100%;
+  height:100%;
+}
+
+#photo-load{
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+#photo-load #loadimg{
+  max-width:100%;
+  height:auto;
+}
+#loading-canvas{
+  position: absolute;
+  left:0;
+  top:50px;
+}
+
+.loader-wrapper{
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  text-align: center;
+  display: none;
+  background:rgba(255,255,255,0.8);
+  z-index:10000;
+}
+.loader-wrapper .loader{
+  background:url('img/resources/img/loader.gif');
+  display: inline-block;
+  width:32px;
+  height:32px;
+  position: absolute;
+  top:50%;
+  margin-top:-16px;
+}
+
+/*убираем радио при обрезке
+причуды скрипта*/
+.jcrop-keymgr{
+  display: none !important;
+}
+.tamtam-slider{
+  position: relative;
+  overflow: hidden;
+  background:#fff;
+}
+.tamtam-panel{
+  position: absolute;
+}
+.tamtam-img{
+  position: relative;
+  display: block;
+  z-index: 0;
+}
 
 
+.resize-container {
+    position: relative;
+    display: inline-block;
+    cursor: move;
+    margin: 0 auto;
+}
 
+.resize-container img {
+    display: block
+}
+
+.resize-container:hover img,
+.resize-container:active img {
+    
+}
+
+.resize-handle-ne,
+.resize-handle-se,
+.resize-handle-nw,
+.resize-handle-sw {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    z-index: 999;
+}
+
+.resize-wide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  z-index:998;
+  outline:2px dashed #fff;
+}
+
+.resize-handle-nw {
+    top: -5px;
+    left: -5px;
+    cursor: nw-resize;
+}
+
+.resize-handle-sw {
+    bottom: -5px;
+    left: -5px;
+    cursor: sw-resize;
+}
+
+.resize-handle-ne {
+    top: -5px;
+    right: -5px;
+    cursor: ne-resize;
+}
+
+.resize-handle-se {
+    bottom: -5px;
+    right: -5px;
+    cursor: se-resize;
+}
+
+.overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+  z-index: 999;
+  width: 200px;
+  height: 200px;
+    border: solid 2px rgba(222,60,80,.9);
+  box-sizing: content-box;
+  pointer-events: none;
+}
+
+.overlay:after,
+.overlay:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 204px;
+  height: 40px;
+    border-left: dashed 2px rgba(222,60,80,.9);
+  border-right: dashed 2px rgba(222,60,80,.9);
+}
+
+.overlay:before {
+  top: 0;
+  margin-left: -2px;
+  margin-top: -40px;
+}
+
+.overlay:after {
+  bottom: 0;
+  margin-left: -2px;
+  margin-bottom: -40px;
+}
+
+.overlay-inner:after,
+.overlay-inner:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 204px;
+    border-top: dashed 2px rgba(222,60,80,.9);
+  border-bottom: dashed 2px rgba(222,60,80,.9);
+}
+
+.overlay-inner:before {
+  left: 0;
+  margin-left: -40px;
+  margin-top: -2px;
+}
+
+.overlay-inner:after{
+  right: 0;
+  margin-right: -40px;
+  margin-top: -2px;
+}
+
+
+#tamtam-canvas{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+
+//-------------------------------------------------- end tantamarezka
 
 //-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
 // <!-- tantamareska -->
@@ -2970,6 +3196,18 @@ $grey_about: #5d5d5d;
 .wrapp_slider {
   width:100%;
   min-width:270px;
+  .slick-next {
+    background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 14% center;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+  }
+  .slick-prev {
+    background: rgba(0, 0, 0, 1) url("img/resources/img/arrow_left_white.png") no-repeat 86% center;
+    left: -60px;
+    width: 100px;
+    height: 100px;
+  }
   .single-item {
     position:relative;
     .block-slid {
@@ -2992,14 +3230,14 @@ $grey_about: #5d5d5d;
     border:none;
     
   }
-  .slick-prev {
-    background:#000 url("img/resources/img/arrow_left_white.png") no-repeat center center;
-    left:0px;
-  }
-  .slick-next {
-    background:#000 url("img/resources/img/arrow_right_white.png") no-repeat center center;
-    right:0px;
-  }
+  // .slick-prev {
+  //   background:#000 url("img/resources/img/arrow_left_white.png") no-repeat center center;
+  //   left:0px;
+  // }
+  // .slick-next {
+  //   background:#000 url("img/resources/img/arrow_right_white.png") no-repeat center center;
+  //   right:0px;
+  // }
 }
 
 
@@ -3281,6 +3519,34 @@ $grey_about: #5d5d5d;
     .backg-1 {
       background:#e5e5e5;
       height:100%;
+      .group_a {
+        margin-top: 50px;
+        li {
+          padding: 5px 0 5px 40px;
+          font-size: $p_size;
+          font-family: $bold;
+        }
+      }
+      .group_a:before {
+        content: "А";
+        position: absolute;
+        left: 10%;
+        font-size: 2rem;
+      }
+      .group_b {
+        margin-top: 50px;
+        li {
+          padding: 5px 0 5px 40px;
+          font-size: $p_size;
+          font-family: $bold;
+        }
+      }
+      .group_b:before {
+        content: "Б";
+        position: absolute;
+        left: 10%;
+        font-size: 2rem;
+      }
     }
     .backg-2 {
       background:#ececec;
@@ -3558,6 +3824,34 @@ $grey_about: #5d5d5d;
         .choice_one {
           margin-right:2%;
         }
+        .group_a {
+        margin-top: 10px;
+        li {
+          padding: 3px 0 3px 40px;
+          font-size: $p_size;
+          font-family: $bold;
+        }
+      }
+      .group_a:before {
+        content: "А";
+        position: absolute;
+        margin-left: -100px;
+        font-size: 2rem;
+      }
+      .group_b {
+        margin-top: 10px;
+        li {
+          padding: 3px 0 3px 40px;
+          font-size: $p_size;
+          font-family: $bold;
+        }
+      }
+      .group_b:before {
+        content: "Б";
+        position: absolute;
+        margin-left: -100px;
+        font-size: 2rem;
+      }
 
       }
       .backg-2 {
