@@ -16,6 +16,12 @@ export default class VideoCtrl {
         this.shouldPlayNewVideo = true;
         this.scope.$on('youtube.player.ready', ($event, player) => {
             player.cuePlaylist(this.videos.map(video => video.video_code));
+            player.addEventListener('onStateChange', (event) => {
+                if (event.data == 1) {
+                    this.youtubeClick = true;
+                    this.step(event.target.getPlaylistIndex());
+                }
+            })
         });
     }
 
@@ -56,7 +62,9 @@ export default class VideoCtrl {
     step(resultIndex) {
         this.currentVideo = this.videos[resultIndex];
         this.videoTime = undefined;
-        if (this.showVideoInfo) {
+        if (this.youtubeClick) {
+            this.youtubeClick = false;
+        } else if (this.showVideoInfo) {
             this.shouldPlayNewVideo = true;
         } else {
             this.player.playVideoAt(resultIndex);
