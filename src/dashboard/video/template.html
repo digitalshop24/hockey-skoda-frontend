@@ -5,30 +5,26 @@
     </div>
     <button ng-click="ctrl.previous()" style="background-color: red; width: 100px"> < </button>
     <button ng-click="ctrl.next()" style="background-color: greenyellow; width: 100px"> > </button>
-    <slick slides-to-show=1 slides-to-scroll=1 arrows=true>
+    <div ng-show="ctrl.showVideoInfo" class="video_item" style="background-image: url('{{ctrl.currentVideo.image.original}}')">
+
+        <div>
+
+            <h5 ng-bind="ctrl.currentVideo.name"></h5>
+            <a ng-click="ctrl.playVideo()" href=""><img class="play" src="img/resources/img/play.png" alt="" class="img-responsive">
+
+                <p class="bold">Смотреть</p>
+                <p ng-bind="ctrl.videoTime"></p>
+            </a>
 
 
-        <div ng-show="ctrl.showVideoInfo" class="video_item" style="background-image: url('{{ctrl.currentVideo.image.original}}')">
+            <p class="share">Поделиться видео:</p>
+            <a socialshare socialshare-provider="facebook" socialshare-url="{{ctrl.currentVideo.socialUrl}}">
+                <img class="" src="img/resources/img/fb.png" alt="" class="img-responsive"></a>
+            <a socialshare socialshare-provider="twitter" socialshare-url="{{ctrl.currentVideo.socialUrl}}"><img class="" src="img/resources/img/twiter.png" alt="" class="img-responsive"></a>
+            <a socialshare socialshare-provider="vk" socialshare-url="{{ctrl.currentVideo.socialUrl}}"><img class="" src="img/resources/img/vk.png" alt="" class="img-responsive"></a>
 
-            <div>
-
-                <h5 ng-bind="ctrl.currentVideo.name"></h5>
-                <a ng-click="ctrl.playVideo()" href=""><img class="play" src="img/resources/img/play.png" alt="" class="img-responsive">
-
-                    <p class="bold">Смотреть</p>
-                    <p ng-bind="ctrl.videoTime"></p>
-                </a>
-
-
-                <p class="share">Поделиться видео:</p>
-                <a socialshare socialshare-provider="facebook" socialshare-url="{{ctrl.currentVideo.socialUrl}}">
-                    <img class="" src="img/resources/img/fb.png" alt="" class="img-responsive"></a>
-                <a socialshare socialshare-provider="twitter" socialshare-url="{{ctrl.currentVideo.socialUrl}}"><img class="" src="img/resources/img/twiter.png" alt="" class="img-responsive"></a>
-                <a socialshare socialshare-provider="vk" socialshare-url="{{ctrl.currentVideo.socialUrl}}"><img class="" src="img/resources/img/vk.png" alt="" class="img-responsive"></a>
-
-            </div>
         </div>
-    </slick>
+    </div>
 </section>
 
 <section class="desc_video">
