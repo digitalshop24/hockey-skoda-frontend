@@ -36,11 +36,11 @@
         <div class="row bord_bottom">
             <div class="col-md-8">
 
-                <h4 ng-bind="ctrl.currentVideo.name">Россия США Полуфинал Хоккей ЧМ 2015</h4>
+                <h4 ng-bind="ctrl.currentVideo.name"></h4>
 
                 <p ng-bind="ctrl.currentVideo.middle_content"></p>
 
-                <p class="date">12 февраля</p>
+                <p class="date" ng-bind="ctrl.currentVideo.published_at | amDateFormat:'DD MMMM'"></p>
             </div>
             <div class="col-md-4">
                 <input type="text" class="input_default input_small" ng-model="ctrl.search.name"
