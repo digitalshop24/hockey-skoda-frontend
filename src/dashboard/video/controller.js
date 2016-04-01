@@ -7,7 +7,7 @@ export default class VideoCtrl {
         this.videos.forEach((video, index) => {
             video.index = index;
         });
-        this.currentVideo = this.videos[0];
+        this.setNewMainVideo(this.videos[0]);
         this.videoAmount = videoInfo.posts_count;
         this.state = $state;
         this.currentPage = page;
@@ -23,7 +23,7 @@ export default class VideoCtrl {
     playVideo() {
         this.showVideoInfo = false;
 
-        if(this.shouldPlayNewVideo) {
+        if (this.shouldPlayNewVideo) {
             this.player.playVideoAt(this.currentVideo.index);
         } else {
             this.player.playVideo()
@@ -56,7 +56,7 @@ export default class VideoCtrl {
     step(resultIndex) {
         this.currentVideo = this.videos[resultIndex];
         this.videoTime = undefined;
-        if(this.showVideoInfo) {
+        if (this.showVideoInfo) {
             this.shouldPlayNewVideo = true;
         } else {
             this.player.playVideoAt(resultIndex);
@@ -67,8 +67,11 @@ export default class VideoCtrl {
         this.showVideoInfo = true;
         this.shouldPlayNewVideo = true;
         this.currentVideo = video;
+        this.currentVideo.socialUrl = 'https://www.youtube.com/watch?v=' + this.currentVideo.video_code;
         this.videoTime = undefined;
-        this.player.pauseVideo();
+        if (this.player) {
+            this.player.pauseVideo();
+        }
         window.scrollTo(0, 0);
     }
 

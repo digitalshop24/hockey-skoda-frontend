@@ -21,9 +21,10 @@
 
 
                 <p class="share">Поделиться видео:</p>
-                <a href=""><img class="" src="img/resources/img/fb.png" alt="" class="img-responsive"></a>
-                <a href=""><img class="" src="img/resources/img/twiter.png" alt="" class="img-responsive"></a>
-                <a href=""><img class="" src="img/resources/img/vk.png" alt="" class="img-responsive"></a>
+                <a socialshare socialshare-provider="facebook" socialshare-url="{{ctrl.currentVideo.socialUrl}}">
+                    <img class="" src="img/resources/img/fb.png" alt="" class="img-responsive"></a>
+                <a socialshare socialshare-provider="twitter" socialshare-url="{{ctrl.currentVideo.socialUrl}}"><img class="" src="img/resources/img/twiter.png" alt="" class="img-responsive"></a>
+                <a socialshare socialshare-provider="vk" socialshare-url="{{ctrl.currentVideo.socialUrl}}"><img class="" src="img/resources/img/vk.png" alt="" class="img-responsive"></a>
 
             </div>
         </div>
