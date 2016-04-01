@@ -1569,6 +1569,7 @@ $grey_about: #5d5d5d;
   .left {
     margin-left: 150px;
     padding-top: 40px;
+    padding-bottom: 40px;
     .p_h {
       font-size: 1.5rem; 
       position: relative;
@@ -1618,6 +1619,7 @@ $grey_about: #5d5d5d;
   .left {
     margin-left: 150px;
     padding-top: 40px;
+    padding-bottom: 40px;
     h4 {
       font-family: $light;
       display: inline;
@@ -1672,11 +1674,18 @@ $grey_about: #5d5d5d;
     margin-top: 115px;
     font-size: $p_size*2;
   }
+  h3 {
+    color: $white;
+    font-family: $bold;
+    margin-top: 115px;
+    
+  }
   h1 {
     text-transform: uppercase;
     color:$white;
     margin-top: 30px;
     font-size: 8rem;
+    font-family: $bold;
   }
   ul {
     margin-top: 250px;
