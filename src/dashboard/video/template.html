@@ -1,32 +1,29 @@
 <section class="main_video">
+
+    <div class="video_item" ng-show="!ctrl.showInfo">
+        <youtube-video video-id="ctrl.currentVideo.video_code" player-width="'90%'" player-height="'100%'" style="min-height: 620px" player="ctrl.player"></youtube-video>
+    </div>
     <slick slides-to-show=1 slides-to-scroll=1 arrows=true>
-        <div class="video_item" style="background-image: url('img/resources/img/bg_star.png')">
-             <div>
-                <h5>Россия США Полуфинал Хоккей ЧМ 2015</h5>
-                <a href=""><img class="play" src="img/resources/img/play.png" alt="" class="img-responsive">
-                <p class="bold">Смотреть</p></a>
-                <p>01:35</p>
+
+
+        <div ng-show="ctrl.showInfo" class="video_item" style="background-image: url('{{ctrl.currentVideo.image.original}}')">
+
+            <div>
+
+                <h5 ng-bind="ctrl.currentVideo.name"></h5>
+                <a ng-click="ctrl.playVideo()" href=""><img class="play" src="img/resources/img/play.png" alt="" class="img-responsive">
+
+                    <p class="bold">Смотреть</p>
+                    <p ng-bind="ctrl.videoTime"></p>
+                </a>
+
+
                 <p class="share">Поделиться видео:</p>
-                <a href=""><img class="" src="img/resources/img/insta.png" alt="" class="img-responsive"></a>
                 <a href=""><img class="" src="img/resources/img/fb.png" alt="" class="img-responsive"></a>
                 <a href=""><img class="" src="img/resources/img/twiter.png" alt="" class="img-responsive"></a>
                 <a href=""><img class="" src="img/resources/img/vk.png" alt="" class="img-responsive"></a>
-                <button class="btn btn_secondary_inverse small">Поделиться</button>
-             </div>   
-        </div>
-        <div class="video_item" style="background-image: url('img/resources/img/bg_star.png')">
-             <div>
-                <h5>Россия США Полуфинал Хоккей ЧМ 2015</h5>
-                <img class="play" src="img/resources/img/play.png" alt="" class="img-responsive">
-                <p class="bold">Смотреть</p>
-                <p>01:35</p>
-                <p class="share">Поделиться видео:</p>
-                <img class="" src="img/resources/img/insta.png" alt="" class="img-responsive">
-                <img class="" src="img/resources/img/fb.png" alt="" class="img-responsive">
-                <img class="" src="img/resources/img/twiter.png" alt="" class="img-responsive">
-                <img class="" src="img/resources/img/vk.png" alt="" class="img-responsive">
-                <button class="btn btn_secondary_inverse small">Поделиться</button>
-             </div>    
+
+            </div>
         </div>
     </slick>
 </section>
@@ -35,61 +32,44 @@
     <div class="container-fluid">
         <div class="row bord_bottom">
             <div class="col-md-8">
-                <h4>Россия США Полуфинал Хоккей ЧМ 2015</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore qui eius repellat. Similique modi maiores hic, porro debitis, quidem reiciendis? Totam blanditiis officiis, adipisci architecto, neque nesciunt modi beatae veritatis.</p>
-                <p class="date">12  февраля</p>
+
+                <h4 ng-bind="ctrl.currentVideo.name">Россия США Полуфинал Хоккей ЧМ 2015</h4>
+
+                <p ng-bind="ctrl.currentVideo.middle_content"></p>
+
+                <p class="date">12 февраля</p>
             </div>
             <div class="col-md-4">
-                <input type="text" class="input_default input_small" placeholder="ЧМХ 2009, например">
+                <input type="text" class="input_default input_small" ng-model="ctrl.search.name"
+                       placeholder="ЧМХ 2009, например">
             </div>
         </div>
     </div>
-</section>  
+</section>
+
+
+
 <section class="other_video">
     <div class="container-fluid">
         <div class="row ">
-            <div class="col-md-3">
-                <div style="background-image: url('img/resources/img/bg_star.png')"></div>
-                <p class="bold"><a href="">Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur</a></p>
-                <p><a href="">10 февраля</a></p>
+            <div class="col-md-3" ng-repeat="video in ctrl.videos | filter: ctrl.search.name">
+                <div style="background-image: url('{{video.image.small}}')"></div>
+                <p class="bold"><a ng-click="ctrl.showInfo = true; ctrl.currentVideo = video" ng-bind="video.name"></a></p>
+
+                <p><a href="" ng-bind="video.published_at | amDateFormat:'DD MMMM'"></a></p>
+
             </div>
-             <div class="col-md-3">
-                <div style="background-image: url('img/resources/img/bg_star.png')"></div>
-                <p class="bold"><a href="">Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur</a></p>
-                <p><a href="">10 февраля</a></p>
-            </div>
-             <div class="col-md-3">
-                <div style="background-image: url('img/resources/img/bg_star.png')"></div>
-                <p class="bold"><a href="">Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur</a></p>
-                <p><a href="">10 февраля</a></p>
-            </div>
-             <div class="col-md-3">
-                <div style="background-image: url('img/resources/img/bg_star.png')"></div>
-                <p class="bold"><a href="">Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur</a></p>
-                <p><a href="">10 февраля</a></p>
-            </div>
-             <div class="col-md-3">
-                <div style="background-image: url('img/resources/img/bg_star.png')"></div>
-                <p class="bold"><a href="">Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur</a></p>
-                <p><a href="">10 февраля</a></p>
-            </div>
-             <div class="col-md-3">
-                <div style="background-image: url('img/resources/img/bg_star.png')"></div>
-                <p class="bold"><a href="">Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur</a></p>
-                <p><a href="">10 февраля</a></p>
-            </div>
-             <div class="col-md-3">
-                <div style="background-image: url('img/resources/img/bg_star.png')"></div>
-                <p class="bold"><a href="">Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur</a></p>
-                <p><a href="">10 февраля</a></p>
-            </div>
-             <div class="col-md-3">
-                <div style="background-image: url('img/resources/img/bg_star.png')"></div>
-                <p class="bold"><a href="">Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur</a></p>
-                <p><a href="">10 февраля</a></p>
-            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
             <div class="col-md-12 text-center">
-                <button class="btn btn_common main">Показать еще</button>
+                <ul>
+                    <li ng-show="ctrl.videos.length < ctrl.videoAmount">
+                        <button ng-click="ctrl.loadMore()" class="btn btn_common main">Показать ещё</button>
+                    </li>
+                    <li>Показано {{ctrl.videos.length}} видео из {{ctrl.videoAmount}}</li>
+                </ul>
             </div>
         </div>
     </div>
