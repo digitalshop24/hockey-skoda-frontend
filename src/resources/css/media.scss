@@ -28,8 +28,9 @@ $p_size: 1.4rem;
 	.wrapp_mainpage_end {
 		min-height: 980px;
 	}	
+
 }
-@media only screen and (max-width : 1900px) {
+@media only screen and (max-width : 1920px) {
 	.wrapp_mainpage_slider {
 			.item {
 				min-height: 770px;
@@ -37,7 +38,8 @@ $p_size: 1.4rem;
 	}
 	.wrapp_mainpage_end {
 		min-height: 900px;
-	}		
+	}	
+
 }
 @media only screen and (max-width : 1700px) {
 	.wrapp_mainpage_slider {
@@ -959,3 +961,18 @@ $p_size: 1.4rem;
 		width:100%;
  	}
  }
+@media only screen and (min-width : 1920px) {
+ 	.wrapp_mainpage_present {
+		ul {
+			li {
+				width: 15%;
+				.img_priz {
+					width: 70%;
+				}
+			}
+			.lg_priz {
+				display: inline-block;
+			}
+		}
+	}
+}	

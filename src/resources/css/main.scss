@@ -1472,7 +1472,7 @@ $grey_about: #5d5d5d;
   }
 }
 .wrapp_mainpage_present {
-  padding-bottom: 50px;
+  padding: 0 40px 50px 40px;
   h2 {
     color: $green_main;
     margin: 70px 0 30px 0;
@@ -1486,6 +1486,9 @@ $grey_about: #5d5d5d;
   }
   ul {
     margin-top: 70px;
+    .lg_priz {
+      display: none;
+    }
     li {
       display: inline-block;
       width: 32%;
