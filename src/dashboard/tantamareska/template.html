@@ -1,35 +1,80 @@
 <!-- tantamareska -->
 <section class="wrapp_tantamareska">
     <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <h2>Тантамареска</h2>
+            <div class="row">
+                <div class="col-xs-6 col-md-5 col-xs-mob">
+                    <h2>Тантамареска</h2>
+                </div>
+                <div class="col-xs-6 col-md-7 col-xs-mob">
+                <!-- <input type="file" accept="image/*" class="file-photo"> -->
+                    <a href="#" class="btn btn_common small" id="uploadButton">
+                        Загрузить свое фото
+                        <input type="file" accept="image/*" class="file-photo">
+                    </a>
+                </div>
             </div>
-            <div class="col-md-7 but-pos">
-                <button class="btn btn_common small">Загрузить свое фото</button>
-            </div>
-        </div>
-    </div>
+        </div>  
 </section>
 <!--end tantamareska -->
 
+<!-- <div id="photo_copy">
+    <img src="" alt="" id="loadimg">
+    <div class="photo-size"></div>
+</div> -->
+
+<div class="loader-wrapper">
+    <span class="loader"></span>
+</div>
+
+<!-- Modal -->
+<div id="cropModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Обрезка изображения</h4>
+      </div>
+      <div class="modal-body">
+        <div id="photo-load">
+            <div class="loader-wrapper">
+                <span class="loader"></span>
+            </div>
+            <canvas id="loading-canvas"></canvas>
+            <img src="" alt="" id="loadimg">
+            <!-- <div class="photo-size"></div> -->
+        </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Отменить</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="save-crop">Сохранить изменения</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
 <!-- slider -->
-<section slider-init class="wrapp_slider">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="single-item">
-                <div class="block-slid box">
-                    <img src="img/resources/img/tantam/slid-1.jpg" alt="">
-                </div>
-                <div class="block-slid box">
-                    <img src="img/resources/img/tantam/slid-2.jpg" alt="">
-                </div>
-                <div class="block-slid box">
-                    <img src="img/resources/img/tantam/slid-3.jpg" alt="">
+<section class="wrapp_slider tamtam-slider">
+    <div class="tamtam-panel">
+        <img class="crop-result tamtam-img" src="" >
+    </div>
+    <canvas id="tamtam-canvas" width="0" height="0"></canvas>
+    <div class="container-fluid"> 
+            <div class="row">
+                <div class="single-item">
+                    <div class="block-slid box">
+                        <img src="img/resources/img/tantam/slid-1.png" alt="">
+                    </div>
+                    <div class="block-slid box">
+                        <img src="img/resources/img/tantam/slid-3.png" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div>  
 </section>
 <!--end slider -->
 
@@ -74,15 +119,19 @@
                         <span class="on">ON</span>
                         <span class="off">OFF</span>
                     </li>
-                </ul>
-
+                </ul>   
+                
             </div>
         </div>
         <div class="toggle_button row">
             <div class="col-md-12">
-                <button class="btn btn_primary tiny">Отправить</button>
+                <button class="btn btn_primary tiny" id="tamtamSend">Отправить</button>
             </div>
         </div>
     </div>
 </section>
 <!--end share -->
+
+<img class="tamtam-share" src="">
+
+<a href="http://vk.com/share.php?url=http://walkman5.ru/work/dshop24.by/img/tantam/slid-1.png" class="vk-share">VK SHARE</a>
