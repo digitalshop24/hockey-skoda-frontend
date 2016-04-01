@@ -49,10 +49,11 @@
                         <div class="news_one_slider" style="background-image: url({{news.image.medium}})">
                             <div class="news_one_slider_bg"></div>
                         </div>
-                        <!-- <img ui-sref="dashboard.newspage({news:news})" src="{{news.image.medium}}" alt="" class="img-responsive"> -->
+
                         <a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" class="news_titel"
                            ng-bind="news.name"></a>
-                        <!--<p class="news_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iure ipsa dolore saepe, maxime.</p>-->
+
+                           <p class="news_content" ng-bind="news.short_content"></p>
                     </div>
                 </div>
             </div>
