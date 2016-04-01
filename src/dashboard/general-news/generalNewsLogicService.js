@@ -42,18 +42,18 @@ export default class GeneralNewsLogicService {
 
     getNextDate() {
         this.nextDay = this.daysWithNews.find(date => +this.moment(date).date() < this.day)
-        /*if (this.nextDay) {
+        if (this.nextDay) {
             this.day = moment(this.nextDay).date();
-        }*/
+        }
         return this.nextDay;
     }
 
     getPreviousDate() {
         const reverse = this.daysWithNews.slice(0).reverse();
         this.previousDay = reverse.find(date => +this.moment(date).date() > this.day)
-        /*if (this.previousDay) {
+        if (this.previousDay) {
             this.day = moment(this.previousDay).date();
-        }*/
+        }
         return this.previousDay;
     }
 

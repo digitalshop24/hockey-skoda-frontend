@@ -32,11 +32,11 @@ export default angular.module('dashboard.general-news.scroll', [])
                                 $scope.loadNext();
                             }
                         } else {
-                            const needLoadPreviousDay = checkLoadPreviousDayNeeded();
+                            /*const needLoadPreviousDay = checkLoadPreviousDayNeeded();
 
                             if (needLoadPreviousDay) {
                                 $scope.loadPrevious();
-                            }
+                            }*/
                         }
 
 
@@ -47,7 +47,7 @@ export default angular.module('dashboard.general-news.scroll', [])
                             activeDayChanged = handleScrollUp();
                         }
                         if (activeDayChanged) {
-                            generalNewsLogicService.day = +currentActiveDay;
+                            //generalNewsLogicService.day = +currentActiveDay;
                             $rootScope.$broadcast('generalNews:activeDayChanged', {
                                 day: currentActiveDay,
                                 scrollDown: scrollDown
@@ -101,7 +101,7 @@ export default angular.module('dashboard.general-news.scroll', [])
                         });
 
                         let activeDayChanged = false;
-                        if (currentActiveDay != newActiveDay) {
+                        if (newActiveDay && currentActiveDay != newActiveDay) {
                             currentActiveDay = newActiveDay;
                             activeDayChanged = true;
                         }

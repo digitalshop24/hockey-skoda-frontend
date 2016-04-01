@@ -12,7 +12,6 @@ export default angular.module('dashboard.masonry-init', [])
                 angular.element(document).ready(function () {
                     $($scope.masonryInit).masonry({
                         // options
-                        itemSelector: '.grid-item',
                         columnWidth: '.grid-item',
                         itemSelector: '.grid-item',
                         percentPosition: true

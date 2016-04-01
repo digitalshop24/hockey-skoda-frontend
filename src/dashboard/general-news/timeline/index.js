@@ -27,7 +27,7 @@ export default angular.module('dashboard.general-news.timeline', [])
                     if(data.scrollDown) {
                         tempData = day >= 4 ? day - 3 : day;
                     } else {
-                        tempData = day <= 25 ? day + 3 : day;
+                        tempData = day <= 25 ? day + 3 : $("div[data-timeline-day-id]").eq(0).data('timelineDayId');
                     }
                     var elem = $("div[data-timeline-day-id='" + tempData + "']");
                     if (!elem) {
