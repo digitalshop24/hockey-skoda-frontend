@@ -58,6 +58,9 @@ export default class Api {
 
     handleResponse(response) {
         if (!this.isAuthorized(response) && !this.rootscope.alreadyInLoginModal) {
+            this.rootscope.alreadyInLoginModal = true;
+            this.session.invalidate();
+            this.rootscope.$broadcast('user:updated', {});
             this.login.open();
         }
 
