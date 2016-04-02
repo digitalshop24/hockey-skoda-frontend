@@ -8,6 +8,13 @@ export default class HeaderCtrl {
         this.state = $state;
         this.auth = auth;
         this.isMenuOpen = false;
+        this.isNewsOpen = true;
+        this.isForOpen = false;
+        this.isForumOpen = false;
+        this.isPrizeOpen = false;
+        this.isRaspOpen = false;
+        
+        
         $scope.$on('user:updated', (event,data) => {
             this.user = data;
         });

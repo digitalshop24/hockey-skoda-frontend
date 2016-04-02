@@ -83,6 +83,71 @@
                     <div class="row">
                         <div class="col-md-3">
                             <ul>
+                                <li 
+                                    ng-mouseover="ctrl.isNewsOpen = true" 
+                                    ng-mouseleave="ctrl.isNewsOpen = false">
+                                    Новости
+                                </li>
+                                <li ng-mouseover="ctrl.isForOpen = true" 
+                                    ng-mouseleave="ctrl.isForOpen = false">
+                                    Прогнозы
+                                </li>
+                                <li ng-mouseover="ctrl.isForumOpen = true" 
+                                    ng-mouseleave="ctrl.isForumOpen = false">
+                                    Форум
+                                </li>
+                                <li ng-mouseover="ctrl.isPrizeOpen = true" 
+                                    ng-mouseleave="ctrl.isPrizeOpen = false">
+                                    Призы
+                                </li>
+                                <li ng-mouseover="ctrl.isRaspOpen = true" 
+                                    ng-mouseleave="ctrl.isRaspOpen = false">
+                                    Расписание
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul ng-show="ctrl.isNewsOpen">
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                            </ul>
+                            <ul ng-show="ctrl.isForOpen">
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                            </ul>
+                            <ul ng-show="ctrl.isForumOpen">
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                            </ul>
+                            <ul ng-show="ctrl.isPrizeOpen">
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                            </ul>
+                            <ul ng-show="ctrl.isRaspOpen">
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                                <li>пункт 1</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <!-- <div class="col-md-3">
+                            <ul>
                                 <li><a href="" class="link_default">Календарь</a></li>
                                 <li><a href="" class="link_default">Тантамарезка</a></li>
                                 <li><a href="" class="link_default">Пожелание сборной России</a></li>
@@ -111,7 +176,7 @@
                                 
                                
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>  
