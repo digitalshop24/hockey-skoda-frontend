@@ -1385,7 +1385,7 @@ $grey_about: #5d5d5d;
       font-family: $bold;
       font-size: $p_size+.2rem;
       position: absolute;
-      top: 120px;
+      top: 100px;
       width: 210px;
     }
     .news_content {
@@ -1394,7 +1394,7 @@ $grey_about: #5d5d5d;
       color:$grey;
       font-size: $p_size;
       position: absolute;
-      top: 180px;
+      top: 205px;
       width: 210px;
 
     }
@@ -1652,7 +1652,7 @@ $grey_about: #5d5d5d;
     }
     p {
       margin-top: 30px;
-      color: $grey;
+      // color: $grey;
       font-size: $p_size;
     }
   }
