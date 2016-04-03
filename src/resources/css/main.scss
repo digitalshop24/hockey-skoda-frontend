@@ -62,10 +62,13 @@ header {
       li {
         display: inline-flex;
         text-transform: uppercase;
-        padding: 17px 19px !important;
+        padding: 27px 30px !important;
         border-left: 1px solid $grey;
+        height: 79px;
         img {
           display: inline-block;
+          width: 20px;
+          height: 20px;
         }
         span {
           color: $green_main;
@@ -73,11 +76,12 @@ header {
           position: relative;
           top: 3px;
           margin-left: 15px;
+          font-family: $bold;
         }
       }
-      li:nth-child(1) {
-        padding-top: 16px !important;
-      }
+      // li:nth-child(1) {
+      //   padding-top: 16px !important;
+      // }
     }
   }
   .right_head_mobile {
@@ -4411,3 +4415,35 @@ background-image: url('img/resources/img/prizesPage/bg4.png');
   margin-bottom: 50px;
 }
 /// end error page
+
+
+
+  .drilldown a {
+    color: #fff;
+    text-decoration: none;
+  }
+   
+  .drilldown ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+   
+  .drilldown li {
+    padding: 10px;
+    border-bottom: 1px dotted #ededed;
+  }
+   
+  .drilldown {
+    overflow: hidden;
+    width: 450px;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #0F9D58;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+   
+  .drilldown-sub { display: none; }
+   
+  .drilldown-back { font-weight: bold; }
