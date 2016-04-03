@@ -14,7 +14,7 @@ export default class User {
     }
 
     get name() {
-        const lastNameAndFirstName = (this.last_name || '') + " " + (this.first_name || '');
-        return lastNameAndFirstName.trim() ? lastNameAndFirstName : this.email;
+        const lastNameAndFirstName = ((this.last_name || '') + " " + (this.first_name || '')).trim();
+        return lastNameAndFirstName ? lastNameAndFirstName : (this.nickname ? this.nickname : this.email);
     }
 }
