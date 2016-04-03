@@ -8,6 +8,13 @@ function initTimeline() {
     });
 }
 
+function initMenu() {
+    $(function () {
+        $('.drilldown').drilldown();
+    });
+}
+
+
 function initSlider() {
 
     $(function () {
