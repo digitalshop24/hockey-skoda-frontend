@@ -163,26 +163,26 @@
                         </div>
                         <div class="col-md-3 two_menu">
                             <ul ng-show="ctrl.isNewsOpen">
-                                <a href=""><li>События</li></a>
+                                <a ui-sref="dashboard.general-news"><li>События</li></a>
                                 <a ui-sref="dashboard.facts"><li>Факты</li></a>
                                 <a ui-sref="dashboard.blog"><li>Аналитика</li></a>
                                 <a href=""><li>Девушки-чирлидирши</li></a>
-                                <a href=""><li>О звездах хоккея</li></a>
+                                <a ui-sref="dashboard.stars"><li>О звездах хоккея</li></a>
                                 <a ui-sref="dashboard.video"><li>Хоккейные видео</li></a>
                             </ul>
                             <ul ng-show="ctrl.isForecastOpen">
-                                <a href=""><li>Сетка соревнований</li></a>
-                                <a href=""><li>Матчи</li></a>
+                                <a ui-sref="dashboard.forecast.playoff"><li>Сетка соревнований</li></a>
+                                <a ui-sref="dashboard.forecast.companionship"><li>Матчи</li></a>
            
                             </ul>
                             <ul ng-show="ctrl.isForumOpen">
-                                <a href=""><li>Форум</li></a>
+                                <a ui-sref="dashboard.forum"><li>Форум</li></a>
                                 <a href=""><li>Викторины</li></a>
 
                             </ul>
                             
                             <ul ng-show="ctrl.isSchedOpen">
-                                <a href=""><li>Расписание матчей</li></a>
+                                <a ui-sref="dashboard.schedule"><li>Расписание матчей</li></a>
                                 <a href=""><li>Органайзер болельшика</li></a>
                                 <a href=""><li> Календарь</li></a>
                             </ul>
