@@ -34,21 +34,21 @@ export default angular.module('app',
     .service('auth', auth)
     .config($authProvider => {
 
-        $authProvider.authToken = '';
-        $authProvider.authHeader = 'Auth-Code';
         $authProvider.facebook({
+            scope: ['email', 'public_profile'],
             url: 'http://skoda-hockey.herokuapp.com:80/api/v1/auth/facebook',
             clientId: '1563436463985643',
-            responseType: 'token'
+            responseType: 'code'
         });
 
         $authProvider.instagram({
+            url: 'http://skoda-hockey.herokuapp.com:80/api/v1/auth/instagram',
             clientId: '633676f1f025495fba751c8eef59c392'
         });
 
-        $authProvider.twitter({
+        /*$authProvider.twitter({
             clientId: '0n8MJuRKkn7PdEnoaK5VZRGmG'
-        });
+        });*/
 
         $authProvider.oauth2({
             name: 'vk',
@@ -58,7 +58,7 @@ export default angular.module('app',
             authorizationEndpoint: 'https://oauth.vk.com/authorize',
             display: 'popup',
             oauthType: '2.0',
-            responseType: 'token',
+            responseType: 'code',
             scope: ['email']
         });
     })
