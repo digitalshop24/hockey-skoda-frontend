@@ -4415,7 +4415,13 @@ background-image: url('img/resources/img/prizesPage/bg4.png');
   margin-bottom: 50px;
 }
 /// end error page
-
+nav {
+  .logo_mobile {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+}
 
 
   .drilldown a {
@@ -4436,14 +4442,47 @@ background-image: url('img/resources/img/prizesPage/bg4.png');
    
   .drilldown {
     overflow: hidden;
-    width: 450px;
+    width: 100%;
     padding: 10px;
     margin: 20px auto;
     background-color: #0F9D58;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    position: fixed;
+    top: 67px;
+    height: 90vh;
   }
    
   .drilldown-sub { display: none; }
    
   .drilldown-back { font-weight: bold; }
+
+
+  #mobile-menu-button {
+  cursor: pointer;
+  display: block;
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  top: 0;
+  right: .1em;
+}
+#mobile-menu-button a {
+  margin: 1em;
+  display: block; 
+  position: relative;
+}
+#mobile-menu-button a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 2em;
+  height: 0.35em;
+  background: $green_main;
+  box-shadow: 0 0.6em 0 0 $green_main, 0 1.2em 0 0 $green_main;
+}
+#mobile-menu-button.active a:before {
+  background: #7bb640;
+  box-shadow: 0 0.6em 0 0 #7bb640, 0 1.2em 0 0 #7bb640;
+}
