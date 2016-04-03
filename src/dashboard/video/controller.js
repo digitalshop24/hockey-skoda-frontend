@@ -1,8 +1,12 @@
 'use strict';
 
+const YOUTUBE_PLAYING = 1;
+const YOUTUBE_PAUSE = 2;
 
 export default class VideoCtrl {
-    constructor(videoInfo, page, $state, $scope) {
+
+
+    constructor(videoInfo, page, $state, $scope, $timeout) {
         this.videos = videoInfo.posts;
         this.videos.forEach((video, index) => {
             video.index = index;
@@ -14,12 +18,29 @@ export default class VideoCtrl {
         this.showVideoInfo = true;
         this.scope = $scope;
         this.shouldPlayNewVideo = true;
+        this.$timeout = $timeout;
+        let timer;
         this.scope.$on('youtube.player.ready', ($event, player) => {
             player.cuePlaylist(this.videos.map(video => video.video_code));
             player.addEventListener('onStateChange', (event) => {
-                if (event.data == 1) {
+
+                if (event.data == YOUTUBE_PLAYING) {
+                    this.$timeout.cancel(timer);
                     this.youtubeClick = true;
                     this.step(event.target.getPlaylistIndex());
+                } else if (event.data == YOUTUBE_PAUSE) {
+
+                    this.youtubeClick = true;
+                    this.step(event.target.getPlaylistIndex());
+
+                    timer = this.$timeout(() => {
+                        this.showVideoInfo = true;
+                        this.shouldPlayNewVideo = false;
+                        const secondsDuration = moment.duration(this.player.getCurrentTime(), 's');
+                        const wholeSeconds = secondsDuration.seconds() < 10 ? "0" + secondsDuration.seconds() : secondsDuration.seconds();
+                        this.videoTime = secondsDuration.minutes() + ":" + wholeSeconds;
+                    }, 3000);
+
                 }
             })
         });
@@ -35,18 +56,9 @@ export default class VideoCtrl {
             this.player.playVideo()
         }
 
-        this.scope.$on('youtube.player.paused', () => {
-            this.showVideoInfo = true;
-            this.shouldPlayNewVideo = false;
-            const secondsDuration = moment.duration(this.player.getCurrentTime(), 's');
-            const wholeSeconds = secondsDuration.seconds() < 10 ? "0" + secondsDuration.seconds() : secondsDuration.seconds();
-            this.videoTime = secondsDuration.minutes() + ":" + wholeSeconds;
-        });
-
         this.scope.$on('youtube.player.playing', () => {
             this.showVideoInfo = false;
         });
-
     }
 
     next() {
