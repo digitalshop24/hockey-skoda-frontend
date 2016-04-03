@@ -112,14 +112,46 @@ header {
     position: fixed;
     width: 98%;
     padding-bottom: 60px;
-    padding-top: 30px;
+    height: 350px;
     ul {
+      padding-top: 30px;
       li {
         padding: 10px 0 10px 10px;
-        border-bottom: 1px solid $grey;
+        border-bottom: 1px solid $grey_lite;
+      }
+      a {
+          font-size: $p_size;
+      }
+    }
+    .two_menu {
+      li {
+        color: $green_main;
+      }
+    }
+    .info_menu {
+      background-color: $grey;
+      div {
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position: 90% center;
+        padding-left: 40px;
+        min-height: 350px;  
+        h3 {
+          text-transform: uppercase;
+          width: 50%;
+          padding-top: 50px;
+        }
+        p {
+          font-size: $p_size;
+          padding-top: 30px;
+          width: 50%;
+          padding-bottom: 30px;
+        }
         a {
           font-size: $p_size;
+          text-decoration: underline;
         }
+
       }
     }
   }
