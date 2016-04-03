@@ -4425,37 +4425,80 @@ nav {
 
 
   .drilldown a {
-    color: #fff;
+    color: $black;
     text-decoration: none;
+    font-size: $p_size;
+    font-family: $regular;
   }
    
   .drilldown ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    .end_li {
+      text-transform: uppercase;
+      color: $green_main;
+      font-family: $bold;
+      .img_li {
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+      }
+    }
   }
    
   .drilldown li {
-    padding: 10px;
-    border-bottom: 1px dotted #ededed;
+    padding: 13px;
+    border-bottom: 1px solid $grey_lite;
+    .arrow_li {
+      position: absolute;
+      right: 10px;
+      margin-top: -20px;
+    }
   }
    
   .drilldown {
     overflow: hidden;
     width: 100%;
     padding: 10px;
-    margin: 20px auto;
-    background-color: #0F9D58;
+    // margin: 20px auto;
+    background-color: $white;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    position: fixed;
+    position: absolute;
     top: 67px;
     height: 90vh;
+    .input_default  {
+      width: 100%
+    }
+  }
+  .li_sub {
+    color: $green_main;
+  }
+  .drilldown-sub { 
+    display: none;
+    a {
+      li {
+        
+      }
+    }
   }
    
-  .drilldown-sub { display: none; }
-   
-  .drilldown-back { font-weight: bold; }
+  .drilldown-back { 
+    font-weight: bold;
+    text-align: center;
+    // padding: 0 0 30px 0 !important;
+    a {
+      font-size: 2rem;
+      color: $black;
+    }
+    img {
+      position: absolute;
+      background-color: $grey;
+      left: 10px;
+      width: 45px;
+    }
+  }
 
 
   #mobile-menu-button {
