@@ -15,8 +15,8 @@ export default class ScheduleService {
     }
 
     getTeams() {
-        return this.api.get('/predictions/play_off').then(res=> {
-            return res.data.teams;
+        return this.api.get('/teams').then(res=> {
+            return res.data;
         });
     }
 }
