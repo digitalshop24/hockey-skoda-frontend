@@ -1,15 +1,20 @@
 <header>
-<div menuInit class="drilldown" >
+<nav>
+<img ui-sref="dashboard.main" src="img/resources/img/logo.png" alt="" class="img-responsive logo_mobile">
+<span id="mobile-menu-button" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">
+    <a href="#menu"></a>
+</span>
+<div menu-init class="drilldown hidden-md hidden-lg" ng-show="ctrl.isMenuMobileOpen">
       <div class="drilldown-container">
         <ul class="drilldown-root">
-          <li><a href="#"><a href="http://www.jqueryscript.net/menu/">Menu</a> 1</a></li>
-          <li>
-            <a href="#">Menu 2<span>&rarr;</span></a>
+            <a href=""><li>Новости</li></a> 
+            <li>
+            <a href="#">Прогнозы<span>&rarr;</span></a>
             <ul class="drilldown-sub">
               <li class="drilldown-back"><a href="#"><span>&larr;</span> Back</a></li>
-              <li><a href="#">Menu 2-1</a></li>
+              <li><a href="#">Сетка соревнований</a></li>
               <li>
-                <a href="#">Menu 2-2 <span>&rarr;</span></a>
+                <a href="#">Матчи<span>&rarr;</span></a>
                 <ul class="drilldown-sub">
                   <li class="drilldown-back"><a href="#"><span>&larr;</span> Back</a></li>
                   <li><a href="#">Menu 2-2-1</a></li>
@@ -31,7 +36,8 @@
           </li>
         </ul>
       </div>
-</div>
+    </div>
+</nav>
     <!-- <nav class="mobile-menu hidden-md hidden-lg">
         <img ui-sref="dashboard.main" src="img/resources/img/logo.png" alt="" class="img-responsive">
         <label for="show-menu" class="show-menu">
@@ -66,7 +72,6 @@
 
         </ul>
 
-
         <div ng-click="ctrl.openLoginPopup()" class="right_head_mobile">
             <a href="">
                 <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/skoda_rul.jpg" alt="" class="img-responsive">
@@ -77,7 +82,7 @@
         </div>
 
 
-    </nav> -->
+    </nav>  -->
     <div class="container-fluid hidden-xs hidden-sm">
         <div class="row">
             <div class="col-sm-12 col-md-12 left_head text-left">
