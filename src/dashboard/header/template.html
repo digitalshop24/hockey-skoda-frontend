@@ -51,28 +51,48 @@
             <div class="col-sm-12 col-md-12 left_head text-left">
                 <a ui-sref="dashboard.main" class="logo"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
                 <ul>
-                    <li><a ui-sref="dashboard.general-news" ng-class="{'active_li': $state.includes('dashboard.general-news') }">Новости</a></li>
+                    <li ng-mouseover="ctrl.isMenuOpen = true" ng-class="active_li">
+                        <a href="">
+                            <span>Меню</span>
+                            <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
+                        </a>
+                    </li>
+                    <!-- <li><a ui-sref="dashboard.general-news" ng-class="{'active_li': $state.includes('dashboard.general-news') }">Новости</a></li>
                     <li><a ui-sref="dashboard.forecast.playoff" ng-class="{'active_li': $state.includes('dashboard.forecast.playoff')}">Прогнозы</a></li>
                     <li><a ui-sref="dashboard.forum" ng-class="{'active_li': $state.includes('dashboard.forum')}">Форум</a></li>
                     <li><a ui-sref="dashboard.tdrive" ng-class="{'active_li': $state.includes('dashboard.tdrive')}">Тест-драйв</a></li>
                     <li><a href="#">Призы</a></li>
-                    <li><a ui-sref="dashboard.schedule" ng-class="{'active_li': $state.includes('dashboard.schedule')}">Расписание </a></li>
+                    <li><a ui-sref="dashboard.schedule" ng-class="{'active_li': $state.includes('dashboard.schedule')}">Расписание </a></li> -->
                 </ul>
             </div>
-            <div class="right_head text-right hidden-xs">
+            <div class="right_head text-center hidden-xs">
                 <ul>
-                    <li ng-mouseover="ctrl.isMenuOpen = true">
-                        <a href="">
-                            <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
+                    <li>
+                        <a ui-sref="dashboard.tdrive">
+
+                            <img src="img/resources/img/singin.png" alt="" class="img-responsive">
+                            <span> Тест-Драйв</span>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/singin.png" alt="" class="img-responsive">
+                            <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/user.png" alt="" class="img-responsive">
                             <img ng-show="ctrl.session.isAuthenticated" ng-click="ctrl.logout()" src="img/resources/img/log_out.png" alt="" class="img-responsive">
-                            <span ng-click="ctrl.state.go('dashboard.profile.progress')" ng-bind="ctrl.user.name"></span>
+                            <span ng-show="ctrl.session.isAuthenticated" ng-click="ctrl.state.go('dashboard.profile.progress')" ng-bind="ctrl.user.name"></span>
                         </a>
                     </li>
+                   
+                    <li>
+                        <a href="">
+                            <img src="img/resources/img/notifi.png" alt="" class="img-responsive">
+                        </a>
+                    </li>
+                    <li >
+                        <a href="">
+                            <img src="img/resources/img/search.png" alt="" class="img-responsive">
+                        </a>
+                    </li>
+
                 </ul>
             </div>
             
@@ -83,33 +103,33 @@
                     <div class="row">
                         <div class="col-md-3">
                             <ul>
-                                <a href="">
+                                <a ui-sref="dashboard.general-news">
                                     <li 
                                         ng-mouseover="ctrl.isNewsOpen = true; ctrl.isForecastOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isInterestingOpen = ctrl.isSchedOpen = false">
                                         Новости
                                     </li>
                                 </a>
-                                <a href="">
+                                <a ui-sref="dashboard.forecast.playoff">
                                     <li ng-mouseover="ctrl.isForecastOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false" >
                                         Прогнозы
                                     </li>
                                 </a>
-                                <a href="">
+                                <a ui-sref="dashboard.forum">
                                     <li ng-mouseover="ctrl.isForumOpen = true; ctrl.isNewsOpen = ctrl.isForecastOpen = ctrl.isPrizeOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
                                         Форум
                                     </li>
                                 </a>
-                                <a href="">
+                                <a ui-sref="">
                                     <li ng-mouseover="ctrl.isPrizeOpen = false; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isForecastOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
                                         Призы
                                     </li>
                                 </a>
-                                <a href="">
+                                <a ui-sref="dashboard.schedule">
                                     <li ng-mouseover="ctrl.isSchedOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isForecastOpen = ctrl.isInterestingOpen = false">
                                         Расписание
                                     </li>
                                 </a>
-                                <a href="">
+                                <a ui-sref="">
                                     <li ng-mouseover="ctrl.isInterestingOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isForecastOpen = ctrl.isSchedOpen = false">
                                         Интересное
                                     </li>
