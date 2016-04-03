@@ -22,9 +22,7 @@ export default class LoginCtrl {
             password: this.form.password
         })
             .then(() => {
-                this.form = {};
-                this.rootscope.alreadyInLoginModal = false;
-                this.close();
+                this.handleSuccessAuth();
             }).catch((err) => {
                 this.rootscope.alreadyInLoginModal = false;
                 this.message = err.error_code == 401 ? "Неверный логин или пароль" : "";
@@ -34,10 +32,20 @@ export default class LoginCtrl {
     authViaSocial(provider) {
         this.$auth.authenticate(provider)
             .then(res => {
+                this.auth.initSession(res);
+                this.handleSuccessAuth();
             })
             .catch(err => {
+                this.message = "Проищошла ошибка авторизации";
             })
     }
+
+    handleSuccessAuth() {
+        this.form = {};
+        this.rootscope.alreadyInLoginModal = false;
+        this.close();
+    }
+
 
     goToRegistration() {
         this.close();
