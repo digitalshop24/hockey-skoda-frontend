@@ -14,7 +14,7 @@ export default class HeaderCtrl {
         this.isPrizeOpen = false;
         this.isSchedOpen = false;
         this.isInterestingOpen = false;
-        this.isMenuMobileOpen = true;
+        this.isMenuMobileOpen = false;
 
        
         
