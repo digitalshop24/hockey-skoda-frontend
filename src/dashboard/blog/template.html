@@ -49,7 +49,7 @@
                                    ui-sref="dashboard.newspage({id:blog.id, rubric:blog.rubric.api_path})"></a></h3>
                         </li>
                         <li><p ng-bind="blog.short_content"></p></li>
-                        <li><p ng-bind="blog.published_at | amDateFormat:'MM.DD h:ss'"></p></li>
+                        <li><p ng-bind="blog.published_at | amDateFormat:'DD.MM h:ss'"></p></li>
                         <li><img src="{{blog.image.medium}}" alt="" class="img-responsive"></li>
                     </ul>
                     <ul class="tag_post">
