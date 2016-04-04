@@ -1,4 +1,3 @@
-
 function initTimeline() {
     $(function () {
         $('.wrapp_timeline,.wrapp_timeline_main_page,.achif_wrapp').jScrollPane({
@@ -18,6 +17,29 @@ function initMenu() {
 function initSlider() {
 
     $(function () {
+
+        $('.slider-for').slick({
+            infinite: true,
+            speed: 300,
+            fade: true,
+            cssEase: 'linear',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            asNavFor: '.slider-nav',
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            vertical: true,
+            slidesToScroll: 1,
+            dots: false,
+            centerMode: true,
+            focusOnSelect: true,
+            arrows: true,
+            asNavFor: '.slider-for'
+        });
+
+
         $('.single-item').slick({
             infinite: true,
             slidesToShow: 1,

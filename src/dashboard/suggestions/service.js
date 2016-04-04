@@ -1,6 +1,6 @@
 'use strict';
 
-export default class TantamareskaService {
+export default class SuggestionsService {
     constructor(api) {
         this.api = api;
     }

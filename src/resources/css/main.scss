@@ -4785,3 +4785,37 @@ nav {
   background: #7bb640;
   box-shadow: 0 0.6em 0 0 #7bb640, 0 1.2em 0 0 #7bb640;
 }
+
+
+
+/* card */
+.card-result{
+  text-align:center;
+  min-width:830px;
+  min-height:880px;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  overflow: hidden;
+  margin:20px;
+  display: inline-block;
+}
+.select-img{
+
+}
+.card-canvas{
+
+}
+
+.quote{
+  font-family: Arial;
+  font-weight:bold;
+  font-size:60px;
+}
+.text{
+  font-size:22px;
+  font-style: italic;
+  line-height:24px;
+}
+
+/* --------------------- */
