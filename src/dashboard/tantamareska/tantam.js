@@ -3,7 +3,7 @@
 import angular from "angular";
 
 export default angular.module('dashboard.tantam-init', [])
-    .directive('tantamInit', function () {
+    .directive('tantamInit', function ($rootScope) {
         return {
             link: function () {
                 angular.element(document).ready(function () {
@@ -370,8 +370,14 @@ export default angular.module('dashboard.tantam-init', [])
                         ctx.drawImage($img[0], leftImg, topImg, imgWidth, imgHeight);
                         ctx.drawImage(bgImg, 0, 0, bgWidth, bgHeight);
                         var data = canvas.toDataURL();
+
+                        $rootScope.$broadcast('tantamareska:imageMerged', {
+                            image: data
+                        });
+
+/*
                         $('.tamtam-share').attr('src', data);
-                        $('.vk-share').attr('href', 'http://vk.com/share.php?url=' + data);
+                        $('.vk-share').attr('href', 'http://vk.com/share.php?url=' + data);*/
                         return false;
                     });
                 });

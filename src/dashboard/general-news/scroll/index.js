@@ -3,7 +3,7 @@
 import angular from "angular";
 
 export default angular.module('dashboard.general-news.scroll', [])
-    .directive('generalNewsScroll', function ($rootScope,generalNewsLogicService) {
+    .directive('generalNewsScroll', function ($rootScope) {
         return {
             scope: {
                 loadNext: '&',
@@ -47,7 +47,6 @@ export default angular.module('dashboard.general-news.scroll', [])
                             activeDayChanged = handleScrollUp();
                         }
                         if (activeDayChanged) {
-                            //generalNewsLogicService.day = +currentActiveDay;
                             $rootScope.$broadcast('generalNews:activeDayChanged', {
                                 day: currentActiveDay,
                                 scrollDown: scrollDown
