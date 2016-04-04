@@ -16,7 +16,22 @@ $bold: "SkodaProBold", sans-serif;
 $regular: "SkodaProRegular", sans-serif;
 $light: "SkodaProLight", sans-serif;
 $p_size: 1.4rem;
-
+.slick-next:before
+{
+    content: '';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '';
+}
+.slick-prev:before
+{
+    content: '';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '';
+}
 
 header {
   border-bottom: 1px solid #000;
@@ -1157,14 +1172,14 @@ $grey_about: #5d5d5d;
 
 .wrapp_slider_stars {
   .slick-next {
-    background: rgba(0,0,0,0) url("img/resources/img/arrow_right_white.png") no-repeat 14% center;
-    right: -60px;
+    background: rgba(0,0,0,0) url("img/resources/img/arrow_right_white.png") no-repeat 90% center;
+    right: 0px;
     width: 100px;
     height: 100px;
   }
   .slick-prev {
-    background: rgba(0, 0, 0, 0) url("img/resources/img/arrow_left_white.png") no-repeat 86% center;
-    left: -60px;
+    background: rgba(0, 0, 0, 0) url("img/resources/img/arrow_left_white.png") no-repeat 10% center;
+    left: 0px;
     width: 100px;
     height: 100px;
   }
@@ -1212,14 +1227,14 @@ $grey_about: #5d5d5d;
 
   }
   .date_slider_news .slick-next {
-    background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 0 center;
-    right: -60px;
+    background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 100% center;
+    right: 0px;
     width: 100px;
     height: 100px;
   }
   .date_slider_news .slick-prev {
-    background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat 100% center;
-    left: -60px;
+    background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat 0% center;
+    left: 0px;
     width: 100px;
     height: 100px;
   }
@@ -1339,15 +1354,15 @@ $grey_about: #5d5d5d;
   .mainpage_news_slider {
     padding: 30px 20px;
     .slick-next {
-      background: rgba(75,168,46,0) url("img/resources/img/arrow_right.png") no-repeat 0 center;
-      right: -82px;
+      background: rgba(75,168,46,0) url("img/resources/img/arrow_right.png") no-repeat 100% center;
+      right: 0px;
       width: 92px;
       height: 51px;
       
     }
     .slick-prev {
-      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left.png") no-repeat 100% center;
-      left: -78px;
+      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left.png") no-repeat 0% center;
+      left: 0px;
       width: 92px;
       height: 51px;
      
@@ -1408,15 +1423,15 @@ $grey_about: #5d5d5d;
       height: 200px;
     }
     .slick-next {
-      background: rgba(75,168,46,0) url("img/resources/img/arrow_right.png") no-repeat 0 center;
-      right: -40px;
+      background: rgba(75,168,46,0) url("img/resources/img/arrow_right.png") no-repeat 100% center;
+      right: 0px;
       width: 55px;
       height: 51px;
       top: 0;
     }
     .slick-prev {
-      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left.png") no-repeat 100% center;
-      left: -40px;
+      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left.png") no-repeat 0% center;
+      left: 0px;
       width: 55px;
       height: 51px;
       top: 0;
@@ -1766,15 +1781,15 @@ $grey_about: #5d5d5d;
       text-align: center;
     }
     .slick-next {
-      background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 0 center;
-      right: -60px;
+      background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 100% center;
+      right: 0px;
       width: 100px;
       height: 100px;
       top: 11px;
     }
     .slick-prev {
-      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat 100% center;
-      left: -60px;
+      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat 0% center;
+      left: 0px;
       width: 100px;
       height: 100px;
       top: 11px;
@@ -2303,16 +2318,16 @@ $grey_about: #5d5d5d;
     min-height: 680px;
     padding-top:30px;
     .slick-prev {
-      left: -80px;
+      left: 0px;
       width: 100px;
       height: 100px;
       top: 40%;
-      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat scroll 100% center;
+      background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat scroll 0% center;
       z-index: 1;
     }
     .slick-next {
-      background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 0 center;
-      right: -82px;
+      background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 100% center;
+      right: 0px;
       width: 100px;
       height: 100px;
       top: 40%;
@@ -2773,15 +2788,15 @@ $grey_about: #5d5d5d;
       height:90px
     }
      .slick-next {
-          background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 10% center;
-          right: -60px;
+          background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 100% center;
+          right: 0px;
           width: 100px;
           height: 90px;
           top: 10px;
         }
         .slick-prev {
-          background: rgba(0,0,0,1) url("img/resources/img/arrow_left_white.png") no-repeat 90% center;
-          left: -60px;
+          background: rgba(0,0,0,1) url("img/resources/img/arrow_left_white.png") no-repeat 0% center;
+          left: 0px;
           width: 100px;
           height: 90px;
           top: 10px;
@@ -2894,15 +2909,15 @@ $grey_about: #5d5d5d;
 
 .main_video {
    .slick-next {
-    background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 15% center;
-    right: -60px;
+    background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 85% center;
+    right: 0px;
     width: 100px;
     height: 100px;
     top: 50%;
   }
   .slick-prev {
-    background: rgba(0, 0, 0, 1) url("img/resources/img/arrow_left_white.png") no-repeat 85% center;
-    left: -60px;
+    background: rgba(0, 0, 0, 1) url("img/resources/img/arrow_left_white.png") no-repeat 15% center;
+    left: 0px;
     width: 100px;
     height: 100px;
     top: 50%;
@@ -3233,14 +3248,14 @@ $grey_about: #5d5d5d;
   width:100%;
   min-width:270px;
   .slick-next {
-    background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 14% center;
-    right: -60px;
+    background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 86% center;
+    right: 0px;
     width: 100px;
     height: 100px;
   }
   .slick-prev {
-    background: rgba(0, 0, 0, 1) url("img/resources/img/arrow_left_white.png") no-repeat 86% center;
-    left: -60px;
+    background: rgba(0, 0, 0, 1) url("img/resources/img/arrow_left_white.png") no-repeat 14% center;
+    left: 0px;
     width: 100px;
     height: 100px;
   }
@@ -3816,15 +3831,15 @@ $grey_about: #5d5d5d;
         }
       }
         .slick-next {
-          background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 0 center;
-          right: -60px;
+          background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 100% center;
+          right: 0px;
           width: 100px;
           height: 100px;
            top: 5px;
         }
         .slick-prev {
-          background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat 100% center;
-          left: -60px;
+          background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat 0% center;
+          left: 0px;
           width: 100px;
           height: 100px;
           top: 5px;
