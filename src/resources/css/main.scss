@@ -1370,6 +1370,12 @@ $grey_about: #5d5d5d;
   }
   .mainpage_news_slider {
     padding: 30px 20px;
+    .news_date {
+      font-size: 4rem;
+    }
+    .news_month {
+      font-size: 2rem;
+    }
     .slick-next {
       background: rgba(75,168,46,0) url("img/resources/img/arrow_right.png") no-repeat 100% center;
       right: 0px;
@@ -3231,6 +3237,14 @@ $grey_about: #5d5d5d;
 
 
 //-------------------------------------------------- end tantamarezka
+
+//-------------------------------------------------- calendar
+
+
+
+
+
+//-------------------------------------------------- end calendar
 
 //-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
 // <!-- tantamareska -->
