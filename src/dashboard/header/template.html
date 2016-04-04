@@ -1,5 +1,69 @@
 <header>
-
+<nav class="hidden-md hidden-lg">
+    <img ui-sref="dashboard.main" src="img/resources/img/logo.png" alt="" class="img-responsive logo_mobile">
+    <span id="mobile-menu-button" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen"><a href="#menu"></a></span>
+    <div menu-init class="drilldown" ng-show="ctrl.isMenuMobileOpen">
+          <div class="drilldown-container">
+            <ul class="drilldown-root">
+                <li><input type="text" class="input_default input_small" placeholder="Я ищу... "></li>
+                <a href=""><li>
+                    Новости
+                    <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
+                    <ul class="drilldown-sub">
+                      <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Новости</a></li>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.general-news">События</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Матчи</li></a>
+                      <a href="#"><li class="li_sub" ui-sref="dashboard.facts" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Факты</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Аналитика</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Девушки-чирлидирши</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.stars">О звездах хоккея</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.video">Хоккейные видео</li></a>
+                    </ul>
+                </li></a> 
+                <a href="#"><li>
+                    Прогнозы
+                    <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
+                    <ul class="drilldown-sub">
+                     <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Прогнозы</a></li>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.forecast.playoff">Сетка соревнований</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.forecast.companionship">Матчи</li></a>
+                    </ul>
+                </li></a>
+              <a href="#"><li>Форум
+                    <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
+                    <ul class="drilldown-sub">
+                      <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Форум</a></li>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Викторины</li></a>
+                    </ul>
+              </li></a>
+              <a href="#"><li>Призы</li></a>
+              <a href="#"><li>Расписание
+                <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
+                <ul class="drilldown-sub">
+                 <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Расписание</a></li>
+                  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.schedule">Расписание матчей</li></a>
+                  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Органайзер болельшика</li></a>
+                  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Календарь</li></a>
+                </ul>
+              </li></a>
+              <a href="#"><li>Интересное
+                 <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
+                <ul class="drilldown-sub">
+                  <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Интересное</a></li>
+                  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Инфографика сборной России</li></a>
+                  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Тантамарезка</li></a>
+                  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Пожелание сборной</li></a>
+                  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Соц.сети хоккеистов</li></a>
+                  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Junior Ice Hockey Cup</li></a>
+                </ul>
+              </li></a>
+              <a href="#"><li class="end_li" ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup(); ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen;"><img src="img/resources/img/user.png" alt=""class="img_li"> <span>Войти или зарегистрироваться</span><img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li"></li></a>
+              <a href="#"><li class="end_li"><img src="img/resources/img/notifi.png" alt=""class="img_li"> <span>Уведомления</span><img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li"></li></a>
+              <a href="#"><li ui-sref="dashboard.tdrive" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" class="end_li"><img src="img/resources/img/singin.png" alt="" class="img_li"><span> Тест-Драйв</span></li></a>
+            </ul>
+          </div>
+    </div>
+</nav>
 
     <div class="container-fluid hidden-xs hidden-sm">
         <div class="row">
