@@ -23,10 +23,10 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-4 text-left wrapp_blog_posts" ng-repeat="blog in ctrl.blogs">
                     <ul class="blog_post">
-                        <li><img src="{{blog.user.avatar.thumb}}" alt="" class="img-responsive"></li>
+                       <!-- <li><img src="{{blog.user.avatar.thumb}}" alt="" class="img-responsive"></li>
                         <li><p class="bold" ng-bind="blog.user.name"></p>
 
-                            <p class="prof" ng-bind="blog.user.user_type"></p></li>
+                            <p class="prof" ng-bind="blog.user.user_type"></p></li>-->
                         <li><h3><a ng-bind="blog.name"
                                    ui-sref="dashboard.newspage({id:blog.id, rubric:blog.rubric.api_path})"></a></h3>
                         </li>
