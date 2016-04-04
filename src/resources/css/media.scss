@@ -124,6 +124,16 @@ $p_size: 1.4rem;
 			padding-top: 10px;
 		}
 	}
+	.wrapp_mobile_menu {
+		-webkit-box-shadow: 0px 6px 7px -1px rgba(0,0,0,0.38);
+	    -moz-box-shadow: 0px 6px 7px -1px rgba(0,0,0,0.38);
+	    box-shadow: 0px 6px 7px -1px rgba(0,0,0,0.38);
+	    
+		width: 100%;
+		background-color: #fff;
+		height: 70px;
+
+	}
 	.about_first { 
 		background-image: url("none.png");
 		.wrapp_titel {
@@ -1001,4 +1011,14 @@ $p_size: 1.4rem;
 			}
 		}
 	}
-}		
+}	
+
+@media only screen and (max-width : 1550px) {
+ 	.left_head {
+ 		ul {
+			.visible_lg {
+				display: block !important;
+			}
+ 		}
+	}
+}			

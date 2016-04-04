@@ -43,9 +43,11 @@ header {
   .left_head {
     background-color: $white;
     position: fixed;
+    z-index: 1000;
     -webkit-box-shadow: 0px 6px 7px -1px rgba(0,0,0,0.38);
     -moz-box-shadow: 0px 6px 7px -1px rgba(0,0,0,0.38);
     box-shadow: 0px 6px 7px -1px rgba(0,0,0,0.38);
+    
     img {
       display: inline-block !important;
       margin: 0 auto; 
@@ -53,6 +55,7 @@ header {
     ul {
       display: inline;
       width: 100%;
+
       li {
         display: inline-block;
         text-transform: uppercase;
@@ -60,6 +63,10 @@ header {
         margin-left: 3.3%;
         font-size: $p_size+0.01rem; 
       }
+      .vis_lg {
+        display: none;
+      }
+      
     }
     .active_li {
       border-bottom: 3px solid $green_main;
@@ -68,6 +75,7 @@ header {
   .right_head {
     position:fixed;
     right:0;
+    z-index: 1001;
     ul {
       display: inline-flex;
       .activ_drop {
@@ -132,6 +140,7 @@ header {
     width: 98%;
     padding-bottom: 60px;
     height: 350px;
+    z-index: 10;
     ul {
       padding-top: 30px;
       li {
@@ -155,7 +164,7 @@ header {
         background-position: 90% center;
         padding-left: 40px;
         min-height: 350px;  
-        h3 {
+        h4 {
           text-transform: uppercase;
           width: 50%;
           padding-top: 50px;
@@ -1411,6 +1420,10 @@ $grey_about: #5d5d5d;
       .news_one_slider_bg:hover {
         opacity: 0.2;
       }
+      
+      .news_content:hover ~ .news_one_slider_bg {
+        opacity: 0.2;
+      }
     }
     img {
       padding: 0 10px;
@@ -1426,6 +1439,9 @@ $grey_about: #5d5d5d;
       top: 100px;
       width: 210px;
     }
+    .news_titel:hover + .news_one_slider_bg {
+        opacity: 0.2;
+      }
     .news_content {
       padding-left: 5px;
       padding-right: 5px;
@@ -2543,8 +2559,15 @@ $grey_about: #5d5d5d;
             text-transform: uppercase;
             font-family: $bold;
             font-size: $p_size - 0.2rem;
+            color: $green_main;
+            cursor: pointer;
+            span {
+              color: $grey;
+              margin-left: 10px;
+            }
             a{
               color: $green_main;
+              cursor: pointer;
             }
           }
         }
@@ -2558,6 +2581,9 @@ $grey_about: #5d5d5d;
         li{
           display:inline-block;
           width: 100%;
+          h3 {
+            font-size: 2.5rem;
+          }
         }
         li:nth-child(1) {
           width: 30%;
@@ -2814,6 +2840,19 @@ $grey_about: #5d5d5d;
 
 .slider_prizes {
   padding-top: 70px;
+  .how {
+    background-color: $black;
+    h6 {
+      color: $green_main;
+      padding: 80px 40px 40px 40px;
+      font-family: $bold;
+    }
+    p {
+      font-size: $p_size+0.1rem;
+      color: $white;
+      padding: 0 40px 80px 40px;
+    }
+  }
   .main_slider_priz {
     .slick-slide  {
       background-color: $grey;
@@ -2823,14 +2862,14 @@ $grey_about: #5d5d5d;
      .slick-next {
           background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 100% center;
           right: 0px;
-          width: 100px;
+          width: 40px;
           height: 90px;
           top: 10px;
         }
         .slick-prev {
           background: rgba(0,0,0,1) url("img/resources/img/arrow_left_white.png") no-repeat 0% center;
           left: 0px;
-          width: 100px;
+          width: 40px;
           height: 90px;
           top: 10px;
         }
@@ -2840,7 +2879,7 @@ $grey_about: #5d5d5d;
     
     .slick-center {
       div {
-        background-color: rgba(69, 228, 20, 0.5) !important;
+        background-color: rgba(75, 168, 46, 0.8);
         height: 150px;
       }
     }
@@ -2864,7 +2903,7 @@ $grey_about: #5d5d5d;
   }
   button {
     position: absolute;
-    right: 20%;
+    // right: 20%;
     top: 173px;
   }
   .info_priz {
@@ -2900,6 +2939,10 @@ $grey_about: #5d5d5d;
 
   .page_prizs_priz {
     padding-top: 50px;
+    .slick-slide img {
+        width: 70%;
+        margin: 0 auto;
+    }
     .col-md-3 {
       height: 300px;
     }
@@ -4675,7 +4718,7 @@ nav {
   .logo_mobile {
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 20px;
   }
 }
 
@@ -4763,8 +4806,8 @@ nav {
   width: 4em;
   height: 4em;
   position: absolute;
-  top: 0;
-  right: .1em;
+  top: 10px;
+  right: 1.1em;
 }
 #mobile-menu-button a {
   margin: 1em;
