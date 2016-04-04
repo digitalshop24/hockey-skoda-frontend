@@ -2932,22 +2932,25 @@ $grey_about: #5d5d5d;
 
 .main_video {
    .slick-next {
-    background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 85% center;
+    background: rgba(0,0,0,0) url("img/resources/img/arrow_right_white.png") no-repeat 85% center;
     right: 0px;
     width: 100px;
     height: 100px;
-    top: 50%;
+    top: 300px !important;
   }
   .slick-prev {
-    background: rgba(0, 0, 0, 1) url("img/resources/img/arrow_left_white.png") no-repeat 15% center;
+    background: rgba(0, 0, 0, 0) url("img/resources/img/arrow_left_white.png") no-repeat 15% center;
     left: 0px;
     width: 100px;
     height: 100px;
-    top: 50%;
+    top: 300px !important;
   }
   .video_item {
     min-height: 640px;
     text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     div {
       background-color: rgba(0, 0, 0, .5);
       min-height: 640px;
@@ -2980,7 +2983,7 @@ $grey_about: #5d5d5d;
   }
 }
 .desc_video {
-  padding: 0 60px;
+  padding: 30px 60px;
   .bord_bottom {
     border-bottom: 2px solid $grey;
   }

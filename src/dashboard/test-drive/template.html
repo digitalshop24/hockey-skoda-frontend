@@ -45,13 +45,13 @@
                     <div class="col-md-12 text-center">
                         <select name="city" ng-options="dealer.info for dealer in ctrl.dealers | orderBy: 'info'"
                                 class="input_default input_small select_default" ng-model="ctrl.dealer">
-                            <option disabled selected value>Выберите филиал</option>
+                            <option disabled selected value>Выберите дилера</option>
                         </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <button class="btn main btn_primary">Подать заявку</button>
+                        <button class="btn btn_disable main">Подать заявку</button>
                     </div>
                 </div>
 
