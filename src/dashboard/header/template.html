@@ -16,9 +16,9 @@
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Матчи</li></a>
                       <a href="#"><li class="li_sub" ui-sref="dashboard.facts" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Факты</li></a>
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Аналитика</li></a>
-                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.cheer" >Девушки-чирлидирши</li></a>
-                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.stars">О звездах хоккея</li></a>
-                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.video">Хоккейные видео</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" >Девушки-чирлидирши</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" >О звездах хоккея</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" >Хоккейные видео</li></a>
                     </ul>
                 </li></a> 
                 <a href="#"><li>
@@ -37,7 +37,7 @@
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Викторины</li></a>
                     </ul>
               </li></a>
-              <a href="#"><li>Призы</li></a>
+              <a href="#" ui-sref="dashboard.prizenew"><li>Конкурсы</li></a>
               <a href="#"><li>Расписание
                 <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
                 <ul class="drilldown-sub">
@@ -187,7 +187,7 @@
                                 <a ui-sref="dashboard.general-news" ng-click="ctrl.isMenuOpen = false"><li>События</li></a>
                                 <a ui-sref="dashboard.facts" ng-click="ctrl.isMenuOpen = false"><li>Факты</li></a>
                                 <a ui-sref="dashboard.blog" ng-click="ctrl.isMenuOpen = false" ><li>Аналитика</li></a>
-                                <a href="" ng-click="ctrl.isMenuOpen = false" ><li>Девушки-чирлидирши</li></a>
+                                <a href=""><li class="li_disabel">Девушки-чирлидирши</li></a>
                                 <a><li class="li_disabel">О звездах хоккея</li></a>
                                 <a><li class="li_disabel">Хоккейные видео</li></a>
                             </ul>
