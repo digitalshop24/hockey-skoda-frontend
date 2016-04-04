@@ -3,8 +3,8 @@
     <div class="video_item" ng-show="!ctrl.showVideoInfo">
         <youtube-video video-id="'5v3KG-4ZG8c'" player-width="'90%'" player-height="'100%'" style="min-height: 620px" player="ctrl.player"></youtube-video>
     </div>
-    <button ng-click="ctrl.previous()" style="background-color: red; width: 100px"> < </button>
-    <button ng-click="ctrl.next()" style="background-color: greenyellow; width: 100px"> > </button>
+    <button class="slick-next" ng-click="ctrl.previous()">  </button>
+    <button class="slick-prev" ng-click="ctrl.next()" > </button>
     <div ng-show="ctrl.showVideoInfo" class="video_item" style="background-image: url('{{ctrl.currentVideo.image.original}}')">
 
         <div>

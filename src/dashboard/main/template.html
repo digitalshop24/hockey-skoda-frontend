@@ -4,16 +4,16 @@
             <!-- <div class="col-md-12"> -->
 
             <slick infinite=true arrows=true dots=true slides-to-show=1 slides-to-scroll=1>
-                <div class="item" style="background-image: url('img/resources/img/main-showcase.jpg');">
+                <div class="item" style="background-image: url('img/resources/img/skoda-hockey-showcase-top.jpg');">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="left hidden-sm hidden-xs">
-                                    <h5>Промо-блок <span>Хэшьтеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
+                                    <h5><span>Хэштеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
                                     
-                                    <h2>24-й раз мы вместе<br> со сборной россии</h2>
+                                    <!-- <h2>24-й раз мы вместе<br> со сборной россии</h2>
 
-                                    <p> Связь SKODA с хоккем неверотяно сильна уже более двух десятилетй.<br> И в этом году компания стремится быть еще ближе болелщикам нашей сборной</p>
+                                    <p class="hidden-md hidden-sm hidden-xs"> Связь SKODA с хоккем неверотяно сильна уже более двух десятилетй.<br> И в этом году компания стремится быть еще ближе болелщикам нашей сборной</p> -->
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -28,7 +28,33 @@
                     </div>
                     
                     
-                    <div class="text-center mob_h2 hidden-md hidden-lg"> <h2><a href="">22-й раз мы вместе<br> со сборной россии</a></h2></div>
+                    <!-- <div class="text-center mob_h2 hidden-md hidden-lg"> <h2><a href="">22-й раз мы вместе<br> со сборной россии</a></h2></div> -->
+                </div>
+                <div class="item" style="background-image: url('img/resources/img/skoda-hockey-showcase-top.jpg');">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="left hidden-sm hidden-xs">
+                                    <h5>Промо-блок <span>Хэштеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
+                                    
+                                    <!-- h2>24-й раз мы вместе<br> со сборной россии</h2>
+
+                                    <p class="hidden-md"> Связь SKODA с хоккем неверотяно сильна уже более двух десятилетй.<br> И в этом году компания стремится быть еще ближе болелщикам нашей сборной</p> -->
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="right hidden-sm hidden-xs">
+                                    <h5>Молния!</h5>
+                                    <ul>
+                                        <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.lighting_text"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                   <!--  <div class="text-center mob_h2 hidden-md hidden-lg"> <h2><a href="">22-й раз мы вместе<br> со сборной россии</a></h2></div> -->
                 </div>
             </slick>
         </div>
@@ -39,10 +65,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="mainpage_news_slider" slick current-index="ctrl.newsCurrentIndex" on-after-change="ctrl.loadMoreNews()" infinite="false" arrows="true"
-                     dots="false" slides-to-show="{{ctrl.slidesToShow}}" data="ctrl.lastNews" slides-to-scroll="3">
+                     dots="false" slides-to-show="{{ctrl.slidesToShow}}" data="ctrl.lastNews" slides-to-scroll="3" responsive="ctrl.responsive">
 
                     <div ng-repeat="news in ctrl.lastNews" style="padding-left:5px; padding-right: 5px;">
-                        <h3 ng-bind="news.published_at | amDateFormat:'DD MMMM'"></h3>
+                        <h3><span class="news_date" ng-bind="news.published_at | amDateFormat:'DD'"></span> <span class="news_month" ng-bind="news.published_at | amDateFormat:'MMMM'"></span></h3>
 
                         <div class="news_one_slider" style="background-image: url({{news.image.medium}})">
                             <div class="news_one_slider_bg"></div>
@@ -124,37 +150,37 @@
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu6.jpg');">
                     <h2><a ui-sref="dashboard.general-news">Новости</a></h2>
-                    <p>В безудержном соревновании "поробуй догони" первенствовал нападающий "Эдмонд Ойлерз" Коннор Макдэйвид, установивший планку на высоту пять очков.</p>
+                    <p>Здесь для Вас подобраны самые свежие новости об актуальных событиях в мире хоккея!</p>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu5.jpg');">
                     <h2><a ui-sref="dashboard.forecast.playoff">Прогнозы</a></h2>
-                    <p>В безудержном соревновании "поробуй догони" первенствовал нападающий "Эдмонд Ойлерз" Коннор Макдэйвид, установивший планку на высоту пять очков.</p>
+                    <p>Прогнозируйте результаты матчей и всего турнира, получайте баллы и участвуйте в розыгрышах различных призов.</p>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu1.jpg');">
                     <h2><a ui-sref="dashboard.forum">Форум</a></h2>
-                    <p>В безудержном соревновании "поробуй догони" первенствовал нападающий "Эдмонд Ойлерз" Коннор Макдэйвид, установивший планку на высоту пять очков.</p>
+                    <p>Общайтесь с любителями хоккея, участвуйте в викторине, обсуждайте матчи и все «околохоккейное» на форуме!</p>
                 </div>
             </div>
                 <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu3.jpg');">
                     <h2><a href="" ui-sref="dashboard.blog" >Блог</a></h2>
-                    <p>В безудержном соревновании "поробуй догони" первенствовал нападающий "Эдмонд Ойлерз" Коннор Макдэйвид, установивший планку на высоту пять очков.</p>
+                    <p>Наши блогеры увлечены хоккеем также, как вы. Получайте эксклюзивную и важную информацию от знающих людей со всего мира!</p>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu2.jpg');">
                     <h2><a href="">Календарь</a></h2>
-                    <p>В безудержном соревновании "поробуй догони" первенствовал нападающий "Эдмонд Ойлерз" Коннор Макдэйвид</p>
+                    <p>Следите за всеми матчами, получайте напоминания в удобное время и не пропускайте ни одной игры!</p>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu4.jpg');">
                     <h2><a href="">Обзоры</a></h2>
-                    <p>В безудержном соревновании </p>
+                    <p>Узнавайте новое! Знакомьтесь с интересными хоккейными обзорами!</p>
                 </div>
             </div>
         </div>
@@ -166,46 +192,48 @@
             <div class="col-md-5">
                 <h2>Получи призы</h2>
 
-                <p>Вы можете рассказать о призах, которые можно выиграть, своим друзьям, участвуя в огромном количестве интересных активностей на сайте.</p>
+                <p>Мы приготовили для Вас множество призов! 
+                Участвуя в активностях на сайте и офлайн, Вы сможете заработать баллы, которые позволят «Вам купить» ячейку и поучаствовать в их розыгрыше!
+                Нацеливайтесь на приз, набирайте 750 баллов и выигрывайте!</p>
                 <button class="btn btn_primary small" ui-sref="dashboard.prize">Узнать больше</button>
             </div>
             <div class="col-md-7">
                 <ul>
                     <li>
-                        <img src="img/resources/img/main/present1.png" alt="" class="img_priz img-responsive">
+                        <img src="img/resources/img/prizes/skoda_priz-jersey.png" alt="" class="img_priz img-responsive">
                         <h6>Джерси</h6>
-                        <h3>500</h3>
-                        <img src="img/resources/img/balls.png" alt="" class="img-responsive">
+                        <!-- <h3>500</h3>
+                        <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
                     <li>
-                        <img src="img/resources/img/main/present2.png" alt="" class="img_priz img-responsive">
+                        <img src="img/resources/img/prizes/skoda_priz-puck.jpg" alt="" class="img_priz img-responsive">
                         <h6>Шайба</h6>
-                        <h3>100</h3>
-                        <img src="img/resources/img/balls.png" alt="" class="img-responsive">
+                        <!-- <h3>100</h3>
+                        <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
                     <li>
-                        <img src="img/resources/img/main/present3.png" alt="" class="img_priz img-responsive">
-                        <h6>Эспандер</h6>
-                        <h3>300</h3>
-                        <img src="img/resources/img/balls.png" alt="" class="img-responsive">
+                        <img src="img/resources/img/prizes/skoda_priz-skate-case.jpg" alt="" class="img_priz img-responsive">
+                        <h6>Чехол</h6>
+                        <!-- <h3>300</h3>
+                        <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
                     <li class="lg_m_priz">
-                        <img src="img/resources/img/main/present3.png" alt="" class="img_priz img-responsive">
-                        <h6>Эспандер</h6>
-                        <h3>300</h3>
-                        <img src="img/resources/img/balls.png" alt="" class="img-responsive">
+                        <img src="img/resources/img/prizes/skoda_priz-phone.jpg" alt="" class="img_priz img-responsive">
+                        <h6>Чехол</h6>
+                        <!-- <h3>300</h3>
+                        <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
                     <li class="lg_priz">
-                        <img src="img/resources/img/main/present3.png" alt="" class="img_priz img-responsive">
-                        <h6>Эспандер</h6>
-                        <h3>300</h3>
-                        <img src="img/resources/img/balls.png" alt="" class="img-responsive">
+                        <img src="img/resources/img/prizes/skoda_priz-nabor.png" alt="" class="img_priz img-responsive">
+                        <h6>Набор</h6>
+                        <!-- <h3>300</h3>
+                        <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
                     <li class="lg_priz">
-                        <img src="img/resources/img/main/present3.png" alt="" class="img_priz img-responsive">
-                        <h6>Эспандер</h6>
-                        <h3>300</h3>
-                        <img src="img/resources/img/balls.png" alt="" class="img-responsive">
+                        <img src="img/resources/img/prizes/skoda_priz-ticket-RU-LT.png" alt="" class="img_priz img-responsive">
+                        <h6>Билет</h6>
+                        <!-- <h3>300</h3>
+                        <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
                 </ul>
             </div>
@@ -314,7 +342,7 @@
                     <h2>Передай привет друзьям!</h2>
 
                     <p>Становитесь главными героями смешных фотографий на хоккейную тематику! </p>
-                    <p class="p_h">Хэшьтеги: <button class="btn ">#хоккейвкаждом</button></p>
+                    <p class="p_h">Хэштеги: <button class="btn ">#хоккейвкаждом</button></p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -332,7 +360,7 @@
                     <img src="img/resources/img/balls.png" alt="" class="img-responsive img_ball">
                     <h2>Выбей шубу ;)</h2>
                     <p>Принимайте участие в простой увлекательной игре, набирайте баллы!</p>
-                    <p class="p_h">Хэшьтеги: <button class="btn ">#выбейшуб</button></p>
+                    <p class="p_h">Хэштеги: <button class="btn ">#выбейшуб</button></p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -345,12 +373,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3>#хоккейвкаждом</h3>
+                <h3><!-- #хоккейвкаждом --></h3>
 
-                <h1>Škoda hockey edition</h1>
+                <h1><!-- Škoda hockey edition --></h1>
                  <ul class="text-left">
-                    <img src="img/resources/img/main/label.png" alt="" class="img-responsive">
-                    <span>В качестве официального спонсора<br> ŠKODA поддержала Чемпионат мира<br> по хоккею IIHF 22 раза</span>
+                   <!--  <img src="img/resources/img/main/label.png" alt="" class="img-responsive"> -->
+                    <span><!-- В качестве официального спонсора<br> ŠKODA поддержала Чемпионат мира<br> по хоккею IIHF 22 раза --></span>
                 </ul>
             </div>
            

@@ -1174,13 +1174,13 @@ $grey_about: #5d5d5d;
   .slick-next {
     background: rgba(0,0,0,0) url("img/resources/img/arrow_right_white.png") no-repeat 90% center;
     right: 0px;
-    width: 100px;
+    width: 35px;
     height: 100px;
   }
   .slick-prev {
     background: rgba(0, 0, 0, 0) url("img/resources/img/arrow_left_white.png") no-repeat 10% center;
     left: 0px;
-    width: 100px;
+    width: 35px;
     height: 100px;
   }
   .stars {
@@ -1247,6 +1247,23 @@ $grey_about: #5d5d5d;
     top: 50%;
     margin-top: -59px;
     border: 0;
+  }
+  .date_slider_news {
+    .slick-dots {
+      bottom: 10px;
+      li {
+        width: 10px;
+        height: 10px;
+        background-color: $grey;
+        border-radius: 50%;
+      }
+      .slick-active {
+        background-color: $green_main;
+      }
+    }
+    .slick-dots li button::before {
+      content:'';
+    }
   }
   .item {
     min-height: 470px;
@@ -1353,6 +1370,12 @@ $grey_about: #5d5d5d;
   }
   .mainpage_news_slider {
     padding: 30px 20px;
+    .news_date {
+      font-size: 4rem;
+    }
+    .news_month {
+      font-size: 2rem;
+    }
     .slick-next {
       background: rgba(75,168,46,0) url("img/resources/img/arrow_right.png") no-repeat 100% center;
       right: 0px;
@@ -1726,9 +1749,10 @@ $grey_about: #5d5d5d;
   }
 }
 .wrapp_mainpage_end {
-  background-image: url(img/resources/img/main/slide1.jpg);
+  background-image: url(img/resources/img/skoda-hockey_footer.jpg);
   background-position: center center;
-  background-size:cover;
+  background-size: cover;
+  min-height: 650px;
   p {
     color: $white;
     font-family: $light;
@@ -1825,16 +1849,21 @@ $grey_about: #5d5d5d;
         margin-top: 45vh;
         li {
           margin-bottom: 30px;
+        
           img {
             margin: 0 auto; 
+
           }
           a {
             p {
-              color: #8b8b8b;
+              color: $white;
               text-align: center;
               font-size: $p_size;
               text-transform: uppercase;
               margin-top: 5px;
+            }
+            .active_p {
+              color: $green_main;
             }
             
           }
@@ -2481,18 +2510,21 @@ $grey_about: #5d5d5d;
       height:  120vh;
       width: 100px;
       ul {
-        margin-top: 40vh;
+        margin-top: 45vh;
         li {
-          margin-bottom: 50px;
+          margin-bottom: 30px;
           img {
             margin: 0 auto; 
           }
           p {
-            color: #8b8b8b;
+            color: $white;
             font-size: $p_size;
             text-transform: uppercase;
             text-align: center;
             margin-top: 5px;
+          }
+          .active_p {
+            color: $green_main;
           }
         }
       }
@@ -2595,6 +2627,7 @@ $grey_about: #5d5d5d;
   min-height: 90vh;
   h3 {
     padding: 20px 0;
+    font-family: $bold;
   }
   p {
       font-size: $p_size;
@@ -2909,22 +2942,25 @@ $grey_about: #5d5d5d;
 
 .main_video {
    .slick-next {
-    background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 85% center;
+    background: rgba(0,0,0,0) url("img/resources/img/arrow_right_white.png") no-repeat 85% center;
     right: 0px;
     width: 100px;
     height: 100px;
-    top: 50%;
+    top: 300px !important;
   }
   .slick-prev {
-    background: rgba(0, 0, 0, 1) url("img/resources/img/arrow_left_white.png") no-repeat 15% center;
+    background: rgba(0, 0, 0, 0) url("img/resources/img/arrow_left_white.png") no-repeat 15% center;
     left: 0px;
     width: 100px;
     height: 100px;
-    top: 50%;
+    top: 300px !important;
   }
   .video_item {
     min-height: 640px;
     text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     div {
       background-color: rgba(0, 0, 0, .5);
       min-height: 640px;
@@ -2957,7 +2993,7 @@ $grey_about: #5d5d5d;
   }
 }
 .desc_video {
-  padding: 0 60px;
+  padding: 30px 60px;
   .bord_bottom {
     border-bottom: 2px solid $grey;
   }
@@ -3214,6 +3250,14 @@ $grey_about: #5d5d5d;
 
 
 //-------------------------------------------------- end tantamarezka
+
+//-------------------------------------------------- calendar
+
+
+
+
+
+//-------------------------------------------------- end calendar
 
 //-------------------------------------------------- СЕРГЕЙ УШАНСЬКИЙ (переиминуй если, что))
 // <!-- tantamareska -->
@@ -4271,7 +4315,204 @@ $grey_about: #5d5d5d;
 
 // end btnn
 
+.wrapp_titel_cheerleaders {
+  padding:40px 0;
+  h2 {  
+    font-size:5rem;
+    font-family: "SkodaProExtraBold";
+  }
+  .input_small {
+    width:350px;
+    position:relative;
+    top:6px;
+  }
+}
+    .share {
+      width:200px;
+      display:inline-block;
+      text-align:center;
 
+      .icon {
+        display:inline-block;
+        width:39px;
+        height:39px;
+        margin:0 2px;
+        &-is {
+          background:url(img/resources/img/insta.png) no-repeat center center;
+          background-size:cover;
+        }
+        &-fb {
+          background:url(img/resources/img/fb.png) no-repeat center center;
+          background-size:cover;
+        }
+        &-tw {
+          background:url(img/resources/img/twiter.png) no-repeat center center;
+          background-size:cover;
+        }
+        &-vk {
+          background:url(img/resources/img/vk.png) no-repeat center center;
+          background-size:cover;
+        }
+      }
+    }
+.wrapp_content_cheerleaders {
+  border-top:1px solid #cccccc;
+  padding-top:44px;
+  .modile {
+    display:none;
+  }
+  .cheer {
+    position:relative;
+    .img {
+      width:100%;
+      min-height:382px;
+    }
+    .cheer-active {
+      display:none;
+    }
+    &:hover {
+      .cheer-active {
+        position:absolute;
+        display:block;
+        background:rgba(0,0,0,0.5) ;
+        width:100%;
+        height:100%;
+        top:0px;
+        left:0px;
+        cursor:pointer;
+      }
+    }
+    h4 {
+      padding-top:40px;
+      text-align:center;
+      color:$white;
+      font-family: $bold;
+      font-size:3rem;
+    }
+    .play {
+      display:block;
+      margin:0 auto;
+      padding-top:20px;
+      width:40px;
+      height:60px;
+    }
+    .youtube-activ {
+      width:100%;
+      min-height: 367px;
+      display:none;
+    }
+    p {
+      padding-top:20px;
+      text-align:center;
+      color:$white;
+      font-family: $bold;
+      font-size:2rem;
+    }
+    span {
+      display:block;
+    }
+    .time {
+      text-align:center;
+      color:$white;
+      font-family: $regular;
+      font-size:1.5rem;
+    }
+    .pod {
+      text-align:center;
+      color:$white;
+      font-family: $regular;
+      font-size:1.5rem;
+      padding-top:40px;
+    }
+    .share {
+      display:block;
+      margin:0 auto;
+      padding-top:10px;
+    }
+  }
+  .act {
+    img {
+      display:none;
+    }
+    .cheer-active {
+      display:none;
+    }
+    .youtube-activ {
+      display:block;
+    }
+    &:hover {
+      .cheer-active {
+        display:none;
+      }
+    }
+  }
+  .cheer-text {
+    .cheer-title {
+      padding-bottom:20px;
+      h3 {
+        font-size:4rem;
+        font-family: $bold;
+        float:left;
+      }
+      .link {
+        float:right;
+        position:relative;
+        top:13px;
+        font-family: $bold;
+        font-size: 1.7rem;
+        color:#4ba82e;
+      }
+    }
+    p {
+      font-size:1.4rem;
+      font-family: $regular;
+      line-height: 1.4rem;
+      margin-bottom:12px;
+    }
+  }
+}
+.teg {
+  margin-top:35px;
+  span {
+    font-size:1.4rem;
+    font-family: $regular;
+    line-height: 1.4rem;
+  }
+  a {
+    display:inline-block;
+    background:#eeeeee;
+    color:#4ba82e;
+    font-style: 1rem;
+    font-family: $bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:2px 5px 0;
+    margin:0 3px;
+  }
+}
+.cheer-galler {
+  padding-top:60px;
+  padding-bottom:60px;
+  border-bottom:1px solid #cccccc;
+  h5 {
+    font-size:4rem;
+    font-family: $light;
+    padding-bottom:30px;
+  }
+  &-im {
+    img {
+      width:100%;
+    }
+    p {
+      font-size:1.7rem;
+      font-family: $bold;
+      margin-top:20px;
+    }
+  }
+}
+.cheer-bor {
+  padding-bottom:45px;
+}
 
 
 //-------------------------------------------------- end СЕРГЕЙ УШАНСЬКИЙ
