@@ -1749,9 +1749,10 @@ $grey_about: #5d5d5d;
   }
 }
 .wrapp_mainpage_end {
-  background-image: url(img/resources/img/main/slide1.jpg);
+  background-image: url(img/resources/img/skoda-hockey_footer.jpg);
   background-position: center center;
-  background-size:cover;
+  background-size: cover;
+  min-height: 650px;
   p {
     color: $white;
     font-family: $light;
