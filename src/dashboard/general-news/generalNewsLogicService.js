@@ -58,7 +58,7 @@ export default class GeneralNewsLogicService {
     }
 
     hasNextMonth() {
-        return this.month > 1;
+        return this.month > 4; // april is lowest border
     }
 
     hasPreviousMonth() {
