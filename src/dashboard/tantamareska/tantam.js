@@ -354,8 +354,8 @@ export default angular.module('dashboard.tantam-init', [])
                     };
 
                     $('#tamtamSend').click(function () {
-                        var $bgImg = $('.slick-current img');
-                        var bgImg = $('.slick-current img')[0];
+                        var $bgImg = $('.slick-active img');
+                        var bgImg = $('.slick-active img')[0];
                         var bgWidth = $bgImg.width();
                         var bgHeight = $bgImg.height();
                         var $canvas = $('#tamtam-canvas');
