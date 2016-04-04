@@ -83,7 +83,7 @@
                            
                         </a>
                     </li>
-                    <li  class="hidden">
+                    <li  class="hidden_lgg">
                         <a href="">
                             <span>Форум</span>
                             
@@ -187,9 +187,9 @@
                                 <a ui-sref="dashboard.general-news" ng-click="ctrl.isMenuOpen = false"><li>События</li></a>
                                 <a ui-sref="dashboard.facts" ng-click="ctrl.isMenuOpen = false"><li>Факты</li></a>
                                 <a ui-sref="dashboard.blog" ng-click="ctrl.isMenuOpen = false" ><li>Аналитика</li></a>
-                                <a href="" ui-sref="dashboard.cheer" ng-click="ctrl.isMenuOpen = false" ><li>Девушки-чирлидирши</li></a>
-                                <a ui-sref="dashboard.stars" ng-click="ctrl.isMenuOpen = false" ><li>О звездах хоккея</li></a>
-                                <a ui-sref="dashboard.video" ng-click="ctrl.isMenuOpen = false" ><li>Хоккейные видео</li></a>
+                                <a href="" ng-click="ctrl.isMenuOpen = false" ><li>Девушки-чирлидирши</li></a>
+                                <a><li class="li_disabel">О звездах хоккея</li></a>
+                                <a><li class="li_disabel">Хоккейные видео</li></a>
                             </ul>
                             <ul ng-show="ctrl.isForecastOpen">
                                 <a ui-sref="dashboard.forecast.playoff" ng-click="ctrl.isMenuOpen = false" ><li>Сетка соревнований</li></a>
@@ -198,53 +198,53 @@
                             </ul>
                             <ul ng-show="ctrl.isForumOpen">
                                 <a ui-sref="dashboard.forum" ng-click="ctrl.isMenuOpen = false" ><li>Форум</li></a>
-                                <a href="" ng-click="ctrl.isMenuOpen = false" ><li>Викторины</li></a>
+                                <a href=""><li class="li_disabel">Викторины</li></a>
 
                             </ul>
                             
                             <ul ng-show="ctrl.isSchedOpen">
-                                <a ui-sref="dashboard.schedule" ng-click="ctrl.isMenuOpen = false" ><li>Расписание матчей</li></a>
-                                <a href="" ng-click="ctrl.isMenuOpen = false" ><li>Органайзер болельшика</li></a>
-                                <a href="" ng-click="ctrl.isMenuOpen = false" ><li> Календарь</li></a>
+                                <a ui-sref="dashboard.schedule" ng-click="ctrl.isMenuOpen = false"><li>Расписание матчей</li></a>
+                                <a href=""><li class="li_disabel">Органайзер болельшика</li></a>
+                                <a href=""><li class="li_disabel"> Календарь</li></a>
                             </ul>
                             <ul ng-show="ctrl.isInterestingOpen">
-                                <a href="" ng-click="ctrl.isMenuOpen = false" ><li> Инфографика сборной России</li></a>
-                                <a href="" ng-click="ctrl.isMenuOpen = false" ><li> Тантамарезка</li></a>
-                                <a href="" ng-click="ctrl.isMenuOpen = false" ><li> Пожелание сборной</li></a>
-                                <a href="" ng-click="ctrl.isMenuOpen = false" ><li> Соц.сети хоккеистов</li></a>
-                                <a href="" ng-click="ctrl.isMenuOpen = false" ><li> Junior Ice Hockey Cup</li></a>
+                                <a href=""><li class="li_disabel"> Инфографика сборной России</li></a>
+                                <a href=""><li class="li_disabel"> Тантамарезка</li></a>
+                                <a href=""><li class="li_disabel"> Пожелание сборной</li></a>
+                                <a href=""><li class="li_disabel"> Соц.сети хоккеистов</li></a>
+                                <a href=""><li class="li_disabel"> Junior Ice Hockey Cup</li></a>
                             </ul>
                         </div>
                         <div class="col-md-6 info_menu">
                             <div ng-show="ctrl.isNewsOpen"  style="background-image: url('img/resources/img/prizes/prize1.png')">
                                 <h4>Билеты на матч Россия-Латвия</h4>
                                 <p>Набери  500 баллов и поучавствуй в розыгрыше джерси нашей сборной</p>
-                                <a href="" class="link_default">Смотреть</a>
+                                <a href="" ui-sref="dashboard.prizenew" class="link_default" ng-click="ctrl.isMenuOpen = false">Смотреть</a>
                             </div>
                             <div ng-show="ctrl.isForecastOpen"  style="background-image: url('img/resources/img/prizes/prize2.png')">
                                 <h4>Билеты на матч Россия-Норвегия</h4>
                                 <p>Набери  750 баллов и поучавствуй в розыгрыше джерси нашей сборной</p>
-                                <a href="" class="link_default">Смотреть</a>
+                                <a href="" ui-sref="dashboard.prizenew" class="link_default" ng-click="ctrl.isMenuOpen = false">Смотреть</a>
                             </div>
                             <div ng-show="ctrl.isForumOpen"  style="background-image: url('img/resources/img/prizes/prize4.png')">
                                 <h4>Авто-полироль «Чисто по-хоккейному!»</h4>
                                 <p>Набери  750 баллов и поучавствуй в розыгрыше джерси нашей сборной</p>
-                                <a href="" class="link_default">Смотреть</a>
+                                <a href=""  ui-sref="dashboard.prizenew" class="link_default" ng-click="ctrl.isMenuOpen = false">Смотреть</a>
                             </div>
                              <div ng-show="ctrl.isSchedOpen"  style="background-image: url('img/resources/img/prizes/prize5.png')">
                                 <h4>Чехлы на коньки</h4>
                                 <p>Набери  750 баллов и поучавствуй в розыгрыше джерси нашей сборной</p>
-                                <a href="" class="link_default">Смотреть</a>
+                                <a href="" ui-sref="dashboard.prizenew" class="link_default" ng-click="ctrl.isMenuOpen = false">Смотреть</a>
                             </div>
                              <div ng-show="ctrl.isInterestingOpen"  style="background-image: url('img/resources/img/prizes/prize6.png')">
                                 <h4>Чехлы на iPhone 5(6, 6 plus)</h4>
                                 <p>Набери  750 баллов и поучавствуй в розыгрыше джерси нашей сборной</p>
-                                <a href="" class="link_default">Смотреть</a>
+                                <a href="" ui-sref="dashboard.prizenew" class="link_default" ng-click="ctrl.isMenuOpen = false">Смотреть</a>
                             </div>
                             <div ng-show="ctrl.isPrizeOpen"  style="background-image: url('img/resources/img/prizes/prize7.png')">
                                 <h4>Шайба ŠKODA</h4>
                                 <p>Набери  750 баллов и поучавствуй в розыгрыше джерси нашей сборной</p>
-                                <a href="" class="link_default">Смотреть</a>
+                                <a href="" ui-sref="dashboard.prizenew" class="link_default" ng-click="ctrl.isMenuOpen = false">Смотреть</a>
                             </div>
                         </div>
                         <!-- <div class="col-md-3">
