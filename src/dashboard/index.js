@@ -31,6 +31,9 @@ import score from './schedule/index';
 import video from './video/index';
 import masonry from './masonry-init/index';
 import menuInit from './menu-init/index';
+import cheer from './cheerleaders/index';
+
+
 
 
 export default angular.module('dashboard',
@@ -60,7 +63,8 @@ export default angular.module('dashboard',
         score.name,
         video.name,
         masonry.name,
-        menuInit.name
+        menuInit.name,
+        cheer.name
 
     ])
     .service('login', Login)
