@@ -1849,16 +1849,21 @@ $grey_about: #5d5d5d;
         margin-top: 45vh;
         li {
           margin-bottom: 30px;
+        
           img {
             margin: 0 auto; 
+
           }
           a {
             p {
-              color: #8b8b8b;
+              color: $white;
               text-align: center;
               font-size: $p_size;
               text-transform: uppercase;
               margin-top: 5px;
+            }
+            .active_p {
+              color: $green_main;
             }
             
           }
@@ -2505,18 +2510,21 @@ $grey_about: #5d5d5d;
       height:  120vh;
       width: 100px;
       ul {
-        margin-top: 40vh;
+        margin-top: 45vh;
         li {
-          margin-bottom: 50px;
+          margin-bottom: 30px;
           img {
             margin: 0 auto; 
           }
           p {
-            color: #8b8b8b;
+            color: $white;
             font-size: $p_size;
             text-transform: uppercase;
             text-align: center;
             margin-top: 5px;
+          }
+          .active_p {
+            color: $green_main;
           }
         }
       }
@@ -2619,6 +2627,7 @@ $grey_about: #5d5d5d;
   min-height: 90vh;
   h3 {
     padding: 20px 0;
+    font-family: $bold;
   }
   p {
       font-size: $p_size;
