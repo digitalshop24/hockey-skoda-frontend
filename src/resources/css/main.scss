@@ -799,10 +799,10 @@ footer {
     border-bottom: 1px solid $grey;
     li {
       display: inline-block;
-      width: 120px;
       height: 50px;
+      /*width: 120px;
       border: 1px solid $grey;
-      border-radius: 50px;
+      border-radius: 50px;*/
       text-align: right;
       margin-right: 60px;
       .on {
@@ -2591,7 +2591,7 @@ $grey_about: #5d5d5d;
             font-size: 2.5rem;
           }
         }
-        li:nth-child(1) {
+        /*li:nth-child(1) {
           width: 30%;
           float: left;
           margin-top: 20px;
@@ -2601,8 +2601,8 @@ $grey_about: #5d5d5d;
             height: 50px;
             margin: 0 auto;
           }
-        }
-        li:nth-child(2) {
+        }*/
+        li:nth-child(1) {
           width: 70%;
           margin-top: 20px;
           p {
@@ -2613,14 +2613,14 @@ $grey_about: #5d5d5d;
             font-size: $p_size - 0.1rem;
           }
         }
-        li:nth-child(3) {
+        li:nth-child(2) {
           margin-top: 25px;
           padding-left: 30px;
           h3 {
             color: $green_main;
           }
         }
-        li:nth-child(4) {
+        li:nth-child(3) {
           margin-top: 25px;
           padding-left: 30px;
           p {
@@ -2628,14 +2628,14 @@ $grey_about: #5d5d5d;
             color: $grey;
           }
         }
-        li:nth-child(5) {
+        li:nth-child(4) {
           margin-top: 20px;
           padding-left: 30px;
           p{
             font-size: $p_size - 0.1rem;
           }
         }
-        li:nth-child(6) {
+        li:nth-child(5) {
           margin-top: 20px;
           img {
             width: 100%;
@@ -4834,3 +4834,37 @@ nav {
   background: #7bb640;
   box-shadow: 0 0.6em 0 0 #7bb640, 0 1.2em 0 0 #7bb640;
 }
+
+
+
+/* card */
+.card-result{
+  text-align:center;
+  min-width:830px;
+  min-height:880px;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  overflow: hidden;
+  margin:20px;
+  display: inline-block;
+}
+.select-img{
+
+}
+.card-canvas{
+
+}
+
+.quote{
+  font-family: Arial;
+  font-weight:bold;
+  font-size:60px;
+}
+.text{
+  font-size:22px;
+  font-style: italic;
+  line-height:24px;
+}
+
+/* --------------------- */

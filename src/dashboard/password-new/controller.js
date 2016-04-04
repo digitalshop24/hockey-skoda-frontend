@@ -2,16 +2,20 @@
 
 
 export default class PasswordnewCtrl {
-    constructor(passwordnewService, token, $modal) {
+    constructor(passwordnewService, token, modal) {
         this.service = passwordnewService;
         this.token = token;
-        this.modal = $modal;
+        this.modal = modal;
     }
 
     changePassword() {
         if (this.password != this.confirmPassword) {
             this.modal.open({
-                template: '<div class="modal-body">Введенные пароли не совпадают!</div>'
+                resolve: {
+                    message: () => {
+                        return 'Введенные пароли не совпадают!</h4>'
+                    }
+                }
             });
             return;
         }
@@ -20,11 +24,19 @@ export default class PasswordnewCtrl {
                 this.password = "";
                 this.confirmPassword = "";
                 this.modal.open({
-                    template: '<div class="modal-body">Пароль успешно изменен!</div>'
+                    resolve: {
+                        message: () => {
+                            return 'Пароль успешно изменен!</h4>'
+                        }
+                    }
                 });
             }).catch((err) => {
                 this.modal.open({
-                    template: '<div class="modal-body">Произошла ошибка. Пароль не был изменен!</div>'
+                    resolve: {
+                        message: () => {
+                            return 'Произошла ошибка. Пароль не был изменен!</h4>'
+                        }
+                    }
                 });
             });
     }

@@ -7,7 +7,7 @@ export default angular.module('dashboard.slider-init', [])
         return {
             link: function () {
                 angular.element(document).ready(function () {
-                    initSlider(moment().month() + 1);
+                    initSlider();
                 });
             }
         }

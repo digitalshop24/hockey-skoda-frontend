@@ -2,9 +2,9 @@
 
 
 export default class RegistrationCtrl {
-    constructor(auth, $modal, profileService, $state) {
+    constructor(auth, modal, profileService, $state) {
         this.auth = auth;
-        this.modal = $modal;
+        this.modal = modal;
         this.profileService = profileService;
         this.state = $state;
     }
@@ -12,7 +12,11 @@ export default class RegistrationCtrl {
     send() {
         if (this.form.password != this.form.confirmPassword) {
             this.modal.open({
-                template: '<div class="modal-body">Введенные пароли не совпадают!</div>'
+                resolve: {
+                    message: () => {
+                        return 'Введенные пароли не совпадают!</h4>'
+                    }
+                }
             });
             return;
         }
@@ -31,8 +35,13 @@ export default class RegistrationCtrl {
                     info = "Данный email уже существует"
                 }
                 this.modal.open({
-                    template: '<div class="modal-body">' + info + '</div>'
+                    resolve: {
+                        message: () => {
+                            return info;
+                        }
+                    }
                 });
+
             });
     }
 }

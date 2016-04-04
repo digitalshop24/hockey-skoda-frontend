@@ -15,9 +15,9 @@ export default class GeneralNewsCtrl {
         this.currentMonthIndex = new Date().getMonth() + 1;
         this.slickCurrentMonthIndex = month - 1;
         this.mobileCurrentIndex = month - 1;
-        this.monthNames = ['январь', 'февраль', 'март', 'апрель', 'май',
+        this.monthNames = ['апрель', 'май',
             'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
-        Array.from(new Array(this.currentMonthIndex), (e, i) => i).forEach((monthIndex, index) => {
+        Array.from(new Array(this.currentMonthIndex - 3), (e, i) => i + 3).forEach((monthIndex, index) => { // april is lowest border
             var humanMonthIndex = monthIndex + 1;
             const viewIndex = humanMonthIndex < 10 ? '0' + humanMonthIndex : humanMonthIndex;
             this.months.push({

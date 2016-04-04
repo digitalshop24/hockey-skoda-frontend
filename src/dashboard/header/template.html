@@ -52,8 +52,8 @@
                 <ul class="drilldown-sub">
                   <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Интересное</a></li>
                   <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Инфографика сборной России</li></a>
-                  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Тантамарезка</li></a>
-                  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Пожелание сборной</li></a>
+                  <a ui-sref="dashboard.tantamareska"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Тантамарезка</li></a>
+                  <a ui-sref="dashboard.suggestions"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Пожелание сборной</li></a>
                   <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Соц.сети хоккеистов</li></a>
                   <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Junior Ice Hockey Cup</li></a>
                 </ul>
@@ -208,6 +208,7 @@
                                 <a href=""><li class="li_disabel"> Календарь</li></a>
                             </ul>
                             <ul ng-show="ctrl.isInterestingOpen">
+
                                 <a href=""><li class="li_disabel"> Инфографика сборной России</li></a>
                                 <a href=""><li class="li_disabel"> Тантамарезка</li></a>
                                 <a href=""><li class="li_disabel"> Пожелание сборной</li></a>

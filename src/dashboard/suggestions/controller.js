@@ -1,13 +1,13 @@
 'use strict';
 
 
-export default class TantamareskaCtrl {
-    constructor($scope, tanService, modal) {
+export default class SuggestionsCtrl {
+    constructor($scope, suggestionService, modal) {
         this.imageUrl = "";
-        $scope.$on('tantamareska:imageMerged', (event, data) => {
+        $scope.$on('suggestions:imageMerged', (event, data) => {
             this.sendButtonText = "Создание картинки...";
             this.isButtonDisabled = true;
-            tanService.loadImage(data.image)
+            suggestionService.loadImage(data.image)
                 .then(res => {
                     this.imageUrl = res.image.original;
                     this.sendButtonText = "Отправить";

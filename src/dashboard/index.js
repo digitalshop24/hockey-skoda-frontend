@@ -11,6 +11,7 @@ import main from './main/index';
 import profile from './profile/index';
 import forum from './forum/index';
 import tantamareska from './tantamareska/index';
+import suggestions from './suggestions/index';
 import scrollInit from './scroll-init/index.js';
 import sliderInit from './slider-init/index.js';
 import facts from './interesting-facts/index';
@@ -44,6 +45,7 @@ export default angular.module('dashboard',
         profile.name,
         forum.name,
         tantamareska.name,
+        suggestions.name,
         generalNews.name,
         mainNews.name,
         scrollInit.name,
@@ -65,7 +67,6 @@ export default angular.module('dashboard',
         masonry.name,
         menuInit.name,
         cheer.name
-
     ])
     .service('login', Login)
     .service('modal', Modal)

@@ -87,7 +87,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <ul>
+                <!--<ul>
                     <li>
                         <h4>Выбрать все</h4>
                         <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked="">
@@ -123,13 +123,27 @@
                         <span class="on">ON</span>
                         <span class="off">OFF</span>
                     </li>
-                </ul>   
+                </ul>-->
+
+                <ul class="soc" ng-show="ctrl.imageUrl">
+                    <li><p>Поделиться с друзьями:</p></li>
+                    <li><a socialshare socialshare-provider="facebook"
+                           socialshare-url="{{ctrl.imageUrl}}">
+                        <img src="img/resources/img/fb_grey.png" alt="" class="img-responsive"></a></li>
+                    <li><a socialshare socialshare-provider="twitter"
+                           socialshare-hashtags="хоккей"
+                           socialshare-url="{{ctrl.imageUrl}}">
+                        <img src="img/resources/img/twiter_grey.png" alt="" class="img-responsive"></a></li>
+                    <li><a socialshare socialshare-provider="vk"
+                           socialshare-url="{{ctrl.imageUrl}}">
+                        <img src="img/resources/img/vk_grey.png" alt="" class="img-responsive"></a></li>
+                </ul>
                 
             </div>
         </div>
         <div class="toggle_button row">
             <div class="col-md-12">
-                <button class="btn btn_primary tiny" id="tamtamSend">Отправить</button>
+                <button ng-disabled="ctrl.isButtonDisabled" class="btn btn_primary tiny" id="tamtamSend" ng-bind="ctrl.sendButtonText || 'Отправить'"></button>
             </div>
         </div>
     </div>
