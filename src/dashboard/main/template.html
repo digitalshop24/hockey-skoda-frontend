@@ -10,17 +10,14 @@
                             <div class="col-md-8">
                                 <div class="left hidden-sm hidden-xs">
                                     <h5><span>Хэштеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
-                                    
-                                    <!-- <h2>24-й раз мы вместе<br> со сборной россии</h2>
-
-                                    <p class="hidden-md hidden-sm hidden-xs"> Связь SKODA с хоккем неверотяно сильна уже более двух десятилетй.<br> И в этом году компания стремится быть еще ближе болелщикам нашей сборной</p> -->
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="right hidden-sm hidden-xs">
                                     <h5>Молния!</h5>
                                     <ul>
-                                        <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.lighting_text"></a></li>
+                                        <li ng-repeat="lightNews in ctrl.lightingNews"><a ui-sref="dashboard.newspage({id:lightNews.id, rubric:lightNews.rubric.api_path})"
+                                         ng-bind="lightNews.lighting_text"></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -28,7 +25,6 @@
                     </div>
                     
                     
-                    <!-- <div class="text-center mob_h2 hidden-md hidden-lg"> <h2><a href="">22-й раз мы вместе<br> со сборной россии</a></h2></div> -->
                 </div>
                 <div class="item" style="background-image: url('img/resources/img/skoda-hockey-showcase-top.jpg');">
                     <div class="container-fluid">
@@ -36,10 +32,6 @@
                             <div class="col-md-8">
                                 <div class="left hidden-sm hidden-xs">
                                     <h5>Промо-блок <span>Хэштеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
-                                    
-                                    <!-- h2>24-й раз мы вместе<br> со сборной россии</h2>
-
-                                    <p class="hidden-md"> Связь SKODA с хоккем неверотяно сильна уже более двух десятилетй.<br> И в этом году компания стремится быть еще ближе болелщикам нашей сборной</p> -->
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -52,9 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
-                   <!--  <div class="text-center mob_h2 hidden-md hidden-lg"> <h2><a href="">22-й раз мы вместе<br> со сборной россии</a></h2></div> -->
+
                 </div>
             </slick>
         </div>
@@ -195,7 +185,7 @@
                 <p>Мы приготовили для Вас множество призов! 
                 Участвуя в активностях на сайте и офлайн, Вы сможете заработать баллы, которые позволят «Вам купить» ячейку и поучаствовать в их розыгрыше!
                 Нацеливайтесь на приз, набирайте 750 баллов и выигрывайте!</p>
-                <button class="btn btn_primary small" ui-sref="dashboard.prize">Узнать больше</button>
+                <button class="btn btn_primary small" ui-sref="dashboard.prizenew">Узнать больше</button>
             </div>
             <div class="col-md-7">
                 <ul>

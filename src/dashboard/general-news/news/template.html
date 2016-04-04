@@ -1,4 +1,4 @@
-<h5 ng-bind="ctrl.generalNews.published_at | amDateFormat:'YYYY-MM-DD h:mm'"></h5>
+<h5 ng-bind="ctrl.generalNews.published_at | amDateFormat:'H:mm'"></h5>
 <img ui-sref="dashboard.newspage({id:ctrl.generalNews.id, rubric:ctrl.generalNews.rubric.api_path})" src="{{ctrl.generalNews.image.medium}}" alt="" class="img-responsive">
 
 <p><a ui-sref="dashboard.newspage({id:ctrl.generalNews.id, rubric:ctrl.generalNews.rubric.api_path})"
