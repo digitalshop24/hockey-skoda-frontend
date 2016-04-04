@@ -111,6 +111,12 @@ $p_size: 1.4rem;
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.wrapp_mainpage_game {
+		.left {
+			margin-left: 0px;
+			text-align: center;
+		}
+	}
 	.left_head {
 		text-align:center;
 	}

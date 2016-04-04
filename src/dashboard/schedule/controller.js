@@ -2,7 +2,7 @@
 
 
 export default class ScheduleCtrl {
-    constructor(schedule, moment, teams, $scope) {
+    constructor(schedule, moment, teams, $scope, $interval, scheduleService) {
         this.schedule = schedule;
         this.currentDay = moment();
         this.teams = teams;
@@ -32,6 +32,12 @@ export default class ScheduleCtrl {
                 name: "Финал"
             }
         ];
+
+        $interval(() => {
+            scheduleService.getSchedule().then((res) => {
+                this.schedule = res;
+            })
+        }, 15 * 1000);
 
         /* dirty hack */
         this.filterByTeam = (match) => {
