@@ -16,7 +16,7 @@
             "src/resources/js/jscrollpane/jscrollpane.min.js",
             "src/resources/libs/drilldown/jquery.drilldown.min.js",
             "src/resources/js/common.js",
-            "src/resources/js/jcrop/jcrop.js",
+            "src/resources/libs/jcrop/jcrop.js",
             "bower_components/slick-carousel/slick/slick.js",
             "bower_components/angular-slick/dist/slick.js",
             "bower_components/textAngular/dist/textAngular-rangy.min.js",
@@ -41,7 +41,8 @@
             "bower_components/slick-carousel/slick/slick-theme.css",
             "bower_components/textAngular/dist/textAngular.css",
             "bower_components/nprogress/nprogress.css",
-            "bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css"
+            "bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css",
+            "src/resources/libs/jcrop/jcrop.css"
         ],
         "dest": "vendor.min.css"
     },
