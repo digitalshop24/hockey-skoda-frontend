@@ -13,7 +13,33 @@
                                     
                                     <h2>24-й раз мы вместе<br> со сборной россии</h2>
 
-                                    <p> Связь SKODA с хоккем неверотяно сильна уже более двух десятилетй.<br> И в этом году компания стремится быть еще ближе болелщикам нашей сборной</p>
+                                    <p class="hidden-md"> Связь SKODA с хоккем неверотяно сильна уже более двух десятилетй.<br> И в этом году компания стремится быть еще ближе болелщикам нашей сборной</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="right hidden-sm hidden-xs">
+                                    <h5>Молния!</h5>
+                                    <ul>
+                                        <li ng-repeat="lightNews in ctrl.lightingNews"><a href="" ng-bind="lightNews.lighting_text"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="text-center mob_h2 hidden-md hidden-lg"> <h2><a href="">22-й раз мы вместе<br> со сборной россии</a></h2></div>
+                </div>
+                <div class="item" style="background-image: url('img/resources/img/main-showcase.jpg');">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="left hidden-sm hidden-xs">
+                                    <h5>Промо-блок <span>Хэшьтеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
+                                    
+                                    <h2>24-й раз мы вместе<br> со сборной россии</h2>
+
+                                    <p class="hidden-md"> Связь SKODA с хоккем неверотяно сильна уже более двух десятилетй.<br> И в этом году компания стремится быть еще ближе болелщикам нашей сборной</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -124,37 +150,37 @@
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu6.jpg');">
                     <h2><a ui-sref="dashboard.general-news">Новости</a></h2>
-                    <p>В безудержном соревновании "поробуй догони" первенствовал нападающий "Эдмонд Ойлерз" Коннор Макдэйвид, установивший планку на высоту пять очков.</p>
+                    <p>Здесь для Вас подобраны самые свежие новости об актуальных событиях в мире хоккея!</p>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu5.jpg');">
                     <h2><a ui-sref="dashboard.forecast.playoff">Прогнозы</a></h2>
-                    <p>В безудержном соревновании "поробуй догони" первенствовал нападающий "Эдмонд Ойлерз" Коннор Макдэйвид, установивший планку на высоту пять очков.</p>
+                    <p>Прогнозируйте результаты матчей и всего турнира, получайте баллы и участвуйте в розыгрышах различных призов.</p>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu1.jpg');">
                     <h2><a ui-sref="dashboard.forum">Форум</a></h2>
-                    <p>В безудержном соревновании "поробуй догони" первенствовал нападающий "Эдмонд Ойлерз" Коннор Макдэйвид, установивший планку на высоту пять очков.</p>
+                    <p>Общайтесь с любителями хоккея, участвуйте в викторине, обсуждайте матчи и все «околохоккейное» на форуме!</p>
                 </div>
             </div>
                 <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu3.jpg');">
                     <h2><a href="" ui-sref="dashboard.blog" >Блог</a></h2>
-                    <p>В безудержном соревновании "поробуй догони" первенствовал нападающий "Эдмонд Ойлерз" Коннор Макдэйвид, установивший планку на высоту пять очков.</p>
+                    <p>Наши блогеры увлечены хоккеем также, как вы. Получайте эксклюзивную и важную информацию от знающих людей со всего мира!</p>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu2.jpg');">
                     <h2><a href="">Календарь</a></h2>
-                    <p>В безудержном соревновании "поробуй догони" первенствовал нападающий "Эдмонд Ойлерз" Коннор Макдэйвид</p>
+                    <p>Следите за всеми матчами, получайте напоминания в удобное время и не пропускайте ни одной игры!</p>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu4.jpg');">
                     <h2><a href="">Обзоры</a></h2>
-                    <p>В безудержном соревновании </p>
+                    <p>Узнавайте новое! Знакомьтесь с интересными хоккейными обзорами!</p>
                 </div>
             </div>
         </div>
@@ -166,14 +192,16 @@
             <div class="col-md-5">
                 <h2>Получи призы</h2>
 
-                <p>Вы можете рассказать о призах, которые можно выиграть, своим друзьям, участвуя в огромном количестве интересных активностей на сайте.</p>
+                <p>Мы приготовили для Вас множество призов! 
+                Участвуя в активностях на сайте и офлайн, Вы сможете заработать баллы, которые позволят «Вам купить» ячейку и поучаствовать в их розыгрыше!
+                Нацеливайтесь на приз, набирайте 750 баллов и выигрывайте!</p>
                 <button class="btn btn_primary small" ui-sref="dashboard.prize">Узнать больше</button>
             </div>
             <div class="col-md-7">
                 <ul>
                     <li>
-                        <img src="img/resources/img/prizes/skoda_priz-phone.jpg" alt="" class="img_priz img-responsive">
-                        <h6>Чехол</h6>
+                        <img src="img/resources/img/prizes/skoda_priz-jersey.png" alt="" class="img_priz img-responsive">
+                        <h6>Джерси</h6>
                         <!-- <h3>500</h3>
                         <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
@@ -190,8 +218,8 @@
                         <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
                     <li class="lg_m_priz">
-                        <img src="img/resources/img/prizes/skoda_priz-jersey.png" alt="" class="img_priz img-responsive">
-                        <h6>Джерси</h6>
+                        <img src="img/resources/img/prizes/skoda_priz-phone.jpg" alt="" class="img_priz img-responsive">
+                        <h6>Чехол</h6>
                         <!-- <h3>300</h3>
                         <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
