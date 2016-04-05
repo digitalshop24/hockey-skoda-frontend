@@ -2,7 +2,7 @@
 
 
 export default class NewspageCtrl {
-    constructor(news, session, login, commentsInfo, newspageService, $document) {
+    constructor(news, session, login, commentsInfo, newspageService, $document, page, $state) {
         this.news = news;
         this.rubric = news.rubric;
         this.session = session;
@@ -11,6 +11,8 @@ export default class NewspageCtrl {
         this.commentsAmount = commentsInfo.comments_count;
         this.newspageService = newspageService;
         this.$document = $document;
+        this.currentPage = page;
+        this.state = $state;
         this.rubricState = this.getRubricState(this.rubric.api_path);
     }
 
@@ -20,7 +22,19 @@ export default class NewspageCtrl {
     }
 
     sendMessage() {
-        this.newspageService.sendMessage(this.rubric.api_path, this.news.id, this.message);
+        this.newspageService.sendMessage(this.rubric.api_path, this.news.id, this.message).then((res) => {
+            this.state.go('dashboard.newspage', {
+                comments: [],
+                commentPage: 1
+            },{reload:true});
+        });
+    }
+
+    loadMore() {
+        this.state.go('dashboard.newspage', {
+            comments: this.comments,
+            commentPage: ++this.currentPage
+        });
     }
 
     getRubricState(stateApiName) {

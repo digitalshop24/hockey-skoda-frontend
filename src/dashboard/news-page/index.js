@@ -19,7 +19,8 @@ export default angular.module('dashboard.newspage', [
                 params: {
                     rubric: '',
                     commentPage: 1,
-                    commentsPerPage: 20
+                    commentsPerPage: 40,
+                    comments: []
                 },
                 resolve: {
                     news: ($stateParams, newspageService) => {
@@ -27,7 +28,14 @@ export default angular.module('dashboard.newspage', [
                     },
 
                     commentsInfo: ($stateParams, newspageService) => {
-                        return newspageService.getComments($stateParams.rubric, $stateParams.id, $stateParams.commentPage, $stateParams.commentsPerPage);
+                        return newspageService.getComments($stateParams.rubric, $stateParams.id, $stateParams.commentPage, $stateParams.commentsPerPage).then((res) =>{
+                            res.comments = $stateParams.comments.concat(res.comments);
+                            return res;
+                        });
+                    },
+
+                    page: ($stateParams) => {
+                        return $stateParams.commentPage;
                     }
                 }
             });

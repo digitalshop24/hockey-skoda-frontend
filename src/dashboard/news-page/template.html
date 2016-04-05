@@ -92,7 +92,7 @@
 
             <div ng-repeat="comment in ctrl.comments">
                 <div class="col-md-2 text-center">
-                    <img src="img/resources/img/bg_star.png" alt="" class="img-responsive">
+                    <img src="{{comment.user.avatar.thumb}}" alt="" class="img-responsive">
                 </div>
                 <div class="col-md-10">
                     <h6 ng-bind="comment.user.name">Дмитрий Иванов</h6>
@@ -128,7 +128,7 @@
         </div>
         <div class="row end_comment">
 
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center" ng-show="ctrl.comments.length">
                 <div class="col-md-3 text-center">
                     <button ng-show="!ctrl.isEditorOpen" ng-disabled="!ctrl.session.isAuthenticated"
                             ng-click="ctrl.openEditor()" class="btn btn_primary main">Комментировать
@@ -136,7 +136,7 @@
                     <p ng-show="!ctrl.session.isAuthenticated">Чтобы оставить комментарий нужно <br><a
                             ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
                 </div>
-                <button ng-show="ctrl.comments.length < ctrl.commentsAmount" class="btn btn_common main "> Показать еще</button>
+                <button ng-click="ctrl.loadMore()" ng-show="ctrl.comments.length < ctrl.commentsAmount" class="btn btn_common main "> Показать еще</button>
                 <span> Показано {{ctrl.comments.length}} из {{ctrl.commentsAmount}}</span>
             </div>
         </div>

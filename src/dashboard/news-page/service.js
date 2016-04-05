@@ -26,7 +26,7 @@ export default class NewspageService {
             get(`/posts/${rubric}/${id}/comments`, {
                 params: {
                     page: page,
-                    perPage: perPage
+                    per_page: perPage
                 }
             }).then((res) => {
                 res.data.comments.forEach((comment) => {
