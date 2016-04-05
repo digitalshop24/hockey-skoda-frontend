@@ -34,7 +34,7 @@ export default class PasswordnewCtrl {
                 this.modal.open({
                     resolve: {
                         message: () => {
-                            return 'Произошла ошибка. Пароль не был изменен!</h4>'
+                            return err.message || 'Произошла ошибка. Пароль не был изменен!</h4>'
                         }
                     }
                 });
