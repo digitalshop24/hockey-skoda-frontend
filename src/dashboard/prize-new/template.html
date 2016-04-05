@@ -3,12 +3,7 @@
         <div class="row">
             <div class="col-md-6 text-left text_titel">
                 <h3 ng-bind="ctrl.currentSponsor.name">Призы от <br> Škoda hockey</h3>
-                <p>Чтобы принять участие в розыгрыше призов, Вам необходимо:<br>
-1. Зарегистрироваться на сайте <br>
-2. Набрать 750 баллов, участвуя в активностях на сайте или офлайн<br>
-3. Выбрать свой счастливый кубик льда и «купить» его на заработанные баллы<br>
-4. Ответить на 3 вопроса о хоккее<br>
-5. Получить один из призов по результатам ответов</p>
+                <p ng-bind-html="ctrl.currentSponsor.description"></p>
             </div>
             <div class="col-md-6  text-left user_info" >
                <!-- <p class="hidden">Чтобы участвовать в розигрышах призов, необходимо <br> <a>Авторизироваться или пройти регистрацию</a></p>-->
@@ -31,13 +26,11 @@
             
                 <slick infinite="true" slides-to-show="4" slides-to-scroll="1" arrows="false" dots="false"
                        class="second_slider_priz text-center" as-nav-for=".main_slider_priz" swipe="true" responsive="ctrl.responsive">
-                    <div class="itep_priz" ng-repeat="sponsor in ctrl.sponsors" style="background-image: url({{sponsor.image.samll}})">
-
+                    <div class="itep_priz" ng-repeat="sponsor in ctrl.sponsors" style="background-image: url({{sponsor.image.small}})">
                         <!--<div>
                             <p ng-bind="prize.name">Призы от Шкода</p>
                         </div>-->
                     </div>
-                    
                     
                    
                      
@@ -54,8 +47,7 @@
             <div ng-repeat="prize in ctrl.currentSponsor.prizes">
                 <div class="col-md-3">
                     <slick slides-to-show=1 slides-to-scroll=1 arrows=false dots=true>
-                        <div><img src="{{prize.image.samll}}" alt="" class="img-responsive"></div>
-
+                        <div><img src="{{prize.image.small}}" alt="" class="img-responsive"></div>
 
                     </slick>
 
@@ -73,7 +65,7 @@
                          <li> 100</li>
                          <li>баллов</li> -->
                     </ul>
-                    <button class="btn btn_primary tiny">Участвовать!</button>
+                    <button class="btn btn_primary tiny" ng-disabled="true">Участвовать!</button>
                 </div>
             </div>
 

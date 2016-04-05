@@ -60,8 +60,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="mainpage_news_slider" slick current-index="ctrl.newsCurrentIndex" on-after-change="ctrl.loadMoreNews()" infinite="false" arrows="true"
-                     dots="false" slides-to-show="{{ctrl.slidesToShow}}" data="ctrl.lastNews" slides-to-scroll="3" responsive="ctrl.responsive">
+                <!--slick current-index="ctrl.newsCurrentIndex" on-after-change="ctrl.loadMoreNews()" infinite="false" arrows="true"
+                     dots="false" slides-to-show="{{ctrl.slidesToShow}}" data="ctrl.lastNews" slides-to-scroll="3" responsive="ctrl.responsive"-->
+                <div class="mainpage_news_slider" main-slider-init initial-slide="ctrl.indexToShowLastNews">
 
                     <div ng-repeat="news in ctrl.lastNews" style="padding-left:5px; padding-right: 5px;">
                         <h3><span class="news_date" ng-bind="news.published_at | amDateFormat:'DD'"></span> <span class="news_month" ng-bind="news.published_at | amDateFormat:'MMMM'"></span></h3>
@@ -72,8 +73,6 @@
                            ng-bind="news.name"></a>
                            <p class="news_content" ng-bind="news.short_content"></p>
                         </div>
-
-                        
                     </div>
                 </div>
             </div>

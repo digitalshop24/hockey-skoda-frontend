@@ -6,11 +6,11 @@ export default class MainCtrl {
         this.service = mainService;
         this.lightingNews = lightingNews;
         this.lastNewsInfo = lastNewsInfo;
-        this.lastNews = lastNewsInfo.posts;
-        this.newsCurrentIndex = 1;
+        this.lastNews = lastNewsInfo.posts.reverse();
         this.page = page;
         this.lastNewsAmount = lastNewsAmount;
         this.slidesToShow = 5;
+        this.indexToShowLastNews = this.lastNews.length - this.slidesToShow;
         this.responsive = [
             {
               breakpoint: 1280,
