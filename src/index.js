@@ -24,6 +24,7 @@ export default angular.module('app',
         '720kb.socialshare',
         'satellizer',
         'youtube-embed',
+        'duScroll',
         skodaLocalStorage.name,
         errorPages.name,
         index.name,
@@ -95,7 +96,7 @@ export default angular.module('app',
     .run(($rootScope) => {
 
         $rootScope.$on('$stateChangeStart', (event, toState) => {
-            if (['dashboard.forum', 'dashboard.blog', 'dashboard.facts', 'dashboard.stars'].indexOf(toState.name) == -1) {
+            if (['dashboard.forum', 'dashboard.blog', 'dashboard.facts', 'dashboard.stars', 'dashboard.newspage'].indexOf(toState.name) == -1) {
                 window.scrollTo(0, 0);
             }
         });

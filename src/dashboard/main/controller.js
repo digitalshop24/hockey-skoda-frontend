@@ -6,7 +6,7 @@ export default class MainCtrl {
         this.service = mainService;
         this.lightingNews = lightingNews;
         this.lastNewsInfo = lastNewsInfo;
-        this.lastNews = lastNewsInfo.posts;
+        this.lastNews = lastNewsInfo.posts.reverse();
         this.newsCurrentIndex = 1;
         this.page = page;
         this.lastNewsAmount = lastNewsAmount;
