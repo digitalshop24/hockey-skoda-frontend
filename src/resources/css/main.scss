@@ -2,7 +2,7 @@
 $green_main: #4ba82e;
 $black: #000;
 $white: #fff;
-$grey_lite: #ececec;
+$grey_lite: #ececec; 
 $grey: #cccccc;
 $grey_dark: #555555;
 //Additional colors
@@ -2659,6 +2659,7 @@ $grey_about: #5d5d5d;
 .wrapp_one_news {
   padding: 50px 20px;
   min-height: 90vh;
+  margin-left: 100px;
   h3 {
     padding: 20px 0;
     font-family: $bold;
