@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-md-12 ">
                     <ul class="tag_post">
-                        <li ng-repeat="tag in ctrl.tags"><p><a ng-click="ctrl.removeTag(tag)" ng-bind="tag"></a></p>
+                        <li ng-repeat="tag in ctrl.tags"><p><a ng-click="ctrl.removeTag(tag)" ng-bind="tag"></a><span> x </span></p>
                         </li>
                     </ul>
                 </div>
@@ -35,8 +35,7 @@
                         <li><img src="{{blog.image.medium}}" alt="" class="img-responsive"></li>
                     </ul>
                     <ul class="tag_post">
-                        <li ng-repeat="tag in blog.tags"><p><a ng-click="ctrl.addTagToFilter(tag)" href=""
-                                                               ng-bind="tag"></a></p></li>
+                        <li ng-repeat="tag in blog.tags"><a ng-click="ctrl.addTagToFilter(tag)" href=""><p ng-bind="tag"></p></a></li>
                     </ul>
                 </div>
 

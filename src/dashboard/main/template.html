@@ -31,7 +31,13 @@
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="left hidden-sm hidden-xs">
-                                    <h5>Промо-блок <span>Хэштеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
+
+                                    <h5><span>Хэштеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
+                                    
+                                    <!-- h2>24-й раз мы вместе<br> со сборной россии</h2>
+
+                                    <p class="hidden-md"> Связь SKODA с хоккем неверотяно сильна уже более двух десятилетй.<br> И в этом году компания стремится быть еще ближе болелщикам нашей сборной</p> -->
+
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -62,12 +68,12 @@
 
                         <div class="news_one_slider" style="background-image: url({{news.image.medium}})">
                             <div class="news_one_slider_bg"></div>
+                            <a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" class="news_titel"
+                           ng-bind="news.name"></a>
+                           <p class="news_content" ng-bind="news.short_content"></p>
                         </div>
 
-                        <a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" class="news_titel"
-                           ng-bind="news.name"></a>
-
-                           <p class="news_content" ng-bind="news.short_content"></p>
+                        
                     </div>
                 </div>
             </div>
@@ -190,38 +196,38 @@
             <div class="col-md-7">
                 <ul>
                     <li>
-                        <img src="img/resources/img/prizes/skoda_priz-jersey.png" alt="" class="img_priz img-responsive">
-                        <h6>Джерси</h6>
+                        <img src="img/resources/img/prizes/prize1.png" alt="" class="img_priz img-responsive">
+                        <h6>Билеты</h6>
                         <!-- <h3>500</h3>
                         <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
                     <li>
-                        <img src="img/resources/img/prizes/skoda_priz-puck.jpg" alt="" class="img_priz img-responsive">
-                        <h6>Шайба</h6>
+                        <img src="img/resources/img/prizes/prize2.png" alt="" class="img_priz img-responsive">
+                        <h6>Билеты</h6>
                         <!-- <h3>100</h3>
                         <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
                     <li>
-                        <img src="img/resources/img/prizes/skoda_priz-skate-case.jpg" alt="" class="img_priz img-responsive">
-                        <h6>Чехол</h6>
+                        <img src="img/resources/img/prizes/prize3.png" alt="" class="img_priz img-responsive">
+                        <h6>Подсветка</h6>
                         <!-- <h3>300</h3>
                         <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
                     <li class="lg_m_priz">
-                        <img src="img/resources/img/prizes/skoda_priz-phone.jpg" alt="" class="img_priz img-responsive">
+                        <img src="img/resources/img/prizes/prize4.png" alt="" class="img_priz img-responsive">
+                        <h6>Полироль</h6>
+                        <!-- <h3>300</h3>
+                        <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
+                    </li>
+                    <li class="lg_priz">
+                        <img src="img/resources/img/prizes/prize7.png" alt="" class="img_priz img-responsive">
+                        <h6>Шайба</h6>
+                        <!-- <h3>300</h3>
+                        <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
+                    </li>
+                    <li class="lg_priz">
+                        <img src="img/resources/img/prizes/prize6.png" alt="" class="img_priz img-responsive">
                         <h6>Чехол</h6>
-                        <!-- <h3>300</h3>
-                        <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
-                    </li>
-                    <li class="lg_priz">
-                        <img src="img/resources/img/prizes/skoda_priz-nabor.png" alt="" class="img_priz img-responsive">
-                        <h6>Набор</h6>
-                        <!-- <h3>300</h3>
-                        <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
-                    </li>
-                    <li class="lg_priz">
-                        <img src="img/resources/img/prizes/skoda_priz-ticket-RU-LT.png" alt="" class="img_priz img-responsive">
-                        <h6>Билет</h6>
                         <!-- <h3>300</h3>
                         <img src="img/resources/img/balls.png" alt="" class="img-responsive"> -->
                     </li>
