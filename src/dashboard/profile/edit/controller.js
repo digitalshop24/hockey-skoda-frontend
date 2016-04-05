@@ -21,7 +21,7 @@ export default class ProgressCtrl {
                 this.modal.open({
                     resolve: {
                         message: () => {
-                            return "Во время обновления произошла ошибка!"
+                            return err.message || "Во время обновления произошла ошибка!"
                         }
                     }
                 });

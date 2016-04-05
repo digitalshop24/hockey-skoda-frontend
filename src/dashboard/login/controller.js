@@ -25,7 +25,7 @@ export default class LoginCtrl {
                 this.handleSuccessAuth();
             }).catch((err) => {
                 this.rootscope.alreadyInLoginModal = false;
-                this.message = err.error_code == 401 ? "Неверный логин или пароль" : "";
+                this.message = err.message || "Произошла ошибка авторизации";
             });
     }
 
@@ -36,7 +36,7 @@ export default class LoginCtrl {
                 this.handleSuccessAuth();
             })
             .catch(err => {
-                this.message = "Проищошла ошибка авторизации";
+                this.message = "Произошла ошибка авторизации";
             })
     }
 

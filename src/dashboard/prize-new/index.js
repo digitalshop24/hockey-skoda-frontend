@@ -12,6 +12,18 @@ export default angular.module('dashboard.prizenew', [])
                 template: require('./template.html'),
                 url: '/prize-new',
                 controller: PrizenewCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                resolve: {
+                    sponsors: (prizenewService) => {
+                        return prizenewService.getPrizes();
+                    },
+
+                    user: (session, profileService) => {
+                        if(session.isAuthenticated) {
+                            return profileService.getCurrentUser();
+                        }
+                        return {};
+                    }
+                }
             });
     });

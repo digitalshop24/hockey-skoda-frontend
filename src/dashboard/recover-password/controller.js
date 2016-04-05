@@ -22,7 +22,7 @@ export default class EmailnewCtrl {
                 this.modal.open({
                     resolve: {
                         message: () => {
-                            return 'Произошла ошибка. Запрос не был отправлен!</h4>'
+                            return err.message || 'Произошла ошибка. Запрос не был отправлен!</h4>'
                         }
                     }
                 });

@@ -30,14 +30,10 @@ export default class RegistrationCtrl {
             this.state.go('dashboard.registration-success');
         })
             .catch((err) => {
-                let info = 'Во время регистрации произошла ошибка!';
-                if (err.message) {
-                    info = err.message;
-                }
                 this.modal.open({
                     resolve: {
                         message: () => {
-                            return info;
+                            return err.message || 'Во время регистрации произошла ошибка!';
                         }
                     }
                 });
