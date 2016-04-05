@@ -10,10 +10,10 @@ export default class MainCtrl {
         this.newsCurrentIndex = 1;
         this.page = page;
         this.lastNewsAmount = lastNewsAmount;
-        this.slidesToShow = 6;
+        this.slidesToShow = 5;
         this.responsive = [
             {
-              breakpoint: 1200,
+              breakpoint: 1280,
               settings: {
                 slidesToShow: 4,
                 slidesToScroll: 2,

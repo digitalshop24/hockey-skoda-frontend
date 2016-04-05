@@ -2580,7 +2580,7 @@ $grey_about: #5d5d5d;
       }
     .wrapp_blog_posts {
       padding-top: 30px; 
-      min-height: 705px;
+      min-height: 550px;
       .blog_post {
         background-color: $white;
 
@@ -2589,6 +2589,8 @@ $grey_about: #5d5d5d;
           width: 100%;
           h3 {
             font-size: 2.5rem;
+            padding-left: 20px;
+            padding-right: 20px;
           }
         }
         /*li:nth-child(1) {
@@ -2603,7 +2605,7 @@ $grey_about: #5d5d5d;
           }
         }*/
         li:nth-child(1) {
-          width: 70%;
+          width: 100%;
           margin-top: 20px;
           p {
             font-size: $p_size + 0.3rem;;
@@ -2730,7 +2732,19 @@ $grey_about: #5d5d5d;
 
 
 //-------------------------------------------------- end reg_success
-
+.close {
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #fff !important;
+    background-color: #000 !important;
+    opacity: 1 !important;
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 42px !important;
+    position: absolute;
+    top: 10px !important;
+    right: 10px;
+  }
 .form_popup {
   margin-left: 20px;
   margin-right: 20px;
@@ -2748,20 +2762,6 @@ $grey_about: #5d5d5d;
   }
   .right {
     margin-top: 20px;
-  }
-  .close {
-    padding: 0;
-    margin:0; 
-    color: #fff;
-    background-color: #000;
-    opacity: 1;
-    width: 40px;
-    height: 40px;
-    font-size: 42px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    
   }
 
   h6 {
@@ -4568,9 +4568,40 @@ $grey_about: #5d5d5d;
 
 
 //-------------------------------------------------- ANDREY FEDOROVICH
-
+.wrapp_menu_fact {
+  .menu_line {
+      // position: absolute;
+      position: fixed;
+      top: -70px;
+      background-color: $black;
+      display: inline-block;
+      height:  120vh;
+      width: 100px;
+      ul {
+        margin-top: 45vh;
+        li {
+          margin-bottom: 30px;
+          img {
+            margin: 0 auto; 
+          }
+          p {
+            color: $white;
+            font-size: $p_size;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 5px;
+          }
+          .active_p {
+            color: $green_main;
+          }
+        }
+      }
+   }
+}
 .factSection {
   padding:60px;
+  margin-left: 100px;
+
   figure {
     margin:0 0 30px 0;
     .factImgWrap {
@@ -4596,8 +4627,8 @@ $grey_about: #5d5d5d;
       height: 200px;
     }
     figcaption {
-      height: 100px;
-      margin-top: -100px;
+      height: 150px;
+      margin-top: -150px;
     }
   }
   ul {
@@ -4719,6 +4750,12 @@ background-image: url('img/resources/img/prizesPage/bg4.png');
 .error-message {
   margin-bottom: 50px;
 }
+.error_message_registration {
+  text-align: center;
+  padding: 60px;
+  font-size: 2rem;
+}
+
 /// end error page
 nav {
   .logo_mobile {

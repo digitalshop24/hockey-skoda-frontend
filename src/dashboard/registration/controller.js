@@ -14,7 +14,7 @@ export default class RegistrationCtrl {
             this.modal.open({
                 resolve: {
                     message: () => {
-                        return 'Введенные пароли не совпадают!</h4>'
+                        return 'Введенные пароли не совпадают!'
                     }
                 }
             });
