@@ -31,9 +31,9 @@ export default class RegistrationCtrl {
         })
             .catch((err) => {
                 let info = 'Во время регистрации произошла ошибка!';
-                if (err.error_message.email) {
+                /*if (err.error_message.email) {
                     info = "Данный email уже существует"
-                }
+                }*/
                 this.modal.open({
                     resolve: {
                         message: () => {
