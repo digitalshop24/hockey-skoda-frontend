@@ -149,33 +149,33 @@
                         <div class="col-md-3">
                             <ul>
                                 <a ui-sref="dashboard.general-news">
-                                    <li 
+                                    <li ng-click="ctrl.isMenuOpen = false" 
                                         ng-mouseover="ctrl.isNewsOpen = true; ctrl.isForecastOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isInterestingOpen = ctrl.isSchedOpen = false">
                                         Новости
                                     </li>
                                 </a>
                                 <a ui-sref="dashboard.forecast.playoff">
-                                    <li ng-mouseover="ctrl.isForecastOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false" >
+                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isForecastOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false" >
                                         Прогнозы
                                     </li>
                                 </a>
                                 <a ui-sref="dashboard.forum">
-                                    <li ng-mouseover="ctrl.isForumOpen = true; ctrl.isNewsOpen = ctrl.isForecastOpen = ctrl.isPrizeOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
+                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isForumOpen = true; ctrl.isNewsOpen = ctrl.isForecastOpen = ctrl.isPrizeOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
                                         Форум
                                     </li>
                                 </a>
                                 <a ui-sref="dashboard.prizenew">
-                                    <li ng-mouseover="ctrl.isPrizeOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isForecastOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
+                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isPrizeOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isForecastOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
                                         Конкурсы
                                     </li>
                                 </a>
                                 <a ui-sref="dashboard.schedule">
-                                    <li ng-mouseover="ctrl.isSchedOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isForecastOpen = ctrl.isInterestingOpen = false">
+                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isSchedOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isForecastOpen = ctrl.isInterestingOpen = false">
                                         Расписание
                                     </li>
                                 </a>
                                 <a ui-sref="dashboard.facts">
-                                    <li ng-mouseover="ctrl.isInterestingOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isForecastOpen = ctrl.isSchedOpen = false">
+                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isInterestingOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isForecastOpen = ctrl.isSchedOpen = false">
                                         Интересное
                                     </li>
                                 </a>

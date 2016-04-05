@@ -1,4 +1,13 @@
-<section class="wrapp_one_news">
+<div class="wrapp_menu_fact">
+        <div class="menu_line ">
+            <ul>
+               <li><a ui-sref="dashboard.general-news"><img src="img/resources/img/news/ico_menu1_noactive_notext.png" alt="" class="img-responsive"><p >События</p></a></li>
+                <li><a ui-sref="dashboard.facts"><img src="img/resources/img/news/ico_menu2_noactive_notext.png" alt=""  class="img-responsive"><p>Факты</p></a></li>
+                <li><a ui-sref="dashboard.blog"><img src="img/resources/img/news/ico_menu3_noactive_notext.png" alt="" class="img-responsive"><p>Аналитика</p></a></li>
+            </ul>
+        </div>
+</div>
+<section class="wrapp_one_news"> 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -12,7 +21,7 @@
                 <h3 ng-bind="ctrl.news.name"></h3>
 
                 <div ng-bind-html="ctrl.news.content"></div>
-                <ul class="soc">
+                <!-- <ul class="soc">
                     <li><p>Рассказать друзьям:</p></li>
                     <li><a socialshare socialshare-provider="facebook"
                            socialshare-text="{{ctrl.socialShareText}}"
@@ -27,9 +36,81 @@
                            socialshare-text="{{ctrl.socialShareText}}"
                            socialshare-url="{{ctrl.socialShareUrl}}">
                         <img src="img/resources/img/vk_grey.png" alt="" class="img-responsive"></a></li>
-                </ul>
+                </ul> -->
                 
             </div>
         </div>
+        <div class="row wrapp_comments">
+          <div class="col-md-3 text-center">
+             <ul>
+               <!-- <li>
+                <img src="img/resources/img/fb_grey.png" alt="" class="img-responsive">
+                <p>14444</p>
+               </li> -->
+               <li>
+                <a socialshare socialshare-provider="facebook"
+                           socialshare-text="{{ctrl.socialShareText}}"
+                           socialshare-url="{{ctrl.socialShareUrl}}">
+                        <img src="img/resources/img/fb_grey.png" alt="" class="img-responsive"></a>
+                <p>14444</p>
+               </li>
+               <li>
+                <a socialshare socialshare-provider="twitter"
+                           socialshare-text="{{ctrl.news.title}} + {{ctrl.news.description}}"
+                           socialshare-hashtags="хоккей"
+                           socialshare-url="{{ctrl.socialShareUrl}}">
+                        <img src="img/resources/img/twiter_grey.png" alt="" class="img-responsive"></a>
+                <p>14444</p>
+               </li>
+               <li>
+                <a socialshare socialshare-provider="vk"
+                           socialshare-text="{{ctrl.socialShareText}}"
+                           socialshare-url="{{ctrl.socialShareUrl}}">
+                        <img src="img/resources/img/vk_grey.png" alt="" class="img-responsive"></a>
+                <p>14444</p>
+               </li>
+             </ul>
+             
+          </div>
+          <div class="col-md-3 text-center"><button class="btn btn_primary main "> Комментировать</button></div>
+          <div class="col-md-6 text-right">
+            <p>14 комментариев</p>
+          </div>
+        </div>
+        <div class="row wrapp_comment_one">
+          <div class="col-md-2 text-center">
+            <img src="img/resources/img/bg_star.png" alt="" class="img-responsive">
+          </div>
+          <div class="col-md-10">
+            <h6>Дмитрий  Иванов</h6>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore laboriosam, quia tenetur labore quis aliquam velit veniam dolores nobis iure sint, consequuntur, repudiandae tempora! Distinctio, vitae, quibusdam. Architecto, suscipit ullam?</span><span>Pariatur repellendus explicabo quisquam quibusdam, saepe tempora necessitatibus libero soluta. Molestiae quibusdam a, veniam vel corrupti reiciendis. Corporis nesciunt veritatis sequi illo sed, temporibus odio ullam explicabo, inventore enim omnis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore laboriosam, quia tenetur labore quis aliquam velit veniam dolores nobis iure sint, consequuntur, repudiandae tempora! Distinctio, vitae, quibusdam. Architecto, suscipit ullam?</span><span>Pariatur repellendus explicabo quisquam quibusdam, saepe tempora necessitatibus libero soluta. Molestiae quibusdam a, veniam vel corrupti reiciendis. Corporis nesciunt veritatis sequi illo sed, temporibus odio ullam explicabo, inventore enim omnis.</span></p>
+            <p class="date_posts">09.02.2015 9:45</p>
+          </div>
+          <div class="col-md-2 text-center">
+            <img src="img/resources/img/bg_star.png" alt="" class="img-responsive">
+          </div>
+          <div class="col-md-10">
+            <h6>Дмитрий  Иванов</h6>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore laboriosam, quia tenetur labore quis aliquam velit veniam dolores nobis iure sint, consequuntur, repudiandae tempora! Distinctio, vitae, quibusdam. Architecto, suscipit ullam?</span><span>Pariatur repellendus explicabo quisquam quibusdam, saepe tempora necessitatibus libero soluta. Molestiae quibusdam a, veniam vel corrupti reiciendis. Corporis nesciunt veritatis sequi illo sed, temporibus odio ullam explicabo, inventore enim omnis.</span></p>
+            <p class="date_posts">09.02.2015 9:45</p>
+          </div>
+          <div class="col-md-2 text-center">
+            <img src="img/resources/img/bg_star.png" alt="" class="img-responsive">
+          </div>
+          <div class="col-md-10">
+            <h6>Дмитрий  Иванов</h6>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore laboriosam, quia tenetur labore quis aliquam velit veniam dolores nobis iure sint, consequuntur, repudiandae tempora! Distinctio, vitae, quibusdam. Architecto, suscipit ullam?</span><span>Pariatur repellendus explicabo quisquam quibusdam, saepe tempora necessitatibus libero soluta. Molestiae quibusdam a, veniam vel corrupti reiciendis. Corporis nesciunt veritatis sequi illo sed, temporibus odio ullam explicabo, inventore enim omnis.</span></p>
+            <p class="date_posts">09.02.2015 9:45</p>
+          </div>
+        </div>
+        <div class="row end_comment">
+         
+          <div class="col-md-12 text-center">
+            <button class="btn btn_primary main "> Комментировать</button>
+            <button class="btn btn_common main "> Показать еще</button>
+            <span> Показано 3 из 14</span>
+          </div>
+        </div>
     </div>
 </section>
+
