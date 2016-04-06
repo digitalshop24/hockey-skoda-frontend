@@ -8,7 +8,7 @@ export default class HeaderCtrl {
         this.state = $state;
         this.auth = auth;
         this.isMenuOpen = false;
-        this.isNewsOpen = false;
+        this.isNewsOpen = true;
         this.isForecastOpen = false;
         this.isForumOpen = false;
         this.isPrizeOpen = false;
