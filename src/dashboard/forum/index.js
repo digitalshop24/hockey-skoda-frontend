@@ -14,6 +14,7 @@ export default angular.module('dashboard.forum', [])
                 controller: ForumCtrl,
                 controllerAs: 'ctrl',
                 params: {
+                    notScrollToTop: false,
                     page: 1,
                     perPage: 4,
                     topicNumber: 3,

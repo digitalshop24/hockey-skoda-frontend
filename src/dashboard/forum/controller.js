@@ -20,7 +20,8 @@ export default class ForumCtrl {
     loadMore() {
         this.state.go('dashboard.forum', {
             sections: this.sections,
-            page: this.currentPage + 1
+            page: this.currentPage + 1,
+            notScrollToTop: true
         });
     }
 

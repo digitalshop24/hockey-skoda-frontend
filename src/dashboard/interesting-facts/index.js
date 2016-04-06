@@ -14,6 +14,7 @@ export default angular.module('dashboard.facts', [])
                 controller: FactsCtrl,
                 controllerAs: 'ctrl',
                 params: {
+                    notScrollToTop: false,
                     page: 1,
                     perPage: 15,
                     facts: []

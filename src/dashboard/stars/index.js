@@ -14,6 +14,7 @@ export default angular.module('dashboard.stars', [])
                 controller: StarsCtrl,
                 controllerAs: 'ctrl',
                 params: {
+                    notScrollToTop: false,
                     page: 1,
                     perPage: 15,
                     news: []

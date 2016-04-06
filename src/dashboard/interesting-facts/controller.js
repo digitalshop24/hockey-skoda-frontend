@@ -12,7 +12,8 @@ export default class FactsCtrl {
     loadMore() {
         this.state.go('dashboard.facts', {
             facts: this.facts,
-            page: ++this.currentPage
+            page: ++this.currentPage,
+            notScrollToTop: true
         });
     }
 }

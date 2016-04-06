@@ -39,7 +39,7 @@
                 <p class="date" ng-bind="ctrl.currentVideo.published_at | amDateFormat:'DD MMMM'"></p>
             </div>
             <div class="col-md-4">
-                <input type="text" class="input_default input_small" ng-model="ctrl.search.name"
+                <input type="text" class="input_default input_small" ng-model="ctrl.search"
                        placeholder="ЧМХ 2009, например">
             </div>
         </div>
@@ -51,7 +51,7 @@
 <section class="other_video">
     <div class="container-fluid">
         <div class="row ">
-            <div class="col-md-3" ng-repeat="video in ctrl.videos | filter: ctrl.search.name">
+            <div class="col-md-3" ng-repeat="video in ctrl.videos | filter: {name:ctrl.search}">
                 <div style="background-image: url('{{video.image.small}}')"></div>
                 <p class="bold"><a ng-click="ctrl.setNewMainVideo(video)" ng-bind="video.name"></a></p>
 
