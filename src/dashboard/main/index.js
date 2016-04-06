@@ -26,7 +26,10 @@ export default angular.module('dashboard.main', [
                         return mainService.getLightingNews($stateParams.lightingNewsAmount);
                     },
                     lastNewsInfo: ($stateParams, mainService) => {
-                        return mainService.getLastNews($stateParams.page, $stateParams.lastNewsAmount);
+                        return mainService.getLastNews('news', $stateParams.page, $stateParams.lastNewsAmount);
+                    },
+                    starsInfo: ($stateParams, mainService) => {
+                        return mainService.getLastNews('stars', 1, 5);
                     },
                     page: ($stateParams) => {
                         return $stateParams.page;

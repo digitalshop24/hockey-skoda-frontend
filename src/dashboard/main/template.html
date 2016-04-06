@@ -185,41 +185,14 @@
 <section class="wrapp_slider_stars">
     <div class="container-fluid">
         <div class="row">
-            <!-- <div class="col-md-12"> -->
                 <slick infinite=true arrows=true slides-to-show=1 slides-to-scroll=1>
 
-                        <div class="stars" style="background-image: url('img/resources/img/bg_star.png');">
-                            <h5>Рубрика о звездах</h5>
-                            <h2><a href="#">Прерваный<br>полет</a></h2>
-                            <h6><a href="#">Валерий Харламов</a></h6>
-                            <p>(1948-1981)</p>
-                            <ul>
-                                <li><a href="#">Биография</a></li>
-                                <li><a href="#">Интервью</a></li>
-                            </ul>
+                        <div class="stars" ng-repeat="star in ctrl.stars" style="background-image: url('{{star.image.original}}');">
+                            <h2><a ui-sref="dashboard.newspage({id:star.id, rubric:star.rubric.api_path})" ng-bind="star.name"></a></h2>
+                            <h6><a href="#" ng-bind="star.short_content">Валерий Харламов</a></h6>
                         </div>
-                        <div class="stars" style="background-image: url('img/resources/img/bg_star.png');">
-                            <h5>Рубрика о звездах</h5>
-                            <h2><a href="#">Прерваный<br>полет</a></h2>
-                            <h6><a href="#">Валерий Харламов</a></h6>
-                            <p>(1948-1981)</p>
-                            <ul>
-                                <li><a href="#">Биография</a></li>
-                                <li><a href="#">Интервью</a></li>
-                            </ul>
-                        </div>
-                        <div class="stars" style="background-image: url('img/resources/img/bg_star.png');">
-                            <h5>Рубрика о звездах</h5>
-                            <h2><a href="#">Прерваный<br>полет</a></h2>
-                            <h6><a href="#">Валерий Харламов</a></h6>
-                            <p>(1948-1981)</p>
-                            <ul>
-                                <li><a href="#">Биография</a></li>
-                                <li><a href="#">Интервью</a></li>
-                            </ul>
-                        </div>
+
                  </slick>
-            <!-- </div> -->
         </div>
     </div>
 </section> 

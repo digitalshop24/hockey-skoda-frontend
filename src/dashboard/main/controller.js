@@ -2,11 +2,12 @@
 
 
 export default class MainCtrl {
-    constructor(lightingNews, lastNewsInfo, mainService, page, lastNewsAmount) {
+    constructor(lightingNews, lastNewsInfo, mainService, page, lastNewsAmount, starsInfo) {
         this.service = mainService;
         this.lightingNews = lightingNews;
         this.lastNewsInfo = lastNewsInfo;
         this.lastNews = lastNewsInfo.posts.reverse();
+        this.stars = starsInfo.posts;
         this.page = page;
         this.lastNewsAmount = lastNewsAmount;
         this.slidesToShow = 5;
