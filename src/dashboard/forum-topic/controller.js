@@ -2,7 +2,7 @@
 
 
 export default class ForumtopicCtrl {
-    constructor(topic, messageInfo, forumtopicService, messagesPerPage, $state, $stateParams) {
+    constructor(topic, messageInfo, forumtopicService, messagesPerPage, $state, $stateParams, session, login) {
         this.topic = topic;
         this.messages = messageInfo.messages;
         let counter = ($stateParams.page - 1) * messagesPerPage;
@@ -15,6 +15,8 @@ export default class ForumtopicCtrl {
         this.page = $stateParams.page;
         this.messagesPerPage = messagesPerPage;
         this.state = $state;
+        this.session = session;
+        this.login = login;
         this.showPagination = topic.messages_count > messagesPerPage;
     }
 

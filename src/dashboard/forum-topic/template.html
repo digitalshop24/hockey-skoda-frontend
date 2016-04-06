@@ -80,9 +80,12 @@
 <section class="add_topic">
     <div class="container">
         <div class="row">
-            <button ng-show="!ctrl.isEditorOpen" ng-click="ctrl.openEditor()" type="button" class="btn btn_primary main"
+            <button ng-disabled="!ctrl.session.isAuthenticated" ng-show="!ctrl.isEditorOpen" ng-click="ctrl.openEditor()" type="button" class="btn btn_primary main"
                     data-toggle="modal" data-target="#myModal">Ответить
             </button>
+
+            <p ng-show="!ctrl.session.isAuthenticated">Чтобы оставить комментарий нужно <a
+                    ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
 
             <div ng-show="ctrl.isEditorOpen" class="textEdit">
                 <div text-angular ng-model="ctrl.answer"></div>
