@@ -1,192 +1,108 @@
 <!-- cheerleaders -->
 <section class="wrapp_titel_cheerleaders">
     <div class="container">
-            <div class="row">
-                <div class="col-md-8 ">
-                    <h2>ДЕВУШКИ-ЧЕРЛИДЕРЫ</h2>
-                </div>
-                <div class=" col-md-4 ">
-                    <select name="" id="" class="input_default input_small select_default">
-                            <option value="">Мечел, например</option>
-                            <option value="">Город</option>
-                            <option value="">Город</option>
-                            <option value="">Город</option>
-                        </select>
-                </div>
+        <div class="row">
+            <div class="col-md-8 ">
+                <h2>ДЕВУШКИ-ЧЕРЛИДЕРЫ</h2>
             </div>
-        </div>  
+            <div class=" col-md-4 ">
+                <input type="text" class="input_default input_small" ng-model="ctrl.search"
+                       placeholder="Мечел, например">
+            </div>
+        </div>
+    </div>
 </section>
 <!--end cheerleaders -->
 
 <section class="wrapp_content_cheerleaders">
     <div class="container">
-            <div class="row">
-                <div class="cheer-bor">
-                    <div class="cheer-im clearfix">
-                        <div class="cheer-text modile">
-                                <div class="cheer-title clearfix">
-                                    <h3>СКА: «Sisters»</h3>
-                                    <a href="ska_sisters.ru" class="link">ska_sisters.ru</a>
-                                </div>
-                            </div>
-                        <div class=" col-md-7 mar-no ">
-                            <div class="cheer">
-                                <a href="#">
-                                    <img class="img" src="img/resources/img/cheer.jpg"  alt="">
-                                </a>
-                                <div class="cheer-active">
-                                    <h4>СКА-Sisters-video</h4>
-                                    <img class="play" src="img/resources/img/icon-play.png" height="50" width="40" alt="">
-                                    <p class="sm">Смотреть</p>
-                                    <span class="time">01:45</span>
-                                    <span class="pod">Поделиться видео:</span>
-                                    <div class="share">
-                                        <a href="" class="icon icon-is"></a>
-                                        <a href="" class="icon icon-fb"></a>
-                                        <a href="" class="icon icon-tw"></a>
-                                        <a href="" class="icon icon-vk"></a>
-                                    </div>
-                                </div>
-                                <iframe class="youtube-activ"   src="https://www.youtube.com/embed/hKxGsNjzuyw" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class=" col-md-5 ">
-                            <div class="cheer-text">
-                                <div class="cheer-title clearfix destop-no">
-                                    <h3>СКА: «Sisters»</h3>
-                                    <a href="ska_sisters.ru" class="link">ska_sisters.ru</a>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quos, veritatis veniam! Quos et amet accusamus optio quidem earum, suscipit dolore quaerat beatae architecto harum explicabo nostrum quae nisi illo!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quos, veritatis veniam! Quos et amet accusamus optio quidem earum, suscipit dolore quaerat beatae architecto harum explicabo nostrum quae nisi illo!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quos, veritatis veniam! Quos et amet accusamus optio quidem earum, suscipit dolore quaerat beatae architecto harum explicabo nostrum quae nisi illo!</p>
-                                <div class="teg clearfix">
-                                    <span>Хештеги:</span>
-                                    <a href="#">#фотогалерея</a>
-                                    <a href="#">#СКА</a>
-                                    <a href="#">#СИСТЕРС</a>
-                                    <a href="#">#SKA_SISTERS</a>
-                                </div>
-                            </div>
+        <div class="row">
+            <div class="col-md-12 ">
+                <ul class="tag_post">
+                    <li ng-repeat="tag in ctrl.tags"><p><a ng-bind="tag"></a><span
+                            ng-click="ctrl.removeTag(tag)"> x </span></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="cheer-bor" ng-repeat="news in ctrl.news | filter:{name:ctrl.search}">
+                <div class="cheer-im clearfix">
+                    <div class="cheer-text modile">
+                        <div class="cheer-title clearfix">
+                            <h3 ng-bind="news.name">СКА: «Sisters»</h3>
+                            <a href="{{news.link}}" ng-bind="news.link_text" target="_blank" class="link"></a>
                         </div>
                     </div>
-                    
-                    <div class="cheer-galler ">
-                        <div class="col-md-12">
-                            <h5>Фотогалерея</h5>
-                        </div>
-                            
-                       
+                    <div class="video_item" ng-show="news.showVideo" data-news-id="{{news.id}}">
+                        <youtube-video video-id="news.video_code" player-width="'90%'" player-height="'100%'" style="min-height: 620px" player="news.player"></youtube-video>
                     </div>
+                    <div class=" col-md-7 mar-no " ng-show="!news.showVideo">
+                        <div class="cheer">
+                            <a href="#">
+                                <img class="img" src="{{news.image.medium}}" alt="">
+                            </a>
 
+                            <div class="cheer-active">
+                                <h4 ng-bind="news.name"></h4>
+                                <img ng-click="ctrl.playVideo(news)" class="play" src="img/resources/img/icon-play.png" height="50" width="40" alt="">
+
+                                <p class="sm">Смотреть</p>
+                                <span class="time" ng-bind="news.videoTime">01:45</span>
+                                <span class="pod">Поделиться видео:</span>
+
+                                <div class="share">
+                                    <a socialshare socialshare-provider="facebook" socialshare-url="{{news.socialUrl}}" class="icon icon-fb"></a>
+                                    <a socialshare socialshare-provider="twitter" socialshare-url="{{news.socialUrl}}"class="icon icon-tw"></a>
+                                    <a socialshare socialshare-provider="vk" socialshare-url="{{news.socialUrl}}" class="icon icon-vk"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-5 ">
+                        <div class="cheer-text">
+                            <div class="cheer-title clearfix destop-no">
+                                <h3 ng-bind="news.name"></h3>
+                                <a href="{{news.link}}" target="_blank" ng-bind="news.link_text" class="link"></a>
+                            </div>
+                            <p ng-bind-html="news.content"></p>
+
+                            <div class="teg clearfix">
+                                <span>Хештеги:</span>
+                                <a href="#" ng-click="ctrl.addTagToFilter(tag)" ng-repeat="tag in news.tags"
+                                   ng-bind="'#' + tag"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <slick slides-to-show=3>
-                                <div>
-                                    <img src="img/resources/img/cheer-img.jpg"   alt="">
-                                    <p>До следующего сезона, Динамо!</p>
-                                </div>
-                                <div >
-                                    <img src="img/resources/img/cheer-img.jpg" alt="">
-                                    <p>До следующего сезона, Динамо!</p>
-                                </div>
-                                <div >
-                                    <img src="img/resources/img/cheer-img.jpg" alt="">
-                                    <p>До следующего сезона, Динамо!</p>
-                                </div>
-                                <div >
-                                    <img src="img/resources/img/cheer-img.jpg" alt="">
-                                    <p>До следующего сезона, Динамо!</p>
-                                </div>
-                </slick>
-                          
-                                <div class="cheer-bor">
-                    <div class="cheer-im clearfix">
-                        <div class="cheer-text modile">
-                                <div class="cheer-title clearfix">
-                                    <h3>СКА: «Sisters»</h3>
-                                    <a href="ska_sisters.ru" class="link">ska_sisters.ru</a>
-                                </div>
-                            </div>
-                        <div class=" col-md-7 mar-no ">
-                            <div class="cheer">
-                                <a href="#">
-                                    <img class="img" src="img/resources/img/cheer.jpg"  alt="">
-                                </a>
-                                <div class="cheer-active">
-                                    <h4>СКА-Sisters-video</h4>
-                                    <img class="play" src="img/resources/img/icon-play.png" height="50" width="40" alt="">
-                                    <p class="sm">Смотреть</p>
-                                    <span class="time">01:45</span>
-                                    <span class="pod">Поделиться видео:</span>
-                                    <div class="share">
-                                        <a href="" class="icon icon-is"></a>
-                                        <a href="" class="icon icon-fb"></a>
-                                        <a href="" class="icon icon-tw"></a>
-                                        <a href="" class="icon icon-vk"></a>
-                                    </div>
-                                </div>
-                                <iframe class="youtube-activ"   src="https://www.youtube.com/embed/hKxGsNjzuyw" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class=" col-md-5 ">
-                            <div class="cheer-text">
-                                <div class="cheer-title clearfix destop-no">
-                                    <h3>СКА: «Sisters»</h3>
-                                    <a href="ska_sisters.ru" class="link">ska_sisters.ru</a>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quos, veritatis veniam! Quos et amet accusamus optio quidem earum, suscipit dolore quaerat beatae architecto harum explicabo nostrum quae nisi illo!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quos, veritatis veniam! Quos et amet accusamus optio quidem earum, suscipit dolore quaerat beatae architecto harum explicabo nostrum quae nisi illo!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quos, veritatis veniam! Quos et amet accusamus optio quidem earum, suscipit dolore quaerat beatae architecto harum explicabo nostrum quae nisi illo!</p>
-                                <div class="teg clearfix">
-                                    <span>Хештеги:</span>
-                                    <a href="#">#фотогалерея</a>
-                                    <a href="#">#СКА</a>
-                                    <a href="#">#СИСТЕРС</a>
-                                    <a href="#">#SKA_SISTERS</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cheer-galler clearfix">
-                        <div class="col-md-12">
-                            <h5>Фотогалерея</h5>
-                        </div>
 
+                <div class="cheer-galler clearfix">
+                    <div class="col-md-12">
+                        <h5>Фотогалерея</h5>
                     </div>
-                    <slick slides-to-show=3>
-                                <div>
-                                    <img src="img/resources/img/cheer-img.jpg"   alt="">
-                                    <p>До следующего сезона, Динамо!</p>
-                                </div>
-                                <div >
-                                    <img src="img/resources/img/cheer-img.jpg" alt="">
-                                    <p>До следующего сезона, Динамо!</p>
-                                </div>
-                                <div >
-                                    <img src="img/resources/img/cheer-img.jpg" alt="">
-                                    <p>До следующего сезона, Динамо!</p>
-                                </div>
-                                <div >
-                                    <img src="img/resources/img/cheer-img.jpg" alt="">
-                                    <p>До следующего сезона, Динамо!</p>
-                                </div>
-                    </slick>
+                    <div class="cheer-galler-im clearfix">
+                        <div class="col-md-4" ng-repeat="image in news.images">
+                            <img src="{{image.image.small}}" alt="">
+
+                            <p ng-bind="image.caption"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>  
+
+        </div>
+    </div>
 </section>
 
 <!-- wrapp_btnn -->
 <section class="wrapp_btnn">
     <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="btnn_text">
-                        <button class="btn btn_common main">Показать еще</button>
-                        <span>2 из 6</span>
-                    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="btnn_text">
+                    <button ng-click="ctrl.loadMore()" ng-show="ctrl.news.length < ctrl.newsAmount" class="btn btn_common main">Показать еще</button>
+                    <span>{{ctrl.news.length}} из {{ctrl.newsAmount}}</span>
                 </div>
             </div>
-        </div>  
+        </div>
+    </div>
 </section>
 <!--end wrapp_btnn -->

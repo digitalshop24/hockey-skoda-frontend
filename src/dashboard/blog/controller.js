@@ -23,11 +23,10 @@ export default class BlogCtrl {
             this.tags.push(tag)
         }
         this.state.go('dashboard.blog', {
-            blogs: this.blogs, // it's magic. don't remove this. otherwise state.go doesn't work
             tags: this.tags,
             tagFilter: true,
             page: 1
-        });
+        },{reload: true});
     }
 
     removeTag(tag) {
@@ -36,10 +35,9 @@ export default class BlogCtrl {
             this.tags.splice(index,1);
         }
         this.state.go('dashboard.blog', {
-            blogs: this.blogs,
             tags: this.tags,
             tagFilter: true,
             page: 1
-        });
+        },{reload: true});
     }
 }
