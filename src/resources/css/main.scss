@@ -860,6 +860,7 @@ footer {
   }
 }
 .topics {
+  margin-top: 40px;
   .post_hover:hover {
     background-color:#f8f8f8;
   }
@@ -898,7 +899,7 @@ footer {
     }
     h4 {
       font-family: $bold;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
     }
     p {
       color: $grey;
@@ -2655,7 +2656,11 @@ $grey_about: #5d5d5d;
 
 
 //-------------------------------------------------- one news
-
+.social-likes {
+  div {
+    display: block;
+  }
+}
 .wrapp_one_news {
   padding: 50px 20px;
   min-height: 90vh;
@@ -2889,6 +2894,7 @@ $grey_about: #5d5d5d;
       color: $green_main;
       text-transform: uppercase;
       font-family: $bold;
+      min-height: 90px;
     }
     p {
       padding-top: 10px;
