@@ -8,6 +8,7 @@ export default angular.module('dashboard.suggestions.card-init', [])
             link: function () {
                 angular.element(document).ready(function () {
                     $('.card-create > button').click(function(){
+                        $('.card-result').fadeIn(50);
                         var $img = $('.select-img');
                         var imgUrl = $('.slick-active').find('img').attr('src');
                         $img.attr('src', imgUrl).width('auto').height('auto');
@@ -77,6 +78,9 @@ export default angular.module('dashboard.suggestions.card-init', [])
                         $img.attr('src',resultUrl);
                         $img.fadeIn(50);*/
                         // ctx.fillText(text, width/2, 50);
+                        $('.card-result').css({
+                            'top' : 0
+                        })
                         return false;
                     });
 
