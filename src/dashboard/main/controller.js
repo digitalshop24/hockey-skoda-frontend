@@ -31,7 +31,7 @@ export default class MainCtrl {
               }
             },
             {
-              breakpoint: 600,
+              breakpoint: 695,
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2

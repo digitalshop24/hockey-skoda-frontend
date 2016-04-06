@@ -32,8 +32,8 @@
                             <a href="{{news.link}}" ng-bind="news.link_text" target="_blank" class="link"></a>
                         </div>
                     </div>
-                    <div class="video_item" ng-show="news.showVideo" data-news-id="{{news.id}}">
-                        <youtube-video video-id="news.video_code" player-width="'90%'" player-height="'100%'" style="min-height: 620px" player="news.player"></youtube-video>
+                    <div class="col-md-7 video_item" ng-show="news.showVideo" data-news-id="{{news.id}}">
+                        <youtube-video video-id="news.video_code" player-width="'98%'" player-height="'100%'" style="min-height: 620px" player="news.player"></youtube-video>
                     </div>
                     <div class=" col-md-7 mar-no " ng-show="!news.showVideo">
                         <div class="cheer">

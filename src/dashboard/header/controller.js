@@ -15,6 +15,7 @@ export default class HeaderCtrl {
         this.isSchedOpen = false;
         this.isInterestingOpen = false;
         this.isMenuMobileOpen = false;
+        this.isNotifOpen = false;
 
        
         
