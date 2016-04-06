@@ -3372,7 +3372,10 @@ $grey_about: #5d5d5d;
     font-family: "SkodaProBold", sans-serif;
     padding-top: 12px;
     padding-left: 30px;
+    display: inline-block;
+    font-size: 2rem;
   }
+  
   .btn_non {
     padding-top: 5px;
     float:right;
@@ -3439,7 +3442,11 @@ $grey_about: #5d5d5d;
       h5 {
         font-family: "SkodaProBold", sans-serif;
         padding-top: 15px;
-
+        display: inline-block;
+        font-size: 2rem;
+      }
+      .toggle  {
+        display: inline-block;
       }
     }
     .time_line {
