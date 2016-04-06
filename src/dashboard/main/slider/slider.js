@@ -37,7 +37,7 @@ export default angular.module('dashboard.main.main-slider-init', [])
                                 }
                             },
                             {
-                                breakpoint: 600,
+                                breakpoint: 695,
                                 settings: {
                                     slidesToShow: 2,
                                     slidesToScroll: 2
