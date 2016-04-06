@@ -4670,6 +4670,15 @@ $grey_about: #5d5d5d;
 .wrapp_content_cheerleaders {
   border-top:1px solid #cccccc;
   padding-top:44px;
+  slick {
+    padding-bottom: 40px;
+    border-bottom: 1px solid $grey;
+    p {
+      font-size: 1.7rem;
+      font-family: $bold;
+      margin-top: 20px;
+    }
+  }
   .modile {
     display:none;
   }
@@ -4812,9 +4821,7 @@ $grey_about: #5d5d5d;
     padding-bottom:30px;
   }
   &-im {
-    img {
-      width:100%;
-    }
+    
     p {
       font-size:1.7rem;
       font-family: $bold;
