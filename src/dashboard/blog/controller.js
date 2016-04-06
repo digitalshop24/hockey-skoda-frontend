@@ -14,7 +14,8 @@ export default class BlogCtrl {
         this.state.go('dashboard.blog', {
             blogs: this.blogs,
             page: ++this.currentPage,
-            tagFilter: false
+            tagFilter: false,
+            notScrollToTop: true
         });
     }
 
@@ -25,7 +26,8 @@ export default class BlogCtrl {
         this.state.go('dashboard.blog', {
             tags: this.tags,
             tagFilter: true,
-            page: 1
+            page: 1,
+            notScrollToTop: false
         },{reload: true});
     }
 
@@ -37,7 +39,8 @@ export default class BlogCtrl {
         this.state.go('dashboard.blog', {
             tags: this.tags,
             tagFilter: true,
-            page: 1
+            page: 1,
+            notScrollToTop: false
         },{reload: true});
     }
 }

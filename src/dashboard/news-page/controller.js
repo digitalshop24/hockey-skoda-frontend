@@ -25,7 +25,8 @@ export default class NewspageCtrl {
         this.newspageService.sendMessage(this.rubric.api_path, this.news.id, this.message).then((res) => {
             this.state.go('dashboard.newspage', {
                 comments: [],
-                commentPage: 1
+                commentPage: 1,
+                notScrollToTop: true
             },{reload:true});
         });
     }
@@ -33,7 +34,8 @@ export default class NewspageCtrl {
     loadMore() {
         this.state.go('dashboard.newspage', {
             comments: this.comments,
-            commentPage: ++this.currentPage
+            commentPage: ++this.currentPage,
+            notScrollToTop: true
         });
     }
 

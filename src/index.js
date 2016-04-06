@@ -95,8 +95,8 @@ export default angular.module('app',
     })
     .run(($rootScope) => {
 
-        $rootScope.$on('$stateChangeStart', (event, toState) => {
-            if (['dashboard.forum', 'dashboard.blog', 'dashboard.facts', 'dashboard.stars', 'dashboard.newspage', 'dashboard.cheer'].indexOf(toState.name) == -1) {
+        $rootScope.$on('$stateChangeStart', (event, toState, params) => {
+            if (!params.notScrollToTop) {
                 window.scrollTo(0, 0);
             }
         });

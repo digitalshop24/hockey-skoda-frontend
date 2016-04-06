@@ -13,7 +13,8 @@ export default class StarsCtrl {
     loadMore() {
         this.state.go('dashboard.stars', {
             news: this.news,
-            page: ++this.currentPage
+            page: ++this.currentPage,
+            notScrollToTop: true
         });
     }
 }

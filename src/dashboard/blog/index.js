@@ -14,6 +14,7 @@ export default angular.module('dashboard.blog', [])
                 controller: BlogCtrl,
                 controllerAs: 'ctrl',
                 params: {
+                    notScrollToTop: false,
                     page: 1,
                     perPage: 10,
                     blogs: [],

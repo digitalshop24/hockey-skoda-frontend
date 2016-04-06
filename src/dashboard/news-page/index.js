@@ -17,6 +17,7 @@ export default angular.module('dashboard.newspage', [
                 controller: NewspageCtrl,
                 controllerAs: 'ctrl',
                 params: {
+                    notScrollToTop: false,
                     rubric: '',
                     commentPage: 1,
                     commentsPerPage: 40,

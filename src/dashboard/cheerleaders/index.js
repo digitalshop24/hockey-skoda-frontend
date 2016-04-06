@@ -14,6 +14,7 @@ export default angular.module('dashboard.cheer', [])
                 controller: CheerCtrl,
                 controllerAs: 'ctrl',
                 params: {
+                    notScrollToTop: false,
                     page: 1,
                     perPage: 3,
                     news: [],

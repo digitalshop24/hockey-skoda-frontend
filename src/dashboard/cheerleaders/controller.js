@@ -51,7 +51,8 @@ export default class CheerCtrl {
     loadMore() {
         this.state.go('dashboard.cheer', {
             news: this.news,
-            page: ++this.currentPage
+            page: ++this.currentPage,
+            notScrollToTop: true
         });
     }
 
@@ -62,7 +63,8 @@ export default class CheerCtrl {
         this.state.go('dashboard.cheer', {
             tags: this.tags,
             tagFilter: true,
-            page: 1
+            page: 1,
+            notScrollToTop: false
         },{reload: true});
     }
 
@@ -74,7 +76,8 @@ export default class CheerCtrl {
         this.state.go('dashboard.cheer', {
             tags: this.tags,
             tagFilter: true,
-            page: 1
+            page: 1,
+            notScrollToTop: false
         },{reload: true});
     }
 }
