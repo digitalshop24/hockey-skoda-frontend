@@ -40,6 +40,20 @@ header {
   z-index: 1001;
   background-color: #fff;
   min-height: 70px;
+  .notifi {
+    position: absolute;
+    right: 80px;
+    top: 81px;
+    width: 250px;
+    background-color: #fff;
+    ul {
+      li {
+        display: block;
+        border-left: none !important;
+        padding: 20px;
+      }
+    }
+  }
   .left_head {
     background-color: $white;
     position: fixed;
@@ -845,6 +859,9 @@ footer {
 //-------------------------------------------------- forum
 .add_topic {
   background-color: #efefef;
+  .textEdit {
+    padding: 0 10px;
+  }
   button {
     margin: 40px 10px;
   }
@@ -1009,6 +1026,7 @@ footer {
         position: relative;
         top: -7px;
         margin: 0 10px; 
+        padding: 10px 0;
       }
     }
     ul {
