@@ -45,6 +45,8 @@ export default class NewspageCtrl {
                 return "dashboard.blog";
             case "news":
                 return "dashboard.general-news";
+            case "stars":
+                return "dashboard.stars";
         }
     }
 }
