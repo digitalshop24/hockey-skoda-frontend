@@ -3,8 +3,11 @@
 import angular from 'angular';
 import MainCtrl from './controller.js';
 import MainService from './service.js';
+import slider from './slider/slider.js';
 
-export default angular.module('dashboard.main', [])
+export default angular.module('dashboard.main', [
+    slider.name
+])
     .service('mainService', MainService)
     .config(function ($stateProvider) {
         $stateProvider

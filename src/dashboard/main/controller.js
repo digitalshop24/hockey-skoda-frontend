@@ -7,10 +7,10 @@ export default class MainCtrl {
         this.lightingNews = lightingNews;
         this.lastNewsInfo = lastNewsInfo;
         this.lastNews = lastNewsInfo.posts.reverse();
-        this.newsCurrentIndex = 1;
         this.page = page;
         this.lastNewsAmount = lastNewsAmount;
         this.slidesToShow = 5;
+        this.indexToShowLastNews = this.lastNews.length - this.slidesToShow;
         this.responsive = [
             {
               breakpoint: 1280,
