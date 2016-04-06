@@ -188,9 +188,9 @@
                                 <a ui-sref="dashboard.general-news" ng-click="ctrl.isMenuOpen = false"><li>События</li></a>
                                 <a ui-sref="dashboard.facts" ng-click="ctrl.isMenuOpen = false"><li>Факты</li></a>
                                 <a ui-sref="dashboard.blog" ng-click="ctrl.isMenuOpen = false" ><li>Аналитика</li></a>
-                                <a href=""><li class="li_disabel">Девушки-чирлидирши</li></a>
-                                <a><li class="li_disabel">О звездах хоккея</li></a>
-                                <a><li class="li_disabel">Хоккейные видео</li></a>
+                                <a href="" ui-sref="dashboard.cheer" ng-click="ctrl.isMenuOpen = false"><li class="">Девушки-чирлидирши</li></a>
+                                <a ui-sref="dashboard.stars" ng-click="ctrl.isMenuOpen = false"><li class="">О звездах хоккея</li></a>
+                                <a ui-sref="dashboard.video" ng-click="ctrl.isMenuOpen = false"><li class="">Хоккейные видео</li></a>
                             </ul>
                             <ul ng-show="ctrl.isForecastOpen">
                                 <a ui-sref="dashboard.forecast.playoff" ng-click="ctrl.isMenuOpen = false" ><li>Сетка соревнований</li></a>
