@@ -4,7 +4,7 @@ $black: #000;
 $white: #fff;
 $grey_lite: #ececec; 
 $grey: #cccccc;
-$grey_dark: #555555;
+$grey_dark: #555555; 
 //Additional colors
 $green_add_: #299926;
 $green_add_pale: #a5d396;
@@ -2207,10 +2207,15 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- t-drive
 
 .wrapp_t_drive {
-  // background-image: url("img/resources/img/t_drive/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color:#F5F5F5;
   min-height: 1100px;
+  .wrapp_bg_tdrive {
+    background-image: url("img/resources/img/t_drive/TD-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    background-position: center 100%;
+  }
   h1 {
     font-family: $light;
     color: $green_main;
