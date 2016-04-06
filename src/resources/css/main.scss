@@ -4689,6 +4689,30 @@ $grey_about: #5d5d5d;
 .wrapp_content_cheerleaders {
   border-top:1px solid #cccccc;
   padding-top:44px;
+  .tag_post {
+    margin-bottom: 20px;
+        li {
+          margin: 5px 15px 5px 0;
+          padding: 5px 10px;
+          background-color: $grey_lite;
+          display: inline-block;
+          p {
+            text-transform: uppercase;
+            font-family: $bold;
+            font-size: $p_size - 0.2rem;
+            color: $green_main;
+            cursor: pointer;
+            span {
+              color: $white;
+              margin-left: 10px;
+            }
+            a{
+              color: $green_main;
+              cursor: pointer;
+            }
+          }
+        }
+      }
   slick {
     padding-bottom: 40px;
     border-bottom: 1px solid $grey;
