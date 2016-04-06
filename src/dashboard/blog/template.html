@@ -13,7 +13,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 ">
-                    <ul class="tag_post">
+                    <ul class="tag_post" ng-show="ctrl.tags.length">
+                        <li>Фильтр по тэгам:</li>
                         <li ng-repeat="tag in ctrl.tags"><p><a  ng-bind="tag"></a><span ng-click="ctrl.removeTag(tag)"> x </span></p>
                         </li>
                     </ul>

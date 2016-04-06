@@ -25,6 +25,7 @@ export default class BlogCtrl {
         }
         this.state.go('dashboard.blog', {
             tags: this.tags,
+            hashtags: this.tags.join(','),
             tagFilter: true,
             page: 1,
             notScrollToTop: false
@@ -38,6 +39,7 @@ export default class BlogCtrl {
         }
         this.state.go('dashboard.blog', {
             tags: this.tags,
+            hashtags: this.tags.join(','),
             tagFilter: true,
             page: 1,
             notScrollToTop: false

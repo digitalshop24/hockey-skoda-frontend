@@ -10,7 +10,7 @@ export default angular.module('dashboard.blog', [])
         $stateProvider
             .state('dashboard.blog', {
                 template: require('./template.html'),
-                url: '/blog',
+                url: '/blog?hashtags',
                 controller: BlogCtrl,
                 controllerAs: 'ctrl',
                 params: {
@@ -23,6 +23,9 @@ export default angular.module('dashboard.blog', [])
                 },
                 resolve: {
                     blogsInfo: ($stateParams, blogService) => {
+                        if($stateParams.hashtags) {
+                            $stateParams.tags = $stateParams.hashtags.split(',');
+                        }
                         return blogService.getBlogs($stateParams.page, $stateParams.perPage, $stateParams.tags)
                             .then((res) => {
                                 const blogs = $stateParams.tagFilter ? [] : $stateParams.blogs;
