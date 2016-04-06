@@ -33,7 +33,7 @@ import video from './video/index';
 import masonry from './masonry-init/index';
 import menuInit from './menu-init/index';
 import cheer from './cheerleaders/index';
-
+import calendar from './calendar/index';
 
 
 
@@ -66,7 +66,8 @@ export default angular.module('dashboard',
         video.name,
         masonry.name,
         menuInit.name,
-        cheer.name
+        cheer.name,
+        calendar.name
     ])
     .service('login', Login)
     .service('modal', Modal)
