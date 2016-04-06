@@ -10,4 +10,12 @@ export default class ForecastService {
             return res.data;
         });
     }
+
+    sendPredictions(predictions) {
+        return this.api.post('/predictions/play_off', {
+            predictions: predictions
+        }).then(res=> {
+            return res.data;
+        });
+    }
 }
