@@ -3677,8 +3677,15 @@ $grey_about: #5d5d5d;
     font-size:5rem;
     font-family: "SkodaProBold", sans-serif;
     color:$green_main;
-    padding-left:1.4rem;
+    // padding-left:1.4rem;
     letter-spacing:-2px;
+  }
+  p {
+    font-size: $p_size;
+    padding: 20px 0;
+  }
+  .right {
+    float: right;
   }
   .btn {
     font-family: "SkodaProRegular", sans-serif;
@@ -3704,13 +3711,13 @@ $grey_about: #5d5d5d;
   .slick-next {
     background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 86% center;
     right: 0px;
-    width: 100px;
+    width: 40px;
     height: 100px;
   }
   .slick-prev {
     background: rgba(0, 0, 0, 1) url("img/resources/img/arrow_left_white.png") no-repeat 14% center;
     left: 0px;
-    width: 100px;
+    width: 40px;
     height: 100px;
   }
   .single-item {
@@ -3722,6 +3729,13 @@ $grey_about: #5d5d5d;
       img {
         width:100%;
       }
+    }
+    .block-slid-2 {
+      height: 200px;
+      background-size: cover;
+      background-position: center 0;
+      background-repeat: no-repeat;
+
     }
   }
   .slick-arrow {
@@ -3751,7 +3765,7 @@ $grey_about: #5d5d5d;
 // <!-- share -->
 
 .wrapp_toggle_share ul li:nth-child(1) {
-  width:340px;
+  // width:340px;
 }
 
 .toggle_button {
