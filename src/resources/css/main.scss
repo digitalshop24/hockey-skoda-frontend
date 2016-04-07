@@ -2687,6 +2687,56 @@ $grey_about: #5d5d5d;
   padding: 50px 20px;
   min-height: 90vh;
   margin-left: 100px;
+  .news_banner {
+    height: 165px;
+    background-image: url('img/resources/img/news/bg_banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;
+    a {
+      position: relative;
+      top: 115px;
+      color: $white;
+      font-size: $p_size;
+      text-decoration: underline;
+      font-family: $bold;
+    }
+  }
+  .show_all {
+    font-size: $p_size;
+    text-decoration: underline;
+    color: $green_main;
+    float: right;
+
+    a {
+      color: $green_main;
+      font-family: $bold;
+    }
+  }
+  .littel_date {
+    font-style: italic;
+  }
+  .littel_news {
+    padding: 20px 10px 20px 50px;
+    font-family: $bold;
+
+  }
+  .littel_time {
+    position: absolute;
+    margin-top: -79px;
+  }
+  .little_comment {
+    position: absolute;
+    margin-top: -55px;
+    background-image: url('img/resources/img/news/bg_comment.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    padding: 3px 0 0 8px;
+  }
   h3 {
     padding: 20px 0;
     font-family: $bold;
@@ -2727,7 +2777,12 @@ $grey_about: #5d5d5d;
 }
 .wrapp_comments {
   padding: 50px 0 100px 0;
-
+  .textEdit {
+    padding: 8%;
+    .btn_primary {
+      margin-top: 20px;
+    }
+  }
   ul {
     display: inline-block;
     padding: 0;
@@ -3092,7 +3147,7 @@ $grey_about: #5d5d5d;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 57%;
+    // width: 57%;
     div {
       background-color: rgba(0, 0, 0, .5);
       min-height: 640px;
@@ -3149,6 +3204,7 @@ $grey_about: #5d5d5d;
 .other_video {
   padding: 0 60px;
   .col-md-3 {
+
     div {
       height: 200px;
       background-size: cover;
@@ -3159,6 +3215,7 @@ $grey_about: #5d5d5d;
     p {
       padding: 10px 0;
       font-size: $p_size;
+      height: 100px
     }
     .bold {
       min-height: 70px;
