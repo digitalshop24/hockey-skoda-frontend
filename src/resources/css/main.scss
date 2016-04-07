@@ -2769,7 +2769,12 @@ $grey_about: #5d5d5d;
 }
 .wrapp_comments {
   padding: 50px 0 100px 0;
-
+  .textEdit {
+    padding: 8%;
+    .btn_primary {
+      margin-top: 20px;
+    }
+  }
   ul {
     display: inline-block;
     padding: 0;
