@@ -38,57 +38,18 @@
                         Смотреть
                     </a>
                 </div>
-                <h6 >Другие новости <span class="show_all"><a href="">Смотреть все</a></span></h6>
-                <p class="littel_date">1 апреля, суббота</p>
+                <h6 >Другие новости <span class="show_all"><a ui-sref="dashboard.general-news">Смотреть все</a></span></h6>
+                <p class="littel_date" ng-bind="ctrl.lastNews[0].published_at | amDateFormat:'DD MMMM'">1 апреля, суббота</p>
                 <ul>
-                    <li>
-                        <p class="littel_news">Надпись "Хоккей" сложа добровольца классного фото из космоса</p>
-                        <span class="littel_time">12:45</span>
-                        <span class="little_comment">13</span>
+                    <li ng-repeat="news in ctrl.lastNews">
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name"></a></p>
+                        <span class="littel_time" ng-bind="news.published_at | amDateFormat:'H:mm'">12:45</span>
+                        <!--<span class="little_comment">13</span>-->
                     </li>
-                    <li>
-                        <p class="littel_news">Надпись "Хоккей" сложа добровольца классного фото из космоса</p>
-                        <span class="littel_time">12:45</span>
-                        <span class="little_comment">13</span>
-                    </li>
-                    <li>
-                        <p class="littel_news">Надпись "Хоккей" сложа добровольца классного фото из космоса</p>
-                        <span class="littel_time">12:45</span>
-                        <span class="little_comment">13</span>
-                    </li>
-                    <li>
-                        <p class="littel_news">Надпись "Хоккей" сложа добровольца классного фото из космоса</p>
-                        <span class="littel_time">12:45</span>
-                        <span class="little_comment">13</span>
-                    </li>
-                   
                 </ul>
             </div>
         </div>
     </div>
-    <section class="wrapp_mainpage_new">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <!--slick current-index="ctrl.newsCurrentIndex" on-after-change="ctrl.loadMoreNews()" infinite="false" arrows="true"
-                             dots="false" slides-to-show="{{ctrl.slidesToShow}}" data="ctrl.lastNews" slides-to-scroll="3" responsive="ctrl.responsive"-->
-                        <div class="mainpage_news_slider" main-slider-init initial-slide="ctrl.indexToShowLastNews">
-
-                            <div ng-repeat="news in ctrl.lastNews" style="padding-left:5px; padding-right: 5px;">
-                                <h3><span class="news_date" ng-bind="news.published_at | amDateFormat:'DD'"></span> <span class="news_month" ng-bind="news.published_at | amDateFormat:'MMMM'"></span></h3>
-
-                                <div class="news_one_slider" style="background-image: url({{news.image.medium}})">
-                                    <div class="news_one_slider_bg"></div>
-                                    <a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" class="news_titel"
-                                   ng-bind="news.name"></a>
-                                   <p class="news_content" ng-bind="news.short_content"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
     <div class="container">
         <div class="row wrapp_comments">
             <div class="col-md-3 text-center">
@@ -97,34 +58,6 @@
                     <div class="vkontakte" title="Share link on VK">VK</div>
                     <div class="twitter" title="Share link on twitter">twitter</div>
                 </div>
-                <!--<ul>
-
-                    <li>
-                        <a socialshare socialshare-provider="facebook"
-                           socialshare-text="{{ctrl.socialShareText}}"
-                           socialshare-url="{{ctrl.socialShareUrl}}">
-                            <img src="img/resources/img/fb_grey.png" alt="" class="img-responsive"></a>
-
-                        <p>14444</p>
-                    </li>
-                    <li>
-                        <a socialshare socialshare-provider="twitter"
-                           socialshare-text="{{ctrl.news.title}} + {{ctrl.news.description}}"
-                           socialshare-hashtags="хоккей"
-                           socialshare-url="{{ctrl.socialShareUrl}}">
-                            <img src="img/resources/img/twiter_grey.png" alt="" class="img-responsive"></a>
-
-                        <p>14444</p>
-                    </li>
-                    <li>
-                        <a socialshare socialshare-provider="vk"
-                           socialshare-text="{{ctrl.socialShareText}}"
-                           socialshare-url="{{ctrl.socialShareUrl}}">
-                            <img src="img/resources/img/vk_grey.png" alt="" class="img-responsive"></a>
-
-                        <p>14444</p>
-                    </li>
-                </ul>-->
 
             </div>
             <div class="col-md-3 text-center">
@@ -159,28 +92,6 @@
                     <p class="date_posts" ng-bind="comment.published_at | amDateFormat:'DD.MM.YYYY H:mm'">09.02.2015 9:45</p>
                 </div>
             </div>
-
-            <!--<div class="col-md-2 text-center">
-                <img src="img/resources/img/bg_star.png" alt="" class="img-responsive">
-            </div>
-            <div class="col-md-10">
-                <h6>Дмитрий Иванов</h6>
-
-                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore laboriosam, quia tenetur labore quis aliquam velit veniam dolores nobis iure sint, consequuntur, repudiandae tempora! Distinctio, vitae, quibusdam. Architecto, suscipit ullam?</span><span>Pariatur repellendus explicabo quisquam quibusdam, saepe tempora necessitatibus libero soluta. Molestiae quibusdam a, veniam vel corrupti reiciendis. Corporis nesciunt veritatis sequi illo sed, temporibus odio ullam explicabo, inventore enim omnis.</span>
-                </p>
-
-                <p class="date_posts">09.02.2015 9:45</p>
-            </div>
-            <div class="col-md-2 text-center">
-                <img src="img/resources/img/bg_star.png" alt="" class="img-responsive">
-            </div>
-            <div class="col-md-10">
-                <h6>Дмитрий Иванов</h6>
-
-                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore laboriosam, quia tenetur labore quis aliquam velit veniam dolores nobis iure sint, consequuntur, repudiandae tempora! Distinctio, vitae, quibusdam. Architecto, suscipit ullam?</span><span>Pariatur repellendus explicabo quisquam quibusdam, saepe tempora necessitatibus libero soluta. Molestiae quibusdam a, veniam vel corrupti reiciendis. Corporis nesciunt veritatis sequi illo sed, temporibus odio ullam explicabo, inventore enim omnis.</span>
-                </p>
-
-                <p class="date_posts">09.02.2015 9:45</p>
             </div>-->
         </div>
         <div class="row end_comment">

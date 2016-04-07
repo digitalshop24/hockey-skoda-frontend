@@ -2,10 +2,11 @@
 
 
 export default class NewspageCtrl {
-    constructor(news, session, login, commentsInfo, newspageService, $document, page, $state) {
+    constructor(news, session, login, commentsInfo, newspageService, $document, page, $state, lastNews) {
         this.news = news;
         this.rubric = news.rubric;
         this.session = session;
+        this.lastNews = lastNews;
         this.login = login;
         this.comments = commentsInfo.comments;
         this.commentsAmount = commentsInfo.comments_count;
