@@ -48,8 +48,11 @@ export default class PrizenewCtrl {
         });
     }
 
-    changeSponsor() {
-        //console.log(this.currentSponsorIndex);
-        this.currentSponsor = this.sponsors[this.currentSponsorIndex];
+    changeSponsor(sponsor) {
+        if(sponsor) {
+            this.currentSponsor = sponsor;
+        } else {
+            this.currentSponsor = this.sponsors[this.currentSponsorIndex];
+        }
     }
 }
