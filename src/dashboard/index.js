@@ -36,6 +36,7 @@ import cheer from './cheerleaders/index';
 import calendar from './calendar/index';
 import faq from './faq/index';
 import infographics from './infographics/index';
+import socials from './socials/index';
 
 
 
@@ -71,7 +72,8 @@ export default angular.module('dashboard',
         cheer.name,
         calendar.name,
         faq.name,
-        infographics.name
+        infographics.name,
+        socials.name
     ])
     .service('login', Login)
     .service('modal', Modal)
