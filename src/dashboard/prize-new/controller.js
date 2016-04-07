@@ -50,6 +50,8 @@ export default class PrizenewCtrl {
 
     changeSponsor(sponsor) {
         if(sponsor) {
+            const index = this.sponsors.findIndex(x => x.id == sponsor.id);
+            $('.main_slider_priz')[0].slick.slickGoTo(index);
             this.currentSponsor = sponsor;
         } else {
             this.currentSponsor = this.sponsors[this.currentSponsorIndex];
