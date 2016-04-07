@@ -8,7 +8,7 @@ export default class VideoCtrl {
 
     constructor(videoInfo, page, $state, $scope, $timeout, videoById) {
 
-
+        this.state = $state;
         if(videoById) {
             this.currentVideoById = videoById;
             this.currentVideoById.socialUrl = 'https://www.youtube.com/watch?v=' + this.currentVideoById.video_code;
@@ -22,7 +22,6 @@ export default class VideoCtrl {
         });
         this.setNewMainVideo(this.videos[0]);
         this.videoAmount = videoInfo.posts_count;
-        this.state = $state;
         this.currentPage = page;
         this.showVideoInfo = true;
         this.scope = $scope;
@@ -122,9 +121,11 @@ export default class VideoCtrl {
     }
 
     setNewMainVideo(video) {
+        this.videoByIdExists = false;
         this.showVideoInfo = true;
         this.shouldPlayNewVideo = true;
         this.currentVideo = video;
+        this.state.transitionTo('dashboard.video', {id: this.currentVideo.id}, {notify: false});
         this.currentVideo.socialUrl = 'https://www.youtube.com/watch?v=' + this.currentVideo.video_code;
         this.videoTime = undefined;
         if (this.player) {
