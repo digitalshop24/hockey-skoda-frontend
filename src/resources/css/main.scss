@@ -3092,7 +3092,7 @@ $grey_about: #5d5d5d;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 57%;
+    // width: 57%;
     div {
       background-color: rgba(0, 0, 0, .5);
       min-height: 640px;
@@ -3149,6 +3149,7 @@ $grey_about: #5d5d5d;
 .other_video {
   padding: 0 60px;
   .col-md-3 {
+
     div {
       height: 200px;
       background-size: cover;
@@ -3159,6 +3160,7 @@ $grey_about: #5d5d5d;
     p {
       padding: 10px 0;
       font-size: $p_size;
+      height: 100px
     }
     .bold {
       min-height: 70px;
