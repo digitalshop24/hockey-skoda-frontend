@@ -34,6 +34,7 @@ import masonry from './masonry-init/index';
 import menuInit from './menu-init/index';
 import cheer from './cheerleaders/index';
 import calendar from './calendar/index';
+import faq from './faq/index';
 
 
 
@@ -67,7 +68,8 @@ export default angular.module('dashboard',
         masonry.name,
         menuInit.name,
         cheer.name,
-        calendar.name
+        calendar.name,
+        faq.name
     ])
     .service('login', Login)
     .service('modal', Modal)
