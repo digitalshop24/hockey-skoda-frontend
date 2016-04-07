@@ -2694,6 +2694,13 @@ $grey_about: #5d5d5d;
     background-position: center center;
     background-repeat: no-repeat;
     margin-bottom: 50px;
+    a {
+      position: relative;
+      top: 115px;
+      color: $white;
+      font-size: $p_size;
+      text-decoration: underline;
+    }
   }
   .show_all {
     font-size: $p_size;
