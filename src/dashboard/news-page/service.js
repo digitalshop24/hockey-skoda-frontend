@@ -13,6 +13,17 @@ export default class NewspageService {
         });
     }
 
+    getNews(rubric, page, perPage) {
+        return this.api.get(`/posts/${rubric}`, {
+            params: {
+                page: page,
+                per_page: perPage
+            }
+        }).then((res) => {
+            return res.data.posts;
+        });
+    }
+
     sendMessage(rubric, id, message) {
         return this.api.post(`/posts/${rubric}/${id}/comments`, {
             content: message

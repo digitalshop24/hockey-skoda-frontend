@@ -28,6 +28,11 @@ export default angular.module('dashboard.newspage', [
                         return newspageService.getNewsById($stateParams.rubric, $stateParams.id);
                     },
 
+                    lastNews: ($stateParams, newspageService, news) => {
+                        const multiplier = Math.ceil(news.content.length / 1500) * 5;
+                        return newspageService.getNews($stateParams.rubric, 1, multiplier);
+                    },
+
                     commentsInfo: ($stateParams, newspageService) => {
                         return newspageService.getComments($stateParams.rubric, $stateParams.id, $stateParams.commentPage, $stateParams.commentsPerPage).then((res) =>{
                             res.comments = $stateParams.comments.concat(res.comments);
