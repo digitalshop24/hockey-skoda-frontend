@@ -15,4 +15,10 @@ export default class VideoService {
             return res.data;
         })
     }
+
+    getVideoById(id) {
+        return this.api.get(`/posts/video/${id}`).then((res) => {
+            return res.data;
+        });
+    }
 }
