@@ -1,30 +1,66 @@
 <section class="main_video">
 
-    <div class="video_item" ng-show="!ctrl.showVideoInfo">
-        <youtube-video video-id="'5v3KG-4ZG8c'" player-width="'90%'" player-height="'100%'" style="min-height: 620px" player="ctrl.player"></youtube-video>
+    <div ng-show="ctrl.videoByIdExists">
+        <div class="video_item" ng-show="!ctrl.showVideoByIdInfo" data-player="byId">
+            <youtube-video  video-id="ctrl.currentVideoById.video_code" player-width="'90%'" player-height="'100%'" style="min-height: 620px" player="ctrl.playerById"></youtube-video>
+        </div>
+        <div ng-show="ctrl.showVideoByIdInfo" class="video_item" style="background-image: url('{{ctrl.currentVideoById.image.original}}')">
+
+            <div>
+
+                <h5 ng-bind="ctrl.currentVideoById.name"></h5>
+                <a ng-click="ctrl.playVideoById()" href=""><img class="play" src="img/resources/img/play.png" alt="" class="img-responsive">
+
+                    <p class="bold">Смотреть</p>
+                    <p ng-bind="ctrl.videoByIdTime"></p>
+                </a>
+
+
+                <p class="share">Поделиться видео:</p>
+                <a socialshare socialshare-provider="facebook" socialshare-url="{{ctrl.currentVideoById.socialUrl}}">
+                    <img class="" src="img/resources/img/fb.png" alt="" class="img-responsive"></a>
+                <a socialshare socialshare-provider="twitter" socialshare-url="{{ctrl.currentVideoById.socialUrl}}"><img class="" src="img/resources/img/twiter.png" alt="" class="img-responsive"></a>
+                <a socialshare socialshare-provider="vk" socialshare-url="{{ctrl.currentVideoById.socialUrl}}"><img class="" src="img/resources/img/vk.png" alt="" class="img-responsive"></a>
+
+            </div>
+        </div>
     </div>
+
     <button class="slick-prev" ng-click="ctrl.previous()">  </button>
     <button class="slick-next" ng-click="ctrl.next()" > </button>
     <div ng-show="ctrl.showVideoInfo" class="video_item" style="background-image: url('{{ctrl.currentVideo.image.original}}')">
 
-        <div>
-
-            <h5 ng-bind="ctrl.currentVideo.name"></h5>
-            <a ng-click="ctrl.playVideo()" href=""><img class="play" src="img/resources/img/play.png" alt="" class="img-responsive">
-
-                <p class="bold">Смотреть</p>
-                <p ng-bind="ctrl.videoTime"></p>
-            </a>
 
 
-            <p class="share">Поделиться видео:</p>
-            <a socialshare socialshare-provider="facebook" socialshare-url="{{ctrl.currentVideo.socialUrl}}">
-                <img class="" src="img/resources/img/fb.png" alt="" class="img-responsive"></a>
-            <a socialshare socialshare-provider="twitter" socialshare-url="{{ctrl.currentVideo.socialUrl}}"><img class="" src="img/resources/img/twiter.png" alt="" class="img-responsive"></a>
-            <a socialshare socialshare-provider="vk" socialshare-url="{{ctrl.currentVideo.socialUrl}}"><img class="" src="img/resources/img/vk.png" alt="" class="img-responsive"></a>
+    <div ng-show="!ctrl.videoByIdExists">
+        <div class="video_item" ng-show="!ctrl.showVideoInfo" data-player="general">
+            <youtube-video  video-id="'5v3KG-4ZG8c'" player-width="'90%'" player-height="'100%'" style="min-height: 620px" player="ctrl.player"></youtube-video>
+        </div>
+        <div ng-show="ctrl.showVideoInfo" class="video_item" style="background-image: url('{{ctrl.currentVideo.image.original}}')">
 
+            <div>
+
+                <h5 ng-bind="ctrl.currentVideo.name"></h5>
+                <a ng-click="ctrl.playVideo()" href=""><img class="play" src="img/resources/img/play.png" alt="" class="img-responsive">
+
+                    <p class="bold">Смотреть</p>
+                    <p ng-bind="ctrl.videoTime"></p>
+                </a>
+
+
+                <p class="share">Поделиться видео:</p>
+                <a socialshare socialshare-provider="facebook" socialshare-url="{{ctrl.currentVideo.socialUrl}}">
+                    <img class="" src="img/resources/img/fb.png" alt="" class="img-responsive"></a>
+                <a socialshare socialshare-provider="twitter" socialshare-url="{{ctrl.currentVideo.socialUrl}}"><img class="" src="img/resources/img/twiter.png" alt="" class="img-responsive"></a>
+                <a socialshare socialshare-provider="vk" socialshare-url="{{ctrl.currentVideo.socialUrl}}"><img class="" src="img/resources/img/vk.png" alt="" class="img-responsive"></a>
+
+            </div>
         </div>
     </div>
+
+    <button class="slick-next" ng-click="ctrl.previous()">  </button>
+    <button class="slick-prev" ng-click="ctrl.next()" > </button>
+
 </section>
 
 <section class="desc_video">
