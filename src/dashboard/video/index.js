@@ -10,7 +10,7 @@ export default angular.module('dashboard.video', [])
         $stateProvider
             .state('dashboard.video', {
                 template: require('./template.html'),
-                url: '/video',
+                url: '/video/:id',
                 controller: VideoCtrl,
                 controllerAs: 'ctrl',
                 params: {
@@ -28,6 +28,13 @@ export default angular.module('dashboard.video', [])
                     },
                     page: ($stateParams) => {
                         return $stateParams.page;
+                    },
+
+                    videoById: ($stateParams, videoService) => {
+                        if($stateParams.id) {
+                            return videoService.getVideoById($stateParams.id);
+                        }
+                        return undefined;
                     }
                 }
             });

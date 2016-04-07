@@ -2688,12 +2688,20 @@ $grey_about: #5d5d5d;
   min-height: 90vh;
   margin-left: 100px;
   .news_banner {
-    height: 160px;
+    height: 165px;
     background-image: url('img/resources/img/news/bg_banner.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     margin-bottom: 50px;
+    a {
+      position: relative;
+      top: 115px;
+      color: $white;
+      font-size: $p_size;
+      text-decoration: underline;
+      font-family: $bold;
+    }
   }
   .show_all {
     font-size: $p_size;
@@ -2769,7 +2777,12 @@ $grey_about: #5d5d5d;
 }
 .wrapp_comments {
   padding: 50px 0 100px 0;
-
+  .textEdit {
+    padding: 8%;
+    .btn_primary {
+      margin-top: 20px;
+    }
+  }
   ul {
     display: inline-block;
     padding: 0;
