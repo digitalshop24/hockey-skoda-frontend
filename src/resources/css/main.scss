@@ -2687,6 +2687,48 @@ $grey_about: #5d5d5d;
   padding: 50px 20px;
   min-height: 90vh;
   margin-left: 100px;
+  .news_banner {
+    height: 160px;
+    background-image: url('img/resources/img/news/bg_banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;
+  }
+  .show_all {
+    font-size: $p_size;
+    text-decoration: underline;
+    color: $green_main;
+    float: right;
+
+    a {
+      color: $green_main;
+      font-family: $bold;
+    }
+  }
+  .littel_date {
+    font-style: italic;
+  }
+  .littel_news {
+    padding: 20px 10px 20px 50px;
+    font-family: $bold;
+
+  }
+  .littel_time {
+    position: absolute;
+    margin-top: -79px;
+  }
+  .little_comment {
+    position: absolute;
+    margin-top: -55px;
+    background-image: url('img/resources/img/news/bg_comment.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    padding: 3px 0 0 8px;
+  }
   h3 {
     padding: 20px 0;
     font-family: $bold;

@@ -19,7 +19,7 @@
 <section class="wrapp_one_news">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8 col-sm-12 col-xs-12 col-lg-8">
                 <h6 ng-bind="ctrl.news.published_at | amDateFormat:'DD MMMM'"></h6>
                 <ul class="breadcrumbs">
                     <li><a ui-sref="{{ctrl.rubricState}}" ng-bind="ctrl.rubric.name" class="link_default"></a></li>
@@ -32,7 +32,64 @@
                 <div ng-bind-html="ctrl.news.content"></div>
 
             </div>
+            <div class="col-md-4 visible-md visible-lg">
+                <div class="news_banner text-center">
+                    <a href="">
+                        Смотреть
+                    </a>
+                </div>
+                <h6 >Другие новости <span class="show_all"><a href="">Смотреть все</a></span></h6>
+                <p class="littel_date">1 апреля, суббота</p>
+                <ul>
+                    <li>
+                        <p class="littel_news">Надпись "Хоккей" сложа добровольца классного фото из космоса</p>
+                        <span class="littel_time">12:45</span>
+                        <span class="little_comment">13</span>
+                    </li>
+                    <li>
+                        <p class="littel_news">Надпись "Хоккей" сложа добровольца классного фото из космоса</p>
+                        <span class="littel_time">12:45</span>
+                        <span class="little_comment">13</span>
+                    </li>
+                    <li>
+                        <p class="littel_news">Надпись "Хоккей" сложа добровольца классного фото из космоса</p>
+                        <span class="littel_time">12:45</span>
+                        <span class="little_comment">13</span>
+                    </li>
+                    <li>
+                        <p class="littel_news">Надпись "Хоккей" сложа добровольца классного фото из космоса</p>
+                        <span class="littel_time">12:45</span>
+                        <span class="little_comment">13</span>
+                    </li>
+                   
+                </ul>
+            </div>
         </div>
+    </div>
+    <section class="wrapp_mainpage_new">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!--slick current-index="ctrl.newsCurrentIndex" on-after-change="ctrl.loadMoreNews()" infinite="false" arrows="true"
+                             dots="false" slides-to-show="{{ctrl.slidesToShow}}" data="ctrl.lastNews" slides-to-scroll="3" responsive="ctrl.responsive"-->
+                        <div class="mainpage_news_slider" main-slider-init initial-slide="ctrl.indexToShowLastNews">
+
+                            <div ng-repeat="news in ctrl.lastNews" style="padding-left:5px; padding-right: 5px;">
+                                <h3><span class="news_date" ng-bind="news.published_at | amDateFormat:'DD'"></span> <span class="news_month" ng-bind="news.published_at | amDateFormat:'MMMM'"></span></h3>
+
+                                <div class="news_one_slider" style="background-image: url({{news.image.medium}})">
+                                    <div class="news_one_slider_bg"></div>
+                                    <a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" class="news_titel"
+                                   ng-bind="news.name"></a>
+                                   <p class="news_content" ng-bind="news.short_content"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div class="container">
         <div class="row wrapp_comments">
             <div class="col-md-3 text-center">
                 <div class="social-likes">
