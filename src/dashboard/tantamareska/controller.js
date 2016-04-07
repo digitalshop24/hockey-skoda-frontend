@@ -7,6 +7,7 @@ export default class TantamareskaCtrl {
         $scope.$on('tantamareska:imageMerged', (event, data) => {
             this.sendButtonText = "Создание картинки...";
             this.isButtonDisabled = true;
+            this.mainImg = 'img/resources/img/tantam/tantamareska-1.png';
             tanService.loadImage(data.image)
                 .then(res => {
                     this.imageUrl = res.image.original;

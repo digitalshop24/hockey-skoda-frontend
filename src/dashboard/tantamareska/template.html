@@ -3,18 +3,20 @@
     <div class="container">
             <div class="row">
                 <div class="col-xs-6 col-md-5 col-xs-mob">
-                    <h2>Тантамареска</h2>
+                    <h2>Я - ХОККЕИСТ</h2> 
+                    <p >Выбери сюжет загрузи свою фотографи<br> и поделись с друзьями</p>
+                    <!-- <a href="#" class="btn btn_common small" id="uploadButton"> -->
+                        Загрузить свое фото
+                        <input type="file" accept="image/*" class="file-photo">
+                    <!-- </a> -->
                 </div>
                 <div class="col-xs-6 col-md-7 col-xs-mob">
                 <!-- <input type="file" accept="image/*" class="file-photo"> -->
-                    <div>
+                    <!-- <div>
                         Загрузить свое фото
-                        <input type="file" accept="image/*" class="file-photo">
-                    </div>
-                   <!-- <a href="#" class="btn btn_common small" id="uploadButton">
-                        Загрузить свое фото
-                        <input type="file" accept="image/*" class="file-photo">
-                    </a>-->
+                        <input type="file" accept="image/*" class="file-photo  btn_second btn main">
+                    </div> -->
+                     <img src="img/resources/img/tantam/header_img.png" alt="" class="img-responsive right">   
                 </div>
             </div>
         </div>  
@@ -69,7 +71,8 @@
     <canvas id="tamtam-canvas" width="0" height="0"></canvas>
     <div class="container-fluid"> 
             <div class="row">
-                <slick class="single-item" slides-to-show=1 slides-to-scroll=1>
+                
+                <slick class="single-item main_tantam" slides-to-show=1 slides-to-scroll=1 as-nav-for=".other_tantam" arrows=false>
                     <div class="block-slid box">
                         <img src="img/resources/img/tantam/tantamareska-1.png" alt="">
                     </div>
@@ -86,6 +89,24 @@
                         <img src="img/resources/img/tantam/tantamareska-5.png" alt="">
                     </div>
                 </slick>
+                <slick class="single-item other_tantam" slides-to-show=4 slides-to-scroll=1 as-nav-for=".main_tantam" arrows = true>
+                    <div class="block-slid-2 box" style="background-image: url('img/resources/img/tantam/tantamareska-1.png')">
+                        
+                    </div>
+                    <div class="block-slid-2 box" style="background-image: url('img/resources/img/tantam/tantamareska-2.png')">
+                        
+                    </div>
+                    <div class="block-slid-2 box" style="background-image: url('img/resources/img/tantam/tantamareska-3.png')">
+                        
+                    </div>
+                    <div class="block-slid-2 box" style="background-image: url('img/resources/img/tantam/tantamareska-4.png')">
+                        
+                    </div>
+                    <div class="block-slid-2 box" style="background-image: url('img/resources/img/tantam/tantamareska-5.png')">
+                        <img src="" alt="">
+                    </div>
+                </slick>
+
             </div>
         </div>  
 </section>
@@ -135,7 +156,7 @@
                 </ul>-->
 
                 <ul class="soc" ng-show="ctrl.imageUrl">
-                    <li><p>Поделиться с друзьями:</p></li>
+                    <!-- <li><p>Поделиться с друзьями:</p></li> -->
                     <li><a socialshare socialshare-provider="facebook"
                            socialshare-url="{{ctrl.imageUrl}}">
                         <img src="img/resources/img/fb_grey.png" alt="" class="img-responsive"></a></li>
@@ -152,7 +173,7 @@
         </div>
         <div class="toggle_button row">
             <div class="col-md-12">
-                <button ng-disabled="ctrl.isButtonDisabled" class="btn btn_primary tiny" id="tamtamSend" ng-bind="ctrl.sendButtonText || 'Отправить'"></button>
+                <button ng-disabled="ctrl.isButtonDisabled" class="btn btn_primary tiny" id="tamtamSend" ng-bind="ctrl.sendButtonText || 'Cоздать изображение'"></button>
             </div>
         </div>
     </div>
@@ -161,4 +182,4 @@
 
 <img class="tamtam-share" src="">
 
-<a href="http://vk.com/share.php?url=http://walkman5.ru/work/dshop24.by/img/tantam/slid-1.png" class="vk-share">VK SHARE</a>
+<a href="http://vk.com/share.php?url=http://walkman5.ru/work/dshop24.by/img/tantam/slid-1.png" class="vk-share hidden">VK SHARE</a>
