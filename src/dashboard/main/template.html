@@ -56,6 +56,89 @@
         </div>
     </div>
 </section>
+<section class="wrapp_news_preview">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row preview_header_left">
+                    <div class="col-md-6 text-left"><h5>Новое на сайте</h5></div>
+                    <div class="col-md-6 text-right">
+                        <ul>
+                            <li><a href="">Все новости</a></li>
+                            <li><a href="">Аналитика</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="row hash_tag">
+                        <div class="col-md-1 text-center">
+                            <p>Хэшьтеги</p>
+                        </div>
+                        <div class="col-md-11">
+                            <ul>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href=""><img src="img/resources/img/three_dots.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                </div>
+                <div class="row ul_news">   
+                   <!--  <div class="col-md-6" ng-repeat="news in ctrl.lastNews">
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name"></a></p>
+                        <span class="littel_time" ng-bind="news.published_at | amDateFormat:'H:mm'">12:45</span>
+                        <span class="little_comment">13</span>
+                    </div> -->
+                     <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">lflflflffllflfllflfSDF ADFSDFG ADSFDSFADSFsdfg sdfgdfb sfgadfg</a></p>
+                        <span class="littel_time" >12:45</span>
+                        <span class="little_comment">13</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">lflflflffllflfllflfSDF ADFSDFG ADSFDSFADSFsdfg sdfgdfb sfgadfg</a></p>
+                        <span class="littel_time" >12:45</span>
+                        <span class="little_comment">13</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">lflflflffllflfllflfSDF ADFSDFG ADSFDSFADSFsdfg sdfgdfb sfgadfg</a></p>
+                        <span class="littel_time" >12:45</span>
+                        <span class="little_comment">13</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">lflflflffllflfllflfSDF ADFSDFG ADSFDSFADSFsdfg sdfgdfb sfgadfg</a></p>
+                        <span class="littel_time" >12:45</span>
+                        <span class="little_comment">13</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">lflflflffllflfllflfSDF ADFSDFG ADSFDSFADSFsdfg sdfgdfb sfgadfg</a></p>
+                        <span class="littel_time" >12:45</span>
+                        <span class="little_comment">13</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">lflflflffllflfllflfSDF ADFSDFG ADSFDSFADSFsdfg sdfgdfb sfgadfg</a></p>
+                        <span class="littel_time" >12:45</span>
+                        <span class="little_comment">13</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="preview_header_right">
+                    <div class="wrapp_content">
+                        <h6>Интересное</h6>
+                        <h2>Junior<br>ice<br>hochey<br>cup 2</h2>
+                        <button class="btn btn_primary small">Узнать больше</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
 <section class="wrapp_mainpage_new">
     <div class="container-fluid">
         <div class="row">
@@ -82,9 +165,58 @@
 <section class="wrapp_mainpage_data">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 text-right">
+            <!-- <div class="col-md-4 text-left">
                 <button ui-sref="dashboard.general-news" class="btn btn_primary main">Все новости</button>
+                
+            </div> -->
+            <div class="col-md-3 text-center">
+                <select name="" id="" class="input_default input_small">
+                    <option value="">Выберите команду</option>
+                </select>
             </div>
+            <div class="col-md-2 text-center">
+                <p class="titel">22 марта <span>14:45</span>, МСК</p>
+                <img src="img/resources/img/rus.png" alt="">
+                <img src="img/resources/img/line.png" alt="" class="line">
+                <img src="img/resources/img/rus.png" alt="">
+                <ul>
+                    <li class="command1">россия</li>
+                    <li class="command1">сша</li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-center">
+                <p class="titel">22 марта <span>14:45</span>, МСК</p>
+                <img src="img/resources/img/rus.png" alt="">
+                <img src="img/resources/img/line.png" alt="" class="line">
+                <img src="img/resources/img/rus.png" alt="">
+                <ul>
+                    <li class="command1">россия</li>
+                    <li class="command1">сша</li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-center">
+                <p class="titel">22 марта <span>14:45</span>, МСК</p>
+                <img src="img/resources/img/rus.png" alt="">
+                <img src="img/resources/img/line.png" alt="" class="line">
+                <img src="img/resources/img/rus.png" alt="">
+                <ul>
+                    <li class="command1">россия</li>
+                    <li class="command1">сша</li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-center">
+                <p class="titel">22 марта <span>14:45</span>, МСК</p>
+                <img src="img/resources/img/rus.png" alt="">
+                <img src="img/resources/img/line.png" alt="" class="line">
+                <img src="img/resources/img/rus.png" alt="">
+                <ul>
+                    <li class="command1">россия</li>
+                    <li class="command1">сша</li>
+                </ul>
+            </div>
+            <div class="col-md-1"></div>
+
+
         </div>
     </div>
 </section>
@@ -101,6 +233,7 @@
                 <div class="block" style="background-image: url('img/resources/img/main/menu5.jpg');">
                     <h2><a ui-sref="dashboard.forecast.playoff">Прогнозы</a></h2>
                     <p>Прогнозируйте результаты матчей и всего турнира, получайте баллы и участвуйте в розыгрышах различных призов.</p>
+                    
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
