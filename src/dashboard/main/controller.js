@@ -2,8 +2,10 @@
 
 
 export default class MainCtrl {
-    constructor(lightingNews, lastNewsInfo, mainService, page, lastNewsAmount, starsInfo) {
+    constructor(lightingNews, lastNewsInfo, mainService, page, lastNewsAmount, starsInfo, schedule, $scope, teams) {
         this.service = mainService;
+        this.teams = teams;
+        this.schedule = schedule;
         this.lightingNews = lightingNews;
         this.lastNewsInfo = lastNewsInfo;
         this.lastNews = lastNewsInfo.posts.reverse();
@@ -12,6 +14,11 @@ export default class MainCtrl {
         this.lastNewsAmount = lastNewsAmount;
         this.slidesToShow = 5;
         this.indexToShowLastNews = this.lastNews.length - this.slidesToShow;
+
+        /* dirty hack */
+        this.filterByTeam = (match) => {
+            return $scope.ctrl.teamFilter ? (match.redteam_id == $scope.ctrl.teamFilter.id || match.blueteam_id == $scope.ctrl.teamFilter.id)  : true;
+        };
         this.responsive = [
             {
               breakpoint: 1280,

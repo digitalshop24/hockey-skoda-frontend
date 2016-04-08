@@ -5,6 +5,29 @@ export default class MainService {
         this.api = api;
     }
 
+
+    getSchedule(stage) {
+        return this.api.
+            get('/schedule/index', {
+                params: {
+                    stage: stage
+                }
+            })
+            .then(response => {
+                const matches = [];
+                response.data.forEach(day => {
+                    matches.push(...day.matches);
+                });
+                return matches;
+            });
+    }
+
+    getTeams() {
+        return this.api.get('/teams').then(res=> {
+            return res.data;
+        });
+    }
+
     getLightingNews(amount) {
         return this.api.get("/posts/news/lighting", {
             params: {
