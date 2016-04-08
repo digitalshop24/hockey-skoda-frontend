@@ -1,4 +1,40 @@
 <section class="wrapp_mainpage_slider">
+    <div class="now_games">
+        <ul>
+            <li class="one_game_wrapp">
+                <ul class="one_game">
+                    <li>Россия</li>
+                    <li><img src="img/resources/img/rus.png" alt=""></li>
+                    <li>4-2</li>
+                    <li><img src="img/resources/img/rus.png" alt=""></li>
+                    <li>Франция</li>
+                    <li>завершен</li>
+                </ul>
+            </li>
+            <li class="one_game_wrapp">
+                <ul class="one_game">
+                    <li>Россия</li>
+                    <li><img src="img/resources/img/rus.png" alt=""></li>
+                    <li>4-2</li>
+                    <li><img src="img/resources/img/rus.png" alt=""></li>
+                    <li>Франция</li>
+                    <li>1 период</li>
+                </ul>
+            </li>
+            <li class="one_game_wrapp">
+                <ul class="one_game">
+                    <li>Россия</li>
+                    <li><img src="img/resources/img/rus.png" alt=""></li>
+                    <li>4-2</li>
+                    <li><img src="img/resources/img/rus.png" alt=""></li>
+                    <li>Франция</li>
+                    <li>14:45</li>
+                </ul>
+            </li>
+        </ul>
+        <!-- <span>Завершен 1 период 14:45</span> -->
+    </div>
+    
     <div class="container-fluid">
         <div class="row date_slider_news">
             <!-- <div class="col-md-12"> -->
@@ -7,12 +43,12 @@
                 <div class="item" style="background-image: url('img/resources/img/stage1.jpg');">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-12">
                                 <div class="left hidden-sm hidden-xs">
                                     <h5><span>Хэштеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <!-- <div class="col-md-4">
                                 <div class="right hidden-sm hidden-xs">
                                     <h5>Молния!</h5>
                                     <ul>
@@ -20,7 +56,7 @@
                                          ng-bind="lightNews.lighting_text"></a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     
@@ -29,7 +65,7 @@
                 <div class="item" style="background-image: url('img/resources/img/stage2.jpg');">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-12">
                                 <div class="left hidden-sm hidden-xs">
 
                                     <h5><span>Хэштеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
@@ -40,7 +76,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                          <!--   <div class="col-md-4">
                                 <div class="right hidden-sm hidden-xs">
                                     <h5>Молния!</h5>
                                     <ul>
@@ -48,13 +84,96 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+ -->                        </div>
                     </div>
 
                 </div>
             </slick>
         </div>
     </div>
+</section>
+<section class="wrapp_news_preview">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row preview_header_left">
+                    <div class="col-md-6 text-left"><h5>Новое на сайте</h5></div>
+                    <div class="col-md-6 text-right">
+                        <ul>
+                            <li><a href="">Все новости</a></li>
+                            <li><a href="">Аналитика</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="row hash_tag">
+                        <div class="col-md-1 text-center">
+                            <p>Хэшьтеги</p>
+                        </div>
+                        <div class="col-md-11">
+                            <ul>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href=""><img src="img/resources/img/three_dots.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                </div>
+                <div class="row ul_news">   
+                   <!--  <div class="col-md-6" ng-repeat="news in ctrl.lastNews">
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name"></a></p>
+                        <span class="littel_time" ng-bind="news.published_at | amDateFormat:'H:mm'">12:45</span>
+                        <span class="little_comment">13</span>
+                    </div> -->
+                     <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">Предновогодние сюрпризы Skoda Junior Ice Hokey Cuo 2014 </a></p>
+                        <span class="littel_time" >12:45</span>
+                        <span class="little_comment">13</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">Предновогодние сюрпризы Skoda Junior Ice Hokey Cuo 2014</a></p>
+                        <span class="littel_time" >12:45</span>
+                        <span class="little_comment">13</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">Предновогодние сюрпризы Skoda Junior Ice Hokey Cuo 2014</a></p>
+                        <span class="littel_time" >12:45</span>
+                        <span class="little_comment">13</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">Предновогодние сюрпризы Skoda Junior Ice Hokey Cuo 2014</a></p>
+                        <span class="littel_time" >12:45</span>
+                        <span class="little_comment">13</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">Предновогодние сюрпризы Skoda Junior Ice Hokey Cuo 2014</a></p>
+                        <span class="littel_time" >12:45</span>
+                        <span class="little_comment">13</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">Предновогодние сюрпризы Skoda Junior Ice Hokey Cuo 2014 Предновогодние сюрпризы Skoda Junior Ice Hokey Cuo 2014</a></p>
+                        <span class="littel_time" >12:45</span>
+                        <span class="little_comment">13</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 hidden-sm hidden-xs">
+                <div class="preview_header_right">
+                    <div class="wrapp_content">
+                        <h6>Интересное</h6>
+                        <h3>Junior<br>ice<br>hochey<br>cup 2</h3>
+                        <button class="btn btn_primary small">Узнать больше</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </section>
 <section class="wrapp_mainpage_new">
     <div class="container-fluid">
@@ -82,9 +201,58 @@
 <section class="wrapp_mainpage_data">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 text-right">
+            <!-- <div class="col-md-4 text-left">
                 <button ui-sref="dashboard.general-news" class="btn btn_primary main">Все новости</button>
+                
+            </div> -->
+            <div class="col-md-3 text-center">
+                <select name="" id="" class="input_default input_small">
+                    <option value="">Выберите команду</option>
+                </select>
             </div>
+            <div class="col-md-2 text-center">
+                <p class="titel">22 марта <span>14:45</span>, МСК</p>
+                <img src="img/resources/img/rus.png" alt="">
+                <img src="img/resources/img/line.png" alt="" class="line">
+                <img src="img/resources/img/rus.png" alt="">
+                <ul>
+                    <li class="command1">россия</li>
+                    <li class="command1">сша</li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-center">
+                <p class="titel">22 марта <span>14:45</span>, МСК</p>
+                <img src="img/resources/img/rus.png" alt="">
+                <img src="img/resources/img/line.png" alt="" class="line">
+                <img src="img/resources/img/rus.png" alt="">
+                <ul>
+                    <li class="command1">россия</li>
+                    <li class="command1">сша</li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-center">
+                <p class="titel">22 марта <span>14:45</span>, МСК</p>
+                <img src="img/resources/img/rus.png" alt="">
+                <img src="img/resources/img/line.png" alt="" class="line">
+                <img src="img/resources/img/rus.png" alt="">
+                <ul>
+                    <li class="command1">россия</li>
+                    <li class="command1">сша</li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-center">
+                <p class="titel">22 марта <span>14:45</span>, МСК</p>
+                <img src="img/resources/img/rus.png" alt="">
+                <img src="img/resources/img/line.png" alt="" class="line">
+                <img src="img/resources/img/rus.png" alt="">
+                <ul>
+                    <li class="command1">россия</li>
+                    <li class="command1">сша</li>
+                </ul>
+            </div>
+            <div class="col-md-1"></div>
+
+
         </div>
     </div>
 </section>
@@ -93,38 +261,56 @@
         <div class="row">
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu6.jpg');">
-                    <h2><a ui-sref="dashboard.general-news">Новости</a></h2>
-                    <p>Здесь для Вас подобраны самые свежие новости об актуальных событиях в мире хоккея!</p>
+                    <div class="bg_hover">
+                        <h2><a ui-sref="dashboard.general-news">Новости</a></h2>
+                        <p>Здесь для Вас подобраны самые свежие новости об актуальных событиях в мире хоккея!</p>
+                        <p class="bold"><a href="">Читать</a></p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu5.jpg');">
-                    <h2><a ui-sref="dashboard.forecast.playoff">Прогнозы</a></h2>
-                    <p>Прогнозируйте результаты матчей и всего турнира, получайте баллы и участвуйте в розыгрышах различных призов.</p>
+                    <div class="bg_hover">
+                        <h2><a ui-sref="dashboard.forecast.playoff">Прогнозы</a></h2>
+                        <p>Прогнозируйте результаты матчей и всего турнира, получайте баллы и участвуйте в розыгрышах различных призов.</p>
+                        <p class="bold"><a href="">Предположить</a></p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu1.jpg');">
-                    <h2><a ui-sref="dashboard.forum">Форум</a></h2>
-                    <p>Общайтесь с любителями хоккея, участвуйте в викторине, обсуждайте матчи и все «околохоккейное» на форуме!</p>
+                    <div class="bg_hover">
+                        <h2><a ui-sref="dashboard.forum">Форум</a></h2>
+                        <p>Общайтесь с любителями хоккея, участвуйте в викторине, обсуждайте матчи и все «околохоккейное» на форуме!</p>
+                        <p class="bold"><a href="">Общаться</a></p>
+                    </div>
                 </div>
             </div>
                 <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu3.jpg');">
-                    <h2><a href="" ui-sref="dashboard.blog" >Аналитика</a></h2>
-                    <p>Наши блогеры увлечены хоккеем также, как вы. Получайте эксклюзивную и важную информацию от знающих людей со всего мира!</p>
+                    <div class="bg_hover">
+                        <h2><a href="" ui-sref="dashboard.blog" >Аналитика</a></h2>
+                        <p>Наши блогеры увлечены хоккеем также, как вы. Получайте эксклюзивную и важную информацию</p>
+                        <p class="bold"><a href="">Изучаться</a></p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu2.jpg');">
-                    <h2><a href="">Календарь</a></h2>
-                    <p>Следите за всеми матчами, получайте напоминания в удобное время и не пропускайте ни одной игры!</p>
+                    <div class="bg_hover">
+                        <h2><a href="">Календарь</a></h2>
+                        <p>Следите за всеми матчами, получайте напоминания в удобное время и не пропускайте ни одной игры!</p>
+                        <p class="bold"><a href="">Планировать</a></p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu4.jpg');">
-                    <h2><a href="">Инфографика</a></h2>
-                    <p>Мы создали для Вас иллюстрированную историю выступлений сборной России на всех Чемпионатах мира. Изучайте, запоминайте, гордитесь!</p>
+                    <div class="bg_hover">
+                        <h2><a href="">Инфографика</a></h2>
+                        <p>Мы создали для Вас иллюстрированную историю выступлений сборной России на всех Чемпионатах мира. </p>
+                        <p class="bold"><a href="">Учить</a></p>
+                    </div>
                 </div>
             </div>
         </div>
