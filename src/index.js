@@ -33,24 +33,25 @@ export default angular.module('app',
     .service('api', Api)
     .service('session', session)
     .service('auth', auth)
-    .config(($authProvider, api) => {
+    .config(($authProvider) => {
 
+        const url = "http://skoda-hockey.herokuapp.com/api/v1";
         $authProvider.facebook({
             scope: ['email', 'public_profile'],
-            url: api.url + '/auth/facebook',
+            url: url + '/auth/facebook',
             clientId: '1563436463985643',
             responseType: 'code'
         });
 
         $authProvider.instagram({
-            url: api.url + '/auth/instagram',
+            url: url + '/auth/instagram',
             clientId: '633676f1f025495fba751c8eef59c392',
             scope: ['email', 'public_content']
         });
 
         $authProvider.oauth2({
             name: 'vk',
-            url: api.url + '/auth/vk',
+            url: url + '/auth/vk',
             clientId: '5367930',
             redirectUri: window.location.origin,
             authorizationEndpoint: 'https://oauth.vk.com/authorize',
