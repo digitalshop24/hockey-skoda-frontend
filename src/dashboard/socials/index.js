@@ -14,6 +14,11 @@ export default angular.module('dashboard.socials', [
                 template: require('./template.html'),
                 url: '/socials',
                 controller: SocialCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                resolve: {
+                    posts: socialService => {
+                        return socialService.getPosts();
+                    }
+                }
             });
     });

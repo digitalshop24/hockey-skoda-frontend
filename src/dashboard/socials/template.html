@@ -1,21 +1,30 @@
 <section class="">
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col-md-12 "> -->
-                <timeline>
-                    <timeline-event ng-repeat="event in ctrl.events" side="">
-                        <timeline-badge class="{{event.badgeClass}}">
-                            <i class="glyphicon {{event.badgeIconClass}}"></i>
-                        </timeline-badge>
-                        <timeline-panel class="{{event.badgeClass}}">
-                            <timeline-heading>
-                                <h4>{{event.title}}</h4>
-                            </timeline-heading>
-                            <p>{{event.content}}</p>
-                        </timeline-panel>
-                    </timeline-event>
-                </timeline>
-    <!--         </div>
-        </div>
-    </div> -->
+    <timeline>
+        <timeline-event ng-repeat="event in ctrl.events" side="">
+            <timeline-badge class="{{event.badgeClass}}">
+                <div style="background-image: url('{{event.profile_pic}}'); height: 50px"></div>
+                <!--<i class="" ></i>-->
+            </timeline-badge>
+            <timeline-panel class="{{event.badgeClass}}">
+                <timeline-heading>
+                    <h4>{{event.title}}</h4>
+                </timeline-heading>
+                <div>
+                    <span ng-bind="event.published_at | amDateFormat:'DD.MM H:mm'"></span>
+
+                    <span ng-bind="event.person.name"></span>
+
+                    <p ng-bind-html="event.content"></p>
+
+                    <div>
+                        <span ng-show="event.likes" ng-bind="event.likes + ' лайков'"></span>
+                        <span ng-show="event.reposts" ng-bind="event.reposts + ' репостов'"></span>
+                        <a href="{{event.post_link}}" target="_blank">Читать</a>
+
+                    </div>
+                </div>
+
+            </timeline-panel>
+        </timeline-event>
+    </timeline>
 </section>
