@@ -1227,7 +1227,7 @@ $grey_about: #5d5d5d;
     background-position: 0 0; 
     .wrapp_content {
       padding-left: 202px;
-      h2 {
+      h3 {
         color: $green_main;
         font-family: $extra_bold;
         padding: 30px 0;
@@ -1707,10 +1707,18 @@ $grey_about: #5d5d5d;
         }
       }
       p {
-        height: 130px;
+        height: 100px;
         padding: 10px 0 10px 40px;
         color: $white;
         font-size: $p_size;
+      }
+      .bold {
+        height: 10px;
+        a {
+          font-family: $bold;
+          color: $white;
+          text-decoration: underline;
+        }
       }
     }
   }
