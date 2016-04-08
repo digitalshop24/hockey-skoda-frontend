@@ -41,10 +41,9 @@
                 <h6 >Другие новости <span class="show_all"><a ui-sref="dashboard.general-news">Смотреть все</a></span></h6>
                 <p class="littel_date" ng-bind="ctrl.lastNews[0].published_at | amDateFormat:'DD MMMM'">1 апреля, суббота</p>
                 <ul>
-                    <li ng-repeat="news in ctrl.lastNews">
-                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name"></a></p>
-                        <span class="littel_time" ng-bind="news.published_at | amDateFormat:'H:mm'">12:45</span>
-                        <!--<span class="little_comment">13</span>-->
+                    <li ng-repeat="lastNews in ctrl.lastNews" ng-if="ctrl.news.id != lastNews.id">
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:lastNews.id, rubric:lastNews.rubric.api_path})" ng-bind="lastNews.name"></a></p>
+                        <span class="littel_time" ng-bind="lastNews.published_at | amDateFormat:'H:mm'">12:45</span>
                     </li>
                 </ul>
             </div>
