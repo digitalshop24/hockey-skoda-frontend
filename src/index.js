@@ -35,7 +35,7 @@ export default angular.module('app',
     .service('auth', auth)
     .config(($authProvider) => {
 
-        const url = "https://skoda-hockey-staging.herokuapp.com/api/v1";
+        const url = "http://skoda-hockey.herokuapp.com/api/v1";
         $authProvider.facebook({
             scope: ['email', 'public_profile'],
             url: url + '/auth/facebook',
