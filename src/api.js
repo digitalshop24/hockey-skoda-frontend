@@ -44,6 +44,10 @@ export default class Api {
         });
     }
 
+    get url() {
+        return this.api;
+    }
+
     get headers() {
         return {'Auth-Token': this.session.token};
     }
