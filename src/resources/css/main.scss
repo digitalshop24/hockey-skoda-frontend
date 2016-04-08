@@ -1381,6 +1381,11 @@ $grey_about: #5d5d5d;
         li:nth-child(3) {
           padding: 0 15px;
         }
+        li:nth-child(6) {
+          color: $grey;
+          padding-left: 10px;
+          font-family: $regular;
+        }
       }
     }
   }
