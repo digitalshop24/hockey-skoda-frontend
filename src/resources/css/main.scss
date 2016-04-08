@@ -1263,22 +1263,23 @@ $grey_about: #5d5d5d;
   .ul_news {
     padding-top: 20px;
     .col-md-6 {
-      min-height: 100px;
+      
       padding:0;
       border-top: 1px solid $grey_lite;
     }
     .littel_news {
       padding: 20px 20px 20px 50px;
       font-family: $bold;
+      min-height: 100px;
 
     }
     .littel_time {
       position: absolute;
-      margin-top: -60px;
+      margin-top: -19%;
     }
     .little_comment {
       position: absolute;
-      margin-top: -35px;
+      margin-top: -13%;
       background-image: url('img/resources/img/news/bg_comment.png');
       background-size: cover;
       background-position: center center;
@@ -1698,6 +1699,13 @@ $grey_about: #5d5d5d;
     .block {
       background-repeat:no-repeat;
       background-size: cover;
+      .bg_hover {
+        background: linear-gradient(to left, rgba(0,0,0,0), $green_main);
+        height: 100%;
+      }
+      .bg_hover:hover {
+        background-color: $green_main;
+      }
       h2 {
         padding: 40px 0 5px 40px;
         text-transform: uppercase;
@@ -1714,6 +1722,8 @@ $grey_about: #5d5d5d;
       }
       .bold {
         height: 10px;
+        position: relative;
+        top: -30px;
         a {
           font-family: $bold;
           color: $white;
