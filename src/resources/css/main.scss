@@ -1311,16 +1311,20 @@ $grey_about: #5d5d5d;
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center center;
-    padding: 0 70px;
+    padding: 150px 70px;
     min-height: 500px;
     h5 {
       font-family: $light;  
       margin: 100px 0 10px 0;
+      padding: 0 20px;
+      width: 70%
     }
     h2 {
       margin: 20px 0 20px 0;
       text-transform: uppercase;
       font-family: $bold;
+      padding: 0 20px;
+      width: 70%;
       a {
         color: $white;
       }
