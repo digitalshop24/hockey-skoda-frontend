@@ -1205,6 +1205,92 @@ $grey_about: #5d5d5d;
 
 //-------------------------------------------------- main
 
+.wrapp_news_preview {
+  padding: 50px 50px 20px 50px;
+  .preview_header_left {
+    h6 {
+      font-family: $light;
+    }
+    ul {
+      li {
+        display: inline-block;
+        padding-right: 10px;
+        font-size: $p_size+.2rem;
+        text-decoration: underline;
+      }
+    }
+  }
+  .preview_header_right {
+    background-image: url('img/resources/img/bg_preview_header_right.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 0 0; 
+    .wrapp_content {
+      padding-left: 202px;
+      h2 {
+        color: $green_main;
+        font-family: $extra_bold;
+        padding: 30px 0;
+        text-transform: uppercase;
+     
+      }
+    }
+    
+  }
+  .hash_tag {
+    padding-top: 20px;
+    p {
+      font-size: $p_size;
+    }
+    ul {
+      li {
+        display: inline-block;
+        padding: 1px 3px;
+        margin: 2px;
+        background-color: $grey_lite;
+        a {
+          color: $green_main;
+          text-transform: uppercase;
+          font-size: $p_size - 0.1rem;
+          font-family: $bold;
+        } 
+      }
+      li:last-child {
+        background-color: $white;
+      }
+    }
+  }
+  .ul_news {
+    padding-top: 20px;
+    .col-md-6 {
+      min-height: 100px;
+      padding:0;
+      border-top: 1px solid $grey_lite;
+    }
+    .littel_news {
+      padding: 20px 20px 20px 50px;
+      font-family: $bold;
+
+    }
+    .littel_time {
+      position: absolute;
+      margin-top: -60px;
+    }
+    .little_comment {
+      position: absolute;
+      margin-top: -35px;
+      background-image: url('img/resources/img/news/bg_comment.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+      padding: 3px 0 0 8px;
+    }
+  }
+}
+
+
 .wrapp_slider_stars {
   .slick-next {
     background: rgba(0,0,0,0) url("img/resources/img/arrow_right_white.png") no-repeat 90% center;
