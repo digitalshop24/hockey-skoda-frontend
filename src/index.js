@@ -33,34 +33,32 @@ export default angular.module('app',
     .service('api', Api)
     .service('session', session)
     .service('auth', auth)
-    .config($authProvider => {
+    .config(($authProvider) => {
 
+        const url = "https://skoda-hockey-staging.herokuapp.com/api/v1";
         $authProvider.facebook({
             scope: ['email', 'public_profile'],
-            url: 'http://skoda-hockey.herokuapp.com:80/api/v1/auth/facebook',
+            url: url + '/auth/facebook',
             clientId: '1563436463985643',
             responseType: 'code'
         });
 
         $authProvider.instagram({
-            url: 'http://skoda-hockey.herokuapp.com:80/api/v1/auth/instagram',
-            clientId: '633676f1f025495fba751c8eef59c392'
+            url: url + '/auth/instagram',
+            clientId: '633676f1f025495fba751c8eef59c392',
+            scope: ['email', 'public_content']
         });
-
-        /*$authProvider.twitter({
-            clientId: '0n8MJuRKkn7PdEnoaK5VZRGmG'
-        });*/
 
         $authProvider.oauth2({
             name: 'vk',
-            url: 'http://skoda-hockey.herokuapp.com:80/api/v1/auth/vk',
+            url: url + '/auth/vk',
             clientId: '5367930',
             redirectUri: window.location.origin,
             authorizationEndpoint: 'https://oauth.vk.com/authorize',
             display: 'popup',
             oauthType: '2.0',
             responseType: 'code',
-            scope: ['email']
+            scope: ['email', 'video']
         });
     })
     .config(($locationProvider) => {
