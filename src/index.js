@@ -46,7 +46,7 @@ export default angular.module('app',
         $authProvider.instagram({
             url: url + '/auth/instagram',
             clientId: '633676f1f025495fba751c8eef59c392',
-            scope: ['email', 'public_content']
+            scope: ['public_content']
         });
 
         $authProvider.oauth2({
