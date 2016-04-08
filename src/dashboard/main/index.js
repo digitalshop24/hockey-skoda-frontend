@@ -31,6 +31,12 @@ export default angular.module('dashboard.main', [
                     starsInfo: ($stateParams, mainService) => {
                         return mainService.getLastNews('stars', 1, 5);
                     },
+                    schedule: mainService => {
+                        return mainService.getSchedule('future');
+                    },
+                    teams: ($stateParams, mainService) => {
+                        return mainService.getTeams();
+                    },
                     page: ($stateParams) => {
                         return $stateParams.page;
                     },
