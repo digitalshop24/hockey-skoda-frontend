@@ -5,7 +5,7 @@ const EXTERNAL_SERVER_ERROR = 500;
 
 export default class Api {
     constructor($http, $state, session, login, $rootScope) {
-        this.api = "https://skoda-hockey-staging.herokuapp.com/api/v1";
+        this.api = "http://skoda-hockey.herokuapp.com/api/v1";
         this.http = $http;
         this.state = $state;
         this.session = session;
