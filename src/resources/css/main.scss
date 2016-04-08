@@ -1348,6 +1348,42 @@ $grey_about: #5d5d5d;
 }
 .wrapp_mainpage_slider {
   // background-color: #f1f1f1;
+  .short_news {
+
+  }
+  .now_games {
+    padding: 30px 20px;
+    position: absolute;
+    z-index: 1;
+    right: 80px;
+    background-color: rgba(0,0,0,0.7);
+    top: 120px;
+    span {
+      width: 100px;
+    }
+    ul {
+      display: inline-block;
+    }
+    .one_game_wrapp {
+      padding: 5px 0;
+      .one_game {
+        li {
+          font-size: $p_size;
+          font-family: $bold;
+          padding: 0 5px;
+          color: $white;
+          display: inline-block;
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        li:nth-child(3) {
+          padding: 0 15px;
+        }
+      }
+    }
+  }
 
   .date_slider_mainpage {
 
