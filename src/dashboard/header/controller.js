@@ -1,7 +1,7 @@
 'use strict';
 
 export default class HeaderCtrl {
-    constructor(login, session, $state, auth, $scope) {
+    constructor(login, session, $state, auth, $scope, notificationService, $interval) {
         this.loginService = login;
         this.user = session.user;
         this.session = session;
@@ -17,9 +17,16 @@ export default class HeaderCtrl {
         this.isMenuMobileOpen = false;
         this.isNotifOpen = false;
 
-       
-        
-        
+        $interval(() => {
+            if(this.session.isAuthenticated) {
+                notificationService.getNotifications().then((res) => {
+                    this.notifications = res.notifications;
+                });
+            }
+
+        }, 60 * 1000);
+
+
         $scope.$on('user:updated', (event,data) => {
             this.user = data;
         });
