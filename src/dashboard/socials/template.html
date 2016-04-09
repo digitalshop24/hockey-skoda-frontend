@@ -1,4 +1,64 @@
-<section class="">
+<section class="social">
+    <div class="container ">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Соцсети</h5>
+                    <h2>Твой френд - звезда</h2>
+                    <p>В безудержном соревновании "попробуй догони" <br> первенствовал нападающий "Эдмонд Ойлера" Коннор <br>Макдейвид, установил планку на высоту в пять очков
+                    </p>
+
+                </div>
+            </div>
+        </div>  
+</section>
+<section class ="wrapp_toggle">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <li>
+                        <h4>Выбрать всех</h4>
+                        <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+                        <label for="toggle-1"></label>
+                        <span class="on">ON</span>
+                        <span class="off">OFF</span>
+                    </li>
+                    <li>
+                        <img src="img/resources/img/fb.png" alt="" >
+                        <input type="checkbox" name="toggle" class="sw" id="toggle-2" checked>
+                        <label for="toggle-2"></label>
+                        <span class="on">ON</span>
+                        <span class="off">OFF</span>
+                    </li>
+                    <li>
+                        <img src="img/resources/img/vk.png" alt="" >
+                        <input type="checkbox" name="toggle" class="sw" id="toggle-3" checked>
+                        <label for="toggle-3"></label>
+                        <span class="on">ON</span>
+                        <span class="off">OFF</span>
+                    </li>
+                    <li>
+                        <img src="img/resources/img/twiter.png" alt="" >
+                        <input type="checkbox" name="toggle" class="sw" id="toggle-4" checked>
+                        <label for="toggle-4"></label>
+                        <span class="on">ON</span>
+                        <span class="off">OFF</span>
+                    </li>
+                    <li>
+                        <img src="img/resources/img/insta.png" alt="" >
+                        <input type="checkbox" name="toggle" class="sw" id="toggle-5" checked>
+                        <label for="toggle-5"></label>
+                        <span class="on">ON</span>
+                        <span class="off">OFF</span>
+                    </li>
+                </ul>   
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="wrapp_timeline_social">
     <timeline>
         <div ng-repeat="day in ctrl.days">
 
@@ -25,8 +85,31 @@
                     <timeline-heading>
                         <h4>{{event.title}}</h4>
                     </timeline-heading>
-                    <div>
-                        <span class="{{event.iconClass}}">Тут будет иконка</span> <!--варианты классов vk, twitter, fb, instagram -->
+                    <div class="post_content">
+                                <div class="title">
+                                    <a href="#" class="{{event.iconClass}}"><img src="img/resources/img/soc/f.png" alt="" class="img-responsive"></a>
+                                    <a href="#" class="link_default"><h5 ng-bind="event.published_at | amDateFormat:'DD.MM H:mm'">13:32</h5></a>
+                                    <a href="#" class="link_default"><p ng-bind="event.person.name">Александр Овечкин</p></a>
+                                </div>  
+                                <div class="main_content">
+                                    <p ng-bind-html="event.content"></p>
+
+                                </div>
+                                <div ng-show="event.photos.length">
+                                    <slick>
+                                        <div ng-repeat="photo in event.photos | limitTo:4">
+                                            <img  src="{{photo.image.small}}" />
+                                        </div>
+                                        <span ng-bind="{{event.photos.length}} + ' фото'"></span>
+                                    </slick>
+                                </div>
+                                
+                                <ul class="dop_info">
+                                    <li ><a href="" class="link_default"ng-show="event.likes" ng-bind="event.likes + ' лайков'">3756 лайков</a></li>
+                                    <li><a href="" class="link_default" ng-show="event.reposts" ng-bind="event.repostText">62 репостов</a></li>
+                                    <li><a href="" class="link_default" href="{{event.post_link}}" target="_blank">Читать</a></li>
+                                </ul>
+                        <!-- <span class="{{event.iconClass}}">Тут будет иконка</span> варианты классов vk, twitter, fb, instagram 
                         <span ng-bind="event.published_at | amDateFormat:'DD.MM H:mm'"></span>
 
                         <span ng-bind="event.person.name"></span>
@@ -46,7 +129,7 @@
                             <span ng-show="event.reposts" ng-bind="event.repostText"></span>
                             <a href="{{event.post_link}}" target="_blank">Читать</a>
 
-                        </div>
+                        </div> -->
                     </div>
 
                 </timeline-panel>
