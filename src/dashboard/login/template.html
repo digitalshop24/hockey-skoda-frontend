@@ -10,6 +10,7 @@
                                    placeholder="E-mail">
                             <input required="true" type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"
                                    placeholder="Пароль">
+                            <h6>Войти через соц.сеть:</h6>       
                                 <div class="soc_icon">
                                     <a ng-click="ctrl.authViaSocial('instagram')"><img src="img/resources/img/insta_grey.png" alt="" class="img-responsive"></a>
                                     <a ng-click="ctrl.authViaSocial('facebook')"><img src="img/resources/img/fb_grey.png" alt="" class="img-responsive"></a>
@@ -17,7 +18,7 @@
                                     <a ng-click="ctrl.authViaSocial('vk')"><img src="img/resources/img/vk_grey.png" alt="" class="img-responsive"></a>
                                 </div>
                             <p><a href="" ng-click="ctrl.recoverPassword()">Я забыл пароль?</a></p>
-                            <h3 ng-bind="ctrl.message"></h3>
+                            <h6 ng-bind="ctrl.message"></h6>
                             <button class="btn btn_secondary small">Войти</button>
                         </div>
                     </div>

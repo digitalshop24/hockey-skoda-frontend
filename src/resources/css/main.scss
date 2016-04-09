@@ -114,7 +114,7 @@ header {
           text-transform: uppercase;
           position: relative;
           top: 3px;
-          margin-left: 15px;
+          margin-left: 25px;
           font-family: $bold;
         }
       }
@@ -1765,6 +1765,7 @@ $grey_about: #5d5d5d;
         padding: 40px 0 5px 40px;
         text-transform: uppercase;
         font-family: $extra_bold;
+        font-size: 4rem;
         a {
           color: $white;
         }
@@ -2774,6 +2775,8 @@ $grey_about: #5d5d5d;
     background-color: #f1f1f1;
     padding: 20px 40px;
       .tag_post {
+        border-bottom: 1px solid $grey;
+        padding-bottom: 10px;
         li {
           margin: 5px 15px 5px 0;
           padding: 5px 10px;
@@ -3194,8 +3197,8 @@ $grey_about: #5d5d5d;
   .main_slider_priz {
     .slick-slide  {
       background-color: $grey;
-      padding-top: 30px;
-      height:90px
+      padding-top: 35px;
+      height: 90px;
     }
      .slick-next {
           background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 100% center;
