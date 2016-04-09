@@ -1352,12 +1352,12 @@ $grey_about: #5d5d5d;
 
   }
   .now_games {
-    padding: 30px 20px;
+    padding: 15px 5px;
     position: absolute;
     z-index: 1;
-    right: 80px;
+    right: 25px;
     background-color: rgba(0,0,0,0.7);
-    top: 120px;
+    top: 100px;
     span {
       width: 100px;
     }
@@ -1406,12 +1406,14 @@ $grey_about: #5d5d5d;
     right: 0px;
     width: 100px;
     height: 100px;
+    top: 43%;
   }
   .date_slider_news .slick-prev {
     background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat 0% center;
     left: 0px;
     width: 100px;
     height: 100px;
+    top: 43%;
   }
   .date_slider_news .slick-arrow {
     position: absolute;
@@ -1440,14 +1442,14 @@ $grey_about: #5d5d5d;
       content:'';
     }
   }
-  .item {
-    min-height: 470px;
+  .item-1 {
     color: $white;
-    background-repeat:no-repeat;
-    background-size: cover;
     h5 {
       font-family: $light;  
       margin: 30px 0 20px 0;
+      position:absolute;
+      z-index:1; 
+      margin-left: 75px;
       span {
         font-size: 1.5rem;
         padding-left: 50px; 
