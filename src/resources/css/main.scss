@@ -461,6 +461,7 @@ footer {
     img, p {
       display: inline-block;
       color: $white;
+      cursor:pointer;
     }
     p {
       margin-right: 40px;
@@ -551,10 +552,12 @@ footer {
       h6 {
         padding-top: 10px;
         padding-left: 10px;
+        cursor:pointer;
       }
       p {
         padding-top: 5px;
         padding-left: 10px;
+        cursor:pointer;
       }
     }
   }
@@ -3506,6 +3509,7 @@ $grey_about: #5d5d5d;
     }
     .bold {
       min-height: 70px;
+      cursor:pointer;
     }
   }
   .btn_common {
