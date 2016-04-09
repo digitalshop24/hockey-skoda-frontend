@@ -75,7 +75,7 @@ header {
       li {
         display: inline-block;
         text-transform: uppercase;
-        padding: 22px 0 !important;
+        padding: 22px 0 ;
         margin-left: 3.3%;
         font-size: $p_size+0.01rem; 
       }
@@ -147,6 +147,39 @@ header {
       margin-left: 7px;
       margin-top: 17px;
       margin-bottom: 18px;
+    }
+  }
+  .dropdown_news {
+    position: absolute;
+    width: 30%;
+    background-color: $white;
+    margin: 70px 14px 0 14px;
+    position: fixed;
+    z-index: 10;
+    left: 300px;
+    width: 20%;
+    padding-bottom: 50px;
+    ul {
+      padding-top: 30px;
+      li {
+        padding: 10px 0 10px 30px !important;
+        border-bottom: 1px solid $grey_lite;
+        text-transform: none;
+        width: 90%;
+        color: $green_main;
+      }
+      a {
+          font-size: $p_size;
+      }
+    }
+    .two_menu {
+      li {
+        color: $green_main;
+      }
+      .li_disabel {
+        color: $grey;
+        cursor: not-allowed;
+      }
     }
   }
   .dropdown_menu {

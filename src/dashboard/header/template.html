@@ -72,17 +72,19 @@
             <div class="col-sm-12 col-md-12 left_head text-left">
                 <a ui-sref="dashboard.main" class="logo"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
                 <ul>
-                    <li ng-mouseover="ctrl.isMenuOpen = true" ng-class="active_li">
+                    <li ng-mouseover="ctrl.isMenuOpen = true; ctrl.isPNewsOpen = false" ng-class="active_li">
                         <a href="">
                             <span>Меню</span>
                             <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
                         </a>
                     </li>
                     <li  ng-class="active_li">
-                        <a href="" ui-sref="dashboard.general-news">
+                        <a href="" ui-sref="dashboard.general-news" ng-mouseover="ctrl.isPNewsOpen = true; ctrl.isMenuOpen = false">
                             <span>Материалы</span>
+                             <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
                            
                         </a>
+                        
                     </li>
                     <li  class="hidden_lgg">
                         <a href="">
@@ -158,6 +160,16 @@
             
         </div>
     </div>
+        <div class="dropdown_news two_menu" ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false">
+                            <ul ng-show="ctrl.isNewsOpen">
+                                <a ui-sref="dashboard.general-news" ng-click="ctrlisPNewsOpen.isPNewsOpen = false"><li>События</li></a>
+                                <a ui-sref="dashboard.facts" ng-click="ctrl.isPNewsOpen = false"><li>Интересные факты</li></a>
+                                <a ui-sref="dashboard.blog" ng-click="ctrl.isPNewsOpen = false" ><li>Аналитика</li></a>
+                                <a ui-sref="dashboard.cheer" ng-click="ctrl.isPNewsOpen = false"><li class="">Девушки-чирлидирши</li></a>
+                                <a ui-sref="dashboard.stars" ng-click="ctrl.isPNewsOpen = false"><li class="">О звездах хоккея</li></a>
+                                <a ui-sref="dashboard.video" ng-click="ctrl.isPNewsOpen = false"><li class="">Хоккейные видео</li></a>
+                            </ul>
+                        </div>
         <div class="dropdown_menu" ng-mouseleave="ctrl.isMenuOpen = false" ng-show="ctrl.isMenuOpen">
                 <div class="container-fluid">
                     <div class="row">
