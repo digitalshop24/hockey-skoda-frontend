@@ -1342,18 +1342,23 @@ $grey_about: #5d5d5d;
     height: 100px;
   }
   .stars {
-    min-height: 470px;
     color: $white;
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center center;
-    padding: 150px 70px;
     min-height: 500px;
-    h5 {
+  .bg_stars{
+    padding: 160px 70px;
+    background-color: RGBA(0, 0, 0, 0.39);
+    h6 {
       font-family: $light;  
-      margin: 100px 0 10px 0;
+      margin: 10px 0 10px 0;
       padding: 0 20px;
-      width: 70%
+      width: 70%;
+      color: $white;
+      a {
+        color: $white;
+      }
     }
     h2 {
       margin: 20px 0 20px 0;
@@ -1380,6 +1385,7 @@ $grey_about: #5d5d5d;
         }
       }
     }
+  }
   }
 }
 .wrapp_mainpage_slider {
