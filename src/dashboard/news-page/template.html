@@ -31,12 +31,12 @@
                         Смотреть
                     </a>
                 </div>
-                <h6 >Другие новости <span class="show_all"><a ui-sref="dashboard.general-news">Смотреть все</a></span></h6>
-                <p class="littel_date" ng-bind="ctrl.lastNews[0].published_at | amDateFormat:'DD MMMM'">1 апреля, суббота</p>
+                <h6>{{ctrl.rubric.api_path == 'stars' ? 'Звезды хоккея ' : 'Другие новости '}}<span class="show_all"><a ui-sref="{{ctrl.rubricState}}">Смотреть все</a></span></h6>
+                <p class="littel_date" ng-bind="ctrl.lastNews[0].published_at | amDateFormat:'DD MMMM'"></p>
                 <ul>
                     <li ng-repeat="lastNews in ctrl.lastNews" ng-if="ctrl.news.id != lastNews.id">
                         <p class="littel_news"><a ui-sref="dashboard.newspage({id:lastNews.id, rubric:lastNews.rubric.api_path})" ng-bind="lastNews.name"></a></p>
-                        <span class="littel_time" ng-bind="lastNews.published_at | amDateFormat:'H:mm'">12:45</span>
+                        <span class="littel_time" ng-bind="lastNews.published_at | amDateFormat:'H:mm'"></span>
                     </li>
                 </ul>
             </div>
@@ -77,11 +77,11 @@
                     <img src="{{comment.user.avatar.thumb}}" alt="" class="img-responsive">
                 </div>
                 <div class="col-md-10">
-                    <h6 ng-bind="comment.user.name">Дмитрий Иванов</h6>
+                    <h6 ng-bind="comment.user.name"></h6>
 
                     <p ng-bind-html="comment.content"></p>
 
-                    <p class="date_posts" ng-bind="comment.published_at | amDateFormat:'DD.MM.YYYY H:mm'">09.02.2015 9:45</p>
+                    <p class="date_posts" ng-bind="comment.published_at | amDateFormat:'DD.MM.YYYY H:mm'"></p>
                 </div>
             </div>
             </div>
