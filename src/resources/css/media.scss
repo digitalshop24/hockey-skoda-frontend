@@ -329,11 +329,11 @@ $p_size: 1.4rem;
 	    top: 0px;
 	}
 	.wrapp_news_all .menu_line ul li {
-	    margin-bottom: 30px;
+	    
 	    display: inline-block;
-	    width: 30%;
+	    width: 30% !important;
 	    text-align: center;
-	    margin-top: 20px;
+	    
 	}
 	.wrapp_news_all {
 		.wrapp_contant_main {
@@ -470,7 +470,7 @@ $p_size: 1.4rem;
 						margin-bottom: 0px;
 						display: inline-block;
 						width: 30%;
-						padding-top: 40px;				
+						// padding-top: 40px;				
 					}
 				}
 			}

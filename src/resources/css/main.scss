@@ -2071,7 +2071,6 @@ $grey_about: #5d5d5d;
 .wrapp_news_all {
   min-height: 100vh;
   background-color: #ececec;
-
   .date_slider_news {
     .slick-track {
       height: 100px;
@@ -2120,26 +2119,66 @@ $grey_about: #5d5d5d;
       height:  120vh;
       width: 100px;
       ul {
-        margin-top: 45vh;
+        margin-top: 40vh;
         li {
           margin-bottom: 30px;
-        
           img {
             margin: 0 auto; 
-
           }
-          a {
+          
             p {
               color: $white;
-              text-align: center;
               font-size: $p_size;
               text-transform: uppercase;
+              text-align: center;
               margin-top: 5px;
+              position: relative;
+              top: 90px;
             }
             .active_p {
               color: $green_main;
-            }
-            
+            }          
+        }
+        .general_news_imgbg {
+          background-image: url('img/resources/img/news/ico_menu1_active_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .general_news_imgbg:hover {
+          background-image: url('img/resources/img/news/ico_menu1_active_notext.png');
+          p {
+            color: $green_main;
+          }
+        }
+        .facts_imgbg {
+          background-image: url('img/resources/img/news/ico_menu2_noactive_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .facts_imgbg:hover {
+          background-image: url('img/resources/img/news/ico_menu2_active_notext.png');
+           p {
+            color: $green_main;
+          }
+        }
+        .blog_imgbg {
+          background-image: url('img/resources/img/news/ico_menu3_noactive_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .blog_imgbg:hover {
+          background-image: url('img/resources/img/news/ico_menu3_active_notext.png');
+           p {
+            color: $green_main;
           }
         }
       }
@@ -2787,7 +2826,7 @@ $grey_about: #5d5d5d;
       height:  120vh;
       width: 100px;
       ul {
-        margin-top: 45vh;
+        margin-top: 40vh;
         li {
           margin-bottom: 30px;
           img {
@@ -2799,8 +2838,53 @@ $grey_about: #5d5d5d;
             text-transform: uppercase;
             text-align: center;
             margin-top: 5px;
+            position: relative;
+            top: 90px;
           }
+          
           .active_p {
+            color: $green_main;
+          }
+        }
+        .general_news_imgbg {
+          background-image: url('img/resources/img/news/ico_menu1_noactive_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .general_news_imgbg:hover {
+          background-image: url('img/resources/img/news/ico_menu1_active_notext.png');
+          p {
+            color: $green_main;
+          }
+        }
+        .facts_imgbg {
+          background-image: url('img/resources/img/news/ico_menu2_noactive_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .facts_imgbg:hover {
+          background-image: url('img/resources/img/news/ico_menu2_active_notext.png');
+           p {
+            color: $green_main;
+          }
+        }
+        .blog_imgbg {
+          background-image: url('img/resources/img/news/ico_menu3_active_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .blog_imgbg:hover {
+          background-image: url('img/resources/img/news/ico_menu3_active_notext.png');
+           p {
             color: $green_main;
           }
         }
@@ -5220,7 +5304,7 @@ $grey_about: #5d5d5d;
       height:  120vh;
       width: 100px;
       ul {
-        margin-top: 45vh;
+        margin-top: 40vh;
         li {
           margin-bottom: 30px;
           img {
@@ -5232,8 +5316,66 @@ $grey_about: #5d5d5d;
             text-transform: uppercase;
             text-align: center;
             margin-top: 5px;
+            position: relative;
+            top: 90px;
           }
           .active_p {
+            color: $green_main;
+          }
+        }
+        .general_news_imgbg {
+          background-image: url('img/resources/img/news/ico_menu1_noactive_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .general_news_imgbg:hover {
+          background-image: url('img/resources/img/news/ico_menu1_active_notext.png');
+          p {
+            color: $green_main;
+          }
+        }
+        .facts_imgbg {
+          background-image: url('img/resources/img/news/ico_menu2_active_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .facts_imgbg:hover {
+          background-image: url('img/resources/img/news/ico_menu2_active_notext.png');
+           p {
+            color: $green_main;
+          }
+        }
+        .blog_imgbg {
+          background-image: url('img/resources/img/news/ico_menu3_noactive_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .blog_imgbg:hover {
+          background-image: url('img/resources/img/news/ico_menu3_active_notext.png');
+           p {
+            color: $green_main;
+          }
+        }
+        .fix_one_news_hover {
+          background-image: url('img/resources/img/news/ico_menu2_noactive_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .fix_one_news_hover:hover {
+          background-image: url('img/resources/img/news/ico_menu2_active_notext.png');
+           p {
             color: $green_main;
           }
         }
