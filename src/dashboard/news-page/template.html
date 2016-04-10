@@ -37,6 +37,7 @@
                     <li ng-repeat="lastNews in ctrl.lastNews" ng-if="ctrl.news.id != lastNews.id">
                         <p class="littel_news"><a ui-sref="dashboard.newspage({id:lastNews.id, rubric:lastNews.rubric.api_path})" ng-bind="lastNews.name"></a></p>
                         <span class="littel_time" ng-bind="lastNews.published_at | amDateFormat:'H:mm'">12:45</span>
+                        <span class="little_comment" ng-bind="lastNews.comments_count"></span>
                     </li>
                 </ul>
             </div>
@@ -44,31 +45,9 @@
     </div>
     <div class="container">
         <div class="row wrapp_comments">
-            <div class="col-md-3 text-center">
-                <div class="social-likes">
-                    <div class="facebook" title="Share link on Facebook">Facebook</div>
-                    <div class="vkontakte" title="Share link on VK">VK</div>
-                    <div class="twitter" title="Share link on twitter">twitter</div>
-                </div>
-
-            </div>
-            <div class="col-md-3 text-center">
-                <button ng-show="!ctrl.isEditorOpen" ng-disabled="!ctrl.session.isAuthenticated"
-                        ng-click="ctrl.openEditor()" class="btn btn_primary main">Комментировать
-                </button>
-                <p ng-show="!ctrl.session.isAuthenticated">Чтобы оставить комментарий нужно <br><a
-                        ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
-            </div>
             <div class="col-md-6 text-right">
                 <p ng-bind="ctrl.commentsAmount + ' коммент.'"></p>
             </div>
-            <div id="messageEditor" ng-show="ctrl.isEditorOpen" class="textEdit">
-                <form ng-submit="ctrl.sendMessage()">
-                    <div text-angular ng-model="ctrl.message"></div>
-                    <button class="btn btn_primary main">Отправить</button>
-                </form>
-            </div>
-
         </div>
         <div class="row wrapp_comment_one">
 
@@ -96,9 +75,24 @@
                     <p ng-show="!ctrl.session.isAuthenticated">Чтобы оставить комментарий нужно <br><a
                             ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
                 </div>
+                <div class="col-md-3 text-center">
+                    <div class="social-likes">
+                        <div class="facebook" title="Share link on Facebook">Facebook</div>
+                        <div class="vkontakte" title="Share link on VK">VK</div>
+                        <div class="twitter" title="Share link on twitter">twitter</div>
+                    </div>
+
+                </div>
                 <button ng-click="ctrl.loadMore()" ng-show="ctrl.comments.length < ctrl.commentsAmount" class="btn btn_common main "> Показать еще</button>
                 <span> Показано {{ctrl.comments.length}} из {{ctrl.commentsAmount}}</span>
             </div>
+        </div>
+
+        <div id="messageEditor" ng-show="ctrl.isEditorOpen" class="textEdit">
+            <form ng-submit="ctrl.sendMessage()">
+                <div text-angular ng-model="ctrl.message"></div>
+                <button class="btn btn_primary main">Отправить</button>
+            </form>
         </div>
     </div>
 </section>
