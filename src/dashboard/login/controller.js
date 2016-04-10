@@ -24,6 +24,8 @@ export default class LoginCtrl {
             .then(() => {
                 this.handleSuccessAuth();
             }).catch((err) => {
+                $('#password').css('border-color', 'red');
+                this.form.password = undefined;
                 this.rootscope.alreadyInLoginModal = false;
                 this.message = err.message || "Произошла ошибка авторизации";
             });
