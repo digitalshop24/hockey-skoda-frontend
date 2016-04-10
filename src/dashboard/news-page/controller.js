@@ -19,7 +19,6 @@ export default class NewspageCtrl {
 
     openEditor() {
         this.isEditorOpen = !this.isEditorOpen;
-        this.$document.scrollToElement($('#messageEditor'), 150, 500);
     }
 
     sendMessage() {
