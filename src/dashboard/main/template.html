@@ -272,8 +272,10 @@
                 <slick infinite=true arrows=true slides-to-show=1 slides-to-scroll=1>
 
                         <div class="stars" ng-repeat="star in ctrl.stars" style="background-image: url('{{star.image.original}}');">
-                            <h2><a ui-sref="dashboard.newspage({id:star.id, rubric:star.rubric.api_path})" ng-bind="star.name"></a></h2>
-                            <h6><a href="#" ng-bind="star.short_content">Валерий Харламов</a></h6>
+                            <div class="bg_stars">
+                                <h2><a ui-sref="dashboard.newspage({id:star.id, rubric:star.rubric.api_path})" ng-bind="star.name"></a></h2>
+                                <h6><a href="#" ng-bind="star.short_content">Валерий Харламов</a></h6>
+                            </div>
                         </div>
 
                  </slick>
