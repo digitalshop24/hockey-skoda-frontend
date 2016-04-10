@@ -67,7 +67,7 @@
                 </div>
                 <div class="row hash_tag">
                         <div class="col-md-1 text-center">
-                            <p>Хэшьтеги</p>
+                            <p>Хэштеги</p>
                         </div>
                         <div class="col-md-11">
                             <ul>
@@ -79,7 +79,9 @@
                                 <li><a href="">#Хоккейвкаждом</a></li>
                                 <li><a href="">#Хоккейвкаждом</a></li>
                                 <li><a href="">#Хоккейвкаждом</a></li>
-                                <li><a href=""><img src="img/resources/img/three_dots.png" alt=""></a></li>
+                                <li ng-show="!ctrl.openAddTags"><a ng-click="ctrl.openAddTags = true"><img src="img/resources/img/three_dots.png" alt=""></a></li>
+                                <li ng-show="ctrl.openAddTags"><a href="">#Хоккейвкаждом</a></li>
+                                <li ng-show="ctrl.openAddTags"><a href="">#Хоккейвкаждом</a></li>
                             </ul>
                         </div>
                 </div>
