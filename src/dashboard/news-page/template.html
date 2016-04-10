@@ -66,8 +66,8 @@
             </div>
         </div>
         <div class="row end_comment">
-
-            <div class="col-md-12 text-center" ng-show="ctrl.comments.length">
+<!-- ng-show="ctrl.comments.length" -->
+            <div class="col-md-12 text-center" >
                 <div class="col-md-3 text-center">
                     <button ng-show="!ctrl.isEditorOpen" ng-disabled="!ctrl.session.isAuthenticated"
                             ng-click="ctrl.openEditor()" class="btn btn_primary main">Комментировать
@@ -76,10 +76,10 @@
                             ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
                 </div>
                 <div class="col-md-3 text-center">
-                    <div class="social-likes">
-                        <div class="facebook" title="Share link on Facebook">Facebook</div>
-                        <div class="vkontakte" title="Share link on VK">VK</div>
-                        <div class="twitter" title="Share link on twitter">twitter</div>
+                    <div class="social-likes" ng-show="!ctrl.isEditorOpen">
+                        <span class="facebook" title="Share link on Facebook">Facebook</span>
+                        <span class="vkontakte" title="Share link on VK">VK</span>
+                        <span class="twitter" title="Share link on twitter">twitter</span>
                     </div>
 
                 </div>
@@ -89,10 +89,15 @@
         </div>
 
         <div id="messageEditor" ng-show="ctrl.isEditorOpen" class="textEdit">
-            <form ng-submit="ctrl.sendMessage()">
-                <div text-angular ng-model="ctrl.message"></div>
+            <form ng-submit="ctrl.sendMessage()" class="text-center">
+                <div text-angular ng-model="ctrl.message" class="text-left"></div>
                 <button class="btn btn_primary main">Отправить</button>
             </form>
+            <div class="social-likes text-center" >
+                        <span class="facebook" title="Share link on Facebook">Facebook</span>
+                        <span class="vkontakte" title="Share link on VK">VK</span>
+                        <span class="twitter" title="Share link on twitter">twitter</span>
+                    </div>
         </div>
     </div>
 </section>

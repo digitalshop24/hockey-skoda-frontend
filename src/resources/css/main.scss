@@ -2972,12 +2972,7 @@ $grey_about: #5d5d5d;
 }
 .wrapp_comments {
   padding: 50px 0 100px 0;
-  .textEdit {
-    padding: 8%;
-    .btn_primary {
-      margin-top: 20px;
-    }
-  }
+  
   ul {
     display: inline-block;
     padding: 0;
@@ -2992,6 +2987,12 @@ $grey_about: #5d5d5d;
     font-size: $p_size;
   }
 }
+.textEdit {
+    padding: 8%;
+    .btn_primary {
+      margin: 20px 0;
+    }
+  }
 .wrapp_comment_one {
  
   .col-md-10 {
@@ -3024,9 +3025,9 @@ $grey_about: #5d5d5d;
   .btn_common {
     margin-left: 20px
   }
-  span {
-    padding-left: 30px;
-  }
+  // span {
+  //   padding-left: 30px;
+  // }
 }
 
 //-------------------------------------------------- end one news
