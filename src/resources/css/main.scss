@@ -641,41 +641,55 @@ footer {
 //   font-size: 1.9rem;
 //   color: $white;
 // }
-// .tag_right_hokey {
-//   text-transform: uppercase;
-//   font-family: $bold;
-//   font-size: 2rem;
-//   background-color: $green_main;
-//   padding: 10px 20px;
-//   border-radius: 50px;
-//   position: absolute;
-//   color: $white;
-//   right: 24%;
-//   margin-top: 42px;
-// }
-// .tag_right_hokey:before {
-//   content: "";
-//   width: 100px;
-//   height: 1px;
-//   background-color: #4ba82e;
-//   position: absolute;
-  
-//   margin-left: -106px;
-//   margin-top: 16px;
-// }
-// .tag_left_hokey {
-//   text-transform: uppercase;
-//   font-family: $bold;
-//   font-size: 2rem;
-//   background-color: $white;
-//   padding: 10px 20px;
-//   border: 1px solid $grey;
-//   border-radius: 50px;
-//   position: absolute;
-//   color: $grey;
-//   left: 19%;
-//   margin-top: 42px;
-// }
+.tag_right_hokey {
+  text-transform: uppercase;
+  font-family: $bold;
+  font-size: 2rem;
+  background-color: $green_main;
+  padding: 10px 20px;
+  border-radius: 50px;
+  position: absolute;
+  color: $white;
+  right: 27%;
+  margin-top: -26px;
+  position: absolute;
+  z-index: 10;
+}
+.tag_right_hokey:before {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background-color: #4ba82e;
+  position: absolute;
+  margin-left: -150px;
+  margin-top: 16px;
+  z-index: 1;
+}
+.tag_left_hokey {
+  text-transform: uppercase;
+  font-family: $bold;
+  font-size: 2rem;
+  background-color: $white;
+  padding: 10px 20px;
+  border: 1px solid $grey;
+  border-radius: 50px;
+  position: absolute;
+  color: $grey;
+  left: 24%;
+  margin-top: -26px;
+  position: absolute;
+  z-index: 10;
+}
+.tag_left_hokey:after {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background-color: #4ba82e;
+  position: absolute;
+  margin-left: 21px;
+  margin-top: 15px;
+  z-index: 1;
+}
 
 // .momentscontainer { 
 //   padding-top: 160px;
@@ -706,7 +720,19 @@ footer {
 }
 
   .wrapp_timeline_social {
-    padding: 50px 100px;
+    padding: 40px 100px;
+    min-height: 100vh;
+    .dop_timeline {
+      width:3px;
+      position:absolute;
+      background-color: $green_main;
+      left: 50%;
+      margin-left: -1.5px;
+      height: 42px;
+      z-index: -1;
+      margin-top: -41px;
+      
+    }
   }
     .post_content {
       width:100% !important;

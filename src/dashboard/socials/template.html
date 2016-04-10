@@ -60,12 +60,15 @@
 </section>
 
 <section class="wrapp_timeline_social">
+    <div class="dop_timeline"></div>
+    <a href=""><div class="tag_right_hokey">Весь хоккей</div></a>
+    <a href=""><div class="tag_left_hokey">#Хокейвкаждом</div></a>
     <timeline>
         <div ng-repeat="day in ctrl.days">
 
             <timeline-event  ng-show="filtered.length">
-                <timeline-badge  class="{{event.badgeClass}}">
-                    <div style="height: 50px" ng-bind="day.id | amDateFormat:'DD'"></div>
+                <timeline-badge  class="{{event.badgeClass}}" style="height: 70px; width:70px; background-color: #4ba82e; border-radius:50%; margin-left: -35px; padding-top: 10px; box-shadow: none;">
+                    <div style="height: 70px;" ng-bind="day.id | amDateFormat:'DD'"></div>
                     <!--<i class="" ></i>-->
                 </timeline-badge>
                 <timeline-panel style="visibility: hidden">
