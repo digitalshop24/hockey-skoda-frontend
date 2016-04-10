@@ -9,6 +9,7 @@ export default class SocialCtrl {
         this.events.forEach(post => {
             post.iconClass = post.network;
             post.repostText = post.reposts + ' ' + this.getRepostText(post.network);
+            post.iconUrl = this.getIconUrl(post.network);
 
             const temp = moment(post.published_at).format('YYYY-MM-DD');
             var day = days.find(day => day.id == temp);
@@ -66,6 +67,15 @@ export default class SocialCtrl {
             return 'ретвитов';
         }
         return 'репостов';
+    }
+
+    getIconUrl(network) {
+        switch (network) {
+            case 'vk': return 'img/resources/img/soc/vk.png';
+            case 'facebook': return 'img/resources/img/soc/f.png';
+            case 'twitter': return 'img/resources/img/soc/twiter.png';
+            case 'instagramm': return 'img/resources/img/soc/insta.png';
+        }
     }
 
 }
