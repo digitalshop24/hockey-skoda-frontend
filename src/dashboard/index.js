@@ -36,6 +36,7 @@ import cheer from './cheerleaders/index';
 import calendar from './calendar/index';
 import faq from './faq/index';
 import infographics from './infographics/index';
+import NotificationService from './notificationService.js';
 import socials from './socials/index';
 
 
@@ -77,6 +78,7 @@ export default angular.module('dashboard',
     ])
     .service('login', Login)
     .service('modal', Modal)
+    .service('notificationService', NotificationService)
     .config($stateProvider => {
         $stateProvider
             .state('dashboard', {
