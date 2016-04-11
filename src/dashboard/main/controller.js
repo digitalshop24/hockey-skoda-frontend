@@ -2,12 +2,13 @@
 
 
 export default class MainCtrl {
-    constructor(lightingNews, lastNewsInfo, mainService, page, lastNewsAmount, starsInfo, schedule, $scope, teams) {
+    constructor(lightingNews, lastNewsInfo, mainService, page, lastNewsAmount, starsInfo, schedule, $scope, teams, championatNewsInfo) {
         this.service = mainService;
         this.teams = teams;
         this.schedule = schedule;
         this.lightingNews = lightingNews;
         this.lastNewsInfo = lastNewsInfo;
+        this.championatNews = championatNewsInfo.posts;
         this.lastNews = lastNewsInfo.posts.reverse();
         this.stars = starsInfo.posts;
         this.page = page;

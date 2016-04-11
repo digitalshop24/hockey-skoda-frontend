@@ -87,8 +87,8 @@
                 </div>
                 <div class="row ul_news">   
 
-                     <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="news in ctrl.lastNews | limitTo: 6">
-                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name">Предновогодние сюрпризы Skoda Junior Ice Hokey Cuo 2014 </a></p>
+                     <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="news in ctrl.championatNews | limitTo: 6">
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name"></a></p>
                         <span class="littel_time" ng-bind="news.published_at | amDateFormat:'H:mm'"></span>
                         <span class="little_comment" ng-bind="news.comments_count"></span>
                     </div>
