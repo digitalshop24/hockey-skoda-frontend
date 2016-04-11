@@ -16,6 +16,7 @@ export default class HeaderCtrl {
         this.isInterestingOpen = false;
         this.isMenuMobileOpen = false;
         this.isNotifOpen = false;
+        this.isPNewsOpen = false;
 
         $interval(() => {
             if(this.session.isAuthenticated) {

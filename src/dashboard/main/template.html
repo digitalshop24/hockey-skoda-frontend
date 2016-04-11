@@ -4,9 +4,9 @@
             <li class="one_game_wrapp" ng-repeat="match in ctrl.schedule | limitTo:3">
                 <ul class="one_game">
                     <li ng-bind="match.redteam.country"></li>
-                    <li><img src="img/resources/img/rus.png" alt=""></li>
+                    <li><img src="{{match.redteam.image.thumb}}" alt=""></li>
                     <li>-</li>
-                    <li><img src="img/resources/img/rus.png" alt=""></li>
+                    <li><img src="{{match.blueteam.image.thumb}}" alt=""></li>
                     <li ng-bind="match.blueteam.country"></li>
                     <li ng-bind="match.when | amDateFormat:'DD.MM H:mm'"></li>
                 </ul>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="row hash_tag">
                         <div class="col-md-1 text-center">
-                            <p>Хэшьтеги</p>
+                            <p>Хэштеги</p>
                         </div>
                         <div class="col-md-11">
                             <ul>
@@ -79,7 +79,9 @@
                                 <li><a href="">#Хоккейвкаждом</a></li>
                                 <li><a href="">#Хоккейвкаждом</a></li>
                                 <li><a href="">#Хоккейвкаждом</a></li>
-                                <li><a href=""><img src="img/resources/img/three_dots.png" alt=""></a></li>
+                                <li ng-show="!ctrl.openAddTags"><a ng-click="ctrl.openAddTags = true"><img src="img/resources/img/three_dots.png" alt=""></a></li>
+                                <li ng-show="ctrl.openAddTags"><a href="">#Хоккейвкаждом</a></li>
+                                <li ng-show="ctrl.openAddTags"><a href="">#Хоккейвкаждом</a></li>
                             </ul>
                         </div>
                 </div>
@@ -140,9 +142,9 @@
             </div>
             <div class="col-md-2 text-center" ng-repeat="match in ctrl.schedule | filter:ctrl.filterByTeam | limitTo:4">
                 <p class="titel" ng-bind="match.when | amDateFormat:'DD.MM H:mm'"></p>
-                <img src="img/resources/img/rus.png" alt="">
+                <img style="width: 40px; height: 40px" src="{{match.redteam.image.thumb}}" alt="">
                 <img src="img/resources/img/line.png" alt="" class="line">
-                <img src="img/resources/img/rus.png" alt="">
+                <img style="width: 40px; height: 40px" src="{{match.blueteam.image.thumb}}" alt="">
                 <ul>
                     <li class="command1" ng-bind="match.redteam.country"></li>
                     <li class="command1" ng-bind="match.blueteam.country"></li>
@@ -160,7 +162,7 @@
                     <div class="bg_hover">
                         <h2><a ui-sref="dashboard.general-news">Новости</a></h2>
                         <p>Здесь для Вас подобраны самые свежие новости об актуальных событиях в мире хоккея!</p>
-                        <p class="bold"><a href="">Читать</a></p>
+                        <p class="bold"><a href="" ui-sref="dashboard.general-news">Читать</a></p>
                     </div>
                 </div>
             </div>
@@ -169,7 +171,7 @@
                     <div class="bg_hover">
                         <h2><a ui-sref="dashboard.forecast.playoff">Прогнозы</a></h2>
                         <p>Прогнозируйте результаты матчей и всего турнира, получайте баллы и участвуйте в розыгрышах различных призов.</p>
-                        <p class="bold"><a href="">Предположить</a></p>
+                        <p class="bold"><a href="" ui-sref="dashboard.forecast.playoff">Предположить</a></p>
                     </div>
                 </div>
             </div>
@@ -178,7 +180,7 @@
                     <div class="bg_hover">
                         <h2><a ui-sref="dashboard.forum">Форум</a></h2>
                         <p>Общайтесь с любителями хоккея, участвуйте в викторине, обсуждайте матчи и все «околохоккейное» на форуме!</p>
-                        <p class="bold"><a href="">Общаться</a></p>
+                        <p class="bold"><a href="" ui-sref="dashboard.forum">Общаться</a></p>
                     </div>
                 </div>
             </div>
@@ -187,7 +189,7 @@
                     <div class="bg_hover">
                         <h2><a href="" ui-sref="dashboard.blog" >Аналитика</a></h2>
                         <p>Наши блогеры увлечены хоккеем также, как вы. Получайте эксклюзивную и важную информацию</p>
-                        <p class="bold"><a href="">Изучаться</a></p>
+                        <p class="bold"><a href="" ui-sref="dashboard.blog">Изучаться</a></p>
                     </div>
                 </div>
             </div>
@@ -203,9 +205,9 @@
             <div class="col-md-4 wrapp_block">
                 <div class="block" style="background-image: url('img/resources/img/main/menu4.jpg');">
                     <div class="bg_hover">
-                        <h2><a href="">Инфографика</a></h2>
+                        <h2><a href="" ui-sref="dashboard.infographics">Инфографика</a></h2>
                         <p>Мы создали для Вас иллюстрированную историю выступлений сборной России на всех Чемпионатах мира. </p>
-                        <p class="bold"><a href="">Учить</a></p>
+                        <p class="bold"><a href="" ui-sref="dashboard.infographics">Учить</a></p>
                     </div>
                 </div>
             </div>
@@ -270,8 +272,10 @@
                 <slick infinite=true arrows=true slides-to-show=1 slides-to-scroll=1>
 
                         <div class="stars" ng-repeat="star in ctrl.stars" style="background-image: url('{{star.image.original}}');">
-                            <h2><a ui-sref="dashboard.newspage({id:star.id, rubric:star.rubric.api_path})" ng-bind="star.name"></a></h2>
-                            <h6><a href="#" ng-bind="star.short_content">Валерий Харламов</a></h6>
+                            <div class="bg_stars">
+                                <h2><a ui-sref="dashboard.newspage({id:star.id, rubric:star.rubric.api_path})" ng-bind="star.name"></a></h2>
+                                <h6><a href="#" ng-bind="star.short_content">Валерий Харламов</a></h6>
+                            </div>
                         </div>
 
                  </slick>
