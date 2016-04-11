@@ -1,21 +1,26 @@
-<ul class="text-center">
-    <slick slides-to-show=4 slides-to-scroll=2>
-        <div ng-repeat="achievement in ctrl.achievements">
-            <li>
-                <h5 ng-bind-html="achievement.max_points"></h5>
+<div class="progress_contant">
+    <h4>Моя активность</h4>
+    <p class="date" ng-bind="'Сегодня, ' + ctrl.today"/>
+    <p>Текст, который раскрывает суть данного модуля. Что за графики, как они получаються и что они демонстрируют. </p>
+    <ul class="text-center">
+        <slick slides-to-show=4 slides-to-scroll=2>
+            <div ng-repeat="achievement in ctrl.achievements">
+                <li>
+                    <h5 ng-bind-html="achievement.max_points"></h5>
 
-                <div class="progress vertical green_progress">
-                    <div class="progress_bg_color" role="progressbar" aria-valuenow="50"
-                         aria-valuemin="0"
-                         aria-valuemax="100"
-                         style="height: {{achievement.progressBarPercentage}}% ;width: 10px;">
+                    <div class="progress vertical green_progress">
+                        <div class="progress_bg_color" role="progressbar" aria-valuenow="50"
+                             aria-valuemin="0"
+                             aria-valuemax="100"
+                             style="height: {{achievement.progressBarPercentage}}% ;width: 10px;">
+                        </div>
                     </div>
-                </div>
 
-                <p class="bold" ng-bind="achievement.name"></p>
+                    <p class="desc_progress bold" ng-bind="achievement.name"></p>
 
-                <p>Набрано {{achievement.currentBallAmount}}</p>
-            </li>
-        </div>
-    </slick>
-</ul>
+                    <p class="desc_progress" > {{achievement.currentBallAmount}} баллов</p>
+                </li>
+            </div>
+        </slick>
+    </ul>
+</div>
