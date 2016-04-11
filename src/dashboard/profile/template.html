@@ -38,17 +38,17 @@
                             <p class="active">Моя активность</p></a>
                     </li>
                     <li>
-                        <a ui-sref="dashboard.profile.fotocontest"><img src="img/resources/img/lk/roket.png" alt="" class="img-responsive">
+                        <a ui-sref="dashboard.profile.fotocontest"><img src="img/resources/img/lk/fotoconc.png" alt="" class="img-responsive">
 
                             <p class="">Фотоконкурс</p></a>
                     </li>
                     <li>
-                        <a ui-sref="dashboard.profile.progress"><img src="img/resources/img/lk/roket.png" alt="" class="img-responsive">
+                        <a ui-sref="dashboard.profile.mytestdrive"><img src="img/resources/img/lk/testdrive.png" alt="" class="img-responsive">
 
                             <p class="">Мои тест-драйвы</p></a>
                     </li>
                     <li>
-                        <a ui-sref="dashboard.profile.progress"><img src="img/resources/img/lk/roket.png" alt="" class="img-responsive">
+                        <a ui-sref="dashboard.profile.supergame"><img src="img/resources/img/lk/supergame.png" alt="" class="img-responsive">
 
                             <p class="">Суперигра</p></a>
                     </li>
@@ -56,11 +56,10 @@
                 </ul>
             </div>
             <div class="col-sm-6 col-md-6 lk_content">
-                <ul class="avatar">
-
-                    
-                </ul>
-                <div style="overflow-y: visible" ui-view="">
+               
+                <div scroll-init class="content_wrapp">
+                    <div ui-view="">
+                    </div>
                 </div>
 
             </div>

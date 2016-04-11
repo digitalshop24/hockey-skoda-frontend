@@ -1,7 +1,7 @@
 'use strict';
 
 
-export default class ProgressCtrl {
+export default class MytestdriveCtrl {
     constructor(achievements) {
         this.achievements = achievements;
         this.achievements.forEach((achievement) => {

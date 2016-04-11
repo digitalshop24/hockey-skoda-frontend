@@ -2694,6 +2694,20 @@ $grey_about: #5d5d5d;
     height: 110vh;
     min-height: 680px;
     padding-top:30px;
+    .content_wrapp {
+        width: 100%;
+        overflow: auto;
+        height: 100vh;
+        position: absolute;
+        top:0;
+        z-index: 1;
+        .jspContainer {
+
+          .jspVerticalBar {
+            width:0px;
+          }
+        }
+    }
     .slick-prev {
       left: 0px;
       width: 100px;
@@ -2711,6 +2725,7 @@ $grey_about: #5d5d5d;
       z-index: 1;
     }
     .progress_contant {
+      padding: 30px;
       h4 {
         text-transform: uppercase;
         font-family: $bold;
@@ -2723,6 +2738,131 @@ $grey_about: #5d5d5d;
       p {
         font-size: $p_size;
       }
+    }
+    .fotocontest_contant {
+      padding: 30px;
+      h4{
+        font-family: $bold;
+        text-transform: uppercase;
+        padding-bottom:20px;
+      }
+      p{
+        font-size: $p_size;
+        padding-bottom: 20px;
+      }
+      h5 {
+        padding: 20px 0;
+      }
+      .download_foto {
+        background-color: $grey;
+        padding: 15px 40px;
+        p {
+          font-size: $p_size;
+          width: 60%;
+          display: inline-block;
+          margin-right: 20px;
+
+        }
+
+      }
+
+      .my_foto {
+        li {
+          width: auto;
+          padding: 0 20px;
+          margin: 20px 0;
+          img {
+            max-width: 250px;
+          }
+          button {
+            margin: 15px 0;
+          }
+          .delet {
+            text-decoration: underline;
+          }
+          p {
+            color: $black;
+          }
+          .wrapp_foto {
+            height: 200px;
+          }
+        }
+        
+
+      }
+    }
+    .supergame_contant {
+      padding: 30px;
+      h4{
+        font-family: $bold;
+        text-transform: uppercase;
+        padding-bottom:20px;
+      }
+      p{
+        font-size: $p_size;
+        padding-bottom: 20px;
+      }
+      img {
+        margin: 0 auto;
+      }
+      // button {
+      //   margin: 10px 0;
+      // }
+      .foto_supergame {
+        .btn_secondary {
+          margin: 20px 0;
+        }
+        img {
+          max-width: 250px;
+        }
+      }
+    }
+    .my_testdrive_contant {
+      padding: 30px;
+      h4{
+        font-family: $bold;
+        text-transform: uppercase;
+        padding-bottom:20px;
+      }
+      p{
+        font-size: $p_size;
+        padding-bottom: 20px;
+      }
+      .download_promo {
+        background-color: $grey;
+        padding: 15px 40px;
+        p {
+          font-size: $p_size;
+          width: auto;
+          display: inline-block;
+          margin-right: 20px;
+        }
+        input {
+          width: 50%;
+        }
+        .btn {
+          margin-left: 10px;
+        }
+
+      }
+      h5 {
+        padding: 20px 0;
+      }
+      table {
+        width: 100%;
+        tr {
+          border-bottom: 1px solid $grey;
+          h6 {
+            font-family: $bold;
+            color:$black;
+          }
+        }
+        td {
+          width: 31%;
+          padding: 10px 0px;
+          font-size: $p_size;
+        }
+      } 
     }
     .edit {
       display: none;      
