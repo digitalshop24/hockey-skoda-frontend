@@ -16,4 +16,12 @@ export default class NotificationService {
             return res.data;
         })
     }
+
+    checkNotifications(lastNotification) {
+        return this.api.post('/notifications',{
+            notification_id: lastNotification
+        }).then((res) => {
+            return res.data;
+        })
+    }
 }

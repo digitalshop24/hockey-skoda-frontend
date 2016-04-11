@@ -144,7 +144,7 @@
 
                 </ul>
             </div>
-             <div class="notifi" ng-show="ctrl.isNotifOpen" ng-mouseleave="ctrl.isNotifOpen = false">
+             <div class="notifi" ng-show="ctrl.isNotifOpen" ng-mouseleave="ctrl.readAllNotifications()">
                     <ul>
                         <li ng-repeat="notification in ctrl.notifications">
                             <img src="img/resources/img/balls.png" alt="">

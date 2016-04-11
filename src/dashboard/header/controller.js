@@ -7,6 +7,7 @@ export default class HeaderCtrl {
         this.session = session;
         this.state = $state;
         this.auth = auth;
+        this.notificationService = notificationService;
         this.isMenuOpen = false;
         this.isNewsOpen = true;
         this.isForecastOpen = false;
@@ -30,6 +31,13 @@ export default class HeaderCtrl {
 
         $scope.$on('user:updated', (event,data) => {
             this.user = data;
+        });
+    }
+
+    readAllNotifications() {
+        this.isNotifOpen = false;
+        this.notificationService.checkNotifications(this.notifications[0].id).then(() => {
+            this.notifications = [];
         });
     }
 
