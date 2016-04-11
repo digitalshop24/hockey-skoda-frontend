@@ -2,11 +2,17 @@
 
 
 export default class RegistrationCtrl {
-    constructor(auth, modal, profileService, $state) {
+    constructor(auth, modal, profileService, $state, brands, skodaCars) {
         this.auth = auth;
+        this.brands = brands;
+        this.skodaCars = skodaCars;
         this.modal = modal;
         this.profileService = profileService;
         this.state = $state;
+    }
+
+    checkIfSkoda() {
+        this.isCurrentCarSkoda = this.form.current_car == 'Skoda';
     }
 
     send() {
