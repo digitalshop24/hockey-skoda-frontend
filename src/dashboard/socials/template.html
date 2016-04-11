@@ -1,0 +1,123 @@
+<section class="social">
+    <div class="container ">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Соцсети</h5>
+                    <h2>Твой френд - звезда</h2>
+                    <p>В безудержном соревновании "попробуй догони" <br> первенствовал нападающий "Эдмонд Ойлера" Коннор <br>Макдейвид, установил планку на высоту в пять очков
+                    </p>
+
+                </div>
+            </div>
+        </div>  
+</section>
+<section class ="wrapp_toggle">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <li>
+                        <h4>Выбрать всех</h4>
+                        <input ng-model="ctrl.allFilter" type="checkbox" name="toggle" class="sw" id="toggle-1"
+                               ng-change="ctrl.enableOrDisableAll()">
+                        <label for="toggle-1"></label>
+                        <span class="on">ON</span>
+                        <span class="off">OFF</span>
+                    </li>
+                    <li>
+                        <img src="img/resources/img/fb.png" alt="" >
+                        <input ng-model="ctrl.fbFilter" ng-change="ctrl.changeFilter()" type="checkbox" name="toggle" class="sw" id="toggle-2" >
+                        <label for="toggle-2"></label>
+                        <span class="on">ON</span>
+                        <span class="off">OFF</span>
+                    </li>
+                    <li>
+                        <img src="img/resources/img/vk.png" alt="" >
+                        <input ng-model="ctrl.vkFilter" ng-change="ctrl.changeFilter()" type="checkbox" name="toggle" class="sw" id="toggle-3" >
+                        <label for="toggle-3"></label>
+                        <span class="on">ON</span>
+                        <span class="off">OFF</span>
+                    </li>
+                    <li>
+                        <img src="img/resources/img/twiter.png" alt="" >
+                        <input ng-model="ctrl.twitterFilter"  ng-change="ctrl.changeFilter()" type="checkbox" name="toggle" class="sw" id="toggle-4" >
+                        <label for="toggle-4"></label>
+                        <span class="on">ON</span>
+                        <span class="off">OFF</span>
+                    </li>
+                    <li>
+                        <img src="img/resources/img/insta.png" alt="" >
+                        <input ng-model="ctrl.instagramFilter" ng-change="ctrl.changeFilter()" type="checkbox" name="toggle" class="sw" id="toggle-5" >
+                        <label for="toggle-5"></label>
+                        <span class="on">ON</span>
+                        <span class="off">OFF</span>
+                    </li>
+                </ul>   
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="wrapp_timeline_social">
+    <div class="dop_timeline"></div>
+    <a href=""><div class="tag_right_hokey">Весь хоккей</div></a>
+    <a href=""><div class="tag_left_hokey">#Хокейвкаждом</div></a>
+    <timeline>
+        <div ng-repeat="day in ctrl.days">
+
+            <timeline-event  ng-show="filtered.length">
+                <timeline-badge  class="{{event.badgeClass}}" style="height: 70px; width:70px; background-color: #4ba82e; border-radius:50%; margin-left: -35px; padding-top: 10px; box-shadow: none;">
+                    <div style="height: 70px;" ng-bind="day.id | amDateFormat:'DD'"></div>
+                    <!--<i class="" ></i>-->
+                </timeline-badge>
+                <timeline-panel style="visibility: hidden">
+                    <div style="height: 50px">
+
+                    </div>
+
+                </timeline-panel>
+            </timeline-event>
+
+
+            <timeline-event ng-repeat="event in day.events | filter:ctrl.filterByNetworks as filtered" side="">
+                <timeline-badge class="{{event.badgeClass}}">
+                    <div style="background-image: url('{{event.profile_pic}}'); height: 50px"></div>
+                    <!--<i class="" ></i>-->
+                </timeline-badge>
+                <timeline-panel class="{{event.badgeClass}}">
+                    <timeline-heading>
+                        <h4>{{event.title}}</h4>
+                    </timeline-heading>
+                    <div class="post_content">
+                                <div class="title">
+                                    <a href="#"><img src="{{event.iconUrl}}" alt="" class="img-responsive"></a>
+                                    <a href="#" class="link_default"><h5 ng-bind="event.published_at | amDateFormat:'DD.MM H:mm'">13:32</h5></a>
+                                    <a href="#" class="link_default"><p ng-bind="event.person.name">Александр Овечкин</p></a>
+                                </div>  
+                                <div class="main_content">
+                                    <p ng-bind-html="event.content"></p>
+
+                                </div>
+                                <div ng-show="event.photos.length">
+                                    <slick>
+                                        <div ng-repeat="photo in event.photos | limitTo:4">
+                                            <img  src="{{photo.image.small}}" />
+                                        </div>
+                                        <span ng-bind="{{event.photos.length}} + ' фото'"></span>
+                                    </slick>
+                                </div>
+                                
+                                <ul class="dop_info">
+                                    <li ng-show="event.likes"><a href="" class="link_default"  ng-bind="event.likes + ' лайков'"></a></li>
+                                    <li ng-show="event.reposts"><a href="" class="link_default"  ng-bind="event.repostText"></a></li>
+                                    <li ng-show="event.post_link"><a href="" class="link_default" href="{{event.post_link}}" target="_blank">Читать</a></li>
+                                </ul>
+                    </div>
+
+                </timeline-panel>
+            </timeline-event>
+        </div>
+
+    </timeline>
+</section>
