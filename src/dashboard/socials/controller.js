@@ -10,6 +10,10 @@ export default class SocialCtrl {
             post.iconClass = post.network;
             post.repostText = post.reposts + ' ' + this.getRepostText(post.network);
             post.iconUrl = this.getIconUrl(post.network);
+            if(post.content.length > 600) {
+                post.minContent = post.content.substring(0,600) + '...';
+                post.showMinContent = true;
+            }
 
             const temp = moment(post.published_at).format('YYYY-MM-DD');
             var day = days.find(day => day.id == temp);
@@ -37,6 +41,9 @@ export default class SocialCtrl {
         this.filterByNetworks = post => {
             return $scope.ctrl.networks.indexOf(post.network) != -1;
         };
+    }
+
+    loadMore() {
     }
 
     enableOrDisableAll() {
