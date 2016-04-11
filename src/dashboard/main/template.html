@@ -142,9 +142,9 @@
             </div>
             <div class="col-md-2 text-center" ng-repeat="match in ctrl.schedule | filter:ctrl.filterByTeam | limitTo:4">
                 <p class="titel" ng-bind="match.when | amDateFormat:'DD.MM H:mm'"></p>
-                <img src="{{match.redteam.image.thumb}}" alt="">
+                <img style="width: 40px; height: 40px" src="{{match.redteam.image.thumb}}" alt="">
                 <img src="img/resources/img/line.png" alt="" class="line">
-                <img src="{{match.blueteam.image.thumb}}" alt="">
+                <img style="width: 40px; height: 40px" src="{{match.blueteam.image.thumb}}" alt="">
                 <ul>
                     <li class="command1" ng-bind="match.redteam.country"></li>
                     <li class="command1" ng-bind="match.blueteam.country"></li>
