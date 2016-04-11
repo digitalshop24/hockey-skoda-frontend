@@ -13,11 +13,12 @@ export default class NewspageService {
         });
     }
 
-    getNews(rubric, page, perPage) {
+    getNews(rubric, page, perPage, origin) {
         return this.api.get(`/posts/${rubric}`, {
             params: {
                 page: page,
-                per_page: perPage
+                per_page: perPage,
+                origin: origin
             }
         }).then((res) => {
             return res.data.posts;

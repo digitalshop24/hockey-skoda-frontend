@@ -28,9 +28,13 @@ export default angular.module('dashboard.newspage', [
                         return newspageService.getNewsById($stateParams.rubric, $stateParams.id);
                     },
 
-                    lastNews: ($stateParams, newspageService, news) => {
+                    lastNews: ($stateParams, newspageService) => {
+                        return newspageService.getNews($stateParams.rubric, 1, 20, 'content_manager');
+                    },
+
+                    championatNews: ($stateParams, newspageService, news) => {
                         const multiplier = Math.ceil(news.content.length / 1500) * 5;
-                        return newspageService.getNews($stateParams.rubric, 1, multiplier);
+                        return newspageService.getNews($stateParams.rubric, 1, multiplier, 'championat');
                     },
 
                     commentsInfo: ($stateParams, newspageService) => {
