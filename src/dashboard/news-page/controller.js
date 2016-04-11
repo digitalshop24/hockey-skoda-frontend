@@ -2,11 +2,12 @@
 
 
 export default class NewspageCtrl {
-    constructor(news, session, login, commentsInfo, newspageService, $document, page, $state, lastNews) {
+    constructor(news, session, login, commentsInfo, newspageService, $document, page, $state, lastNews, championatNews) {
         this.news = news;
         this.rubric = news.rubric;
         this.session = session;
-        this.lastNews = lastNews;
+        this.lastNews = lastNews.reverse();
+        this.championatNews = championatNews;
         this.login = login;
         this.comments = commentsInfo.comments;
         this.commentsAmount = commentsInfo.comments_count;
@@ -15,6 +16,7 @@ export default class NewspageCtrl {
         this.currentPage = page;
         this.state = $state;
         this.rubricState = this.getRubricState(this.rubric.api_path);
+        this.indexToShowLastNews = this.lastNews.length - 5;
     }
 
     openEditor() {

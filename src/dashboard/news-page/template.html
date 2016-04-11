@@ -2,9 +2,9 @@
     <div class="menu_line ">
         <ul>
             <ul>
-               <a ui-sref="dashboard.general-news"><li class="general_news_imgbg"><!-- <img src="img/resources/img/news/ico_menu1_noactive_notext.png" alt="" class="img-responsive"> --><p >События</p></li></a>
-                <a ui-sref="dashboard.facts"><li class="fix_one_news_hover" ><!-- <img src="img/resources/img/news/ico_menu2_noactive_notext.png" alt=""  class="img-responsive"> --><p class="">Факты</p></li></a>
-                <a ui-sref="dashboard.blog"><li class="blog_imgbg"><!-- <img src="img/resources/img/news/ico_menu3_active_notext.png" alt="" class="img-responsive"> --><p >Аналитика</p></li></a>
+               <a ui-sref="dashboard.general-news"><li class="general_news_imgbg"><p >События</p></li></a>
+                <a ui-sref="dashboard.facts"><li class="fix_one_news_hover" ><p class="">Факты</p></li></a>
+                <a ui-sref="dashboard.blog"><li class="blog_imgbg"><p >Аналитика</p></li></a>
             </ul>
         </ul>
     </div>
@@ -32,9 +32,9 @@
                     </a>
                 </div>
                 <h6>{{ctrl.rubric.api_path == 'stars' ? 'Звезды хоккея ' : 'Другие новости '}}<span class="show_all"><a ui-sref="{{ctrl.rubricState}}">Смотреть все</a></span></h6>
-                <p class="littel_date" ng-bind="ctrl.lastNews[0].published_at | amDateFormat:'DD MMMM'"></p>
+                <p class="littel_date" ng-bind="ctrl.championatNews[0].published_at | amDateFormat:'DD MMMM'"></p>
                 <ul>
-                    <li ng-repeat="lastNews in ctrl.lastNews" ng-if="ctrl.news.id != lastNews.id">
+                    <li ng-repeat="lastNews in ctrl.championatNews" ng-if="ctrl.news.id != lastNews.id">
                         <p class="littel_news"><a ui-sref="dashboard.newspage({id:lastNews.id, rubric:lastNews.rubric.api_path})" ng-bind="lastNews.name"></a></p>
                         <span class="littel_time" ng-bind="lastNews.published_at | amDateFormat:'H:mm'">12:45</span>
                         <span class="little_comment" ng-bind="lastNews.comments_count"></span>
@@ -43,6 +43,29 @@
             </div>
         </div>
     </div>
+    <section class="wrapp_mainpage_new">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <!--slick current-index="ctrl.newsCurrentIndex" infinite="false" arrows="true"
+                         dots="false" slides-to-show="{{ctrl.slidesToShow}}" data="ctrl.lastNews" slides-to-scroll="3" responsive="ctrl.responsive"-->
+                    <div class="mainpage_news_slider" main-slider-init initial-slide="ctrl.indexToShowLastNews">
+
+                        <div ng-repeat="news in ctrl.lastNews" style="padding-left:5px; padding-right: 5px;">
+                            <h3><span class="news_date" ng-bind="news.published_at | amDateFormat:'DD'"></span> <span class="news_month" ng-bind="news.published_at | amDateFormat:'MMMM'"></span></h3>
+
+                            <div class="news_one_slider" style="background-image: url({{news.image.medium}})">
+                                <div class="news_one_slider_bg"></div>
+                                <a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" class="news_titel"
+                                   ng-bind="news.name"></a>
+                                <p class="news_content" ng-bind="news.short_content"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="container">
         <div class="row wrapp_comments">
             <div class="col-md-6 text-right">
@@ -62,7 +85,9 @@
 
                     <p class="date_posts" ng-bind="comment.published_at | amDateFormat:'DD.MM.YYYY H:mm'"></p>
                 </div>
+
             </div>
+
             </div>
         </div>
         <div class="row end_comment">

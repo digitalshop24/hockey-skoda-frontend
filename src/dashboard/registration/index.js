@@ -14,6 +14,15 @@ export default angular.module('dashboard.registration', [
                 template: require('./template.html'),
                 url: '/registration',
                 controller: RegistrationCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                resolve: {
+                    brands: regService => {
+                        return regService.getBrands();
+                    },
+
+                    skodaCars: regService => {
+                        return regService.getSkodaCars();
+                    }
+                }
             });
     });

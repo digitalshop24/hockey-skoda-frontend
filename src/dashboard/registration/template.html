@@ -84,11 +84,30 @@
                 <div class="row">
                     <div class="col-md-6 left">
                         <h4>Ваша машина?<span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
-                        <input type="text" ng-model="ctrl.form.current_car" class="input_default input_small" placeholder="">
+                        <select style="width: 350px" class="input_default input_small"
+                                ng-options="car for car in ctrl.brands" ng-model="ctrl.form.current_car" ng-change="ctrl.isCurrentCarSkoda = ctrl.form.current_car == 'Skoda'">
+                            <option disabled selected value>Выберите текущую</option>
+
+                        </select>
                     </div>
                     <div class="col-md-6 left">
                         <h4>А прошлая? <span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
-                        <input type="text" ng-model="ctrl.form.last_car" class="input_default input_small" placeholder="">
+                        <select style="width: 350px" class="input_default input_small"
+                                ng-options="car for car in ctrl.brands" ng-model="ctrl.form.last_car">
+                            <option disabled selected value>Выберите прошлую</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="ctrl.isCurrentCarSkoda">
+                    <div class="col-md-6 left">
+                        <h4>Укажите модель?<span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <select style="width: 350px" class="input_default input_small"
+                                ng-options="car for car in ctrl.skodaCars" ng-model="ctrl.form.skoda_model">
+                            <option disabled selected value>Выберите модель</option>
+
+                        </select>
                     </div>
                 </div>
             </div>
