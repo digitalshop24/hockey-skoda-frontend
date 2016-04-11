@@ -83,6 +83,15 @@
 
 
 <section class="other_video">
+    <div class="row">
+        <div class="col-md-12 ">
+            <ul class="tag_post" ng-show="ctrl.tags.length">
+                <li>Фильтр по тэгам:</li>
+                <li ng-repeat="tag in ctrl.tags"><p><a  ng-bind="tag"></a><span ng-click="ctrl.removeTag(tag)"> x </span></p>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row ">
             <div class="col-md-3" ng-repeat="video in ctrl.videos | filter: {name:ctrl.search}">
@@ -90,6 +99,10 @@
                 <p class="bold"><a ng-click="ctrl.setNewMainVideo(video)" ng-bind="video.name"></a></p>
 
                 <p><a href="" ng-bind="video.published_at | amDateFormat:'DD MMMM'"></a></p>
+
+                <ul class="tag_post">
+                    <li ng-repeat="tag in video.tags"><a ng-click="ctrl.addTagToFilter(tag)" href=""><p ng-bind="tag"></p></a></li>
+                </ul>
 
             </div>
         </div>
