@@ -35,22 +35,22 @@
                     <li>
                         <a ui-sref="dashboard.profile.progress"><img src="img/resources/img/lk/roket.png" alt="" class="img-responsive">
 
-                            <p class="active">Моя активность</p></a>
+                            <p ng-class="{'active' : $state.includes('dashboard.profile.progress')}">Моя активность</p></a>
                     </li>
                     <li>
                         <a ui-sref="dashboard.profile.fotocontest"><img src="img/resources/img/lk/fotoconc.png" alt="" class="img-responsive">
 
-                            <p class="">Фотоконкурс</p></a>
+                            <p ng-class="{'active' : $state.includes('dashboard.profile.fotocontest')}">Фотоконкурс</p></a>
                     </li>
                     <li>
                         <a ui-sref="dashboard.profile.mytestdrive"><img src="img/resources/img/lk/testdrive.png" alt="" class="img-responsive">
 
-                            <p class="">Мои тест-драйвы</p></a>
+                            <p ng-class="{'active' : $state.includes('dashboard.profile.mytestdrive')}">Мои тест-драйвы</p></a>
                     </li>
                     <li>
                         <a ui-sref="dashboard.profile.supergame"><img src="img/resources/img/lk/supergame.png" alt="" class="img-responsive">
 
-                            <p class="">Суперигра</p></a>
+                            <p ng-class="{'active' : $state.includes('dashboard.profile.supergame')}">Суперигра</p></a>
                     </li>
                     
                 </ul>

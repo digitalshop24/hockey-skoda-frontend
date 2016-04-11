@@ -2,7 +2,7 @@
 
 
 export default class ProgressCtrl {
-    constructor(achievements) {
+    constructor(achievements, moment) {
         this.achievements = achievements;
         this.achievements.forEach((achievement) => {
             achievement.max_points = achievement.max_points || '&#8734;'; // infinity sign
@@ -11,5 +11,6 @@ export default class ProgressCtrl {
             achievement.progressBarPercentage = 100 - achievement.percentage;
             achievement.currentBallAmount = achievement.current_points;
         });
+        this.today = moment().format('DD MMMM');
     }
 }
