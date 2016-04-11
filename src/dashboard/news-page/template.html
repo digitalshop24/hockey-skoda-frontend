@@ -56,11 +56,11 @@
                     <img src="{{comment.user.avatar.thumb}}" alt="" class="img-responsive">
                 </div>
                 <div class="col-md-10">
-                    <h6 ng-bind="comment.user.name">Дмитрий Иванов</h6>
+                    <h6 ng-bind="comment.user.name"></h6>
 
                     <p ng-bind-html="comment.content"></p>
 
-                    <p class="date_posts" ng-bind="comment.published_at | amDateFormat:'DD.MM.YYYY H:mm'">09.02.2015 9:45</p>
+                    <p class="date_posts" ng-bind="comment.published_at | amDateFormat:'DD.MM.YYYY H:mm'"></p>
                 </div>
             </div>
             </div>

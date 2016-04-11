@@ -55,7 +55,7 @@
                   <a ui-sref="dashboard.infographics"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Инфографика сборной России</li></a>
                   <a ui-sref="dashboard.tantamareska"><li class="li_disabel" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Тантамарезка</li></a>
                   <a ui-sref="dashboard.suggestions"><li class="li_disabel" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Пожелание сборной</li></a>
-                  <a href="#"><li class="li_disabel" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Соц.сети хоккеистов</li></a>
+                  <a href="#" ui-sref="dashboard.socials" ><li class="" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Соц.сети хоккеистов</li></a>
                   <a href="#"><li class="li_disabel" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Junior Ice Hockey Cup</li></a>
                 </ul>
               </li></a>
@@ -213,7 +213,7 @@
                             <ul ng-show="ctrl.isNewsOpen">
 
                                 <a ui-sref="dashboard.general-news" ng-click="ctrl.isMenuOpen = false"><li>События</li></a>
-                                <a ui-sref="dashboard.facts" ng-click="ctrl.isMenuOpen = false"><li>Факты</li></a>
+                                <a ui-sref="dashboard.facts" ng-click="ctrl.isMenuOpen = false"><li>Интересные факты</li></a>
                                 <a ui-sref="dashboard.blog" ng-click="ctrl.isMenuOpen = false" ><li>Аналитика</li></a>
                                 <a ui-sref="dashboard.cheer" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel">Девушки-чирлидирши</li></a>
                                 <a ui-sref="dashboard.stars" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel">О звездах хоккея</li></a>
@@ -240,7 +240,7 @@
                                 <a ui-sref="dashboard.infographics"><li> Инфографика сборной России</li></a>
                                 <a ui-sref="dashboard.tantamareska" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel"> Тантамарезка</li></a>
                                 <a href=""><li class="li_disabel"> Пожелание сборной</li></a>
-                                <a href=""><li class="li_disabel"> Соц.сети хоккеистов</li></a>
+                                <a href="" ui-sref="dashboard.socials"><li class=""> Соц.сети хоккеистов</li></a>
                                 <a href=""><li class="li_disabel"> Junior Ice Hockey Cup</li></a>
                             </ul>
                         </div>

@@ -40,35 +40,40 @@
                 </div>
             <div class=" backg-1">
                 <div class="choice_one">
-                    <div class="choice_one-item">
+                    <div class="choice_one-item" >
                         <div class="choice_one-item-bor">
                             <select class="input_default input_small"
-                                    ng-options="team.country for team in ctrl.forecast.firstQuarter.teams track by team.id"
-                                    ng-model="ctrl.forecast.firstQuarter.redteam" ng-disabled="ctrl.forecast.firstQuarter.disabled">
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-options="team.country for team in ctrl.forecast.firstQuarter.teams"
+                                    ng-model="ctrl.forecast.firstQuarter.redteam"  ng-disabled="ctrl.forecast.firstQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.firstQuarter)">
+                                <option disabled  value ng-show="ctrl.forecast.firstQuarter.redteam"
+                                        ng-bind="ctrl.forecast.firstQuarter.redteam.country || 'Выберите команду'"></option>
+
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
                             <select class="input_default input_small"
                                     ng-options="team.country for team in ctrl.forecast.firstQuarter.teams track by team.id"
-                                    ng-model="ctrl.forecast.firstQuarter.blueteam" ng-disabled="ctrl.forecast.firstQuarter.disabled">
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-model="ctrl.forecast.firstQuarter.blueteam"  ng-disabled="ctrl.forecast.firstQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.firstQuarter)">
+                                <option disabled  value ng-show="ctrl.forecast.firstQuarter.blueteam"
+                                        ng-bind="ctrl.forecast.firstQuarter.blueteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
                     </div>
                     <div class="choice_one-item" >
                         <div class="choice_one-item-bor">
                             <select class="input_default input_small"
-                                    ng-options="team.country for team in ctrl.forecast.secondQuarter.teams track by team.id"
-                                    ng-model="ctrl.forecast.secondQuarter.redteam" ng-disabled="ctrl.forecast.firstQuarter.disabled">
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-options="team.country for team in ctrl.forecast.secondQuarter.teams  track by team.id"
+                                    ng-model="ctrl.forecast.secondQuarter.redteam" ng-disabled="ctrl.forecast.secondQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.secondQuarter)">
+                                <option disabled  value ng-show="ctrl.forecast.secondQuarter.redteam"
+                                        ng-bind="ctrl.forecast.secondQuarter.redteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
                             <select class="input_default input_small"
-                                    ng-options="team.country for team in ctrl.forecast.secondQuarter.teams track by team.id"
-                                    ng-model="ctrl.forecast.secondQuarter.blueteam" ng-disabled="ctrl.forecast.firstQuarter.disabled">
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-options="team.country for team in ctrl.forecast.secondQuarter.teams  track by team.id"
+                                    ng-model="ctrl.forecast.secondQuarter.blueteam" ng-disabled="ctrl.forecast.secondQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.secondQuarter)">
+                                <option disabled  value ng-show="ctrl.forecast.secondQuarter.blueteam"
+                                        ng-bind="ctrl.forecast.secondQuarter.blueteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
                     </div>
@@ -76,15 +81,17 @@
                         <div class="choice_one-item-bor">
                             <select class="input_default input_small"
                                     ng-options="team.country for team in ctrl.forecast.thirdQuarter.teams track by team.id"
-                                    ng-model="ctrl.forecast.thirdQuarter.redteam" ng-disabled="ctrl.forecast.firstQuarter.disabled">
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-model="ctrl.forecast.thirdQuarter.redteam" ng-disabled="ctrl.forecast.thirdQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.thirdQuarter)">
+                                <option disabled  value ng-show="ctrl.forecast.thirdQuarter.redteam"
+                                        ng-bind="ctrl.forecast.thirdQuarter.redteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
                             <select class="input_default input_small"
                                     ng-options="team.country for team in ctrl.forecast.thirdQuarter.teams track by team.id"
-                                    ng-model="ctrl.forecast.thirdQuarter.blueteam" ng-disabled="ctrl.forecast.firstQuarter.disabled">
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-model="ctrl.forecast.thirdQuarter.blueteam" ng-disabled="ctrl.forecast.thirdQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.thirdQuarter)">
+                                <option disabled  value ng-show="ctrl.forecast.thirdQuarter.blueteam"
+                                        ng-bind="ctrl.forecast.thirdQuarter.blueteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
                     </div>
@@ -92,15 +99,17 @@
                         <div class="choice_one-item-bor">
                             <select class="input_default input_small"
                                     ng-options="team.country for team in ctrl.forecast.forthQuarter.teams track by team.id"
-                                    ng-model="ctrl.forecast.forthQuarter.redteam" ng-disabled="ctrl.forecast.firstQuarter.disabled">
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-model="ctrl.forecast.forthQuarter.redteam" ng-disabled="ctrl.forecast.forthQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.forthQuarter)">
+                                <option disabled  value ng-show="ctrl.forecast.forthQuarter.redteam"
+                                        ng-bind="ctrl.forecast.forthQuarter.redteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
                             <select class="input_default input_small"
                                     ng-options="team.country for team in ctrl.forecast.forthQuarter.teams track by team.id"
-                                    ng-model="ctrl.forecast.forthQuarter.blueteam" ng-disabled="ctrl.forecast.firstQuarter.disabled">
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-model="ctrl.forecast.forthQuarter.blueteam" ng-disabled="ctrl.forecast.forthQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.forthQuarter)">
+                                <option disabled  value ng-show="ctrl.forecast.forthQuarter.blueteam"
+                                        ng-bind="ctrl.forecast.forthQuarter.blueteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
                     </div>
@@ -200,16 +209,19 @@
                         <div class="choice_one-item" >
                             <div class="choice_one-item-bor">
                                 <select class="input_default input_small"
-                                        ng-options="team.country as team.country  for team in ctrl.forecast.firstQuarter.teams"
-                                        ng-model="ctrl.forecast.firstQuarter.redteam"  ng-disabled="ctrl.forecast.firstQuarter.disabled">
-                                    <option disabled  value> Выберите команду</option>
+                                        ng-options="team.country for team in ctrl.forecast.firstQuarter.teams"
+                                        ng-model="ctrl.forecast.firstQuarter.redteam"  ng-disabled="ctrl.forecast.firstQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.firstQuarter)">
+                                    <option disabled  value ng-show="ctrl.forecast.firstQuarter.redteam"
+                                            ng-bind="ctrl.forecast.firstQuarter.redteam.country || 'Выберите команду'"></option>
+
                                 </select>
                             </div>
                             <div class="choice_one-item-bor">
                                 <select class="input_default input_small"
                                         ng-options="team.country for team in ctrl.forecast.firstQuarter.teams track by team.id"
-                                        ng-model="ctrl.forecast.firstQuarter.blueteam"  ng-disabled="ctrl.forecast.firstQuarter.disabled">
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.firstQuarter.blueteam"  ng-disabled="ctrl.forecast.firstQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.firstQuarter)">
+                                    <option disabled  value ng-show="ctrl.forecast.firstQuarter.blueteam"
+                                            ng-bind="ctrl.forecast.firstQuarter.blueteam.country || 'Выберите команду'"></option>
                                 </select>
                             </div>
                         </div>
@@ -217,15 +229,17 @@
                             <div class="choice_one-item-bor">
                                 <select class="input_default input_small"
                                         ng-options="team.country for team in ctrl.forecast.secondQuarter.teams  track by team.id"
-                                        ng-model="ctrl.forecast.secondQuarter.redteam" ng-disabled="ctrl.forecast.secondQuarter.disabled">
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.secondQuarter.redteam" ng-disabled="ctrl.forecast.secondQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.secondQuarter)">
+                                    <option disabled  value ng-show="ctrl.forecast.secondQuarter.redteam"
+                                            ng-bind="ctrl.forecast.secondQuarter.redteam.country || 'Выберите команду'"></option>
                                 </select>
                             </div>
                             <div class="choice_one-item-bor">
                                 <select class="input_default input_small"
                                         ng-options="team.country for team in ctrl.forecast.secondQuarter.teams  track by team.id"
-                                        ng-model="ctrl.forecast.secondQuarter.blueteam" ng-disabled="ctrl.forecast.secondQuarter.disabled">
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.secondQuarter.blueteam" ng-disabled="ctrl.forecast.secondQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.secondQuarter)">
+                                    <option disabled  value ng-show="ctrl.forecast.secondQuarter.blueteam"
+                                            ng-bind="ctrl.forecast.secondQuarter.blueteam.country || 'Выберите команду'"></option>
                                 </select>
                             </div>
                         </div>
@@ -233,15 +247,17 @@
                             <div class="choice_one-item-bor">
                                 <select class="input_default input_small"
                                         ng-options="team.country for team in ctrl.forecast.thirdQuarter.teams track by team.id"
-                                        ng-model="ctrl.forecast.thirdQuarter.redteam" ng-disabled="ctrl.forecast.thirdQuarter.disabled">
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.thirdQuarter.redteam" ng-disabled="ctrl.forecast.thirdQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.thirdQuarter)">
+                                    <option disabled  value ng-show="ctrl.forecast.thirdQuarter.redteam"
+                                            ng-bind="ctrl.forecast.thirdQuarter.redteam.country || 'Выберите команду'"></option>
                                 </select>
                             </div>
                             <div class="choice_one-item-bor">
                                 <select class="input_default input_small"
                                         ng-options="team.country for team in ctrl.forecast.thirdQuarter.teams track by team.id"
-                                        ng-model="ctrl.forecast.thirdQuarter.blueteam" ng-disabled="ctrl.forecast.thirdQuarter.disabled">
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.thirdQuarter.blueteam" ng-disabled="ctrl.forecast.thirdQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.thirdQuarter)">
+                                    <option disabled  value ng-show="ctrl.forecast.thirdQuarter.blueteam"
+                                            ng-bind="ctrl.forecast.thirdQuarter.blueteam.country || 'Выберите команду'"></option>
                                 </select>
                             </div>
                         </div>
@@ -249,15 +265,17 @@
                             <div class="choice_one-item-bor">
                                 <select class="input_default input_small"
                                         ng-options="team.country for team in ctrl.forecast.forthQuarter.teams track by team.id"
-                                        ng-model="ctrl.forecast.forthQuarter.redteam" ng-disabled="ctrl.forecast.forthQuarter.disabled">
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.forthQuarter.redteam" ng-disabled="ctrl.forecast.forthQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.forthQuarter)">
+                                    <option disabled  value ng-show="ctrl.forecast.forthQuarter.redteam"
+                                            ng-bind="ctrl.forecast.forthQuarter.redteam.country || 'Выберите команду'"></option>
                                 </select>
                             </div>
                             <div class="choice_one-item-bor">
                                 <select class="input_default input_small"
                                         ng-options="team.country for team in ctrl.forecast.forthQuarter.teams track by team.id"
-                                        ng-model="ctrl.forecast.forthQuarter.blueteam" ng-disabled="ctrl.forecast.forthQuarter.disabled">
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.forthQuarter.blueteam" ng-disabled="ctrl.forecast.forthQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.forthQuarter)">
+                                    <option disabled  value ng-show="ctrl.forecast.forthQuarter.blueteam"
+                                            ng-bind="ctrl.forecast.forthQuarter.blueteam.country || 'Выберите команду'"></option>
                                 </select>
                             </div>
                         </div>
@@ -328,7 +346,7 @@
             </div>
             <div class="forecast clearfix">
                 <div class="col-sm-7">
-                    <button class="btn btn_primary main">Таков мой прогноз!</button>
+                    <button class="btn btn_primary main" ng-disabled="!ctrl.canSendForecast">Таков мой прогноз!</button>
                 </div>
                 <div class="col-sm-5 pos-fre">
                     <span class="fri">Обсудить с друзьями:</span>

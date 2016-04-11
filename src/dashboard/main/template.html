@@ -4,9 +4,9 @@
             <li class="one_game_wrapp" ng-repeat="match in ctrl.schedule | limitTo:3">
                 <ul class="one_game">
                     <li ng-bind="match.redteam.country"></li>
-                    <li><img src="img/resources/img/rus.png" alt=""></li>
+                    <li><img src="{{match.redteam.image.thumb}}" alt=""></li>
                     <li>-</li>
-                    <li><img src="img/resources/img/rus.png" alt=""></li>
+                    <li><img src="{{match.blueteam.image.thumb}}" alt=""></li>
                     <li ng-bind="match.blueteam.country"></li>
                     <li ng-bind="match.when | amDateFormat:'DD.MM H:mm'"></li>
                 </ul>
@@ -66,24 +66,24 @@
                     
                 </div>
                 <div class="row hash_tag">
-                    <div class="col-md-1 text-center">
-                        <p>Хэштеги</p>
-                    </div>
-                    <div class="col-md-11">
-                        <ul>
-                            <li><a href="">#Хоккейвкаждом</a></li>
-                            <li><a href="">#Хоккейвкаждом</a></li>
-                            <li><a href="">#Хоккейвкаждом</a></li>
-                            <li><a href="">#Хоккейвкаждом</a></li>
-                            <li><a href="">#Хоккейвкаждом</a></li>
-                            <li><a href="">#Хоккейвкаждом</a></li>
-                            <li><a href="">#Хоккейвкаждом</a></li>
-                            <li><a href="">#Хоккейвкаждом</a></li>
-                            <li ng-show="!ctrl.openAddTags"><a ng-click="ctrl.openAddTags = true"><img src="img/resources/img/three_dots.png" alt=""></a></li>
-                            <li ng-show="ctrl.openAddTags"><a href="">#Хоккейвкаждом</a></li>
-                            <li ng-show="ctrl.openAddTags"><a href="">#Хоккейвкаждом</a></li>
-                        </ul>
-                    </div>
+                        <div class="col-md-1 text-center">
+                            <p>Хэштеги</p>
+                        </div>
+                        <div class="col-md-11">
+                            <ul>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li><a href="">#Хоккейвкаждом</a></li>
+                                <li ng-show="!ctrl.openAddTags"><a ng-click="ctrl.openAddTags = true"><img src="img/resources/img/three_dots.png" alt=""></a></li>
+                                <li ng-show="ctrl.openAddTags"><a href="">#Хоккейвкаждом</a></li>
+                                <li ng-show="ctrl.openAddTags"><a href="">#Хоккейвкаждом</a></li>
+                            </ul>
+                        </div>
                 </div>
                 <div class="row ul_news">   
 
@@ -142,9 +142,9 @@
             </div>
             <div class="col-md-2 text-center" ng-repeat="match in ctrl.schedule | filter:ctrl.filterByTeam | limitTo:4">
                 <p class="titel" ng-bind="match.when | amDateFormat:'DD.MM H:mm'"></p>
-                <img src="img/resources/img/rus.png" alt="">
+                <img src="{{match.redteam.image.thumb}}" alt="">
                 <img src="img/resources/img/line.png" alt="" class="line">
-                <img src="img/resources/img/rus.png" alt="">
+                <img src="{{match.blueteam.image.thumb}}" alt="">
                 <ul>
                     <li class="command1" ng-bind="match.redteam.country"></li>
                     <li class="command1" ng-bind="match.blueteam.country"></li>
