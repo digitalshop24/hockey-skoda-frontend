@@ -2,21 +2,29 @@
 
 
 export default class BlogCtrl {
-    constructor(blogsInfo, $state, page, tags) {
+    constructor(blogsInfo, $state, page, tags, blogService, $stateParams) {
         this.blogs = blogsInfo.posts;
         this.blogsAmount = blogsInfo.posts_count;
         this.state = $state;
         this.currentPage = page;
         this.tags = tags;
+        this.blogService = blogService;
+        this.busy = false;
+        this.$stateParams = $stateParams;
     }
 
     loadMore() {
-        this.state.go('dashboard.blog', {
-            blogs: this.blogs,
-            page: ++this.currentPage,
-            tagFilter: false,
-            notScrollToTop: true
-        });
+        if (this.busy) return;
+        this.busy = true;
+
+        if(this.$stateParams.hashtags) {
+            this.$stateParams.tags = this.$stateParams.hashtags.split(',');
+        }
+        this.blogService.getBlogs(++this.currentPage, this.$stateParams.perPage, this.$stateParams.tags)
+            .then((res) => {
+                this.blogs = this.blogs.concat(res.posts);
+                this.busy = false;
+            });
     }
 
     addTagToFilter(tag) {
