@@ -8,6 +8,9 @@
 
             </div>
             <div class="col-sm-2 col-md-2 lk_info ">
+                    <span ngf-select="ctrl.uploadAvatar($file)" class="edit_hover"><img src="{{ctrl.user.avatar.thumb}}" alt="" class="img-responsive hidden-xs">
+                        <button class="edit btn btn_common tiny">Изменить</button>
+                    </span>
                 <a href="#" class="hidden-xs"><h6 ng-bind="ctrl.user.name"></h6></a>
 
                 <ul>
@@ -34,18 +37,28 @@
 
                             <p class="active">Моя активность</p></a>
                     </li>
+                    <li>
+                        <a ui-sref="dashboard.profile.fotocontest"><img src="img/resources/img/lk/roket.png" alt="" class="img-responsive">
+
+                            <p class="">Фотоконкурс</p></a>
+                    </li>
+                    <li>
+                        <a ui-sref="dashboard.profile.progress"><img src="img/resources/img/lk/roket.png" alt="" class="img-responsive">
+
+                            <p class="">Мои тест-драйвы</p></a>
+                    </li>
+                    <li>
+                        <a ui-sref="dashboard.profile.progress"><img src="img/resources/img/lk/roket.png" alt="" class="img-responsive">
+
+                            <p class="">Суперигра</p></a>
+                    </li>
+                    
                 </ul>
             </div>
             <div class="col-sm-6 col-md-6 lk_content">
                 <ul class="avatar">
 
-                    <li ngf-select="ctrl.uploadAvatar($file)" class="edit_hover"><img src="{{ctrl.user.avatar.thumb}}"
-                                                                                      alt=""
-                                                                                      class="img-responsive hidden-xs">
-                        <button class="edit btn btn_common tiny">Изменить</button>
-                    </li>
-                    <h5 ng-bind="'Сегодня, ' + ctrl.today"/>
-                    </li>
+                    
                 </ul>
                 <div style="overflow-y: visible" ui-view="">
                 </div>

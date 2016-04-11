@@ -2634,7 +2634,30 @@ $grey_about: #5d5d5d;
         }
       }
     }
-    
+    .edit {
+      display: none;      
+    }
+    .edit_hover {
+      img {
+          width:100px;
+          margin: 0 auto;
+      }
+    }
+    .edit_hover:hover {
+        
+        .edit {
+            display: block;
+            position: absolute; 
+            top: 60px;
+            margin-left: 45px;
+            z-index: 100; 
+
+        }
+        .edit:hover {
+            display: block;
+            position: absolute;  
+        }
+    }
        
   }
   .lk_menu {
@@ -2652,14 +2675,15 @@ $grey_about: #5d5d5d;
         a{
           p{
             font-size: $p_size;
-            color: $white;
+            color: $grey;
             text-transform: uppercase;
-            font-family: $regular;
+            font-family: $bold;
+
           }
           img {
             margin: 0 auto;
             padding-top: 35px;
-            padding-bottom: 35px;
+            padding-bottom: 10px;
           }
         }
       }
@@ -2686,20 +2710,18 @@ $grey_about: #5d5d5d;
       top: 40%;
       z-index: 1;
     }
-    .avatar {
-      li{
-        display: inline-block;
-        width: auto;
-        img {
-          width: 70px;
-          height: 70px;
-          border-radius: 50%;
-        }
-        h6 {
-          margin-left: 20px;
-          position: relative;
-          top: -20px;
-        }
+    .progress_contant {
+      h4 {
+        text-transform: uppercase;
+        font-family: $bold;
+      }
+      .date {
+        font-size: $p_size;
+        font-style: italic;
+        padding: 20px 0;
+      }
+      p {
+        font-size: $p_size;
       }
     }
     .edit {
