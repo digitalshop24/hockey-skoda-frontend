@@ -8,15 +8,15 @@
             <ul class="drilldown-root">
                 <li><input type="text" class="input_default input_small" placeholder="Я ищу... "></li>
                 <a href=""><li>
-                    Новости
+                    Материалы
                     <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
                     <ul class="drilldown-sub">
-                      <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Новости</a></li>
+                      <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Материалы</a></li>
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.general-news">События</li></a>
                       <!-- <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.forecast.companionship">Матчи</li></a> -->
-                      <a href="#"><li class="li_sub" ui-sref="dashboard.facts" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Факты</li></a>
+                      <a href="#"><li class="li_sub" ui-sref="dashboard.facts" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Интересные факты</li></a>
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.blog">Аналитика</li></a>
-                      <a href="#"><li class="li_disabel" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.cheer">Девушки-чирлидирши</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.cheer">Девушки-чирлидирши</li></a>
                       <a href="#"><li class="li_disabel" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" >О звездах хоккея</li></a>
                       <a href="#"><li class="li_disabel" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" >Хоккейные видео</li></a>
                     </ul>
@@ -61,7 +61,7 @@
               </li></a>
               <a href="#"><li class="end_li" ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup(); ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen;"><img src="img/resources/img/user.png" alt=""class="img_li"> <span>Войти или зарегистрироваться</span><img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li"></li></a>
               <a href="#"><li class="end_li"><img src="img/resources/img/notifi.png" alt=""class="img_li"> <span>Уведомления</span><img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li"></li></a>
-              <a href="#"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" class="end_li"><img src="img/resources/img/singin.png" alt="" class="img_li"><span> Тест-Драйв</span></li></a>
+              <a href="#"><li ui-sref="dashboard.tdrive" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" class="end_li"><img src="img/resources/img/singin.png" alt="" class="img_li"><span> Тест-Драйв</span></li></a>
             </ul>
           </div>
     </div>
@@ -72,17 +72,19 @@
             <div class="col-sm-12 col-md-12 left_head text-left">
                 <a ui-sref="dashboard.main" class="logo"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
                 <ul>
-                    <li ng-mouseover="ctrl.isMenuOpen = true" ng-class="active_li">
+                    <li ng-mouseover="ctrl.isMenuOpen = true; ctrl.isPNewsOpen = false" ng-class="active_li">
                         <a href="">
                             <span>Меню</span>
                             <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
                         </a>
                     </li>
                     <li  ng-class="active_li">
-                        <a href="" ui-sref="dashboard.general-news">
-                            <span>Новости</span>
+                        <a href="" ui-sref="dashboard.general-news" ng-mouseover="ctrl.isPNewsOpen = true; ctrl.isMenuOpen = false">
+                            <span>Материалы</span>
+                             <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
                            
                         </a>
+                        
                     </li>
                     <li  class="hidden_lgg">
                         <a href="">
@@ -158,6 +160,16 @@
             
         </div>
     </div>
+        <div class="dropdown_news two_menu" ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false">
+                            <ul ng-show="ctrl.isNewsOpen">
+                                <a ui-sref="dashboard.general-news" ng-click="ctrlisPNewsOpen.isPNewsOpen = false"><li>События</li></a>
+                                <a ui-sref="dashboard.facts" ng-click="ctrl.isPNewsOpen = false"><li>Интересные факты</li></a>
+                                <a ui-sref="dashboard.blog" ng-click="ctrl.isPNewsOpen = false" ><li>Аналитика</li></a>
+                                <a ui-sref="dashboard.cheer" ng-click="ctrl.isPNewsOpen = false"><li class="">Девушки-чирлидирши</li></a>
+                                <a ui-sref="dashboard.stars" ng-click="ctrl.isPNewsOpen = false"><li class="">О звездах хоккея</li></a>
+                                <a ui-sref="dashboard.video" ng-click="ctrl.isPNewsOpen = false"><li class="">Хоккейные видео</li></a>
+                            </ul>
+                        </div>
         <div class="dropdown_menu" ng-mouseleave="ctrl.isMenuOpen = false" ng-show="ctrl.isMenuOpen">
                 <div class="container-fluid">
                     <div class="row">
@@ -166,7 +178,7 @@
                                 <a ui-sref="dashboard.general-news">
                                     <li ng-click="ctrl.isMenuOpen = false" 
                                         ng-mouseover="ctrl.isNewsOpen = true; ctrl.isForecastOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isInterestingOpen = ctrl.isSchedOpen = false">
-                                        Новости
+                                        Материалы
                                     </li>
                                 </a>
                                 <a ui-sref="dashboard.forecast.playoff">
