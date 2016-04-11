@@ -15,14 +15,15 @@
 <section class="wrapp_main_new" style="background-image: url('{{ctrl.mainNews.additional_image.original}}');">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            
                 <div class="main_new">
-                    <h2 ng-bind="ctrl.mainNews.name"></h2>
-                    <h6 ng-bind="ctrl.mainNews.short_content"></h6>
-                    <!--<p ng-bind="ctrl.mainNews.middle_content"></p>-->
-
+                    <div class="bg_stars">
+                        <h2 ng-bind="ctrl.mainNews.name"></h2>
+                        <h6 ng-bind="ctrl.mainNews.short_content"></h6>
+                        <!--<p ng-bind="ctrl.mainNews.middle_content"></p>-->
+                    </div>
                 </div>  
-            </div>
+            
         </div>
     </div>
 </section>
