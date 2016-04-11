@@ -182,6 +182,12 @@ header {
       }
     }
   }
+  .two_menu {
+    .li_disabel {
+      color: $grey;
+      cursor: not-allowed;
+    }
+  }
   .dropdown_menu {
     background-color: $white;
     margin: 70px 14px 0 14px;
