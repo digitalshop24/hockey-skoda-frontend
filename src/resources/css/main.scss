@@ -75,18 +75,19 @@ header {
       li {
         display: inline-block;
         text-transform: uppercase;
-        padding: 22px 0 ;
+        padding: 21px 0 ;
         margin-left: 3.3%;
         font-size: $p_size+0.01rem; 
       }
       .vis_lg {
         display: none;
       }
+      .active_li {
+        border-bottom: 3px solid $green_main;
+      }
       
     }
-    .active_li {
-      border-bottom: 3px solid $green_main;
-    }
+    
   }
   .right_head {
     position:fixed;
@@ -1341,18 +1342,18 @@ $grey_about: #5d5d5d;
     }
     .littel_time {
       position: absolute;
-      margin-top: -19%;
+      margin-top: -80px;
     }
     .little_comment {
       position: absolute;
-      margin-top: -13%;
+      margin-top: -50px;
       background-image: url('img/resources/img/news/bg_comment.png');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      width: 30px;
+      width: 35px;
       height: 30px;
-      padding: 3px 0 0 8px;
+      padding: 3px 0 0 12px;
     }
   }
 }
