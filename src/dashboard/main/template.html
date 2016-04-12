@@ -58,9 +58,9 @@
                         </div>
                         <div class="col-md-11">
                             <ul>
-                                <li ng-repeat="hashtag in ctrl.hashtags | limitTo:5"><a href="" ng-bind="hashtag"></a></li>
-                                <li ng-show="!ctrl.openAddTags"><a ng-click="ctrl.openAddTags = true"><img src="img/resources/img/three_dots.png" alt=""></a></li>
-                                <li ng-show="ctrl.openAddTags" ng-repeat="hashtag in ctrl.hashtags | limitTo:ctrl.hashtags.length:5" ><a href="" ng-bind="hashtag"></a></li>
+                                <li ng-repeat="hashtag in ctrl.hashtags | limitTo:10"><a href="" ng-bind="hashtag"></a></li>
+                                <li ng-show="!ctrl.openAddTags && ctrl.hashtags.length > 10"><a ng-click="ctrl.openAddTags = true"><img src="img/resources/img/three_dots.png" alt=""></a></li>
+                                <li ng-show="ctrl.openAddTags" ng-repeat="hashtag in ctrl.hashtags | limitTo:ctrl.hashtags.length:10" ><a href="" ng-bind="hashtag"></a></li>
                             </ul>
                         </div>
                 </div>

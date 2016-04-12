@@ -9,6 +9,10 @@ export default angular.module('dashboard.prizenew', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.prizenew', {
+                meta: {
+                    title: 'Интересные конкурсы и призы для болельщиков',
+                    description: 'Вы можете рассказать о призах, которые можно выиграть, своим друзьям, участвуя в огромном количестве интересных активностей на сайте.'
+                },
                 template: require('./template.html'),
                 url: '/prize-new',
                 controller: PrizenewCtrl,

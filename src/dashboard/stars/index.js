@@ -9,6 +9,10 @@ export default angular.module('dashboard.stars', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.stars', {
+                meta: {
+                    title: 'Все о звездах хоккея',
+                    description: 'Следите за нашими материалами о любимых звездах хоккея! Мы публикуем самые последние новости из жизни звездных хоккеистов, самые интересные интервью, самые вдохновляющие биографии.'
+                },
                 template: require('./template.html'),
                 url: '/stars',
                 controller: StarsCtrl,

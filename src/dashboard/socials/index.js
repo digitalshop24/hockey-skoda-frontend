@@ -10,6 +10,10 @@ export default angular.module('dashboard.socials', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.socials', {
+                meta: {
+                    title: 'Личные странички соцсетей любимых хоккеистов',
+                    description: 'Следите за своими любимыми игроками не только на новостных порталах, но и в соцсетях. Узнавайте новое «из первых рук»!'
+                },
                 template: require('./template.html'),
                 url: '/socials?hashtag',
                 controller: SocialCtrl,

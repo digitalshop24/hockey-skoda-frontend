@@ -9,6 +9,10 @@ export default angular.module('dashboard.video', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.video', {
+                meta: {
+                    title: 'Самые крутые видео из мира хоккея',
+                    description: 'Смотрите подборки с яркими хоккейными видео – голы, драки, силовые приемы, красивые буллиты!'
+                },
                 template: require('./template.html'),
                 url: '/video/:id?hashtags',
                 controller: VideoCtrl,

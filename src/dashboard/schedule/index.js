@@ -9,6 +9,10 @@ export default angular.module('dashboard.score', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.schedule', {
+                meta: {
+                    title: 'Точное и подробное расписание игр',
+                    description: 'В этом разделе сайта вы можете увидеть расписание ближайших матчей.'
+                },
                 template: require('./template.html'),
                 url: '/schedule',
                 controller: ScheduleCtrl,

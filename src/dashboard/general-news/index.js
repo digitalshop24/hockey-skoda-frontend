@@ -20,6 +20,10 @@ export default angular.module('dashboard.general-news',
         $stateProvider
             .state('dashboard.general-news', {
                 template: require('./template.html'),
+                meta: {
+                    title: 'Актуальный событийный дайджест',
+                    description: 'Просматривайте самые свежие новости об актуальных событиях в мире хоккея.'
+                },
                 params: {
                     month: "",
                     daysWithNews: [],

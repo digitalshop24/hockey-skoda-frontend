@@ -9,6 +9,10 @@ export default angular.module('dashboard.blog', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.blog', {
+                meta: {
+                    title: 'О хоккее - профессионально. Эксклюзивные статьи',
+                    description: 'Читайте интересные статьи, обзоры и другие эксклюзивные материалы, которые вы сможете найти только у нас!'
+                },
                 template: require('./template.html'),
                 url: '/blog?hashtags',
                 controller: BlogCtrl,
