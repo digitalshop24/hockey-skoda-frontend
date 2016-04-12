@@ -2,8 +2,9 @@
 
 
 export default class SocialCtrl {
-    constructor(posts, moment, $scope, $localStorage, socialService, page, daysAmount) {
+    constructor(posts, moment, $scope, $localStorage, socialService, page, daysAmount, hashtag) {
         this.busy = false;
+        this.hashtag = hashtag || 'Хокейвкаждом';
         this.page = page;
         this.daysAmount = daysAmount;
         this.days = [];
@@ -30,7 +31,7 @@ export default class SocialCtrl {
     loadMore() {
         if (this.busy) return;
         this.busy = true;
-        this.socialService.getPosts(++this.page, this.daysAmount).then(posts => {
+        this.socialService.getPosts(++this.page, this.daysAmount, this.hashtag).then(posts => {
             this.handlePosts(posts);
             this.busy = false;
         });

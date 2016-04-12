@@ -13,6 +13,14 @@ export default class MainService {
             });
     }
 
+    getHashtags() {
+        return this.api.
+            get('/general/hashtags')
+            .then(response => {
+                return response.data;
+            });
+    }
+
     getSchedule(stage) {
         return this.api.
             get('/schedule/index', {

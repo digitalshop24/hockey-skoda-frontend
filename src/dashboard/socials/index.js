@@ -5,14 +5,13 @@ import SocialCtrl from './controller.js';
 import SocialService from './service.js';
 
 
-export default angular.module('dashboard.socials', [
-])
+export default angular.module('dashboard.socials', [])
     .service('socialService', SocialService)
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.socials', {
                 template: require('./template.html'),
-                url: '/socials',
+                url: '/socials?hashtag',
                 controller: SocialCtrl,
                 controllerAs: 'ctrl',
                 params: {
@@ -21,15 +20,19 @@ export default angular.module('dashboard.socials', [
                 },
                 resolve: {
                     posts: (socialService, $stateParams) => {
-                        return socialService.getPosts($stateParams.page, $stateParams.daysAmount);
+                        return socialService.getPosts($stateParams.page, $stateParams.daysAmount, $stateParams.hashtag);
                     },
 
-                    page: ($stateParams) => {
+                    page: $stateParams => {
                         return $stateParams.page;
                     },
 
-                    daysAmount: ($stateParams) => {
+                    daysAmount: $stateParams => {
                         return $stateParams.daysAmount;
+                    },
+
+                    hashtag: $stateParams => {
+                        return $stateParams.hashtag;
                     }
                 }
             });

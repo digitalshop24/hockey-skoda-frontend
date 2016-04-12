@@ -26,6 +26,10 @@ export default angular.module('dashboard.main', [
                         return mainService.getSlides();
                     },
 
+                    hashtags: mainService => {
+                        return mainService.getHashtags();
+                    },
+
                     lightingNews: ($stateParams, mainService) => {
                         return mainService.getLightingNews($stateParams.lightingNewsAmount);
                     },

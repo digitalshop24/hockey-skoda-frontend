@@ -6,11 +6,12 @@ export default class SocialService {
         this.http = $http;
     }
 
-    getPosts(page, days) {
+    getPosts(page, days, tags) {
         return this.api.get('/soc_posts', {
             params: {
                 page: page,
-                days: days
+                days: days,
+                hashtag: tags
             }
         }).then(res => {
             return res.data;
