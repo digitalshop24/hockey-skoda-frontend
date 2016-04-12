@@ -568,15 +568,20 @@ footer {
       background-repeat: no-repeat;
       background-position: center center;
       height: 300px;
+      cursor:pointer;
     }
     .foto_set {
       display:none;
       position: absolute;
-      top: 70px;
+      top: 30px;
       width: 90%;
       text-transform: uppercase;
-      color: $white;
+      color: #fff;
       height: auto;
+      cursor: pointer;
+      background-color: RGBA(0, 0, 0, 0.3);
+      height: 300px;
+      padding-top: 50px;
     }
     .foto_set:hover {
       display: inline-block; 
