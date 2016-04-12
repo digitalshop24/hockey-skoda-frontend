@@ -7,7 +7,7 @@ export default class PrizenewCtrl {
         this.user = user;
         this.session = session;
         this.login = login;
-        this.currentSponsorIndex = 0;
+        this.currentSponsorIndex = 1;
         this.currentSponsor = sponsors[this.currentSponsorIndex];
         this.responsive = [
             {
