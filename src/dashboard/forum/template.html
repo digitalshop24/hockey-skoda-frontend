@@ -4,11 +4,12 @@
             <div class="row post_hover" ng-repeat="section in ctrl.sections">
                 <div class="col-md-8 col-sm-8 col-xs-12">
                     <div class="wrapp_topic">
-                        <h4><a ui-sref="dashboard.forum-page({id:section.id})" class="link_default" ng-bind="section.name"></a></h4>
+                        <h4><span ng-show="section.hot" class="hot_them"><img src="img/resources/img/forum_hot.png" alt="">Горячая секция: </span><a ui-sref="dashboard.forum-page({id:section.id})" class="link_default" ng-bind="section.name"></a></h4>
 
                         <p>{{section.lastActivityTime}} <span ng-bind="section.lastActivityUserName"></span></p>
                         <ul>
                             <li ng-repeat="topic in section.recently_active_topics">
+                                <span ng-show="topic.hot" class="hot_them"><img src="img/resources/img/forum_hot.png" alt="">Горячая тема: </span>
                                 <a ui-sref="dashboard.forumtopic({id:topic.id})" class="link_default" ng-bind="topic.name"></a>
                             </li>
                         </ul>

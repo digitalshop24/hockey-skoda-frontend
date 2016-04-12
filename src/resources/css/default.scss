@@ -211,23 +211,25 @@ h6 {
 
 
 .btn_disable {
-  background-color: $grey;
-  color: $white;
+  background-color: $grey_lite;
+  color: $grey !important;
 }
 .btn_disable:hover {
-  background-color: $grey;
-  color: $white;
+  background-color: $grey_lite;
+  color: $grey;
   cursor:not-allowed;
 }
 .btn_disable:active {
-  background-color: $grey;
-  color: $white;
-  box-shadow: none;
+  background-color: $grey_lite !important;
+  color: $grey !important;
+  box-shadow: none !important;
+  border: 1px solid $grey !important;
 }
 .btn_disable:focus {
-  background-color: $grey;
-  color: $white;
-  box-shadow: none;
+  background-color: $grey_lite !important;
+  color: $grey !important;
+  box-shadow: none !important;
+   border: 1px solid $grey !important;
 }
 
 
@@ -388,7 +390,7 @@ select {
   display: inline-block;
   min-width: 170px;
   padding-left: 20px;
-  background: url(../img/arrow.png) no-repeat transparent;
+  background: url(img/resources/img/arrow.png) no-repeat transparent;
   background-position: 95% 50%;
   background-color: $white;
   margin-right: 20px;
@@ -406,6 +408,7 @@ select {
 select::-ms-expand {
   display: none;
 }
+
 
 //-----------------------------------------------------end select
 

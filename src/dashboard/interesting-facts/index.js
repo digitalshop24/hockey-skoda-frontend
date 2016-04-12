@@ -9,6 +9,10 @@ export default angular.module('dashboard.facts', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.facts', {
+                meta: {
+                    title: 'Интересные факты для любителей хоккея',
+                    description: 'Вы сможете узнать действительно яркие и до этого не привлекавшие много внимания факты, которые мы подбираем специально для знатоков хоккея.'
+                },
                 template: require('./template.html'),
                 url: '/interesting-facts',
                 controller: FactsCtrl,

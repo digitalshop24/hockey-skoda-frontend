@@ -5,11 +5,12 @@ export default class VideoService {
         this.api = api;
     }
 
-    getVideos(page, perPage) {
+    getVideos(page, perPage, tags) {
         return this.api.get('/posts/video',{
             params: {
                 page: page,
-                per_page: perPage
+                per_page: perPage,
+                tag_list: tags
             }
         }).then((res) => {
             return res.data;

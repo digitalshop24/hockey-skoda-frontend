@@ -9,6 +9,10 @@ export default angular.module('dashboard.forum', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.forum', {
+                meta: {
+                    title: 'Большой форум любителей хоккея',
+                    description: 'Общайтесь с любителями хоккея, участвуйте в викторине, обсуждайте матчи и все «околохоккейное» на форуме!'
+                },
                 template: require('./template.html'),
                 url: '/forum',
                 controller: ForumCtrl,

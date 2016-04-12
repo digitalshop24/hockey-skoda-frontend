@@ -100,7 +100,7 @@
                             <select class="input_default input_small"
                                     ng-options="team.country for team in ctrl.forecast.forthQuarter.teams track by team.id"
                                     ng-model="ctrl.forecast.forthQuarter.redteam" ng-disabled="ctrl.forecast.forthQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.forthQuarter)">
-                                <option disabled  value ng-show="ctrl.forecast.forthQuarter.redteam"
+                                <option disabled="disabled"  value ng-show="ctrl.forecast.forthQuarter.redteam"
                                         ng-bind="ctrl.forecast.forthQuarter.redteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
@@ -108,45 +108,48 @@
                             <select class="input_default input_small"
                                     ng-options="team.country for team in ctrl.forecast.forthQuarter.teams track by team.id"
                                     ng-model="ctrl.forecast.forthQuarter.blueteam" ng-disabled="ctrl.forecast.forthQuarter.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.forthQuarter)">
-                                <option disabled  value ng-show="ctrl.forecast.forthQuarter.blueteam"
+                                <option disabled="disabled"  value ng-show="ctrl.forecast.forthQuarter.blueteam"
                                         ng-bind="ctrl.forecast.forthQuarter.blueteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
                     </div>
                 </div>
             </div>
+            <style>
+
+            </style>
             <div class="backg-2 pos_col-2">
                 <div class="choice_one">
                     <div class="choice_one-item" >
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small"
+                            <select class="input_default input_small btn_disable"
                                     ng-options="team.country for team in ctrl.teams track by team.id"
-                                    ng-model="ctrl.forecast.firstSemi.redteam" disabled>
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-model="ctrl.forecast.firstSemi.redteam" disabled="disabled">
+                                <option disabled="disabled" selected value> Выберите команду</option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small"
+                            <select class="input_default input_small btn_disable"
                                     ng-options="team.country for team in ctrl.teams track by team.id"
-                                    ng-model="ctrl.forecast.firstSemi.blueteam" disabled>
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-model="ctrl.forecast.firstSemi.blueteam" disabled="disabled">
+                                <option disabled="disabled" selected value> Выберите команду</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="choice_one-item" >
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small"
+                            <select class="input_default input_small btn_disable"
                                     ng-options="team.country for team in ctrl.teams track by team.id"
-                                    ng-model="ctrl.forecast.secondSemi.redteam" disabled>
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-model="ctrl.forecast.secondSemi.redteam" disabled="disabled">
+                                <option disabled="disabled" selected value> Выберите команду</option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small"
+                            <select class="input_default input_small btn_disable"
                                     ng-options="team.country for team in ctrl.teams track by team.id"
-                                    ng-model="ctrl.forecast.secondSemi.blueteam" disabled>
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-model="ctrl.forecast.secondSemi.blueteam" disabled="disabled">
+                                <option disabled="disabled" selected value> Выберите команду</option>
                             </select>
                         </div>
                     </div>
@@ -156,17 +159,17 @@
                 <div class="choice_one">
                     <div class="choice_one-item" >
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small"
+                            <select class="input_default input_small btn_disable"
                                     ng-options="team.country for team in ctrl.teams track by team.id"
-                                    ng-model="ctrl.forecast.final.redteam" disabled>
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-model="ctrl.forecast.final.redteam" disabled="disabled">
+                                <option disabled="disabled" selected value> Выберите команду</option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
-                            <select class="input_default input_small"
+                            <select class="input_default input_small btn_disable"
                                     ng-options="team.country for team in ctrl.teams track by team.id"
-                                    ng-model="ctrl.forecast.final.blueteam" disabled>
-                                <option disabled selected value> Выберите команду</option>
+                                    ng-model="ctrl.forecast.final.blueteam" disabled="disabled">
+                                <option disabled="disabled" selected value> Выберите команду</option>
                             </select>
                         </div>
                     </div>
@@ -287,34 +290,34 @@
                     <div class="choice_one">
                         <div class="choice_one-item" >
                             <div class="choice_one-item-bor">
-                                <select class="input_default input_small"
+                                <select class="input_default input_small btn_disable"
                                         ng-options="team.country for team in ctrl.teams track by team.id"
-                                        ng-model="ctrl.forecast.firstSemi.redteam" disabled>
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.firstSemi.redteam" disabled="disabled">
+                                    <option disabled="disabled" selected value> Выберите команду</option>
                                 </select>
                             </div>
                             <div class="choice_one-item-bor">
-                                <select class="input_default input_small"
+                                <select class="input_default input_small btn_disable"
                                         ng-options="team.country for team in ctrl.teams track by team.id"
-                                        ng-model="ctrl.forecast.firstSemi.blueteam" disabled>
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.firstSemi.blueteam" disabled="disabled">
+                                    <option disabled="disabled" selected value> Выберите команду</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="choice_one-item" >
                             <div class="choice_one-item-bor">
-                                <select class="input_default input_small"
+                                <select class="input_default input_small btn_disable"
                                         ng-options="team.country for team in ctrl.teams track by team.id"
-                                        ng-model="ctrl.forecast.secondSemi.redteam" disabled>
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.secondSemi.redteam" disabled="disabled">
+                                    <option disabled="disabled" selected value> Выберите команду</option>
                                 </select>
                             </div>
                             <div class="choice_one-item-bor">
-                                <select class="input_default input_small"
+                                <select class="input_default input_small btn_disable"
                                         ng-options="team.country for team in ctrl.teams track by team.id"
-                                        ng-model="ctrl.forecast.secondSemi.blueteam" disabled>
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.secondSemi.blueteam" disabled="disabled">
+                                    <option disabled="disabled" selected value> Выберите команду</option>
                                 </select>
                             </div>
                         </div>
@@ -327,17 +330,17 @@
                     <div class="choice_one">
                         <div class="choice_one-item" >
                             <div class="choice_one-item-bor">
-                                <select class="input_default input_small"
+                                <select class="input_default input_small btn_disable"
                                         ng-options="team.country for team in ctrl.teams track by team.id"
-                                        ng-model="ctrl.forecast.final.redteam" disabled>
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.final.redteam" disabled="disabled">
+                                    <option disabled="disabled" selected value> Выберите команду</option>
                                 </select>
                             </div>
                             <div class="choice_one-item-bor">
-                                <select class="input_default input_small"
+                                <select class="input_default input_small btn_disable"
                                         ng-options="team.country for team in ctrl.teams track by team.id"
-                                        ng-model="ctrl.forecast.final.blueteam" disabled>
-                                    <option disabled selected value> Выберите команду</option>
+                                        ng-model="ctrl.forecast.final.blueteam" disabled="disabled">
+                                    <option disabled="disabled" selected value> Выберите команду</option>
                                 </select>
                             </div>
                         </div>
@@ -349,13 +352,18 @@
                     <button class="btn btn_primary main" ng-disabled="!ctrl.canSendForecast">Таков мой прогноз!</button>
                 </div>
                 <div class="col-sm-5 pos-fre">
-                    <span class="fri">Обсудить с друзьями:</span>
+                    <p class="fri">Обсудить с друзьями:</p>
 
-                    <div class="share">
+                    <!-- <div class="share social-likes" social-init>
                         <a href="" class="icon icon-is"></a>
                         <a href="" class="icon icon-fb"></a>
                         <a href="" class="icon icon-tw"></a>
                         <a href="" class="icon icon-vk"></a>
+                    </div>  -->
+                    <div class="social-likes" social-init>
+                        <div class="facebook" title="Share link on Facebook">Facebook</div>
+                        <div class="vkontakte" title="Share link on VK">VK</div>
+                        <div class="twitter" title="Share link on twitter">twitter</div>
                     </div>
                 </div>
             </div>

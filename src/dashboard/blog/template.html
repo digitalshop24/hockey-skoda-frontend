@@ -1,4 +1,4 @@
-<section class="wrapp_blog_all" masonry-init=".wrapp_blog_posts">
+<section class="wrapp_blog_all"  infinite-scroll="ctrl.loadMore()" infinite-scroll-disabled='this.busy'>
     <div class="wrapp_menu">
         <div class="menu_line ">
             <ul>
@@ -20,14 +20,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" masonry-init=".wrapp_blog_posts">
 
                 <div class="col-xs-12 col-sm-12 col-md-4 text-left wrapp_blog_posts" ng-repeat="blog in ctrl.blogs">
                     <ul class="blog_post">
-                       <!-- <li><img src="{{blog.user.avatar.thumb}}" alt="" class="img-responsive"></li>
-                        <li><p class="bold" ng-bind="blog.user.name"></p>
-
-                            <p class="prof" ng-bind="blog.user.user_type"></p></li>-->
                         <li><h3><a ng-bind="blog.name"
                                    ui-sref="dashboard.newspage({id:blog.id, rubric:blog.rubric.api_path})"></a></h3>
                         </li>
@@ -40,10 +36,6 @@
                     </ul>
                 </div>
 
-            </div>
-
-            <div ng-show="ctrl.blogs.length < ctrl.blogsAmount" class="row text-center">
-                <button ng-click="ctrl.loadMore()" class="btn btn_common main load_more">Показать еще</button>
             </div>
 
         </div>

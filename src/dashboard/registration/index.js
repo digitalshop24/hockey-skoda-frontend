@@ -11,6 +11,10 @@ export default angular.module('dashboard.registration', [
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.registration', {
+                meta: {
+                    title: 'Регистрируйтесь на сайте и получайте баллы!',
+                    description: 'Чем больше граф вы заполните, тем больше у вас будет стартовых баллов. Ваши данные нужны, чтобы вы могли без проблем получать призы и подарки!'
+                },
                 template: require('./template.html'),
                 url: '/registration',
                 controller: RegistrationCtrl,

@@ -6,8 +6,8 @@ const YOUTUBE_PAUSE = 2;
 export default class VideoCtrl {
 
 
-    constructor(videoInfo, page, $state, $scope, $timeout, videoById) {
-
+    constructor(videoInfo, page, $state, $scope, $timeout, videoById, tags) {
+        this.tags = tags;
         this.state = $state;
         if(videoById) {
             this.currentVideoById = videoById;
@@ -19,6 +19,7 @@ export default class VideoCtrl {
         this.videos = videoInfo.posts;
         this.videos.forEach((video, index) => {
             video.index = index;
+            // video.tags = ['aaaa','bbbbb', 'ccccc']
         });
         this.setNewMainVideo(this.videos[0]);
         this.videoAmount = videoInfo.posts_count;
@@ -109,7 +110,7 @@ export default class VideoCtrl {
 
     step(resultIndex) {
         this.currentVideo = this.videos[resultIndex];
-        this.state.transitionTo('dashboard.video', {id: this.currentVideo.id}, {notify: false});
+        this.state.transitionTo('dashboard.video', {id: this.currentVideo.id,  hashtags: this.tags.join(',')}, {notify: false});
         this.videoTime = undefined;
         if (this.youtubeClick) {
             this.youtubeClick = false;
@@ -125,7 +126,7 @@ export default class VideoCtrl {
         this.showVideoInfo = true;
         this.shouldPlayNewVideo = true;
         this.currentVideo = video;
-        this.state.transitionTo('dashboard.video', {id: this.currentVideo.id}, {notify: false});
+        //this.state.transitionTo('dashboard.video', {id: this.currentVideo.id,  hashtags: this.tags.join(',')}, {notify: false});
         this.currentVideo.socialUrl = 'https://www.youtube.com/watch?v=' + this.currentVideo.video_code;
         this.videoTime = undefined;
         if (this.player) {
@@ -139,5 +140,34 @@ export default class VideoCtrl {
             videos: this.videos,
             page: ++this.currentPage
         });
+    }
+
+
+
+    addTagToFilter(tag) {
+        if (this.tags.indexOf(tag) == -1) {
+            this.tags.push(tag)
+        }
+        this.state.go('dashboard.video', {
+            tags: this.tags,
+            hashtags: this.tags.join(','),
+            page: 1,
+            videos: [],
+            notScrollToTop: false
+        },{reload: true});
+    }
+
+    removeTag(tag) {
+        const index = this.tags.indexOf(tag);
+        if (index != -1) {
+            this.tags.splice(index,1);
+        }
+        this.state.go('dashboard.video', {
+            tags: this.tags,
+            hashtags: this.tags.join(','),
+            page: 1,
+            videos: [],
+            notScrollToTop: false
+        },{reload: true});
     }
 }

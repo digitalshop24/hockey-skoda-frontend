@@ -9,6 +9,10 @@ export default angular.module('dashboard.calendar', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.calendar', {
+                meta: {
+                    title: 'Настольный календарь хоккейного болелщика',
+                    description: 'Следите за всеми матчами, получайте напоминания в удобное время и не пропускайте ни одной игры!'
+                },
                 template: require('./template.html'),
                 url: '/calendar',
                 controller: CalendarCtrl,

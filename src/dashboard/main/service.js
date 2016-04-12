@@ -5,6 +5,21 @@ export default class MainService {
         this.api = api;
     }
 
+    getSlides() {
+        return this.api.
+            get('/general/slider')
+            .then(response => {
+                return response.data;
+            });
+    }
+
+    getHashtags() {
+        return this.api.
+            get('/general/hashtags')
+            .then(response => {
+                return response.data;
+            });
+    }
 
     getSchedule(stage) {
         return this.api.

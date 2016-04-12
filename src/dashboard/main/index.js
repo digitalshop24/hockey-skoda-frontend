@@ -12,6 +12,10 @@ export default angular.module('dashboard.main', [
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.main', {
+                meta: {
+                    title: 'Болейте, играйте, выигрывайте вместе со SKODA! ',
+                    description: 'К Чемпионату мира по хоккею SKODA приготовила для вас массу интересных призов и активностей! Вперед, вы нужны стране!'
+                },
                 template: require('./template.html'),
                 url: '/',
                 controller: MainCtrl,
@@ -22,6 +26,14 @@ export default angular.module('dashboard.main', [
                     lightingNewsAmount: 3
                 },
                 resolve: {
+                    mainSlides: mainService => {
+                        return mainService.getSlides();
+                    },
+
+                    hashtags: mainService => {
+                        return mainService.getHashtags();
+                    },
+
                     lightingNews: ($stateParams, mainService) => {
                         return mainService.getLightingNews($stateParams.lightingNewsAmount);
                     },

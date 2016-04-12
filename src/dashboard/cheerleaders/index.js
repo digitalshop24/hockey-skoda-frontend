@@ -9,6 +9,10 @@ export default angular.module('dashboard.cheer', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.cheer', {
+                meta: {
+                    title: 'Истории и фото черлидерских команд',
+                    description: 'У хоккейных команд - самые очаровательные, зажигательные и спортивные группы поддержки! Узнайте больше о замечательных спортсменках-черлидерах.'
+                },
                 template: require('./template.html'),
                 url: '/cheerleaders',
                 controller: CheerCtrl,

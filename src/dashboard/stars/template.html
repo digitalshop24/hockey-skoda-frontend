@@ -33,8 +33,8 @@
         <div class="row">
             <div class="news">
                 <div class="col-md-3" ng-repeat="news in ctrl.news">
-                    <div class="foto" style="background-image: url('{{news.image.medium}}');"></div>
-                    <h4 class="foto_set text-center" ng-bind="news.name">The <br> great<br> one</h4>
+                    <div class="foto" style="background-image: url('{{news.image.medium}}');" ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})"></div>
+                    <h4 class="foto_set text-center" ng-bind="news.name" ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">The <br> great<br> one</h4>
                     <div class="description">
                         <h6 ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.short_content"></h6>
                         <p ng-bind="news.middle_content"></p>

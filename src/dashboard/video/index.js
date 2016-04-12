@@ -9,18 +9,26 @@ export default angular.module('dashboard.video', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.video', {
+                meta: {
+                    title: 'Самые крутые видео из мира хоккея',
+                    description: 'Смотрите подборки с яркими хоккейными видео – голы, драки, силовые приемы, красивые буллиты!'
+                },
                 template: require('./template.html'),
-                url: '/video/:id',
+                url: '/video/:id?hashtags',
                 controller: VideoCtrl,
                 controllerAs: 'ctrl',
                 params: {
                     page: 1,
                     perPage: 40,
-                    videos: []
+                    videos: [],
+                    tags: []
                 },
                 resolve: {
                     videoInfo: ($stateParams, videoService) => {
-                        return videoService.getVideos($stateParams.page, $stateParams.perPage)
+                        if($stateParams.hashtags) {
+                            $stateParams.tags = $stateParams.hashtags.split(',');
+                        }
+                        return videoService.getVideos($stateParams.page, $stateParams.perPage, $stateParams.tags)
                             .then((res) => {
                                 res.posts = $stateParams.videos.concat(res.posts);
                                 return res;
@@ -35,6 +43,10 @@ export default angular.module('dashboard.video', [])
                             return videoService.getVideoById($stateParams.id);
                         }
                         return undefined;
+                    },
+
+                    tags: ($stateParams) => {
+                        return $stateParams.tags;
                     }
                 }
             });

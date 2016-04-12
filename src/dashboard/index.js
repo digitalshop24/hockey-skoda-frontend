@@ -38,6 +38,7 @@ import faq from './faq/index';
 import infographics from './infographics/index';
 import NotificationService from './notificationService.js';
 import socials from './socials/index';
+import consent from './consent/index';
 
 
 
@@ -74,7 +75,8 @@ export default angular.module('dashboard',
         calendar.name,
         faq.name,
         infographics.name,
-        socials.name
+        socials.name,
+        consent.name
     ])
     .service('login', Login)
     .service('modal', Modal)
