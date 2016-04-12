@@ -171,7 +171,7 @@
                     <div class="bg_hover">
                         <h2><a href="" ui-sref="dashboard.blog" >Аналитика</a></h2>
                         <p>Наши блогеры увлечены хоккеем также, как вы. Получайте эксклюзивную и важную информацию</p>
-                        <p class="bold"><a href="" ui-sref="dashboard.blog">Изучать</a></p>
+                        <p class="bold"><a href="" ui-sref="dashboard.blog">Думать</a></p>
                     </div>
                 </div>
             </div>
@@ -189,7 +189,7 @@
                     <div class="bg_hover">
                         <h2><a href="" ui-sref="dashboard.infographics">Инфографика</a></h2>
                         <p>Мы создали для Вас иллюстрированную историю выступлений сборной России на всех Чемпионатах мира. </p>
-                        <p class="bold"><a href="" ui-sref="dashboard.infographics">Учить</a></p>
+                        <p class="bold"><a href="" ui-sref="dashboard.infographics">Изучать</a></p>
                     </div>
                 </div>
             </div>
@@ -255,7 +255,7 @@
 
                         <div class="stars" ng-repeat="star in ctrl.stars" style="background-image: url('{{star.image.original}}');">
                             <div class="bg_stars">
-                                <h2><a ui-sref="dashboard.newspage({id:star.id, rubric:star.rubric.api_path})" ng-bind="star.name"></a></h2>
+                                <h2 style="margin-top: 150px"><a ui-sref="dashboard.newspage({id:star.id, rubric:star.rubric.api_path})" ng-bind="star.name"></a></h2>
                                 <h6><a href="#" ng-bind="star.short_content">Валерий Харламов</a></h6>
                             </div>
                         </div>
@@ -334,7 +334,7 @@
         </div>
     </div>
 </section>
-<section class="wrapp_mainpage_game">
+<!--<section class="wrapp_mainpage_game">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
@@ -351,7 +351,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <section class="wrapp_mainpage_end">
     <div class="container-fluid">
         <div class="row">

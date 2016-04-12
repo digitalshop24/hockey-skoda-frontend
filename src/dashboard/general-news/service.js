@@ -9,7 +9,8 @@ export default class GeneralNewsService {
         return this.api.
             get('/posts/news', {
                 params: {
-                    date: date
+                    date: date,
+                    origin: 'content_manager'
                 }
             })
             .then(response => {
