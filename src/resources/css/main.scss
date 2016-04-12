@@ -962,6 +962,14 @@ footer {
     // float: left;
     padding: 20px 0 20px 35px;
     width: 100%;
+    .hot_them {
+      color:#fc8a21;
+      img {
+        position: relative;
+        top: -3px;
+        margin-right: 5px;
+      }
+    }
     .textEdit {
       margin: 0 auto; 
       button {
