@@ -38,11 +38,11 @@
                     <div class="row" data-day-id="{{day.id}}" ng-repeat="day in ctrl.days | orderBy:'-id'">
                         <div class="col-md-12 grid">
                             <div general-news="news" class="news_one grid-item" ng-repeat="news in day.news.posts"/>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="hidden-xs hidden-sm col-md-2 fix_padding" ng-show="false">
+                <div class="hidden-xs hidden-sm col-md-2 fix_padding" ng-show="true">
                     <div class="wrapp_social_lent">
                         <div class="soc_post">
                             <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
@@ -54,46 +54,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
-                                    очень много
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li><img src="img/resources/img/bg.png" alt="" class="img-responsive"></li>
-                            </ul>
-                        </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
-                                    очень много
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li><img src="img/resources/img/bg.png" alt="" class="img-responsive"></li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
+    </div>    
 </section>

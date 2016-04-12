@@ -1,7 +1,7 @@
 <h5 ng-bind="ctrl.generalNews.published_at | amDateFormat:'H:mm'"></h5>
 <img ui-sref="dashboard.newspage({id:ctrl.generalNews.id, rubric:ctrl.generalNews.rubric.api_path})" src="{{ctrl.generalNews.image.medium}}" alt="" class="img-responsive">
 
-<p><a ui-sref="dashboard.newspage({id:ctrl.generalNews.id, rubric:ctrl.generalNews.rubric.api_path})"
+<p style="min-height: 70px;"><a ui-sref="dashboard.newspage({id:ctrl.generalNews.id, rubric:ctrl.generalNews.rubric.api_path})"
       ng-bind="ctrl.generalNews.name" class="link_default"></a></p>
 
 <p ng-bind="ctrl.generalNews.short_content"></p>
