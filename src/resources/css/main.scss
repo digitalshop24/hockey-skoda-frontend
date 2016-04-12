@@ -1073,11 +1073,15 @@ footer {
 
 .wrapp_shet {
   // background-color: #f1f1f1;
+  min-height: 90vh;
   .fix_bottom {
     margin-bottom: 30px;
   }
   .mounth {
     padding: 20px 0 70px 0;
+    select {
+      margin-top: 15px;
+    }
     .mounth_arrow {
       display:inline-block;
       margin-top: 6px;
