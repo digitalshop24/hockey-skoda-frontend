@@ -19,7 +19,7 @@ export default class VideoCtrl {
         this.videos = videoInfo.posts;
         this.videos.forEach((video, index) => {
             video.index = index;
-            video.tags = ['aaaa','bbbbb', 'ccccc']
+            // video.tags = ['aaaa','bbbbb', 'ccccc']
         });
         this.setNewMainVideo(this.videos[0]);
         this.videoAmount = videoInfo.posts_count;
