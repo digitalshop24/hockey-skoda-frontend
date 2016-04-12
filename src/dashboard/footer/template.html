@@ -1,9 +1,9 @@
-<footer ng-show="!$state.includes('dashboard.general-news') && !$state.includes('dashboard.main-news')
+<footer  ng-show="!$state.includes('dashboard.general-news') && !$state.includes('dashboard.main-news')
     && !$state.includes('dashboard.blog') && !$state.includes('dashboard.facts') && !$state.includes('dashboard.newspage')">
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <h6>Сайт</h6>
+                <h6 class="bold">Сайт</h6>
                 <ul>
                     <li><a ui-sref="dashboard.general-news">Материалы</a></li>
                     <li><a ui-sref="dashboard.forum">Форум</a></li>
@@ -20,7 +20,7 @@
                 </ul>
             </div>
             <div class="col-md-7">
-                <h6>Škoda</h6>
+                <h6 class="bold">Škoda</h6>
                 <ul>
                     <li><a href="http://www.skoda-avto.ru" target="_blank">ŠKODA</a></li>
                     <li><a href="http://skoda-hockey-2016.ru/tdrive">Тест-драйв</a></li>
@@ -33,6 +33,9 @@
                 </ul>
             </div>
         </div>
+        
+    </div>
+    <div class="container-fluid">
         <div class="row footer_margin_top">
             <div class="col-md-6 text-left">
                 <p>ŠKODA AUTO Россия 2016</p>
