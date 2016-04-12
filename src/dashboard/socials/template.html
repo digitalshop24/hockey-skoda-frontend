@@ -22,11 +22,12 @@
                                ng-change="ctrl.enableOrDisableAll()">
                         <label for="toggle-1"></label>
                         <span class="on">ON</span>
-                        <span class="off">OFF</span>
+                        <span class="off" style="margin-top: -32px;">OFF</span>
                     </li>
                     <li>
-                        <img src="img/resources/img/fb.png" alt="" >
-                        <input ng-model="ctrl.fbFilter" ng-change="ctrl.changeFilter()" type="checkbox" name="toggle" class="sw" id="toggle-2" >
+                        <img src="img/resources/img/fb.png" alt="" > 
+                        <!-- ng-model="ctrl.fbFilter" -->
+                        <input ng-model="false" ng-change="ctrl.changeFilter()" type="checkbox" name="toggle" class="sw" id="toggle-2" >
                         <label for="toggle-2"></label>
                         <span class="on">ON</span>
                         <span class="off">OFF</span>
@@ -46,8 +47,9 @@
                         <span class="off">OFF</span>
                     </li>
                     <li>
+                    <!-- ng-model="ctrl.instagramFilter" -->
                         <img src="img/resources/img/insta.png" alt="" >
-                        <input ng-model="ctrl.instagramFilter" ng-change="ctrl.changeFilter()" type="checkbox" name="toggle" class="sw" id="toggle-5" >
+                        <input ng-model="false" ng-change="ctrl.changeFilter()" type="checkbox" name="toggle" class="sw" id="toggle-5" >
                         <label for="toggle-5"></label>
                         <span class="on">ON</span>
                         <span class="off">OFF</span>
@@ -97,12 +99,12 @@
                                 </div>  
                                 <div class="main_content">
                                     <p ng-show="event.showMinContent" ng-bind-html="event.minContent"></p>
-                                    <a href="" ng-show="event.showMinContent" ng-click="event.showMinContent = false;">Показать полностью</a>
+                                    <a href="" ng-show="event.showMinContent" ng-click="event.showMinContent = false;" style="color: #4ba82e;">Показать полностью</a>
                                     <p ng-show="!event.showMinContent" ng-bind-html="event.content"></p>
 
                                 </div>
                                 <div ng-show="event.photos.length">
-                                    <slick>
+                                    <slick infinite=true arrows=true> 
                                         <div ng-repeat="photo in event.photos | limitTo:4">
                                             <img  src="{{photo.image.small}}" />
                                         </div>
