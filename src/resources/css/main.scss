@@ -1363,15 +1363,17 @@ $grey_about: #5d5d5d;
 .wrapp_slider_stars {
   .slick-next {
     background: rgba(0,0,0,0) url("img/resources/img/arrow_right_white.png") no-repeat 90% center;
-    right: 0px;
+    right: 10px;
     width: 35px;
     height: 100px;
+    top: 42%;
   }
   .slick-prev {
     background: rgba(0, 0, 0, 0) url("img/resources/img/arrow_left_white.png") no-repeat 10% center;
-    left: 0px;
+    left: 10px;
     width: 35px;
     height: 100px;
+    top: 42%;
   }
   .stars {
     color: $white;
@@ -1388,7 +1390,9 @@ $grey_about: #5d5d5d;
       font-family: $light;  
       margin: 10px 0 10px 0;
       padding: 0 20px;
-      width: 70%;
+      width: 60%;
+      min-width: 310px;
+      max-width: 600px;
       color: $white;
       a {
         color: $white;
@@ -1400,9 +1404,11 @@ $grey_about: #5d5d5d;
     h2 {
       margin: 20px 0 20px 0;
       text-transform: uppercase;
-      font-family: $bold;
+      font-family: $extra_bold;
       padding: 0 20px;
-      width: 70%;
+      width: 60%;
+      min-width: 310px;
+      max-width: 750px;
       a {
         color: $white;
       }
@@ -1482,14 +1488,14 @@ $grey_about: #5d5d5d;
   }
   .date_slider_news .slick-next {
     background: rgba(75,168,46,0) url("img/resources/img/arrow_right_white.png") no-repeat 100% center;
-    right: 0px;
+    right: 10px;
     width: 100px;
     height: 100px;
     top: 43%;
   }
   .date_slider_news .slick-prev {
     background: rgba(75, 168, 46, 0) url("img/resources/img/arrow_left_white.png") no-repeat 0% center;
-    left: 0px;
+    left: 10px;
     width: 100px;
     height: 100px;
     top: 43%;
@@ -1888,6 +1894,7 @@ $grey_about: #5d5d5d;
   p {
     font-size: $p_size;
     margin-bottom: 60px;
+    max-width: 500px;
 
   }
   ul {
