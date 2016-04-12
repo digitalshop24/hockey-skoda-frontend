@@ -211,23 +211,25 @@ h6 {
 
 
 .btn_disable {
-  background-color: $grey;
-  color: $white;
+  background-color: $grey_lite;
+  color: $grey !important;
 }
 .btn_disable:hover {
-  background-color: $grey;
-  color: $white;
+  background-color: $grey_lite;
+  color: $grey;
   cursor:not-allowed;
 }
 .btn_disable:active {
-  background-color: $grey;
-  color: $white;
-  box-shadow: none;
+  background-color: $grey_lite !important;
+  color: $grey !important;
+  box-shadow: none !important;
+  border: 1px solid $grey !important;
 }
 .btn_disable:focus {
-  background-color: $grey;
-  color: $white;
-  box-shadow: none;
+  background-color: $grey_lite !important;
+  color: $grey !important;
+  box-shadow: none !important;
+   border: 1px solid $grey !important;
 }
 
 
@@ -406,6 +408,7 @@ select {
 select::-ms-expand {
   display: none;
 }
+
 
 //-----------------------------------------------------end select
 
