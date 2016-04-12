@@ -22,6 +22,10 @@ export default angular.module('dashboard.main', [
                     lightingNewsAmount: 3
                 },
                 resolve: {
+                    mainSlides: mainService => {
+                        return mainService.getSlides();
+                    },
+
                     lightingNews: ($stateParams, mainService) => {
                         return mainService.getLightingNews($stateParams.lightingNewsAmount);
                     },

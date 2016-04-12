@@ -20,28 +20,15 @@
             <!-- <div class="col-md-12"> -->
 
             <slick infinite=true arrows=true dots=true slides-to-show=1 slides-to-scroll=1>
-                <div class="item-1" style="">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="">
-                                <div class="hidden-sm hidden-xs">
-                                    <h5 style=""><span>Хэштеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
-                                </div>
-                                <img src="img/resources/img/skoda-hockey_showcase-new.jpg" alt="" class="img-responsive" style="width: 100%;">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                <div class="">
+
+                <div class="" ng-repeat="slide in ctrl.mainSlides">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="item-1">
                                 <div class="hidden-sm hidden-xs">
                                     <h5 style="position:absolute; z-index:1; "><span>Хэштеги: <button class="btn ">#хоккейвкаждом</button></span></h5>
                                 </div>
-                                <img src="img/resources/img/skoda-hockey_showcase-new-2.jpg" alt="" class="img-responsive" style="width: 100%;">
+                                <a href="{{slide.link}}"><img src="{{slide.image}}" alt="" class="img-responsive" style="width: 100%;"></a>
                             </div>
                         </div>
                     </div>
