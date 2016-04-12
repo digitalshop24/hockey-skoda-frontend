@@ -34,6 +34,10 @@ export default angular.module('dashboard.main', [
                         return mainService.getHashtags();
                     },
 
+                    tweets: mainService => {
+                        return mainService.getTweets();
+                    },
+
                     lightingNews: ($stateParams, mainService) => {
                         return mainService.getLightingNews($stateParams.lightingNewsAmount);
                     },

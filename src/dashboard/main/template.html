@@ -270,47 +270,14 @@
             <div class="top_"></div>
             <div class="timeline_horisond"></div>
             <ul>
-                <li class="min_l_min"> 
-                    <p>20 февраля</p>
-                    <p>20:12</p>
+                <li class="min_l_2x" ng-repeat="tweet in ctrl.tweets">
+                    <p ng-bind="tweet.published_at | amDateFormat:'DD MMMM'"></p>
+                    <p ng-bind="tweet.published_at | amDateFormat:'HH:mm'"></p>
                     <a href="#"><img src="img/resources/img/twiter_green.png" alt="" class="img-responsive"></a>
-                    <a href="#"><img src="img/resources/img/main/t_l_avatar.jpg" alt="" class="img-responsive"></a>
-                    <p class="tag"><a href="#">@verlamov</a></p>
-                    <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
+                    <a href="#"><img src="{{tweet.profile_pic}}" alt="" class="img-responsive"></a>
+                    <p class="tag"><a href="#" ng-bind="tweet.person.name"></a></p>
+                    <p class="messege" ng-bind="tweet.content.substring(0,20)"></p>
                 </li>
-                <li class="min_l_3x"> 
-                    <p>20 февраля</p>
-                    <p>20:12</p>
-                    <img src="img/resources/img/twiter_green.png" alt="" class="img-responsive">
-                    <img src="img/resources/img/main/t_l_avatar.jpg" alt="" class="img-responsive">
-                    <p class="tag">@verlamov</p>
-                    <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
-                </li>
-                <li class="min_l_1x hidden-xs"> 
-                    <p>20 февраля</p>
-                    <p>20:12</p>
-                    <img src="img/resources/img/twiter_green.png" alt="" class="img-responsive">
-                    <img src="img/resources/img/main/t_l_avatar.jpg" alt="" class="img-responsive">
-                    <p class="tag">@verlamov</p>
-                    <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
-                </li>
-                <li class="min_l_2x hidden-xs hidden-sm"> 
-                    <p>20 февраля</p>
-                    <p>20:12</p>
-                    <img src="img/resources/img/twiter_green.png" alt="" class="img-responsive">
-                    <img src="img/resources/img/main/t_l_avatar.jpg" alt="" class="img-responsive">
-                    <p class="tag">@verlamov</p>
-                    <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
-                </li>
-                <li class="min_l_1x hidden-xs hidden-sm"> 
-                    <p>20 февраля</p>
-                    <p>20:12</p>
-                    <img src="img/resources/img/twiter_green.png" alt="" class="img-responsive">
-                    <img src="img/resources/img/main/t_l_avatar.jpg" alt="" class="img-responsive">
-                    <p class="tag">@verlamov</p>
-                    <p class="messege">Желаю удачи "Локомотиву" и лично Курдашову</p>
-                </li>
-
             </ul>
         </div>
     </div>

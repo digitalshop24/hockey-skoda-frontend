@@ -21,6 +21,19 @@ export default class MainService {
             });
     }
 
+    getTweets() {
+        return this.api.
+            get('/soc_posts/news_feed', {
+                params: {
+                    per_page: 6,
+                    page: 1
+                }
+            })
+            .then(response => {
+                return response.data;
+            });
+    }
+
     getSchedule(stage) {
         return this.api.
             get('/schedule/index', {
