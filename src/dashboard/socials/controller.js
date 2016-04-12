@@ -2,33 +2,17 @@
 
 
 export default class SocialCtrl {
-    constructor(posts, moment, $scope, $localStorage) {
-        const days = [];
+    constructor(posts, moment, $scope, $localStorage, socialService, page, daysAmount) {
+        this.busy = false;
+        this.page = page;
+        this.daysAmount = daysAmount;
+        this.days = [];
+        this.socialService = socialService;
         this.events = posts;
         this.localStorage = $localStorage;
-        this.events.forEach(post => {
-            post.iconClass = post.network;
-            post.repostText = post.reposts + ' ' + this.getRepostText(post.network);
-            post.iconUrl = this.getIconUrl(post.network);
-            if(post.content.length > 600) {
-                post.minContent = post.content.substring(0,600) + '...';
-                post.showMinContent = true;
-            }
+        this.handlePosts(this.events);
 
-            const temp = moment(post.published_at).format('YYYY-MM-DD');
-            var day = days.find(day => day.id == temp);
-            if (day) {
-                day.events.push(post);
-            } else {
-                days.push({
-                    id: temp,
-                    events: [post]
-                });
-            }
-        });
-        this.days = days;
-
-        if(this.localStorage['socials-filters']) {
+        if (this.localStorage['socials-filters']) {
             ['fbFilter', 'vkFilter', 'twitterFilter', 'instagramFilter'].forEach(filterName => {
                 this[filterName] = this.localStorage['socials-filters'][0][filterName];
             });
@@ -44,6 +28,35 @@ export default class SocialCtrl {
     }
 
     loadMore() {
+        if (this.busy) return;
+        this.busy = true;
+        this.socialService.getPosts(++this.page, this.daysAmount).then(posts => {
+            this.handlePosts(posts);
+            this.busy = false;
+        });
+    }
+
+    handlePosts(posts) {
+        posts.forEach(post => {
+            post.iconClass = post.network;
+            post.repostText = post.reposts + ' ' + this.getRepostText(post.network);
+            post.iconUrl = this.getIconUrl(post.network);
+            if (post.content.length > 600) {
+                post.minContent = post.content.substring(0, 600) + '...';
+                post.showMinContent = true;
+            }
+
+            const temp = moment(post.published_at).format('YYYY-MM-DD');
+            var day = this.days.find(day => day.id == temp);
+            if (day) {
+                day.events.push(post);
+            } else {
+                this.days.push({
+                    id: temp,
+                    events: [post]
+                });
+            }
+        });
     }
 
     enableOrDisableAll() {
@@ -78,10 +91,14 @@ export default class SocialCtrl {
 
     getIconUrl(network) {
         switch (network) {
-            case 'vk': return 'img/resources/img/soc/vk.png';
-            case 'facebook': return 'img/resources/img/soc/f.png';
-            case 'twitter': return 'img/resources/img/soc/twiter.png';
-            case 'instagramm': return 'img/resources/img/soc/insta.png';
+            case 'vk':
+                return 'img/resources/img/soc/vk.png';
+            case 'facebook':
+                return 'img/resources/img/soc/f.png';
+            case 'twitter':
+                return 'img/resources/img/soc/twiter.png';
+            case 'instagramm':
+                return 'img/resources/img/soc/insta.png';
         }
     }
 

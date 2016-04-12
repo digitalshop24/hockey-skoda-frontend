@@ -27,7 +27,7 @@
                     <li>
                         <img src="img/resources/img/fb.png" alt="" > 
                         <!-- ng-model="ctrl.fbFilter" -->
-                        <input ng-model="false" ng-change="ctrl.changeFilter()" type="checkbox" name="toggle" class="sw" id="toggle-2" >
+                        <input ng-model="ctrl.fbFilter" ng-change="ctrl.changeFilter()" type="checkbox" name="toggle" class="sw" id="toggle-2" >
                         <label for="toggle-2"></label>
                         <span class="on">ON</span>
                         <span class="off">OFF</span>
@@ -49,7 +49,7 @@
                     <li>
                     <!-- ng-model="ctrl.instagramFilter" -->
                         <img src="img/resources/img/insta.png" alt="" >
-                        <input ng-model="false" ng-change="ctrl.changeFilter()" type="checkbox" name="toggle" class="sw" id="toggle-5" >
+                        <input ng-model="ctrl.instagramFilter" ng-change="ctrl.changeFilter()" type="checkbox" name="toggle" class="sw" id="toggle-5" >
                         <label for="toggle-5"></label>
                         <span class="on">ON</span>
                         <span class="off">OFF</span>
@@ -61,7 +61,7 @@
     </div>
 </section>
 
-<section class="wrapp_timeline_social" infinite-scroll="ctrl.loadMore()">
+<section class="wrapp_timeline_social" infinite-scroll="ctrl.loadMore()" infinite-scroll-disabled='this.busy'>
     <div class="dop_timeline"></div>
     <a href=""><div class="tag_right_hokey">Весь хоккей</div></a>
     <a href=""><div class="tag_left_hokey">#Хокейвкаждом</div></a>

@@ -15,9 +15,21 @@ export default angular.module('dashboard.socials', [
                 url: '/socials',
                 controller: SocialCtrl,
                 controllerAs: 'ctrl',
+                params: {
+                    page: 1,
+                    daysAmount: 1
+                },
                 resolve: {
-                    posts: socialService => {
-                        return socialService.getPosts();
+                    posts: (socialService, $stateParams) => {
+                        return socialService.getPosts($stateParams.page, $stateParams.daysAmount);
+                    },
+
+                    page: ($stateParams) => {
+                        return $stateParams.page;
+                    },
+
+                    daysAmount: ($stateParams) => {
+                        return $stateParams.daysAmount;
                     }
                 }
             });
