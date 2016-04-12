@@ -1841,6 +1841,7 @@ $grey_about: #5d5d5d;
     .block {
       background-repeat:no-repeat;
       background-size: cover;
+      height: 210px;
       .bg_hover {
         
         height: 100%;
@@ -1852,7 +1853,7 @@ $grey_about: #5d5d5d;
         padding: 40px 0 5px 40px;
         text-transform: uppercase;
         font-family: $extra_bold;
-        font-size: 4rem;
+        font-size: 3rem;
         a {
           color: $white;
         }
