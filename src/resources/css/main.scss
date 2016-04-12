@@ -1842,11 +1842,11 @@ $grey_about: #5d5d5d;
       background-repeat:no-repeat;
       background-size: cover;
       .bg_hover {
-        background: linear-gradient(to left, rgba(0,0,0,0), $green_main);
+        
         height: 100%;
       }
       .bg_hover:hover {
-        background-color: $green_main;
+        background-color: rgba(75, 168, 46, .4);
       }
       h2 {
         padding: 40px 0 5px 40px;
