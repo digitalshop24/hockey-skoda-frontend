@@ -19,16 +19,16 @@
                     <div class="col-md-6 left">
                         <h4>Как вас зовут?</h4>
                         <input type="text" ng-model="ctrl.form.last_name" class="input_default input_small"
-                               placeholder="Фамилия">
+                               placeholder="Фамилия* (обязательное поле)" required>
                         <input type="text" ng-model="ctrl.form.first_name" class="input_default input_small"
                                placeholder="Имя* (обязательное поле)" required>
                         <input type="text" ng-model="ctrl.form.middle_name" class="input_default input_small"
-                               placeholder="Отчество">
+                               placeholder="Отчество* (обязательное поле)" required>
                     </div>
                     <div class="col-md-6 left">
                         <h4>Где Вы проживаете?<span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span></h4>
                         <input type="text" ng-model="ctrl.form.zip_code" class="input_default input_small" placeholder="Индекс">
-                        <input type="text" ng-model="ctrl.form.city" class="input_default input_small" placeholder="Город">
+                        <input type="text" minlength="2" ng-model="ctrl.form.city" class="input_default input_small" placeholder="Город* (обязательное поле)" required>
                         <input type="text" ng-model="ctrl.form.address" class="input_default input_small"
                                placeholder="Адрес">
                     </div>
