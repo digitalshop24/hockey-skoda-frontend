@@ -72,7 +72,7 @@
             <div class="col-sm-12 col-md-12 left_head text-left">
                 <a ui-sref="dashboard.main" class="logo"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
                 <ul>
-                    <li ng-mouseover="ctrl.isMenuOpen = true; ctrl.isPNewsOpen = false" ng-class="active_li">
+                    <li ng-mouseover="ctrl.isMenuOpen = true; ctrl.isPNewsOpen = false;" ng-class="active_li">
                         <a href="">
                             <span>Меню</span>
                             <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
@@ -162,7 +162,7 @@
     </div>
         <div class="dropdown_news two_menu" ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false">
                             <ul ng-show="ctrl.isNewsOpen">
-                                <a ui-sref="dashboard.general-news" ng-click="ctrlisPNewsOpen.isPNewsOpen = false"><li>События</li></a>
+                                <a ui-sref="dashboard.general-news" ng-click="ctrl.isPNewsOpen = false"><li>События</li></a>
                                 <a ui-sref="dashboard.facts" ng-click="ctrl.isPNewsOpen = false"><li>Интересные факты</li></a>
                                 <a ui-sref="dashboard.blog" ng-click="ctrl.isPNewsOpen = false" ><li>Аналитика</li></a>
                                 <a ui-sref="dashboard.cheer" ng-click="ctrl.isPNewsOpen = false"><li class="">Девушки-чирлидирши</li></a>
