@@ -4,7 +4,7 @@
 export default class SocialCtrl {
     constructor(posts, moment, $scope, $localStorage, socialService, page, daysAmount, hashtag) {
         this.busy = false;
-        this.hashtag = hashtag || 'Хокейвкаждом';
+        this.hashtag = hashtag;
         this.page = page;
         this.daysAmount = daysAmount;
         this.days = [];

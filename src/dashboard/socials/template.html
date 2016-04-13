@@ -73,8 +73,8 @@
     <a ui-sref="dashboard.socials({hashtag: ''})">
         <div ng-class="{'active' : !ctrl.hashtag}" class="tag_right_hokey">Весь хоккей</div>
     </a>
-    <a ui-sref="dashboard.socials({hashtag: ctrl.hashtag})">
-        <div ng-class="{'active' : ctrl.hashtag}" class="tag_left_hokey" ng-bind="'#' + ctrl.hashtag"></div>
+    <a ui-sref="dashboard.socials({hashtag: ctrl.hashtag || '#Хокейвкаждом'})">
+        <div ng-class="{'active' : ctrl.hashtag}" class="tag_left_hokey" ng-bind="ctrl.hashtag || '#Хокейвкаждом'"></div>
     </a>
     <timeline>
         <div ng-repeat="day in ctrl.days">
