@@ -4689,9 +4689,22 @@ $grey_about: #5d5d5d;
       color:#8b8b8b;
       font-size:1.7rem;
       font-family: $regular;
-      margin-left:58px;
+      margin-left:27px;
       text-transform: uppercase;
       margin-top:30px;
+      .green {
+        color:#4ba82e;
+      }
+      .icon {
+        display: inline-block;
+        &-bal {
+          width:24px;
+          height: 24px;
+          background:url("img/resources/img/balls.png") no-repeat center center;
+          position:relative;
+          top:5px;
+        }
+      }
     }
     .bac-forecast-two {
       background:#ececec;
@@ -5017,6 +5030,19 @@ $grey_about: #5d5d5d;
  .forecast_two {
   border-bottom:1px solid #8b8b8b;
   padding:100px 0; 
+  .green {
+        color:#4ba82e;
+      }
+      .icon {
+        display: inline-block;
+        &-bal {
+          width:24px;
+          height: 24px;
+          background:url("img/resources/img/balls.png") no-repeat center center;
+          position:relative;
+          top:5px;
+        }
+      }
   &:last-child {
     border-bottom:none;
   }
@@ -5114,7 +5140,7 @@ $grey_about: #5d5d5d;
       .main {
         min-width:111px;
         height:44px;
-        float:right;
+         
         color:$white;
         font-size:1.7rem;
         font-family: $light;
