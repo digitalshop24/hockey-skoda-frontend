@@ -45,7 +45,7 @@
     </div>
     <section class="wrapp_mainpage_new">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row"> 
                 <div class="col-md-12">
                     <!--slick current-index="ctrl.newsCurrentIndex" infinite="false" arrows="true"
                          dots="false" slides-to-show="{{ctrl.slidesToShow}}" data="ctrl.lastNews" slides-to-scroll="3" responsive="ctrl.responsive"-->
@@ -56,9 +56,11 @@
 
                             <div class="news_one_slider" style="background-image: url({{news.image.medium}})">
                                 <div class="news_one_slider_bg"></div>
-                                <a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" class="news_titel"
-                                   ng-bind="news.name"></a>
-                                <p class="news_content" ng-bind="news.short_content"></p>
+                                <div class="news_titel">
+                                <a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" 
+                                ng-bind="news.name"></a>
+                                <p ng-bind="news.short_content"></p>
+                            </div>
                             </div>
                         </div>
                     </div>
