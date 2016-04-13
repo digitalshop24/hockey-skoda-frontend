@@ -1566,6 +1566,16 @@ $grey_about: #5d5d5d;
           margin-left: 10px;
           border-radius: 0px;
         }
+        a {
+          text-transform: uppercase;
+          color: $green_main;
+          border: none;
+          margin-left: 10px;
+          border-radius: 0px;
+          text-decoration: none;
+          background:#ddd;
+          text-align:center;
+        }
       }
     }
     h2 {
