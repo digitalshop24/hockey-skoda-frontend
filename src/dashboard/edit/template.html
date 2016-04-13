@@ -1,0 +1,148 @@
+<form ng-submit="ctrl.send()">
+    <section class="about_first">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="wrapp_titel">
+                        <h4>Редактирование <span class="plus_ball"></span></h4>
+                        <h2>Расскажите <br> ŠKODA о себе</h2>
+                        <p>Потратьте всего несколько минут! <br>Чем больше полей вы заполните, <br>тем больше стартовых очков будет на вашем счету.<br> Ваши данные нужны для того, чтобы вы без <br>проблем получили выигранные призы и подарки.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <aside class="form">
+        <div class="form_grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4>Как вас зовут?</h4>
+                        <input type="text" minlength="2" ng-model="ctrl.form.last_name" class="input_default input_small"
+                               placeholder="Фамилия* (обязательное поле)" required>
+                        <input type="text" minlength="2" ng-model="ctrl.form.first_name" class="input_default input_small"
+                               placeholder="Имя* (обязательное поле)" required>
+                        <input type="text" minlength="2" ng-model="ctrl.form.middle_name" class="input_default input_small"
+                               placeholder="Отчество* (обязательное поле)" required>
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>Где Вы проживаете?<span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <input type="text" ng-model="ctrl.form.zip_code" class="input_default input_small" placeholder="Индекс">
+                        <input type="text" minlength="2" ng-model="ctrl.form.city" class="input_default input_small" placeholder="Город* (обязательное поле)" required>
+                        <input type="text" ng-model="ctrl.form.address" class="input_default input_small"
+                               placeholder="Адрес">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form_white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4>Можно вашу почту?<span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <input required="true" type="email" ng-model="ctrl.form.email" class="input_default input_small"
+                               placeholder="E-mail* (обязательное поле)">
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>И телефон?<span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <input type="text" ng-model="ctrl.form.phone" class="input_default input_small"
+                               placeholder="+7">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4>Старый пароль?</h4>
+                        <input type="password" minlength="8" ng-model="ctrl.form.current_password" class="input_default input_small"
+                               placeholder="Ваш старый пароль">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4>Новый пароль?</h4>
+                        <input type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"
+                               placeholder="Ваш новый пароль (мин. 8 символов)">
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>Повторите пароль?</h4>
+                        <input type="password" minlength="8" ng-model="ctrl.form.confirmPassword" class="input_default input_small"
+                               placeholder="Повторите ваш новый пароль (мин. 8 символов)">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="form_grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4>Ваш возраст?<span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <input type="number" ng-model="ctrl.form.age" class="input_default input_small" placeholder="">
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>Вы состоите в браке?<span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <input type="text" ng-model="ctrl.form.marital_status" class="input_default input_small" placeholder="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form_grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4>Ваша машина?<span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <select style="width: 350px" class="input_default input_small"
+                                ng-options="car for car in ctrl.brands" ng-model="ctrl.form.current_car" ng-change="ctrl.isCurrentCarSkoda = ctrl.form.current_car == 'Skoda'">
+                            <option disabled selected value>Выберите текущую</option>
+
+                        </select>
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>А прошлая? <span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <select style="width: 350px" class="input_default input_small"
+                                ng-options="car for car in ctrl.brands" ng-model="ctrl.form.last_car">
+                            <option disabled selected value>Выберите прошлую</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="ctrl.isCurrentCarSkoda">
+                    <div class="col-md-6 left">
+                        <h4>Укажите модель?<span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <select style="width: 350px" class="input_default input_small"
+                                ng-options="car for car in ctrl.skodaCars" ng-model="ctrl.form.skoda_model">
+                            <option disabled selected value>Выберите модель</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button class="btn btn_common main">Отправить</button>
+                </div>
+            </div>
+        </div>
+        <div class="form_white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h4>Мы хотим с вами дружить в соцсетях<span class="plus_ball"> </span></h4>
+                        <ul>
+                            <li><a href="#"><img src="img/resources/img/fb.png" alt="" class="img-responsive"></a></li>
+                            <li><a href="#"><img src="img/resources/img/insta.png" alt="" class="img-responsive"></a>
+                            </li>
+                            <li><a href="#"><img src="img/resources/img/twiter.png" alt="" class="img-responsive"></a>
+                            </li>
+                            <li><a href="#"><img src="img/resources/img/vk.png" alt="" class="img-responsive"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</form>

@@ -384,6 +384,7 @@ export default angular.module('dashboard.tantam-init', [])
                         window.open($(this).attr('href'),"","width=400,height=400");
                         return false;
                     });
+                    
                 });
             }
         }

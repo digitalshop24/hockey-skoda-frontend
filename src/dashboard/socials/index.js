@@ -37,6 +37,10 @@ export default angular.module('dashboard.socials', [])
 
                     hashtag: $stateParams => {
                         return $stateParams.hashtag;
+                    },
+
+                    hashtags: mainService => {
+                        return mainService.getHashtags();
                     }
                 }
             });

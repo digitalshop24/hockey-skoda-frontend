@@ -1,0 +1,38 @@
+<div class="game-play">
+    <div class="game-center">
+        <div class="game-title clearfix">
+            <div class="game-title-left">
+                <h2>Большая игра!</h2>
+
+                <div class="text">
+                    <p>Краткое описание механики <br> и инструкции для посетителей.</p>
+                </div>
+            </div>
+            <div class="game-title-right">
+                <p class="title-p">Призов хватит на всех!</p>
+
+                <div class="number">
+                    <p>25000</p>
+                    <span>ячеек с призами</span>
+                </div>
+                <div class="number">
+                    <p class="gren-bold">8000</p>
+                    <span>призов готовых <br> к отправке</span>
+                </div>
+                <div class="number">
+                    <p>00??</p>
+                    <span>иная интересная <br>  информация</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="game-cricle">
+            <a ui-sref="dashboard.game.cubes({id:{{sector.id}}})" ng-repeat="sector in ctrl.sectors"><div class="game-cricle-item" ng-class="'game-cricle-item' + sector.id"></div></a>
+        </div>
+        <div class="game-center-button">
+            <button class="btn btn_primary" ng-click="ctrl.chooseRandomSector()">Мне повезет</button>
+            <span>Рандомный выбор сектора</span>
+        </div>
+    </div>
+</div>

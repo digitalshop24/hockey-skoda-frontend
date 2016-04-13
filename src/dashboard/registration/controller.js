@@ -26,10 +26,14 @@ export default class RegistrationCtrl {
             });
             return;
         }
+
         this.auth.register({
             email: this.form.email,
             password: this.form.password
         }).then(() => {
+            delete this.form.email;
+            delete this.form.password;
+            delete this.form.confirmPassword;
             return this.profileService.update(this.form);
         }).then(() => {
             this.form = {};
