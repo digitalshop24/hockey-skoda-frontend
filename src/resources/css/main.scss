@@ -5988,3 +5988,33 @@ nav {
 #nprogress .bar {
   background: #4ba82e;
 }
+
+
+/* interes-fact */ 
+ 
+.block-set {
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 12px;
+  position: relative;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+  width:100%;
+  margin:10px 0;
+  .block-interes-fact  {
+    .img {
+      img {
+        width:100%;
+      }
+    }
+    .text1 {
+      p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+        color: #555;
+      }
+    }
+  }
+}
