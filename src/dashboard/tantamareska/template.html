@@ -1,15 +1,14 @@
 <!-- tantamareska -->
-<div class="loader-container" ng-show="ctrl.isButtonDisabled"><span class="loader-icon"></span></div>
 <section class="wrapp_tantamareska" tantam-init>
     <div class="container">
             <div class="row">
                 <div class="col-xs-6 col-md-5 col-xs-mob">
                     <h2>Я - ХОККЕИСТ</h2> 
                     <p >Выбери сюжет загрузи свою фотографи<br> и поделись с друзьями</p>
-                    <span class="btn btn_common small" id="uploadButton">
+                    <!-- <a href="#" class="btn btn_common small" id="uploadButton"> -->
                         Загрузить свое фото
                         <input type="file" accept="image/*" class="file-photo">
-                    </span>
+                    <!-- </a> -->
                 </div>
                 <div class="col-xs-6 col-md-7 col-xs-mob">
                 <!-- <input type="file" accept="image/*" class="file-photo"> -->
@@ -55,7 +54,7 @@
       </div>
       <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Отменить</button>
-          <button type="button" class="btn btn_primary tiny" data-dismiss="modal" id="save-crop">Сохранить изменения</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="save-crop">Сохранить изменения</button>
       </div>
     </div>
 
@@ -156,7 +155,7 @@
                     </li>
                 </ul>-->
 
-                <!-- <ul class="soc" ng-show="ctrl.imageUrl">
+                <ul class="soc" ng-show="ctrl.imageUrl">
                     <li><p></p></li>
                     <li><a socialshare socialshare-provider="facebook"
                            socialshare-url="{{ctrl.imageUrl}}">
@@ -168,7 +167,7 @@
                     <li><a socialshare socialshare-provider="vk"
                            socialshare-url="{{ctrl.imageUrl}}">
                         <img src="img/resources/img/vk_grey.png" alt="" class="img-responsive"></a></li>
-                </ul> -->
+                </ul>
                 
             </div>
         </div>
