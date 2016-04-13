@@ -4,8 +4,11 @@
     <p class="date" ng-bind="'Сегодня, ' + ctrl.today"/>
     <p>На этой странице пользоветель должен загрузить свою фоточку и расшарить ее в Инстаграм(а в другие соц. сети можно?). Юзер может шаритьнесколько фоточек (смотря соколько золоты ячее он выиграл)</p>
     <div class="download_promo">
-        <input type="text" class="input_default input_small" placeholder="Ваш промокод (8 цифр)">
-        <button class="btn btn_secondary small"> Активировать</button>
+        <form ng-submit="ctrl.sendCoupon()">
+            <input type="text" minlength="8" length="8" ng-model="ctrl.coupon" class="input_default input_small" placeholder="Ваш промокод (8 цифр)" required>
+            <button type="submit" class="btn btn_secondary small"> Активировать</button>
+        </form>
+
     </div>
    <h5>Мои промо-коды</h5>
     <table>
@@ -16,35 +19,10 @@
                 <td></td>
             </tr>
          </thead>
-        <tr>
-            <td><h6>№99999999</h6></td>
-            <td>16 апреля</td>
-            <td><button class="btn btn_secondary tiny">Действие</button></td>
-        </tr>
-        <tr>
-            <td><h6>№99999999</h6></td>
-            <td>16 апреля</td>
-            <td><button class="btn btn_secondary tiny">Действие</button></td>
-        </tr>
-        <tr>
-            <td><h6>№99999999</h6></td>
-            <td>16 апреля</td>
-            <td><button class="btn btn_secondary tiny">Действие</button></td>
-        </tr>
-        <tr>
-            <td><h6>№99999999</h6></td>
-            <td>16 апреля</td>
-            <td><button class="btn btn_secondary tiny">Действие</button></td>
-        </tr>
-        <tr>
-            <td><h6>№99999999</h6></td>
-            <td>16 апреля</td>
-            <td><button class="btn btn_secondary tiny">Действие</button></td>
-        </tr>
-        <tr>
-            <td><h6>№99999999</h6></td>
-            <td>16 апреля</td>
-            <td><button class="btn btn_secondary tiny">Действие</button></td>
+        <tr ng-repeat="coupon in ctrl.coupons">
+            <td><h6 ng-bind="'№' + coupon.number"></h6></td>
+            <td ng-bind="coupon.activate_date | amDateFormat:'DD MMMM'"></td>
+            <td><button class="btn btn_secondary tiny" ng-disabled="!coupon.is_active" ng-bind="coupon.is_active ? 'Действие' : 'Использован'"></button></td>
         </tr>
     </table>
     
