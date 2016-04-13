@@ -2550,10 +2550,19 @@ $grey_about: #5d5d5d;
   }
   .wrapp_social_lent {
     background-color: $white;
-    min-height: 100vh;
+    height: 100vh;
+    position: fixed;
+    overflow: auto;
+    width:13.7%;
+    .jspContainer {
+      .jspVerticalBar {
+        width:0px;
+      }
+    }
+    
     .soc_post {
       text-align: left;
-      padding: 30px 5px 10px 10px;
+      padding: 30px 10px 10px 10px;
       img {
         margin-bottom: 5px;
       }

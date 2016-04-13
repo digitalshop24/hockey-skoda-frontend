@@ -1,6 +1,6 @@
 function initTimeline() {
     $(function () {
-        $('.wrapp_timeline,.wrapp_timeline_main_page,.achif_wrapp').jScrollPane({
+        $('.wrapp_timeline,.wrapp_timeline_main_page,.achif_wrapp,.wrapp_social_lent').jScrollPane({
                 autoReinitialise: true
             }
         );
