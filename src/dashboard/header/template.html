@@ -55,7 +55,7 @@
                   <a ui-sref="dashboard.tantamareska"><li class="li_disabel" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Тантамарезка</li></a>
                   <a ui-sref="dashboard.suggestions"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Пожелание сборной</li></a>
                   <a href="#" ui-sref="dashboard.socials" ><li class="" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Соц.сети хоккеистов</li></a>
-                  <a href="#"><li class="li_disabel" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Junior Ice Hockey Cup</li></a>
+                  <a ui-sref="dashboard.junior"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Junior Ice Hockey Cup</li></a>
                 </ul>
               </li></a>
               <a href="#"><li class="end_li" ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup(); ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen;"><img src="img/resources/img/user.png" alt=""class="img_li"> <span>Войти или зарегистрироваться</span><img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li"></li></a>
@@ -236,7 +236,7 @@
                                 <a ui-sref="dashboard.tantamareska" ng-click="ctrl.isMenuOpen = false"><li class=""> Тантамарезка</li></a>
                                 <a ui-sref="dashboard.suggestions"><li> Пожелание сборной</li></a>
                                 <a href="" ui-sref="dashboard.socials" ng-click="ctrl.isMenuOpen = false"><li class=""> Соц.сети хоккеистов</li></a>
-                                <a href="" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel"> Junior Ice Hockey Cup</li></a>
+                                <a ui-sref="dashboard.junior" ng-click="ctrl.isMenuOpen = false"><li> Junior Ice Hockey Cup</li></a>
                             </ul>
                         </div>
                         <div class="col-md-6 info_menu">
