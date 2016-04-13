@@ -30,6 +30,7 @@ export default class CubesCtrl {
                 } else {
                     this.categories.push({
                         name: prize.prize_category.name,
+                        right_answers_count: prize.prize_category.right_answers_count,
                         prizes: []
                     })
                 }
@@ -88,14 +89,18 @@ export default class CubesCtrl {
 
 
     startGame() {
+        if(this.busy) return;
+        this.busy = true;
         this.service.startGame(this.currentCell.id)
             .then(res => {
+                this.busy = false;
                 this.quiz = res;
                 this.clearAnswers();
                 $('#myModal').modal('hide');
                 this.startFirstQuestion();
             })
             .catch(err => {
+                this.busy = false;
                 $('#myModal').modal('hide');
                 this.modal.open({
                     resolve: {
@@ -163,10 +168,54 @@ export default class CubesCtrl {
 
     checkAnswers() {
         this.$interval.cancel(this.thirdInterval);
-        this.service.checkAnswers()
+        const answers = [];
+        if(this.firstAnswer) {
+            let firstAns = "";
+            let notFirstTime = false;
+            for(let prop in this.firstAnswer) {
+
+                if(this.firstAnswer[prop]) {
+                    if(notFirstTime) {
+                        firstAns += ', ';
+                    }
+                    firstAns += this.firstAnswer[prop];
+                    notFirstTime = true;
+                }
+            }
+            answers.push(firstAns);
+        } else {
+            answers.push('');
+        }
+
+        if(this.secondAnswer) {
+            answers.push(this.secondAnswer);
+        } else {
+            answers.push('');
+        }
+
+        if(this.thirdAnswer) {
+            answers.push(+this.thirdAnswer);
+        } else {
+            answers.push('');
+        }
+
+
+        this.service.checkAnswers(this.quiz.id, answers)
             .then(res => {
+                this.currentCell.is_crashed = true;
+                this.result = res;
                 $('#thirdQuestion').modal('hide');
-            })
+                $('#resultModal').modal('show');
+            }).catch(err => {
+                $('#thirdQuestion').modal('hide');
+                this.modal.open({
+                    resolve: {
+                        message: () => {
+                            return err.message || 'Ошибка!';
+                        }
+                    }
+                });
+            });
     }
 
     shuffle(a) {
