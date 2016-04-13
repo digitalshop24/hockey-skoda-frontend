@@ -4,11 +4,12 @@ import moment from 'moment';
 
 
 export default class GeneralNewsCtrl {
-    constructor(newsService, news, daysWithNews, month, day, generalNewsLogicService, $state) {
+    constructor(newsService, news, daysWithNews, month, day, generalNewsLogicService, $state, tweets) {
         generalNewsLogicService.init(daysWithNews, month, day);
         this.generalNewsLogicService = generalNewsLogicService;
         this.service = newsService;
         this.state = $state;
+        this.tweets = tweets;
         this.days = [news];
         this.months = [];
         this.activeMonth = month;

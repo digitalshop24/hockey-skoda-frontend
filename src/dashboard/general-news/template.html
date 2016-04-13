@@ -42,105 +42,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden-xs hidden-sm col-md-2 fix_padding" ng-show="true">
-                    <div scroll-init class="wrapp_social_lent">
-
-                        <div class="soc_post">
+                <div class="hidden-xs hidden-sm col-md-2 fix_padding">
+                    <div class="wrapp_social_lent">
+                        <div class="soc_post" ng-repeat="tweet in ctrl.tweets">
                             <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
                             <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
-                                    очень много
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
-                                    очень много
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
-                                    очень много
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
-                                    очень много
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
-                                    очень много
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
-                                    очень много
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
-                                    очень много
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
-                                    очень много
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
-                                    очень много
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="soc_post">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
+                                <li ng-bind="tweet.person.name">Хоккей</li>
+                                <!--<li>@sports_hokey</li>-->
+                                <li ng-bind="tweet.content">Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
                                     очень много
                                 </li>
                             </ul>
