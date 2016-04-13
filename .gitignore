@@ -5,3 +5,5 @@ npm-debug.log
 .idea/*
 templates/
 bower_components/
+*.sublime-project
+*.sublime-workspace
