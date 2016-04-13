@@ -1,4 +1,4 @@
-<div class="game-two" cubes-init>
+<div class="game-two" cubes-init initial-slide="ctrl.id">
     <div class="game-two-center">
         <div class="game-slider">
             <div class="game-slider-for">
@@ -12,18 +12,18 @@
             <div class="game-two-block-title-left">
                 <h3><b>Пробейся </b><br> к викторине!</h3>
 
-                <p>Инструкция для участника. Или информация о <br> кол-ве ячеек. Написа</p>
+               <!-- <p>Инструкция для участника. Или информация о <br> кол-ве ячеек. Написа</p>-->
             </div>
             <div class="game-two-block-title-right">
-                <div class="sector">
-                    <a href="#" data-toggle="modal" data-target="#myModal">Выбор сектора</a>
-                </div>
-                <div class="ball clearfix">
+                <!--<div class="sector">
+                    <a href="#" data-toggle="modal" data-target="#myModal2">Выбор сектора</a>
+                </div>-->
+                <div class="ball clearfix" ng-show="ctrl.session.isAuthenticated">
                     <div class="ball-im">
                         <p>Мои баллы</p>
 
                         <div class="num">
-                            <span>1950</span>
+                            <span ng-bind="ctrl.user.achievments_score">1950</span>
                         </div>
                     </div>
 
@@ -32,8 +32,8 @@
                 <div class="opis clearfix">
                     <div class="opis-left">
                         <div class="opis-num">
-                            <span class="blue">289</span> /
-                            <span class="opis-green">3</span>
+                            <span class="blue" ng-bind="ctrl.sector.not_crashed_blue_count"></span> /
+                            <span class="opis-green" ng-bind="ctrl.sector.not_crashed_green_count"></span>
                         </div>
                         <span class="opis-grey">осталось</span>
                     </div>
@@ -51,1680 +51,311 @@
     </div>
 
     <div class="game-table clearfix">
-        <div class="sector">
+        <div class="sector" ng-repeat="row in ctrl.table">
             <table>
                 <tr>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-1 item"></div>
+                    <td ng-repeat="cell in row.cells">
+                        <div ng-show="cell.type == 'green'" ng-click="ctrl.brokeCell(cell.value)"
+                             class="game-two-item game-two-green col-4x4">
+
+                            <div class="item-{{cell.classIndex}} item"
+                                 ng-class="cell.value.is_crashed ? 'crashed': 'notCrashed'"></div>
                         </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
+
+                        <div ng-show="cell.type == 'blue'" ng-click="ctrl.brokeCell(cell.first)"
+                             class="game-two-item game-two-while col-1x1">
+                            <div class="item-{{cell.firstClassIndex}} item"
+                                 ng-class="cell.first.is_crashed ? 'crashed': 'notCrashed'"></div>
                         </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-2 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4" data-toggle="modal" data-target="#myModal1">
-                            <div class="item-3 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-4 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-1 item"></div>
+                        <div ng-show="cell.type == 'blue'" ng-click="ctrl.brokeCell(cell.second)"
+                             class="game-two-item game-two-while col-1x1">
+                            <div class="item-{{cell.secondClassIndex}} item"
+                                 ng-class="cell.second.is_crashed ? 'crashed': 'notCrashed'"></div>
                         </div>
                     </td>
 
-                </tr>
-            </table>
-
-        </div>
-        <div class="sertor">
-            <table>
-                <tr>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-2 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-3 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-4 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-5 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-6 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-7 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-8 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-9 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-10 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-11 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-12 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-13 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-14 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-15 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-16 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-17 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-18 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-19 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-20 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-21 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-22 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-23 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-24 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-25 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-26 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-27 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-28 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-29 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-30 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-31 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-32 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-33 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-34 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-13 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-31 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-21 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-12 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-17 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-24 item"></div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="sector">
-            <table>
-                <tr>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-2 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-3 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-4 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-
-                </tr>
-            </table>
-
-        </div>
-        <div class="sertor">
-            <table>
-                <tr>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-2 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-3 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-4 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-5 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-6 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-7 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-8 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-9 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-10 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-11 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-12 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-13 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-14 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-15 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-16 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-17 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-18 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-19 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-20 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-21 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-22 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-23 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-24 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-25 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-26 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-27 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-28 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-29 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-30 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-31 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-32 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-33 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-34 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-13 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-31 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-21 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-12 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-17 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-24 item"></div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="sector">
-            <table>
-                <tr>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-2 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-3 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-4 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-
-                </tr>
-            </table>
-
-        </div>
-        <div class="sertor">
-            <table>
-                <tr>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-2 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-3 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-4 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-5 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-6 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-7 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-8 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-9 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-10 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-11 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-12 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-13 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-14 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-15 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-16 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-17 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-18 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-19 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-20 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-21 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-22 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-23 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-24 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-25 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-26 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-27 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-28 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-29 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-30 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-31 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-32 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-33 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-34 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-13 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-31 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-21 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-12 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-17 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-24 item"></div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="sector">
-            <table>
-                <tr>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-2 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-3 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-4 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-
-                </tr>
-            </table>
-
-        </div>
-        <div class="sertor">
-            <table>
-                <tr>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-2 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-3 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-4 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-5 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-6 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-7 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-8 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-9 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-10 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-11 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-12 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-13 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-14 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-15 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-16 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-17 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-18 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-19 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-20 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-21 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-22 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-23 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-24 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-25 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-26 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-27 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-28 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-29 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-30 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-31 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-32 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-33 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-34 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-13 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-31 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-21 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-12 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-17 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-24 item"></div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="sector">
-            <table>
-                <tr>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-2 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-3 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-4 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-
-                </tr>
-            </table>
-
-        </div>
-        <div class="sertor">
-            <table>
-                <tr>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-2 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-3 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-4 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-5 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-6 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-7 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-8 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-9 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-10 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-11 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-12 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-13 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-14 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-15 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-16 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-17 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-18 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-19 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-20 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-21 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-22 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-23 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-24 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-25 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-26 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-27 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-28 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-29 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-30 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-31 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-32 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-33 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-34 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-13 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-31 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-21 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-12 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-17 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-24 item"></div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="sector">
-            <table>
-                <tr>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-2 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-3 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-4 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-green col-4x4">
-                            <div class="item-1 item"></div>
-                        </div>
-                    </td>
-
-                </tr>
-            </table>
-
-        </div>
-        <div class="sertor">
-            <table>
-                <tr>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-1 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-2 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-3 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-4 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-5 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-6 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-7 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-8 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-9 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-10 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-11 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-12 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-13 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-14 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-15 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-16 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-17 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-18 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-19 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-20 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-21 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-22 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-23 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-24 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-25 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-26 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-27 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-28 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-29 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-30 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-31 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-32 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-33 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-34 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-13 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-31 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-21 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-12 item"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-17 item"></div>
-                        </div>
-                        <div class="game-two-item game-two-while col-1x1">
-                            <div class="item-24 item"></div>
-                        </div>
-                    </td>
                 </tr>
             </table>
         </div>
     </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <!--<div class="game-modal-led led-blue"></div>-->
+            <div class="game-modal-led-bottom bottom-led-{{ctrl.cubeModalColor}}"></div>
+            <div class="game-modal-content">
+                <h2>а теперь викторина!</h2>
+
+                <!--<p>Описание того, что участник выигрывает и при каких условиях. Пр Описание того, что участник
+                    выигрывает и при каких условиях. Пр Описание того, что участник выигрывает и при каких условиях.
+                    Пр<b>участник выигрывае</b></p>-->
+
+                <div class="priz clearfix">
+                    <div class="priz-item" ng-repeat="category in ctrl.categories">
+                        <div class="priz-item-text clearfix">
+                            <div class="number">
+                                3
+                            </div>
+                            <div class="text-right">
+                                Правильных <br> ответа
+                            </div>
+                        </div>
+
+                        <div class="priz-slider1">
+                            <div class="priz-slider1-block" ng-repeat="prize in category.prizes">
+                                <div class="priz-item-img">
+                                    <img src="{{prize.image.thumb}}" alt="">
+                                </div>
+                                <div class="priz-item-tittle">
+                                    <h5 ng-bind="prize.name"></h5>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="mobal-button priz clearfix">
+                    <div class="mobal-button-left"></div>
+                    <div class="mobal-button-right ">
+                        <button class="btn btn_primary" ng-click="ctrl.startGame()">Играть!</button>
+                    </div>
+                    <div class="mobal-button-center" ng-click="ctrl.startGame()">
+                        <p>Приготовьтесь отвечать на время</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Modal -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="firstQuestion" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <div class="game-modal-led led-blue"></div>
+            <div class="game-modal-content">
+                <h2 class="vop">Вопрос <b>№1</b></h2>
+                <p ng-bind="ctrl.quiz.first_question.body"></p>
+            </div>
+
+
+
+            <div class="otvet-ches">
+                <div class="otvet-ches-item" ng-repeat="question in ctrl.quiz.first_question.answer_options">
+                    <div class="radio active">
+                        <input id="cfirst" ng-model="ctrl.firstAnswer[question.id]" type="checkbox" ng-disabled="!ctrl.firstQuestionTime"  hidden>
+                        <label for="cfirst" ng-bind="question.aswer">
+                            <span></span>
+                            Стиль игры, прививаемый командам Вячеславом Быковым Победа бедн
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mobal-button priz otvet clearfix">
+                <div class="mobal-button-left">
+                    <div class="timer">
+                        <p id='p' ng-bind="ctrl.firstQuestionTime">09</p>
+                        <span>сек</span>
+                    </div>
+                </div>
+                <div class="mobal-button-right" ng-click="ctrl.startSecondQuestion()">
+                    <button class="btn btn_primary">Далее</button>
+                </div>
+                <div class="mobal-button-center" ng-show="!ctrl.firstQuestionTime">
+                    <p class="red-one  width1">Вы не уложились в отведенное время</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="secondQuestion" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <div class="game-modal-led led-blue"></div>
+            <div class="game-modal-content">
+                <h2 class="vop">Вопрос <b>№2</b></h2>
+                <p ng-bind="ctrl.quiz.second_question.body"></p>
+            </div>
+
+            <div class="otv-fre">
+                <input type="text" placeholder="Ответ" ng-model="ctrl.secondAnswer" ng-disabled="!ctrl.secondQuestionTime">
+            </div>
+
+
+            <div class="mobal-button priz otvet clearfix">
+                <div class="mobal-button-left">
+                    <div class="timer bor-red">
+                        <p id='p' ng-bind="ctrl.secondQuestionTime">09</p>
+                        <span>сек</span>
+                    </div>
+                </div>
+                <div class="mobal-button-right" ng-click="ctrl.startThirdQuestion()">
+                    <button class="btn btn_primary">Далее</button>
+                </div>
+                <div class="mobal-button-center" ng-show="!ctrl.secondQuestionTime">
+                    <p class="red-one  width1">Вы не уложились в отведенное время</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--<div class="modal fade" id="secondQuestion" role="dialog">
+    <div class="modal-dialog">
+
+        &lt;!&ndash; Modal content&ndash;&gt;
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <div class="game-modal-led led-blue"></div>
+            <div class="game-modal-content">
+                <h2 class="vop" ng-bind="ctrl.quiz.second_question.body"></b>
+                    &lt;!&ndash;<button class="btn btn_common small">Показать ответ</button>&ndash;&gt;
+                </h2>
+
+            </div>
+
+            <div class="otvet-ches">
+                <input type="text" ng-model="ctrl.secondAnswer" ng-disabled="!ctrl.secondQuestionTime">
+            </div>
+
+
+            <div class="mobal-button priz otvet clearfix">
+                <div class="mobal-button-left">
+                    <div class="timer">
+                        <p id='p' ng-bind="ctrl.secondQuestionTime"></p>
+                        <span>сек</span>
+                    </div>
+                </div>
+                <div class="mobal-button-right " ng-click="ctrl.startThirdQuestion()">
+                    <button class="btn btn_primary ">Далее</button>
+                </div>
+                <div class="mobal-button-center" ng-show="!ctrl.secondQuestionTime">
+                    <p class="red-one">Время истекло</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>-->
+
+
+<div class="modal fade" id="thirdQuestion" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <div class="game-modal-led led-blue"></div>
+            <div class="game-modal-content">
+                <h2 class="vop">Вопрос <b>№3</b></h2>
+                <p ng-bind="ctrl.quiz.third_question.body"></p>
+            </div>
+
+
+
+            <div class="otvet-ches">
+                <div class="otvet-ches-item" ng-repeat="question in ctrl.quiz.third_question.answer_options">
+                    <div class="radio active">
+                        <input type="radio" ng-model="ctrl.thirdAnswer" name="radio2" value="{{question.id}}"
+                               ng-disabled="!ctrl.thirdQuestionTime">
+                        <label ng-bind="question.answer"></label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mobal-button priz otvet clearfix">
+                <div class="mobal-button-left">
+                    <div class="timer">
+                        <p id='p' ng-bind="ctrl.thirdQuestionTime"></p>
+                        <span>сек</span>
+                    </div>
+                </div>
+                <div class="mobal-button-right " ng-click="ctrl.checkAnswers()">
+                    <button class="btn btn_primary grenn">Проверить!</button>
+                </div>
+                <div class="mobal-button-center" ng-show="!ctrl.thirdQuestionTime">
+                    <p class="red-one width1">Вы не уложились в отведенное время</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--
+
+
+
+<div class="modal fade" id="thirdQuestion" role="dialog">
+    <div class="modal-dialog">
+
+        &lt;!&ndash; Modal content&ndash;&gt;
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <div class="game-modal-led led-blue"></div>
+            <div class="game-modal-content">
+                <h2 class="vop" ng-bind="ctrl.quiz.third_question.body"></b>
+                    &lt;!&ndash;<button class="btn btn_common small">Показать ответ</button>&ndash;&gt;
+                </h2>
+
+            </div>
+
+            <div class="otvet-ches">
+                <div class="otvet-ches-item" ng-repeat="question in ctrl.quiz.third_question.answer_options">
+                    <div class="radio">
+                        <input type="radio" ng-model="ctrl.thirdAnswer" name="radio2" value="{{question.id}}"
+                               ng-disabled="!ctrl.thirdQuestionTime">
+                        <label ng-bind="question.answer"></label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mobal-button priz otvet clearfix">
+                <div class="mobal-button-left">
+                    <div class="timer">
+                        <p id='p' ng-bind="ctrl.thirdQuestionTime"></p>
+                        <span>сек</span>
+                    </div>
+                </div>
+                <div class="mobal-button-right ">
+                    <button class="btn btn_primary ">Проверить!</button>
+                </div>
+                <div class="mobal-button-center" ng-show="!ctrl.thirdQuestionTime">
+                    <p class="red-one">Время истекло</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>-->
