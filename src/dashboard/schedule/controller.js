@@ -33,11 +33,15 @@ export default class ScheduleCtrl {
             }
         ];
 
-        $interval(() => {
+        const updater = $interval(() => {
             scheduleService.getSchedule().then((res) => {
                 this.schedule = res;
             })
         }, 15 * 1000);
+
+        $scope.$on('$destroy', () => {
+            $interval.cancel(updater);
+        });
 
         /* dirty hack */
         this.filterByTeam = (match) => {
