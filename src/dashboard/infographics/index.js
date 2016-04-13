@@ -3,7 +3,9 @@
 import angular from 'angular';
 import social from './social/index.js';
 
-export default angular.module('dashboard.infographics', [])
+export default angular.module('dashboard.infographics', [
+    social.name
+])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.infographics', {

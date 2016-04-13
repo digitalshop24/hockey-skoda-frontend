@@ -380,10 +380,6 @@ export default angular.module('dashboard.tantam-init', [])
                         $('.vk-share').attr('href', 'http://vk.com/share.php?url=' + data);*/
                         return false;
                     });
-                    $(document).on('click', '.sharing-link', function(){
-                        window.open($(this).attr('href'),"","width=400,height=400");
-                        return false;
-                    });
                 });
             }
         }

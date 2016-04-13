@@ -8,8 +8,9 @@ export default angular.module('dashboard.infographics.social', [])
             link: function () {
 
                 angular.element(document).ready(() => {
-                    $('.social-likes').socialLikes({
-                        forceUpdate: true
+                    $(document).off('click', '.sharing-link').on('click', '.sharing-link', function(){
+                        window.open($(this).attr('href'),"","width=400,height=400");
+                        return false;
                     });
                 });
             }
