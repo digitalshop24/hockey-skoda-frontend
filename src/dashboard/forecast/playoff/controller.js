@@ -13,6 +13,18 @@ export default class ForecastCtrl {
 
     changeSelectTeam(match) {
         this.canSendForecast = match.blueteam && match.redteam;
+        if(this.canSendForecast) {
+            if(match.redteam.id == match.blueteam.id) {
+                this.modal.open({
+                    resolve: {
+                        message: () => {
+                            return '<h4 class = "modal-title">Нельзя выбрать 2 одинаковых команды!</h4>'
+                        }
+                    }
+                });
+                this.canSendForecast = false;
+            }
+        }
     }
 
     sendForecast() {

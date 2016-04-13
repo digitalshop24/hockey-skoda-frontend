@@ -18,7 +18,7 @@ export default class TantamareskaCtrl {
                     modal.open({
                         resolve: {
                             message: () => {
-                                var shareHeader = '<ul class="tantam-share">';
+                                var shareHeader = '<ul class="tantam-share" social-init>';
                                 var shareItemBefore = '<li><a class="sharing-link" href="';
                                 var shareItemAfter = '</a></li>';
                                 var shareFooter = '</ul>';

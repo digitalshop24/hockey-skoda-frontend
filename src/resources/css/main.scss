@@ -75,7 +75,7 @@ header {
       li {
         display: inline-block;
         text-transform: uppercase;
-        padding: 21px 0 ;
+        padding: 22px 0 ;
         margin-left: 3.3%;
         font-size: $p_size+0.01rem; 
       }
@@ -167,7 +167,7 @@ header {
         border-bottom: 1px solid $grey_lite;
         text-transform: none;
         width: 90%;
-        color: $green_main;
+        // color: $green_main;
       }
       a {
           font-size: $p_size;
@@ -1430,9 +1430,10 @@ $grey_about: #5d5d5d;
       text-transform: uppercase;
       font-family: $extra_bold;
       padding: 0 20px;
-      width: 60%;
+      width: 70%;
       min-width: 310px;
       max-width: 750px;
+      margin-top: 130px;
       a {
         color: $white;
       }
