@@ -7,7 +7,9 @@ export default class ScheduleService {
 
     getSchedule() {
         return this.api.get('/schedule/index', {
-            params: {}
+            params: {
+                stage: 'currentAndFuture'
+            }
         })
             .then(response => {
                 return response.data;
