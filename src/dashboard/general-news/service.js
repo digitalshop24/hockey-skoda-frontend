@@ -7,7 +7,7 @@ export default class GeneralNewsService {
 
     getNewsByDate(date) {
         return this.api.
-            get('/posts/news', {
+            get('/posts/news,blog', {
                 params: {
                     date: date,
                     origin: 'content_manager'
