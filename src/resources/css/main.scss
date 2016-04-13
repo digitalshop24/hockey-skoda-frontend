@@ -75,7 +75,7 @@ header {
       li {
         display: inline-block;
         text-transform: uppercase;
-        padding: 21px 0 ;
+        padding: 22px 0 ;
         margin-left: 3.3%;
         font-size: $p_size+0.01rem; 
       }
@@ -167,7 +167,7 @@ header {
         border-bottom: 1px solid $grey_lite;
         text-transform: none;
         width: 90%;
-        color: $green_main;
+        // color: $green_main;
       }
       a {
           font-size: $p_size;
@@ -1951,6 +1951,7 @@ $grey_about: #5d5d5d;
 }
 .wrapp_mainpage_timeline {
   padding-top: 65px;
+  padding-bottom: 40px;
   // background-color: #f1f1f1;
   .timeline_horisond {
     height:2px;
@@ -1966,13 +1967,13 @@ $grey_about: #5d5d5d;
       display: inline-block;
       width: 150px;
       position: relative;
-      margin-top: -60px;
+      margin-top: -53px;
       // padding-left:20px;
       z-index: 2;
       p {
         font-size: $p_size;
         color: $green_main;
-        margin-left: 20px;
+        
         a {
           color: $green_main;
         }
@@ -1982,12 +1983,23 @@ $grey_about: #5d5d5d;
         margin: 0 auto;
         margin-bottom: 10px;
       }
+      .wrapp_soc_li {
+        position: absolute;
+        top: -65px;
+      }
       .tag {
         font-size: $p_size+0.1rem;
       }
       .messege {
         color: $grey;
         font-size: $p_size+0.1rem;
+      }
+      .time {
+        height: 40px;
+        text-align: right;
+      }
+      .foto_soc {
+        max-width:200px; border-radius: 0px;
       }
       
     }
@@ -1998,7 +2010,7 @@ $grey_about: #5d5d5d;
       margin-left: 2%;
     }
     .min_l_2x {
-      margin-left: 4%;
+      margin-left: 8%;
     }
     .min_l_3x {
       margin-left: 13%;

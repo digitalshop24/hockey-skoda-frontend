@@ -69,7 +69,7 @@
     <div class="container-fluid hidden-xs hidden-sm">
         <div class="row">
             <div class="col-sm-12 col-md-12 left_head text-left">
-                <a ui-sref="dashboard.main" class="logo"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
+                <a ui-sref="dashboard.main" class="logo" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
                 <ul>
                     <li ng-mouseover="ctrl.isMenuOpen = true; ctrl.isPNewsOpen = false;" ng-class="active_li">
                         <a href="">
@@ -78,7 +78,7 @@
                         </a>
                     </li>
                     <li  ng-class="active_li">
-                        <a href="" ui-sref="dashboard.general-news" ng-mouseover="ctrl.isPNewsOpen = true; ctrl.isMenuOpen = false">
+                        <a href="" ui-sref="dashboard.general-news" ng-mouseover="ctrl.isPNewsOpen = true; ctrl.isMenuOpen = false" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false">
                             <span>Материалы</span>
                              <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
                            
@@ -155,7 +155,7 @@
             
         </div>
     </div>
-        <div class="dropdown_news two_menu" ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false">
+        <div class="dropdown_news " ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false">
                             <ul >
                                 <a ui-sref="dashboard.general-news" ng-click="ctrl.isPNewsOpen = false"><li>События</li></a>
                                 <a ui-sref="dashboard.facts" ng-click="ctrl.isPNewsOpen = false"><li>Интересные факты</li></a>
@@ -221,7 +221,7 @@
                             </ul>
                             <ul ng-show="ctrl.isForumOpen">
                                 <a ui-sref="dashboard.forum" ng-click="ctrl.isMenuOpen = false" ><li>Форум</li></a>
-                                <a href=""><li class="li_disabel">Викторины</li></a>
+                                <a href="" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel">Викторины</li></a>
 
                             </ul>
                             

@@ -39,6 +39,7 @@ import infographics from './infographics/index';
 import NotificationService from './notificationService.js';
 import socials from './socials/index';
 import consent from './consent/index';
+import game from './game/index';
 
 
 
@@ -76,7 +77,8 @@ export default angular.module('dashboard',
         faq.name,
         infographics.name,
         socials.name,
-        consent.name
+        consent.name,
+        game.name
     ])
     .service('login', Login)
     .service('modal', Modal)
