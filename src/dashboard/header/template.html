@@ -97,8 +97,8 @@
                             
                         </a>
                     </li> -->
-                    <li class="active_li" style="position: absolute;top: 5px; height: 74px;">
-                        <a href="" ui-sref="dashboard.prizenew">
+                    <li ng-class="{active_li_priz:$state.includes('dashboard.prizenew')}" class="active_li" style="position: absolute;top: 5px; height: 74px;" >
+                        <a href="" ui-sref="dashboard.prizenew" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false">
                             <span style="">Конкурсы</span>
                             
                         </a>
