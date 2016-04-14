@@ -3278,6 +3278,14 @@ $grey_about: #5d5d5d;
   padding: 50px 20px;
   min-height: 90vh;
   margin-left: 100px;
+  .wrapp_text {
+    p {
+      font-size: 2rem;
+    }
+    a {
+      color: $green_main;
+    }
+  }
   .news_banner {
     height: 165px;
     background-image: url('img/resources/img/news/bg_banner.jpg');
