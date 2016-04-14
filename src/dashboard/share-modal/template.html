@@ -1,0 +1,25 @@
+<div class="error_message_registration">
+    <p>Картинка успешно создана! Теперь Вы можете поделиться ей с друзьями!</p><h4 class="share-modal-header">Выберите соц.сеть</h4>
+    <ul class="tantam-share" social-init>
+        <li>
+            <a ng-click="ctrl.tryShare()" class="sharing-link" href="https://www.facebook.com/sharer.php?src=sp&u={{ctrl.data.imgUrl}}">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+        </li>
+
+        <li>
+            <a ng-click="ctrl.tryShare()" class="sharing-link" href="https://twitter.com/intent/tweet?text={{ctrl.data.title}}&url={{ctrl.data.imgUrl}}">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+        </li>
+
+        <li>
+            <a ng-click="ctrl.tryShare()" class="sharing-link"
+               href="http://vk.com/share.php?url={{ctrl.data.imgUrl}}&title={{ctrl.data.title}}&description={{ctrl.data.description}}&image={{ctrl.data.imgUrl}}">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+
+
+</div>
