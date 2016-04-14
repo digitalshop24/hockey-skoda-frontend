@@ -40,6 +40,12 @@ header {
   z-index: 1001;
   background-color: #fff;
   min-height: 70px;
+  .active_li:hover {
+    border-bottom: 3px solid $green_main;
+  }
+  .active_li_priz {
+    border-bottom: 3px solid $green_main;
+  }
   .notifi {
     position: fixed;
     right: 80px;
@@ -75,16 +81,15 @@ header {
       li {
         display: inline-block;
         text-transform: uppercase;
-        padding: 22px 0 ;
+        padding: 22px 0;
         margin-left: 3.3%;
         font-size: $p_size+0.01rem; 
+        height: 79px;
       }
       .vis_lg {
         display: none;
       }
-      .active_li {
-        border-bottom: 3px solid $green_main;
-      }
+      
       
     }
     
