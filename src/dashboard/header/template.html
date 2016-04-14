@@ -60,7 +60,7 @@
               </li></a>
               <a href="#"><li class="end_li" ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup(); ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen;"><img src="img/resources/img/user.png" alt=""class="img_li"> <span>Войти или зарегистрироваться</span><img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li"></li></a>
               <a href="#"><li class="end_li"><img src="img/resources/img/notifi.png" alt=""class="img_li"> <span>Уведомления</span><img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li"></li></a>
-              <a href="#"><li ui-sref="dashboard.tdrive" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" class="end_li"><img src="img/resources/img/singin.png" alt="" class="img_li"><span> Тест-Драйв</span></li></a>
+              <a href="#"><li ui-sref="dashboard.tdrive" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" class="end_li disebl"><img src="img/resources/img/singin.png" alt="" class="img_li"><span class="disebl"> Тест-Драйв</span></li></a>
             </ul>
           </div>
     </div>
@@ -115,10 +115,10 @@
                 <ul>
                     <li class="active_li">
                         <a>
-                        <a ui-sref="dashboard.tdrive" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false">
+                        <a class="disebl" ui-sref="dashboard.tdrive" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false">
 
                             <img src="img/resources/img/singin.png" alt="" class="img-responsive">
-                            <span> Тест-Драйв</span>
+                            <span class="disebl"> Тест-Драйв</span>
                         </a>
                     </li>
                     <li class="active_li">

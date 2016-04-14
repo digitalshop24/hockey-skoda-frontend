@@ -123,6 +123,10 @@ header {
           margin-left: 25px;
           font-family: $bold;
         }
+        .disebl {
+          color:#ccc;
+          cursor:no-drop;
+        }
       }
       // li:nth-child(1) {
       //   padding-top: 16px !important;
@@ -146,6 +150,7 @@ header {
       position: relative;
       top: 5px;
     }
+
   }
   .logo {
     img {
@@ -5986,6 +5991,10 @@ nav {
         height: 20px;
         margin-right: 20px;
       }
+      .disebl {
+          color:#ccc;
+          cursor:no-drop;
+        }
     }
   }
    
@@ -6010,6 +6019,7 @@ nav {
     position: absolute;
     top: 67px;
     height: 90vh;
+
     .input_default  {
       width: 100%
     }
