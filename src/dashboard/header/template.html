@@ -77,8 +77,8 @@
                             <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
                         </a>
                     </li>
-                    <li  class="active_li">
-                        <a href="" ui-sref="dashboard.general-news" ng-mouseover="ctrl.isPNewsOpen = true; ctrl.isMenuOpen = false" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false">
+                    <li  class="active_li" ng-mouseleave="ctrl.isPNewsOpen = false">
+                        <a href="" ui-sref="dashboard.general-news" ng-mouseover="ctrl.isPNewsOpen = true; ctrl.isMenuOpen = false" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false" >
                             <span>Материалы</span>
                              <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
                            
@@ -156,7 +156,7 @@
             
         </div>
     </div>
-        <div class="dropdown_news " ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false">
+        <div class="dropdown_news " ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false" ng-mouseover="ctrl.isPNewsOpen = true;">
                             <ul >
                                 <a ui-sref="dashboard.general-news" ng-click="ctrl.isPNewsOpen = false"><li>События</li></a>
                                 <a ui-sref="dashboard.facts" ng-click="ctrl.isPNewsOpen = false"><li>Интересные факты</li></a>
