@@ -3505,7 +3505,7 @@ $grey_about: #5d5d5d;
 
 //-------------------------------------------------- priznew
 .prizes_use_date {
- 
+ background:#ececec;
   .user_info {
     p {
       font-size: $p_size;
@@ -3537,15 +3537,26 @@ $grey_about: #5d5d5d;
       padding: 10px 0;
 
     }
-
+    .user-right {
+      width:430px;
+      float:right;
+    }
+    .img {
+      float:left;
+      margin-right:25px;
+    }
+    .text-user {
+      float:left;
+    }
     
   }
-  .text_titel {
+  .text_titel {  
     padding-top: 50px;
+    padding-bottom:50px;
     h3 {
       color: $green_main;
       text-transform: uppercase;
-      font-family: $bold;
+      font-family: $extra_bold;
       min-height: 90px;
     }
     p {
@@ -3557,7 +3568,10 @@ $grey_about: #5d5d5d;
 }
 
 .slider_prizes {
-  padding-top: 70px;
+  padding-top: 10px;
+  .slick-list {
+    overflow: inherit;
+  }
   .how {
     background-color: $black;
     h6 {
@@ -3572,6 +3586,7 @@ $grey_about: #5d5d5d;
     }
   }
   .main_slider_priz {
+    display: none;
     .slick-slide  {
       background-color: $grey;
       padding-top: 35px;
@@ -3606,7 +3621,50 @@ $grey_about: #5d5d5d;
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat; 
-      margin: 0 1px;
+      margin: 0 0px;
+      position:relative;
+      &::after {
+        position:absolute;
+        bottom:-3px;
+        left:0px; 
+        content:'';
+        height: 3px;
+        width:100%;
+        transition: background 1000ms linear;
+        background:rgba(255,255,255,0);
+      }
+      &::before {
+        position:absolute;
+        bottom:-16px;
+        left:50%; 
+        margin-left:-13px;
+        content:'';
+        height: 0px;
+        width:0px;
+        transition:background-image 1000ms linear;
+        background-image: url("img/resources/img/icon-treu-pro.png") ;
+      }
+      &:hover::after {
+        position:absolute;
+        bottom:-3px;
+        left:0px; 
+        content:'';
+        height: 3px;
+        width:100%;
+        transition: background 1000ms linear;
+        background:#4ba82e;
+      }
+      &:hover::before {
+        position:absolute;
+        bottom:-16px;
+        left:50%; 
+        margin-left:-13px;
+        content:'';
+        height: 13px;
+        width:27px;
+        transition: background-image 1000ms linear;
+        background-image: url("img/resources/img/icon-treug.png") ;
+      }
       div {
         background-color: rgba(255, 255, 255, 0.3);
         height: 150px;
@@ -3624,6 +3682,17 @@ $grey_about: #5d5d5d;
     // right: 20%;
     top: 210px;
   }
+  .btn {
+      background:#4ba82e;
+      opacity: 1;
+      &:hover {
+        background:#409129;
+        opacity: 1;
+      }
+    }
+    .btn[disabled] {
+      background:#d9d9d9;
+    }
   .info_priz {
     li {
       padding-top:2px;
@@ -3641,9 +3710,11 @@ $grey_about: #5d5d5d;
       color: $green_main;
       font-family: $extra_bold;
       font-size: 2.4rem;
+      line-height: 29px;
     }
     li:nth-child(3) {
       font-size: $p_size;
+      line-height: 16px;
     }
     li:nth-child(4) {
       font-family: $extra_bold;
@@ -3653,6 +3724,7 @@ $grey_about: #5d5d5d;
       position: relative;
       top: -16px;
     }
+    
   }
 
   .page_prizs_priz {

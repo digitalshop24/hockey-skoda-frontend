@@ -1,25 +1,4 @@
-<section class="prizes_use_date">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-left text_titel">
-                <h3 ng-bind="ctrl.currentSponsor.name">Призы от <br> Škoda hockey</h3>
-                <p ng-bind-html="ctrl.currentSponsor.description"></p>
-            </div>
-            <div class="col-md-6  text-left user_info" >
-               <!-- <p class="hidden">Чтобы участвовать в розигрышах призов, необходимо <br> <a>Авторизироваться или пройти регистрацию</a></p>-->
-                <p ng-show="!ctrl.session.isAuthenticated">Чтобы участвовать в розигрышах призов, необходимо <br> <a
-                        ng-click="ctrl.login.open()" href="#">Авторизироваться или пройти регистрацию</a></p>
-                <div ng-show="ctrl.session.isAuthenticated">
-                    <img src="{{ctrl.user.avatar.thumb}}" alt="" class="img-responsive">
-                    <h5 ng-bind="ctrl.user.name">Михаил Клюшников</h5>
-                    <h3 ng-bind="ctrl.user.achievments_score + ' баллов'"></h3>
-                    <h6 ng-bind="'+' + ctrl.user.achievments_score_today + ' сегодня'">+180 сегодня</h6>
-                </div>
 
-            </div>
-        </div>
-    </div>
-</section>
 <section class="slider_prizes">
     <div class="container-fluid">
         <div class="row">
@@ -37,6 +16,36 @@
                      
                    
                 </slick>   
+<section class="prizes_use_date">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-left text_titel">
+                <h3 ng-bind="ctrl.currentSponsor.name">Призы от <br> Škoda hockey</h3>
+                <p ng-bind-html="ctrl.currentSponsor.description"></p>
+            </div>
+            <div class="col-md-6  text-left user_info" >
+               <!-- <p class="hidden">Чтобы участвовать в розигрышах призов, необходимо <br> <a>Авторизироваться или пройти регистрацию</a></p>-->
+                <p ng-show="!ctrl.session.isAuthenticated">Чтобы участвовать в розигрышах призов, необходимо <br> <a
+                        ng-click="ctrl.login.open()" href="#">Авторизироваться или пройти регистрацию</a></p>
+                <div ng-show="ctrl.session.isAuthenticated" class="clearfix">
+                    <div class="user-right clearfix">
+                        <div class="img">
+                            <img src="{{ctrl.user.avatar.thumb}}" alt="" class="img-responsive">
+                        </div> 
+                        <div class="text-user">
+                            <h5 ng-bind="ctrl.user.name">Михаил Клюшников</h5>
+                            <h3 ng-bind="ctrl.user.achievments_score + ' баллов'"></h3>
+                            <h6 ng-bind="'+' + ctrl.user.achievments_score_today + ' сегодня'">+180 сегодня</h6>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
                 <slick current-index="ctrl.currentSponsorIndex" on-after-change="ctrl.changeSponsor()" slides-to-show=1
                        slides-to-scroll=1 arrows=true class="text-center main_slider_priz" as-nav-for=".second_slider_priz">
                     <div ng-repeat="sponsor in ctrl.sponsors"><h6 ng-bind="sponsor.name"></h6></div>
@@ -87,6 +96,7 @@
         </div>
     </div>
 </section>
+
 <section class="wrapp_mainpage_end">
     <div class="container-fluid">
         <div class="row">
