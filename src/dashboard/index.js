@@ -41,6 +41,8 @@ import socials from './socials/index';
 import consent from './consent/index';
 import game from './game/index';
 import junior from './junior-cup/index';
+import edit from './edit/index';
+import rights from './rights/index';
 
 
 
@@ -80,7 +82,9 @@ export default angular.module('dashboard',
         socials.name,
         consent.name,
         game.name,
-        junior.name
+        junior.name,
+        edit.name,
+        rights.name
     ])
     .service('login', Login)
     .service('modal', Modal)

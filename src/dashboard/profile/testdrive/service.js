@@ -6,7 +6,7 @@ export default class ProfileService {
     }
 
     getCoupons() {
-        return this.api.get('/users/my_testdrives/coupons').then((res) => {
+        return this.api.get('/users/my_testdrives').then((res) => {
             return res.data;
         });
     }

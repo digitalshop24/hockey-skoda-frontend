@@ -31,7 +31,7 @@
                         Смотреть
                     </a>
                 </div>
-                <h6>Другие новости <span class="show_all"><a ui-sref="dashboard.general-news">Смотреть все</a></span></h6>
+                <h6>Свежие новости <span class="show_all"><a ui-sref="dashboard.general-news">Смотреть все</a></span></h6>
                 <p class="littel_date" ng-bind="ctrl.championatNews[0].published_at | amDateFormat:'DD MMMM'"></p>
                 <ul>
                     <li ng-repeat="lastNews in ctrl.championatNews" ng-if="ctrl.news.id != lastNews.id">
