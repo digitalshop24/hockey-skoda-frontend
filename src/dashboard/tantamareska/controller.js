@@ -22,9 +22,11 @@ export default class TantamareskaCtrl {
                                 var shareItemBefore = '<li><a class="sharing-link" href="';
                                 var shareItemAfter = '</a></li>';
                                 var shareFooter = '</ul>';
-                                var shareFacebook = shareItemBefore + 'https://www.facebook.com/sharer.php?src=sp&u=' + this.imageUrl + '"><i class="fa fa-facebook" aria-hidden="true"></i>' + shareItemAfter;
-                                var shareTwitter = shareItemBefore + 'https://twitter.com/intent/tweet?text=' + this.title + '&url=' + this.imageUrl + '"><i class="fa fa-twitter" aria-hidden="true"></i>' + shareItemAfter;
-                                var shareVk = shareItemBefore + 'http://vk.com/share.php?url=' + this.imageUrl + '&title=' + this.title + '&description=' + this.desc + '&image=' + this.imageUrl + '"><i class="fa fa-vk" aria-hidden="true"></i>' + shareItemAfter;
+                                var imgUrl = this.imageUrl.split('?');
+                                imgUrl = imgUrl[0];
+                                var shareFacebook = shareItemBefore + 'https://www.facebook.com/sharer.php?src=sp&u=' + imgUrl + '"><i class="fa fa-facebook" aria-hidden="true"></i>' + shareItemAfter;
+                                var shareTwitter = shareItemBefore + 'https://twitter.com/intent/tweet?text=' + this.title + '&url=' + imgUrl + '"><i class="fa fa-twitter" aria-hidden="true"></i>' + shareItemAfter;
+                                var shareVk = shareItemBefore + 'http://vk.com/share.php?url=' + imgUrl + '&title=' + this.title + '&description=' + this.desc + '&image=' + imgUrl + '"><i class="fa fa-vk" aria-hidden="true"></i>' + shareItemAfter;
                                 var share = shareHeader + shareFacebook + shareTwitter + shareVk + shareFooter;
                                 return '<p>Картинка успешно создана! Теперь Вы можете поделиться ей с друзьями!</p><h4 class="share-modal--header">Выберите соц.сеть</h4>' + share;
                             }

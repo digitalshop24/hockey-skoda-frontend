@@ -1,3 +1,6 @@
+
+<div class="loader-container" ng-show="ctrl.isButtonDisabled"><span class="loader-icon"></span></div>
+
 <section class="wrapp_baner__suggestions" card-init slider-init>
     <div class="container-fluid">
         <div class="row">
@@ -34,25 +37,24 @@
         </div>
     </div>
 </section>
-
 <section class="wrapp_form_suggestions">
     <div class="container">
         <div class="row">
             <div class="wrapp_form_suggestions_slider clearfix">
                 <div class="from_block">
                     <form class="card-create">
-                        <input type="text" class="input_default input_small card-firstname" placeholder="Имя">
+                        <!-- <input type="text" class="input_default input_small card-firstname" placeholder="Имя">
                         <input type="text" class="input_default input_small card-secondname" placeholder="Фамилия">
                         <input type="text" class="input_default input_small" placeholder="Город*">
                         <input type="text" class="input_default input_small" placeholder="E-mail*">
-                        <span>*Поля обязательные для заполнения</span>
+                        <span>*Поля обязательные для заполнения</span> -->
                         <input type="text" class="input_default input_small card-to" placeholder="Кому">
                         <textarea type="text" class="input_default input_small card-text"
                                   placeholder="Пожелание"></textarea>
                         <button type="button" class="btn btn_primary tiny">Отправить</button>
                     </form>
                 </div>
-                <div class="slider-for">
+                <div class="slider-for suggestions-slider-for">
                    <!-- <slick infinite="true" slides-to-show="1" slides-to-scroll="1" speed="300" fade="true"
                            arrows="false"
                            css-ease="linear" as-nav-for=".slider-nav">-->
@@ -63,8 +65,8 @@
                         <div class="item box"><img src="img/resources/img/form-slider/slider-des.jpg" alt=""></div>
                     <!--</slick>-->
                 </div>
-                <div class="slider-nav-center">
-                    <div class="slider-nav">
+                <div class="slider-nav-center" >
+                    <div class="slider-nav suggestions-slider">
                        <!-- <slick infinite="true" slides-to-show="3" vertical="true" slides-to-scroll="1" dots="false"
                                center-mode="true" fade="true" arrows="true" as-nav-for=".slider-for" focus-on-select=true>-->
 
@@ -92,7 +94,7 @@
 </section>
 
 
-<ul class="soc" ng-show="ctrl.imageUrl">
+<!-- <ul class="soc" ng-show="ctrl.imageUrl">
     <li><p>Поделиться с друзьями:</p></li>
     <li><a socialshare socialshare-provider="facebook"
            socialshare-url="{{ctrl.imageUrl}}">
@@ -104,7 +106,7 @@
     <li><a socialshare socialshare-provider="vk"
            socialshare-url="{{ctrl.imageUrl}}">
         <img src="img/resources/img/vk_grey.png" alt="" class="img-responsive"></a></li>
-</ul>
+</ul> -->
 
 <div class="card-result">
     <img src="" class="select-img">

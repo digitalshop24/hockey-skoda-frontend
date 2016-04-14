@@ -14,7 +14,7 @@ export default angular.module('dashboard.suggestions.card-init', [])
                         $img.attr('src', imgUrl).width('auto').height('auto');
                         var $canvas = $('.card-canvas');
                         var width = $img.width();
-                        console.log(width);
+                        // console.log(width);
                         if(width<830){
                             width = 830;
                             $img.width(width);
@@ -40,8 +40,8 @@ export default angular.module('dashboard.suggestions.card-init', [])
                         ctx.font = "italic 17px Arial";
                         ctx.textBaseline = "middle";
                         ctx.textAlign = "center";
-                        var author = $('.card-secondname').val() + ' ';
-                        author += $('.card-firstname').val();
+                        // var author = $('.card-secondname').val() + ' ';
+                        // author += $('.card-firstname').val();
                         var to = $('.card-to').val();
                         if(to!=''){
                             to += ' — ';
@@ -54,14 +54,14 @@ export default angular.module('dashboard.suggestions.card-init', [])
                         var lineHeight = 22;
                         var heightTo = textHeight(ctx,to,maxWidth,lineHeight);
                         var heightText = textHeight(ctx,text,maxWidth,lineHeight);
-                        var heightAuthor = textHeight(ctx,author,maxWidth,lineHeight);
+                        // var heightAuthor = textHeight(ctx,author,maxWidth,lineHeight);
                         // печатаем кому пожелание
                         wrapText(ctx, to, maxWidth, marginLeft, marginTop-heightText/2-heightTo, lineHeight);
                         // печатаем текст пожелания
                         wrapText(ctx, text, maxWidth, marginLeft, marginTop-heightText/2, lineHeight);
                         // печатаем автора
                         ctx.font = "16px Arial";
-                        wrapText(ctx, author, maxWidth, marginLeft, marginTop+heightText/2+22, lineHeight);
+                        // wrapText(ctx, author, maxWidth, marginLeft, marginTop+heightText/2+22, lineHeight);
                         ctx.fillStyle = "#4da736";
                         ctx.font = "italic 70px Georgia";
                         ctx.textBaseline = "middle";
@@ -78,9 +78,13 @@ export default angular.module('dashboard.suggestions.card-init', [])
                         $img.attr('src',resultUrl);
                         $img.fadeIn(50);*/
                         // ctx.fillText(text, width/2, 50);
-                        $('.card-result').css({
-                            'top' : 0
-                        })
+                        // $('.card-result').css({
+                        //     'top' : 0
+                        // })
+                        $(document).on('click', '.sharing-link', function(){
+                            window.open($(this).attr('href'),"","width=400,height=400");
+                            return false;
+                        });
                         return false;
                     });
 
