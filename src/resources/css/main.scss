@@ -4270,6 +4270,11 @@ $grey_about: #5d5d5d;
       padding: 5px 20px;
     }
   }
+  ol {
+    li {
+      list-style: disc;
+    }
+  }
   table {
     margin: 20px auto;
   }
