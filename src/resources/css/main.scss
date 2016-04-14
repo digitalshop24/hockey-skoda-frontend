@@ -479,6 +479,21 @@ footer {
   background-position: center center;
   position: relative;
   z-index: 100;
+  .label_footer {
+    padding-top: 20px;
+    p {
+      display: inline-block;
+      margin-left: 20px;
+      padding-top: 10px;
+      color: $white;
+      position: relative;
+      top: 37px;
+    }
+    img {
+      position: relative;
+      top: 25px;
+    }
+  }
   h6 {
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -2116,7 +2131,7 @@ $grey_about: #5d5d5d;
   }
 }
 .wrapp_mainpage_end {
-  background-image: url(img/resources/img/skoda-hockey_footer.jpg);
+  background-image: url(img/resources/img/skoda-hockey_main-footer-2.jpg);
   background-position: center center;
   background-size: cover;
   min-height: 650px;
