@@ -22,7 +22,6 @@ import forumpage from './forum-page/index';
 import forumtopic from './forum-topic/index';
 import Login from './login/index';
 import Modal from './modal/index';
-import ShareModal from './share-modal/index';
 import newspage from './news-page/index';
 import success from './success/index';
 import prizenew from './prize-new/index';
@@ -38,13 +37,13 @@ import calendar from './calendar/index';
 import faq from './faq/index';
 import infographics from './infographics/index';
 import NotificationService from './notificationService.js';
-import ShareService from './shareService.js';
 import socials from './socials/index';
 import consent from './consent/index';
 import game from './game/index';
 import junior from './junior-cup/index';
 import edit from './edit/index';
 import rights from './rights/index';
+import share from './share/index';
 
 
 
@@ -86,13 +85,12 @@ export default angular.module('dashboard',
         game.name,
         junior.name,
         edit.name,
-        rights.name
+        rights.name,
+        share.name
     ])
     .service('login', Login)
     .service('modal', Modal)
-    .service('shareModal', ShareModal)
     .service('notificationService', NotificationService)
-    .service('shareService', ShareService)
     .config($stateProvider => {
         $stateProvider
             .state('dashboard', {
