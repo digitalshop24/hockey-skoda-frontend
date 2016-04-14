@@ -3484,7 +3484,7 @@ $grey_about: #5d5d5d;
 .form_popup {
   margin-left: 20px;
   margin-right: 20px;
-  .left {
+  .left { 
     margin-top: 20px;
     border-right: 2px solid $grey;
     .soc_icon {
@@ -3492,6 +3492,23 @@ $grey_about: #5d5d5d;
       img {
         display: inline-block;
         padding-right: 4px;
+      }
+      a {
+        cursor: pointer;
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+        text-align: center;
+        line-height: 43px;
+        font-size: 18px;
+        background: #6a6b71;
+        color: #fff;
+        border-radius: 50%;
+        -webkit-transition: background .3s ease;
+        transition: background .3s ease;
+        &:hover {
+          background: #4ba82e;
+        }
       }
     }
     
