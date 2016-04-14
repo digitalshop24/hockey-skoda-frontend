@@ -4,4 +4,19 @@
 		left:50%;
 		margin-left:-5px;
 	}
+	.slick-prev{
+		bottom:100%;
+	}
+	.slick-next{
+		top:100%;
+		margin-top:10px;
+	}
+}
+.suggestions-slider > .slick-list{
+	height:700px !important;
+}
+.suggestions-slider{
+	.slick-active{
+		// opacity:0.2;
+	}
 }
