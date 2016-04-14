@@ -6154,10 +6154,30 @@ nav {
 
 .junior {
   padding-top:70px;
-  
   padding-bottom:70px;
   &-content {
     padding-right:22px;
+  }
+  table {
+    font-size: $p_size;
+    margin: 40px auto;
+    width: 90%;
+    thead {
+      padding-bottom: 1px solid $green_main;
+      tr {
+        td {
+          color: $green_main;
+          font-family: $bold;
+        }
+      }
+    }
+    tr {
+      td {
+        padding: 5px;
+        border-bottom: 1px solid $grey_lite;
+       
+      }
+    }
   }
   h2 {
     font-family: $extra_bold;
