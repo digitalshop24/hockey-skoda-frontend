@@ -672,56 +672,22 @@ footer {
 }
 
 
-// .timeline { 
-//   position: absolute;
-//   width: 4px;
-//   top: 25px;
-//   bottom: 25px;
-//   left: 50%;
-//   margin-left: -2px;
-//   background: $green_main;
-//   transition: 600ms cubic-bezier(.68,-0.67,.14,1.51);
-//   min-height: 1500px;
-// }
-
-// .timeline:before { 
-//   content: "Сегодня";
-//   width: 90px;
-//   height: 90px;
-//   position: absolute;
-//   background: $green_main;
-//   border-radius: 50%;
-//   left: -43px;
-//   top: 0;
-//   text-align: center;
-//   padding-top: 28px;
-//   font-size: 1.9rem;
-//   color: $white;
-// }
 .tag_right_hokey {
   text-transform: uppercase;
   font-family: $bold;
   font-size: 2rem;
-  background-color: $green_main;
+   background-color: $white;
   padding: 10px 20px;
   border-radius: 50px;
   position: absolute;
-  color: $white;
+  color: $grey;
   right: 27%;
   margin-top: -26px;
   position: absolute;
   z-index: 10;
+  border: 1px solid $grey;
 }
-// .tag_right_hokey:before {
-//   content: "";
-//   width: 150px;
-//   height: 1px;
-//   background-color: #4ba82e;
-//   position: absolute;
-//   margin-left: -150px;
-//   margin-top: 16px;
-//   z-index: 1;
-// }
+
 .tag_left_hokey {
   text-transform: uppercase;
   font-family: $bold;
@@ -736,6 +702,32 @@ footer {
   margin-top: -26px;
   position: absolute;
   z-index: 10;
+}
+
+.active_tag {
+  color: $white;
+  background-color: $green_main;
+}
+.dop_tag {
+  align-content: center;
+  margin-top: 50px;
+  text-align: center;
+  .color_tag {
+    color: $green_main;
+  }
+  ul {
+    margin-top: 20px;
+    li {
+      margin: 15px 0;
+      a {
+       background-color: $grey_lite;
+       color: $green_main;
+       padding: 5px;
+       font-size: $p_size;
+      }
+
+    }
+  }
 }
 // .tag_left_hokey:after {
 //   content: "";
