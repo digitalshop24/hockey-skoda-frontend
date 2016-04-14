@@ -30,7 +30,7 @@ export default class RegistrationCtrl {
         this.auth.register({
             email: this.form.email,
             password: this.form.password,
-            policy_agreed: true
+            policy_agreed: this.form.policy_agreed
         }).then(() => {
             delete this.form.email;
             delete this.form.password;
