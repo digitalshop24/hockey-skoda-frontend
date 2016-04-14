@@ -99,8 +99,7 @@
                 <div class="priz clearfix">
                     <div class="priz-item" ng-repeat="category in ctrl.categories">
                         <div class="priz-item-text clearfix">
-                            <div class="number">
-                                3
+                            <div class="number" ng-bind="category.right_answers_count">
                             </div>
                             <div class="text-right">
                                 Правильных <br> ответа
@@ -139,19 +138,12 @@
     </div>
 </div>
 
-
-<!-- Modal -->
-
-
-
-<!-- Modal -->
 <div class="modal fade" id="firstQuestion" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal"></button>
-            <div class="game-modal-led led-blue"></div>
             <div class="game-modal-content">
                 <h2 class="vop">Вопрос <b>№1</b></h2>
                 <p ng-bind="ctrl.quiz.first_question.body"></p>
@@ -162,10 +154,10 @@
             <div class="otvet-ches">
                 <div class="otvet-ches-item" ng-repeat="question in ctrl.quiz.first_question.answer_options">
                     <div class="radio active">
-                        <input id="cfirst" ng-model="ctrl.firstAnswer[question.id]" type="checkbox" ng-disabled="!ctrl.firstQuestionTime"  hidden>
-                        <label for="cfirst" ng-bind="question.aswer">
+                        <input id="{{ctrl.quiz + 'checkbox' + question.id}}" ng-model="ctrl.firstAnswer[question.id]" type="checkbox" ng-true-value="'{{question.answer}}'" ng-disabled="!ctrl.firstQuestionTime"  hidden>
+                        <label for="{{ctrl.quiz + 'checkbox' + question.id}}">
                             <span></span>
-                            Стиль игры, прививаемый командам Вячеславом Быковым Победа бедн
+                            {{question.answer}}
                         </label>
                     </div>
                 </div>
@@ -182,7 +174,7 @@
                 <div class="mobal-button-right" ng-click="ctrl.startSecondQuestion()">
                     <button class="btn btn_primary">Далее</button>
                 </div>
-                <div class="mobal-button-center" ng-show="!ctrl.firstQuestionTime">
+                <div class="mobal-button-center" ng-show="!ctrl.firstQuestionTime && !ctrl.firstAnswer">
                     <p class="red-one  width1">Вы не уложились в отведенное время</p>
                 </div>
             </div>
@@ -199,7 +191,6 @@
         <!-- Modal content-->
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal"></button>
-            <div class="game-modal-led led-blue"></div>
             <div class="game-modal-content">
                 <h2 class="vop">Вопрос <b>№2</b></h2>
                 <p ng-bind="ctrl.quiz.second_question.body"></p>
@@ -220,7 +211,7 @@
                 <div class="mobal-button-right" ng-click="ctrl.startThirdQuestion()">
                     <button class="btn btn_primary">Далее</button>
                 </div>
-                <div class="mobal-button-center" ng-show="!ctrl.secondQuestionTime">
+                <div class="mobal-button-center" ng-show="!ctrl.secondQuestionTime && !ctrl.secondAnswer">
                     <p class="red-one  width1">Вы не уложились в отведенное время</p>
                 </div>
             </div>
@@ -229,52 +220,12 @@
     </div>
 </div>
 
-<!--<div class="modal fade" id="secondQuestion" role="dialog">
-    <div class="modal-dialog">
-
-        &lt;!&ndash; Modal content&ndash;&gt;
-        <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal"></button>
-            <div class="game-modal-led led-blue"></div>
-            <div class="game-modal-content">
-                <h2 class="vop" ng-bind="ctrl.quiz.second_question.body"></b>
-                    &lt;!&ndash;<button class="btn btn_common small">Показать ответ</button>&ndash;&gt;
-                </h2>
-
-            </div>
-
-            <div class="otvet-ches">
-                <input type="text" ng-model="ctrl.secondAnswer" ng-disabled="!ctrl.secondQuestionTime">
-            </div>
-
-
-            <div class="mobal-button priz otvet clearfix">
-                <div class="mobal-button-left">
-                    <div class="timer">
-                        <p id='p' ng-bind="ctrl.secondQuestionTime"></p>
-                        <span>сек</span>
-                    </div>
-                </div>
-                <div class="mobal-button-right " ng-click="ctrl.startThirdQuestion()">
-                    <button class="btn btn_primary ">Далее</button>
-                </div>
-                <div class="mobal-button-center" ng-show="!ctrl.secondQuestionTime">
-                    <p class="red-one">Время истекло</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>-->
-
-
 <div class="modal fade" id="thirdQuestion" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal"></button>
-            <div class="game-modal-led led-blue"></div>
             <div class="game-modal-content">
                 <h2 class="vop">Вопрос <b>№3</b></h2>
                 <p ng-bind="ctrl.quiz.third_question.body"></p>
@@ -285,9 +236,12 @@
             <div class="otvet-ches">
                 <div class="otvet-ches-item" ng-repeat="question in ctrl.quiz.third_question.answer_options">
                     <div class="radio active">
-                        <input type="radio" ng-model="ctrl.thirdAnswer" name="radio2" value="{{question.id}}"
+                        <input id="{{ctrl.quiz + 'radio' + question.id}}" type="radio" ng-model="ctrl.thirdAnswer" name="radio2" value="{{question.id}}"
                                ng-disabled="!ctrl.thirdQuestionTime">
-                        <label ng-bind="question.answer"></label>
+                        <label for="{{ctrl.quiz + 'radio' + question.id}}">
+                            <span></span>
+                            {{question.answer}}
+                        </label>
                     </div>
                 </div>
             </div>
@@ -301,9 +255,9 @@
                     </div>
                 </div>
                 <div class="mobal-button-right " ng-click="ctrl.checkAnswers()">
-                    <button class="btn btn_primary grenn">Проверить!</button>
+                    <button class="btn btn_primary">Проверить!</button>
                 </div>
-                <div class="mobal-button-center" ng-show="!ctrl.thirdQuestionTime">
+                <div class="mobal-button-center" ng-show="!ctrl.thirdQuestionTime && !ctrl.thirdAnswer">
                     <p class="red-one width1">Вы не уложились в отведенное время</p>
                 </div>
             </div>
@@ -312,50 +266,28 @@
     </div>
 </div>
 
-<!--
 
 
-
-<div class="modal fade" id="thirdQuestion" role="dialog">
+<div class="modal fade" id="resultModal" role="dialog">
     <div class="modal-dialog">
 
-        &lt;!&ndash; Modal content&ndash;&gt;
+        <!-- Modal content-->
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal"></button>
-            <div class="game-modal-led led-blue"></div>
             <div class="game-modal-content">
-                <h2 class="vop" ng-bind="ctrl.quiz.third_question.body"></b>
-                    &lt;!&ndash;<button class="btn btn_common small">Показать ответ</button>&ndash;&gt;
-                </h2>
+                <h2 class="vop">Верных ответов: {{ctrl.result.right_answers_count}}</h2>
 
             </div>
 
-            <div class="otvet-ches">
-                <div class="otvet-ches-item" ng-repeat="question in ctrl.quiz.third_question.answer_options">
-                    <div class="radio">
-                        <input type="radio" ng-model="ctrl.thirdAnswer" name="radio2" value="{{question.id}}"
-                               ng-disabled="!ctrl.thirdQuestionTime">
-                        <label ng-bind="question.answer"></label>
-                    </div>
-                </div>
+            <div class="otv-fre" ng-show="ctrl.result.prize">
+                <p>Приз: {{ctrl.result.prize.name}}</p>
+                <p>Описание: {{ctrl.result.prize.description}}</p>
+                <img src="{{ctrl.result.prize.image}}" />
+
             </div>
 
 
-            <div class="mobal-button priz otvet clearfix">
-                <div class="mobal-button-left">
-                    <div class="timer">
-                        <p id='p' ng-bind="ctrl.thirdQuestionTime"></p>
-                        <span>сек</span>
-                    </div>
-                </div>
-                <div class="mobal-button-right ">
-                    <button class="btn btn_primary ">Проверить!</button>
-                </div>
-                <div class="mobal-button-center" ng-show="!ctrl.thirdQuestionTime">
-                    <p class="red-one">Время истекло</p>
-                </div>
-            </div>
         </div>
 
     </div>
-</div>-->
+</div>

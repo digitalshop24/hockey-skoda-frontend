@@ -28,4 +28,16 @@ export default class CubesService {
                 throw err.data;
             });
     }
+
+    checkAnswers(quizId, answers) {
+        return this.api.post(`/victorina/${quizId}/answer`, {
+            answers: answers
+        })
+            .then(res => {
+                return res.data;
+            })
+            .catch(err => {
+                throw err.data;
+            });
+    }
 }
