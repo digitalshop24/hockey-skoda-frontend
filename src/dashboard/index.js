@@ -44,6 +44,8 @@ import junior from './junior-cup/index';
 import edit from './edit/index';
 import rights from './rights/index';
 import share from './share/index';
+import regulations from './regulations/index';
+
 
 
 
@@ -86,7 +88,8 @@ export default angular.module('dashboard',
         junior.name,
         edit.name,
         rights.name,
-        share.name
+        share.name,
+        regulations.name
     ])
     .service('login', Login)
     .service('modal', Modal)
