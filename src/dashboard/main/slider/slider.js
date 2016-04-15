@@ -54,9 +54,9 @@ export default angular.module('dashboard.main.main-slider-init', [])
                         ]
                     });
                     $('.timeline-slider').slick({
-                        slidesToShow : 4,
-                        slidesToScroll : 2,
-                        infinite : false,
+                        slidesToShow: 4,
+                        slidesToScroll: 2,
+                        infinite: false,
                         responsive: [
                             {
                                 breakpoint: 991,
