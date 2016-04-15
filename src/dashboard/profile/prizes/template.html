@@ -1,0 +1,19 @@
+
+<div class="my_testdrive_contant">
+
+    <a ui-sref="dashboard.game.sectors">Викторина</a>
+   <h5>Мои призы</h5>
+    <table>
+        <thead>
+            <tr>
+                <td>Название</td>
+                <td>Картинка</td>
+            </tr>
+         </thead>
+        <tr ng-repeat="item in ctrl.prizes">
+            <td><h6 ng-bind="item.prize.name"></h6></td>
+            <td><img src="{{item.prize.image.small}}" /></td>
+        </tr>
+    </table>
+    
+</div>

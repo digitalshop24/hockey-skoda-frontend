@@ -19,6 +19,7 @@ export default class CubesCtrl {
         this.session = session;
         this.id = id;
         this.user = user;
+        this.state = $state;
         this.categories = [];
 
         prizes.forEach(prize => {
@@ -216,6 +217,11 @@ export default class CubesCtrl {
                     }
                 });
             });
+    }
+
+    goToPrizes() {
+        $('#resultModal').modal('hide');
+        this.state.go('dashboard.profile.prizes');
     }
 
     shuffle(a) {
