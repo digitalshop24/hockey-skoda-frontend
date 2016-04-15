@@ -49,6 +49,7 @@
                             <ul>
                                 <li ng-bind="tweet.person.name"></li>
                                 <li ng-bind="tweet.content"></li>
+                                <img ng-show="tweet.photos.length" src="{{tweet.photos[0].image.thumb}}">
                             </ul>
                         </div>
                     </div>
