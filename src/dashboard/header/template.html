@@ -35,8 +35,7 @@
                     <ul class="drilldown-sub">
                       <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Форум</a></li>
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.forum">Форум</li></a>
-                      <!-- <a ui-sref="dashboard.game.sectors"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Викторины</li></a> -->
-                      <a><li >Викторины</li></a>
+                      <a ui-sref="dashboard.game.sectors"><li class="li_disabel" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Викторины</li></a>
                     </ul>
               </li></a>
               <a href="#" ui-sref="dashboard.prizenew"><li>Конкурсы</li></a>
@@ -223,13 +222,12 @@
                             </ul>
                             <ul ng-show="ctrl.isForumOpen">
                                 <a ui-sref="dashboard.forum" ng-click="ctrl.isMenuOpen = false" ><li>Форум</li></a>
-                                <a ><li class="li_disabel">Викторины</li></a>
+                                <a ui-sref="dashboard.game.sectors" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel">Викторины</li></a>
 
                             </ul>
                             
                             <ul ng-show="ctrl.isSchedOpen">
                                 <a ui-sref="dashboard.schedule" ng-click="ctrl.isMenuOpen = false"><li>Расписание матчей</li></a>
-                                <a href="" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel">Органайзер болельшика</li></a>
                                 <a href="" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel"> Календарь</li></a>
                             </ul>
                             <ul ng-show="ctrl.isInterestingOpen">
