@@ -11,6 +11,7 @@
                             <li ng-repeat="topic in section.recently_active_topics">
                                 <span ng-show="topic.hot" class="hot_them"><img src="img/resources/img/forum_hot.png" alt="">Горячая тема: </span>
                                 <a ui-sref="dashboard.forumtopic({id:topic.id})" class="link_default" ng-bind="topic.name"></a>
+                                <span ng-bind="topic.messages_count"></span>
                             </li>
                         </ul>
                     </div>

@@ -40,6 +40,12 @@ header {
   z-index: 1001;
   background-color: #fff;
   min-height: 70px;
+  .active_li:hover {
+    border-bottom: 3px solid $green_main;
+  }
+  .active_li_priz {
+    border-bottom: 3px solid $green_main;
+  }
   .notifi {
     position: fixed;
     right: 80px;
@@ -75,17 +81,14 @@ header {
       li {
         display: inline-block;
         text-transform: uppercase;
-        padding: 22px 0 ;
+        padding: 22px 0;
         margin-left: 3.3%;
         font-size: $p_size+0.01rem;
+        height: 79px;
       }
       .vis_lg {
         display: none;
       }
-      .active_li {
-        border-bottom: 3px solid $green_main;
-      }
-
     }
 
   }
@@ -474,6 +477,21 @@ footer {
   background-position: center center;
   position: relative;
   z-index: 100;
+  .label_footer {
+    padding-top: 20px;
+    p {
+      display: inline-block;
+      margin-left: 20px;
+      padding-top: 10px;
+      color: $white;
+      position: relative;
+      top: 37px;
+    }
+    img {
+      position: relative;
+      top: 25px;
+    }
+  }
   h6 {
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -698,30 +716,23 @@ footer {
 //   font-size: 1.9rem;
 //   color: $white;
 // }
+
 .tag_right_hokey {
   text-transform: uppercase;
   font-family: $bold;
   font-size: 2rem;
-  background-color: $green_main;
+   background-color: $white;
   padding: 10px 20px;
   border-radius: 50px;
   position: absolute;
-  color: $white;
+  color: $grey;
   right: 27%;
   margin-top: -26px;
   position: absolute;
   z-index: 10;
+  border: 1px solid $grey;
 }
-// .tag_right_hokey:before {
-//   content: "";
-//   width: 150px;
-//   height: 1px;
-//   background-color: #4ba82e;
-//   position: absolute;
-//   margin-left: -150px;
-//   margin-top: 16px;
-//   z-index: 1;
-// }
+
 .tag_left_hokey {
   text-transform: uppercase;
   font-family: $bold;
@@ -736,6 +747,32 @@ footer {
   margin-top: -26px;
   position: absolute;
   z-index: 10;
+}
+
+.active_tag {
+  color: $white;
+  background-color: $green_main;
+}
+.dop_tag {
+  align-content: center;
+  margin-top: 50px;
+  text-align: center;
+  .color_tag {
+    color: $green_main;
+  }
+  ul {
+    margin-top: 20px;
+    li {
+      margin: 15px 0;
+      a {
+       background-color: $grey_lite;
+       color: $green_main;
+       padding: 5px;
+       font-size: $p_size;
+      }
+
+    }
+  }
 }
 // .tag_left_hokey:after {
 //   content: "";
@@ -965,7 +1002,7 @@ footer {
     border-bottom: 1px solid $grey;
   }
   .wrapp_filt {
-     padding: 20px 20px;
+     padding: 20px 20px 40px 20px;
 
     ul{
       li {
@@ -1287,6 +1324,33 @@ $grey_about: #5d5d5d;
   .btn {
     margin: 50px 0;
   }
+  input[type='checkbox'] {
+      width: auto;
+      display:none;
+    }
+    input[type="checkbox"] + label span {
+        display:inline-block;
+        width:30px;
+        height:30px;
+        margin:-1px 20px 0 0;
+        vertical-align:middle;
+        background:url(img/resources/img/check-box-active.png) left top no-repeat;
+        // border: 1px solid $black;
+        cursor:pointer;
+        //
+    }
+    input[type="checkbox"]:checked + label span {
+      background:url(img/resources/img/check-box.png) left top no-repeat;
+    }
+    label {
+      margin-left: 50px;
+      margin-bottom: 35px;
+      font-size: $p_size;
+      font-family: $regular;
+      font-weight: 300;
+      color:$grey_dark;
+      margin-top: 50px;
+    }
 
 }
 
@@ -1318,13 +1382,13 @@ $grey_about: #5d5d5d;
     background-position: 0 0;
     .wrapp_content {
       padding-left: 202px;
+      padding-bottom: 20px;
       h3 {
         color: $green_main;
         font-family: $extra_bold;
         padding: 30px 0;
         text-transform: uppercase;
         font-size: 3.5rem;
-
       }
     }
 
@@ -2052,7 +2116,7 @@ $grey_about: #5d5d5d;
   }
 }
 .wrapp_mainpage_end {
-  background-image: url(img/resources/img/skoda-hockey_footer.jpg);
+  background-image: url(img/resources/img/skoda-hockey_main-footer-2.jpg);
   background-position: center center;
   background-size: cover;
   min-height: 650px;
@@ -3199,6 +3263,14 @@ $grey_about: #5d5d5d;
   padding: 50px 20px;
   min-height: 90vh;
   margin-left: 100px;
+  .wrapp_text {
+    p {
+      font-size: 2rem;
+    }
+    a {
+      color: $green_main;
+    }
+  }
   .news_banner {
     height: 165px;
     background-image: url('img/resources/img/news/bg_banner.jpg');
@@ -3444,7 +3516,7 @@ $grey_about: #5d5d5d;
 
 //-------------------------------------------------- priznew
 .prizes_use_date {
-
+ background:#ececec;
   .user_info {
     p {
       font-size: $p_size;
@@ -3476,15 +3548,25 @@ $grey_about: #5d5d5d;
       padding: 10px 0;
 
     }
-
-
+    .user-right {
+      width:430px;
+      float:right;
+    }
+    .img {
+      float:left;
+      margin-right:25px;
+    }
+    .text-user {
+      float:left;
+    }
   }
   .text_titel {
     padding-top: 50px;
+    padding-bottom:50px;
     h3 {
       color: $green_main;
       text-transform: uppercase;
-      font-family: $bold;
+      font-family: $extra_bold;
       min-height: 90px;
     }
     p {
@@ -3496,7 +3578,10 @@ $grey_about: #5d5d5d;
 }
 
 .slider_prizes {
-  padding-top: 70px;
+  padding-top: 10px;
+  .slick-list {
+    overflow: inherit;
+  }
   .how {
     background-color: $black;
     h6 {
@@ -3509,8 +3594,19 @@ $grey_about: #5d5d5d;
       color: $white;
       padding: 0 40px 80px 40px;
     }
+    .pravil {
+      color: $red;
+      padding-left:20px;
+      cursor: pointer;
+      color: #4ba82e;
+    }
+    .desc {
+      color: $grey;
+      font-size: $p_size -0.1rem;
+    }
   }
   .main_slider_priz {
+    display: none;
     .slick-slide  {
       background-color: $grey;
       padding-top: 35px;
@@ -3545,7 +3641,51 @@ $grey_about: #5d5d5d;
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
-      margin: 0 1px;
+      margin: 0 0px;
+      position:relative;
+      &::after {
+        position:absolute;
+        bottom:-3px;
+        left:0px;
+        content:'';
+        height: 3px;
+        width:100%;
+        transition: background 1000ms linear;
+        background:rgba(255,255,255,0);
+      }
+      &::before {
+        position:absolute;
+        bottom:-16px;
+        left:50%;
+        margin-left:-13px;
+        content:'';
+        height: 0px;
+        width:0px;
+        transition:background-image 1000ms linear;
+        background-image: url("img/resources/img/icon-treu-pro.png") ;
+      }
+      &:hover::after {
+        position:absolute;
+        bottom:-3px;
+        left:0px;
+        content:'';
+        height: 3px;
+        width:100%;
+        transition: background 1000ms linear;
+        background:#4ba82e;
+      }
+      &:hover::before {
+        position:absolute;
+        bottom:-16px;
+        left:50%;
+        margin-left:-13px;
+        content:'';
+        height: 13px;
+        width:27px;
+        transition: background-image 1000ms linear;
+        background-image: url("img/resources/img/icon-treug.png") ;
+      }
+>>>>>>> 470f3b448786793ea87511e813acb56cdb783680
       div {
         background-color: rgba(255, 255, 255, 0.3);
         height: 150px;
@@ -3563,6 +3703,17 @@ $grey_about: #5d5d5d;
     // right: 20%;
     top: 210px;
   }
+  .btn {
+      background:#4ba82e;
+      opacity: 1;
+      &:hover {
+        background:#409129;
+        opacity: 1;
+      }
+    }
+    .btn[disabled] {
+      background:#d9d9d9;
+    }
   .info_priz {
     li {
       padding-top:2px;
@@ -3580,9 +3731,11 @@ $grey_about: #5d5d5d;
       color: $green_main;
       font-family: $extra_bold;
       font-size: 2.4rem;
+      line-height: 29px;
     }
     li:nth-child(3) {
       font-size: $p_size;
+      line-height: 16px;
     }
     li:nth-child(4) {
       font-family: $extra_bold;
@@ -3592,6 +3745,7 @@ $grey_about: #5d5d5d;
       position: relative;
       top: -16px;
     }
+
   }
 
   .page_prizs_priz {
@@ -4194,7 +4348,34 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- end calendar
 
 //-------------------------------------------------- faq
+.regulations {
+  padding: 50px;
+  p {
+    padding: 5px 0;
+    font-size: $p_size+.1rem;
+  }
+  h2,h3 {
+    padding-bottom: 30px;
+  }
+  h5 {
+    padding: 30px 0 10px 0;
+  }
+  table {
+    width: 100%;
+    margin: 50px 0;
+    td {
+      border: 1px solid $grey;
+      padding: 10px;
+      text-align: center;
+    }
+    // td[colspan="5"],
+     .maintd {
+      border: 2px solid $green_main !important;
+      font-size: 2rem;
+    }
 
+  }
+}
 
 .faq {
   padding: 50px;
@@ -5995,10 +6176,30 @@ nav {
 
 .junior {
   padding-top:70px;
-
   padding-bottom:70px;
   &-content {
     padding-right:22px;
+  }
+  table {
+    font-size: $p_size;
+    margin: 40px auto;
+    width: 90%;
+    thead {
+      padding-bottom: 1px solid $green_main;
+      tr {
+        td {
+          color: $green_main;
+          font-family: $bold;
+        }
+      }
+    }
+    tr {
+      td {
+        padding: 5px;
+        border-bottom: 1px solid $grey_lite;
+
+      }
+    }
   }
   h2 {
     font-family: $extra_bold;

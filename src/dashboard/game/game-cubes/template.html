@@ -12,7 +12,7 @@
             <div class="game-two-block-title-left">
                 <h3><b>Пробейся </b><br> к викторине!</h3>
 
-               <!-- <p>Инструкция для участника. Или информация о <br> кол-ве ячеек. Написа</p>-->
+                <!-- <p>Инструкция для участника. Или информация о <br> кол-ве ячеек. Написа</p>-->
             </div>
             <div class="game-two-block-title-right">
                 <!--<div class="sector">
@@ -146,15 +146,17 @@
             <button type="button" class="close" data-dismiss="modal"></button>
             <div class="game-modal-content">
                 <h2 class="vop">Вопрос <b>№1</b></h2>
+
                 <p ng-bind="ctrl.quiz.first_question.body"></p>
             </div>
-
 
 
             <div class="otvet-ches">
                 <div class="otvet-ches-item" ng-repeat="question in ctrl.quiz.first_question.answer_options">
                     <div class="radio active">
-                        <input id="{{ctrl.quiz + 'checkbox' + question.id}}" ng-model="ctrl.firstAnswer[question.id]" type="checkbox" ng-true-value="'{{question.answer}}'" ng-disabled="!ctrl.firstQuestionTime"  hidden>
+                        <input id="{{ctrl.quiz + 'checkbox' + question.id}}" ng-model="ctrl.firstAnswer[question.id]"
+                               type="checkbox" ng-true-value="'{{question.answer}}'"
+                               ng-disabled="!ctrl.firstQuestionTime" hidden>
                         <label for="{{ctrl.quiz + 'checkbox' + question.id}}">
                             <span></span>
                             {{question.answer}}
@@ -193,11 +195,13 @@
             <button type="button" class="close" data-dismiss="modal"></button>
             <div class="game-modal-content">
                 <h2 class="vop">Вопрос <b>№2</b></h2>
+
                 <p ng-bind="ctrl.quiz.second_question.body"></p>
             </div>
 
             <div class="otv-fre">
-                <input type="text" placeholder="Ответ" ng-model="ctrl.secondAnswer" ng-disabled="!ctrl.secondQuestionTime">
+                <input type="text" placeholder="Ответ" ng-model="ctrl.secondAnswer"
+                       ng-disabled="!ctrl.secondQuestionTime">
             </div>
 
 
@@ -228,15 +232,16 @@
             <button type="button" class="close" data-dismiss="modal"></button>
             <div class="game-modal-content">
                 <h2 class="vop">Вопрос <b>№3</b></h2>
+
                 <p ng-bind="ctrl.quiz.third_question.body"></p>
             </div>
-
 
 
             <div class="otvet-ches">
                 <div class="otvet-ches-item" ng-repeat="question in ctrl.quiz.third_question.answer_options">
                     <div class="radio active">
-                        <input id="{{ctrl.quiz + 'radio' + question.id}}" type="radio" ng-model="ctrl.thirdAnswer" name="radio2" value="{{question.id}}"
+                        <input id="{{ctrl.quiz + 'radio' + question.id}}" type="radio" ng-model="ctrl.thirdAnswer"
+                               name="radio2" value="{{question.id}}"
                                ng-disabled="!ctrl.thirdQuestionTime">
                         <label for="{{ctrl.quiz + 'radio' + question.id}}">
                             <span></span>
@@ -266,7 +271,32 @@
     </div>
 </div>
 
+<div class="modal fade" id="userData" role="dialog">
+        <div class="modal-dialog">
+            <form ng-submit="ctrl.confirmUserData()">
 
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal"></button>
+
+                    <div class="otv-fre">
+                        <input type="text" placeholder="Имя" ng-model="ctrl.userData.first_name" required>
+                        <input type="text" placeholder="Фамилия" ng-model="ctrl.userData.last_name">
+                        <input type="text" placeholder="Отчество" ng-model="ctrl.userData.middle_name">
+                        <input type="text" placeholder="Адрес" ng-model="ctrl.userData.address">
+                        <input type="text" placeholder="Телефон" ng-model="ctrl.userData.phone" required>
+                        <input type="text" placeholder="Комментарий к викторине" ng-model="ctrl.userData.comment">
+                    </div>
+
+
+                    <div class="mobal-button priz otvet clearfix">
+                        <div class="mobal-button-right">
+                            <button type="submit" class="btn btn_primary">Далее</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+</div>
 
 <div class="modal fade" id="resultModal" role="dialog">
     <div class="modal-dialog">
@@ -281,12 +311,11 @@
 
             <div class="otv-fre" ng-show="ctrl.result.prize">
                 <p>Приз: {{ctrl.result.prize.name}}</p>
+
                 <p>Описание: {{ctrl.result.prize.description}}</p>
-                <img src="{{ctrl.result.prize.image}}" />
-
+                <img src="{{ctrl.result.prize.image}}"/>
+                <a ng-click="ctrl.goToPrizes()">Как получить приз</a>
             </div>
-
-
         </div>
 
     </div>

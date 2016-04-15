@@ -20,7 +20,7 @@
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" >О звездах хоккея</li></a>
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" >Хоккейные видео</li></a>
                     </ul>
-                </li></a> 
+                </li></a>
                 <a href="#"><li>
                     Прогнозы
                     <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
@@ -35,7 +35,6 @@
                     <ul class="drilldown-sub">
                       <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Форум</a></li>
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.forum">Форум</li></a>
-                      <a ui-sref="dashboard.game.sectors"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Викторины</li></a>
                     </ul>
               </li></a>
               <a href="#" ui-sref="dashboard.prizenew"><li>Конкурсы</li></a>
@@ -71,64 +70,64 @@
             <div class="col-sm-12 col-md-12 left_head text-left">
                 <a ui-sref="dashboard.main" class="logo" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
                 <ul>
-                    <li ng-mouseover="ctrl.isMenuOpen = true; ctrl.isPNewsOpen = false;" ng-class="active_li">
+                    <li ng-mouseover="ctrl.isMenuOpen = true; ctrl.isPNewsOpen = false;" class="active_li">
                         <a href="">
                             <span>Меню</span>
                             <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
                         </a>
                     </li>
-                    <li  ng-class="active_li">
-                        <a href="" ui-sref="dashboard.general-news" ng-mouseover="ctrl.isPNewsOpen = true; ctrl.isMenuOpen = false" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false">
+                    <li  class="active_li" ng-mouseleave="ctrl.isPNewsOpen = false">
+                        <a href="" ui-sref="dashboard.general-news" ng-mouseover="ctrl.isPNewsOpen = true; ctrl.isMenuOpen = false" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false" >
                             <span>Материалы</span>
                              <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
-                           
+
                         </a>
-                        
+
                     </li>
-                    <li  class="hidden_lgg">
+                   <!--  <li  class="hidden_lgg">
                         <a href="">
                             <span>Форум</span>
-                            
+
                         </a>
                     </li>
                     <li class="hidden">
                         <a href="">
                             <span>Прогнозы</span>
-                            
+
+                        </a>
+                    </li> -->
+                    <li ng-class="{active_li_priz:$state.includes('dashboard.prizenew')}" class="active_li" style="position: absolute;top: 5px; height: 74px;" >
+                        <a href="" ui-sref="dashboard.prizenew" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false">
+                            <span style="">Конкурсы</span>
+
                         </a>
                     </li>
-                    <li class="">
-                        <a href="" ui-sref="dashboard.prizenew">
-                            <span>Конкурсы</span>
-                            
-                        </a>
-                    </li>
-                     <li class="hidden">
+                     <!-- <li class="hidden">
                         <a href="">
                             <span>Расписание</span>
-                            
+
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="right_head text-center hidden-xs">
                 <ul>
-                    <li>
+                    <li class="active_li">
                         <a>
 
                             <img src="img/resources/img/singin.png" alt="" class="img-responsive">
                             <span> Тест-Драйв</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="active_li">
                         <a href="">
                             <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/user.png" alt="" class="img-responsive">
                             <img ng-show="ctrl.session.isAuthenticated" ng-click="ctrl.logout()" src="img/resources/img/log_out.png" alt="" class="img-responsive">
                             <span ng-show="ctrl.session.isAuthenticated" ng-click="ctrl.state.go('dashboard.profile.progress')" ng-bind="ctrl.user.name"></span>
                         </a>
                     </li>
-                   
-                    <li>
+
+                    <li class="active_li">
                         <a href="" ng-mouseover="ctrl.isNotifOpen = true">
                             <img src="img/resources/img/notifi.png" alt="" class="img-responsive">
                             <span ng-show="ctrl.notifications.length" ng-bind="ctrl.notifications.length"></span>
@@ -152,10 +151,10 @@
 
                     </ul>
               </div>
-            
+
         </div>
     </div>
-        <div class="dropdown_news " ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false">
+        <div class="dropdown_news " ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false" ng-mouseover="ctrl.isPNewsOpen = true;">
                             <ul >
                                 <a ui-sref="dashboard.general-news" ng-click="ctrl.isPNewsOpen = false"><li>События</li></a>
                                 <a ui-sref="dashboard.facts" ng-click="ctrl.isPNewsOpen = false"><li>Интересные факты</li></a>
@@ -171,7 +170,7 @@
                         <div class="col-md-3">
                             <ul>
                                 <a ui-sref="dashboard.general-news">
-                                    <li ng-click="ctrl.isMenuOpen = false" 
+                                    <li ng-click="ctrl.isMenuOpen = false"
                                         ng-mouseover="ctrl.isNewsOpen = true; ctrl.isForecastOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isInterestingOpen = ctrl.isSchedOpen = false">
                                         Материалы
                                     </li>
@@ -217,31 +216,29 @@
                             <ul ng-show="ctrl.isForecastOpen">
                                 <a ui-sref="dashboard.forecast.playoff" ng-click="ctrl.isMenuOpen = false" ><li>Сетка соревнований</li></a>
                                 <a ui-sref="dashboard.forecast.companionship" ng-click="ctrl.isMenuOpen = false" ><li>Матчи</li></a>
-           
+
                             </ul>
                             <ul ng-show="ctrl.isForumOpen">
                                 <a ui-sref="dashboard.forum" ng-click="ctrl.isMenuOpen = false" ><li>Форум</li></a>
-                                <a ui-sref="dashboard.game.sectors" ng-click="ctrl.isMenuOpen = false"><li>Викторины</li></a>
-
                             </ul>
-                            
+
                             <ul ng-show="ctrl.isSchedOpen">
                                 <a ui-sref="dashboard.schedule" ng-click="ctrl.isMenuOpen = false"><li>Расписание матчей</li></a>
-                                <a href=""><li class="li_disabel">Календарь</li></a>
+                                <a href="" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel"> Календарь</li></a>
                             </ul>
                             <ul ng-show="ctrl.isInterestingOpen">
 
                                 <a ui-sref="dashboard.infographics" ng-click="ctrl.isMenuOpen = false"><li> Инфографика сборной России</li></a>
-                                <a ui-sref="dashboard.tantamareska" ng-click="ctrl.isMenuOpen = false"><li> Тантамарезка</li></a>
+                                <a ui-sref="dashboard.tantamareska" ng-click="ctrl.isMenuOpen = false"><li class=""> Тантамарезка</li></a>
                                 <a ui-sref="dashboard.suggestions" ng-click="ctrl.isMenuOpen = false"><li> Пожелание сборной</li></a>
-                                <a href="" ui-sref="dashboard.socials" ng-click="ctrl.isMenuOpen = false"><li> Соц.сети хоккеистов</li></a>
-                                <a href=""><li class="li_disabel" > Junior Ice Hockey Cup</li></a>
+                                <a href="" ui-sref="dashboard.socials" ng-click="ctrl.isMenuOpen = false"><li class=""> Соц.сети хоккеистов</li></a>
+                                <a ui-sref="dashboard.junior" ng-click="ctrl.isMenuOpen = false"><li> Junior Ice Hockey Cup</li></a>
                             </ul>
                         </div>
                         <div class="col-md-6 info_menu">
                             <div ng-show="ctrl.isNewsOpen"  style="background-image: url('img/resources/img/prizes/prize1.png')">
                                 <h4>Билеты на матч Россия-Латвия</h4>
-                                <p>Набери  500 баллов и поучавствуй в розыгрыше билетов нашей сборной</p>
+                                <p>Набери  750 баллов и поучавствуй в розыгрыше билетов нашей сборной</p>
                                 <a href="" ui-sref="dashboard.prizenew" class="link_default" ng-click="ctrl.isMenuOpen = false">Смотреть</a>
                             </div>
                             <div ng-show="ctrl.isForecastOpen"  style="background-image: url('img/resources/img/prizes/prize2.png')">
@@ -272,5 +269,5 @@
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
 </header>

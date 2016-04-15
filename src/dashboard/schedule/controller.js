@@ -45,7 +45,7 @@ export default class ScheduleCtrl {
 
         /* dirty hack */
         this.filterByTeam = (match) => {
-            return $scope.ctrl.teamFilter ? (match.redteam_id == $scope.ctrl.teamFilter.id || match.blueteam_id == $scope.ctrl.teamFilter.id)  : true;
+            return $scope.ctrl.teamFilter ? (match.redteam.id == $scope.ctrl.teamFilter.id || match.blueteam.id == $scope.ctrl.teamFilter.id)  : true;
         };
 
         this.filterByCategory = (match) => {

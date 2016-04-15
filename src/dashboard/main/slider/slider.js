@@ -74,7 +74,16 @@ export default angular.module('dashboard.main.main-slider-init', [])
                             },
                         ]
                     });
-                });
+                    $('.date_slider_news').slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: true,
+                        infinite: true,
+                        autoplay: true,
+                        autoplaySpeed: 7000
+                    });
+
             }
         }
     });
