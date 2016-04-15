@@ -71,7 +71,7 @@ export default angular.module('dashboard.main.main-slider-init', [])
                                     slidesToShow: 1,
                                     slidesToScroll: 1,
                                 }
-                            },
+                            }
                         ]
                     });
                     $('.date_slider_news').slick({
@@ -83,7 +83,7 @@ export default angular.module('dashboard.main.main-slider-init', [])
                         autoplay: true,
                         autoplaySpeed: 7000
                     });
-
-            }
+            });
         }
-    });
+    }
+});
