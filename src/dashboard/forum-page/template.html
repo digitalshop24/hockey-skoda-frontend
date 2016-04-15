@@ -29,7 +29,8 @@
                 <div class="col-md-12 text-right">
                     <div class="wrapp_filt">
 
-                        <ul>
+                        <ul style="float: left;">
+
                             <li>
                                 <a ui-sref="dashboard.forum" class="link_default">Форум </a>
                             </li>
@@ -38,6 +39,8 @@
                                 <a ui-sref="dashboard.forum-page({id:ctrl.section.id})" ui-sref-opts="{reload: true}" class="link_default"
                                    ng-bind="ctrl.section.name"></a>
                             </li>
+                        </ul>   
+                        <ul style="float: right;">
                             <li><a ui-sref="dashboard.forum-page({sort:'last_activity'})" ui-sref-opts="{reload: true}"
                                    ng-class="{'active': ctrl.sort == 'last_activity'}">Новые</a></li>
                             <li><a ui-sref="dashboard.forum-page({sort:'count_view'})" ui-sref-opts="{reload: true}"

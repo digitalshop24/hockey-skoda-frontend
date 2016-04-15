@@ -6,8 +6,7 @@
 
                 <h2>Твой френд - звезда</h2>
 
-                <p>В безудержном соревновании "попробуй догони" <br> первенствовал нападающий "Эдмонд Ойлера" Коннор
-                    <br>Макдейвид, установил планку на высоту в пять очков
+                <p>Следите за своими любимыми игроками не только на новостных порталах, но и в соцсетях.<br> Узнавайте новое «из первых рук»!
                 </p>
 
             </div>
@@ -73,15 +72,15 @@
 
     <div class="dop_timeline"></div>
     <a ui-sref="dashboard.socials({hashtag: ''})">
-        <div ng-class="{'active' : !ctrl.hashtag}" class="tag_right_hokey">Весь хоккей</div>
+        <div ng-class="{'active_tag' : !ctrl.hashtag}" class="tag_right_hokey">Весь хоккей</div>
     </a>
     <a ui-sref="dashboard.socials({hashtag: ctrl.hashtag || '#Хокейвкаждом'})">
-        <div ng-class="{'active' : ctrl.hashtag}" class="tag_left_hokey" ng-bind="ctrl.hashtag || '#Хокейвкаждом'"></div>
+        <div ng-class="{'active_tag' : ctrl.hashtag}" class="tag_left_hokey" ng-bind="ctrl.hashtag || '#Хокейвкаждом'"></div>
     </a>
 
-    <div ng-show="!ctrl.days.length" style="align-content: center">
-        <p>По хештегу {{ctrl.hashtag}} ничего не найдено</p>
-        <div class="col-md-11">
+    <div class="dop_tag" ng-show="!ctrl.days.length" style="">
+        <p><h4 class="color_tag">По хештегу {{ctrl.hashtag}} ничего не найдено</h4></p>
+        <div>
             <ul>
                 <li ng-repeat="hashtag in ctrl.hashtags | limitTo:10"><a ui-sref="dashboard.socials({hashtag: '{{hashtag}}'})" ng-bind="hashtag"></a></li>
                 <li ng-show="!ctrl.openAddTags && ctrl.hashtags.length > 10"><a ng-click="ctrl.openAddTags = true"><img src="img/resources/img/three_dots.png" alt=""></a></li>
