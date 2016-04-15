@@ -232,9 +232,9 @@
                             </ul>
                             <ul ng-show="ctrl.isInterestingOpen">
 
-                                <a ui-sref="dashboard.infographics"><li> Инфографика сборной России</li></a>
+                                <a ui-sref="dashboard.infographics" ng-click="ctrl.isMenuOpen = false"><li> Инфографика сборной России</li></a>
                                 <a ui-sref="dashboard.tantamareska" ng-click="ctrl.isMenuOpen = false"><li class=""> Тантамарезка</li></a>
-                                <a ui-sref="dashboard.suggestions"><li> Пожелание сборной</li></a>
+                                <a ui-sref="dashboard.suggestions" ng-click="ctrl.isMenuOpen = false"><li> Пожелание сборной</li></a>
                                 <a href="" ui-sref="dashboard.socials" ng-click="ctrl.isMenuOpen = false"><li class=""> Соц.сети хоккеистов</li></a>
                                 <a ui-sref="dashboard.junior" ng-click="ctrl.isMenuOpen = false"><li> Junior Ice Hockey Cup</li></a>
                             </ul>
