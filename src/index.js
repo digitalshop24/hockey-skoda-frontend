@@ -62,6 +62,12 @@ export default angular.module('app',
             responseType: 'code',
             scope: ['email', 'video']
         });
+
+
+        $authProvider.oauth2({
+            name: 'customTwitter',
+            redirectUri: window.location.origin
+        });
     })
     .config(($locationProvider) => {
         $locationProvider.html5Mode(true);
