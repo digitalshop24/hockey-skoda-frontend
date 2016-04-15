@@ -53,6 +53,27 @@ export default angular.module('dashboard.main.main-slider-init', [])
 
                         ]
                     });
+                    $('.timeline-slider').slick({
+                        slidesToShow : 4,
+                        slidesToScroll : 2,
+                        infinite : false,
+                        responsive: [
+                            {
+                                breakpoint: 991,
+                                settings: {
+                                    slidesToShow: 2,
+                                    slidesToScroll: 1,
+                                }
+                            },
+                            {
+                                breakpoint: 500,
+                                settings: {
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1,
+                                }
+                            },
+                        ]
+                    });
                 });
             }
         }

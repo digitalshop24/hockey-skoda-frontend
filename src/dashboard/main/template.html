@@ -14,7 +14,7 @@
         </ul>
         <!-- <span>Завершен 1 период 14:45</span> -->
     </div>
-    
+
     <div class="container-fluid">
         <div class="row date_slider_news">
             <!-- <div class="col-md-12"> -->
@@ -50,7 +50,7 @@
                             <li><a ui-sref="dashboard.blog">Аналитика</a></li>
                         </ul>
                     </div>
-                    
+
                 </div>
                 <div class="row hash_tag">
                         <div class="col-md-1 text-center">
@@ -64,7 +64,7 @@
                             </ul>
                         </div>
                 </div>
-                <div class="row ul_news">   
+                <div class="row ul_news">
 
                      <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="news in ctrl.championatNews | limitTo: 6">
                         <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name"></a></p>
@@ -84,7 +84,7 @@
             </div>
         </div>
     </div>
-    
+
 </section>
 <section class="wrapp_mainpage_new">
     <div class="container-fluid">
@@ -100,11 +100,11 @@
                         <div class="news_one_slider" style="background-image: url({{news.image.medium}})">
                             <div class="news_one_slider_bg"></div>
                             <div class="news_titel">
-                                <a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" 
+                                <a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})"
                                 ng-bind="news.name"></a>
                                 <p ng-bind="news.short_content"></p>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
             <div class="col-md-5">
                 <h2>Получи призы</h2>
 
-                <p>Мы приготовили для Вас множество призов! 
+                <p>Мы приготовили для Вас множество призов!
                 Участвуя в активностях на сайте и офлайн, Вы сможете заработать баллы, которые позволят «Вам купить» ячейку и поучаствовать в их розыгрыше!
                 Нацеливайтесь на приз, набирайте 750 баллов и выигрывайте!</p>
                 <button class="btn btn_primary small" ui-sref="dashboard.prizenew">Узнать больше</button>
@@ -263,60 +263,93 @@
                  </slick>
         </div>
     </div>
-</section> 
+</section>
 <section class="wrapp_mainpage_timeline" >
     <div class="container-fluid">
         <div class="row">
-            <div class="top_"></div>
             <div class="timeline_horisond"></div>
-            <ul>
-                <li class="min_l_2x" >
+            <div class="timeline-slider">
+                <div class="slide">
                     <div class="wrapp_soc_li">
-                        <p ></p>
-                        <p class="time">9 недель назад</p>
+                        <p class="time">сегодня</p>
                         <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
                         <a href="#"><img src="img/resources/img/soc_foto_1.png" alt="" class="img-responsive"></a>
                         <p class="tag"><a href="#" >ilyakovalchukofficial</a></p>
                         <p class="messege">Поехал в Тверь  на кубок Русской Классики</p>
                         <img src="img/resources/img/soc_img_1.jpg" alt="" class="foto_soc">
                     </div>
-                </li>
-                <li class="min_l_2x hidden-xs " >
+                </div>
+                <div class="slide">
                     <div class="wrapp_soc_li">
-                        <p ></p>
-                        <p class="time">7 дней назад</p>
+                        <p class="time">вчера</p>
                         <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
                         <a href="#"><img src="img/resources/img/soc_foto_2.png" alt="" class="img-responsive"></a>
                         <p class="tag"><a href="#" >datsyuk13hockey</a></p>
                         <p class="messege"></p>
                         <img src="img/resources/img/soc_img_3.jpg" alt="" class="foto_soc">
                     </div>
-                </li>
-                <li class="min_l_2x" >
-                    <div class="wrapp_soc_li hidden-xs hidden-sm">
-                        <p ></p>
-                        <p class="time">5 дней назад</p>
+                </div>
+                <div class="slide">
+                    <div class="wrapp_soc_li">
+                        <p class="time">позавчера</p>
                         <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
                         <a href="#"><img src="img/resources/img/soc_foto_3.png" alt="" class="img-responsive"></a>
                         <p class="tag"><a href="#" >emalkin71geno</a></p>
                         <p class="messege"></p>
                         <img src="img/resources/img/soc_img_2.jpg" alt="" class="foto_soc">
                     </div>
-                </li>
-                <li class="min_l_2x hidden-xs hidden-sm" >
+                </div>
+                <div class="slide">
                     <div class="wrapp_soc_li">
-                        <p ></p>
-                        <p class="time">12 апреля</p>
+                        <p class="time">10 апреля</p>
                         <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
                         <a href="#"><img src="img/resources/img/soc_foto_4.png" alt="" class="img-responsive"></a>
                         <p class="tag"><a href="#" >Alex Ovechkin</a></p>
                         <p class="messege"></p>
                         <img src="img/resources/img/soc_img_4.jpg" alt="" class="foto_soc">
                     </div>
-                </li>
-                
-
-            </ul>
+                </div>
+                <div class="slide">
+                    <div class="wrapp_soc_li">
+                        <p class="time">5 апреля</p>
+                        <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="img/resources/img/soc_foto_1.png" alt="" class="img-responsive"></a>
+                        <p class="tag"><a href="#" >ilyakovalchukofficial</a></p>
+                        <p class="messege">Поехал в Тверь  на кубок Русской Классики</p>
+                        <img src="img/resources/img/soc_img_1.jpg" alt="" class="foto_soc">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="wrapp_soc_li">
+                        <p class="time">1 апреля</p>
+                        <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="img/resources/img/soc_foto_2.png" alt="" class="img-responsive"></a>
+                        <p class="tag"><a href="#" >datsyuk13hockey</a></p>
+                        <p class="messege"></p>
+                        <img src="img/resources/img/soc_img_3.jpg" alt="" class="foto_soc">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="wrapp_soc_li">
+                        <p class="time">1 апреля</p>
+                        <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="img/resources/img/soc_foto_3.png" alt="" class="img-responsive"></a>
+                        <p class="tag"><a href="#" >emalkin71geno</a></p>
+                        <p class="messege"></p>
+                        <img src="img/resources/img/soc_img_2.jpg" alt="" class="foto_soc">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="wrapp_soc_li">
+                        <p class="time">28 марта</p>
+                        <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="img/resources/img/soc_foto_4.png" alt="" class="img-responsive"></a>
+                        <p class="tag"><a href="#" >Alex Ovechkin</a></p>
+                        <p class="messege"></p>
+                        <img src="img/resources/img/soc_img_4.jpg" alt="" class="foto_soc">
+                    </div>
+                </div>
+            </div>
            <!--  <img src="img/resources/img/skoda-main-SMP.jpg" alt="" class="'img-responsive"> -->
             <!-- <div class="top_"></div>
             <div class="timeline_horisond"></div>
@@ -332,7 +365,7 @@
             </ul> -->
         </div>
     </div>
-</section> 
+</section>
 <section class="wrapp_mainpage_tantam">
     <div class="container-fluid">
         <div class="row">
@@ -382,9 +415,9 @@
                     <span><!-- В качестве официального спонсора<br> ŠKODA поддержала Чемпионат мира<br> по хоккею IIHF 22 раза --></span>
                 </ul>
             </div>
-           
+
         </div>
 
     </div>
-    
+
 </section>

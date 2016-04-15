@@ -1,0 +1,89 @@
+//Main colors
+$green_main: #4ba82e;
+$black: #000;
+$white: #fff;
+$grey_lite: #ececec;
+$grey: #cccccc;
+$grey_dark: #555555;
+//Additional colors
+$green_add_: #299926;
+$green_add_pale: #a5d396;
+$red: #da0000;
+$link_default_hover:#377220;
+//fonts
+$extra_bold: "SkodaProExtraBold", sans-serif;
+$bold: "SkodaProBold", sans-serif;
+$regular: "SkodaProRegular", sans-serif;
+$light: "SkodaProLight", sans-serif;
+$p_size: 1.4rem;
+
+.wrapp_mainpage_timeline {
+  // padding-top: 65px;
+  // padding-bottom: 40px;
+  padding:0;
+  position: relative;
+  // background-color: #f1f1f1;
+  .timeline_horisond {
+    height:2px;
+    width: 100%;
+    background-color: $green_main;
+    position: absolute;
+    z-index: 2;
+    left:0;
+    width:100%;
+    top:65px;
+
+  }
+  .timeline-slider{
+    position: relative;
+    z-index:3;
+    padding:14px 0 40px;
+    .slide{
+      padding:0 20px;
+      text-align: center;
+    }
+  }
+  p {
+    font-size: $p_size;
+    color: $green_main;
+
+    a {
+      color: $green_main;
+    }
+  }
+  img {
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .wrapp_soc_li {
+    max-width:100%;
+    display: inline-block;
+  }
+  .tag {
+    font-size: $p_size+0.1rem;
+  }
+  .messege {
+    color: $grey;
+    font-size: $p_size+0.1rem;
+  }
+  .time {
+    height: 40px;
+    text-align:center;
+  }
+  .foto_soc {
+    max-width:100%; border-radius: 0px;
+  }
+  .min_l_min {
+   margin-left: 1%;
+  }
+  .min_l_1x {
+    margin-left: 2%;
+  }
+  .min_l_2x {
+    margin-left: 8%;
+  }
+  .min_l_3x {
+    margin-left: 13%;
+  }
+}
