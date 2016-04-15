@@ -3610,6 +3610,16 @@ $grey_about: #5d5d5d;
       color: $white;
       padding: 0 40px 80px 40px;
     }
+    .pravil {
+      font-size: 3rem;
+      color: $red;
+      padding-left:20px;
+      cursor: pointer;
+    }
+    .desc {
+      color: $grey;
+      font-size: $p_size -0.1rem;
+    }
   }
   .main_slider_priz {
     display: none;
@@ -4353,7 +4363,19 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- end calendar
 
 //-------------------------------------------------- faq 
-
+.regulations {
+  padding: 50px;
+  p {
+    padding: 5px 0;
+    font-size: $p_size+.1rem;
+  }
+  h2,h3 {
+    padding-bottom: 30px;
+  }
+  h5 {
+    padding: 30px 0 10px 0;
+  }
+}
 
 .faq {
   padding: 50px;
