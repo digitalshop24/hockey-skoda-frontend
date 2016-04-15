@@ -40,4 +40,10 @@ export default class CubesService {
                 throw err.data;
             });
     }
+
+    confirmUserData(data) {
+        return this.api.put('/victorina/user_info', data).then(res => {
+            return res.data;
+        })
+    }
 }

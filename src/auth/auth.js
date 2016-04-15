@@ -22,7 +22,6 @@ export default class AuthService {
     login(credentials) {
         return this.api.post('/users/sign_in', credentials).then(response => {
             this.initSession(response);
-            this.$rootScope.$broadcast('user:updated', this.session.user);
             return this.session;
         }).catch(response => {
             throw response.data;
@@ -33,6 +32,7 @@ export default class AuthService {
         this.session.token = response.data.user.token;
         this.session.user = Object.assign(this.session.user, response.data.user);
         this.session.isAuthenticated = true;
+        this.$rootScope.$broadcast('user:updated', this.session.user);
     }
 
     isGuest(){
