@@ -51,6 +51,11 @@ export default angular.module('dashboard.general-news',
                             return [];
                         }
                     },
+
+                    tweets: newsService => {
+                        return newsService.getTweets();
+                    },
+
                     month: ($stateParams, news) => {
                         return $stateParams.month;
                     },

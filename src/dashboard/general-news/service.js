@@ -33,4 +33,17 @@ export default class GeneralNewsService {
                 throw response.data.error;
             });
     }
+
+    getTweets() {
+        return this.api.
+            get('/soc_posts/news_feed', {
+                params: {
+                    per_page: 20,
+                    page: 1
+                }
+            })
+            .then(response => {
+                return response.data;
+            });
+    }
 }
