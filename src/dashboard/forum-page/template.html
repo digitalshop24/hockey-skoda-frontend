@@ -60,6 +60,7 @@
                             <li ng-repeat="topic in ctrl.topics">
                                 <span><a ui-sref="dashboard.forumtopic({id:topic.id})" class="link_default"
                                          ng-bind="topic.name"></a></span>
+                                <span ng-bind="topic.messages_count"></span>
                                 <ul>
                                     <li><img src="img/resources/img/page.png" alt=""></li>
                                     <li ng-repeat="page in topic.pages"><a
