@@ -70,17 +70,17 @@ export default angular.module('app',
     .run(amMoment=> {
         amMoment.changeLocale('ru');
     })
-    .run(($rootScope, $state, login, session) => {
-        $rootScope.$state = $state;
+    .run(($rootScope, $window, $state) => {
         $rootScope.$on('$stateChangeStart', authHandling);
 
         function authHandling(event, toState) {
-            if (toState.access) {
-                if (!session.isAuthenticated) {
-                    event.preventDefault();
-                    NProgress.done();
-                    login.open();
-                }
+            if(toState.url == '/') {
+                event.preventDefault();
+                $state.go('dashboard.prizenew');
+            }
+
+            if (toState.url != '/contests') {
+                $window.location.href = 'http://hockey-skoda.ru/stub/index.html';
             }
         }
     })
