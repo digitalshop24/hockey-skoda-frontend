@@ -14,7 +14,7 @@ export default angular.module('dashboard.prizenew', [])
                     description: 'Вы можете рассказать о призах, которые можно выиграть, своим друзьям, участвуя в огромном количестве интересных активностей на сайте.'
                 },
                 template: require('./template.html'),
-                url: '/prize-new',
+                url: '/contests',
                 controller: PrizenewCtrl,
                 controllerAs: 'ctrl',
                 resolve: {
