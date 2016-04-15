@@ -22,6 +22,7 @@ export default class AuthService {
     login(credentials) {
         return this.api.post('/users/sign_in', credentials).then(response => {
             this.initSession(response);
+            this.$rootScope.$broadcast('user:updated', this.session.user);
             return this.session;
         }).catch(response => {
             throw response.data;
