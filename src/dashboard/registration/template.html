@@ -54,6 +54,7 @@
                         <h4>Пароль?</h4>
                         <input required="true" type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"
                                placeholder="Пароль* (мин. 8 символов)">
+                        <ul id="strength" check-strength model="ctrl.form.password"></ul>
                     </div>
                     <div class="col-md-6 left">
                         <h4>Повторите пароль?</h4>
