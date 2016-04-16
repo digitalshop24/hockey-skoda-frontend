@@ -46,6 +46,7 @@ export default class LoginCtrl {
         this.form = {};
         this.rootscope.alreadyInLoginModal = false;
         this.close();
+        this.state.go(this.state.current, {}, {reload: true});
     }
 
 

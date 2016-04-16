@@ -9,7 +9,7 @@ const GREEN_AMOUNT = 20;
 const BLUE_AMOUNT = 20;
 
 export default class CubesCtrl {
-    constructor(sectors, sector, prizes, coupons, cubesService, $interval, modal, $state, id, user, session) {
+    constructor(sectors, sector, prizes, coupons, cubesService, $interval, modal, $state, id, user, session, auth) {
         this.sectors = sectors;
         this.sector = sector;
         this.coupons = coupons;
@@ -19,6 +19,8 @@ export default class CubesCtrl {
         this.session = session;
         this.id = id;
         this.user = user;
+        this.state = $state;
+        this.auth = auth;
         this.categories = [];
 
         prizes.forEach(prize => {
@@ -87,8 +89,24 @@ export default class CubesCtrl {
         }
     }
 
+    confirmUserData() {
+        this.service.confirmUserData(this.userData).then(res => {
+            this.auth.initSession(res);
+            this.user = res.data.user;
+            $('#userData').modal('hide');
+            $('#myModal').modal('show');
+            this.startGame();
+        });
+    }
 
     startGame() {
+        if(!this.user.info_profile_filled) {
+            $('#myModal').modal('hide');
+            $('#userData').modal('show');
+            this.userData = this.user;
+            return;
+        }
+
         if(this.busy) return;
         this.busy = true;
         this.service.startGame(this.currentCell.id)
@@ -216,6 +234,11 @@ export default class CubesCtrl {
                     }
                 });
             });
+    }
+
+    goToPrizes() {
+        $('#resultModal').modal('hide');
+        this.state.go('dashboard.profile.prizes');
     }
 
     shuffle(a) {

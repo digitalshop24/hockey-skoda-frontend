@@ -32,6 +32,7 @@ export default class AuthService {
         this.session.token = response.data.user.token;
         this.session.user = Object.assign(this.session.user, response.data.user);
         this.session.isAuthenticated = true;
+        this.$rootScope.$broadcast('user:updated', this.session.user);
     }
 
     isGuest(){

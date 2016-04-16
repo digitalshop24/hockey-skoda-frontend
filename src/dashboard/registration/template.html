@@ -54,6 +54,7 @@
                         <h4>Пароль?</h4>
                         <input required="true" type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"
                                placeholder="Пароль* (мин. 8 символов)">
+                        <ul id="strength" check-strength model="ctrl.form.password"></ul>
                     </div>
                     <div class="col-md-6 left">
                         <h4>Повторите пароль?</h4>
@@ -111,17 +112,17 @@
                     </div>
 
                     <div class="col-md-6 left">
-                        <h4>Идентификационный номер (VIN)?<span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <h4>Идентификационный № ?<span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
                         <input type="text" ng-model="ctrl.form.vincode" class="input_default input_small" placeholder="VIN 17 Символов">
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6 left">
-                        <h4><a ui-sref="dashboard.consent">Соглашаюсь с обработкой персональных данных</a></h4>
-                        <input type="checkbox" ng-model="ctrl.form.policy_agreed" class="input_default input_small" checked>
-                    </div>
+                    <div class="col-md-12 text-center">
+                        <input type="checkbox" checked="checked" id="c1">
+                        <label for="c1"><span></span><a href="" ui-sref="dashboard.consent">Соглашаюсь с обработкой персональных данных</a></label>
 
+                    </div>
                 </div>
             </div>
         </div>

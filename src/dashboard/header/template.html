@@ -35,7 +35,6 @@
                     <ul class="drilldown-sub">
                       <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Форум</a></li>
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.forum">Форум</li></a>
-                      <a ui-sref="dashboard.game.sectors"><li class="li_disabel" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Викторины</li></a>
                     </ul>
               </li></a>
               <a href="#" ui-sref="dashboard.prizenew"><li>Конкурсы</li></a>
@@ -128,7 +127,7 @@
                             <span ng-show="ctrl.session.isAuthenticated" ng-click="ctrl.state.go('dashboard.profile.progress')" ng-bind="ctrl.user.name"></span>
                         </a>
                     </li>
-                   
+
                     <li class="active_li">
                         <a href="" ng-mouseover="ctrl.isNotifOpen = true">
                             <img src="img/resources/img/notifi.png" alt="" class="img-responsive">
@@ -172,7 +171,7 @@
                         <div class="col-md-3">
                             <ul>
                                 <a ui-sref="dashboard.general-news">
-                                    <li ng-click="ctrl.isMenuOpen = false" 
+                                    <li ng-click="ctrl.isMenuOpen = false"
                                         ng-mouseover="ctrl.isNewsOpen = true; ctrl.isForecastOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isInterestingOpen = ctrl.isSchedOpen = false">
                                         Материалы
                                     </li>
@@ -222,8 +221,6 @@
                             </ul>
                             <ul ng-show="ctrl.isForumOpen">
                                 <a ui-sref="dashboard.forum" ng-click="ctrl.isMenuOpen = false" ><li>Форум</li></a>
-                                <a ui-sref="dashboard.game.sectors" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel">Викторины</li></a>
-
                             </ul>
                             
                             <ul ng-show="ctrl.isSchedOpen">
@@ -273,5 +270,5 @@
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
 </header>

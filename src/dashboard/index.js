@@ -31,6 +31,7 @@ import stars from './stars/index';
 import score from './schedule/index';
 import video from './video/index';
 import masonry from './masonry-init/index';
+import passwordStrength from './password-strength/index';
 import menuInit from './menu-init/index';
 import cheer from './cheerleaders/index';
 import calendar from './calendar/index';
@@ -89,7 +90,8 @@ export default angular.module('dashboard',
         edit.name,
         rights.name,
         share.name,
-        regulations.name
+        regulations.name,
+        passwordStrength.name
     ])
     .service('login', Login)
     .service('modal', Modal)

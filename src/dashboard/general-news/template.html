@@ -44,14 +44,12 @@
                 </div>
                 <div class="hidden-xs hidden-sm col-md-2 fix_padding" ng-show="true">
                     <div class="wrapp_social_lent">
-                        <div class="soc_post">
+                        <div class="soc_post" ng-repeat="tweet in ctrl.tweets">
                             <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
                             <ul>
-                                <li>Хоккей</li>
-                                <li>@sports_hokey</li>
-                                <li>Кузнецов здорово прибавил , стал играть совсем в другую игру, нежели в прошлом году,
-                                    очень много
-                                </li>
+                                <li ng-bind="tweet.person.name"></li>
+                                <li ng-bind="tweet.content"></li>
+                                <img ng-show="tweet.photos.length" src="{{tweet.photos[0].image.thumb}}">
                             </ul>
                         </div>
                     </div>

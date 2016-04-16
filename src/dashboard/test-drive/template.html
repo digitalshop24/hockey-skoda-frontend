@@ -19,25 +19,24 @@
 
             <form class="form_t_drive">
                 <div class="row">
-                    <div class="col-md-6 text-right"><input ng-model="ctrl.firstName" type="text"
-                                                            class="input_default input_small"
-                                                            placeholder="Имя* (Обязательное поле)"></div>
+                    <div class="col-md-6 text-right">
+                        <input ng-model="ctrl.firstName" type="text"  class="input_default input_small" placeholder="Имя* (Обязательное поле)" required minlength="2"></div>
                     <div class="col-md-6 text-left"><input ng-model="ctrl.lastName" type="text"
                                                            class="input_default input_small"
-                                                           placeholder="Фамилия* (Обязательное поле)"></div>
+                                                           placeholder="Фамилия* (Обязательное поле)" required minlength="2"></div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-right"><input required="true" type="text" ng-model="ctrl.mobilephone"
                                                             class="input_default input_small"
-                                                            placeholder="Телефон* (Обязательное поле)"></div>
+                                                            placeholder="Телефон* (Обязательное поле)" required minlength="2"></div>
                     <div class="col-md-6 text-left"><input type="email" ng-model="ctrl.email"
                                                            class="input_default input_small"
-                                                           placeholder="E-mail* (Обязательное поле)"></div>
+                                                           placeholder="E-mail* (Обязательное поле)" required minlength="2"></div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <select name="city" ng-options="city.name for city in ctrl.cities | orderBy: 'name'"
-                                class="input_default input_small select_default" ng-change="ctrl.loadDealer()" ng-model="ctrl.city">
+                                class="input_default input_small select_default" ng-change="ctrl.loadDealer()" ng-model="ctrl.city" required minlength="2">
                             <option disabled selected value>Выберите город* (Обязательное поле)</option>
                         </select>
                     </div>
@@ -46,7 +45,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <select name="city" ng-options="dealer.info for dealer in ctrl.dealers | orderBy: 'info'"
-                                class="input_default input_small select_default" ng-model="ctrl.dealer">
+                                class="input_default input_small select_default" ng-model="ctrl.dealer" required minlength="2">
                             <option disabled selected value>Выберите дилера* (Обязательное поле)</option>
                         </select>
                     </div>
