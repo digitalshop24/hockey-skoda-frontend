@@ -22,8 +22,11 @@ export default angular.module('dashboard.calendar', [])
                         return calendarService.getCalendar();
                     },
 
-                    subscriptions: calendarService => {
-                        return calendarService.getSubscriptions();
+                    subscriptions: (session, calendarService) => {
+                        if(session.isAuthenticated) {
+                            return calendarService.getSubscriptions();
+                        }
+                        return [];
                     }
                 }
             });
