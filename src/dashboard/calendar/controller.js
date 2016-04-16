@@ -14,7 +14,7 @@ export default class СalendarCtrl {
 
         for (let i = 0; i < this.timeGrid.length; i++) {
             const row = [];
-            for(let j = 0; j < this.daysToShow.length; j++) {
+            for (let j = 0; j < this.daysToShow.length; j++) {
                 row.push({
                     day: this.daysToShow[j],
                     matches: []
@@ -22,7 +22,7 @@ export default class СalendarCtrl {
             }
             wholeGrid.push({
                 row: row,
-                timeId : this.timeGrid[i]
+                timeId: this.timeGrid[i]
             });
         }
 
@@ -36,17 +36,17 @@ export default class СalendarCtrl {
         }
 
         this.grid = [];
-        for(let i =0; i < wholeGrid.length; i++) {
+        for (let i = 0; i < wholeGrid.length; i++) {
             const row = wholeGrid[i].row;
             let deleteRow = true;
-            for(let j = 0; j < row.length; j++) {
+            for (let j = 0; j < row.length; j++) {
                 const cell = row[j];
-                if(cell.matches.length) {
+                if (cell.matches.length) {
                     deleteRow = false;
                 }
             }
-            if(!deleteRow) {
-                this.grid.push(row);
+            if (!deleteRow) {
+                this.grid.push(wholeGrid[i]);
             }
 
         }
@@ -62,7 +62,7 @@ export default class СalendarCtrl {
             const hour = moment(event.when).hour();
             const minutes = moment(event.when).minute();
             const timeGridId = this.getTimeGridIndex(hour, minutes);
-            if(timeGridId == timeId) {
+            if (timeGridId == timeId) {
                 matches.push(event);
             }
         });
@@ -71,22 +71,27 @@ export default class СalendarCtrl {
     }
 
     createTimeGrid() {
-        return  [
-            {hour: 0, minutes:0}, {hour: 1, minutes:30}, {hour: 3, minutes:0}, {hour: 4, minutes:30}, {hour: 6, minutes:0}, {hour: 7, minutes:30},
-            {hour: 9, minutes:0}, {hour: 10, minutes:30}, {hour: 12, minutes:0}, {hour: 13, minutes:30}, {hour: 15, minutes:0},
-            {hour: 16, minutes:30}, {hour: 18, minutes:0}, {hour: 19, minutes:30}, {hour: 21, minutes:0}, {hour: 22, minutes:30}, {hour: 24, minutes:0}
-
+        return [
+            {hour: 0, minutes: 0, even: true}, {hour: 1, minutes: 30, odd: true},
+            {hour: 3, minutes: 0, even: true}, {hour: 4, minutes: 30, odd: true},
+            {hour: 6, minutes: 0, even: true}, {hour: 7, minutes: 30, odd: true},
+            {hour: 9, minutes: 0, even: true}, {hour: 10, minutes: 30, odd: true},
+            {hour: 12, minutes: 0, even: true}, {hour: 13, minutes: 30, odd: true},
+            {hour: 15, minutes: 0, even: true}, {hour: 16, minutes: 30, odd: true},
+            {hour: 18, minutes: 0, even: true}, {hour: 19, minutes: 30, odd: true},
+            {hour: 21, minutes: 0, even: true}, {hour: 22, minutes: 30, odd: true},
+            {hour: 24, minutes: 0, even: true}
         ];
     }
 
     getTimeGridIndex(hour, minutes) {
         /*this.timeGrid.findIndex( (cell, index) => {
-            cell.hour
-        })*/
+         cell.hour
+         })*/
 
         for (let i = 0; i < this.timeGrid.length - 1; i++) {
             const first = this.timeGrid[i];
-            const second = this.timeGrid[i+1];
+            const second = this.timeGrid[i + 1];
 
             if (first.hour <= hour && hour <= second.hour &&
                 ( (first.hour < hour && hour < second.hour) ||
