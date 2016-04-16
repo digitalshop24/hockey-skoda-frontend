@@ -4167,7 +4167,46 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- end tantamarezka
 
 //-------------------------------------------------- calendar
+.on, .off {
+    margin-top:-32px;
+  }
 
+.calendar-slider {
+  width:118px;
+  background:#fff;
+  margin-bottom:0px;
+  min-height:120px;
+  
+  .block {
+    border-top:6px solid #38b249;
+    background:#fff;
+    p {
+      margin-top:10px;
+      text-align:center;
+      color:#000;
+      font-family: $bold;
+      font-size:1.4rem;
+    }
+  }
+  .slick-dots {
+    position:relative; 
+    bottom:0px;
+    margin-top:10px;
+  }
+  .slick-dots li button:before {
+    font-size:35px;
+    color:#38b249;
+  }
+}
+.calendar .right_calendar .time_line tbody tr:nth-child(odd) .bor[rowspan] {
+  padding-right:0px;
+}
+.calendar .right_calendar .time_line tbody tr:nth-child(even) .bor[rowspan] {
+  padding-right:0px;
+}
+.bor {
+  padding-right:0px;
+}
 .notice_form {
   margin: 33px 0;
   h5 {
@@ -4177,7 +4216,21 @@ $grey_about: #5d5d5d;
     display: inline-block;
     font-size: 2rem;
   }
+  h6 {
+    line-height: 50px;
+  }
 
+  .small {
+    height: 50px;
+    position:relative;
+    top:-2px;
+  }
+  .in {
+    width:300px;
+    border:none;
+    background:#e6e6e6;
+    margin-right:10px;
+  }
   .btn_non {
     padding-top: 5px;
     float:right;
@@ -4239,13 +4292,16 @@ $grey_about: #5d5d5d;
     }
   }
   .right_calendar {
+
     .wrapp_toggle {
       margin-bottom: 35px;
       h5 {
         font-family: "SkodaProBold", sans-serif;
-        padding-top: 15px;
+        position:relative;
+        top:-10px;
         display: inline-block;
         font-size: 2rem;
+
       }
       .toggle  {
         display: inline-block;
@@ -4274,6 +4330,9 @@ $grey_about: #5d5d5d;
             padding:0;
             height: 30px;
             border: 1px solid $grey;
+          }
+          .bor {
+            border:1px solid $grey !important;
           }
         }
         tr:nth-child(odd) {
