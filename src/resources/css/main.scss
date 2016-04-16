@@ -1344,11 +1344,12 @@ $grey_about: #5d5d5d;
         //
     }
     input[type="checkbox"]:checked + label span {
-      background:url(img/resources/img/check-box-active.png) left top no-repeat;
+      background:url(img/resources/img/check-box-active.png)  left top no-repeat;
     }
+
     label {
       margin-left: 50px;
-      margin-bottom: 35px;
+      margin-bottom: 36px;
       font-size: $p_size;
       font-family: $regular;
       font-weight: 300;
