@@ -20,6 +20,10 @@ export default angular.module('dashboard.calendar', [])
                 resolve: {
                     calendar: calendarService => {
                         return calendarService.getCalendar();
+                    },
+
+                    subscriptions: calendarService => {
+                        return calendarService.getSubscriptions();
                     }
                 }
             });

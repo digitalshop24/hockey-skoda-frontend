@@ -4353,7 +4353,7 @@ $grey_about: #5d5d5d;
           td {
             border-bottom: 1px dotted $grey;
           }
-          td[rowspan] {
+          td.rowspan2 {
             border:none;
             text-align: right;
             padding-right: 15px;
@@ -4365,7 +4365,7 @@ $grey_about: #5d5d5d;
           td {
             border-top: none;
           }
-          td[rowspan] {
+          td.rowspan2 {
             border:none;
             text-align: right;
             padding-right: 15px;

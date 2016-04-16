@@ -1,20 +1,56 @@
 'use strict';
 
+const COLUMN_AMOUNT = 7;
 
 export default class СalendarCtrl {
-    constructor(calendar) {
+    constructor(calendar, calendarService, subscriptions) {
+        calendar.forEach(day => {
+           day.matches.forEach(match => {
+               var subscr = subscriptions.find(subscr => subscr.match_id == match.id);
+               if(subscr) {
+                   match.isSubscribed = true;
+                   match.subscrId = subscr.id;
+               }
+           });
+        });
         this.calendar = calendar;
+        this.service = calendarService;
         this.timeGrid = this.createTimeGrid();
-        this.updateCalendar(8);
+        this.minDate = moment(calendar[0].day).toDate();
+        this.maxDate = moment(calendar[calendar.length -1].day).toDate();
+        this.allMatches = true;
+        this.subscribed = true;
+
+        this.updateCalendar(moment());
+
+
+        this.filterByToggle = match => {
+            return this.allMatches ? true : this.subscribed ? match.isSubscribed : false;
+        };
     }
 
-    updateCalendar(calendarDayIndex) {
-        this.daysToShow = this.calendar.slice(calendarDayIndex - 3, calendarDayIndex + 4).map(day => day.day);
+    updateCalendar(day) {
+        const calendarDayIndex = this.calendar.findIndex(cell => cell.day == moment(day).format('YYYY-MM-DD'));
+        if(calendarDayIndex == -1) {
+            this.daysToShow = [];
+            this.daysToShow.push(moment(day).add(-3, 'd').format('YYYY-MM-DD'));
+            this.daysToShow.push(moment(day).add(-2, 'd').format('YYYY-MM-DD'));
+            this.daysToShow.push(moment(day).add(-1, 'd').format('YYYY-MM-DD'));
+            this.daysToShow.push(moment(day).format('YYYY-MM-DD'));
+            this.daysToShow.push(moment(day).add(1, 'd').format('YYYY-MM-DD'));
+            this.daysToShow.push(moment(day).add(2, 'd').format('YYYY-MM-DD'));
+            this.daysToShow.push(moment(day).add(3, 'd').format('YYYY-MM-DD'));
+        } else {
+            const startIndex = calendarDayIndex == this.calendar.length - 1 ? this.calendar.length - 7 : calendarDayIndex - 3 > 0 ? calendarDayIndex - 3 : 0;
+            const endIndex = calendarDayIndex == 0 ? 7 : calendarDayIndex + 4 < this.calendar.length - 1 ? calendarDayIndex + 4 : this.calendar.length;
+            this.daysToShow = this.calendar.slice(startIndex, endIndex).map(day => day.day);
+        }
+
         const wholeGrid = [];
 
         for (let i = 0; i < this.timeGrid.length; i++) {
             const row = [];
-            for(let j = 0; j < this.daysToShow.length; j++) {
+            for (let j = 0; j < this.daysToShow.length; j++) {
                 row.push({
                     day: this.daysToShow[j],
                     matches: []
@@ -22,7 +58,7 @@ export default class СalendarCtrl {
             }
             wholeGrid.push({
                 row: row,
-                timeId : this.timeGrid[i]
+                timeId: this.timeGrid[i]
             });
         }
 
@@ -36,33 +72,34 @@ export default class СalendarCtrl {
         }
 
         this.grid = [];
-        for(let i =0; i < wholeGrid.length; i++) {
+        for (let i = 0; i < wholeGrid.length; i++) {
             const row = wholeGrid[i].row;
             let deleteRow = true;
-            for(let j = 0; j < row.length; j++) {
+            let cellWithMatches = 0;
+            for (let j = 0; j < row.length; j++) {
                 const cell = row[j];
-                if(cell.matches.length) {
+                if (cell.matches.length) {
                     deleteRow = false;
+                    cellWithMatches++;
                 }
             }
-            if(!deleteRow) {
-                this.grid.push(row);
+            if (!deleteRow) {
+                wholeGrid[i].secondTdArray = Array.from(new Array(COLUMN_AMOUNT - cellWithMatches), (x,i) => i);
+                this.grid.push(wholeGrid[i]);
             }
 
         }
-
-        const a = "";
     }
 
-    getDayMatchesByTimeId(day, timeId) {
+    getDayMatchesByTimeId(day, time) {
         day = this.calendar.find(d => d.day == day);
-
+        if(!day) {
+            return [];
+        }
         const matches = [];
-        day.events.forEach(event => {
+        day.matches.forEach(event => {
             const hour = moment(event.when).hour();
-            const minutes = moment(event.when).minute();
-            const timeGridId = this.getTimeGridIndex(hour, minutes);
-            if(timeGridId == timeId) {
+            if (hour == time) {
                 matches.push(event);
             }
         });
@@ -71,28 +108,20 @@ export default class СalendarCtrl {
     }
 
     createTimeGrid() {
-        return  [
-            {hour: 0, minutes:0}, {hour: 1, minutes:30}, {hour: 3, minutes:0}, {hour: 4, minutes:30}, {hour: 6, minutes:0}, {hour: 7, minutes:30},
-            {hour: 9, minutes:0}, {hour: 10, minutes:30}, {hour: 12, minutes:0}, {hour: 13, minutes:30}, {hour: 15, minutes:0},
-            {hour: 16, minutes:30}, {hour: 18, minutes:0}, {hour: 19, minutes:30}, {hour: 21, minutes:0}, {hour: 22, minutes:30}, {hour: 24, minutes:0}
-
-        ];
+        return Array.from(new Array(24), (x,i) => i);
     }
 
-    getTimeGridIndex(hour, minutes) {
-        /*this.timeGrid.findIndex( (cell, index) => {
-            cell.hour
-        })*/
-
-        for (let i = 0; i < this.timeGrid.length - 1; i++) {
-            const first = this.timeGrid[i];
-            const second = this.timeGrid[i+1];
-
-            if (first.hour <= hour && hour <= second.hour &&
-                ( (first.hour < hour && hour < second.hour) ||
-                (first.hour == hour ? first.minutes <= minutes : minutes < second.minutes ) )) {
-                return i;
-            }
+    subscribe(match){
+        if(!match.isSubscribed) {
+            this.service.unsubscribe(match.subscrId).then(() => {
+                match.isSubscribed = false;
+                match.subscrId = undefined;
+            })
+        } else {
+            this.service.subscribe(match.id).then((res) => {
+                match.isSubscribed = true;
+                match.subscrId = res.id;
+            })
         }
     }
 
