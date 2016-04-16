@@ -21,11 +21,11 @@ export default class MainService {
             });
     }
 
-    getTweets() {
+    getSocPosts() {
         return this.api.
-            get('/soc_posts/news_feed', {
+            get('/soc_posts', {
                 params: {
-                    per_page: 6,
+                    days: 2,
                     page: 1
                 }
             })

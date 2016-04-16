@@ -269,17 +269,17 @@
         <div class="row">
             <div class="timeline_horisond"></div>
             <div class="timeline-slider">
-                <div class="slide">
+                <div class="slide" ng-repeat="post in ctrl.socPosts">
                     <div class="wrapp_soc_li">
-                        <p class="time">сегодня</p>
-                        <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
-                        <a href="#"><img src="img/resources/img/soc_foto_1.png" alt="" class="img-responsive"></a>
-                        <p class="tag"><a href="#" >ilyakovalchukofficial</a></p>
-                        <p class="messege">Поехал в Тверь  на кубок Русской Классики</p>
-                        <img src="img/resources/img/soc_img_1.jpg" alt="" class="foto_soc">
+                        <p class="time" ng-bind="post.published_at | amDateFormat:'DD.MM'"></p>
+                        <a href="#"><img  src="img/resources/img/green_insta.png" alt="" class="img-responsive {{post.network}}"></a>
+                        <a href="#"><img src="{{post.profile_pic}}" alt="" class="img-responsive"></a>
+                        <p class="tag"><a href="{{post.profile_link}}" target="_blank" ng-bind="post.profile_name"></a></p>
+                        <p class="messege" ng-bind="post.content"></p>
+                        <img ng-show="post.photos.length" src="{{post.photos[0].image.thumb}}" alt="" class="foto_soc">
                     </div>
                 </div>
-                <div class="slide">
+                <!--<div class="slide">
                     <div class="wrapp_soc_li">
                         <p class="time">вчера</p>
                         <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
@@ -298,57 +298,8 @@
                         <p class="messege"></p>
                         <img src="img/resources/img/soc_img_2.jpg" alt="" class="foto_soc">
                     </div>
-                </div>
-                <div class="slide">
-                    <div class="wrapp_soc_li">
-                        <p class="time">10 апреля</p>
-                        <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
-                        <a href="#"><img src="img/resources/img/soc_foto_4.png" alt="" class="img-responsive"></a>
-                        <p class="tag"><a href="#" >Alex Ovechkin</a></p>
-                        <p class="messege"></p>
-                        <img src="img/resources/img/soc_img_4.jpg" alt="" class="foto_soc">
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="wrapp_soc_li">
-                        <p class="time">5 апреля</p>
-                        <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
-                        <a href="#"><img src="img/resources/img/soc_foto_1.png" alt="" class="img-responsive"></a>
-                        <p class="tag"><a href="#" >ilyakovalchukofficial</a></p>
-                        <p class="messege">Поехал в Тверь  на кубок Русской Классики</p>
-                        <img src="img/resources/img/soc_img_1.jpg" alt="" class="foto_soc">
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="wrapp_soc_li">
-                        <p class="time">1 апреля</p>
-                        <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
-                        <a href="#"><img src="img/resources/img/soc_foto_2.png" alt="" class="img-responsive"></a>
-                        <p class="tag"><a href="#" >datsyuk13hockey</a></p>
-                        <p class="messege"></p>
-                        <img src="img/resources/img/soc_img_3.jpg" alt="" class="foto_soc">
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="wrapp_soc_li">
-                        <p class="time">1 апреля</p>
-                        <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
-                        <a href="#"><img src="img/resources/img/soc_foto_3.png" alt="" class="img-responsive"></a>
-                        <p class="tag"><a href="#" >emalkin71geno</a></p>
-                        <p class="messege"></p>
-                        <img src="img/resources/img/soc_img_2.jpg" alt="" class="foto_soc">
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="wrapp_soc_li">
-                        <p class="time">28 марта</p>
-                        <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
-                        <a href="#"><img src="img/resources/img/soc_foto_4.png" alt="" class="img-responsive"></a>
-                        <p class="tag"><a href="#" >Alex Ovechkin</a></p>
-                        <p class="messege"></p>
-                        <img src="img/resources/img/soc_img_4.jpg" alt="" class="foto_soc">
-                    </div>
-                </div>
+                </div>-->
+
             </div>
            <!--  <img src="img/resources/img/skoda-main-SMP.jpg" alt="" class="'img-responsive"> -->
             <!-- <div class="top_"></div>

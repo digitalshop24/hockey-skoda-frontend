@@ -2,13 +2,14 @@
 
 
 export default class MainCtrl {
-    constructor(lightingNews, lastNewsInfo, mainService, page, lastNewsAmount, starsInfo, schedule, $scope, teams, championatNewsInfo, mainSlides, hashtags, tweets) {
+    constructor(lightingNews, lastNewsInfo, mainService, page, lastNewsAmount, starsInfo, schedule,
+                $scope, teams, championatNewsInfo, mainSlides, hashtags, socPosts) {
         this.service = mainService;
         this.teams = teams;
         this.mainSlides = mainSlides;
         this.schedule = schedule;
         this.hashtags = hashtags;
-        this.tweets = tweets;
+        this.socPosts = socPosts;
         this.lightingNews = lightingNews;
         this.lastNewsInfo = lastNewsInfo;
         this.championatNews = championatNewsInfo.posts;
