@@ -32,6 +32,10 @@ $p_size: 1.4rem;
 {
     content: '';
 }
+input.ng-invalid {
+  border-color: $red !important;
+}
+
 
 header {
   border-bottom: 1px solid #000;
@@ -1334,13 +1338,13 @@ $grey_about: #5d5d5d;
         height:30px;
         margin:-1px 20px 0 0;
         vertical-align:middle;
-        background:url(img/resources/img/check-box-active.png) left top no-repeat;
+        background:url(img/resources/img/check-box.png) left top no-repeat;
         // border: 1px solid $black;
         cursor:pointer;
         //
     }
     input[type="checkbox"]:checked + label span {
-      background:url(img/resources/img/check-box.png) left top no-repeat;
+      background:url(img/resources/img/check-box-active.png) left top no-repeat;
     }
     label {
       margin-left: 50px;
@@ -2631,23 +2635,23 @@ $grey_about: #5d5d5d;
       margin: 0 0 35px 0;
       width: 300px;
     }
-    input[type='checkbox'] {
+   input[type='checkbox'] {
       width: auto;
       display:none;
     }
     input[type="checkbox"] + label span {
         display:inline-block;
-        width:19px;
-        height:19px;
+        width:30px;
+        height:30px;
         margin:-1px 20px 0 0;
         vertical-align:middle;
-        background:url(img/resources/img/t_drive/checkbox.png) left top no-repeat;
+        background:url(img/resources/img/check-box.png) left top no-repeat;
         // border: 1px solid $black;
         cursor:pointer;
         //
     }
     input[type="checkbox"]:checked + label span {
-      background:url(img/resources/img/t_drive/checkbox_activ.png) left top no-repeat;
+      background:url(img/resources/img/check-box-active.png) left top no-repeat;
     }
     label {
       margin-left: 50px;
@@ -2656,6 +2660,7 @@ $grey_about: #5d5d5d;
       font-family: $regular;
       font-weight: 300;
       color:$grey_dark;
+      margin-top: 50px;
     }
   }
 }
