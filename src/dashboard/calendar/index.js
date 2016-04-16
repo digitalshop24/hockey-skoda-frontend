@@ -16,6 +16,11 @@ export default angular.module('dashboard.calendar', [])
                 template: require('./template.html'),
                 url: '/calendar',
                 controller: CalendarCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                resolve: {
+                    calendar: calendarService => {
+                        return calendarService.getCalendar();
+                    }
+                }
             });
     });
