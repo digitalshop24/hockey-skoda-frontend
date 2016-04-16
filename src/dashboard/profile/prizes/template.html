@@ -3,6 +3,7 @@
 
     <a ui-sref="dashboard.game.sectors">Викторина</a>
    <h5>Мои призы</h5>
+    <p>На этой странице пользоветель должен загрузить свою фоточку и расшарить ее в Инстаграм(а в другие соц. сети можно?). Юзер может шаритьнесколько фоточек (смотря соколько золоты ячее он выиграл)</p>
     <table>
         <thead>
             <tr>
@@ -12,7 +13,10 @@
          </thead>
         <tr ng-repeat="item in ctrl.prizes">
             <td><h6 ng-bind="item.prize.name"></h6></td>
-            <td><img src="{{item.prize.image.small}}" /></td>
+            <td>
+                <img src="{{item.prize.image.small}}" />
+                <p ng-bind="item.prize.description"></p>
+            </td>
         </tr>
     </table>
     
