@@ -123,16 +123,18 @@
                     <div class="choice_one-item" >
                         <div class="choice_one-item-bor">
                             <select class="input_default input_small btn_disable"
-                                    ng-options="team.country for team in ctrl.teams track by team.id"
-                                    ng-model="ctrl.forecast.firstSemi.redteam" disabled="disabled">
-                                <option disabled="disabled" selected value> Выберите команду</option>
+                                    ng-options="team.country for team in ctrl.forecast.firstSemiFinal.teams track by team.id"
+                                    ng-model="ctrl.forecast.firstSemiFinal.redteam" ng-disabled="ctrl.forecast.firstSemiFinal.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.firstSemiFinal)">
+                                <option disabled="disabled"  value ng-show="ctrl.forecast.firstSemiFinal.redteam"
+                                        ng-bind="ctrl.forecast.firstSemiFinal.redteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
                             <select class="input_default input_small btn_disable"
-                                    ng-options="team.country for team in ctrl.teams track by team.id"
-                                    ng-model="ctrl.forecast.firstSemi.blueteam" disabled="disabled">
-                                <option disabled="disabled" selected value> Выберите команду</option>
+                                    ng-options="team.country for team in ctrl.forecast.firstSemiFinal.teams track by team.id"
+                                    ng-model="ctrl.forecast.firstSemiFinal.blueteam" ng-disabled="ctrl.forecast.firstSemiFinal.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.firstSemiFinal)">
+                                <option disabled="disabled"  value ng-show="ctrl.forecast.firstSemiFinal.blueteam"
+                                        ng-bind="ctrl.forecast.firstSemiFinal.blueteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
                     </div>
@@ -140,16 +142,18 @@
                     <div class="choice_one-item" >
                         <div class="choice_one-item-bor">
                             <select class="input_default input_small btn_disable"
-                                    ng-options="team.country for team in ctrl.teams track by team.id"
-                                    ng-model="ctrl.forecast.secondSemi.redteam" disabled="disabled">
-                                <option disabled="disabled" selected value> Выберите команду</option>
+                                    ng-options="team.country for team in ctrl.forecast.secondSemiFinal.teams track by team.id"
+                                    ng-model="ctrl.forecast.secondSemiFinal.redteam" ng-disabled="ctrl.forecast.secondSemiFinal.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.secondSemiFinal)">
+                                <option disabled="disabled"  value ng-show="ctrl.forecast.secondSemiFinal.redteam"
+                                        ng-bind="ctrl.forecast.secondSemiFinal.redteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
                         <div class="choice_one-item-bor">
                             <select class="input_default input_small btn_disable"
-                                    ng-options="team.country for team in ctrl.teams track by team.id"
-                                    ng-model="ctrl.forecast.secondSemi.blueteam" disabled="disabled">
-                                <option disabled="disabled" selected value> Выберите команду</option>
+                                    ng-options="team.country for team in ctrl.forecast.secondSemiFinal.teams track by team.id"
+                                    ng-model="ctrl.forecast.secondSemiFinal.blueteam" ng-disabled="ctrl.forecast.secondSemiFinal.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.secondSemiFinal)">
+                                <option disabled="disabled"  value ng-show="ctrl.forecast.secondSemiFinal.blueteam"
+                                        ng-bind="ctrl.forecast.secondSemiFinal.blueteam.country || 'Выберите команду'"></option>
                             </select>
                         </div>
                     </div>
@@ -291,16 +295,18 @@
                         <div class="choice_one-item" >
                             <div class="choice_one-item-bor">
                                 <select class="input_default input_small btn_disable"
-                                        ng-options="team.country for team in ctrl.teams track by team.id"
-                                        ng-model="ctrl.forecast.firstSemi.redteam" disabled="disabled">
-                                    <option disabled="disabled" selected value> Выберите команду</option>
+                                        ng-options="team.country for team in ctrl.forecast.firstSemiFinal.teams track by team.id"
+                                        ng-model="ctrl.forecast.firstSemiFinal.redteam" ng-disabled="ctrl.forecast.firstSemiFinal.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.firstSemiFinal)">
+                                    <option disabled="disabled"  value ng-show="ctrl.forecast.firstSemiFinal.redteam"
+                                            ng-bind="ctrl.forecast.firstSemiFinal.redteam.country || 'Выберите команду'"></option>
                                 </select>
                             </div>
                             <div class="choice_one-item-bor">
                                 <select class="input_default input_small btn_disable"
-                                        ng-options="team.country for team in ctrl.teams track by team.id"
-                                        ng-model="ctrl.forecast.firstSemi.blueteam" disabled="disabled">
-                                    <option disabled="disabled" selected value> Выберите команду</option>
+                                        ng-options="team.country for team in ctrl.forecast.firstSemiFinal.teams track by team.id"
+                                        ng-model="ctrl.forecast.firstSemiFinal.blueteam" ng-disabled="ctrl.forecast.firstSemiFinal.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.firstSemiFinal)">
+                                    <option disabled="disabled"  value ng-show="ctrl.forecast.firstSemiFinal.blueteam"
+                                            ng-bind="ctrl.forecast.firstSemiFinal.blueteam.country || 'Выберите команду'"></option>
                                 </select>
                             </div>
                         </div>
@@ -308,20 +314,21 @@
                         <div class="choice_one-item" >
                             <div class="choice_one-item-bor">
                                 <select class="input_default input_small btn_disable"
-                                        ng-options="team.country for team in ctrl.teams track by team.id"
-                                        ng-model="ctrl.forecast.secondSemi.redteam" disabled="disabled">
-                                    <option disabled="disabled" selected value> Выберите команду</option>
+                                        ng-options="team.country for team in ctrl.forecast.secondSemiFinal.teams track by team.id"
+                                        ng-model="ctrl.forecast.secondSemiFinal.redteam" ng-disabled="ctrl.forecast.secondSemiFinal.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.secondSemiFinal)">
+                                    <option disabled="disabled"  value ng-show="ctrl.forecast.secondSemiFinal.redteam"
+                                            ng-bind="ctrl.forecast.secondSemiFinal.redteam.country || 'Выберите команду'"></option>
                                 </select>
                             </div>
                             <div class="choice_one-item-bor">
                                 <select class="input_default input_small btn_disable"
-                                        ng-options="team.country for team in ctrl.teams track by team.id"
-                                        ng-model="ctrl.forecast.secondSemi.blueteam" disabled="disabled">
-                                    <option disabled="disabled" selected value> Выберите команду</option>
+                                        ng-options="team.country for team in ctrl.forecast.secondSemiFinal.teams track by team.id"
+                                        ng-model="ctrl.forecast.secondSemiFinal.blueteam" ng-disabled="ctrl.forecast.secondSemiFinal.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.secondSemiFinal)">
+                                    <option disabled="disabled"  value ng-show="ctrl.forecast.secondSemiFinal.blueteam"
+                                            ng-bind="ctrl.forecast.secondSemiFinal.blueteam.country || 'Выберите команду'"></option>
                                 </select>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-sm-3 backg-3 pos_col-3">

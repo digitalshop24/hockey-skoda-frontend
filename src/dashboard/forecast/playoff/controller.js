@@ -15,7 +15,7 @@ export default class ForecastCtrl {
         this.removeTeamFromOtherMatch(match);
 
 
-        this.canSendForecast = match.blueteam && match.redteam;
+        this.canSendForecast =  match.blueteam && match.redteam;
         if (this.canSendForecast) {
             if (match.redteam.id == match.blueteam.id) {
                 this.modal.open({
@@ -35,12 +35,8 @@ export default class ForecastCtrl {
             return;
         }
         const oppositeMatch = this.getOppositeMatch(match);
-        const matches = [];
-        for (let name in this.forecastCopy) {
-            matches.push(this.forecastCopy[name]);
-        }
-        var find = matches.find(match => match.num == oppositeMatch.num && match.match_group == oppositeMatch.match_group);
-        oppositeMatch.teams = JSON.parse(JSON.stringify(find.teams));
+        var find = this.forecastCopy.find(match => match.num == oppositeMatch.num && match.match_group == oppositeMatch.match_group);
+        oppositeMatch.teams = find.teams.slice(0);
 
         if (oppositeMatch.can_predict) {
             const teams = oppositeMatch.teams;
@@ -89,11 +85,14 @@ export default class ForecastCtrl {
     }
 
     copyMatches() {
-        this.forecastCopy = {};
+        this.forecastCopy = [];
         for (let matchName in this.forecast) {
-            this.forecastCopy[matchName] = this.forecast[matchName];
             if (this.forecast[matchName].teams) {
-                this.forecastCopy[matchName].teams =  JSON.parse(JSON.stringify(this.forecast[matchName].teams));
+                this.forecastCopy.push({
+                    num: this.forecast[matchName].num,
+                    match_group: this.forecast[matchName].match_group,
+                    teams: this.forecast[matchName].teams.slice(0)
+                });
             }
         }
 
