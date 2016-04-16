@@ -1028,6 +1028,9 @@ footer {
     // float: left;
     padding: 20px 0 20px 35px;
     width: 100%;
+    .count_m {
+      color: $green_main;
+    }
     .hot_them {
       color:#fc8a21;
       img {
