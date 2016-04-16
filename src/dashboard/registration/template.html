@@ -1,4 +1,4 @@
-<form ng-submit="ctrl.send()" ng-init="ctrl.form = {}">
+<form ng-submit="ctrl.send()" ng-init="ctrl.form = { policy_agreed: true}">
     <section class="about_first">
         <div class="container-fluid">
             <div class="row">
@@ -119,7 +119,7 @@
 
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <input type="checkbox" checked="checked" id="c1">
+                        <input type="checkbox" ng-model="ctrl.form.policy_agreed" id="c1">
                         <label for="c1"><span></span><a href="" ui-sref="dashboard.consent">Соглашаюсь с обработкой персональных данных</a></label>
 
                     </div>
