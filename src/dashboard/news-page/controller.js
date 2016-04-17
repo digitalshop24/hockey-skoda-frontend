@@ -19,8 +19,7 @@ export default class NewspageCtrl {
         this.indexToShowLastNews = this.lastNews.length - 5;
         this.shareData = {
             title: this.news.name,
-            description: this.news.short_content,
-            imgUrl: this.news.image.small
+            description: this.news.short_content
         }
     }
 
