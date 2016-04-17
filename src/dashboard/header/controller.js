@@ -47,6 +47,7 @@ export default class HeaderCtrl {
 
     logout() {
         this.auth.logout().then(()=> {
+            this.notifications = [];
             this.state.go('dashboard.main');
         });
     }

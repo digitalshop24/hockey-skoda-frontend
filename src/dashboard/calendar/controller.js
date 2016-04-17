@@ -120,7 +120,7 @@ export default class СalendarCtrl {
         } else {
             this.service.subscribe(match.id).then((res) => {
                 match.isSubscribed = true;
-                match.subscrId = res.id;
+                match.subscrId = res.subscription.id;
             })
         }
     }
