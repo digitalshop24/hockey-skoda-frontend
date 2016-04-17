@@ -57,6 +57,15 @@
                   <a href="#"><li class="li_disabel" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Junior Ice Hockey Cup</li></a>
                 </ul>
               </li></a>
+
+              <a href="#" ng-show="ctrl.session.isAuthenticated" ><li>Личный кабинет
+                 <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
+                <ul class="drilldown-sub">
+                  <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Личный кабинет</a></li>
+                  <a ui-sref="dashboard.profile.progress"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Кабинет</li></a>
+                  <a href="#"><li ng-click="ctrl.logout(); ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Выйти</li></a>
+                </ul>
+              </li></a>
               <a href="#"><li class="end_li" ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup(); ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen;"><img src="img/resources/img/user.png" alt=""class="img_li"> <span>Войти или зарегистрироваться</span><img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li"></li></a>
               <a href="#"><li class="end_li"><img src="img/resources/img/notifi.png" alt=""class="img_li"> <span>Уведомления</span><img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li"></li></a>
               <a href="#"><li ui-sref="dashboard.tdrive" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" class="end_li"><img src="img/resources/img/singin.png" alt="" class="img_li"><span> Тест-Драйв</span></li></a>
