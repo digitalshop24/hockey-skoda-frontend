@@ -51,6 +51,13 @@ export default angular.module('app',
             scope: ['public_content']
         });
 
+
+        $authProvider.twitter({
+            url: url + '/auth/twitter',
+            provider: 'twitter'
+        });
+
+
         $authProvider.oauth2({
             name: 'vk',
             url: url + '/auth/vk',
@@ -62,6 +69,7 @@ export default angular.module('app',
             responseType: 'code',
             scope: ['email', 'video']
         });
+
     })
     .config(($locationProvider) => {
         $locationProvider.html5Mode(true);
