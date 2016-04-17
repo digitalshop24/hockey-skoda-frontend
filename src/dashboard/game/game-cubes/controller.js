@@ -91,7 +91,7 @@ export default class CubesCtrl {
 
     confirmUserData() {
         this.service.confirmUserData(this.userData).then(res => {
-            this.auth.initSession(res);
+            this.auth.initSession({data : res});
             this.user = res.data.user;
             $('#userData').modal('hide');
             $('#myModal').modal('show');
