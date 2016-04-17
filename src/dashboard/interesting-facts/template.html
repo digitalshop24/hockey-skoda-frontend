@@ -7,6 +7,7 @@
             </ul>
         </div>
 </div>
+
 <section class="factSection">
     
         <div class="container-fluid">
@@ -14,12 +15,38 @@
                 <div class="col-sm-12 col-md-4 ">
                   <div class="block-set" ng-repeat="fact in ctrl.facts | limitTo:4">
                     <div class="block-interes-fact">
-                        <div class="img">
-                            <img src="{{fact.image.medium}}" alt="">
+                      <div class="fact-social clearfix">
+                        <div class="fact-social-im">
+                          <a href="#">
+                            <img src="img/resources/img/soc/vk.png" alt="" class="img-responsive">
+                          </a>
                         </div>
+                        <div class="time">
+                          <a href="#">16.04 22:24</a>
+                        </div>
+                      </div>
+                       <slick>
+                          <div class="img">
+                            <img src="{{fact.image.medium}}" alt="">
+                          </div>
+                          <div class="img">
+                            <img src="{{fact.image.medium}}" alt="">
+                          </div>
+                       </slick>
                         <div class="text1">
                             <p ng-bind="fact.name"></p>
                         </div>
+                        <div class="ret clearfix">
+                          <share-buttons data="{}"></share-buttons>
+                          <a href="" class="ret-link">21 ретвитов</a>
+                        </div>
+                        <ul class="tag_post">
+                          <li ><a  href=""><p  >Брендон Галлахер</p></a></li>
+                          <li ><a  href=""><p>Брендон Галлахер</p></a></li>
+                          <li ><a  href=""><p>Брендон Галлахер</p></a></li>
+                          <li ><a  href=""><p>Брендон Галлахер</p></a></li>
+                          <li ><a  href=""><p>Брендон Галлахер</p></a></li>
+                      </ul>
                     </div>
                   </div>
                 </div>
