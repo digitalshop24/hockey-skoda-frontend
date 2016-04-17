@@ -36,6 +36,13 @@ input.ng-invalid {
   border-color: $red !important;
 }
 
+.point {
+    border-radius: 2px !important;
+    display: inline-block !important;
+    height: 5px !important;
+    margin: 0 1px !important;
+    width: 20px !important;
+}
 
 header {
   border-bottom: 1px solid #000;
