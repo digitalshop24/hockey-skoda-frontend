@@ -34,7 +34,7 @@ export default class ShareCtrl {
         this.vkShareLink = "http://vk.com/share.php?url=" + this.resultData.url + "&title=" + this.resultData.title +
             "&description=" + this.resultData.description + "&image=" + this.resultData.imgUrl;
 
-        this.twitterShareLink = "https://twitter.com/intent/tweet?text=" + this.resultData.title + "&url=" + this.resultData.url + "&hashtags=skoda,hockey2016";
+        this.twitterShareLink = "https://twitter.com/intent/tweet?text=" + this.resultData.title + "&url=" + this.resultData.url + "&hashtags=хоккейвкаждом,чмх2016";
     }
 
     tryShare() {
