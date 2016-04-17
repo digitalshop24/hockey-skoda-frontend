@@ -2,9 +2,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 visible-xs name_mobile_lk text-center"
-                 style="background-image: url(img/resources/img/bg_star.png)">
-                <h5>Михаил Клюшкин</h5>
-                <h4>1000<br>баллов</h4>
+                 style="background-image: url({{ctrl.user.avatar.thumb}})">
+                <h5 ng-bind="ctrl.user.name"></h5>
+                <h4>{{ctrl.user.achievments_score}}<br>баллов</h4>
 
             </div>
             <div class="col-sm-2 col-md-2 lk_info ">
