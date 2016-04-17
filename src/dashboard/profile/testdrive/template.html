@@ -22,7 +22,7 @@
         <tr ng-repeat="coupon in ctrl.coupons">
             <td><h6 ng-bind="'№' + coupon.number"></h6></td>
             <td ng-bind="coupon.activate_date | amDateFormat:'DD MMMM'"></td>
-            <td><button class="btn btn_secondary tiny" ng-disabled="!coupon.is_active" ng-bind="coupon.is_active ? 'Действие' : 'Использован'"></button></td>
+            <td><button class="btn btn_secondary tiny" ng-click="ctrl.startGame()" ng-disabled="!coupon.is_active" ng-bind="coupon.is_active ? 'Учавствовать' : 'Использован'"></button></td>
         </tr>
     </table>
     
