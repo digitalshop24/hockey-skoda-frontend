@@ -51,6 +51,11 @@ $p_size: 1.4rem;
       color: $green_main;
     }
   }
+
+  .fa-vk-square:before {
+    content: "\f189";
+  }
+
   img {
     border-radius: 50%;
     margin: 0 auto;
