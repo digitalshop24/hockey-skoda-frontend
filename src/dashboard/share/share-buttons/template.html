@@ -1,19 +1,19 @@
 <ul class="tantam-share" social-init>
     <li>
-        <a ng-click="ctrl.tryShare()" class="sharing-link" href="https://www.facebook.com/sharer.php?src=sp&u={{ctrl.data.imgUrl}}">
+        <a ng-click="ctrl.tryShare()" class="sharing-link" href="{{ctrl.facebookShareLink}}">
             <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
     </li>
 
     <li>
-        <a ng-click="ctrl.tryShare()" class="sharing-link" href="https://twitter.com/intent/tweet?text={{ctrl.data.title}}&url={{ctrl.data.imgUrl}}">
+        <a ng-click="ctrl.tryShare()" class="sharing-link" href="{{ctrl.twitterShareLink}}">
             <i class="fa fa-twitter" aria-hidden="true"></i>
         </a>
     </li>
 
     <li>
         <a ng-click="ctrl.tryShare()" class="sharing-link"
-           href="http://vk.com/share.php?url={{ctrl.data.url}}&title={{ctrl.data.title}}&description={{ctrl.data.description}}&image={{ctrl.data.imgUrl}}">
+           href="{{ctrl.vkShareLink}}">
             <i class="fa fa-vk" aria-hidden="true"></i>
         </a>
     </li>
