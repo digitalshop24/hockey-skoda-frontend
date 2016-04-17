@@ -79,7 +79,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="myModal" role="dialog" data-keyboard="false" data-backdrop="static" >
     <div class="modal-dialog">
 
         <div class="modal-content">
@@ -132,7 +132,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="firstQuestion" role="dialog">
+<div class="modal fade" id="firstQuestion" role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog">
 
         <div class="modal-content">
@@ -181,7 +181,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="secondQuestion" role="dialog">
+<div class="modal fade" id="secondQuestion" role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog">
 
         <div class="modal-content">
@@ -218,7 +218,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="thirdQuestion" role="dialog">
+<div class="modal fade" id="thirdQuestion" role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -266,7 +266,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="userData" role="dialog">
+<div class="modal fade" id="userData" role="dialog" data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog">
             <form ng-submit="ctrl.confirmUserData()">
 
@@ -293,7 +293,7 @@
         </div>
 </div>
 
-<div class="modal fade" id="resultModal" role="dialog">
+<div class="modal fade" id="resultModal" role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -336,7 +336,7 @@
             <div ng-show="ctrl.currentCell.cell_type == 'green' && ctrl.result.right_answers_count == 3">
                 <p>
                     Поздравляем! Вы стали участником фотоконкурса.
-                    <a ui-sref="dashboard.profile.fotocontest">Подробности в личном кабинете.</a>
+                    <a href="#" ng-click="ctrl.goToPhotocontest()">Подробности в личном кабинете.</a>
                 </p>
             </div>
         </div>
