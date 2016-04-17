@@ -181,7 +181,11 @@ header {
         border-bottom: 1px solid $grey_lite;
         text-transform: none;
         width: 90%;
+        font-family: $regular;
         // color: $green_main;
+      }
+      li:hover {
+        font-family: $bold;
       }
       a {
           font-size: $p_size;
