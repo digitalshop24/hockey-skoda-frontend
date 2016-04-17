@@ -110,7 +110,7 @@
 
             <timeline-event ng-repeat="event in day.events | filter:ctrl.filterByNetworks as filtered" side="">
                 <timeline-badge class="{{event.badgeClass}}">
-                    <div style="background-image: url('{{event.profile_pic}}'); height: 50px"></div>
+                    <div style="background-image: url('{{event.profile_pic}}'); height: 50px; border-radius:50%;"></div>
                     <!--<i class="" ></i>-->
                 </timeline-badge>
                 <timeline-panel class="{{event.badgeClass}}">
