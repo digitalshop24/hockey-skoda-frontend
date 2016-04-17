@@ -216,6 +216,18 @@ header {
       li {
         padding: 10px 0 10px 10px;
         border-bottom: 1px solid $grey_lite;
+        font-family: $regular;
+        img {
+          display: none;
+          float: right;
+        }
+      }
+      li:hover {
+        font-family: $bold;
+        img {
+          display: block;
+          float: right;
+        }
       }
       a {
           font-size: $p_size;
