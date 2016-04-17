@@ -116,11 +116,15 @@ export default class СalendarCtrl {
             this.service.unsubscribe(match.subscrId).then(() => {
                 match.isSubscribed = false;
                 match.subscrId = undefined;
+            }).catch(() => {
+                match.isSubscribed = true;
             })
         } else {
             this.service.subscribe(match.id).then((res) => {
                 match.isSubscribed = true;
                 match.subscrId = res.subscription.id;
+            }).catch(() => {
+                match.isSubscribed = false;
             })
         }
     }
