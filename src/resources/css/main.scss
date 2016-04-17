@@ -2716,7 +2716,10 @@ $grey_about: #5d5d5d;
     height: 110vh;
     min-height: 680px;
     padding-top:30px;
-
+    .fio {
+      text-align:center;
+      margin-top: 20px;
+    }
     h6 {
       color:$white;
     }
@@ -3049,6 +3052,10 @@ $grey_about: #5d5d5d;
     padding-top:30px;
      position:relative;
     z-index: 5;
+    .my_ball {
+      text-transform: uppercase;
+      font-family: $bold;
+    }
     h6 {
       color: $black;
 
@@ -3062,7 +3069,6 @@ $grey_about: #5d5d5d;
       margin-top: 50px;
       z-index: 1;
       .jspContainer {
-
         .jspVerticalBar {
           width:0px;
         }
