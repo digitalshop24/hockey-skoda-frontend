@@ -103,6 +103,17 @@ export default angular.module('app',
     })
     .run(($rootScope) => {
 
+        $rootScope.$on('$stateChangeStart', (event, toState) => {
+            if (['dashboard.calendar', 'dashboard.tantamareska', 'dashboard.suggestions',
+                    'dashboard.game.sectors' , 'dashboard.game.cubes'].indexOf(toState.name) != -1) {
+                $rootScope.viewportContent = "width=1280";
+            } else {
+                $rootScope.viewportContent = "width=device-width, initial-scale=1.0";
+            }
+        });
+    })
+    .run(($rootScope) => {
+
         $rootScope.$on('$stateChangeStart', (event, toState, params) => {
             if (!params.notScrollToTop) {
                 window.scrollTo(0, 0);
