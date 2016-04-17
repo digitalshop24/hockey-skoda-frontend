@@ -7,16 +7,16 @@ export default angular.module('dashboard.game.cubes.logic', [])
         return {
             scope: {
                 initialSlide: '='
-            },
+            }, 
 
-            link: function ($scope) {
+            link: function ($scope) { 
 
                 angular.element(document).ready(() => {
-                    $('.game-two-while .item.notCrashed').click(function() {
-                        $(this).css('background', 'url(img/resources/img/icon-game/icon-led-while-tres.png)');
+                    $('.game-two-while.notCrashed').click(function() {
+                        $(this).addClass('tres'); 
                     });
-                    $('.game-two-green .item.notCrashed').click(function() {
-                        $(this).css('background', 'url(img/resources/img/icon-game/icon-led-green-tres-1.png)');
+                    $('.game-two-green.notCrashed').click(function() {
+                        $(this).addClass('tres');
                     });
 
                     $('.priz-slider1').slick({
@@ -34,7 +34,7 @@ export default angular.module('dashboard.game.cubes.logic', [])
                         initialSlide: +$scope.initialSlide - 1,
                         centerMode: true,
                         focusOnSelect: true,
-                        slidesToShow: 7,
+                        slidesToShow: 3,
                         slidesToScroll: 1,
                         asNavFor: '.game-slider-nav',
                     });

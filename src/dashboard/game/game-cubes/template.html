@@ -1,3 +1,4 @@
+<div class="game-bg">
 <div class="game-two" cubes-init initial-slide="ctrl.id">
     <div class="game-two-center">
         <div class="game-slider">
@@ -38,11 +39,11 @@
                         <span class="opis-grey">осталось</span>
                     </div>
                     <div class="opis-right max">
-                        <p>750</p>
+                        <p>1500</p>
                         <span class="opis-grey">балов</span>
                     </div>
                     <div class="opis-right  mini">
-                        <p>1500</p>
+                        <p>750</p>
                         <span class="opis-grey">балов</span>
                     </div>
                 </div>
@@ -56,21 +57,20 @@
                 <tr>
                     <td ng-repeat="cell in row.cells">
                         <div ng-show="cell.type == 'green'" ng-click="ctrl.brokeCell(cell.value)"
-                             class="game-two-item game-two-green col-4x4">
+                             class="game-two-item game-two-green col-4x4" ng-class="cell.value.is_crashed ? 'crashed': 'notCrashed'">
 
                             <div class="item-{{cell.classIndex}} item"
-                                 ng-class="cell.value.is_crashed ? 'crashed': 'notCrashed'"></div>
+                                 ></div>
                         </div>
 
                         <div ng-show="cell.type == 'blue'" ng-click="ctrl.brokeCell(cell.first)"
-                             class="game-two-item game-two-while col-1x1">
+                             class="game-two-item game-two-while col-1x1"  ng-class="cell.first.is_crashed ? 'crashed': 'notCrashed'">
                             <div class="item-{{cell.firstClassIndex}} item"
-                                 ng-class="cell.first.is_crashed ? 'crashed': 'notCrashed'"></div>
+                                 ></div>
                         </div>
                         <div ng-show="cell.type == 'blue'" ng-click="ctrl.brokeCell(cell.second)"
-                             class="game-two-item game-two-while col-1x1">
-                            <div class="item-{{cell.secondClassIndex}} item"
-                                 ng-class="cell.second.is_crashed ? 'crashed': 'notCrashed'"></div>
+                             class="game-two-item game-two-while col-1x1" ng-class="cell.second.is_crashed ? 'crashed': 'notCrashed'" >
+                            <div class="item-{{cell.secondClassIndex}} item" ></div>
                         </div>
                     </td>
 
@@ -144,6 +144,10 @@
         <!-- Modal content-->
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal"></button>
+            <div class="timer">
+                        <p id='p' ng-bind="ctrl.firstQuestionTime">09</p>
+                        <span>сек</span>
+                    </div>
             <div class="game-modal-content">
                 <h2 class="vop">Вопрос <b>№1</b></h2>
 
@@ -168,10 +172,7 @@
 
             <div class="mobal-button priz otvet clearfix">
                 <div class="mobal-button-left">
-                    <div class="timer">
-                        <p id='p' ng-bind="ctrl.firstQuestionTime">09</p>
-                        <span>сек</span>
-                    </div>
+                    
                 </div>
                 <div class="mobal-button-right" ng-click="ctrl.startSecondQuestion()">
                     <button class="btn btn_primary">Далее</button>
@@ -193,6 +194,10 @@
         <!-- Modal content-->
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal"></button>
+            <div class="timer bor-red">
+                        <p id='p' ng-bind="ctrl.secondQuestionTime">09</p>
+                        <span>сек</span>
+                    </div>
             <div class="game-modal-content">
                 <h2 class="vop">Вопрос <b>№2</b></h2>
 
@@ -207,10 +212,7 @@
 
             <div class="mobal-button priz otvet clearfix">
                 <div class="mobal-button-left">
-                    <div class="timer bor-red">
-                        <p id='p' ng-bind="ctrl.secondQuestionTime">09</p>
-                        <span>сек</span>
-                    </div>
+                    
                 </div>
                 <div class="mobal-button-right" ng-click="ctrl.startThirdQuestion()">
                     <button class="btn btn_primary">Далее</button>
@@ -230,6 +232,10 @@
         <!-- Modal content-->
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal"></button>
+            <div class="timer">
+                        <p id='p' ng-bind="ctrl.thirdQuestionTime"></p>
+                        <span>сек</span>
+                    </div>
             <div class="game-modal-content">
                 <h2 class="vop">Вопрос <b>№3</b></h2>
 
@@ -254,10 +260,7 @@
 
             <div class="mobal-button priz otvet clearfix">
                 <div class="mobal-button-left">
-                    <div class="timer">
-                        <p id='p' ng-bind="ctrl.thirdQuestionTime"></p>
-                        <span>сек</span>
-                    </div>
+                    
                 </div>
                 <div class="mobal-button-right " ng-click="ctrl.checkAnswers()">
                     <button class="btn btn_primary">Проверить!</button>
@@ -319,4 +322,5 @@
         </div>
 
     </div>
+</div>
 </div>
