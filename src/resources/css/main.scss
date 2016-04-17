@@ -3052,6 +3052,10 @@ $grey_about: #5d5d5d;
     padding-top:30px;
      position:relative;
     z-index: 5;
+    .my_ball {
+      text-transform: uppercase;
+      font-family: $bold;
+    }
     h6 {
       color: $black;
 
@@ -3064,10 +3068,7 @@ $grey_about: #5d5d5d;
       top:0;
       margin-top: 50px;
       z-index: 1;
-      
-      }
       .jspContainer {
-
         .jspVerticalBar {
           width:0px;
         }
