@@ -6026,9 +6026,12 @@ $grey_about: #5d5d5d;
           }
       }
     }
+    .tantam-share li {
+      margin:0 5px !important;
+    }
     .tag_post {
       li {
-          margin: 5px 15px 5px 0;
+          margin: 5px 5px 5px 0;
           padding: 5px 10px;
           background-color: #ccc;
           display: inline-block;
@@ -6043,7 +6046,7 @@ $grey_about: #5d5d5d;
         }
         &:nth-child(2) {
           position:relative;
-          margin: 5px 15px 5px 0;
+          margin: 5px 5px 5px 0;
         }
       }
     }
