@@ -43,7 +43,7 @@
 
                         <td ng-repeat="cell in row.row"  ng-class="{'rowspan2': cell.matches.length, 'bor' : cell.matches.length }"
                             rowspan="{{cell.matches.length? 2 : 1}}" >
-                            <slick ng-show="filtered.length" class="calendar-slider" ng-class="{'active': cell.matches[0].stage != 'future'}" dots=true>
+                            <slick ng-show="filtered.length" class="calendar-slider" ng-class="{'active': cell.matches[0].stage != 'future'}" dots=true arrows=false>
                                 <div class="block" ng-repeat="match in cell.matches | filter:ctrl.filterByToggle as filtered">
                                     <div class="text-slid">
                                         <p>{{match.redteam.short_name}}-{{match.blueteam.short_name}}</p>
