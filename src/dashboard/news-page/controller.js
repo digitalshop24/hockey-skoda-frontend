@@ -17,6 +17,11 @@ export default class NewspageCtrl {
         this.state = $state;
         this.rubricState = this.getRubricState(this.rubric.api_path);
         this.indexToShowLastNews = this.lastNews.length - 5;
+        this.shareData = {
+            title: this.news.name,
+            description: this.news.short_content,
+            imgUrl: this.news.image.small
+        }
     }
 
     openEditor() {
