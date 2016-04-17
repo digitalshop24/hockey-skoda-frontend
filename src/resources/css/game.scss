@@ -71,28 +71,42 @@
     margin-bottom:30px;
     font-family: $light;
     font-size: 3rem;
-  }
+  } 
   span {
     font-size:1.7rem;
     font-family: $light;
     color:#000;
   }
 }
-
+.game-bg {
+  background:url(img/resources/img/icon-game/bg-game.jpg) no-repeat center center;
+  background-size:cover;
+  width:100%;
+}
+.game-cricle-bg {
+  width:936px;
+  height: 935px;
+  position:absolute;
+  top:-269px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  margin:auto;
+  background:url(img/resources/img/icon-game/bg-cricle.png) no-repeat center center;
+}
 .game-play {
   height:1673px;
   min-width: 1180px;
   max-width: 1344px;
   margin:0 auto;
   position:relative;
-  background:url(img/resources/img/bg-shalba.jpg) no-repeat center center;
   .game-cricle {
     width:895px;
     height:895px;
     border-radius: 50%;
     background:blue;
     position:absolute;
-    top:-269px;
+    top:0px;
     left:0px;
     right:0px;
     bottom:0px;
@@ -496,7 +510,6 @@
   min-width:1180px;
   max-width:1344px;
   min-height:2171px;
-  background:url(img/resources/img/bg-game-two.jpg) no-repeat center center;
   margin:0 auto;
   position:relative;
 
@@ -623,9 +636,9 @@
   margin-top:35px;
   text-align:center;
   display: block;
-  cursor: url(img/resources/img/icon-game/icon-cursor.png), auto;
+  cursor: url(img/resources/img/icon-game/cursor.png), auto;
   &:active {
-    cursor: url(img/resources/img/icon-game/icon-cursor-click.png), auto;
+    cursor: url(img/resources/img/icon-game/cursor-active.png), auto;
   }
   .sector {
     height:120.5px;
@@ -646,7 +659,7 @@
   }
   .game-two-green {
 
-    background:url(img/resources/img/icon-game/icon-led-green-tres.png) no-repeat center center;
+    background:url(img/resources/img/icon-game/icon-led-green-tres.png) no-repeat -25px -6px;
     .item {
       width:100%;
       height:100%;
@@ -663,9 +676,22 @@
     .item-4 {
       background:url(img/resources/img/icon-game/icon-led-green-4.png) no-repeat center center;
     }
+    &.tres {
+      position:relative;
+      &:after {
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height: 100%;
+        background:url(img/resources/img/icon-game/icon-led-green-tres-1.png) no-repeat center center;
+        content:'';
+        z-index: 2;
+      }
+    }
   }
   .game-two-while {
-    background:url(img/resources/img/icon-game/icon-led-while-ten.png) no-repeat center center;
+    background:url(img/resources/img/icon-game/icon-led-while-ten.png) no-repeat -20px -1px;
     .item {
       width:100%;
       height:100%;
@@ -772,10 +798,27 @@
     .item-34 {
       background:url(img/resources/img/icon-game/icon-led-while-34.png) no-repeat center center;
     }
+    &.tres {
+      position:relative;
+      &:after {
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height: 100%;
+        background:url(img/resources/img/icon-game/icon-led-while-tres.png) no-repeat center center;
+        content:'';
+        z-index: 2;
+      }
+    }
   }
 
-  .item.crashed {
-    background:url('')
+  .crashed {
+    background:none;
+    border:none;
+    .item {
+      background:none;
+    }
   }
 }
 
@@ -1080,7 +1123,7 @@
 
   &-for {
     position:relative;
-    width:535px;
+    width:220px;
     height:203px;
     margin:0 auto;
     color:#4ba82e;
@@ -1088,10 +1131,14 @@
     font-size: 1.7rem;
     text-align:center;
     line-height: 195px;
+    .slick-list {
+      padding:0px !important ;
+    }
 
     &-item {
       height:203px;
       cursor:pointer;
+      line-height:225px;
     }
   }
   &-nav {
@@ -1145,6 +1192,32 @@
     width:100%;
     position:relative;
     border-radius: 0px;
+    .timer {
+      position:absolute;
+      right:65px;
+      top:75px;
+      width:71px;
+      height:71px;
+      border-radius: 50%;
+      background:#f4f4f4;
+      #p {
+        text-align: center;
+        padding-top: 24px;
+        font-family: "SkodaProLight", sans-serif;
+        color: #da0000;
+        font-size: 3rem;
+        line-height: 17px;
+        margin-bottom:0px;
+      }
+      span {
+        text-align:center;
+        padding-top:5px;
+        font-family: $light;
+        color:#595959;
+        font-size: 1rem;
+        display:block;
+      }
+    }
     .close {
       width:36px;
       height:36px;
@@ -1288,6 +1361,9 @@
   input[type="radio"] {
     display:none;
   }
+  label {
+    display: block;
+  }
   input[type="radio"] + label span {
     display:inline-block;
     width:31px;
@@ -1423,29 +1499,7 @@
   z-index: 99;
   &-left {
     float:left;
-    .timer {
-      width:71px;
-      height:71px;
-      border-radius: 50%;
-      background:#f4f4f4;
-      #p {
-        text-align: center;
-        padding-top: 24px;
-        font-family: "SkodaProLight", sans-serif;
-        color: #da0000;
-        font-size: 3rem;
-        line-height: 17px;
-        margin-bottom:0px;
-      }
-      span {
-        text-align:center;
-        padding-top:5px;
-        font-family: $light;
-        color:#595959;
-        font-size: 1rem;
-        display:block;
-      }
-    }
+    
     .bor-red {
       border:1px solid #da0000;
     }
@@ -1467,6 +1521,7 @@
   }
   &-center {
     position:relative;
+    width:350px;
     .width1 {
       width:150px;
       margin:0 auto;
@@ -1498,7 +1553,7 @@
     padding-right:53px;
     &:hover {
       background:#f8f8f8;
-      cursor: url(img/resources/img/icon-game/icon-cursor-mobal.png), auto;
+
       .radio {
         color:#000;
       }
@@ -1509,19 +1564,34 @@
     .radio {
       input {
         margin-top:38px;
-        cursor: url(img/resources/img/icon-game/icon-cursor-mobal.png), auto;
       }
       label {
-        cursor: url(img/resources/img/icon-game/icon-cursor-mobal.png), auto;
       }
       line-height: 82px;
       color:#595959;
       font-size: 1.6rem;
       font-family: $regular;
-      cursor: url(img/resources/img/icon-game/icon-cursor-mobal.png), auto;
     }
     .active {
       color:#4ba82e;
     }
   }
+}
+
+.game-bg {
+  .game-two {
+    z-index: 1000;
+  }
+  .modal {
+    display: block !important;
+    z-index: 999;
+        overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .modal.in {
+    z-index: 1003;
+  }
+}
+.modal-backdrop.in {
+  z-index: 1002;
 }

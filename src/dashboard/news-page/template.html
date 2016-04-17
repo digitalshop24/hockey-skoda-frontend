@@ -1,4 +1,4 @@
-<div class="wrapp_menu_fact" social-init>
+<div class="wrapp_menu_fact">
     <div class="menu_line ">
         <ul>
             <ul>
@@ -103,11 +103,7 @@
                             ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
                 </div>
                 <div class="col-md-3 text-center">
-                    <div class="social-likes" ng-show="!ctrl.isEditorOpen">
-                        <span class="facebook" title="Share link on Facebook">Facebook</span>
-                        <span class="vkontakte" title="Share link on VK">VK</span>
-                        <span class="twitter" title="Share link on twitter">twitter</span>
-                    </div>
+                    <share-buttons data="ctrl.shareData"></share-buttons>
 
                 </div>
                 <button ng-click="ctrl.loadMore()" ng-show="ctrl.comments.length < ctrl.commentsAmount" class="btn btn_common main "> Показать еще</button>
@@ -120,11 +116,6 @@
                 <div text-angular ng-model="ctrl.message" class="text-left"></div>
                 <button class="btn btn_primary main">Отправить</button>
             </form>
-            <div class="social-likes text-center" >
-                        <span class="facebook" title="Share link on Facebook">Facebook</span>
-                        <span class="vkontakte" title="Share link on VK">VK</span>
-                        <span class="twitter" title="Share link on twitter">twitter</span>
-                    </div>
         </div>
     </div>
 </section>

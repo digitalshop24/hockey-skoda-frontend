@@ -36,6 +36,13 @@ input.ng-invalid {
   border-color: $red !important;
 }
 
+.point {
+    border-radius: 2px !important;
+    display: inline-block !important;
+    height: 5px !important;
+    margin: 0 1px !important;
+    width: 20px !important;
+}
 
 header {
   border-bottom: 1px solid #000;
@@ -52,7 +59,7 @@ header {
   }
   .notifi {
     position: fixed;
-    right: 80px;
+    right: 2px;
     top: 81px;
     width: 250px;
     background-color: #fff;
@@ -209,6 +216,18 @@ header {
       li {
         padding: 10px 0 10px 10px;
         border-bottom: 1px solid $grey_lite;
+        font-family: $regular;
+        img {
+          display: none;
+          float: right;
+        }
+      }
+      li:hover {
+        font-family: $bold;
+        img {
+          display: block;
+          float: right;
+        }
       }
       a {
           font-size: $p_size;
@@ -1028,6 +1047,9 @@ footer {
     // float: left;
     padding: 20px 0 20px 35px;
     width: 100%;
+    .count_m {
+      color: $green_main;
+    }
     .hot_them {
       color:#fc8a21;
       img {
@@ -3475,7 +3497,7 @@ $grey_about: #5d5d5d;
 .form_popup {
   margin-left: 20px;
   margin-right: 20px;
-  .left {
+  .left { 
     margin-top: 20px;
     border-right: 2px solid $grey;
     .soc_icon {
@@ -3483,6 +3505,23 @@ $grey_about: #5d5d5d;
       img {
         display: inline-block;
         padding-right: 4px;
+      }
+      a {
+        cursor: pointer;
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+        text-align: center;
+        line-height: 43px;
+        font-size: 18px;
+        background: #6a6b71;
+        color: #fff;
+        border-radius: 50%;
+        -webkit-transition: background .3s ease;
+        transition: background .3s ease;
+        &:hover {
+          background: #4ba82e;
+        }
       }
     }
 
@@ -4147,7 +4186,63 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- end tantamarezka
 
 //-------------------------------------------------- calendar
+//-------------------------------------------------- calendar
+.on, .off {
+  margin-top:-32px;
+}
 
+.calendar-slider {
+  width:118px;
+  background:#fff;
+  margin-bottom:0px;
+  min-height:120px;
+
+  .block {
+    border-top:6px solid #38b249;
+    background:#fff;
+    p {
+      margin-top:10px;
+      text-align:center;
+      color:#000;
+      font-family: $bold;
+      font-size:1.4rem;
+    }
+  }
+  .slick-dots {
+    position:relative;
+    bottom:0px;
+    margin-top:10px;
+  }
+  .slick-dots li button:before {
+    font-size:35px;
+    color:#38b249;
+  }
+}
+.right_calendar {
+  .active {
+    background:#38b249;
+    .block {
+      background:#38b249;
+      p {
+        color:#fff;
+      }
+    }
+    .slick-dots li button:before {
+      font-size:35px;
+      color:#fff;
+    }
+  }
+}
+
+.calendar .right_calendar .time_line tbody tr:nth-child(odd) .bor[rowspan] {
+  padding-right:0px;
+}
+.calendar .right_calendar .time_line tbody tr:nth-child(even) .bor[rowspan] {
+  padding-right:0px;
+}
+.bor {
+  padding-right:0px;
+}
 .notice_form {
   margin: 33px 0;
   h5 {
@@ -4157,7 +4252,21 @@ $grey_about: #5d5d5d;
     display: inline-block;
     font-size: 2rem;
   }
+  h6 {
+    line-height: 50px;
+  }
 
+  .small {
+    height: 50px;
+    position:relative;
+    top:-2px;
+  }
+  .in {
+    width:300px;
+    border:none;
+    background:#e6e6e6;
+    margin-right:10px;
+  }
   .btn_non {
     padding-top: 5px;
     float:right;
@@ -4194,12 +4303,12 @@ $grey_about: #5d5d5d;
         border-bottom: 1px solid $grey;
         tr {
           .day_activ {
-              // background-image: url(../img/green_round.png);
-              background-repeat: no-repeat;
-              background-position: center center;
-              background-size: cover;
-              background-color: $green_main;
-              border-radius: 50%;
+            // background-image: url(../img/green_round.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-color: $green_main;
+            border-radius: 50%;
           }
           td {
             border: none;
@@ -4219,13 +4328,16 @@ $grey_about: #5d5d5d;
     }
   }
   .right_calendar {
+
     .wrapp_toggle {
       margin-bottom: 35px;
       h5 {
         font-family: "SkodaProBold", sans-serif;
-        padding-top: 15px;
+        position:relative;
+        top:-10px;
         display: inline-block;
-        font-size: 2rem;
+        font-size: 1.8rem;
+
       }
       .toggle  {
         display: inline-block;
@@ -4255,12 +4367,15 @@ $grey_about: #5d5d5d;
             height: 30px;
             border: 1px solid $grey;
           }
+          .bor {
+            border:1px solid $grey !important;
+          }
         }
         tr:nth-child(odd) {
           td {
             border-bottom: 1px dotted $grey;
           }
-          td[rowspan] {
+          td.rowspan2 {
             border:none;
             text-align: right;
             padding-right: 15px;
@@ -4272,7 +4387,7 @@ $grey_about: #5d5d5d;
           td {
             border-top: none;
           }
-          td[rowspan] {
+          td.rowspan2 {
             border:none;
             text-align: right;
             padding-right: 15px;
@@ -4286,45 +4401,61 @@ $grey_about: #5d5d5d;
 
 }
 
-.board {
-  position: absolute;
+
+.check {
+  .text-slid {
+    display: block;
+  }
+  .cher-slid {
+    display: block;
+  }
+}
+.cher-slid {
   background-color: #fff;
-  width: 11.9%;
-  height: 60px;
+  width: 100%;
+  height:auto;
   color: #000;
-  border-top:3px solid $green_main;
+
   font-size: 12px;
   margin-top: -1px;
-  font-family: $bold
+  font-family: $bold;
   input {
-    background: url(../img/chek.png) no-repeat;
+    background: url(img/resources/img/chek.png) no-repeat;
+    display: none;
+  }
+  input[type=checkbox] {
+    display: none;
   }
   label {
     width: 23px;
     height: 23px;
-    display: inline-block;
     position: relative;
-    margin-top: 5px;
-    display:none;
+    display:block;
+    margin:0 auto;
+    margin-top:15px;
   }
   input[type="checkbox"] + span {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 23px;
+    height: 23px;
     background: url(img/resources/img/chek.jpg) no-repeat;
     cursor: pointer;
     border: 1px solid $grey;
     border-radius: 3px;
+    margin:0 auto;
+    display: block;
 
   }
   input[type="checkbox"]:checked + span   {
     background: url(img/resources/img/check-box.jpg) no-repeat;
   }
   h6 {
-    display: none;
+    display: block;
     font-size: 12px;
+    text-align:center;
+    margin-top:10px;
   }
 }
 .board:hover {

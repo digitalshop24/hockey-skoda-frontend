@@ -11,6 +11,9 @@ export default class MytestdriveCtrl {
 
     sendCoupon() {
         this.mytestdriveService.sendCoupon(this.coupon).then(res => {
+            this.mytestdriveService.getCoupons().then(res => {
+                this.coupons = res;
+            });
             this.modal.open({
                 resolve: {
                     message: () => {

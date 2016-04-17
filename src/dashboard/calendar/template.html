@@ -1,272 +1,77 @@
-<aside>
-    <div class="container-fluid">
-        <div class="row notice_form">
-            <form action="" >
-                <div class="col-sm-12 col-md-4 text-left">
-                    <h6>Хочу получать уведомление о событиях</h6>
-                </div>
-                <div class="col-sm-12 col-md-7 text-left">
-                    <select class="input_default input_medium">
-                        <option>Все события</option>
-                        <option>Не все события</option>
-                    </select>
-                    <input class="input_default input_medium" type="text" placeholder="Введите Ваш почтовый адрес">
-                    <button class="btn btn_secondary small">Подписаться</button>
-                </div>
-                <div class="col-sm-12 col-md-1 text-center">
-                    <button class="btn_non">Скрыть</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</aside>
+
 <!-- календарь -->
 <section class="bg_grey calendar">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-center left_calendar"> <!-- Месяц и дни календаря -->
-                <h4>Февраль</h4>
-                <table class="tabel_calendar">
-                    <thead>
-                        <tr>
-                            <td>Вс</td>
-                            <td>Пн</td>
-                            <td>Вт</td>
-                            <td>Ср</td>
-                            <td>Чт</td>
-                            <td>Пт</td>
-                            <td>Сб</td>
-                        </tr>
-                    </thead>
-                    <tbody> 
-                        <tr>
-                            <td><p class="day_grey">12</p></td>
-                            <td><p class="day_grey">12</p></td>
-                            <td><p class="day_grey">12</p></td>
-                            <td><div>12</div></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                        </tr>
-                        <tr>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td class="day_activ">
-                                <p>12</p>
-                            </td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                        </tr>
-                        <tr>
-                            <td><p><div>12</div></p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                        </tr>
-                        <tr>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                        </tr>
-                        <tr>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p>12</p></td>
-                            <td><p class="day_grey">12</p></td>
-                            <td><p class="day_grey">12</p></td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-            </div> 
+
+                <datepicker ng-model="ctrl.currentDate" max-date="ctrl.maxDate" min-date="ctrl.minDate" ng-change="ctrl.updateCalendar(ctrl.currentDate)" starting-day="1" max-mode="month" format-day-title="yyyy MMM" show-weeks="false" class="well well-sm"></datepicker>
+
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right_calendar"> <!-- временная сетка -->
                 <div class="row text-right wrapp_toggle">
                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                         <h5>Матчи</h5>
-                        <div class="toggle toggle--knob">
-                            <input type="checkbox" name="toggle" class="sw" id="toggle-cal-1" checked>
+                        <div class="toggle toggle-knob">
+                            <input ng-model="ctrl.allMatches" type="checkbox" name="toggle" class="sw" id="toggle-cal-1" checked>
                             <label for="toggle-cal-1"></label>
                             <span class="on">ON</span>
                             <span class="off">OFF</span>
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <h5>События</h5>
-                        <div class="toggle toggle--knob">
-                            <input type="checkbox" name="toggle" class="sw" id="toggle-cal-2" checked>
-                            <label for="toggle-cal-2"></label>
-                            <span class="on">ON</span>
-                            <span class="off">OFF</span>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <h5>Новости</h5>
-                        <div class="toggle toggle--knob">
-                            <input type="checkbox" name="toggle" class="sw" id="toggle-cal-3" checked>
-                            <label for="toggle-cal-3"></label>
-                            <span class="on">ON</span>
-                            <span class="off">OFF</span>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                         <h5>Мои отметки</h5>
-                        <div class="toggle toggle--knob">
-                            <input type="checkbox" name="toggle" class="sw" id="toggle-cal-4" checked>
+                        <div class="toggle toggle-knob">
+                            <input ng-model="ctrl.subscribed" type="checkbox" name="toggle" class="sw" id="toggle-cal-4" checked>
                             <label for="toggle-cal-4"></label>
                             <span class="on">ON</span>
                             <span class="off">OFF</span>
                         </div>
                     </div>
                 </div>
-                
-                
+
+
                 <table class="table time_line">
                     <thead class="text-center">
-                        <tr> <!-- первая строка -->
-                            <td>Время, МСК</td>
-                            <td>Вс 03</td>
-                            <td>Пн 04</td>
-                            <td>Вт 05</td>
-                            <td>Ср 06</td>
-                            <td>Чт 07</td>
-                            <td>Пт 08</td>
-                            <td>Сб 09</td>
-                        </tr>
+                    <tr> <!-- первая строка -->
+                        <td>Время</td>
+                        <td ng-repeat="day in ctrl.daysToShow" ng-bind="day | amDateFormat:'ddd DD'"></td>
+                    </tr>
                     </thead>
                     <tbody>
-                        <!-- 07 -->
-                        <tr>
-                            <td rowspan=2>07</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <div class="board text-center">
-                                    <p>Матч</p>
-                                    <p>Рос - США</p>    
-                                    <p>5:0</p>
-                                    <!-- hover -->
-                                    <label><input type="checkbox"><span></span></label>                 
-                                    <h6>Ожидаю матч</h6>
+                    <tr ng-repeat-start="row in ctrl.grid">
+                        <td rowspan=2 class="rowspan2" ng-bind="row.timeId"></td>
+
+                        <td ng-repeat="cell in row.row"  ng-class="{'rowspan2': cell.matches.length, 'bor' : cell.matches.length }"
+                            rowspan="{{cell.matches.length? 2 : 1}}" >
+                            <slick ng-show="cell.matches.length" class="calendar-slider" ng-class="{'active': cell.matches[0].stage != 'future'}" dots=true>
+                                <div class="block" ng-repeat="match in cell.matches | filter:ctrl.filterByToggle as filtered">
+                                    <div class="text-slid">
+                                        <p>{{match.redteam.country}}-{{match.blueteam.country}}</p>
+                                        <p ng-show="match.stage != 'future'" ng-bind="match.blueteam_score + '-' + match.redteam_score"></p>
+                                        <p ng-bind="match.when | amDateFormat:'HH:mm'"></p>
+                                    </div>
+                                    <div class="cher-slid" ng-show="match.stage == 'future'" >
+                                        <label><input type="checkbox" ng-model="match.isSubscribed" ng-change="ctrl.subscribe(match)"><span></span></label>
+                                        <h6 ng-bind="match.isSubscribed ? 'Больше не жду' : 'Подписаться'"></h6>
+                                    </div>
                                 </div>
-                            </td>
-                            <td>
-                                <div class="board text-center">
-                                    <p>Матч</p>
-                                    <p>Рос - США</p>    
-                                    <p>5:0</p>
-                                    <!-- hover -->
-                                    <label><input type="checkbox"><span></span></label>                 
-                                    <h6>Ожидаю матч</h6>
-                                </div>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <!-- //07 -->
-                        <!-- 08 -->
-                        <tr>
-                            <td rowspan=2>08</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <div class="board_activ text-center">
-                                    <p>Матч</p>
-                                    <p>Рос - США</p>    
-                                    <p>5:0</p>
-                                </div>
-                            </td>
-                            <td></td>
-                            <td>
-                                <div class="board text-center">
-                                    <p>Матч</p>
-                                    <p>Рос - США</p>    
-                                    <p>5:0</p>
-                                    <!-- hover -->
-                                    <label><input type="checkbox" checked="checked"><span></span></label>
-                                    <h6>Больше не жду</h6>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <!--// 08 -->
-                        <!--09 -->
-                        <tr>
-                            <td rowspan=2>09</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <!--// 09 -->
-                        <!--10 -->
-                        <tr>
-                            <td rowspan=2>10</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <!--// 10 -->
+
+                            </slick>
+
+                        </td>
+                    </tr>
+                    <tr ng-repeat-end>
+
+                        <td ng-repeat="cell in row.secondTdArray"></td>
+                        <!--<td ng-show="row.timeId.odd" ng-repeat="cell in row.row" ></td>-->
+                    </tr>
+
+
+
                     </tbody>
                 </table>
             </div> <!-- //временная сетка -->
         </div>
-    </div>  
+    </div>
 </section>
