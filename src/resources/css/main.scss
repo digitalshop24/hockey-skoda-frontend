@@ -4199,19 +4199,22 @@ $grey_about: #5d5d5d;
     color:#38b249;
   }
 }
-.active {
-  background:#38b249;
-  .block {
+.right_calendar {
+  .active {
     background:#38b249;
-    p {
+    .block {
+      background:#38b249;
+      p {
+        color:#fff;
+      }
+    }
+    .slick-dots li button:before {
+      font-size:35px;
       color:#fff;
     }
   }
-  .slick-dots li button:before {
-    font-size:35px;
-    color:#fff;
-  }
 }
+
 .calendar .right_calendar .time_line tbody tr:nth-child(odd) .bor[rowspan] {
   padding-right:0px;
 }
