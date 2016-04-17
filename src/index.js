@@ -54,7 +54,8 @@ export default angular.module('app',
 
         $authProvider.twitter({
             url: url + '/auth/twitter',
-            provider: 'twitter'
+            provider: 'twitter',
+            redirectUri: window.location.origin
         });
 
 
