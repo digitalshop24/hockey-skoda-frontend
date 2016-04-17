@@ -764,7 +764,13 @@ $p_size: 1.4rem;
   	}
   }
 
-
+@media only screen and (max-width:893px) {
+	.left_calendar {
+		table {
+			margin:0 auto;
+		}
+	}
+}
  @media only screen and (max-width : 846px) {
  	
 	.mob-forece {
@@ -857,6 +863,7 @@ $p_size: 1.4rem;
 	.wrapp_forecast_content .forecast .pos-fre {
 		padding-top:75px;
 	} 
+
  }
 
 
