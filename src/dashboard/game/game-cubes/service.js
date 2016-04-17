@@ -29,6 +29,18 @@ export default class CubesService {
             });
     }
 
+    startUSPGame(firstVictorinaId) {
+        return this.api.post('/victorina/start/usp', {
+            victorina_id: firstVictorinaId
+        })
+            .then(res => {
+                return res.data;
+            })
+            .catch(err => {
+                throw err.data;
+            });
+    }
+
     checkAnswers(quizId, answers) {
         return this.api.post(`/victorina/${quizId}/answer`, {
             answers: answers

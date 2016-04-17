@@ -27,7 +27,7 @@
             "bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js",
             "bower_components/ng-file-upload/ng-file-upload-all.min.js",
             "bower_components/angularjs-socialshare/dist/angular-socialshare.min.js",
-            "bower_components/satellizer/satellizer.min.js",
+            "bower_components/satellizer/satellizer.js",
             "node_modules/angular-youtube-embed/dist/angular-youtube-embed.min.js",
             "node_modules/social-likes/dist/social-likes.min.js",
             "bower_components/angular-scroll/angular-scroll.min.js",
