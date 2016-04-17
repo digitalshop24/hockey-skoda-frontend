@@ -47,7 +47,7 @@
                             <slick ng-show="filtered.length" class="calendar-slider" ng-class="{'active': cell.matches[0].stage != 'future'}" dots=true>
                                 <div class="block" ng-repeat="match in cell.matches | filter:ctrl.filterByToggle as filtered">
                                     <div class="text-slid">
-                                        <p>{{match.redteam.country}}-{{match.blueteam.country}}</p>
+                                        <p>{{match.redteam.short_name}}-{{match.blueteam.short_name}}</p>
                                         <p ng-show="match.stage != 'future'" ng-bind="match.blueteam_score + '-' + match.redteam_score"></p>
                                         <p ng-bind="match.when | amDateFormat:'HH:mm'"></p>
                                     </div>
