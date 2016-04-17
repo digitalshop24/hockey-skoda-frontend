@@ -28,8 +28,8 @@ export default class ShareCtrl {
         this.resultData.description = this.resultData.description ? this.resultData.description : this.$rootScope.metaDescription ? this.$rootScope.metaDescription : '';
 
 
-        this.facebookShareLink = "https://www.facebook.com/sharer.php?src=sp&u=" + this.resultData.url + "&picture=" + this.resultData.picture +
-            "&description=" + this.resultData.description + "&title=" + this.resultData.title + "&link" + this.resultData.url;
+        this.facebookShareLink = "https://www.facebook.com/sharer.php?src=sp&u=" + this.resultData.url + "&picture=" + this.resultData.imgUrl +
+            "&description=" + this.resultData.description + "&title=" + this.resultData.title + "&link" + this.resultData.url + "&name=" + this.resultData.url;
 
         this.vkShareLink = "http://vk.com/share.php?url=" + this.resultData.url + "&title=" + this.resultData.title +
             "&description=" + this.resultData.description + "&image=" + this.resultData.imgUrl;
