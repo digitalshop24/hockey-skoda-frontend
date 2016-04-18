@@ -1453,6 +1453,29 @@
     line-height: 77px;
     border-radius: 5px;
   }
+  .title-priz {
+    font-size:1.7rem;
+  }
+  .pr-block {
+    .img {
+      float:left;
+      margin-right:25px;
+    }
+    .text-right {
+      overflow:hidden;
+      text-align:left;
+      p {
+        font-size:1.4rem;
+        padding-bottom:25px;
+      }
+      .btn {
+        width: 237px;
+        height: 70px;
+        font-size:2rem;
+        line-height: 62px;
+      }
+    }
+  }
 }
 
 
