@@ -20,13 +20,13 @@ export default angular.module('dashboard.facts', [])
                 params: {
                     notScrollToTop: false,
                     page: 1,
-                    perPage: 15,
+                    perPage: 2,
                     facts: []
                 },
                 resolve: {
-                    factInfo: ($stateParams, factService) => {
+                    facts: ($stateParams, factService) => {
                         return factService.getFacts($stateParams.page, $stateParams.perPage).then((res) =>{
-                            res.posts = $stateParams.facts.concat(res.posts);
+                           /* res.posts = $stateParams.facts.concat(res.posts);*/
                             return res;
                         });
                     },

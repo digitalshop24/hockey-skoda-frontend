@@ -8,7 +8,7 @@ export default class FactsService {
         this.api = api;
     }
 
-    getFacts(page, perPage) {
+    /*getFacts(page, perPage) {
         return this.api.get('/posts/interesting_facts',{
             params: {
                 page: page,
@@ -18,6 +18,21 @@ export default class FactsService {
             res.data.posts.forEach((fact) => {
                 fact.user = Object.assign(new TopicUser(), fact.user);
             });
+            return res.data;
+        })
+    }*/
+
+    getFacts(page, days) {
+        return this.api.get('/soc_posts',{
+            params: {
+                page: page,
+                days: days,
+                hashtag: '#хоккейныйфакт'
+            }
+        }).then((res) => {
+            /*res.data.posts.forEach((fact) => {
+                fact.user = Object.assign(new TopicUser(), fact.user);
+            });*/
             return res.data;
         })
     }
