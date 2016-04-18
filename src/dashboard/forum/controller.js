@@ -2,7 +2,7 @@
 
 
 export default class ForumCtrl {
-    constructor($state, sectionInfo, page, login, session) {
+    constructor($state, sectionInfo, page, login, session, allSections, forumService) {
         this.sections = sectionInfo.sections;
         this.sections.forEach((section) => {
             const lastMessage = section.last_message;
@@ -14,7 +14,22 @@ export default class ForumCtrl {
         this.totalPages = sectionInfo.total_pages;
         this.state = $state;
         this.login = login;
+        this.allSections = allSections;
         this.session = session;
+        this.service = forumService;
+    }
+
+    createTopic() {
+        this.service.createTopic(this.section.id, this.topicName, this.message).
+            then((res) => {
+                this.state.go('dashboard.forum',{}, {
+                    reload: true
+                });
+            });
+    }
+
+    openEditor() {
+        this.isEditorOpen = !this.isEditorOpen;
     }
 
     loadMore() {

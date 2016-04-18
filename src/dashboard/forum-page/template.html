@@ -10,9 +10,14 @@
 
                 <div ng-show="ctrl.isEditorOpen" class="textEdit">
                     <form ng-submit="ctrl.createTopic()">
+
+                        <select class="input_default input_small"
+                                ng-options="section.name for section in ctrl.allSections"
+                                ng-model="ctrl.tempSection" disabled>
+                        </select>
+
                         <input ng-model="ctrl.topicName" type="text" class="input_default input_large"
                                placeholder="Тема" required>
-
                         <div text-angular ng-model="ctrl.message"></div>
                         <button class="btn btn_primary main">Создать</button>
                     </form>

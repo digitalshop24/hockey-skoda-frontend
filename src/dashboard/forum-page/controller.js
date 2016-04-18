@@ -2,8 +2,9 @@
 
 
 export default class ForumpageCtrl {
-    constructor(section, topicInfo, login, session, id, page, $state, forumpageService, $modal, sort) {
+    constructor(section, topicInfo, login, session, id, page, $state, forumpageService, $modal, sort, allSections) {
         this.section = section;
+        this.tempSection = allSections.find(sect => sect.id == section.id);
         this.topics = topicInfo.topics;
         this.totalPages = topicInfo.total_pages;
         this.login = login;
@@ -15,6 +16,7 @@ export default class ForumpageCtrl {
         this.message = "";
         this.modal = $modal;
         this.sort = sort;
+        this.allSections = allSections;
     }
 
     openEditor() {

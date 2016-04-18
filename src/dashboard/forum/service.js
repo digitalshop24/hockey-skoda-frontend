@@ -16,4 +16,19 @@ export default class ForumService {
             return res.data;
         })
     }
+
+    getAllSections() {
+        return this.api.get('/forum/sections/all').then(res=> {
+            return res.data;
+        })
+    }
+
+    createTopic(sectionId, topicName, message) {
+        return this.api.post(`/forum/sections/${sectionId}/topics`, {
+            name: topicName,
+            message: message
+        }).then((res) => {
+            return res.data;
+        });
+    }
 }
