@@ -555,9 +555,41 @@ footer {
       margin-right: 40px;
       font-size: $p_size;
       font-family: $light;
+
     }
     img {
       margin-left: 10px;
+    }
+    .footer-share{
+      display: inline-block;
+      p{
+        float:left;
+        line-height:42px;
+        @media (max-width:991px){
+          margin-right:30px;
+        }
+        @media (max-width:767px){
+          margin-right:0;
+          float:none;
+          display: block;
+        }
+
+      }
+    }
+    .tantam-share{
+      margin-top:0;
+    }
+    .footer-copyring{
+      margin-top:10px;
+      @media (max-width:767px){
+        margin:0;
+      }
+    }
+    @media (max-width:767px){
+      .text-left,
+      .text-right{
+        text-align:center;
+      }
     }
   }
 }
@@ -3505,7 +3537,7 @@ $grey_about: #5d5d5d;
 .form_popup {
   margin-left: 20px;
   margin-right: 20px;
-  .left { 
+  .left {
     margin-top: 20px;
     border-right: 2px solid $grey;
     .soc_icon {
@@ -5974,7 +6006,7 @@ $grey_about: #5d5d5d;
     &:nth-child(3n-1) {
       margin-left:1.5%;
       margin-right:1.5%;
-    } 
+    }
   }
   .slick-slider {
     padding:0 30px;
@@ -6026,7 +6058,7 @@ $grey_about: #5d5d5d;
         text-decoration: none;
         color:#4ba82e;
         margin-left: 20px;
-        margin-right: 20px; 
+        margin-right: 20px;
         font-size:2rem;
         font-family: "SkodaProLight",sans-serif;
         &:hover {
@@ -6044,7 +6076,7 @@ $grey_about: #5d5d5d;
           background-color: #ccc;
           display: inline-block;
         a {
-          p { 
+          p {
             text-transform: uppercase;
             font-family: "SkodaProBold",sans-serif;
             font-size: 1.2rem;
