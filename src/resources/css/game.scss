@@ -1460,6 +1460,9 @@
 
 
 .priz-slider1 {
+  .slick-list {
+    z-index: 2;
+  }
   .slick-dots {
     position:absolute;
     top:-40px;
@@ -1468,12 +1471,15 @@
       button {
         display:inline-block;
         width:10px;
-        height:12px;
+        height:10px;
         background:#d9d9d9;
         border-radius: 50%;
         margin-right:10px;
         font-size:0px;
         border:none;
+        &:before {
+          color:rgba(255,255,255,0);
+        }
       }
     }
     .slick-active {
