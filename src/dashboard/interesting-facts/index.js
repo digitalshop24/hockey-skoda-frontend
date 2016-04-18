@@ -20,7 +20,7 @@ export default angular.module('dashboard.facts', [])
                 params: {
                     notScrollToTop: false,
                     page: 1,
-                    perPage: 2,
+                    perPage: 3,
                     facts: []
                 },
                 resolve: {
