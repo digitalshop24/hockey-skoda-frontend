@@ -43,9 +43,9 @@
                         <input required="true" type="email" ng-model="ctrl.form.email" class="input_default input_small"
                                placeholder="E-mail* (обязательное поле)">
                     </div>
-                    <div class="col-md-6 left">
+                    <div class="col-md-6 left" input-mask-init>
                         <h4>И телефон?<span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span></h4>
-                        <input type="text" ng-model="ctrl.form.phone" class="input_default input_small"
+                        <input type="phone" pattern="\d" ng-model="ctrl.form.phone" class="input_default input_small phone-mask"
                                placeholder="+7">
                     </div>
                 </div>
