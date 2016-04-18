@@ -141,6 +141,7 @@ export default class CubesCtrl {
                 this.busy = false;
                 this.quiz = res;
                 this.questionTime = 15;
+                this.uspVictorina = false;
                 this.clearAnswers();
                 $('#myModal').modal('hide');
                 this.startFirstQuestion();
