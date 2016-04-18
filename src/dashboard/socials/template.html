@@ -73,8 +73,12 @@
     <a ui-sref="dashboard.socials({hashtag: ''})">
         <div ng-class="{'active_tag' : !ctrl.hashtag}" class="tag_right_hokey">Весь хоккей</div>
     </a>
-    <a ui-sref="dashboard.socials({hashtag: ctrl.hashtag || '#Хоккейвкаждом'})">
-        <div ng-class="{'active_tag' : ctrl.hashtag}" class="tag_left_hokey" ng-bind="ctrl.hashtag || '#Хоккейвкаждом'"></div>
+    <a ng-show="ctrl.hashtag && ctrl.hashtag.toLowerCase() != '#Хоккейвкаждом'.toLowerCase() " ui-sref="dashboard.socials({hashtag: ctrl.hashtag})">
+        <div ng-class="{'active_tag' : ctrl.hashtag}" class="tag_left_hokey" ng-bind="ctrl.hashtag"></div>
+    </a>
+
+    <a ui-sref="dashboard.socials({hashtag: '#Хоккейвкаждом'})">
+        <div ng-class="{'active_tag' : ctrl.hashtag}" class="tag_left_hokey">#Хоккейвкаждом</div>
     </a>
 
     <div class="dop_tag" ng-show="!ctrl.days.length" style="">
