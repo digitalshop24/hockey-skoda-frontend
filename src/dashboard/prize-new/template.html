@@ -7,13 +7,7 @@
                        class="second_slider_priz text-center" as-nav-for=".main_slider_priz" swipe="true" responsive="ctrl.responsive">
 
                     <div class="itep_priz" ng-click="ctrl.changeSponsor(sponsor)" ng-repeat="sponsor in ctrl.sponsors" style="background-image: url({{sponsor.image.small}})">
-                        <!--<div>
-                            <p ng-bind="prize.name">Призы от Шкода</p>
-                        </div>-->
                     </div>
-                    
-                   
-                     
                    
                 </slick>   
 <section class="prizes_use_date">
@@ -24,7 +18,6 @@
                 <p ng-bind-html="ctrl.currentSponsor.description"></p>
             </div>
             <div class="col-md-6  text-left user_info" >
-               <!-- <p class="hidden">Чтобы участвовать в розигрышах призов, необходимо <br> <a>Авторизироваться или пройти регистрацию</a></p>-->
                 <p ng-show="!ctrl.session.isAuthenticated">Чтобы участвовать в розигрышах призов, необходимо <br> <a
                         ng-click="ctrl.login.open()" href="#">Авторизироваться или пройти регистрацию</a></p>
                 <div ng-show="ctrl.session.isAuthenticated" class="clearfix">
@@ -115,8 +108,7 @@
 
                 <h1><!-- Škoda hockey edition --></h1>
                  <ul class="text-left">
-                   <!--  <img src="img/resources/img/main/label.png" alt="" class="img-responsive"> -->
-                    <span><!-- В качестве официального спонсора<br> ŠKODA поддержала Чемпионат мира<br> по хоккею IIHF 22 раза --></span>
+                    <span></span>
                 </ul>
             </div>
            

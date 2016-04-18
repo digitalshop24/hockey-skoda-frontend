@@ -1,14 +1,13 @@
 
-<!-- календарь -->
 <section class="bg_grey calendar">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-center left_calendar"> <!-- Месяц и дни календаря -->
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-center left_calendar">
 
                 <datepicker ng-model="ctrl.currentDate" max-date="ctrl.maxDate" min-date="ctrl.minDate" ng-change="ctrl.updateCalendar(ctrl.currentDate)" starting-day="1" max-mode="month" format-day-title="yyyy MMM" show-weeks="false" class="well well-sm"></datepicker>
 
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right_calendar"> <!-- временная сетка -->
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right_calendar">
                 <div class="row text-right wrapp_toggle">
                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                         <h5>Матчи</h5>
@@ -33,7 +32,7 @@
 
                 <table class="table time_line">
                     <thead class="text-center">
-                    <tr> <!-- первая строка -->
+                    <tr>
                         <td>Время</td>
                         <td ng-repeat="day in ctrl.daysToShow" ng-bind="day | amDateFormat:'ddd DD'"></td>
                     </tr>
@@ -44,10 +43,10 @@
 
                         <td ng-repeat="cell in row.row"  ng-class="{'rowspan2': cell.matches.length, 'bor' : cell.matches.length }"
                             rowspan="{{cell.matches.length? 2 : 1}}" >
-                            <slick ng-show="cell.matches.length" class="calendar-slider" ng-class="{'active': cell.matches[0].stage != 'future'}" dots=true>
+                            <slick ng-show="filtered.length" class="calendar-slider" ng-class="{'active': cell.matches[0].stage != 'future'}" dots=true arrows=false>
                                 <div class="block" ng-repeat="match in cell.matches | filter:ctrl.filterByToggle as filtered">
                                     <div class="text-slid">
-                                        <p>{{match.redteam.country}}-{{match.blueteam.country}}</p>
+                                        <p>{{match.redteam.short_name}}-{{match.blueteam.short_name}}</p>
                                         <p ng-show="match.stage != 'future'" ng-bind="match.blueteam_score + '-' + match.redteam_score"></p>
                                         <p ng-bind="match.when | amDateFormat:'HH:mm'"></p>
                                     </div>
@@ -64,14 +63,13 @@
                     <tr ng-repeat-end>
 
                         <td ng-repeat="cell in row.secondTdArray"></td>
-                        <!--<td ng-show="row.timeId.odd" ng-repeat="cell in row.row" ></td>-->
                     </tr>
 
 
 
                     </tbody>
                 </table>
-            </div> <!-- //временная сетка -->
+            </div>
         </div>
     </div>
 </section>

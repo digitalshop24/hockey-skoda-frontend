@@ -91,12 +91,39 @@ export default class CubesCtrl {
 
     confirmUserData() {
         this.service.confirmUserData(this.userData).then(res => {
-            this.auth.initSession(res);
+            this.auth.initSession({data : res});
             this.user = res.data.user;
             $('#userData').modal('hide');
             $('#myModal').modal('show');
             this.startGame();
         });
+    }
+
+    startUSPVictorina() {
+        if(this.busy) return;
+        this.busy = true;
+        $('#resultModal').modal('hide');
+        this.service.startUSPGame(this.quiz.id)
+            .then(res => {
+                this.busy = false;
+                this.quiz = res;
+                this.uspVictorina = true;
+                this.clearAnswers();
+                this.questionTime = 2400;
+                $('#myModal').modal('hide');
+                this.startFirstQuestion();
+            })
+            .catch(err => {
+                this.busy = false;
+                $('#myModal').modal('hide');
+                this.modal.open({
+                    resolve: {
+                        message: () => {
+                            return err.message || 'Ошибка!';
+                        }
+                    }
+                });
+            });
     }
 
     startGame() {
@@ -113,6 +140,8 @@ export default class CubesCtrl {
             .then(res => {
                 this.busy = false;
                 this.quiz = res;
+                this.questionTime = 15;
+                this.uspVictorina = false;
                 this.clearAnswers();
                 $('#myModal').modal('hide');
                 this.startFirstQuestion();
@@ -139,7 +168,7 @@ export default class CubesCtrl {
     startFirstQuestion() {
 
         $('#firstQuestion').modal('show');
-        this.firstQuestionTime = 15;
+        this.firstQuestionTime = this.questionTime;
         this.firstInterval = this.$interval(() => {
             this.firstQuestionTime -= 1;
             if (!this.firstQuestionTime) {
@@ -157,7 +186,7 @@ export default class CubesCtrl {
         $('#firstQuestion').modal('hide');
         $('#secondQuestion').modal('show');
 
-        this.secondQuestionTime = 15;
+        this.secondQuestionTime = this.questionTime;
         this.secondInterval = this.$interval(() => {
             this.secondQuestionTime -= 1;
             if (!this.secondQuestionTime) {
@@ -174,7 +203,7 @@ export default class CubesCtrl {
         $('#secondQuestion').modal('hide');
         $('#thirdQuestion').modal('show');
 
-        this.thirdQuestionTime = 15;
+        this.thirdQuestionTime = this.questionTime;
         this.thirdInterval = this.$interval(() => {
             this.thirdQuestionTime -= 1;
             if (!this.thirdQuestionTime) {
@@ -212,7 +241,7 @@ export default class CubesCtrl {
         }
 
         if(this.thirdAnswer) {
-            answers.push(+this.thirdAnswer);
+            answers.push(this.thirdAnswer);
         } else {
             answers.push('');
         }
@@ -239,6 +268,11 @@ export default class CubesCtrl {
     goToPrizes() {
         $('#resultModal').modal('hide');
         this.state.go('dashboard.profile.prizes');
+    }
+
+    goToPhotocontest() {
+        $('#resultModal').modal('hide');
+        this.state.go('dashboard.profile.fotocontest');
     }
 
     shuffle(a) {

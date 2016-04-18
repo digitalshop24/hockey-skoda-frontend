@@ -2,11 +2,12 @@
 
 
 export default class MytestdriveCtrl {
-    constructor(moment, coupons, mytestdriveService, modal) {
+    constructor(moment, coupons, mytestdriveService, modal, $state) {
         this.today = moment().format('DD MMMM');
         this.coupons = coupons;
         this.mytestdriveService = mytestdriveService;
         this.modal = modal;
+        this.$state = $state;
     }
 
     sendCoupon() {
@@ -22,5 +23,9 @@ export default class MytestdriveCtrl {
                 }
             });
         })
+    }
+
+    startGame() {
+        this.$state.go('dashboard.game.sectors');
     }
 }

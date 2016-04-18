@@ -272,48 +272,15 @@
                 <div class="slide" ng-repeat="post in ctrl.socPosts">
                     <div class="wrapp_soc_li">
                         <p class="time" ng-bind="post.published_at | amDateFormat:'DD.MM'"></p>
-                        <a href="#"><img  src="img/resources/img/green_insta.png" alt="" class="img-responsive {{post.network}}"></a>
+                        <i class="fa fa-{{post.network}}-square fa-2x" aria-hidden="true"></i>
+                       <!-- <a href="#"><img  src="img/resources/img/green_insta.png" alt="" class="img-responsive "></a>-->
                         <a href="#"><img src="{{post.profile_pic}}" alt="" class="img-responsive"></a>
                         <p class="tag"><a href="{{post.profile_link}}" target="_blank" ng-bind="post.profile_name"></a></p>
                         <p class="messege" ng-bind="post.content"></p>
                         <img ng-show="post.photos.length" src="{{post.photos[0].image.thumb}}" alt="" class="foto_soc">
                     </div>
                 </div>
-                <!--<div class="slide">
-                    <div class="wrapp_soc_li">
-                        <p class="time">вчера</p>
-                        <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
-                        <a href="#"><img src="img/resources/img/soc_foto_2.png" alt="" class="img-responsive"></a>
-                        <p class="tag"><a href="#" >datsyuk13hockey</a></p>
-                        <p class="messege"></p>
-                        <img src="img/resources/img/soc_img_3.jpg" alt="" class="foto_soc">
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="wrapp_soc_li">
-                        <p class="time">позавчера</p>
-                        <a href="#"><img src="img/resources/img/green_insta.png" alt="" class="img-responsive"></a>
-                        <a href="#"><img src="img/resources/img/soc_foto_3.png" alt="" class="img-responsive"></a>
-                        <p class="tag"><a href="#" >emalkin71geno</a></p>
-                        <p class="messege"></p>
-                        <img src="img/resources/img/soc_img_2.jpg" alt="" class="foto_soc">
-                    </div>
-                </div>-->
-
             </div>
-           <!--  <img src="img/resources/img/skoda-main-SMP.jpg" alt="" class="'img-responsive"> -->
-            <!-- <div class="top_"></div>
-            <div class="timeline_horisond"></div>
-            <ul>
-                <li class="min_l_2x" ng-repeat="tweet in ctrl.tweets">
-                    <p ng-bind="tweet.published_at | amDateFormat:'DD MMMM'"></p>
-                    <p ng-bind="tweet.published_at | amDateFormat:'HH:mm'"></p>
-                    <a href="#"><img src="img/resources/img/twiter_green.png" alt="" class="img-responsive"></a>
-                    <a href="#"><img src="{{tweet.profile_pic}}" alt="" class="img-responsive"></a>
-                    <p class="tag"><a href="#" ng-bind="tweet.person.name"></a></p>
-                    <p class="messege" ng-bind="tweet.content.substring(0,20)"></p>
-                </li>
-            </ul> -->
         </div>
     </div>
 </section>

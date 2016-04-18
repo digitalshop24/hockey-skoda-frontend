@@ -13,12 +13,10 @@
             <div class="game-two-block-title-left">
                 <h3><b>Пробейся </b><br> к викторине!</h3>
 
-                <!-- <p>Инструкция для участника. Или информация о <br> кол-ве ячеек. Написа</p>-->
+
             </div>
             <div class="game-two-block-title-right">
-                <!--<div class="sector">
-                    <a href="#" data-toggle="modal" data-target="#myModal2">Выбор сектора</a>
-                </div>-->
+
                 <div class="ball clearfix" ng-show="ctrl.session.isAuthenticated">
                     <div class="ball-im">
                         <p>Мои баллы</p>
@@ -81,20 +79,16 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="myModal" role="dialog" data-keyboard="false" data-backdrop="static" >
     <div class="modal-dialog">
 
-        <!-- Modal content-->
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal"></button>
-            <!--<div class="game-modal-led led-blue"></div>-->
             <div class="game-modal-led-bottom bottom-led-{{ctrl.cubeModalColor}}"></div>
             <div class="game-modal-content">
                 <h2>а теперь викторина!</h2>
 
-                <!--<p>Описание того, что участник выигрывает и при каких условиях. Пр Описание того, что участник
-                    выигрывает и при каких условиях. Пр Описание того, что участник выигрывает и при каких условиях.
-                    Пр<b>участник выигрывае</b></p>-->
+
 
                 <div class="priz clearfix">
                     <div class="priz-item" ng-repeat="category in ctrl.categories">
@@ -138,10 +132,9 @@
     </div>
 </div>
 
-<div class="modal fade" id="firstQuestion" role="dialog">
+<div class="modal fade" id="firstQuestion" role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog">
 
-        <!-- Modal content-->
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal"></button>
             <div class="timer">
@@ -188,10 +181,9 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="secondQuestion" role="dialog">
+<div class="modal fade" id="secondQuestion" role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog">
 
-        <!-- Modal content-->
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal"></button>
             <div class="timer bor-red">
@@ -226,7 +218,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="thirdQuestion" role="dialog">
+<div class="modal fade" id="thirdQuestion" role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -247,7 +239,7 @@
                 <div class="otvet-ches-item" ng-repeat="question in ctrl.quiz.third_question.answer_options">
                     <div class="radio active">
                         <input id="{{ctrl.quiz + 'radio' + question.id}}" type="radio" ng-model="ctrl.thirdAnswer"
-                               name="radio2" value="{{question.id}}"
+                               name="radio2" value="{{question.answer}}"
                                ng-disabled="!ctrl.thirdQuestionTime">
                         <label for="{{ctrl.quiz + 'radio' + question.id}}">
                             <span></span>
@@ -274,7 +266,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="userData" role="dialog">
+<div class="modal fade" id="userData" role="dialog" data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog">
             <form ng-submit="ctrl.confirmUserData()">
 
@@ -301,7 +293,7 @@
         </div>
 </div>
 
-<div class="modal fade" id="resultModal" role="dialog">
+<div class="modal fade" id="resultModal" role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -312,12 +304,40 @@
 
             </div>
 
-            <div class="otv-fre" ng-show="ctrl.result.prize">
+            <div class="otv-fre" ng-show="((ctrl.currentCell.cell_type == 'green' && ctrl.result.right_answers_count == 3)
+                || ctrl.currentCell.cell_type == 'blue') && ctrl.result.prize && !ctrl.uspVictorina">
                 <p>Приз: {{ctrl.result.prize.name}}</p>
 
                 <p>Описание: {{ctrl.result.prize.description}}</p>
                 <img src="{{ctrl.result.prize.image.small}}"/>
                 <a ng-click="ctrl.goToPrizes()">Как получить приз</a>
+            </div>
+
+
+            <div ng-show="ctrl.currentCell.cell_type == 'green' && ctrl.result.right_answers_count != 3 && !ctrl.uspVictorina">
+                <p>
+                Ваш приз уже в личном кабинете. Но вы не прошли в участники фото-конкурса. Но у Вас есть еще один шанс пройти до фото-конкурса, для этого
+                    необходимо правильно ответить на 3 специальных вопроса от SKODA
+                </p>
+
+                <div class="mobal-button priz otvet clearfix">
+                    <div class="mobal-button-right">
+                        <button type="click" ng-click="ctrl.startUSPVictorina()" class="btn btn_primary">Играть</button>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-show="ctrl.uspVictorina && ctrl.result.right_answers_count != 3">
+                <p>
+                    К сожалению, вы не прошли в фотоконкурс.
+                </p>
+            </div>
+
+            <div ng-show="ctrl.currentCell.cell_type == 'green' && ctrl.result.right_answers_count == 3">
+                <p>
+                    Поздравляем! Вы стали участником фотоконкурса.
+                    <a href="#" ng-click="ctrl.goToPhotocontest()">Подробности в личном кабинете.</a>
+                </p>
             </div>
         </div>
 

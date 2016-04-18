@@ -36,9 +36,9 @@ export default class ForecastCtrl {
         }
         const oppositeMatch = this.getOppositeMatch(match);
         var find = this.forecastCopy.find(match => match.num == oppositeMatch.num && match.match_group == oppositeMatch.match_group);
-        oppositeMatch.teams = find.teams.slice(0);
 
         if (oppositeMatch.can_predict) {
+            oppositeMatch.teams = find.teams.slice(0);
             const teams = oppositeMatch.teams;
             if (teams) {
                 if (match.redteam) {

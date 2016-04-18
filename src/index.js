@@ -51,6 +51,14 @@ export default angular.module('app',
             scope: ['public_content']
         });
 
+
+        $authProvider.twitter({
+            url: url + '/auth/twitter',
+            provider: 'twitter',
+            redirectUri: window.location.origin
+        });
+
+
         $authProvider.oauth2({
             name: 'vk',
             url: url + '/auth/vk',
@@ -62,6 +70,7 @@ export default angular.module('app',
             responseType: 'code',
             scope: ['email', 'video']
         });
+
     })
     .config(($locationProvider) => {
         $locationProvider.html5Mode(true);
@@ -90,6 +99,17 @@ export default angular.module('app',
             if (toState.meta) {
                 $rootScope.metaTitle = toState.meta.title;
                 $rootScope.metaDescription = toState.meta.description;
+            }
+        });
+    })
+    .run(($rootScope) => {
+
+        $rootScope.$on('$stateChangeStart', (event, toState) => {
+            if (['dashboard.calendar', 'dashboard.tantamareska', 'dashboard.suggestions',
+                    'dashboard.game.sectors' , 'dashboard.game.cubes'].indexOf(toState.name) != -1) {
+                $rootScope.viewportContent = "width=1280";
+            } else {
+                $rootScope.viewportContent = "width=device-width, initial-scale=1.0";
             }
         });
     })

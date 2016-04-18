@@ -2,7 +2,7 @@
 <div class="my_testdrive_contant">
     <h4>Мои тест драйвы</h4>
     <p class="date" ng-bind="'Сегодня, ' + ctrl.today"/>
-    <p>На этой странице пользоветель должен загрузить свою фоточку и расшарить ее в Инстаграм(а в другие соц. сети можно?). Юзер может шаритьнесколько фоточек (смотря соколько золоты ячее он выиграл)</p>
+    <p>Для участия в розыгрыше автомобилей Вам необходимо пройти тест-драйв, на котором Вам будет выдан специальный промо-код. Регистрируйтесь на тест-драйв, пробуйте автомобиль, а затем попытайтесь его выиграть!</p>
     <div class="download_promo">
         <form ng-submit="ctrl.sendCoupon()">
             <input type="text" minlength="8" length="8" ng-model="ctrl.coupon" class="input_default input_small" placeholder="Ваш промокод (8 символов)" required>
@@ -22,7 +22,7 @@
         <tr ng-repeat="coupon in ctrl.coupons">
             <td><h6 ng-bind="'№' + coupon.number"></h6></td>
             <td ng-bind="coupon.activate_date | amDateFormat:'DD MMMM'"></td>
-            <td><button class="btn btn_secondary tiny" ng-disabled="!coupon.is_active" ng-bind="coupon.is_active ? 'Действие' : 'Использован'"></button></td>
+            <td><button class="btn btn_secondary tiny" ng-click="ctrl.startGame()" ng-disabled="!coupon.is_active" ng-bind="coupon.is_active ? 'Учавствовать' : 'Использован'"></button></td>
         </tr>
     </table>
     

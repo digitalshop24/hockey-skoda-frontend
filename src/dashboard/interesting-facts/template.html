@@ -7,58 +7,42 @@
             </ul>
         </div>
 </div>
+
 <section class="factSection">
     
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12 col-md-4 ">
-                  <div class="block-set" ng-repeat="fact in ctrl.facts | limitTo:4">
+                <div class="col-sm-12 col-md-12 clearfix">
+                  <div class="block-set" ng-repeat="fact in ctrl.facts">
                     <div class="block-interes-fact">
-                        <div class="img">
-                            <img src="{{fact.image.medium}}" alt="">
+                      <div class="fact-social clearfix">
+                        <div class="fact-social-im">
+                          <a href="#">
+                            <img src="{{fact.iconUrl}}" alt="" class="img-responsive">
+                          </a>
                         </div>
+                        <div class="time">
+                          <a href="#" ng-bind="fact.published_at | amDateFormat:'DD.MM H:mm'"></a>
+                        </div>
+                      </div>
+                       <slick ng-show="fact.photos.length">
+                          <div class="img" ng-repeat="photo in fact.photos | limitTo:4">
+                            <img src="{{photo.image.small}}" alt="">
+                          </div>
+
+                       </slick>
                         <div class="text1">
-                            <p ng-bind="fact.name"></p>
+                            <p ng-bind-html="fact.content"></p>
                         </div>
+                        <div class="ret clearfix">
+                          <share-buttons data="fact.shareData"></share-buttons>
+                          <a href="" class="ret-link" ng-bind="fact.repostText"></a>
+                        </div>
+                        <!--<ul class="tag_post" ng-show="fact.tags.length">
+                          <li ng-repeat="tag in fact.tags"><a  href=""><p  ng-bind="tag">Брендон Галлахер</p></a></li>
+                      </ul>-->
                     </div>
                   </div>
-                </div>
-               <div class="col-sm-12 col-md-4 ">
-                  <div class="block-set" ng-repeat="fact in ctrl.facts | limitTo:4:4">
-                    <div class="block-interes-fact">
-                        <div class="img">
-                            <img src="{{fact.image.medium}}" alt="">
-                        </div>
-                        <div class="text1">
-                            <p ng-bind="fact.name"></p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-12 col-md-4 ">
-                  <div class="block-set" ng-repeat="fact in ctrl.facts | limitTo:4:8">
-                    <div class="block-interes-fact">
-                        <div class="img">
-                            <img src="{{fact.image.medium}}" alt="">
-                        </div>
-                        <div class="text1">
-                            <p ng-bind="fact.name"></p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <ul>
-                        <li ng-show="ctrl.facts.length < ctrl.factsAmount">
-                            <button ng-click="ctrl.loadMore()" class="btn btn_common main">Показать ещё</button>
-                        </li>
-                        <li>Показано {{ctrl.facts.length}} фактов из {{ctrl.factsAmount}}</li>
-                    </ul>
-                    
                 </div>
             </div>
         </div>

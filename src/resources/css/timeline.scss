@@ -17,6 +17,8 @@ $regular: "SkodaProRegular", sans-serif;
 $light: "SkodaProLight", sans-serif;
 $p_size: 1.4rem;
 
+
+
 .wrapp_mainpage_timeline {
   // padding-top: 65px;
   // padding-bottom: 40px;
@@ -51,6 +53,16 @@ $p_size: 1.4rem;
       color: $green_main;
     }
   }
+
+  .fa-vk-square:before {
+    content: "\f189";
+  }
+
+  i.fa {
+    color: green;
+    margin-top: 13px;
+  }
+
   img {
     border-radius: 50%;
     margin: 0 auto;
