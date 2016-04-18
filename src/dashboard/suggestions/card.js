@@ -140,6 +140,21 @@ export default angular.module('dashboard.suggestions.card-init', [])
                         }
                         // context.fillText(line, 0, 0);
                     }
+                     $('.suggestions-slider-for').slick({
+                      slidesToShow: 1,
+                      slidesToScroll: 1,
+                      fade : true,
+                      draggable : false,
+                      arrows : false,
+                      asNavFor: '.suggestions-slider'
+                    });
+                    $('.suggestions-slider').slick({
+                        slidesToShow : 3,
+                        slideToScroll : 1,
+                        vertical : true,
+                        draggable : false,
+                        asNavFor : '.suggestions-slider-for'
+                    });
                 });
             }
         }
