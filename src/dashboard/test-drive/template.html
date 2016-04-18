@@ -25,8 +25,8 @@
                                                            placeholder="Фамилия* (Обязательное поле)" required minlength="2"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 text-right"><input required="true" type="text" ng-model="ctrl.mobilephone"
-                                                            class="input_default input_small"
+                    <div class="col-md-6 text-right" input-mask-init><input required="true" type="text" ng-model="ctrl.mobilephone"
+                                                            class="input_default input_small phone-mask"
                                                             placeholder="Телефон* (Обязательное поле)" required minlength="2"></div>
                     <div class="col-md-6 text-left"><input type="email" ng-model="ctrl.email"
                                                            class="input_default input_small"
@@ -53,7 +53,7 @@
                     <div class="col-md-12 text-center">
                         <input type="checkbox" checked="checked" id="c1">
                         <label for="c1"><span></span><a href="" ui-sref="dashboard.consent">Соглашаю с обработкой персональных данных</a></label>
-                        
+
                     </div>
                 </div>
 
@@ -64,14 +64,14 @@
                     </div>
                 </div>
 
-                
+
         </div>
-       
+
     </div>
     <div class="container-fluid hidden-sm hidden-xs">
          <div class="row wrapp_bg_tdrive">
             <div class="col-md-12">
-                
+
             </div>
         </div>
     </div>
