@@ -17,9 +17,14 @@
                 </div>
                 <div class="col-md-6 text-right">
                     <select class="input_default input_small"
-                            ng-options="team.country for team in ctrl.teams track by team.id"
-                            ng-model="ctrl.teamFilter" required>
+                            ng-options="team.country for team in ctrl.allTeams track by team.id"
+                            ng-model="ctrl.allTeamsFilter" required>
                         <option selected value>Все команды</option>
+                    </select>
+                    <select class="input_default input_small"
+                            ng-options="team.country for team in ctrl.playoffTeams track by team.id"
+                            ng-model="ctrl.playoffFilter" required>
+                        <option selected value>Плей-офф</option>
                     </select>
                     <select class="input_default input_small"
                             ng-options="category.name for category in ctrl.categories"
@@ -29,17 +34,20 @@
                 </div>
             </div>
         </div>
-        <div class="row fix_bottom" ng-repeat="day in ctrl.schedule" ng-show="(day.matches | filter:ctrl.filterByTeam | filter:ctrl.filterByCategory).length">
+        <div class="row fix_bottom" ng-repeat="day in ctrl.schedule" ng-show="(day.matches | filter:ctrl.filterByAllTeams |
+            filter:ctrl.filterByPlayoffTeams | filter:ctrl.filterByCategory).length">
             <div class="tabel_game">
                 <div class="col-md-12 date_game">
                     <h3 ng-bind="day.matches[0].when | amDateFormat:'DD'"></h3>
 
                     <p class="b" ng-bind="day.matches[0].when | amDateFormat:'MMMM'"></p>
 
-                    <p>({{(day.matches | filter:ctrl.filterByTeam | filter:ctrl.filterByCategory).length}} игры)</p>
+                    <p>({{(day.matches | filter:ctrl.filterByAllTeams |
+                        filter:ctrl.filterByPlayoffTeams | filter:ctrl.filterByCategory).length}} игры)</p>
                 </div>
                 <div class="col-md-3 text-center"
-                     ng-repeat="match in day.matches | filter:ctrl.filterByTeam | filter:ctrl.filterByCategory">
+                     ng-repeat="match in day.matches | filter:ctrl.filterByAllTeams |
+            filter:ctrl.filterByPlayoffTeams | filter:ctrl.filterByCategory">
                     <div class="game last" ng-class="{'last':match.stage == 'completed', 'active' : match.stage == 'current',
                       'next' : match.stage == 'future'}">
                         <h3 ng-show="match.stage != 'future'"
