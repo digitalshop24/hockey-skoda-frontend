@@ -3602,6 +3602,7 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- priznew
 .prizes_use_date {
  background:#ececec;
+ padding-left:47px;
   .user_info {
     p {
       font-size: $p_size;
@@ -3636,6 +3637,7 @@ $grey_about: #5d5d5d;
     .user-right {
       width:430px;
       float:right;
+      padding-top:82px;
     }
     .img {
       float:left;
@@ -3746,8 +3748,6 @@ $grey_about: #5d5d5d;
         content:'';
         height: 0px;
         width:0px;
-        transition:background-image 1000ms linear;
-        background-image: url("img/resources/img/icon-treu-pro.png") ;
       }
       &:hover::after {
         position:absolute;
@@ -3767,10 +3767,8 @@ $grey_about: #5d5d5d;
         content:'';
         height: 13px;
         width:27px;
-        transition: background-image 1000ms linear;
         background-image: url("img/resources/img/icon-treug.png") ;
       }
->>>>>>> 470f3b448786793ea87511e813acb56cdb783680
       div {
         background-color: rgba(255, 255, 255, 0.3);
         height: 150px;
@@ -3835,6 +3833,7 @@ $grey_about: #5d5d5d;
 
   .page_prizs_priz {
     padding-top: 50px;
+    padding-bottom:25px;
     .slick-slide img {
         width: 250px;
         margin: 0 auto;
