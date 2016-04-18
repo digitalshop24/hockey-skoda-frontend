@@ -4,8 +4,8 @@
 export default class ScheduleCtrl {
     constructor(schedule, moment, teams, $scope, $interval, scheduleService) {
         this.schedule = schedule;
-        this.currentDay = moment();
-        this.teams = teams;
+        this.allTeams = teams.filter(team => team.short_name);
+        this.playoffTeams = teams.filter(team => !team.short_name);
         this.categories = [
             {
                 id: "A",
@@ -43,9 +43,12 @@ export default class ScheduleCtrl {
             $interval.cancel(updater);
         });
 
-        /* dirty hack */
-        this.filterByTeam = (match) => {
-            return $scope.ctrl.teamFilter ? (match.redteam.id == $scope.ctrl.teamFilter.id || match.blueteam.id == $scope.ctrl.teamFilter.id)  : true;
+        this.filterByAllTeams = (match) => {
+            return $scope.ctrl.allTeamsFilter ? (match.redteam.id == $scope.ctrl.allTeamsFilter.id || match.blueteam.id == $scope.ctrl.allTeamsFilter.id)  : true;
+        };
+
+        this.filterByPlayoffTeams = (match) => {
+            return $scope.ctrl.playoffFilter ? (match.redteam.id == $scope.ctrl.playoffFilter.id || match.blueteam.id == $scope.ctrl.playoffFilter.id)  : true;
         };
 
         this.filterByCategory = (match) => {

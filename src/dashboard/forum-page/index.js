@@ -33,6 +33,10 @@ export default angular.module('dashboard.forum-page', [])
                             });
                     },
 
+                    allSections: forumService => {
+                        return forumService.getAllSections();
+                    },
+
                     page: $stateParams => {
                         return $stateParams.page;
                     },

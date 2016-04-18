@@ -49,7 +49,7 @@
                                placeholder="+7">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" ng-show="!ctrl.form.from_soc">
                     <div class="col-md-6 left">
                         <h4>Старый пароль?</h4>
                         <input type="password" minlength="8" ng-model="ctrl.form.current_password" class="input_default input_small"
@@ -57,7 +57,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" ng-show="!ctrl.form.from_soc">
                     <div class="col-md-6 left">
                         <h4>Новый пароль?</h4>
                         <input type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"

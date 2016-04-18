@@ -21,6 +21,25 @@
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" >Хоккейные видео</li></a>
                     </ul>
                 </li></a>
+                <a href="#"><li>Интересное
+                   <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
+                  <ul class="drilldown-sub">
+                    <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Интересное</a></li>
+                    <a ui-sref="dashboard.infographics"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Инфографика сборной России</li></a>
+                    <a ui-sref="dashboard.tantamareska"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Тантамарезка</li></a>
+                    <a ui-sref="dashboard.suggestions"><li  ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Пожелание сборной</li></a>
+                    <a href="#" ui-sref="dashboard.socials" ><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Соц.сети хоккеистов</li></a>
+                    <a href="#"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Junior Ice Hockey Cup</li></a>
+                  </ul>
+                </li></a>
+                <a href="#"><li>Расписание
+                  <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
+                  <ul class="drilldown-sub">
+                   <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Расписание</a></li>
+                    <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.schedule">Расписание матчей</li></a>
+                    <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.calendar">Календарь</li></a>
+                  </ul>
+                </li></a>
                 <a href="#"><li>
                     Прогнозы
                     <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
@@ -30,33 +49,17 @@
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.forecast.companionship">Матчи</li></a>
                     </ul>
                 </li></a>
-              <a href="#"><li>Форум
-                    <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
+              <a href="#" ui-sref="dashboard.prizenew"><li>Конкурсы</li></a>
+              <a href="#" ui-sref="dashboard.forum"><li>Форум
+                  <!--   <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
                     <ul class="drilldown-sub">
                       <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Форум</a></li>
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.forum">Форум</li></a>
-                    </ul>
+                    </ul> -->
               </li></a>
-              <a href="#" ui-sref="dashboard.prizenew"><li>Конкурсы</li></a>
-              <a href="#"><li>Расписание
-                <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
-                <ul class="drilldown-sub">
-                 <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Расписание</a></li>
-                  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.schedule">Расписание матчей</li></a>
-                  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.calendar">Календарь</li></a>
-                </ul>
-              </li></a>
-              <a href="#"><li>Интересное
-                 <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
-                <ul class="drilldown-sub">
-                  <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Интересное</a></li>
-                  <a ui-sref="dashboard.infographics"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Инфографика сборной России</li></a>
-                  <a ui-sref="dashboard.tantamareska"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Тантамарезка</li></a>
-                  <a ui-sref="dashboard.suggestions"><li  ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Пожелание сборной</li></a>
-                  <a href="#" ui-sref="dashboard.socials" ><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Соц.сети хоккеистов</li></a>
-                  <a href="#"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Junior Ice Hockey Cup</li></a>
-                </ul>
-              </li></a>
+             
+              
+             
 
               <a href="#" ng-show="ctrl.session.isAuthenticated" ><li>Личный кабинет
                  <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
@@ -185,22 +188,10 @@
                                         <img src="img/resources/img/arrow_righ_mini.png" alt="">
                                     </li>
                                 </a>
-                                <a ui-sref="dashboard.forecast.playoff">
-                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isForecastOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false" >
-                                        Прогнозы
+                                <a ui-sref="dashboard.facts">
+                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isInterestingOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isForecastOpen = ctrl.isSchedOpen = false">
+                                        Интересное
                                         <img src="img/resources/img/arrow_righ_mini.png" alt="">
-                                    </li>
-                                </a>
-                                <a ui-sref="dashboard.forum">
-                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isForumOpen = true; ctrl.isNewsOpen = ctrl.isForecastOpen = ctrl.isPrizeOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
-                                        Форум
-                                        <img src="img/resources/img/arrow_righ_mini.png" alt="">
-                                    </li>
-                                </a>
-                                <a ui-sref="dashboard.prizenew">
-                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isPrizeOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isForecastOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
-                                        Конкурсы
-                                        
                                     </li>
                                 </a>
                                 <a ui-sref="dashboard.schedule">
@@ -209,12 +200,26 @@
                                         <img src="img/resources/img/arrow_righ_mini.png" alt="">
                                     </li>
                                 </a>
-                                <a ui-sref="dashboard.facts">
-                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isInterestingOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isForecastOpen = ctrl.isSchedOpen = false">
-                                        Интересное
+                                <a ui-sref="dashboard.forecast.playoff">
+                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isForecastOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isPrizeOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false" >
+                                        Прогнозы
                                         <img src="img/resources/img/arrow_righ_mini.png" alt="">
                                     </li>
                                 </a>
+                                <a ui-sref="dashboard.prizenew">
+                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isPrizeOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isForecastOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
+                                        Конкурсы
+                                    </li>
+                                </a>
+                                <a ui-sref="dashboard.forum">
+                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isForumOpen = true; ctrl.isNewsOpen = ctrl.isForecastOpen = ctrl.isPrizeOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
+                                        Форум
+                                        <!-- <img src="img/resources/img/arrow_righ_mini.png" alt=""> -->
+                                    </li>
+                                </a>
+                               
+                                
+                                
 
                             </ul>
                         </div>
@@ -234,7 +239,7 @@
 
                             </ul>
                             <ul ng-show="ctrl.isForumOpen">
-                                <a ui-sref="dashboard.forum" ng-click="ctrl.isMenuOpen = false" ><li>Форум</li></a>
+                                <!-- <a ui-sref="dashboard.forum" ng-click="ctrl.isMenuOpen = false" ><li>Форум</li></a> -->
                             </ul>
 
                             <ul ng-show="ctrl.isSchedOpen">

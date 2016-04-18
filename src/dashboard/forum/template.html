@@ -1,3 +1,33 @@
+<section class="add_topic">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <button ng-show="!ctrl.isEditorOpen" ng-disabled="!ctrl.session.isAuthenticated"
+                        ng-click="ctrl.openEditor()" class="btn btn_primary main">Создать тему
+                </button>
+                <p ng-show="!ctrl.session.isAuthenticated">Чтобы создать тему или оставить комментарий <br>нужно <a
+                        ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
+
+                <div ng-show="ctrl.isEditorOpen" class="textEdit">
+                    <form ng-submit="ctrl.createTopic()">
+
+                        <select class="input_default input_small"
+                                ng-options="section.name for section in ctrl.allSections"
+                                ng-model="ctrl.section" required>
+                            <option disabled  value checked>Выберите раздел</option>
+
+                        </select>
+                        <input ng-model="ctrl.topicName" type="text" class="input_default input_large"
+                               placeholder="Тема" required>
+                        <div text-angular ng-model="ctrl.message"></div>
+                        <button class="btn btn_primary main">Создать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="topics">
     <div class="container">
         <div class="row">

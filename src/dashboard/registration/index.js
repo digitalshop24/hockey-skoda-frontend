@@ -3,9 +3,11 @@
 import angular from 'angular';
 import RegistrationCtrl from './controller.js';
 import RegistrationService from './service.js';
+import InputMask from './inputmask/input-mask.js';
 
 
 export default angular.module('dashboard.registration', [
+    InputMask.name
 ])
     .service('regService', RegistrationService)
     .config(function ($stateProvider) {
