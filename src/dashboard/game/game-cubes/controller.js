@@ -80,12 +80,10 @@ export default class CubesCtrl {
     }
 
     brokeCell(cell) {
-        if (cell.clickAmount && !cell.is_crashed) {
+        if (!cell.is_crashed) {
             this.currentCell = cell;
             this.cubeModalColor = cell.type;
             $('#myModal').modal('show');
-        } else {
-            cell.clickAmount = 1;
         }
     }
 
