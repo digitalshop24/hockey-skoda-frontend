@@ -12,12 +12,12 @@ export default class ForecastCtrl {
     }
 
     changeSelectTeam(match) {
-        this.removeTeamFromOtherMatch(match);
-
-
         this.canSendForecast =  match.blueteam && match.redteam;
+
+
         if (this.canSendForecast) {
             if (match.redteam.id == match.blueteam.id) {
+                match.blueteam = undefined;
                 this.modal.open({
                     resolve: {
                         message: () => {
@@ -28,6 +28,7 @@ export default class ForecastCtrl {
                 this.canSendForecast = false;
             }
         }
+        this.removeTeamFromOtherMatch(match);
     }
 
     removeTeamFromOtherMatch(match) {
@@ -49,6 +50,8 @@ export default class ForecastCtrl {
                 }
             }
         }
+
+        var a = "";
     }
 
     getOppositeMatch(match) {
