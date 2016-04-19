@@ -55,19 +55,19 @@
                 <tr>
                     <td ng-repeat="cell in row.cells">
                         <div ng-show="cell.type == 'green'" ng-click="ctrl.brokeCell(cell.value)"
-                             class="game-two-item game-two-green col-4x4" ng-class="cell.value.is_crashed ? 'crashed': 'notCrashed'">
+                             class="game-two-item game-two-green col-4x4" style="background-image: url({{cell.value.small_image}})" ng-class="cell.value.is_crashed ? 'crashed': 'notCrashed'">
 
                             <div class="item-{{cell.classIndex}} item"
                                  ></div>
                         </div>
 
                         <div ng-show="cell.type == 'blue'" ng-click="ctrl.brokeCell(cell.first)"
-                             class="game-two-item game-two-while col-1x1"  ng-class="cell.first.is_crashed ? 'crashed': 'notCrashed'">
+                             class="game-two-item game-two-while col-1x1" style="background-image: url({{cell.first.small_image}})"  ng-class="cell.first.is_crashed ? 'crashed': 'notCrashed'">
                             <div class="item-{{cell.firstClassIndex}} item"
                                  ></div>
                         </div>
                         <div ng-show="cell.type == 'blue'" ng-click="ctrl.brokeCell(cell.second)"
-                             class="game-two-item game-two-while col-1x1" ng-class="cell.second.is_crashed ? 'crashed': 'notCrashed'" >
+                             class="game-two-item game-two-while col-1x1" style="background-image: url({{cell.second.small_image}})" ng-class="cell.second.is_crashed ? 'crashed': 'notCrashed'" >
                             <div class="item-{{cell.secondClassIndex}} item" ></div>
                         </div>
                     </td>
@@ -120,10 +120,13 @@
                 <div class="mobal-button priz clearfix">
                     <div class="mobal-button-left"></div>
                     <div class="mobal-button-right ">
-                        <button class="btn btn_primary" ng-click="ctrl.startGame()">Играть!</button>
+                        <button class="btn btn_primary" ng-disabled="ctrl.currentCell.cell_type == 'green' && !ctrl.coupons" ng-click="ctrl.startGame()">Играть!</button>
                     </div>
-                    <div class="mobal-button-center" ng-click="ctrl.startGame()">
+                    <div class="mobal-button-center" ng-show="ctrl.currentCell.cell_type == 'blue' || ctrl.coupons">
                         <p>Приготовьтесь отвечать на время</p>
+                    </div>
+                    <div class="mobal-button-center" ng-show="ctrl.currentCell.cell_type == 'green' && !ctrl.coupons">
+                        <p>Введите промо-код в <a ng-click="ctrl.goToTestDrives()" ui-sref="dashboard.profile.mytestdrive">личном кабинете</a></p>
                     </div>
                 </div>
             </div>

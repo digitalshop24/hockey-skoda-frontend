@@ -25,9 +25,11 @@
                                                            placeholder="Фамилия* (Обязательное поле)" required minlength="2"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 text-right" input-mask-init><input required="true" type="text" ng-model="ctrl.mobilephone"
-                                                            class="input_default input_small phone-mask"
-                                                            placeholder="Телефон* (Обязательное поле)" required minlength="2"></div>
+                    <div class="col-md-6 text-right">
+                        <input type="text" class="input_default input_small phone-mask" name="phone"  placeholder="Телефон* (Обязательное поле)"
+                               mask="+7(999) 999-9999" clean="true" ng-model="ctrl.mobilephone" required>
+
+                    </div>
                     <div class="col-md-6 text-left"><input type="email" ng-model="ctrl.email"
                                                            class="input_default input_small"
                                                            placeholder="E-mail* (Обязательное поле)" required minlength="2"></div>

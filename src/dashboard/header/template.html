@@ -163,7 +163,7 @@
 
                     </ul>
               </div>
-              <div class="notifi" ng-show="ctrl.isLogoutMenuOpen" ng-mouseleave="ctrl.isLogoutMenuOpen = false" ng-mouseover="ctrl.isLogoutMenuOpen = true">
+              <div class="notifi"  ng-show="ctrl.session.isAuthenticated && ctrl.isLogoutMenuOpen" ng-mouseleave="ctrl.isLogoutMenuOpen = false" ng-mouseover="ctrl.isLogoutMenuOpen = true">
                     <ul>
                         <li ng-click="ctrl.state.go('dashboard.profile.progress')">
                             <a href="" >Личный кабинет</a>

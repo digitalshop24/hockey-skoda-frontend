@@ -42,16 +42,21 @@ export default class VideoCtrl {
                         this.step(event.target.getPlaylistIndex());
                     } else if (event.data == YOUTUBE_PAUSE) {
 
-                        this.youtubeClick = true;
-                        this.step(event.target.getPlaylistIndex());
+                        if(!this.userChangedMainVideoWhileAnotherPlaying) {
+                            this.youtubeClick = true;
+                            this.step(event.target.getPlaylistIndex());
 
-                        timer = this.$timeout(() => {
-                            this.showVideoInfo = true;
-                            this.shouldPlayNewVideo = false;
-                            const secondsDuration = moment.duration(this.player.getCurrentTime(), 's');
-                            const wholeSeconds = secondsDuration.seconds() < 10 ? "0" + secondsDuration.seconds() : secondsDuration.seconds();
-                            this.videoTime = secondsDuration.minutes() + ":" + wholeSeconds;
-                        }, 3000);
+                            timer = this.$timeout(() => {
+                                this.showVideoInfo = true;
+                                this.shouldPlayNewVideo = false;
+                                const secondsDuration = moment.duration(this.player.getCurrentTime(), 's');
+                                const wholeSeconds = secondsDuration.seconds() < 10 ? "0" + secondsDuration.seconds() : secondsDuration.seconds();
+                                this.videoTime = secondsDuration.minutes() + ":" + wholeSeconds;
+                            }, 3000);
+                        } else {
+                            this.userChangedMainVideoWhileAnotherPlaying = false;
+                        }
+
 
                     }
                 });
@@ -130,6 +135,7 @@ export default class VideoCtrl {
         this.videoTime = undefined;
         if (this.player) {
             this.player.pauseVideo();
+            this.userChangedMainVideoWhileAnotherPlaying = true;
         }
         window.scrollTo(0, 0);
     }

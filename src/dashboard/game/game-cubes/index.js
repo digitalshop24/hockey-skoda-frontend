@@ -21,13 +21,9 @@ export default angular.module('dashboard.game.cubes', [
                         return cubesService.getSectorInfo($stateParams.id);
                     },
 
-                    prizes: cubesService => {
-                        return cubesService.getPrizes();
-                    },
-
                     coupons: (session, mytestdriveService) => {
                         if (session.isAuthenticated) {
-                            return mytestdriveService.getCoupons();
+                            return mytestdriveService.getCoupon();
                         }
                         return [];
                     },
