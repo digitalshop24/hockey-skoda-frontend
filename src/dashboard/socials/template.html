@@ -74,11 +74,11 @@
         <div ng-class="{'active_tag' : !ctrl.hashtag}" class="tag_right_hokey">Соц.сети хоккеистов</div>
     </a>
     <a ng-show="ctrl.hashtag && ctrl.hashtag.toLowerCase() != '#Хоккейвкаждом'.toLowerCase() " ui-sref="dashboard.socials({hashtag: ctrl.hashtag})">
-        <div ng-class="{'active_tag' : ctrl.hashtag}" class="tag_left_hokey" ng-bind="ctrl.hashtag" style="left: 5%;"></div>
+        <div ng-class="{'active_tag' : ctrl.hashtag && ctrl.hashtag.toLowerCase() != '#Хоккейвкаждом'.toLowerCase()}" class="tag_left_hokey" ng-bind="ctrl.hashtag" style="left: 5%;"></div>
     </a>
 
     <a ui-sref="dashboard.socials({hashtag: '#Хоккейвкаждом'})">
-        <div ng-class="{'active_tag' : ctrl.hashtag}" class="tag_left_hokey">#Хоккейвкаждом</div>
+        <div ng-class="{'active_tag' : ctrl.hashtag && ctrl.hashtag.toLowerCase() == '#Хоккейвкаждом'.toLowerCase()}" class="tag_left_hokey">#Хоккейвкаждом</div>
     </a>
 
     <div class="dop_tag" ng-show="!ctrl.days.length" style="">
