@@ -120,10 +120,13 @@
                 <div class="mobal-button priz clearfix">
                     <div class="mobal-button-left"></div>
                     <div class="mobal-button-right ">
-                        <button class="btn btn_primary" ng-click="ctrl.startGame()">Играть!</button>
+                        <button class="btn btn_primary" ng-disabled="ctrl.currentCell.cell_type == 'green' && !ctrl.coupons" ng-click="ctrl.startGame()">Играть!</button>
                     </div>
-                    <div class="mobal-button-center" ng-click="ctrl.startGame()">
+                    <div class="mobal-button-center" ng-show="ctrl.currentCell.cell_type == 'blue' || ctrl.coupons">
                         <p>Приготовьтесь отвечать на время</p>
+                    </div>
+                    <div class="mobal-button-center" ng-show="ctrl.currentCell.cell_type == 'green' && !ctrl.coupons">
+                        <p>Введите промо-код в <a ui-sref="dashboard.profile.mytestdrive">личном кабинете</a></p>
                     </div>
                 </div>
             </div>
