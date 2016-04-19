@@ -19,7 +19,6 @@ export default class VideoCtrl {
         this.videos = videoInfo.posts;
         this.videos.forEach((video, index) => {
             video.index = index;
-            // video.tags = ['aaaa','bbbbb', 'ccccc']
         });
         this.setNewMainVideo(this.videos[0]);
         this.videoAmount = videoInfo.posts_count;
@@ -126,7 +125,7 @@ export default class VideoCtrl {
         this.showVideoInfo = true;
         this.shouldPlayNewVideo = true;
         this.currentVideo = video;
-        //this.state.transitionTo('dashboard.video', {id: this.currentVideo.id,  hashtags: this.tags.join(',')}, {notify: false});
+        this.state.transitionTo('dashboard.video', {id: this.currentVideo.id,  hashtags: this.tags.join(',')}, {notify: false});
         this.currentVideo.socialUrl = 'https://www.youtube.com/watch?v=' + this.currentVideo.video_code;
         this.videoTime = undefined;
         if (this.player) {

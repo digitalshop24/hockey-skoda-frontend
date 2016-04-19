@@ -117,7 +117,7 @@
         <div class="row">
             <div class="col-md-3 text-center">
                 <select class="input_default input_small"
-                        ng-options="team.country for team in ctrl.teams track by team.id"
+                        ng-options="team.country for team in ctrl.allTeams track by team.id"
                         ng-model="ctrl.teamFilter">
                     <option selected value>Выберите команду</option>
                 </select>

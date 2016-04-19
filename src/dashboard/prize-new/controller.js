@@ -2,12 +2,12 @@
 
 
 export default class PrizenewCtrl {
-    constructor(sponsors, user, session, login) {
+    constructor(sponsors, user, session, login, id) {
         this.sponsors = sponsors;
         this.user = user;
         this.session = session;
         this.login = login;
-        this.currentSponsorIndex = 0;
+        this.currentSponsorIndex = id ? sponsors.findIndex(sp => sp.id == id) : 0 ;
         this.currentSponsor = sponsors[this.currentSponsorIndex];
         this.responsive = [
             {
