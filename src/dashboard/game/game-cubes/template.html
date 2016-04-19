@@ -272,18 +272,36 @@
 
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal"></button>
-
-                    <div class="otv-fre">
-                        <input type="text" placeholder="Имя" ng-model="ctrl.userData.first_name" required>
-                        <input type="text" placeholder="Фамилия" ng-model="ctrl.userData.last_name">
-                        <input type="text" placeholder="Отчество" ng-model="ctrl.userData.middle_name">
-                        <input type="text" placeholder="Адрес" ng-model="ctrl.userData.address">
-                        <input type="text" placeholder="Телефон" ng-model="ctrl.userData.phone" required>
-                        <input type="text" placeholder="Комментарий к викторине" ng-model="ctrl.userData.comment">
+                    
+                    
+                    <div class="otv-fre otv-reg clearfix">
+                        <div class="title">
+                            <h3>Личные данные </h3>
+                            <p>Для участия в розыгрыше подтвердите Ваши личные данные.</p>
+                        </div>
+                        <div class="otv-reg-block">
+                            <div class="otv-reg-left">
+                                <input type="text" placeholder="Имя" ng-model="ctrl.userData.first_name" required>
+                                <input type="text" placeholder="Фамилия" ng-model="ctrl.userData.last_name">
+                                <input type="text" placeholder="Отчество" ng-model="ctrl.userData.middle_name">
+                            </div>
+                            <div class="otv-reg-right">
+                                <input type="text" placeholder="Адрес" ng-model="ctrl.userData.address">
+                                <input type="text" placeholder="Телефон" ng-model="ctrl.userData.phone" required>
+                                <textarea type="text" placeholder="Комментарий к викторине" ng-model="ctrl.userData.comment"></textarea>
+                            </div>
+                        </div>
+                        <div class="otv-reg-checkbox">
+                            <input type="checkbox" ng-model="ctrl.form.policy_agreed" id="c1">
+                            <label for="c1"><span></span><a href="" ui-sref="dashboard.consent">Соглашаюсь с обработкой персональных данных</a></label>
+                        </div>
+                        
+                        
+                        
                     </div>
 
 
-                    <div class="mobal-button priz otvet clearfix">
+                    <div class="mobal-button priz otvet otv-reg-but clearfix">
                         <div class="mobal-button-right">
                             <button type="submit" class="btn btn_primary">Далее</button>
                         </div>
