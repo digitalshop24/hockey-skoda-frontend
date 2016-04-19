@@ -306,13 +306,13 @@
 
             <div class="otv-fre" ng-show="((ctrl.currentCell.cell_type == 'green' && ctrl.result.right_answers_count == 3)
                 || ctrl.currentCell.cell_type == 'blue') && ctrl.result.prize && !ctrl.uspVictorina">
-                <p class="title-priz">Приз: {{ctrl.result.prize.name}}</p>
+                <h3 class="title-priz"> {{ctrl.result.prize.name}}</h3>
                 <div class="pr-block clearfix">
                   <div class="img">
                     <img src="{{ctrl.result.prize.image.small}}"/>
                   </div>
                   <div class="text-right">
-                    <p>Описание: {{ctrl.result.prize.description}}</p>
+                    <p> {{ctrl.result.prize.description}}</p>
                 
                     <a class="btn btn_primary" ng-click="ctrl.goToPrizes()">Как получить приз</a>
                   </div>
