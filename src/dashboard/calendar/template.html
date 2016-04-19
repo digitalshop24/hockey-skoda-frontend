@@ -6,7 +6,7 @@
 
                 <datepicker ng-model="ctrl.currentDate" max-date="ctrl.maxDate" min-date="ctrl.minDate" ng-change="ctrl.updateCalendar(ctrl.currentDate)" starting-day="1" max-mode="month" format-day-title="yyyy MMM" show-weeks="false" class="well well-sm"></datepicker>
                 <div class="calen-text">
-                    <p>Напоминание о предстоящем матче будет отправлено вам по смс. Убедитесь что вы указали Ваш номер телефона в анкете. ссылка: Указать телефон</p>
+                    <p>Напоминание о предстоящем матче будет отправлено вам по смс. Убедитесь что вы указали Ваш номер телефона в анкете. <a ui-sref="dashboard.edit">Указать телефон</a></p>
                 </div>
 
             </div>
