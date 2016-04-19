@@ -6,7 +6,7 @@ export default class PhotocontestService {
     }
 
     loadImage(image) {
-        return this.api.post('/users/photo_game', {
+        return this.api.post('/photo_game_posts/my_photo_game', {
             image: image
         }).then((res) => {
             return res.data;
@@ -14,7 +14,7 @@ export default class PhotocontestService {
     }
 
     getMyPhotos() {
-        return this.api.get('/users/photo_game').then((res) => {
+        return this.api.get('/photo_game_posts/my_photo_game').then((res) => {
             return res.data;
         });
     }
