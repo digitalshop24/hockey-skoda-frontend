@@ -19,9 +19,9 @@ module.exports = function (bundler, config) {
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(ngAnnotate());
 
-    /*if (!config.noMinify) {
+    if (!config.noMinify) {
         bundle.pipe(uglify({mangle : false}));
-    }*/
+    }
 
     bundle
         .pipe(sourcemaps.write("."))
