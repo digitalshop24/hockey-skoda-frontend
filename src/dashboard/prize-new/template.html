@@ -1,0 +1,121 @@
+
+<section class="slider_prizes">
+    <div class="container-fluid">
+        <div class="row">
+            
+                <slick infinite="true" slides-to-show="4" slides-to-scroll="1" arrows="false" dots="false" focusOnSelect="true"
+                       class="second_slider_priz text-center" as-nav-for=".main_slider_priz" swipe="true" responsive="ctrl.responsive">
+
+                    <div class="itep_priz" ng-click="ctrl.changeSponsor(sponsor)" ng-repeat="sponsor in ctrl.sponsors" style="background-image: url({{sponsor.image.small}})">
+                    </div> 
+                   
+                </slick>   
+              
+<section class="prizes_use_date">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7 text-left text_titel">
+                <h3 ng-bind="ctrl.currentSponsor.name">Призы от <br> Škoda hockey</h3>
+                <p ng-bind-html="ctrl.currentSponsor.description"></p>
+            </div>
+            <div class="col-md-5  text-left user_info" >
+                <p ng-show="!ctrl.session.isAuthenticated">Чтобы участвовать в розигрышах призов, необходимо <br> <a
+                        ng-click="ctrl.login.open()" href="#">Авторизироваться или пройти регистрацию</a></p>
+               <!--  <div ng-show="ctrl.session.isAuthenticated" class="clearfix">
+                    <div class="user-right clearfix">
+                        <div class="img">
+                            <img src="{{ctrl.user.avatar.thumb}}" alt="" class="img-responsive">
+                        </div> 
+                        <div class="text-user">
+                            <h5 ng-bind="ctrl.user.name">Михаил Клюшников</h5>
+                            <h3 ng-bind="ctrl.user.achievments_score + ' баллов'"></h3>
+                            <h6 ng-bind="'+' + ctrl.user.achievments_score_today + ' сегодня'">+180 сегодня</h6>
+                        </div>
+                    </div>
+                    
+                    
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+                <slick current-index="ctrl.currentSponsorIndex" on-after-change="ctrl.changeSponsor()" slides-to-show=1
+                       slides-to-scroll=1 arrows=true class="text-center main_slider_priz" as-nav-for=".second_slider_priz">
+                    <div ng-repeat="sponsor in ctrl.sponsors"><h6 ng-bind="sponsor.name"></h6></div>
+                </slick>
+            
+        </div>
+        <div class="row page_prizs_priz">
+
+            <div ng-repeat="prize in ctrl.currentSponsor.prizes">
+                <div class="col-md-3">
+                    <slick slides-to-show=1 slides-to-scroll=1 arrows=false dots=true>
+                        <div><img src="{{prize.image.small}}" alt="" class="img-responsive"></div>
+
+                    </slick>
+
+                </div>
+                <div class="col-md-3">
+                    <ul class="info_priz">
+                        <li></li>
+                        <li ng-bind="prize.name">Билеты на матч Россия-Латвия</li>
+                        <li ng-bind="prize.description">Поддержи наших на стадионе! Ты должен быть там!</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <button class="btn btn_primary tiny" ng-disabled="false" ui-sref="dashboard.game.sectors">Участвовать!</button>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="row how">
+        <div class="col-md-12"><h6>Как выиграть автомобиль?</h6></div>
+            <div class="col-md-6">
+                
+                <p>Чтобы принять участие в розыгрыше автомобиля, Вам необходимо принять участие в квесте, который включает следующие шаги:<br>
+                1. Пройти тест-драйв в дилерском центре, получить купон с промо-кодом.<br>
+                2. Активировать полученный промо-код на сайте hockey-skoda.ru<br>
+                3. Набрать 1500 баллов на сайте и купить «супер ячейку».<br> 
+                4. Ответить на 3 несложных вопроса о хоккее, и получить инструкции для участия в творческом конкурсе</p>
+            </div>
+            <div class="col-md-6">
+                
+                <p>
+                5. Принять участие в творческом конкурсе, в котором будут выбраны 25 супер-финалистов!<br>
+                6. Сыграть в режиме онлайн в интеллектуальную игру на темы хоккея и SKODA против других участников и ответить на максимальное количество вопросов!<br><br>
+                Если Вы все сделаете безупречно, то обязательно окажетесь в числе трех счастливчиков, которые разделят между собой призовой фонд – 3 автомобиля SKODA! <span class="pravil" ui-sref="dashboard.regulations">Правила конкурса</span>
+                </p> 
+            </div>
+        </div>
+
+        <div class="row how">
+            <div class="col-md-12">
+                <p>*Срок проведения конкурса – с 19 апреля по 19 мая. Информация об организаторе конкурса, о правилах его проведения, количестве призов по результатам конкурса, сроках,
+                    месте и порядке их получения – на <a style="color: #4ba82e" href="http://hockey-skoda.ru/">www.hockey-skoda.ru</a>.</p>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<section class="wrapp_mainpage_end">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3><!-- #хоккейвкаждом --></h3>
+
+                <h1><!-- Škoda hockey edition --></h1>
+                 <ul class="text-left">
+                    <span></span>
+                </ul>
+            </div>
+           
+        </div>
+
+    </div>
+    
+</section>
