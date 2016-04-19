@@ -55,19 +55,19 @@
                 <tr>
                     <td ng-repeat="cell in row.cells">
                         <div ng-show="cell.type == 'green'" ng-click="ctrl.brokeCell(cell.value)"
-                             class="game-two-item game-two-green col-4x4" ng-class="cell.value.is_crashed ? 'crashed': 'notCrashed'">
+                             class="game-two-item game-two-green col-4x4" style="background-image: url({{cell.small_image}})" ng-class="cell.value.is_crashed ? 'crashed': 'notCrashed'">
 
                             <div class="item-{{cell.classIndex}} item"
                                  ></div>
                         </div>
 
                         <div ng-show="cell.type == 'blue'" ng-click="ctrl.brokeCell(cell.first)"
-                             class="game-two-item game-two-while col-1x1"  ng-class="cell.first.is_crashed ? 'crashed': 'notCrashed'">
+                             class="game-two-item game-two-while col-1x1" style="background-image: url({{cell.small_image}})"  ng-class="cell.first.is_crashed ? 'crashed': 'notCrashed'">
                             <div class="item-{{cell.firstClassIndex}} item"
                                  ></div>
                         </div>
                         <div ng-show="cell.type == 'blue'" ng-click="ctrl.brokeCell(cell.second)"
-                             class="game-two-item game-two-while col-1x1" ng-class="cell.second.is_crashed ? 'crashed': 'notCrashed'" >
+                             class="game-two-item game-two-while col-1x1" style="background-image: url({{cell.small_image}})" ng-class="cell.second.is_crashed ? 'crashed': 'notCrashed'" >
                             <div class="item-{{cell.secondClassIndex}} item" ></div>
                         </div>
                     </td>
