@@ -14,7 +14,7 @@ export default angular.module('dashboard.prizenew', [])
                     description: 'Вы можете рассказать о призах, которые можно выиграть, своим друзьям, участвуя в огромном количестве интересных активностей на сайте.'
                 },
                 template: require('./template.html'),
-                url: '/contests',
+                url: '/contests?id=',
                 controller: PrizenewCtrl,
                 controllerAs: 'ctrl',
                 resolve: {
@@ -27,6 +27,10 @@ export default angular.module('dashboard.prizenew', [])
                             return profileService.getCurrentUser();
                         }
                         return {};
+                    },
+
+                    id: $stateParams => {
+                        return $stateParams.id;
                     }
                 }
             });
