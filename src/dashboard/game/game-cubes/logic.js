@@ -13,7 +13,7 @@ export default angular.module('dashboard.game.cubes.logic', [])
 
                 angular.element(document).ready(() => {
                     $('.game-two-while.notCrashed').click(function() {
-                        $(this).addClass('tres'); 
+                        $(this).addClass('tres' + (Math.floor(Math.random() * (3)) + 1));
                     });
                     $('.game-two-green.notCrashed').click(function() {
                         $(this).addClass('tres');

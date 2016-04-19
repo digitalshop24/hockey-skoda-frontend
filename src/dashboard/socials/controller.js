@@ -43,8 +43,8 @@ export default class SocialCtrl {
             post.iconClass = post.network;
             post.repostText = post.reposts + ' ' + this.getRepostText(post.network);
             post.iconUrl = this.getIconUrl(post.network);
-            if (post.content.length > 600) {
-                post.minContent = post.content.substring(0, 600) + '...';
+            if (post.content.length > 300) {
+                post.minContent = post.content.substring(0, 300) + '...';
                 post.showMinContent = true;
             }
 

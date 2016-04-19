@@ -785,7 +785,7 @@ footer {
   border-radius: 50px;
   position: absolute;
   color: $grey;
-  right: 27%;
+  right: 23%;
   margin-top: -26px;
   position: absolute;
   z-index: 10;
@@ -1036,6 +1036,10 @@ footer {
   background-color: #efefef;
   .textEdit {
     padding: 0 10px;
+    margin-top: 50px;
+    .input_small {
+      width: 30%
+    }
   }
   button {
     margin: 40px 10px;
@@ -1200,6 +1204,11 @@ footer {
   min-height: 90vh;
   .fix_bottom {
     margin-bottom: 30px;
+  }
+  .share_btn {
+    position: absolute;
+    z-index: 1000;
+    right: 20px;
   }
   .mounth {
     padding: 20px 0 70px 0;
@@ -3331,6 +3340,9 @@ $grey_about: #5d5d5d;
   padding: 50px 20px;
   min-height: 90vh;
   margin-left: 100px;
+  .tantam-share {
+    margin:0;
+  }
   .wrapp_text {
     p {
       font-size: 2rem;
@@ -3403,7 +3415,7 @@ $grey_about: #5d5d5d;
   }
   ul {
     display: inline-block;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
     li{
       display: inline-block;
        img {
@@ -3602,6 +3614,7 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- priznew
 .prizes_use_date {
  background:#ececec;
+ padding-left:47px;
   .user_info {
     p {
       font-size: $p_size;
@@ -3636,6 +3649,7 @@ $grey_about: #5d5d5d;
     .user-right {
       width:430px;
       float:right;
+      padding-top:82px;
     }
     .img {
       float:left;
@@ -3647,7 +3661,7 @@ $grey_about: #5d5d5d;
   }
   .text_titel {
     padding-top: 50px;
-    padding-bottom:50px;
+    // padding-bottom:50px;
     h3 {
       color: $green_main;
       text-transform: uppercase;
@@ -3657,7 +3671,7 @@ $grey_about: #5d5d5d;
     p {
       padding-top: 10px;
       font-size: $p_size;
-      min-height: 300px;
+      min-height: 250px;
     }
   }
 }
@@ -3728,6 +3742,7 @@ $grey_about: #5d5d5d;
       background-repeat: no-repeat;
       margin: 0 0px;
       position:relative;
+      cursor: pointer;
       &::after {
         position:absolute;
         bottom:-3px;
@@ -3746,8 +3761,6 @@ $grey_about: #5d5d5d;
         content:'';
         height: 0px;
         width:0px;
-        transition:background-image 1000ms linear;
-        background-image: url("img/resources/img/icon-treu-pro.png") ;
       }
       &:hover::after {
         position:absolute;
@@ -3767,10 +3780,8 @@ $grey_about: #5d5d5d;
         content:'';
         height: 13px;
         width:27px;
-        transition: background-image 1000ms linear;
         background-image: url("img/resources/img/icon-treug.png") ;
       }
->>>>>>> 470f3b448786793ea87511e813acb56cdb783680
       div {
         background-color: rgba(255, 255, 255, 0.3);
         height: 150px;
@@ -3835,6 +3846,7 @@ $grey_about: #5d5d5d;
 
   .page_prizs_priz {
     padding-top: 50px;
+    padding-bottom:25px;
     .slick-slide img {
         width: 250px;
         margin: 0 auto;
@@ -4227,9 +4239,20 @@ $grey_about: #5d5d5d;
 
 //-------------------------------------------------- calendar
 //-------------------------------------------------- calendar
-.on, .off {
-  margin-top:-32px;
+.calendar {
+  .off {
+    margin-top:-32px;
+  }
+  .tantam-share  {
+    margin: 0;
+    padding: 0;
+    border: none;
+    li {
+      border:none;
+    }
+  }
 }
+
 
 .calendar-slider {
   width:118px;

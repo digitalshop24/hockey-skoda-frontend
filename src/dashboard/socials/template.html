@@ -71,7 +71,7 @@
 
     <div class="dop_timeline"></div>
     <a ui-sref="dashboard.socials({hashtag: ''})">
-        <div ng-class="{'active_tag' : !ctrl.hashtag}" class="tag_right_hokey">Весь хоккей</div>
+        <div ng-class="{'active_tag' : !ctrl.hashtag}" class="tag_right_hokey">Соц.сети хоккеистов</div>
     </a>
     <a ng-show="ctrl.hashtag && ctrl.hashtag.toLowerCase() != '#Хоккейвкаждом'.toLowerCase() " ui-sref="dashboard.socials({hashtag: ctrl.hashtag})">
         <div ng-class="{'active_tag' : ctrl.hashtag}" class="tag_left_hokey" ng-bind="ctrl.hashtag"></div>
@@ -113,7 +113,7 @@
 
             <timeline-event ng-repeat="event in day.events | filter:ctrl.filterByNetworks as filtered" side="">
                 <timeline-badge class="{{event.badgeClass}}">
-                    <div style="background-image: url('{{event.profile_pic}}'); height: 50px; border-radius:50%;"></div>
+                    <div style="background-image: url('{{event.profile_pic}}');background-position:center center;background-size:cover; height: 50px; border-radius:50%;"></div>
                     <!--<i class="" ></i>-->
                 </timeline-badge>
                 <timeline-panel class="{{event.badgeClass}}">
