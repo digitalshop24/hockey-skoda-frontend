@@ -134,8 +134,8 @@
                     <li class="active_li">
                         <a href="">
                             <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/user.png" alt="" class="img-responsive">
-                            <img ng-show="ctrl.session.isAuthenticated" ng-click="ctrl.logout()" src="img/resources/img/log_out.png" alt="" class="img-responsive">
-                            <span ng-show="ctrl.session.isAuthenticated" ng-click="ctrl.state.go('dashboard.profile.progress')" ng-bind="ctrl.user.name"></span>
+                           <!--  <img ng-show="ctrl.session.isAuthenticated"  src="img/resources/img/log_out.png" alt="" class="img-responsive"> -->
+                            <span style="margin:0;" ng-show="ctrl.session.isAuthenticated"  ng-bind="ctrl.user.name" ng-mouseover="ctrl.isLogoutMenuOpen = true"></span>
                         </a>
                     </li>
 
@@ -159,6 +159,17 @@
                         <li ng-repeat="notification in ctrl.notifications">
                             <img src="img/resources/img/balls.png" alt="">
                             <span ng-bind="notification.text"></span>
+                        </li>
+
+                    </ul>
+              </div>
+              <div class="notifi" ng-show="ctrl.isLogoutMenuOpen" ng-mouseleave="ctrl.isLogoutMenuOpen = false">
+                    <ul>
+                        <li ng-click="ctrl.state.go('dashboard.profile.progress')">
+                            <a href="" >Личный кабинет</a>
+                        </li>
+                        <li ng-click="ctrl.logout()">
+                            <a href="">Выход</a>
                         </li>
 
                     </ul>
