@@ -3730,6 +3730,7 @@ $grey_about: #5d5d5d;
       background-repeat: no-repeat;
       margin: 0 0px;
       position:relative;
+      cursor: pointer;
       &::after {
         position:absolute;
         bottom:-3px;
