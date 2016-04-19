@@ -14,8 +14,8 @@ export default angular.module('dashboard.profile.mytestdrive', [])
                 controller: MytestdriveCtrl,
                 controllerAs: 'ctrl',
                 resolve: {
-                    coupons: mytestdriveService => {
-                        return mytestdriveService.getCoupons();
+                    coupon: mytestdriveService => {
+                        return mytestdriveService.getCoupon();
                     }
                 }
             });
