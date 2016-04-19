@@ -1205,6 +1205,11 @@ footer {
   .fix_bottom {
     margin-bottom: 30px;
   }
+  .share_btn {
+    position: absolute;
+    z-index: 1000;
+    right: 20px;
+  }
   .mounth {
     padding: 20px 0 70px 0;
     select {
@@ -3335,6 +3340,9 @@ $grey_about: #5d5d5d;
   padding: 50px 20px;
   min-height: 90vh;
   margin-left: 100px;
+  .tantam-share {
+    margin:0;
+  }
   .wrapp_text {
     p {
       font-size: 2rem;
@@ -3407,7 +3415,7 @@ $grey_about: #5d5d5d;
   }
   ul {
     display: inline-block;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
     li{
       display: inline-block;
        img {
@@ -4231,9 +4239,20 @@ $grey_about: #5d5d5d;
 
 //-------------------------------------------------- calendar
 //-------------------------------------------------- calendar
-.on, .off {
-  margin-top:-32px;
+.calendar {
+  .off {
+    margin-top:-32px;
+  }
+  .tantam-share  {
+    margin: 0;
+    padding: 0;
+    border: none;
+    li {
+      border:none;
+    }
+  }
 }
+
 
 .calendar-slider {
   width:118px;
