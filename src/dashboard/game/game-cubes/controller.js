@@ -38,6 +38,7 @@ export default class CubesCtrl {
                 }
             }
         });
+        this.categories.sort((a,b) => b.right_answers_count - a.right_answers_count);
 
         this.table = [];
         const greenCells = sector.cells.filter(cell => cell.cell_type == 'green');
