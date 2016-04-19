@@ -10,7 +10,7 @@
                     </div> 
                    
                 </slick>   
- </section>               
+              
 <section class="prizes_use_date">
     <div class="container-fluid">
         <div class="row">
@@ -21,7 +21,7 @@
         <!--     <div class="col-md-5  text-left user_info" >
                 <p ng-show="!ctrl.session.isAuthenticated">Чтобы участвовать в розигрышах призов, необходимо <br> <a
                         ng-click="ctrl.login.open()" href="#">Авторизироваться или пройти регистрацию</a></p>
-                <div ng-show="ctrl.session.isAuthenticated" class="clearfix">
+               <!--  <div ng-show="ctrl.session.isAuthenticated" class="clearfix">
                     <div class="user-right clearfix">
                         <div class="img">
                             <img src="{{ctrl.user.avatar.thumb}}" alt="" class="img-responsive">
@@ -34,13 +34,13 @@
                     </div>
                     
                     
-                </div>
+                </div> -->
 
             </div> -->
         </div>
     </div>
 </section>
-<section>
+
                 <slick current-index="ctrl.currentSponsorIndex" on-after-change="ctrl.changeSponsor()" slides-to-show=1
                        slides-to-scroll=1 arrows=true class="text-center main_slider_priz" as-nav-for=".second_slider_priz">
                     <div ng-repeat="sponsor in ctrl.sponsors"><h6 ng-bind="sponsor.name"></h6></div>
