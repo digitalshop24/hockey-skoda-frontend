@@ -9,7 +9,7 @@ const GREEN_AMOUNT = 20;
 const BLUE_AMOUNT = 20;
 
 export default class CubesCtrl {
-    constructor(sectors, sector, prizes, coupons, cubesService, $interval, modal, $state, id, user, session, auth) {
+    constructor(sectors, sector, coupons, cubesService, $interval, modal, $state, id, user, session, auth) {
         this.sectors = sectors;
         this.sector = sector;
         this.coupons = coupons;
@@ -21,24 +21,7 @@ export default class CubesCtrl {
         this.user = user;
         this.state = $state;
         this.auth = auth;
-        this.categories = [];
 
-        prizes.forEach(prize => {
-            if (prize.prize_category) {
-                if (this.categories.find(category =>category.name == prize.prize_category.name)) {
-                    const category = this.categories.find(category =>category.name == prize.prize_category.name);
-                    category.prizes.push(prize);
-
-                } else {
-                    this.categories.push({
-                        name: prize.prize_category.name,
-                        right_answers_count: prize.prize_category.right_answers_count,
-                        prizes: []
-                    })
-                }
-            }
-        });
-        this.categories.sort((a,b) => b.right_answers_count - a.right_answers_count);
 
         this.table = [];
         const greenCells = sector.cells.filter(cell => cell.cell_type == 'green');
@@ -82,15 +65,35 @@ export default class CubesCtrl {
 
     brokeCell(cell) {
         if (!cell.is_crashed) {
+            this.categories = [];
             this.currentCell = cell;
             this.cubeModalColor = cell.type;
-            $('#myModal').modal('show');
+            this.service.getPrizes(this.currentCell.id).then((res) => {
+                this.prizes = res.prizes;
+                res.prizes.forEach(prize => {
+                    if (prize.prize_category) {
+                        if (this.categories.find(category =>category.name == prize.prize_category.name)) {
+                            const category = this.categories.find(category =>category.name == prize.prize_category.name);
+                            category.prizes.push(prize);
+
+                        } else {
+                            this.categories.push({
+                                name: prize.prize_category.name,
+                                right_answers_count: prize.prize_category.right_answers_count,
+                                prizes: [prize]
+                            })
+                        }
+                    }
+                });
+                this.categories.sort((a, b) => b.right_answers_count - a.right_answers_count);
+                $('#myModal').modal('show');
+            });
         }
     }
 
     confirmUserData() {
         this.service.confirmUserData(this.userData).then(res => {
-            this.auth.initSession({data : res});
+            this.auth.initSession({data: res});
             this.user = res.user;
             $('#userData').modal('hide');
             $('#myModal').modal('show');
@@ -99,7 +102,7 @@ export default class CubesCtrl {
     }
 
     startUSPVictorina() {
-        if(this.busy) return;
+        if (this.busy) return;
         this.busy = true;
         $('#resultModal').modal('hide');
         this.service.startUSPGame(this.quiz.id)
@@ -126,16 +129,21 @@ export default class CubesCtrl {
     }
 
     startGame() {
-        if(!this.user.info_profile_filled) {
+        if (!this.user.info_profile_filled) {
+            if(!this.user.email) {
+                $('#myModal').modal('hide');
+                this.state.go('dashboard.edit');
+                return;
+            }
             $('#myModal').modal('hide');
             $('#userData').modal('show');
             this.userData = this.user;
             return;
         }
 
-        if(this.busy) return;
+        if (this.busy) return;
         this.busy = true;
-        this.service.startGame(this.currentCell.id)
+        this.service.startGame(this.currentCell.id, this.prizes.map(prize => prize.id))
             .then(res => {
                 this.busy = false;
                 this.quiz = res;
@@ -215,13 +223,13 @@ export default class CubesCtrl {
     checkAnswers() {
         this.$interval.cancel(this.thirdInterval);
         const answers = [];
-        if(this.firstAnswer) {
+        if (this.firstAnswer) {
             let firstAns = "";
             let notFirstTime = false;
-            for(let prop in this.firstAnswer) {
+            for (let prop in this.firstAnswer) {
 
-                if(this.firstAnswer[prop]) {
-                    if(notFirstTime) {
+                if (this.firstAnswer[prop]) {
+                    if (notFirstTime) {
                         firstAns += ', ';
                     }
                     firstAns += this.firstAnswer[prop];
@@ -233,13 +241,13 @@ export default class CubesCtrl {
             answers.push('');
         }
 
-        if(this.secondAnswer) {
+        if (this.secondAnswer) {
             answers.push(this.secondAnswer);
         } else {
             answers.push('');
         }
 
-        if(this.thirdAnswer) {
+        if (this.thirdAnswer) {
             answers.push(this.thirdAnswer);
         } else {
             answers.push('');

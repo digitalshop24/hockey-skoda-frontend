@@ -11,15 +11,23 @@ export default class CubesService {
         })
     }
 
-    getPrizes() {
-        return this.api.get('/victorina/prizes').then(res => {
+    getPrizes(id) {
+        return this.api.get('/victorina/prizes', {
+            params: {
+                cell_id: id
+            }
+        }).then(res => {
             return res.data;
         })
     }
 
-    startGame(cellId) {
+    startGame(cellId, prizes) {
         return this.api.post('/victorina/start', {
-            cell_id: cellId
+            cell_id: cellId,
+            prize_0_id: prizes[0],
+            prize_1_id: prizes[1],
+            prize_2_id: prizes[2],
+            prize_3_id: prizes[3]
         })
             .then(res => {
                 return res.data;
