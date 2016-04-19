@@ -274,6 +274,11 @@ export default class CubesCtrl {
         this.state.go('dashboard.profile.fotocontest');
     }
 
+    goToTestDrives() {
+        $('#myModal').modal('hide');
+        this.state.go('dashboard.profile.mytestdrive');
+    }
+
     shuffle(a) {
         var j, x, i;
         for (i = a.length; i; i -= 1) {

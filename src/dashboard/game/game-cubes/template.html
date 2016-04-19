@@ -126,7 +126,7 @@
                         <p>Приготовьтесь отвечать на время</p>
                     </div>
                     <div class="mobal-button-center" ng-show="ctrl.currentCell.cell_type == 'green' && !ctrl.coupons">
-                        <p>Введите промо-код в <a ui-sref="dashboard.profile.mytestdrive">личном кабинете</a></p>
+                        <p>Введите промо-код в <a ng-click="ctrl.goToTestDrives()" ui-sref="dashboard.profile.mytestdrive">личном кабинете</a></p>
                     </div>
                 </div>
             </div>
