@@ -3,7 +3,6 @@
 import angular from 'angular';
 import TestDriveCtrl from './controller.js';
 import TestDriveService from './service.js';
-import InputMask from './inputmask/input-mask.js';
 
 export default angular.module('dashboard.tdrive', [])
     .service('tdriveService', TestDriveService)
