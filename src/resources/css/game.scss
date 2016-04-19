@@ -1480,7 +1480,8 @@
     border-radius: 5px;
   }
   .title-priz {
-    font-size:1.7rem;
+    font-size:2.3rem;
+    text-align:right;
   }
   .pr-block {
     .img {
@@ -1490,6 +1491,7 @@
     .text-right {
       overflow:hidden;
       text-align:left;
+      padding-top:50px;
       p {
         font-size:1.4rem;
         padding-bottom:25px;
