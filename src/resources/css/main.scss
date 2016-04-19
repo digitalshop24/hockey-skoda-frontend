@@ -3649,7 +3649,7 @@ $grey_about: #5d5d5d;
   }
   .text_titel {
     padding-top: 50px;
-    padding-bottom:50px;
+    // padding-bottom:50px;
     h3 {
       color: $green_main;
       text-transform: uppercase;
@@ -3659,7 +3659,7 @@ $grey_about: #5d5d5d;
     p {
       padding-top: 10px;
       font-size: $p_size;
-      min-height: 300px;
+      min-height: 250px;
     }
   }
 }

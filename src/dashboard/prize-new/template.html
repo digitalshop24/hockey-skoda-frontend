@@ -13,11 +13,11 @@
 <section class="prizes_use_date">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-7 text-left text_titel">
+            <div class="col-md-12 text-left text_titel">
                 <h3 ng-bind="ctrl.currentSponsor.name">Призы от <br> Škoda hockey</h3>
                 <p ng-bind-html="ctrl.currentSponsor.description"></p>
             </div>
-            <div class="col-md-5  text-left user_info" >
+        <!--     <div class="col-md-5  text-left user_info" >
                 <p ng-show="!ctrl.session.isAuthenticated">Чтобы участвовать в розигрышах призов, необходимо <br> <a
                         ng-click="ctrl.login.open()" href="#">Авторизироваться или пройти регистрацию</a></p>
                 <div ng-show="ctrl.session.isAuthenticated" class="clearfix">
@@ -35,7 +35,7 @@
                     
                 </div>
 
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
