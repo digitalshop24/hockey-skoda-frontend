@@ -1709,10 +1709,11 @@ $grey_about: #5d5d5d;
         top: -3px;
         button {
           text-transform: uppercase;
-          color: $green_main;
+          color: $black;
           border: none;
           margin-left: 10px;
           border-radius: 0px;
+          font-family: $bold;
         }
       }
     }
