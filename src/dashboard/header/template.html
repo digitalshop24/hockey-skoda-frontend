@@ -80,16 +80,16 @@
     <div class="container-fluid hidden-xs hidden-sm">
         <div class="row">
             <div class="col-sm-12 col-md-12 left_head text-left">
-                <a ui-sref="dashboard.main" class="logo" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
+                <a ui-sref="dashboard.main" class="logo" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false; ctrl.isLogoutMenuOpen = false"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
                 <ul>
-                    <li ng-mouseover="ctrl.isMenuOpen = true; ctrl.isPNewsOpen = false;" class="active_li">
+                    <li ng-mouseover="ctrl.isMenuOpen = true; ctrl.isPNewsOpen = false; ctrl.isLogoutMenuOpen = false;"  class="active_li">
                         <a href="">
                             <span>Меню</span>
                             <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
                         </a>
                     </li>
                     <li  class="active_li" ng-mouseleave="ctrl.isPNewsOpen = false">
-                        <a href="" ui-sref="dashboard.general-news" ng-mouseover="ctrl.isPNewsOpen = true; ctrl.isMenuOpen = false" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false" >
+                        <a href="" ui-sref="dashboard.general-news" ng-mouseover="ctrl.isPNewsOpen = true; ctrl.isMenuOpen = false; ctrl.isLogoutMenuOpen = false;" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false" >
                             <span>Материалы</span>
                              <img src="img/resources/img/skoda_arrow.jpg" alt="" class="img-responsive">
 
@@ -131,16 +131,16 @@
                             <span> Тест-Драйв</span>
                         </a>
                     </li>
-                    <li class="active_li">
+                    <li class="active_li" ng-mouseleave="ctrl.isLogoutMenuOpen = false" ng-mouseover="ctrl.isLogoutMenuOpen = true">
                         <a href="">
                             <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/user.png" alt="" class="img-responsive">
                            <!--  <img ng-show="ctrl.session.isAuthenticated"  src="img/resources/img/log_out.png" alt="" class="img-responsive"> -->
-                            <span style="margin:0;" ng-show="ctrl.session.isAuthenticated"  ng-bind="ctrl.user.name" ng-mouseover="ctrl.isLogoutMenuOpen = true"></span>
+                            <span style="margin:0;" ng-show="ctrl.session.isAuthenticated"  ng-bind="ctrl.user.name" ></span>
                         </a>
                     </li>
 
-                    <li class="active_li">
-                        <a href="" ng-mouseover="ctrl.isNotifOpen = true">
+                    <li class="active_li" ng-mouseleave="ctrl.isNotifOpen = false" ng-mouseover="ctrl.isNotifOpen = true">
+                        <a href="" >
                             <img src="img/resources/img/notifi.png" alt="" class="img-responsive">
                             <span ng-show="ctrl.notifications.length" ng-bind="ctrl.notifications.length"></span>
                         </a>
@@ -163,7 +163,7 @@
 
                     </ul>
               </div>
-              <div class="notifi" ng-show="ctrl.isLogoutMenuOpen" ng-mouseleave="ctrl.isLogoutMenuOpen = false">
+              <div class="notifi" ng-show="ctrl.isLogoutMenuOpen" ng-mouseleave="ctrl.isLogoutMenuOpen = false" ng-mouseover="ctrl.isLogoutMenuOpen = true">
                     <ul>
                         <li ng-click="ctrl.state.go('dashboard.profile.progress')">
                             <a href="" >Личный кабинет</a>
