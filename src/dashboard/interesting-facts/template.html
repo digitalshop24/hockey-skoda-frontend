@@ -1,52 +1,185 @@
 <div class="wrapp_menu_fact">
-        <div class="menu_line ">
-            <ul>
-               <a ui-sref="dashboard.general-news"><li class="general_news_imgbg"><!-- <img src="img/resources/img/news/ico_menu1_noactive_notext.png" alt="" class="img-responsive"> --><p >События</p></li></a>
-                <a ui-sref="dashboard.facts"><li class="facts_imgbg"><!-- <img src="img/resources/img/news/ico_menu2_noactive_notext.png" alt=""  class="img-responsive"> --><p class="active_p">Факты</p></li></a>
-                <a ui-sref="dashboard.blog"><li class="blog_imgbg"><!-- <img src="img/resources/img/news/ico_menu3_active_notext.png" alt="" class="img-responsive"> --><p >Аналитика</p></li></a>
-            </ul>
-        </div>
+    <div class="menu_line ">
+        <ul>
+            <a ui-sref="dashboard.general-news">
+                <li class="general_news_imgbg">
+                    <p>События</p></li>
+            </a>
+            <a ui-sref="dashboard.facts">
+                <li class="facts_imgbg">
+                    <p class="active_p">Факты</p></li>
+            </a>
+            <a ui-sref="dashboard.blog">
+                <li class="blog_imgbg">
+                    <p>Аналитика</p></li>
+            </a>
+        </ul>
+    </div>
 </div>
 
-<section class="factSection">
-    
-        <div class="container-fluid">
-            <div class="row">
-                <div class=" clearfix masonry" >
-                  <div class="block-set item" ng-repeat="fact in ctrl.facts">
-                    <div class="block-interes-fact">
-                      <div class="fact-social clearfix">
-                        <div class="fact-social-im">
-                          <a href="#">
-                            <img src="{{fact.iconUrl}}" alt="" class="img-responsive">
-                          </a>
-                        </div>
-                        <div class="time">
-                          <a href="#" ng-bind="fact.published_at | amDateFormat:'DD.MM H:mm'"></a>
-                        </div>
-                      </div>
-                       <slick ng-show="fact.photos.length">
-                          <div class="img" ng-repeat="photo in fact.photos | limitTo:4">
-                            <img src="{{photo.image.small}}" alt="">
-                          </div>
+<section class="factSection" infinite-scroll="ctrl.loadMore()" infinite-scroll-disabled='this.busy'>
 
-                       </slick>
-                        <div class="text1">
-                            <p ng-bind-html="fact.content"></p>
+    <div class="fact-tabs">
+        <ul class="nav nav-tabs">
+            <li ng-class="{'active': ctrl.hockeyActive}">
+                <a ng-click="ctrl.changeTag({tag:'#хоккейныйфакт',hockeyActive:true})">#хоккейныйфакт</a>
+            </li>
+            <li ng-class="{'active': ctrl.skodaActive}">
+                <a ng-click="ctrl.changeTag({tag:'#skoda',skodaActive:true})">Факты от ŠKODA</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="fact-two masonry clearfix">
+                        <div class="fact-two-block item" ng-repeat="fact in ctrl.facts">
+                            <div class="fact-two-block-card">
+                                <div class="fact-two-block-act">
+                                    <slick ng-show="fact.photos.length">
+                                        <div class="img" ng-repeat="photo in fact.photos | limitTo:4">
+                                            <img src="{{photo.image.small}}" alt="">
+                                        </div>
+                                    </slick>
+                                    <div class="face clearfix">
+                                        <div class="face-img-left"
+                                             style="background-image:url({{fact.profile_pic}});background-position:center center;background-size:cover;">
+
+                                        </div>
+                                        <div class="face-text-right">
+                                            <h3 ng-bind="fact.profile_name">Михаил Клюшкин</h3>
+
+                                            <p class="time-face"
+                                               ng-bind="fact.published_at | amDateFormat:'DD.MM H:mm'">
+                                                1 апреля 15:23
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="fact-two-block-text">
+                                        <p ng-bind-html="fact.content"></p>
+                                    </div>
+                                </div>
+                                <div class="fact-two-block-hov">
+                                    <div class="fact-two-block-hov-rote">
+                                        <a class="btn" href="" data-toggle="modal" ng-click="ctrl.readMore(fact)"
+                                           data-target="#fact-modal">Читать полностью</a>
+
+                                        <div class="fact-social">
+                                            <share-buttons data="fact.shareData"></share-buttons>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="ret clearfix">
-                          <share-buttons data="fact.shareData"></share-buttons>
-                          <a href="" class="ret-link" ng-bind="fact.repostText"></a>
-                        </div>
-                        <!--<ul class="tag_post" ng-show="fact.tags.length">
-                          <li ng-repeat="tag in fact.tags"><a  href=""><p  ng-bind="tag">Брендон Галлахер</p></a></li>
-                      </ul>-->
                     </div>
-                  </div>
                 </div>
             </div>
         </div>
+        <!--<div id="menu1" class="tab-pane fade">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="fact-two masonry clearfix">
+                        <div class="fact-two-block item" ng-repeat="fact in ctrl.facts">
+                            <div class="fact-two-block-card">
+                                <div class="fact-two-block-act">
+                                    <slick ng-show="fact.photos.length">
+                                        <div class="img" ng-repeat="photo in fact.photos | limitTo:4">
+                                            <img src="{{photo.image.small}}" alt="">
+                                        </div>
+                                    </slick>
+                                    <div class="face clearfix">
+                                        <div class="face-img-left"
+                                             style="background-image:url('img/resources/img/Layer-37.jpg');background-position:center center;background-size:cover;">
+
+                                        </div>
+                                        <div class="face-text-right">
+                                            <h3>Михаил Клюшкин</h3>
+
+                                            <p class="time-face">
+                                                1 апреля 15:23
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="fact-two-block-text">
+                                        <p ng-bind-html="fact.content"></p>
+                                    </div>
+                                </div>
+                                <div class="fact-two-block-hov">
+                                    <div class="fact-two-block-hov-rote">
+                                        <a class="btn" href="" data-toggle="modal" data-target="#fact-modal">Читать
+                                            полностью</a>
+
+                                        <div class="fact-social">
+                                            <ul>
+                                                <li><a href="" class="icon icon-fb"><i class="fa fa-facebook"></i></a>
+                                                    155
+                                                </li>
+                                                <li><a href="" class="icon icon-tw"><i class="fa fa-twitter"></i></a>
+                                                    155
+                                                </li>
+                                                <li><a href="" class="icon icon-vk"><i class="fa fa-vk"></i></a>
+                                                    155
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+
+
 </section>
 
 
- 
+<!-- Modal -->
+<div class="modal fade fact-modal" id="fact-modal" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <div class="fact-block">
+                <div class="fact-img">
+                    <slick ng-show="ctrl.currentFact.photos.length">
+                        <div class="img" ng-repeat="photo in ctrl.currentFact.photos | limitTo:4">
+                            <img src="{{photo.image.small}}" alt="">
+                        </div>
+                    </slick>
+                </div>
+                <div class="fact-block-text clearfix">
+                    <div class="face clearfix">
+                        <div class="face-img-left"
+                             style="background-image:url({{ctrl.currentFact.profile_pic}});background-position:center center;background-size:cover;">
+
+                        </div>
+
+                        <div class="face-text-right">
+                            <h3 ng-bind="ctrl.currentFact.profile_name">Михаил Клюшкин</h3>
+
+                            <p class="time-face"
+                               ng-bind="ctrl.currentFact.published_at | amDateFormat:'DD.MM H:mm'">
+                                1 апреля 15:23
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="fact-social">
+                        <share-buttons data="ctrl.currentFact.shareData"></share-buttons>
+                    </div>
+                </div>
+                <div class="modal-fact-text">
+                    <p ng-bind-html="ctrl.currentFact.content"></p>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

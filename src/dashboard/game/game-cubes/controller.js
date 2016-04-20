@@ -69,7 +69,6 @@ export default class CubesCtrl {
         if (!cell.is_crashed) {
             this.categories = [];
             this.currentCell = cell;
-            $('#'+ cell.id).addClass('tres' + (this.currentCell.cell_type == 'blue' ? (Math.floor(Math.random() * (3)) + 1) : ''));
             this.cubeModalColor = cell.type;
             this.ballsDeficit = this.currentCell.cell_type == 'green' ? this.user.points < GREEN_CELL_PRICE : this.user.points < BLUE_CELL_PRICE;
             this.service.getPrizes(this.currentCell.id).then((res) => {
@@ -145,6 +144,7 @@ export default class CubesCtrl {
                 this.state.go('dashboard.edit');
                 return;
             }
+            $('#'+ cell.id).addClass('tres' + (this.currentCell.cell_type == 'blue' ? (Math.floor(Math.random() * (3)) + 1) : ''));
             $('#myModal').modal('hide');
             $('#userData').modal('show');
             this.userData = this.user;

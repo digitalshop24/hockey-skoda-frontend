@@ -22,12 +22,12 @@ export default class FactsService {
         })
     }*/
 
-    getFacts(page, days) {
+    getFacts(page, days, hashtag) {
         return this.api.get('/soc_posts',{
             params: {
                 page: page,
                 days: days,
-                hashtag: '#хоккейныйфакт'
+                hashtag: hashtag
             }
         }).then((res) => {
             /*res.data.posts.forEach((fact) => {

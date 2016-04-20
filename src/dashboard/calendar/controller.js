@@ -20,6 +20,7 @@ export default class СalendarCtrl {
         this.maxDate = moment(calendar[calendar.length -1].day).toDate();
         this.allMatches = true;
         this.subscribed = true;
+        this.currentDate = moment('05-06-2016').toDate();
 
         this.updateCalendar(moment());
 

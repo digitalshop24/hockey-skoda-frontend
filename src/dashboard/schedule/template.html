@@ -21,11 +21,11 @@
                             ng-model="ctrl.allTeamsFilter" required>
                         <option selected value>Все команды</option>
                     </select>
-                    <select class="input_default input_small"
+                    <!--<select class="input_default input_small"
                             ng-options="team.country for team in ctrl.playoffTeams track by team.id"
                             ng-model="ctrl.playoffFilter" required>
                         <option selected value>Плей-офф</option>
-                    </select>
+                    </select>-->
                     <select class="input_default input_small"
                             ng-options="category.name for category in ctrl.categories"
                             ng-model="ctrl.categoryFilter" required>

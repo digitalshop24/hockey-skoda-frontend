@@ -14,24 +14,37 @@ export default angular.module('dashboard.facts', [])
                     description: 'Вы сможете узнать действительно яркие и до этого не привлекавшие много внимания факты, которые мы подбираем специально для знатоков хоккея.'
                 },
                 template: require('./template.html'),
-                url: '/interesting-facts',
+                url: '/interesting-facts/:id',
                 controller: FactsCtrl,
                 controllerAs: 'ctrl',
                 params: {
-                    notScrollToTop: false,
                     page: 1,
-                    perPage: 3,
-                    facts: []
+                    perPage: 1,
+                    facts: [],
+                    tag: '#хоккейныйфакт',
+                    hockeyActive: true,
+                    skodaActive: false
                 },
                 resolve: {
                     facts: ($stateParams, factService) => {
-                        return factService.getFacts($stateParams.page, $stateParams.perPage).then((res) =>{
-                           /* res.posts = $stateParams.facts.concat(res.posts);*/
+                        return factService.getFacts($stateParams.page, $stateParams.perPage, $stateParams.tag).then((res) =>{
                             return res;
                         });
                     },
                     page: ($stateParams) => {
                         return $stateParams.page;
+                    },
+                    id: ($stateParams) => {
+                        return $stateParams.id;
+                    },
+                    tag: ($stateParams) => {
+                        return $stateParams.tag;
+                    },
+                    hockeyActive: ($stateParams) => {
+                        return $stateParams.hockeyActive;
+                    },
+                    skodaActive: ($stateParams) => {
+                        return $stateParams.skodaActive;
                     }
                 }
             });
