@@ -6041,15 +6041,169 @@ $grey_about: #5d5d5d;
       }
    }
 }
+.fact-modal.in {
+  z-index: 1058;
+}
+.modal-backdrop.in {
+  z-index: 1057;
+}
+header {
+  z-index: 1056;
+}
+.fact-modal {
+  display:block !important;
+  opacity:0;
+
+  .fact-block {
+    padding:75px 65px 0px 65px;
+    img {
+      width:100%;
+    }
+    .face {
+      padding:15px;
+      width:300px;
+      float:left;
+      &-img-left {
+        float:left;
+        width:49px;
+        height: 49px;
+        margin-right:15px;
+        border-radius:50%;
+      }
+      &-text-right {
+        overflow: hidden;
+        h3 {
+          font-family: $bold;
+          font-size:1.6rem;
+          line-height:30px;
+          color:$black;
+
+        }
+        .time-face {
+          font-family: $regular;
+          font-size:1.2rem;
+          line-height:16px;
+          color:#666666;
+        }
+      }
+    }
+    .fact-social {
+      float:right;
+      width:170px;
+        ul {
+          text-align:center;
+          li {
+            display: inline-block;
+            margin:0 5px;
+            font-family: $regular;
+            font-size:1.2rem;
+            text-align:center;
+            color:#000;
+            &:nth-child(2) {
+              position:relative;
+              margin:0 5px;
+            }
+            a {
+              width:32px;
+              height: 32px;
+              position:relative;
+              border-radius:50%;
+              display: block;
+              text-align:center;
+              margin-bottom:8px;
+              .fa {
+                color:#fff;
+                font-size:18px;
+                width:18px;
+                height:18px;
+                position:absolute;
+                top:0px;
+                right:0px;
+                left:0px;
+                bottom:0px;
+                margin:auto;
+              }
+              
+            }
+            .icon-fb {
+              background:#425f9c;
+            }
+            .icon-tw {
+              background:#339cc3;
+            }
+            .icon-vk {
+              background:#56789c;
+            }
+          }
+        
+      }
+    }
+  }
+  .modal-fact-text {
+    padding-top:35px;
+    p {
+      font-size:1.7rem;
+      font-family: $regular;
+      color:#000;
+      margin-bottom:15px; 
+    }
+  }
+}
 .factSection {
   padding:60px;
   margin-left: 100px;
-  .block-set {
-    &:nth-child(3n-1) {
+  background:#e6e6e6;
+  position:relative;
+  z-index: 1051;
+  .nav-tabs {
+    border:none;
+    text-align:center;
+    padding-bottom:30px;
+    li {
+      display: inline-block;
+      width:200px;
+      height: 39px;
+      border:2px solid #000;
+      border-radius:15px;
+      margin:0 15px;
+      float:none;
+      background:rgba(255,255,255,0);
+      &:nth-child(2) {
+        position:relative;
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+        line-height: 18px;
+        font-size:1.7rem;
+        font-family: $bold;
+        text-align:center;
+        background:rgba(255,255,255,0);
+        &:hover {
+          background:rgba(255,255,255,0);
+          border:none;
+        }
+      }
+      &.active {
+        
+        border:2px solid rgba(255,255,255,0);
+        a {
+          font-family: $regular;
+          background:rgba(255,255,255,0);
+          border:none;
+          &:hover {
+            background:rgba(255,255,255,0);
+            border:none;
+          }
+        }
+      }
     }
+
   }
-   /* ------------- Контейнер с адаптивными блоками------------- */
-.masonry {
+
+     /* ------------- Контейнер с адаптивными блоками------------- */
+
+.fac-masonry {
     margin: 1.5em 0;
     padding: 0;
     column-gap: 1.5em; /* Общее расстояние между колонками */
@@ -6062,7 +6216,7 @@ $grey_about: #5d5d5d;
 }
  
 /* Элементы в виде плиток с содержанием */
-.item {
+.fac-item {
     display: inline-block;
     background: #fff;
     padding: 1em;
@@ -6072,6 +6226,188 @@ $grey_about: #5d5d5d;
     -webkit-box-sizing: border-box; /* Для Safari, Chrome, iOS иAndroid */ 
     box-shadow: 2px 2px 4px 0 #ccc; /* Внешняя тень плиток */
 }
+.masonry {
+    margin: 1.5em 0;
+    padding: 0;
+    column-gap: 1.5em; /* Общее расстояние между колонками */
+    font-size: .85em;
+    -moz-column-gap: 1.5em; /* Расстояние между колонками для Firefox */
+    -webkit-column-gap: 1.5em; /* Расстояние между колонками  для Safari, Chrome и iOS */
+    -moz-column-count: 5;
+        -webkit-column-count: 5;
+        column-count: 5;
+}
+ 
+/* Элементы в виде плиток с содержанием */
+.item {
+    display: inline-block;
+    background: #fff;
+    margin: 0 0 1.5em;
+    width: 100%;
+    -moz-box-sizing: border-box; /* Для Firefox */ 
+    -webkit-box-sizing: border-box; /* Для Safari, Chrome, iOS иAndroid */ 
+    box-shadow: 2px 2px 4px 0 #ccc; /* Внешняя тень плиток */
+}
+
+.fact-two {
+  &-block {
+    border:none;
+    box-shadow:none;
+    padding:0px;
+    position:relative; 
+    cursor:pointer;
+    .slick-slider {
+      padding:0px;
+      margin-bottom:0px;
+      img {
+        width:100%;
+      }
+    }
+    .face {
+      padding:15px;
+      &-img-left {
+        float:left;
+        width:49px;
+        height: 49px;
+        margin-right:15px;
+        border-radius:50%;
+      }
+      &-text-right {
+        overflow: hidden;
+        h3 {
+          font-family: $bold;
+          font-size:1.6rem;
+          line-height:30px;
+          color:$black;
+
+        }
+        .time-face {
+          font-family: $regular;
+          font-size:1.2rem;
+          line-height:16px;
+          color:#666666;
+        }
+      }
+    }
+    &-text {
+      padding:15px;
+      p {
+        font-family: $regular;
+        font-size:1.4rem;
+        line-height:16px;
+        color:#000;
+      }
+    } 
+    &-act {
+      position:relative;
+    }
+    .fact-two-block-hov {
+      transition: 1.6s;
+      opacity:0;
+      height: 0px;
+      overflow: hidden;
+      position:absolute;
+      cursor:pointer; 
+      
+      &-rote {
+        width:160px;
+        height: 110px;
+        position:absolute;
+        top:0px;
+        left:0px;
+        right:0px;
+        bottom:0px;
+        margin:auto;
+        .btn {
+          width:100%;
+          height: 40px;
+          display: block;
+          text-align:center;
+          border:1px solid #000;
+          text-decoration: none;
+          font-family: $bold;
+          font-size:1.4rem;
+          line-height:30px;
+          color:#000;
+          border-radius:5px;
+          &:hover {
+            color:#fff;
+            background:#000;
+
+          }
+        }
+      }
+      .fact-social {
+        padding-top:15px;
+        ul {
+          text-align:center;
+          li {
+            display: inline-block;
+            margin:0 5px;
+            font-family: $regular;
+            font-size:1.2rem;
+            text-align:center;
+            color:#000;
+            &:nth-child(2) {
+              position:relative;
+              margin:0 5px;
+            }
+            a {
+              width:32px;
+              height: 32px;
+              position:relative;
+              border-radius:50%;
+              display: block;
+              text-align:center;
+              margin-bottom:8px;
+              .fa {
+                color:#fff;
+                font-size:18px;
+                width:18px;
+                height:18px;
+                position:absolute;
+                top:0px;
+                right:0px;
+                left:0px;
+                bottom:0px;
+                margin:auto;
+              }
+              
+            }
+            .icon-fb {
+              background:#425f9c;
+            }
+            .icon-tw {
+              background:#339cc3;
+            }
+            .icon-vk {
+              background:#56789c;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      .fact-two-block-hov {
+        background:#fff;
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0px;
+        left:0px;
+        opacity:1;
+      }
+    }
+  }
+}
+
+  .block-set {
+    &:nth-child(3n-1) {
+    }
+  }
+
+
+
   .slick-slider {
     padding:0 30px;
   }
