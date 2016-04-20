@@ -37,11 +37,11 @@
                         <div class="fact-two-block item" ng-repeat="fact in ctrl.facts">
                             <div class="fact-two-block-card">
                                 <div class="fact-two-block-act">
-                                    <slick ng-show="fact.photos.length">
+                                    <div ng-show="fact.photos.length">
                                         <div class="img" ng-repeat="photo in fact.photos | limitTo:4">
                                             <img src="{{photo.image.small}}" alt="">
                                         </div>
-                                    </slick>
+                                    </div>
                                     <div class="face clearfix">
                                         <div class="face-img-left"
                                              style="background-image:url({{fact.profile_pic}});background-position:center center;background-size:cover;">
