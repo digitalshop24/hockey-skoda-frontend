@@ -33,7 +33,7 @@ export default class TestDriveService {
     sendRequest(data) {
         return this.api.post('/testdrive', data)
             .catch(response => {
-                throw response.data.error;
+                throw response.data;
             });
     }
 }
