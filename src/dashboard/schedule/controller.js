@@ -2,10 +2,15 @@
 
 
 export default class ScheduleCtrl {
-    constructor(schedule, moment, teams, $scope, $interval, scheduleService) {
+    constructor(schedule, $state, teams, $scope, $interval, scheduleService, stage) {
+        this.stage = stage;
+        if(this.stage == 'complete') {
+            schedule = schedule.reverse();
+        }
         this.schedule = schedule;
         this.allTeams = teams.filter(team => team.short_name);
         this.playoffTeams = teams.filter(team => !team.short_name);
+        this.$state = $state;
         this.categories = [
             {
                 id: "A",
@@ -55,4 +60,9 @@ export default class ScheduleCtrl {
             return $scope.ctrl.categoryFilter ? match.match_group == $scope.ctrl.categoryFilter.id  : true;
         };
     }
+
+    changeStage(stage) {
+        this.$state.go('dashboard.schedule',{stage: stage});
+    }
+
 }
