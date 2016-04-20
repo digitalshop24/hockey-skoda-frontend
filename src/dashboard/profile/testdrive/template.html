@@ -5,7 +5,7 @@
     <p>Для участия в розыгрыше автомобилей Вам необходимо пройти тест-драйв, на котором Вам будет выдан специальный промо-код. Регистрируйтесь на тест-драйв, пробуйте автомобиль, а затем попытайтесь его выиграть!</p>
     <div class="download_promo">
         <form ng-submit="ctrl.sendCoupon()">
-            <input type="text" ng-disabled="ctrl.coupon" minlength="8" length="8" ng-model="ctrl.couponCode" class="input_default input_small" placeholder="Ваш промокод (8 символов)" required>
+            <input type="text" ng-disabled="ctrl.coupon" minlength="8" maxlength="8" ng-model="ctrl.couponCode" class="input_default input_small" placeholder="Ваш промокод (8 символов)" required>
             <button type="submit" class="btn btn_secondary small" ng-disabled="ctrl.coupon"> Активировать</button>
         </form>
 

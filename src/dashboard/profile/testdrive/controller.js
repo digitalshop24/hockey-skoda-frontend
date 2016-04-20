@@ -11,18 +11,28 @@ export default class MytestdriveCtrl {
     }
 
     sendCoupon() {
-        this.mytestdriveService.sendCoupon(this.couponCode).then(res => {
-            this.mytestdriveService.getCoupons().then(res => {
-                this.coupons = res;
-            });
-            this.modal.open({
-                resolve: {
-                    message: () => {
-                        return 'Купон успешно активирован!'
+        this.mytestdriveService.sendCoupon(this.couponCode)
+            .then(res => {
+                this.mytestdriveService.getCoupons().then(res => {
+                    this.coupons = res;
+                });
+                this.modal.open({
+                    resolve: {
+                        message: () => {
+                            return 'Купон успешно активирован!'
+                        }
                     }
-                }
+                });
+            })
+            .catch(err => {
+                this.modal.open({
+                    resolve: {
+                        message: () => {
+                            return err.message;
+                        }
+                    }
+                });
             });
-        })
     }
 
     startGame() {
