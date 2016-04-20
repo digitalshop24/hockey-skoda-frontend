@@ -13,17 +13,24 @@ export default angular.module('dashboard.score', [])
                     title: 'Точное и подробное расписание игр',
                     description: 'В этом разделе сайта вы можете увидеть расписание ближайших матчей.'
                 },
+                params: {
+                    stage: 'currentAndFuture'
+                },
                 template: require('./template.html'),
                 url: '/schedule',
                 controller: ScheduleCtrl,
                 controllerAs: 'ctrl',
                 resolve: {
-                    schedule: (scheduleService) => {
-                        return scheduleService.getSchedule();
+                    schedule: (scheduleService, $stateParams) => {
+                        return scheduleService.getSchedule($stateParams.stage);
                     },
 
                     teams: (scheduleService) => {
                         return scheduleService.getTeams();
+                    },
+
+                    stage: ($stateParams) => {
+                        return $stateParams.stage;
                     }
                 }
             });

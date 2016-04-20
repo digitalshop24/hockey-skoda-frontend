@@ -5,10 +5,10 @@ export default class ScheduleService {
         this.api = api;
     }
 
-    getSchedule() {
+    getSchedule(stage) {
         return this.api.get('/schedule/index', {
             params: {
-                stage: 'currentAndFuture'
+                stage: stage
             }
         })
             .then(response => {
