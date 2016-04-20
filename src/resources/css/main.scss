@@ -1507,11 +1507,12 @@ $grey_about: #5d5d5d;
       padding: 20px 20px 20px 50px;
       font-family: $bold;
       min-height: 100px;
-      font-size: $p_size+.2rem;
+      font-size: 15px;
     }
     .littel_time {
       position: absolute;
       margin-top: -80px;
+      font-size: 15px;
     }
     .little_comment {
       position: absolute;
@@ -1523,6 +1524,7 @@ $grey_about: #5d5d5d;
       width: 35px;
       height: 30px;
       padding: 3px 0 0 12px;
+      font-size: 14px;
     }
   }
 }
