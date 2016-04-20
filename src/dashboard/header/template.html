@@ -135,7 +135,7 @@
                         <a href="">
                             <img ng-show="!ctrl.session.isAuthenticated" ng-click="ctrl.openLoginPopup()" src="img/resources/img/user.png" alt="" class="img-responsive">
                            <!--  <img ng-show="ctrl.session.isAuthenticated"  src="img/resources/img/log_out.png" alt="" class="img-responsive"> -->
-                            <span style="margin:0;" ng-show="ctrl.session.isAuthenticated"  ng-bind="ctrl.user.name" ></span>
+                            <span style="margin:0;" ng-show="ctrl.session.isAuthenticated"  ng-bind="ctrl.user.name" ng-click="ctrl.state.go('dashboard.profile.progress')"></span>
                         </a>
                     </li>
 
