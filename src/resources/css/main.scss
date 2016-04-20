@@ -6382,17 +6382,23 @@ $grey_about: #5d5d5d;
         top:0px;
         left:0px;
         opacity:1;
-        overflow: hidden;
-        vertical-align:middle;
+ 
+ 
         .fact-two-block-hov-rote {
-          position:relative;
-          display: table-row;
-          vertical-align: middle;
+          position:static;
+          display: block;
+    
           top:0px;
           left:0px;
 
-
+          margin:35px auto;
           opacity:1;
+          .fact-social ul li {
+            margin:0 10px !important;
+          }
+          .fact-two-block-hov-rote1 {
+            position:absolute;
+          }
         }
       }
     }
