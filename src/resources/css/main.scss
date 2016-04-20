@@ -6037,18 +6037,9 @@ $grey_about: #5d5d5d;
       }
    }
 }
-.fact-modal.in {
-  z-index: 1058;
-}
-.modal-backdrop.in {
-  z-index: 1057;
-}
-header {
-  z-index: 1056;
-}
+
 .fact-modal {
-  display:block !important;
-  opacity:0;
+
 
   .fact-block {
     padding:75px 65px 0px 65px;
