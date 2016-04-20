@@ -33,6 +33,14 @@ export default class TestDriveCtrl {
                     }
                 }
             });
+        }).catch(err => {
+            this.modal.open({
+                resolve: {
+                    message: () => {
+                        return err.message || 'Во время регистрации произошла ошибка!';
+                    }
+                }
+            });
         });
     }
 
