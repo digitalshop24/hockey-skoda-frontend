@@ -2,8 +2,29 @@
     <div class="container">
         <div class="row">
             <div class="mounth">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <ul class="mounth_arrow">
+                        <li>
+                            <img src="img/resources/img/arrow_left.png" alt="" class="img-responsive">
+                        </li>
+                        <li>
+                            <h3 ng-click="ctrl.changeStage('currentAndFuture')" ng-class="{'activeSchedule': ctrl.stage == 'currentAndFuture'}">Все матчи</h3>
+                        </li>
+                        <li>
+                            <img src="img/resources/img/arrow_right.png" alt="" class="img-responsive">
+                        </li>
+
+                        <li>
+                            <img src="img/resources/img/arrow_left.png" alt="" class="img-responsive">
+                        </li>
+                        <li>
+                            <h3 ng-click="ctrl.changeStage('complete')" ng-class="{'activeSchedule': ctrl.stage == 'complete'}">Прошедшие</h3>
+                        </li>
+                        <li>
+                            <img src="img/resources/img/arrow_right.png" alt="" class="img-responsive">
+                        </li>
+                    </ul>
+                    <!--<ul class="mounth_arrow">
                         <li>
                             <img src="img/resources/img/arrow_left.png" alt="" class="img-responsive">
                         </li>
@@ -13,9 +34,9 @@
                         <li>
                             <img src="img/resources/img/arrow_right.png" alt="" class="img-responsive">
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
-                <div class="col-md-8 text-right">
+                <div class="col-md-6 text-right">
                     <select class="input_default input_small"
                             ng-options="team.country for team in ctrl.allTeams track by team.id"
                             ng-model="ctrl.allTeamsFilter" required>

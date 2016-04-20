@@ -39,7 +39,7 @@ export default class ScheduleCtrl {
         ];
 
         const updater = $interval(() => {
-            scheduleService.getSchedule().then((res) => {
+            scheduleService.getSchedule(this.stage).then((res) => {
                 this.schedule = res;
             })
         }, 15 * 1000);
