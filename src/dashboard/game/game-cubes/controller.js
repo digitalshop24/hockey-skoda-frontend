@@ -69,23 +69,29 @@ export default class CubesCtrl {
             this.currentCell = cell;
             this.cubeModalColor = cell.type;
             this.service.getPrizes(this.currentCell.id).then((res) => {
-                this.prizes = res.prizes;
-                res.prizes.forEach(prize => {
-                    if (prize.prize_category) {
-                        if (this.categories.find(category =>category.name == prize.prize_category.name)) {
-                            const category = this.categories.find(category =>category.name == prize.prize_category.name);
-                            category.prizes.push(prize);
 
-                        } else {
-                            this.categories.push({
-                                name: prize.prize_category.name,
-                                right_answers_count: prize.prize_category.right_answers_count,
-                                prizes: [prize]
-                            })
+                if(this.currentCell.cell_type == 'blue') {
+                    this.prizes = res.prizes;
+                    res.prizes.forEach(prize => {
+                        if (prize.prize_category) {
+                            if (this.categories.find(category =>category.name == prize.prize_category.name)) {
+                                const category = this.categories.find(category =>category.name == prize.prize_category.name);
+                                category.prizes.push(prize);
+
+                            } else {
+                                this.categories.push({
+                                    name: prize.prize_category.name,
+                                    right_answers_count: prize.prize_category.right_answers_count,
+                                    prizes: [prize]
+                                })
+                            }
                         }
-                    }
-                });
-                this.categories.sort((a, b) => b.right_answers_count - a.right_answers_count);
+                    });
+                    this.categories.sort((a, b) => b.right_answers_count - a.right_answers_count);
+                } else {
+                    this.cars = res.cars;
+                }
+
                 $('#myModal').modal('show');
             });
         }
