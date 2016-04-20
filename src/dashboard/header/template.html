@@ -50,16 +50,16 @@
                     </ul>
                 </li></a>
               <a href="#" ui-sref="dashboard.prizenew"><li>Конкурсы</li></a>
-              <a href="#"><li>Форум
+              <a href="#" ui-sref="dashboard.forum"><li>Форум
                   <!--   <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
                     <ul class="drilldown-sub">
                       <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Форум</a></li>
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.forum">Форум</li></a>
                     </ul> -->
               </li></a>
-             
-              
-             
+
+
+
 
               <a href="#" ng-show="ctrl.session.isAuthenticated" ><li>Личный кабинет
                  <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
@@ -180,7 +180,7 @@
         <div class="dropdown_news " ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false" ng-mouseover="ctrl.isPNewsOpen = true;">
                             <ul >
                                 <a ui-sref="dashboard.general-news" ng-click="ctrl.isPNewsOpen = false"><li>События</li></a>
-                                <a href="#" ng-click="ctrl.isPNewsOpen = false"><li class="li_disabel">Интересные факты</li></a>
+                                <a ui-sref="dashboard.facts" ng-click="ctrl.isPNewsOpen = false"><li class="li_disabel">Интересные факты</li></a>
                                 <a ui-sref="dashboard.blog" ng-click="ctrl.isPNewsOpen = false" ><li>Аналитика</li></a>
                                 <a ui-sref="dashboard.cheer" ng-click="ctrl.isPNewsOpen = false"><li>Команда поддержки</li></a>
                                 <a ui-sref="dashboard.stars" ng-click="ctrl.isPNewsOpen = false"><li>О звездах хоккея</li></a>
@@ -222,15 +222,15 @@
                                         Конкурсы
                                     </li>
                                 </a>
-                                <a>
+                                <a ui-sref="dashboard.forum">
                                     <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isForumOpen = true; ctrl.isNewsOpen = ctrl.isForecastOpen = ctrl.isPrizeOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
                                         Форум
                                         <!-- <img src="img/resources/img/arrow_righ_mini.png" alt=""> -->
                                     </li>
                                 </a>
-                               
-                                
-                                
+
+
+
 
                             </ul>
                         </div>
@@ -238,7 +238,7 @@
                             <ul ng-show="ctrl.isNewsOpen">
 
                                 <a ui-sref="dashboard.general-news" ng-click="ctrl.isMenuOpen = false"><li>События</li></a>
-                                <a href="#" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel">Интересные факты</li></a>
+                                <a ui-sref="dashboard.facts" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel">Интересные факты</li></a>
                                 <a ui-sref="dashboard.blog" ng-click="ctrl.isMenuOpen = false" ><li>Аналитика</li></a>
                                 <a ui-sref="dashboard.cheer" ng-click="ctrl.isMenuOpen = false"><li>Команда поддержки</li></a>
                                 <a ui-sref="dashboard.stars" ng-click="ctrl.isMenuOpen = false"><li>О звездах хоккея</li></a>

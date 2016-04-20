@@ -3,7 +3,7 @@
         <div class="menu_line ">
             <ul>
                <a ui-sref="dashboard.general-news"><li class="general_news_imgbg"><p>События</p></li></a>
-                <a href="#"><li class="facts_imgbg"><p>Факты</p></li></a>
+                <a ui-sref="dashboard.facts"><li class="facts_imgbg"><p>Факты</p></li></a>
                 <a ui-sref="dashboard.blog"><li class="blog_imgbg"><p class="active_p">Аналитика</p></li></a>
             </ul>
         </div>
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="row" masonry-init=".wrapp_blog_posts">
-                
+
                 <div class="col-xs-12 col-sm-12 col-md-4 text-left wrapp_blog_posts" ng-repeat="blog in ctrl.blogs">
 
                         <ul class="blog_post" ui-sref="dashboard.newspage({id:blog.id, rubric:blog.rubric.api_path})" style="cursor:pointer;">
@@ -32,7 +32,7 @@
                             <li><p ng-bind="blog.published_at | amDateFormat:'DD.MM H:mm'"></p></li>
                             <li><img src="{{blog.image.medium}}" alt="" class="img-responsive"></li>
                         </ul>
- 
+
                     <ul class="tag_post">
                         <li ng-repeat="tag in blog.tags"><a ng-click="ctrl.addTagToFilter(tag)" href=""><p ng-bind="tag"></p></a></li>
                     </ul>
