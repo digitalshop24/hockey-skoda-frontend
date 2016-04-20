@@ -264,12 +264,14 @@ header {
           text-transform: uppercase;
           width: 50%;
           padding-top: 50px;
+          font-family: $extra_bold;
         }
         p {
           font-size: $p_size;
           padding-top: 30px;
           width: 50%;
           padding-bottom: 30px;
+          font-family: $regular;
         }
         a {
           font-size: $p_size;
@@ -1505,7 +1507,7 @@ $grey_about: #5d5d5d;
       padding: 20px 20px 20px 50px;
       font-family: $bold;
       min-height: 100px;
-
+      font-size: $p_size+.2rem;
     }
     .littel_time {
       position: absolute;
@@ -1513,7 +1515,7 @@ $grey_about: #5d5d5d;
     }
     .little_comment {
       position: absolute;
-      margin-top: -50px;
+      margin-top: -60px;
       background-image: url('img/resources/img/news/bg_comment.png');
       background-size: cover;
       background-position: center center;
