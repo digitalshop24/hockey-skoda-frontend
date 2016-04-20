@@ -16,6 +16,8 @@ export default class ProfileService {
             number: coupon
         }).then((res) => {
             return res.data;
+        }).catch(err => {
+            throw err.data;
         });
     }
 

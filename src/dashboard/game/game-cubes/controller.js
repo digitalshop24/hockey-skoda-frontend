@@ -7,6 +7,8 @@ const ROW_AMOUNT = 12;
 const ROW_WEIGHT = 20;
 const GREEN_AMOUNT = 20;
 const BLUE_AMOUNT = 20;
+const BLUE_CELL_PRICE = 750;
+const GREEN_CELL_PRICE = 1500;
 
 export default class CubesCtrl {
     constructor(sectors, sector, coupons, cubesService, $interval, modal, $state, id, user, session, auth) {
@@ -67,7 +69,9 @@ export default class CubesCtrl {
         if (!cell.is_crashed) {
             this.categories = [];
             this.currentCell = cell;
+            $('#'+ cell.id).addClass('tres' + (this.currentCell.cell_type == 'blue' ? (Math.floor(Math.random() * (3)) + 1) : ''));
             this.cubeModalColor = cell.type;
+            this.ballsDeficit = this.currentCell.cell_type == 'green' ? this.user.points < GREEN_CELL_PRICE : this.user.points < BLUE_CELL_PRICE;
             this.service.getPrizes(this.currentCell.id).then((res) => {
 
                 if(this.currentCell.cell_type == 'blue') {
