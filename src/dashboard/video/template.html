@@ -96,7 +96,7 @@
     <div class="container-fluid">
         <div class="row ">
             <div class="col-md-3" ng-repeat="video in ctrl.videos | filter: {name:ctrl.search}">
-                <div style="background-image: url('{{video.image.small}}')"></div>
+                <a ng-click="ctrl.setNewMainVideo(video)"><div style="cursor:pointer; background-image: url('{{video.image.small}}')"></div></a>
                 <p class="bold"><a ng-click="ctrl.setNewMainVideo(video)" ng-bind="video.name"></a></p>
 
                 <p><a href="" ng-bind="video.published_at | amDateFormat:'DD MMMM'"></a></p>
