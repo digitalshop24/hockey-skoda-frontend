@@ -6041,18 +6041,9 @@ $grey_about: #5d5d5d;
       }
    }
 }
-.fact-modal.in {
-  z-index: 1058;
-}
-.modal-backdrop.in {
-  z-index: 1057;
-}
-header {
-  z-index: 1056;
-}
+
 .fact-modal {
-  display:block !important;
-  opacity:0;
+
 
   .fact-block {
     padding:75px 65px 0px 65px;
@@ -6154,7 +6145,6 @@ header {
   margin-left: 100px;
   background:#e6e6e6;
   position:relative;
-  z-index: 1051;
   .nav-tabs {
     border:none;
     text-align:center;
@@ -6256,6 +6246,9 @@ header {
     padding:0px;
     position:relative; 
     cursor:pointer;
+    img {
+        width:100%;
+      }
     .slick-slider {
       padding:0px;
       margin-bottom:0px;
@@ -6302,22 +6295,15 @@ header {
       position:relative;
     }
     .fact-two-block-hov {
-      transition: 1.6s;
       opacity:0;
       height: 0px;
       overflow: hidden;
-      position:absolute;
       cursor:pointer; 
       
       &-rote {
         width:160px;
         height: 110px;
-        position:absolute;
-        top:0px;
-        left:0px;
-        right:0px;
-        bottom:0px;
-        margin:auto;
+        overflow: hidden;
         .btn {
           width:100%;
           height: 40px;
@@ -6349,13 +6335,13 @@ header {
             text-align:center;
             color:#000;
             &:nth-child(2) {
-              position:relative;
               margin:0 5px;
+              position:initial;
             }
             a {
               width:32px;
               height: 32px;
-              position:relative;
+              position:inline;
               border-radius:50%;
               display: block;
               text-align:center;
@@ -6365,12 +6351,8 @@ header {
                 font-size:18px;
                 width:18px;
                 height:18px;
-                position:absolute;
-                top:0px;
-                right:0px;
-                left:0px;
-                bottom:0px;
                 margin:auto;
+                padding-top:9px;
               }
               
             }
@@ -6396,6 +6378,18 @@ header {
         top:0px;
         left:0px;
         opacity:1;
+        overflow: hidden;
+        vertical-align:middle;
+        .fact-two-block-hov-rote {
+          position:relative;
+          display: table-row;
+          vertical-align: middle;
+          top:0px;
+          left:0px;
+
+
+          opacity:1;
+        }
       }
     }
   }
