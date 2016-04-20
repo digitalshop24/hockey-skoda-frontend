@@ -14,11 +14,11 @@
                       <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Материалы</a></li>
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.general-news">События</li></a>
                       <!-- <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.forecast.companionship">Матчи</li></a> -->
-                      <a href="#"><li class="li_disabel" ui-sref="dashboard.facts" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Интересные факты</li></a>
+                      <a href="#"><li class="li_sub" ui-sref="dashboard.facts" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Интересные факты</li></a>
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.blog">Аналитика</li></a>
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.cheer">Команда поддержки</li></a>
-                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" >О звездах хоккея</li></a>
-                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" >Хоккейные видео</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.stars">О звездах хоккея</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.video">Хоккейные видео</li></a>
                     </ul>
                 </li></a>
                 <a href="#"><li>Интересное
@@ -29,7 +29,7 @@
                     <a ui-sref="dashboard.tantamareska"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Тантамарезка</li></a>
                     <a ui-sref="dashboard.suggestions"><li  ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Пожелание сборной</li></a>
                     <a href="#" ui-sref="dashboard.socials" ><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Соц.сети хоккеистов</li></a>
-                    <a href="#"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Junior Ice Hockey Cup</li></a>
+                    <a ui-sref="dashboard.junior"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Junior Ice Hockey Cup</li></a>
                   </ul>
                 </li></a>
                 <a href="#"><li>Расписание
@@ -180,7 +180,7 @@
         <div class="dropdown_news " ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false" ng-mouseover="ctrl.isPNewsOpen = true;">
                             <ul >
                                 <a ui-sref="dashboard.general-news" ng-click="ctrl.isPNewsOpen = false"><li>События</li></a>
-                                <a ui-sref="dashboard.facts" ng-click="ctrl.isPNewsOpen = false"><li class="li_disabel">Интересные факты</li></a>
+                                <a ui-sref="dashboard.facts" ng-click="ctrl.isPNewsOpen = false"><li>Интересные факты</li></a>
                                 <a ui-sref="dashboard.blog" ng-click="ctrl.isPNewsOpen = false" ><li>Аналитика</li></a>
                                 <a ui-sref="dashboard.cheer" ng-click="ctrl.isPNewsOpen = false"><li>Команда поддержки</li></a>
                                 <a ui-sref="dashboard.stars" ng-click="ctrl.isPNewsOpen = false"><li>О звездах хоккея</li></a>
@@ -238,7 +238,7 @@
                             <ul ng-show="ctrl.isNewsOpen">
 
                                 <a ui-sref="dashboard.general-news" ng-click="ctrl.isMenuOpen = false"><li>События</li></a>
-                                <a ui-sref="dashboard.facts" ng-click="ctrl.isMenuOpen = false"><li class="li_disabel">Интересные факты</li></a>
+                                <a ui-sref="dashboard.facts" ng-click="ctrl.isMenuOpen = false"><li>Интересные факты</li></a>
                                 <a ui-sref="dashboard.blog" ng-click="ctrl.isMenuOpen = false" ><li>Аналитика</li></a>
                                 <a ui-sref="dashboard.cheer" ng-click="ctrl.isMenuOpen = false"><li>Команда поддержки</li></a>
                                 <a ui-sref="dashboard.stars" ng-click="ctrl.isMenuOpen = false"><li>О звездах хоккея</li></a>
@@ -262,7 +262,7 @@
                                 <a ui-sref="dashboard.infographics" ng-click="ctrl.isMenuOpen = false"><li> Инфографика сборной России</li></a>
                                 <a ui-sref="dashboard.tantamareska" ng-click="ctrl.isMenuOpen = false"><li class=""> Тантамарезка</li></a>
                                 <a ui-sref="dashboard.suggestions" ng-click="ctrl.isMenuOpen = false"><li> Пожелание сборной</li></a>
-                                <a href="" ui-sref="dashboard.socials" ng-click="ctrl.isMenuOpen = false"><li class=""> Соц.сети хоккеистов</li></a>
+                                <a ui-sref="dashboard.socials" ng-click="ctrl.isMenuOpen = false"><li class=""> Соц.сети хоккеистов</li></a>
                                 <a ui-sref="dashboard.junior" ng-click="ctrl.isMenuOpen = false"><li> Junior Ice Hockey Cup</li></a>
                             </ul>
                         </div>
