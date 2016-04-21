@@ -21,9 +21,7 @@ export default angular.module('dashboard.facts', [])
                     page: 1,
                     perPage: 1,
                     facts: [],
-                    tag: '#хоккейныйфакт',
-                    hockeyActive: true,
-                    skodaActive: false
+                    tag: '#хоккейныйфакт'
                 },
                 resolve: {
                     facts: ($stateParams, factService) => {
@@ -39,12 +37,6 @@ export default angular.module('dashboard.facts', [])
                     },
                     tag: ($stateParams) => {
                         return $stateParams.tag;
-                    },
-                    hockeyActive: ($stateParams) => {
-                        return $stateParams.hockeyActive;
-                    },
-                    skodaActive: ($stateParams) => {
-                        return $stateParams.skodaActive;
                     }
                 }
             });
