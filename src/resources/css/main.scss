@@ -72,7 +72,7 @@ header {
         a {
           font-size: $p_size;
           color: $green_main;
-          
+
         }
       }
     }
@@ -1225,7 +1225,7 @@ footer {
     }
     .mounth_arrow {
       display:inline-block;
-      margin-top: 6px; 
+      margin-top: 6px;
       li {
         display: inline-block;
       }
@@ -2208,7 +2208,7 @@ $grey_about: #5d5d5d;
   }
 }
 .wrapp_mainpage_end {
-  background-image: url(img/resources/img/skoda-hockey_main-footer-2.jpg);
+  background-image: url(img/resources/img/skoda-hockey_main-footer-3.jpg);
   background-position: center center;
   background-size: cover;
   min-height: 650px;
@@ -2682,14 +2682,27 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- t-drive
 
 .wrapp_t_drive {
-  background-color:#F5F5F5;
   min-height: 1100px;
-  .wrapp_bg_tdrive {
-    background-image: url("img/resources/img/t_drive/TD-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 600px;
-    background-position: center 100%;
+  background: #F5F5F5;
+  .t-drive-bg{
+    background:#F5F5F5;
+    height:auto;
+    width:100%;
+    position: relative;
+    &:before{
+      content:'';
+      position: absolute;
+      display: block;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      z-index:1;
+    }
+    img{
+      width:100%;
+      height:auto;
+    }
   }
   h1 {
     font-family: $light;
@@ -6160,7 +6173,7 @@ $grey_about: #5d5d5d;
                 bottom:0px;
                 margin:auto;
               }
-              
+
             }
             .icon-fb {
               background:#425f9c;
@@ -6172,7 +6185,7 @@ $grey_about: #5d5d5d;
               background:#56789c;
             }
           }
-        
+
       }
     }
   }
@@ -6182,7 +6195,7 @@ $grey_about: #5d5d5d;
       font-size:1.7rem;
       font-family: $regular;
       color:#000;
-      margin-bottom:15px; 
+      margin-bottom:15px;
     }
   }
 }
@@ -6221,7 +6234,7 @@ $grey_about: #5d5d5d;
         }
       }
       &.active {
-        
+
         border:2px solid rgba(255,255,255,0);
         a {
           font-family: $regular;
@@ -6250,7 +6263,7 @@ $grey_about: #5d5d5d;
         -webkit-column-count: 3;
         column-count: 3;
 }
- 
+
 /* Элементы в виде плиток с содержанием */
 .fac-item {
     display: inline-block;
@@ -6258,8 +6271,8 @@ $grey_about: #5d5d5d;
     padding: 1em;
     margin: 0 0 1.5em;
     width: 100%;
-    -moz-box-sizing: border-box; /* Для Firefox */ 
-    -webkit-box-sizing: border-box; /* Для Safari, Chrome, iOS иAndroid */ 
+    -moz-box-sizing: border-box; /* Для Firefox */
+    -webkit-box-sizing: border-box; /* Для Safari, Chrome, iOS иAndroid */
     box-shadow: 2px 2px 4px 0 #ccc; /* Внешняя тень плиток */
 }
 .masonry {
@@ -6273,15 +6286,15 @@ $grey_about: #5d5d5d;
         -webkit-column-count: 5;
         column-count: 5;
 }
- 
+
 /* Элементы в виде плиток с содержанием */
 .item {
     display: inline-block;
     background: #fff;
     margin: 0 0 1.5em;
     width: 100%;
-    -moz-box-sizing: border-box; /* Для Firefox */ 
-    -webkit-box-sizing: border-box; /* Для Safari, Chrome, iOS иAndroid */ 
+    -moz-box-sizing: border-box; /* Для Firefox */
+    -webkit-box-sizing: border-box; /* Для Safari, Chrome, iOS иAndroid */
     box-shadow: 2px 2px 4px 0 #ccc; /* Внешняя тень плиток */
 }
 
@@ -6290,7 +6303,7 @@ $grey_about: #5d5d5d;
     border:none;
     box-shadow:none;
     padding:0px;
-    position:relative; 
+    position:relative;
     cursor:pointer;
     img {
         width:100%;
@@ -6336,7 +6349,7 @@ $grey_about: #5d5d5d;
         line-height:16px;
         color:#000;
       }
-    } 
+    }
     &-act {
       position:relative;
     }
@@ -6344,8 +6357,8 @@ $grey_about: #5d5d5d;
       opacity:0;
       height: 0px;
       overflow: hidden;
-      cursor:pointer; 
-      
+      cursor:pointer;
+
       &-rote {
         width:160px;
         height: 110px;
@@ -6400,7 +6413,7 @@ $grey_about: #5d5d5d;
                 margin:auto;
                 padding-top:9px;
               }
-              
+
             }
             .icon-fb {
               background:#425f9c;
@@ -6424,12 +6437,12 @@ $grey_about: #5d5d5d;
         top:0px;
         left:0px;
         opacity:1;
- 
- 
+
+
         .fact-two-block-hov-rote {
           position:static;
           display: block;
-    
+
           top:0px;
           left:0px;
 
@@ -6863,7 +6876,7 @@ nav {
 }
 
 
- 
+
 
 
 
