@@ -20,14 +20,30 @@ export default angular.module('dashboard.facts', [])
                 params: {
                     page: 1,
                     perPage: 1,
+                    skodaPerPage: 20,
                     facts: [],
-                    tag: '#хоккейныйфакт'
+                    tag: '#хоккейныйфакт',
+                    isSocialFacts: true
                 },
                 resolve: {
                     facts: ($stateParams, factService) => {
-                        return factService.getFacts($stateParams.page, $stateParams.perPage, $stateParams.tag).then((res) =>{
-                            return res;
-                        });
+                        if($stateParams.isSocialFacts) {
+                            return factService.getFacts($stateParams.page, $stateParams.perPage, $stateParams.tag).then((res) =>{
+                                return res;
+                            });
+                        }
+                        return [];
+
+                    },
+                    skodaFacts: ($stateParams, factService) => {
+
+                        if(!$stateParams.isSocialFacts) {
+                            return factService.getSkodaFacts($stateParams.page, $stateParams.skodaPerPage).then((res) =>{
+                                return res.posts;
+                            });
+                        }
+                        return [];
+
                     },
                     page: ($stateParams) => {
                         return $stateParams.page;
@@ -37,6 +53,13 @@ export default angular.module('dashboard.facts', [])
                     },
                     tag: ($stateParams) => {
                         return $stateParams.tag;
+                    },
+                    isSocialFacts: ($stateParams) => {
+                        return $stateParams.isSocialFacts;
+                    },
+
+                    skodaPerPage: ($stateParams) => {
+                        return $stateParams.skodaPerPage;
                     }
                 }
             });

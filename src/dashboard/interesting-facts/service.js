@@ -8,20 +8,6 @@ export default class FactsService {
         this.api = api;
     }
 
-    /*getFacts(page, perPage) {
-        return this.api.get('/posts/interesting_facts',{
-            params: {
-                page: page,
-                per_page: perPage
-            }
-        }).then((res) => {
-            res.data.posts.forEach((fact) => {
-                fact.user = Object.assign(new TopicUser(), fact.user);
-            });
-            return res.data;
-        })
-    }*/
-
     getFacts(page, days, hashtag) {
         return this.api.get('/soc_posts',{
             params: {
@@ -30,10 +16,23 @@ export default class FactsService {
                 hashtag: hashtag
             }
         }).then((res) => {
-            /*res.data.posts.forEach((fact) => {
-                fact.user = Object.assign(new TopicUser(), fact.user);
-            });*/
             return res.data;
         })
+    }
+
+    getSkodaFacts(page, perPage) {
+        return this.api.
+            get('/posts/interesting_facts', {
+                params: {
+                    page: page,
+                    per_page: perPage
+                }
+            })
+            .then(res => {
+                return res.data;
+            })
+            .catch(response => {
+                throw response.data.error;
+            });
     }
 }
