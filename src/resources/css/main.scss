@@ -1225,14 +1225,14 @@ footer {
     }
     .mounth_arrow {
       display:inline-block;
-      margin-top: 6px;
+      margin-top: 6px; 
       li {
         display: inline-block;
       }
-      li:nth-child(2) {
+      li:nth-child(2,5) {
         position: relative;
         top: -7px;
-        margin: 0 10px;
+        margin: 0 0px;
         padding: 10px 0;
       }
     }
