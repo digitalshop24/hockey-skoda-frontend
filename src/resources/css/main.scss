@@ -1712,9 +1712,12 @@ $grey_about: #5d5d5d;
       margin-left: 75px;
       span {
         font-size: 1.5rem;
-        padding-left: 50px;
+        margin-left: 50px;
         position: relative;
+        padding: 5px 0 8px 10px;
+       background-color: rgba(204, 204, 204, 0.5);
         top: -3px;
+
         button {
           text-transform: uppercase;
           color: $black;
