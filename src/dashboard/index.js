@@ -46,6 +46,7 @@ import edit from './edit/index';
 import rights from './rights/index';
 import share from './share/index';
 import regulations from './regulations/index';
+import teodor from './teodor/index';
 
 
 
@@ -91,7 +92,8 @@ export default angular.module('dashboard',
         rights.name,
         share.name,
         regulations.name,
-        passwordStrength.name
+        passwordStrength.name,
+        teodor.name
     ])
     .service('login', Login)
     .service('modal', Modal)

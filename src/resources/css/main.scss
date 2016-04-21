@@ -7215,3 +7215,133 @@ nav {
 
 
 // -------------------------------------------------END JUNIOR-CUP
+
+
+
+// ------------------------ TEODOR
+.teodor {
+  width:100%;
+  min-height: 1159px;
+  background:url(img/resources/img/teodor/bg-teodor.jpg) no-repeat center center;
+  background-size:cover;
+  position:relative;
+  &-tittle {
+    width:580px;
+    padding:50px 40px 30px;
+    position:relative;
+    &:before {
+      position:absolute;
+      left:0px;
+      top:47%;
+      content:'\201d';
+      font-size:3.5rem;
+      font-family: $extra_bold; 
+      color:#37aa35;
+    }
+    &:after {
+      position:absolute;
+      right:0px;
+      top:47%;
+      content:'\201e';
+      font-size:3.5rem;
+      font-family: $extra_bold;
+      color:#37aa35;
+    }
+    h3 {
+      font-family: $light;
+      font-size:2rem;
+      color:#fff;
+      text-align:center;
+      line-height: 18px;
+      margin-bottom:10px;
+    }
+    h4 {
+      font-family: $extra_bold;
+      font-size:3.5rem;
+      color:#37aa35;
+      text-align:center;
+      line-height: 38px;
+      text-transform: uppercase;
+      margin-bottom:20px;
+    }
+    h5 {
+      font-family: $regular;
+      font-size:2rem;
+      color:#fff;
+      text-align:center;
+      line-height: 28px;
+      margin-bottom:30px;
+    }
+    p {
+      font-family: $light;
+      font-style:italic;
+      font-size:1.7rem;
+      color:#fff;
+      text-align:center;
+      line-height: 22px;
+    }
+  }
+  &-phone {
+    width:390px;
+    height: 390px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.4);
+    margin-left:40px;
+    position:relative;
+    &-img {
+      width:154px;
+      height: 312px;
+      position:absolute;
+      left:0px;
+      top:40px;
+      background:url(img/resources/img/teodor/phone-img.png) no-repeat center center;
+    }
+    &-text {
+      width:178px;
+      position:absolute;
+      right:35px;
+      top:55px;
+      h2 {
+        font-size:4rem;
+        font-family: $extra_bold;
+        color:#fff;
+        margin-bottom:20px;
+        line-height:35px;
+      }
+      p {
+        font-size:1.7rem;
+        font-family: $regular;
+        color:#000;
+        margin-bottom:40px;
+        line-height: 16px;
+      }
+      a {
+        width:135px;
+        height:41px;
+        display: block;
+        margin-bottom:15px;
+
+      }
+      .appstorn {
+        background:url(img/resources/img/teodor/app-storn.png) no-repeat center center;
+      }
+      .googleplay {
+        background:url(img/resources/img/teodor/google-play.png) no-repeat center center;
+      }
+    }
+  }
+  &-sokial {
+    margin-left:60px;
+  }
+  .bot-text {
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    color:#000;
+    font-size:1.2rem;
+    font-family: $light;
+  }
+}
+
+ 
+// ------------------------- END TEODOR
