@@ -91,7 +91,7 @@
 
 
                 <div ng-show="ctrl.currentCell.cell_type == 'blue'" class="priz clearfix">
-                    <div class="priz-item" ng-repeat="category in ctrl.categories">
+                    <div class="priz-item" ng-repeat="category in ctrl.categories | orderBy:'category.right_answers_count'">
                         <div class="priz-item-text clearfix">
                             <div class="number" ng-bind="category.right_answers_count">
                             </div>
@@ -118,7 +118,7 @@
                 </div>
 
                 <div ng-show="ctrl.currentCell.cell_type == 'green'" class="priz clearfix">
-                    <div class="priz-item" ng-repeat="car in ctrl.cars">
+                    <div class="priz-item" ng-repeat="car in ctrl.cars | orderBy:'category.right_answers_count'">
 
                         <div class="priz-slider1">
                             <div class="priz-item-img">
