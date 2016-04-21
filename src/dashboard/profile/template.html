@@ -37,7 +37,7 @@
 
                             <p ng-class="{'active' : $state.includes('dashboard.profile.progress')}">Моя активность</p></a>
                     </li>
-                    <li>
+                    <li ng-show="ctrl.user.can_photo_competition">
                         <a ui-sref="dashboard.profile.fotocontest"><img src="img/resources/img/lk/fotoconc.png" alt="" class="img-responsive">
 
                             <p ng-class="{'active' : $state.includes('dashboard.profile.fotocontest')}">Фотоконкурс</p></a>
