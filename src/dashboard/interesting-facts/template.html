@@ -21,12 +21,15 @@
 
     <div class="fact-tabs">
         <ul class="nav nav-tabs">
-            <li ng-class="{'active': ctrl.hockeyActive}">
-                <a ng-click="ctrl.changeTag({tag:'#хоккейныйфакт',hockeyActive:true})">#хоккейныйфакт</a>
+            <li ng-class="{'active': ctrl.tag == '#хоккейныйфакт'}">
+                <a ng-click="ctrl.changeTag({tag:'#хоккейныйфакт'})">#хоккейныйфакт</a>
             </li>
-            <!--<li ng-class="{'active': ctrl.skodaActive}">
-                <a ng-click="ctrl.changeTag({tag:'#skoda',skodaActive:true})">Факты от ŠKODA</a>
-            </li>-->
+            <li ng-class="{'active': ctrl.tag == '#skoda'}">
+                <a ng-click="ctrl.changeTag({tag:'#skoda'})">#skoda</a>
+            </li>
+            <li ng-class="{'active': ctrl.tag == '#хоккейвкаждом'}">
+                <a ng-click="ctrl.changeTag({tag:'#хоккейвкаждом'})">#хоккейвкаждом</a>
+            </li>
         </ul>
     </div>
     <div class="tab-content">

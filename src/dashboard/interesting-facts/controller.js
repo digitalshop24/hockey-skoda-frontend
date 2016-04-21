@@ -2,15 +2,13 @@
 
 
 export default class FactsCtrl {
-    constructor(facts, page, $state, factService, tag, hockeyActive, skodaActive, $location, $stateParams) {
+    constructor(facts, page, $state, factService, tag, $location, $stateParams) {
         this.facts = facts;
         this.state = $state;
         this.currentPage = page;
         this.factService = factService;
         this.tag = tag;
         this.$stateParams = $stateParams;
-        this.hockeyActive = hockeyActive;
-        this.skodaActive = skodaActive;
 
         const startUrl =  $location.absUrl().substring(0,$location.absUrl().indexOf('/interesting-facts/'));
         facts.forEach(post => {
@@ -25,9 +23,7 @@ export default class FactsCtrl {
 
     changeTag(info) {
         this.state.go('dashboard.facts', {
-            tag: info.tag,
-            hockeyActive: !!info.hockeyActive,
-            skodaActive: !!info.skodaActive
+            tag: info.tag
         });
     }
 
