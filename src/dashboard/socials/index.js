@@ -20,7 +20,7 @@ export default angular.module('dashboard.socials', [])
                 controllerAs: 'ctrl',
                 params: {
                     page: 1,
-                    daysAmount: 2
+                    daysAmount: 1
                 },
                 resolve: {
                     posts: (socialService, $stateParams) => {
