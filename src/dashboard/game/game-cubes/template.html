@@ -12,7 +12,7 @@
         <div class="game-two-block-title clearfix">
             <div class="game-two-block-title-left">
                 <h3><b>Пробейся </b><br> к викторине!</h3>
-                <share-buttons data="{}"></share-buttons>   
+                <share-buttons data="{}"></share-buttons>
 
             </div>
             <div class="game-two-block-title-right">
@@ -91,7 +91,7 @@
 
 
                 <div ng-show="ctrl.currentCell.cell_type == 'blue'" class="priz clearfix">
-                    <div class="priz-item" ng-repeat="category in ctrl.categories">
+                    <div class="priz-item" ng-repeat="category in ctrl.categories | orderBy:'right_answers_count':true">
                         <div class="priz-item-text clearfix">
                             <div class="number" ng-bind="category.right_answers_count">
                             </div>
@@ -189,7 +189,7 @@
 
             <div class="mobal-button priz otvet clearfix">
                 <div class="mobal-button-left">
-                    
+
                 </div>
                 <div class="mobal-button-right" ng-click="ctrl.startSecondQuestion()">
                     <button class="btn btn_primary">Далее</button>
@@ -228,7 +228,7 @@
 
             <div class="mobal-button priz otvet clearfix">
                 <div class="mobal-button-left">
-                    
+
                 </div>
                 <div class="mobal-button-right" ng-click="ctrl.startThirdQuestion()">
                     <button class="btn btn_primary">Далее</button>
@@ -276,7 +276,7 @@
 
             <div class="mobal-button priz otvet clearfix">
                 <div class="mobal-button-left">
-                    
+
                 </div>
                 <div class="mobal-button-right " ng-click="ctrl.checkAnswers()">
                     <button class="btn btn_primary">Проверить!</button>
@@ -292,12 +292,12 @@
 
 <div class="modal fade" id="userData" role="dialog" data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog">
-            <form ng-submit="ctrl.confirmUserData()">
+            <form ng-submit="ctrl.confirmUserData()" ng-init="ctrl.form = { policy_agreed: true}">
 
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal"></button>
-                    
-                    
+
+
                     <div class="otv-fre otv-reg clearfix">
                         <div class="title">
                             <h3>Личные данные </h3>
@@ -311,17 +311,17 @@
                             </div>
                             <div class="otv-reg-right">
                                 <input type="text" placeholder="Адрес" ng-model="ctrl.userData.address">
-                                <input type="text" placeholder="Телефон" ng-model="ctrl.userData.phone" required>
+                                <input type="phone" placeholder="Телефон" mask="+7(999) 999-9999" placeholder="+7" ng-model="ctrl.userData.phone" clean="true" required>
                                 <textarea type="text" placeholder="Комментарий к викторине" ng-model="ctrl.userData.comment"></textarea>
                             </div>
                         </div>
                         <div class="otv-reg-checkbox">
-                            <input type="checkbox" ng-model="ctrl.form.policy_agreed" id="c1">
+                            <input type="checkbox" ng-model="ctrl.form.policy_agreed" id="c1" required>
                             <label for="c1"><span></span><a href="" ui-sref="dashboard.consent">Соглашаюсь с обработкой персональных данных</a></label>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
 
 
@@ -355,12 +355,12 @@
                   </div>
                   <div class="text-right">
                     <p> {{ctrl.result.prize.description}}</p>
-                
+
                     <a class="btn btn_primary" ng-click="ctrl.goToPrizes()">Как получить приз</a>
                   </div>
                 </div>
 
-                
+
             </div>
 
 

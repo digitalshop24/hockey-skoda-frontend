@@ -12,9 +12,8 @@ export default class ProgressCtrl {
     }
 
 
-
     loadPhoto(file) {
-        if(file) {
+        if (file) {
             this.Upload.dataUrl(file, true).then((dataUrl) => {
                 return this.service.loadImage(dataUrl)
             }).then(res => {
@@ -38,5 +37,20 @@ export default class ProgressCtrl {
             });
         }
 
+    }
+
+    deletePhoto(photo) {
+        this.service.deleteImage(photo.id)
+            .then(res => {
+                this.state.go('dashboard.profile.fotocontest', {}, {reload: true});
+            }).catch(err => {
+                this.modal.open({
+                    resolve: {
+                        message: () => {
+                            return 'Во время удаления произошла ошибка!';
+                        }
+                    }
+                });
+            });
     }
 }

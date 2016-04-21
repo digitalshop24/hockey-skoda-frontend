@@ -72,7 +72,7 @@ header {
         a {
           font-size: $p_size;
           color: $green_main;
-          
+
         }
       }
     }
@@ -1229,10 +1229,10 @@ footer {
       li {
         display: inline-block;
       }
-      li:nth-child(2) {
+      li:nth-child(2,5) {
         position: relative;
         top: -7px;
-        margin: 0 10px;
+        margin: 0 0px;
         padding: 10px 0;
       }
     }
@@ -1712,16 +1712,21 @@ $grey_about: #5d5d5d;
       margin-left: 75px;
       span {
         font-size: 1.5rem;
-        padding-left: 50px;
+        margin-left: 50px;
         position: relative;
+        padding: 5px 0 8px 10px;
+        background-color: rgba(204, 204, 204, 0.5);
         top: -3px;
+        color: $black;
+
         button {
           text-transform: uppercase;
-          color: $black;
+          color: $green_main;
           border: none;
           margin-left: 10px;
           border-radius: 0px;
           font-family: $bold;
+          background-color: $grey_lite;
         }
       }
     }
@@ -2203,7 +2208,7 @@ $grey_about: #5d5d5d;
   }
 }
 .wrapp_mainpage_end {
-  background-image: url(img/resources/img/skoda-hockey_main-footer-2.jpg);
+  background-image: url(img/resources/img/skoda-hockey_main-footer-3.jpg);
   background-position: center center;
   background-size: cover;
   min-height: 650px;
@@ -2677,14 +2682,27 @@ $grey_about: #5d5d5d;
 //-------------------------------------------------- t-drive
 
 .wrapp_t_drive {
-  background-color:#F5F5F5;
   min-height: 1100px;
-  .wrapp_bg_tdrive {
-    background-image: url("img/resources/img/t_drive/TD-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 600px;
-    background-position: center 100%;
+  background: #F5F5F5;
+  .t-drive-bg{
+    background:#F5F5F5;
+    height:auto;
+    width:100%;
+    position: relative;
+    &:before{
+      content:'';
+      position: absolute;
+      display: block;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      z-index:1;
+    }
+    img{
+      width:100%;
+      height:auto;
+    }
   }
   h1 {
     font-family: $light;
@@ -3439,6 +3457,43 @@ $grey_about: #5d5d5d;
       p {
         position: relative;
         top: -13px;
+      }
+    }
+  }
+  .search {
+    margin-top:20px;
+    width:100%;
+    padding-left:15px;
+    font-size:1.7rem;
+    border:1px solid $grey;
+    color:$grey;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom:40px;
+  }
+  .img-block-br {
+    border-bottom:2px solid #ccc;
+  }
+  .img-block {
+    margin-bottom:15px;
+    img {
+      width:100%;
+      margin:0px;
+    }
+    a {
+      text-decoration: none;
+
+    }
+    &-text {
+      padding:15px 10px;
+      background:#e1e5e8;
+      h2 {
+        font-size:2rem;
+        font-family: $bold;
+      }
+      span {
+        font-size:1.2rem;
+        font-family: $regular;
       }
     }
   }
@@ -5729,7 +5784,7 @@ $grey_about: #5d5d5d;
     font-family: "SkodaProExtraBold";
   }
   .input_small {
-    width:350px;
+    width:100%;
     position:relative;
     top:6px;
   }
@@ -5908,6 +5963,9 @@ $grey_about: #5d5d5d;
       font-family: $regular;
       line-height: 1.4rem;
       margin-bottom:12px;
+      font{
+        font-family: $regular !important;
+      }
     }
   }
 }
@@ -6118,7 +6176,7 @@ $grey_about: #5d5d5d;
                 bottom:0px;
                 margin:auto;
               }
-              
+
             }
             .icon-fb {
               background:#425f9c;
@@ -6130,7 +6188,7 @@ $grey_about: #5d5d5d;
               background:#56789c;
             }
           }
-        
+
       }
     }
   }
@@ -6140,7 +6198,7 @@ $grey_about: #5d5d5d;
       font-size:1.7rem;
       font-family: $regular;
       color:#000;
-      margin-bottom:15px; 
+      margin-bottom:15px;
     }
   }
 }
@@ -6179,7 +6237,7 @@ $grey_about: #5d5d5d;
         }
       }
       &.active {
-        
+
         border:2px solid rgba(255,255,255,0);
         a {
           font-family: $regular;
@@ -6208,7 +6266,7 @@ $grey_about: #5d5d5d;
         -webkit-column-count: 3;
         column-count: 3;
 }
- 
+
 /* Элементы в виде плиток с содержанием */
 .fac-item {
     display: inline-block;
@@ -6216,8 +6274,8 @@ $grey_about: #5d5d5d;
     padding: 1em;
     margin: 0 0 1.5em;
     width: 100%;
-    -moz-box-sizing: border-box; /* Для Firefox */ 
-    -webkit-box-sizing: border-box; /* Для Safari, Chrome, iOS иAndroid */ 
+    -moz-box-sizing: border-box; /* Для Firefox */
+    -webkit-box-sizing: border-box; /* Для Safari, Chrome, iOS иAndroid */
     box-shadow: 2px 2px 4px 0 #ccc; /* Внешняя тень плиток */
 }
 .masonry {
@@ -6231,15 +6289,15 @@ $grey_about: #5d5d5d;
         -webkit-column-count: 5;
         column-count: 5;
 }
- 
+
 /* Элементы в виде плиток с содержанием */
 .item {
     display: inline-block;
     background: #fff;
     margin: 0 0 1.5em;
     width: 100%;
-    -moz-box-sizing: border-box; /* Для Firefox */ 
-    -webkit-box-sizing: border-box; /* Для Safari, Chrome, iOS иAndroid */ 
+    -moz-box-sizing: border-box; /* Для Firefox */
+    -webkit-box-sizing: border-box; /* Для Safari, Chrome, iOS иAndroid */
     box-shadow: 2px 2px 4px 0 #ccc; /* Внешняя тень плиток */
 }
 
@@ -6248,7 +6306,7 @@ $grey_about: #5d5d5d;
     border:none;
     box-shadow:none;
     padding:0px;
-    position:relative; 
+    position:relative;
     cursor:pointer;
     img {
         width:100%;
@@ -6294,7 +6352,7 @@ $grey_about: #5d5d5d;
         line-height:16px;
         color:#000;
       }
-    } 
+    }
     &-act {
       position:relative;
     }
@@ -6302,8 +6360,8 @@ $grey_about: #5d5d5d;
       opacity:0;
       height: 0px;
       overflow: hidden;
-      cursor:pointer; 
-      
+      cursor:pointer;
+
       &-rote {
         width:160px;
         height: 110px;
@@ -6358,7 +6416,7 @@ $grey_about: #5d5d5d;
                 margin:auto;
                 padding-top:9px;
               }
-              
+
             }
             .icon-fb {
               background:#425f9c;
@@ -6382,12 +6440,12 @@ $grey_about: #5d5d5d;
         top:0px;
         left:0px;
         opacity:1;
- 
- 
+
+
         .fact-two-block-hov-rote {
           position:static;
           display: block;
-    
+
           top:0px;
           left:0px;
 
@@ -6821,7 +6879,7 @@ nav {
 }
 
 
- 
+
 
 
 
@@ -7157,3 +7215,133 @@ nav {
 
 
 // -------------------------------------------------END JUNIOR-CUP
+
+
+
+// ------------------------ TEODOR
+.teodor {
+  width:100%;
+  min-height: 1159px;
+  background:url(img/resources/img/teodor/bg-teodor.jpg) no-repeat center center;
+  background-size:cover;
+  position:relative;
+  &-tittle {
+    width:580px;
+    padding:50px 40px 30px;
+    position:relative;
+    &:before {
+      position:absolute;
+      left:0px;
+      top:47%;
+      content:'\201d';
+      font-size:3.5rem;
+      font-family: $extra_bold; 
+      color:#37aa35;
+    }
+    &:after {
+      position:absolute;
+      right:0px;
+      top:47%;
+      content:'\201e';
+      font-size:3.5rem;
+      font-family: $extra_bold;
+      color:#37aa35;
+    }
+    h3 {
+      font-family: $light;
+      font-size:2rem;
+      color:#fff;
+      text-align:center;
+      line-height: 18px;
+      margin-bottom:10px;
+    }
+    h4 {
+      font-family: $extra_bold;
+      font-size:3.5rem;
+      color:#37aa35;
+      text-align:center;
+      line-height: 38px;
+      text-transform: uppercase;
+      margin-bottom:20px;
+    }
+    h5 {
+      font-family: $regular;
+      font-size:2rem;
+      color:#fff;
+      text-align:center;
+      line-height: 28px;
+      margin-bottom:30px;
+    }
+    p {
+      font-family: $light;
+      font-style:italic;
+      font-size:1.7rem;
+      color:#fff;
+      text-align:center;
+      line-height: 22px;
+    }
+  }
+  &-phone {
+    width:390px;
+    height: 390px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.4);
+    margin-left:40px;
+    position:relative;
+    &-img {
+      width:154px;
+      height: 312px;
+      position:absolute;
+      left:0px;
+      top:40px;
+      background:url(img/resources/img/teodor/phone-img.png) no-repeat center center;
+    }
+    &-text {
+      width:178px;
+      position:absolute;
+      right:35px;
+      top:55px;
+      h2 {
+        font-size:4rem;
+        font-family: $extra_bold;
+        color:#fff;
+        margin-bottom:20px;
+        line-height:35px;
+      }
+      p {
+        font-size:1.7rem;
+        font-family: $regular;
+        color:#000;
+        margin-bottom:40px;
+        line-height: 16px;
+      }
+      a {
+        width:135px;
+        height:41px;
+        display: block;
+        margin-bottom:15px;
+
+      }
+      .appstorn {
+        background:url(img/resources/img/teodor/app-storn.png) no-repeat center center;
+      }
+      .googleplay {
+        background:url(img/resources/img/teodor/google-play.png) no-repeat center center;
+      }
+    }
+  }
+  &-sokial {
+    margin-left:60px;
+  }
+  .bot-text {
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    color:#000;
+    font-size:1.2rem;
+    font-family: $light;
+  }
+}
+
+ 
+// ------------------------- END TEODOR

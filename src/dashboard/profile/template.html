@@ -69,13 +69,10 @@
                 </div>
 
             </div>
-            <div class="col-sm-2 col-md-2 lk_plus">
+            <div class="col-sm-2 col-md-2 lk_plus ">
                 <div scroll-init class="achif_wrapp">
-                    <h6 class="text-left" style="text-transform: uppercase; font-family: 'SkodaProBold', sans-serif;">
-                        Мои баллы:
-                    </h6>
-                    <h6 class="text-left" style="margin-bottom: 30px;">
-                        <span ng-bind="ctrl.user.achievments_score" ></span>
+                    <h6 class="text-center" class="my_ball" style="margin-bottom: 30px;">
+                        <span ng-bind="'Мои баллы: ' + ctrl.user.points" ></span>
                         <img src="img/resources/img/icon-bal.png" alt="" style="width: 20px; height: 20px;">
                     </h6>
                     <h6 class="text-center">История начисления:</h6>

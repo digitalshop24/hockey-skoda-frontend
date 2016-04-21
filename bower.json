@@ -33,6 +33,7 @@
     "angular-scroll": "~1.0.0",
     "angular-timeline": "~1.6.2",
     "ngInfiniteScroll": "~1.2.2",
-    "angular-mask": "~3.0.16"
+    "angular-mask": "~3.0.16",
+    "socket.io-client": "^1.4.5"
   }
 }

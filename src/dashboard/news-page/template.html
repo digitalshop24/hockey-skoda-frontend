@@ -28,6 +28,37 @@
 
             </div>
             <div class="col-md-4 visible-md visible-lg">
+
+                <h6>{{ctrl.rubric.api_path == 'stars' ? 'Другие звезды' :  'Свежие новости'}} <span class="show_all"><a ui-sref="{{ctrl.rubricState}}">Смотреть все</a></span></h6>
+                <form action="">
+                    <input type="text" class="search" ng-model="ctrl.search"
+                           placeholder="Павел Буре, например">
+                </form>
+                <p class="littel_date" ng-bind="ctrl.championatNews[0].published_at | amDateFormat:'DD MMMM'"></p>
+                <div class="img-block-br" ng-show="ctrl.rubric.api_path == 'stars'">
+                    <div class="img-block" ng-repeat="lastNews in ctrl.championatNews | filter:{name:ctrl.search}">
+                        <a href="#">
+                            <img src="{{lastNews.image.small}}" alt="">
+                            <div class="img-block-text">
+                                <h2 ng-bind="lastNews.name">Анатолий Фирсов</h2>
+                                <span ng-bind="lastNews.short_content">1941-2000</span>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <ul ng-show="ctrl.rubric.api_path != 'stars'">
+                    <li ng-repeat="lastNews in ctrl.championatNews | filter:{name:ctrl.search}" ng-if="ctrl.news.id != lastNews.id">
+                        <p class="littel_news"><a ui-sref="dashboard.newspage({id:lastNews.id, rubric:lastNews.rubric.api_path})" ng-bind="lastNews.name"></a></p>
+                        <span class="littel_time" ng-bind="lastNews.published_at | amDateFormat:'H:mm'">12:45</span>
+                        <span class="little_comment" ng-bind="lastNews.comments_count"></span>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!--<div class="col-md-4 visible-md visible-lg">
                 <div class="news_banner text-center">
                     <a href="">
                         Смотреть
@@ -42,7 +73,7 @@
                         <span class="little_comment" ng-bind="lastNews.comments_count"></span>
                     </li>
                 </ul>
-            </div>
+            </div>-->
         </div>
     </div>
     <section class="wrapp_mainpage_new">

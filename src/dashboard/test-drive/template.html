@@ -26,13 +26,11 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-right">
-                        <input type="text" class="input_default input_small phone-mask" name="phone"  placeholder="Телефон* (Обязательное поле)"
-                               mask="+7(999) 999-9999" clean="true" ng-model="ctrl.mobilephone" required>
-
+                        <input type="text" class="input_default input_small phone-mask" name="phone"  placeholder="Телефон* (Обязательное поле)" mask="+7(999) 999-9999" clean="true" ng-model="ctrl.mobilephone" required>
                     </div>
-                    <div class="col-md-6 text-left"><input type="email" ng-model="ctrl.email"
-                                                           class="input_default input_small"
-                                                           placeholder="E-mail* (Обязательное поле)" required minlength="2"></div>
+                    <div class="col-md-6 text-left">
+                    <input type="email" ng-model="ctrl.email" class="input_default input_small" placeholder="E-mail* (Обязательное поле)" required minlength="2">
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -41,7 +39,6 @@
                             <option disabled selected value>Выберите город* (Обязательное поле)</option>
                         </select>
                     </div>
-
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -55,24 +52,13 @@
                     <div class="col-md-12 text-center">
                         <input type="checkbox" checked="checked" id="c1">
                         <label for="c1"><span></span><a href="" ui-sref="dashboard.consent">Соглашаю с обработкой персональных данных</a></label>
-
                     </div>
                 </div>
                     <div class="col-md-12 text-center">
                         <button class="btn btn_primary main">Подать заявку</button>
                     </div>
             </form>
-           
-
-
-        </div>
-
-    </div>
-    <div class="container-fluid hidden-sm hidden-xs">
-         <div class="row wrapp_bg_tdrive">
-            <div class="col-md-12">
-
-            </div>
         </div>
     </div>
+    <div class="t-drive-bg"><img src="img/resources/img/t_drive/test-drive-bg.jpg" alt=""></div>
 </aside>

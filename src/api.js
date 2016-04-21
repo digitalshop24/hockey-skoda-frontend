@@ -37,9 +37,8 @@ export default class Api {
     }
 
     delete(url, data) {
-        return this.http.delete(this.api + url, {
-            headers: this.headers
-        }).catch(response => {
+        const configObj = Object.assign(data || {}, {headers: this.headers});
+        return this.http.delete(this.api + url, configObj).catch(response => {
             this.handleResponse(response);
         });
     }

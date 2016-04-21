@@ -71,7 +71,7 @@
     margin-bottom:30px;
     font-family: $light;
     font-size: 3rem;
-  } 
+  }
   span {
     font-size:1.7rem;
     font-family: $light;
@@ -1315,8 +1315,8 @@
           float:left;
           width:46%;
           min-height:420px;
-          &:nth-last-of-type(2n) {
-            float:right; 
+          &:nth-last-of-type(odd) {
+            margin-left:8%;
           }
           &-text {
             margin-bottom:80px;
@@ -1521,7 +1521,7 @@
     width:45%;
     float:right;
   }
-  
+
   input {
     height:40px;
     margin-bottom:15px;
@@ -1535,7 +1535,7 @@
     font-family: "SkodaProLight",sans-serif;
     color: #a3a3a3;
     padding-left: 25px;
-    line-height: 40px;; 
+    line-height: 40px;;
     border-radius: 5px;
   }
   input[type='checkbox'] {
@@ -1621,7 +1621,7 @@
   z-index: 99;
   &-left {
     float:left;
-    
+
     .bor-red {
       border:1px solid #da0000;
     }
