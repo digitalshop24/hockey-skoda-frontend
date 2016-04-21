@@ -13,7 +13,9 @@ export default class MainCtrl {
         const temp = [];
         socPosts.forEach(function(post) {
             if(post.network != 'instagram'){
-
+                if(post.content && post.content.length > 300) {
+                    post.content = post.content.substring(0, 300) + "...";
+                }
                 temp.push(post);
             }
         });
