@@ -18,7 +18,6 @@
             "src/resources/libs/drilldown/jquery.drilldown.min.js",
             "src/resources/js/common.js",
             "src/resources/libs/jcrop/jcrop.js",
-            "src/resources/libs/maskinput/jquery.maskedinput.js",
             "bower_components/slick-carousel/slick/slick.js",
             "bower_components/angular-slick/dist/slick.min.js",
             "bower_components/textAngular/dist/textAngular-rangy.min.js",
