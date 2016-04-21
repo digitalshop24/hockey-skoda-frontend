@@ -34,7 +34,7 @@ export default angular.module('dashboard.newspage', [
 
                     championatNews: ($stateParams, newspageService, news) => {
                         const multiplier = Math.ceil(news.content.length / 1500) * 5;
-                        return newspageService.getNews('blog', 1, multiplier);
+                        return newspageService.getNews($stateParams.rubric, 1, multiplier);
                     },
 
                     commentsInfo: ($stateParams, newspageService) => {
