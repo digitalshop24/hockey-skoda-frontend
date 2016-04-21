@@ -22,6 +22,7 @@ export default class SocialCtrl {
             this.fbFilter = this.vkFilter = this.twitterFilter = this.instagramFilter = true;
         }
         this.allFilter = this.fbFilter && this.vkFilter && this.twitterFilter && this.instagramFilter;
+        this.instagramFilter = false;
         this.changeFilter();
 
         this.filterByNetworks = post => {
