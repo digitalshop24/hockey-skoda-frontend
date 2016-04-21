@@ -3,7 +3,7 @@
 const COLUMN_AMOUNT = 7;
 
 export default class СalendarCtrl {
-    constructor(calendar, calendarService, subscriptions) {
+    constructor(calendar, calendarService, subscriptions, teams) {
         calendar.forEach(day => {
            day.matches.forEach(match => {
                var subscr = subscriptions.find(subscr => subscr.match_id == match.id);
@@ -21,13 +21,19 @@ export default class СalendarCtrl {
         this.allMatches = true;
         this.subscribed = true;
         this.currentDate = moment('05-06-2016').toDate();
+        this.allTeams = teams.filter(team => team.short_name);
 
-        this.updateCalendar(moment());
+        this.updateCalendar(this.currentDate);
 
 
         this.filterByToggle = match => {
             return this.allMatches ? true : this.subscribed ? match.isSubscribed : false;
         };
+
+    }
+
+    filterByTeam() {
+        this.updateCalendar(this.currentDate);
     }
 
     updateCalendar(day) {
@@ -99,9 +105,11 @@ export default class СalendarCtrl {
         }
         const matches = [];
         day.matches.forEach(event => {
-            const hour = moment(event.when).hour();
-            if (hour == time) {
-                matches.push(event);
+            if(!this.allTeamsFilter || (this.allTeamsFilter.id == event.redteam.id || this.allTeamsFilter.id == event.blueteam.id)) {
+                const hour = moment(event.when).hour();
+                if (hour == time) {
+                    matches.push(event);
+                }
             }
         });
 
