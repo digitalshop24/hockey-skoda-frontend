@@ -93,7 +93,7 @@ export default class CubesCtrl {
                     this.categories.sort((a, b) => b.right_answers_count - a.right_answers_count);
                 } else {
                     this.cars = res.cars;
-                    this.prizes = res.cars;
+                    this.prizes = res.prizes;
                 }
 
                 $('#myModal').modal('show');
