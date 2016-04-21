@@ -5784,7 +5784,7 @@ $grey_about: #5d5d5d;
     font-family: "SkodaProExtraBold";
   }
   .input_small {
-    width:350px;
+    width:100%;
     position:relative;
     top:6px;
   }
@@ -5963,6 +5963,9 @@ $grey_about: #5d5d5d;
       font-family: $regular;
       line-height: 1.4rem;
       margin-bottom:12px;
+      font{
+        font-family: $regular !important;
+      }
     }
   }
 }
