@@ -15,17 +15,20 @@ export default class ProgressCtrl {
         this.modalSpeed = modalSpeed;
     }
     openSpeed() {
-      this.modalSpeed.open({
-          resolve: {
-              message: () => {
-                var header = 'Личный кабинет';
-                var text = 'В личном кабинете отображается вся ваша активность на сайте.';
-                var message = '<h2>' + header + '</h2><p>' + text + '</p>';
-                return message;
-              }
-          },
-          windowClass: 'modal-window modal-window_right',
-      });
-      return;
+        if(localStorage["modalSpeedProfile"] == null){
+            localStorage["modalSpeedProfile"] = "showed";
+            this.modalSpeed.open({
+                resolve: {
+                    message: () => {
+                      var header = 'Личный кабинет';
+                      var text = 'В личном кабинете отображается вся ваша активность на сайте.';
+                      var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                      return message;
+                    }
+                },
+                windowClass: 'modal-window modal-window_right',
+            });
+            return;
+        }
     }
 }

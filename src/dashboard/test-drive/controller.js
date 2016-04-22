@@ -55,17 +55,20 @@ export default class TestDriveCtrl {
         });
     }
     openSpeed() {
-      this.modalSpeed.open({
-          resolve: {
-              message: () => {
-                var header = 'Тест-драйв SKODA';
-                var text = 'Пройдя тест-драйв в любом дилерском центре, вы получите уникальный промокод. Введя этот промокод в личном кабинете и набрав необходимое количество баллов, вы получите право участвовать в суперигре!';
-                var message = '<h2>' + header + '</h2><p>' + text + '</p>';
-                return message;
-              }
-          },
-          windowClass: 'modal-window modal-window_right',
-      });
-      return;
+        if(localStorage["modalSpeedTDrive"] == null){
+            localStorage["modalSpeedTDrive"] = "showed";
+            this.modalSpeed.open({
+              resolve: {
+                  message: () => {
+                    var header = 'Тест-драйв SKODA';
+                    var text = 'Пройдя тест-драйв в любом дилерском центре, вы получите уникальный промокод. Введя этот промокод в личном кабинете и набрав необходимое количество баллов, вы получите право участвовать в суперигре!';
+                    var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                    return message;
+                  }
+              },
+              windowClass: 'modal-window modal-window_right',
+            });
+            return;
+        }
     }
 }

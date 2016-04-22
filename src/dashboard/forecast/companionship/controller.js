@@ -31,17 +31,20 @@ export default class ForecasttwoCtrl {
             });
     }
     openSpeed() {
-      this.modalSpeed.open({
-          resolve: {
-              message: () => {
-                var header = 'Делайте прогнозы и получайте баллы! ';
-                var text = 'На этой странице есть все ближайшие матчи, результат которых можно прогнозировать. Прогноз на каждый матч можно сделать только 1 раз. Вам необходимо выставить счет и нажать кнопку "Угадать". За прогноз счета в матче вам начисляются баллы. Если вы угадаете счет, то получите дополнительные бонусные баллы.';
-                var message = '<h2>' + header + '</h2><p>' + text + '</p>';
-                return message;
-              }
-          },
-          windowClass: 'modal-window modal-window_right',
-      });
-      return;
+        if(localStorage["modalSpeedCompanion"] == null){
+            localStorage["modalSpeedCompanion"] = "showed";
+            this.modalSpeed.open({
+              resolve: {
+                  message: () => {
+                    var header = 'Делайте прогнозы и получайте баллы! ';
+                    var text = 'На этой странице есть все ближайшие матчи, результат которых можно прогнозировать. Прогноз на каждый матч можно сделать только 1 раз. Вам необходимо выставить счет и нажать кнопку "Угадать". За прогноз счета в матче вам начисляются баллы. Если вы угадаете счет, то получите дополнительные бонусные баллы.';
+                    var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                    return message;
+                  }
+              },
+              windowClass: 'modal-window modal-window_right',
+            });
+            return;
+        }
     }
 }

@@ -66,18 +66,21 @@ export default class ScheduleCtrl {
         this.$state.go('dashboard.schedule',{stage: stage});
     }
     openSpeed() {
-      this.modalSpeed.open({
-          resolve: {
-              message: () => {
-                var header = 'Расписание игр';
-                var text = 'В этом разделе сайта вы можете увидеть расписание ближайших матчей.';
-                var message = '<h2>' + header + '</h2><p>' + text + '</p>';
-                return message;
-              }
-          },
-          windowClass: 'modal-window modal-window_right',
-      });
-      return;
+        if(localStorage["modalSpeedShedule"] == null){
+            localStorage["modalSpeedShedule"] = "showed";
+            this.modalSpeed.open({
+              resolve: {
+                  message: () => {
+                    var header = 'Расписание игр';
+                    var text = 'В этом разделе сайта вы можете увидеть расписание ближайших матчей.';
+                    var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                    return message;
+                  }
+              },
+              windowClass: 'modal-window modal-window_right',
+            });
+            return;
+        }
     }
 
 }

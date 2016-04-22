@@ -29,17 +29,20 @@ export default class SuggestionsCtrl {
         });
     }
     openSpeed() {
-      this.modalSpeed.open({
-          resolve: {
-              message: () => {
-                var header = 'Пожелайте удачи своей сборной!';
-                var text = 'Напишите пожелание нашей сборной и поделитесь им в социальной сети! За это вам будут начислены бонусные баллы.';
-                var message = '<h2>' + header + '</h2><p>' + text + '</p>';
-                return message;
-              }
-          },
-          windowClass: 'modal-window modal-window_right',
-      });
-      return;
+        if(localStorage["modalSpeedSuggestions"] == null){
+            localStorage["modalSpeedSuggestions"] = "showed";
+            this.modalSpeed.open({
+              resolve: {
+                  message: () => {
+                    var header = 'Пожелайте удачи своей сборной!';
+                    var text = 'Напишите пожелание нашей сборной и поделитесь им в социальной сети! За это вам будут начислены бонусные баллы.';
+                    var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                    return message;
+                  }
+              },
+              windowClass: 'modal-window modal-window_right',
+            });
+            return;
+        }
     }
 }

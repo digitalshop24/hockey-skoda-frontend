@@ -30,17 +30,20 @@ export default class TantamareskaCtrl {
         this.modalSpeed = modalSpeed;
     }
     openSpeed() {
-      this.modalSpeed.open({
-          resolve: {
-              message: () => {
-                var header = 'Поделится с друзьями';
-                var text = 'Загрузите свою фотографию и поделитесь оригинальной тантамареской с друзьями в социальной сети! Если вы нажмете "Поделиться" на любой из страниц сайта, вам будут начислены бонусные баллы. Бонусные баллы начисляются не чаще 1 раза каждые 3 часа.';
-                var message = '<h2>' + header + '</h2><p>' + text + '</p>';
-                return message;
-              }
-          },
-          windowClass: 'modal-window modal-window_right',
-      });
-      return;
+        if(localStorage["modalSpeedTantam"] == null){
+            localStorage["modalSpeedTantam"] = "showed";
+            this.modalSpeed.open({
+              resolve: {
+                  message: () => {
+                    var header = 'Поделится с друзьями';
+                    var text = 'Загрузите свою фотографию и поделитесь оригинальной тантамареской с друзьями в социальной сети! Если вы нажмете "Поделиться" на любой из страниц сайта, вам будут начислены бонусные баллы. Бонусные баллы начисляются не чаще 1 раза каждые 3 часа.';
+                    var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                    return message;
+                  }
+              },
+              windowClass: 'modal-window modal-window_right',
+            });
+        return;
+        }
     }
 }
