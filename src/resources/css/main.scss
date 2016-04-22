@@ -2141,16 +2141,20 @@ $grey_about: #5d5d5d;
 
 
 .wrapp_mainpage_tantam {
-  background-color: #f5f5f5;
+  background-color: #e6e6e6;
+  padding:10px 0 20px;
   .left {
     margin-left: 150px;
     padding-top: 40px;
     padding-bottom: 40px;
+    @media (max-width:1200px){
+      margin-left:0;
+    }
     .p_h {
       font-size: 1.5rem;
       position: relative;
       margin-top: 30px;
-      color: $black;
+      color: #6b6b6b;
       button {
         text-transform: uppercase;
         color: $green_main;
@@ -2167,27 +2171,46 @@ $grey_about: #5d5d5d;
     h4 {
       font-family: $light;
       display: inline;
+      font-size:24px;
+      color:#595959;
       span {
-        font-size: 2.5rem;
-        font-family: $bold;
+        font-size: 20px;
+        font-family: $extra_bold;
         color: $green_main;
         padding-left: 20px;
+        margin-right:5px;
       }
     }
     h2 {
       text-transform: uppercase;
       color: $green_main;
-      margin-top: 30px;
+      margin-top: 20px;
       font-family: $extra_bold;
+      font-size:48px;
     }
     p {
-      margin-top: 30px;
+      margin-top: 20px;
       // color: $grey;
       font-size: $p_size;
     }
   }
   img {
     margin: 0 auto;
+  }
+  &--hashtag{
+    color:$green_main;
+    margin-top:40px;
+    button{
+      color:$green_main;
+      text-transform: uppercase;
+      &:hover{
+        color:$green_main;
+      }
+    }
+  }
+  &--img{
+    margin-top:30px;
+    display: block;
   }
 }
 .wrapp_mainpage_game {
