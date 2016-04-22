@@ -1,7 +1,7 @@
 <div class="game-bg">
-    
 
-<div class="game-play">
+
+<div class="game-play" ng-init="ctrl.open()">
     <div class="game-center">
         <div class="game-title clearfix">
             <div class="game-title-left">
@@ -34,7 +34,7 @@
             <a ui-sref="dashboard.game.cubes({id:{{sector.id}}})" ng-repeat="sector in ctrl.sectors"><div class="game-cricle-item" ng-class="'game-cricle-item' + sector.id"></div></a>
         </div>
     </div>
-        
+
         <div class="game-center-button">
             <button class="btn btn_primary" ng-click="ctrl.chooseRandomSector()">Мне повезет</button>
             <span>Рандомный выбор сектора</span>
