@@ -22,6 +22,7 @@ export default class SocialCtrl {
             this.fbFilter = this.vkFilter = this.twitterFilter = this.instagramFilter = true;
         }
         this.allFilter = this.fbFilter && this.vkFilter && this.twitterFilter && this.instagramFilter;
+        this.instagramFilter = false;
         this.changeFilter();
 
         this.filterByNetworks = post => {
@@ -43,6 +44,7 @@ export default class SocialCtrl {
             post.iconClass = post.network;
             post.repostText = post.reposts + ' ' + this.getRepostText(post.network);
             post.iconUrl = this.getIconUrl(post.network);
+            post.content = post.content ? post.content : "";
             if (post.content.length > 300) {
                 post.minContent = post.content.substring(0, 300) + '...';
                 post.showMinContent = true;

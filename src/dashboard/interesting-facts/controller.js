@@ -2,15 +2,21 @@
 
 
 export default class FactsCtrl {
-    constructor(facts, page, $state, factService, tag, hockeyActive, skodaActive, $location, $stateParams) {
-        this.facts = facts;
+    constructor(facts, page, $state, factService, tag, $location, $stateParams, isSocialFacts, skodaFacts, skodaPerPage) {
+        this.facts = isSocialFacts ? facts : skodaFacts;
+        if(!isSocialFacts) {
+            this.facts.forEach(fact => {
+                fact.content = fact.name;
+                fact.photos = [{image: fact.image}];
+            })
+        }
         this.state = $state;
+        this.isSocialFacts = isSocialFacts;
         this.currentPage = page;
         this.factService = factService;
         this.tag = tag;
         this.$stateParams = $stateParams;
-        this.hockeyActive = hockeyActive;
-        this.skodaActive = skodaActive;
+        this.skodaPerPage = skodaPerPage;
 
         const startUrl =  $location.absUrl().substring(0,$location.absUrl().indexOf('/interesting-facts/'));
         facts.forEach(post => {
@@ -26,8 +32,13 @@ export default class FactsCtrl {
     changeTag(info) {
         this.state.go('dashboard.facts', {
             tag: info.tag,
-            hockeyActive: !!info.hockeyActive,
-            skodaActive: !!info.skodaActive
+            isSocialFacts: true
+        });
+    }
+
+    loadSkodaFacts() {
+        this.state.go('dashboard.facts', {
+            isSocialFacts: false
         });
     }
 
@@ -61,12 +72,27 @@ export default class FactsCtrl {
         if (this.busy) return;
         this.busy = true;
 
-        this.factService.getFacts(++this.currentPage, this.$stateParams.perPage, this.tag)
-            .then((res) => {
-                this.facts = this.facts.concat(res);
-                this.busy = false;
-            }).catch(err => {
-                this.busy = false;
-            });
+
+        if(this.isSocialFacts) {
+            this.factService.getFacts(++this.currentPage, this.$stateParams.perPage, this.tag)
+                .then((res) => {
+                    this.facts = this.facts.concat(res);
+                    this.busy = false;
+                }).catch(err => {
+                    this.busy = false;
+                });
+        } else {
+            this.factService.getSkodaFacts(++this.currentPage, this.skodaPerPage)
+                .then((res) => {
+                    res.posts.forEach(fact => {
+                        fact.content = fact.name;
+                        fact.photos = [{image: fact.image}];
+                    });
+                    this.facts = this.facts.concat(res.posts);
+                    this.busy = this.facts.length == res.posts_count;
+                }).catch(err => {
+                    this.busy = false;
+                });
+        }
     }
 }

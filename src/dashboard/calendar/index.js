@@ -27,6 +27,10 @@ export default angular.module('dashboard.calendar', [])
                             return calendarService.getSubscriptions();
                         }
                         return [];
+                    },
+
+                    teams: (scheduleService) => {
+                        return scheduleService.getTeams();
                     }
                 }
             });
