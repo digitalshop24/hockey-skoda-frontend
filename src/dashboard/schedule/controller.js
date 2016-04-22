@@ -2,8 +2,9 @@
 
 
 export default class ScheduleCtrl {
-    constructor(schedule, $state, teams, $scope, $interval, scheduleService, stage) {
+    constructor(schedule, $state, teams, $scope, $interval, scheduleService, stage, modalSpeed) {
         this.stage = stage;
+        this.modalSpeed = modalSpeed;
         if(this.stage == 'complete') {
             schedule = schedule.reverse();
         }
@@ -63,6 +64,20 @@ export default class ScheduleCtrl {
 
     changeStage(stage) {
         this.$state.go('dashboard.schedule',{stage: stage});
+    }
+    openSpeed() {
+      this.modalSpeed.open({
+          resolve: {
+              message: () => {
+                var header = 'Расписание игр';
+                var text = 'В этом разделе сайта вы можете увидеть расписание ближайших матчей.';
+                var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                return message;
+              }
+          },
+          windowClass: 'modal-window modal-window_right',
+      });
+      return;
     }
 
 }
