@@ -79,4 +79,8 @@ export default class PrizenewCtrl {
             this.currentSponsor = this.sponsors[this.currentSponsorIndex];
         }
     }
+    openInfo(){
+      $('#modalInfo').modal('show');
+      return;
+    }
 }

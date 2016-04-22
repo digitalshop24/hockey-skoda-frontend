@@ -79,7 +79,7 @@
                         <div class="all-prizes-item">
                             <img src="http://skodahockey.s3-eu-central-1.amazonaws.com/prizes/images/000/000/015/small/Shaiba.png?1459940183" alt="">
                             <div class="all-prizes-item--watch">
-                                <a href="#" class="btn btn_common small">Смотреть</a>
+                                <a href="" ng-click="ctrl.openInfo()" class="btn btn_common small">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                         <div class="all-prizes-item">
                             <img src="http://skodahockey.s3-eu-central-1.amazonaws.com/prizes/images/000/000/021/small/norge.png?1459940679" alt="">
                             <div class="all-prizes-item--watch">
-                                <a href="#" class="btn btn_common small">Смотреть</a>
+                                <a href="" ng-click="ctrl.openInfo()" class="btn btn_common small">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                         <div class="all-prizes-item">
                             <img src="http://skodahockey.s3-eu-central-1.amazonaws.com/prizes/images/000/000/019/small/Chehol_telefon.png?1459940545" alt="">
                             <div class="all-prizes-item--watch">
-                                <a href="#" class="btn btn_common small">Смотреть</a>
+                                <a href="" ng-click="ctrl.openInfo()" class="btn btn_common small">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                         <div class="all-prizes-item">
                             <img src="http://skodahockey.s3-eu-central-1.amazonaws.com/prizes/images/000/000/017/small/Konki.png?1459940373" alt="">
                             <div class="all-prizes-item--watch">
-                                <a href="#" class="btn btn_common small">Смотреть</a>
+                                <a href="" ng-click="ctrl.openInfo()" class="btn btn_common small">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                         <div class="all-prizes-item">
                             <img src="http://skodahockey.s3-eu-central-1.amazonaws.com/prizes/images/000/000/019/small/Chehol_telefon.png?1459940545" alt="">
                             <div class="all-prizes-item--watch">
-                                <a href="#" class="btn btn_common small">Смотреть</a>
+                                <a href="" ng-click="ctrl.openInfo()" class="btn btn_common small">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                         <div class="all-prizes-item">
                             <img src="http://skodahockey.s3-eu-central-1.amazonaws.com/prizes/images/000/000/015/small/Shaiba.png?1459940183" alt="">
                             <div class="all-prizes-item--watch">
-                                <a href="#" class="btn btn_common small">Смотреть</a>
+                                <a href="" ng-click="ctrl.openInfo()" class="btn btn_common small">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                         <div class="all-prizes-item">
                             <img src="http://skodahockey.s3-eu-central-1.amazonaws.com/prizes/images/000/000/021/small/norge.png?1459940679" alt="">
                             <div class="all-prizes-item--watch">
-                                <a href="#" class="btn btn_common small">Смотреть</a>
+                                <a href="" ng-click="ctrl.openInfo()" class="btn btn_common small">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                         <div class="all-prizes-item">
                             <img src="http://skodahockey.s3-eu-central-1.amazonaws.com/prizes/images/000/000/019/small/Chehol_telefon.png?1459940545" alt="">
                             <div class="all-prizes-item--watch">
-                                <a href="#" class="btn btn_common small">Смотреть</a>
+                                <a href="" ng-click="ctrl.openInfo()" class="btn btn_common small">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                         <div class="all-prizes-item">
                             <img src="http://skodahockey.s3-eu-central-1.amazonaws.com/prizes/images/000/000/017/small/Konki.png?1459940373" alt="">
                             <div class="all-prizes-item--watch">
-                                <a href="#" class="btn btn_common small">Смотреть</a>
+                                <a href="" ng-click="ctrl.openInfo()" class="btn btn_common small">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                         <div class="all-prizes-item">
                             <img src="http://skodahockey.s3-eu-central-1.amazonaws.com/prizes/images/000/000/019/small/Chehol_telefon.png?1459940545" alt="">
                             <div class="all-prizes-item--watch">
-                                <a href="#" class="btn btn_common small">Смотреть</a>
+                                <a href="" ng-click="ctrl.openInfo()" class="btn btn_common small">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -206,3 +206,31 @@
     </div>
 
 </section>
+
+<!-- Modal info prize -->
+<div class="modal fade modal-prize-info" id="modalInfo" role="dialog" >
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+          <div class="modal-prize-info-content">
+              <div class="col-md-5">
+                  <div class="modal-prize-info--img">
+                      <img src="http://skodahockey.s3-eu-central-1.amazonaws.com/prizes/images/000/000/021/small/norge.png?1459940679" alt="">
+                  </div>
+              </div>
+              <div class="col-md-7">
+                  <h3 class="modal-prize-info--header">Билеты <br>Россия – Латвия</h3>
+                  <p>Поддержи наших на стадионе!<br> Ты должен быть там!</p>
+                  <a href="#" class="btn btn_primary small">Участвовать!</a>
+                  <h5>Кто разыгрывает?</h5>
+                  <div class="modal-prize-info-organizer">
+                      <img src="img/resources/img/prizes/organizer_maxim.jpg" alt="">
+                      <a href="#">Открыть</a>
+                  </div>
+              </div>
+          </div>
+          <button type="button" class="close" ng-click="ctrl.close()" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+    </div>
+</div>
