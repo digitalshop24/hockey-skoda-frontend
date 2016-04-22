@@ -39,19 +39,22 @@
                             <div general-news="news" class="news_one grid-item" ng-repeat="news in day.news.posts"/>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 </div>
-                <div class="hidden-xs hidden-sm col-md-2 fix_padding" ng-show="true">
-                    <div class="wrapp_social_lent">
-                        <div class="soc_post" ng-repeat="tweet in ctrl.tweets">
-                            <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
-                            <ul>
-                                <li ng-bind="tweet.person.name"></li>
-                                <li ng-bind="tweet.content"></li>
-                                <img ng-show="tweet.photos.length" src="{{tweet.photos[0].image.thumb}}">
-                            </ul>
+                <div class="hidden-xs hidden-sm col-md-2 fix_padding" ng-show="true" >
+                    
+                        <div class="wrapp_social_lent" scroll-init>
+                            <div>
+                                    <div class="soc_post" ng-repeat="tweet in ctrl.tweets">
+                                        <img src="img/resources/img/twiter_min.png" alt="" class="img-responsive">
+                                        <ul>
+                                            <li ng-bind="tweet.person.name"></li>
+                                            <li ng-bind="tweet.content"></li>
+                                            <img ng-show="tweet.photos.length" src="{{tweet.photos[0].image.thumb}}">
+                                        </ul>
+                                    </div>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>

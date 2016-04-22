@@ -2692,9 +2692,24 @@ $grey_about: #5d5d5d;
   .fix_padding {
     padding-right: 0;
   }
+  .wrapp_sroll_twitter {
+
+  }
   .wrapp_social_lent {
-    background-color: $white;
-    min-height: 100vh;
+      width: 90%;
+      overflow: auto;
+      height: 100vh;
+      position: absolute;
+      top:0;
+      z-index: 1;
+      background-color: $white;
+      .jspContainer {
+        height: 0px !important;
+        .jspVerticalBar {
+          width:0px;
+        }
+      }
+      
     .soc_post {
       text-align: left;
       padding: 30px 5px 10px 10px;
@@ -3177,7 +3192,7 @@ $grey_about: #5d5d5d;
     height: 110vh;
     min-height: 680px;
     padding-top:30px;
-     position:relative;
+    position:relative;
     z-index: 5;
     h6 {
       color: $black;
