@@ -2,7 +2,7 @@
 
 
 export default class ForumCtrl {
-    constructor($state, sectionInfo, page, login, session, allSections, forumService) {
+    constructor($state, sectionInfo, page, login, session, allSections, forumService, modalSpeed) {
         this.sections = sectionInfo.sections;
         this.sections.forEach((section) => {
             const lastMessage = section.last_message;
@@ -17,6 +17,7 @@ export default class ForumCtrl {
         this.allSections = allSections;
         this.session = session;
         this.service = forumService;
+        this.modalSpeed = modalSpeed
     }
 
     createTopic() {
@@ -38,6 +39,20 @@ export default class ForumCtrl {
             page: this.currentPage + 1,
             notScrollToTop: true
         });
+    }
+    openSpeed() {
+      this.modalSpeed.open({
+          resolve: {
+              message: () => {
+                var header = 'Общайтесь и получайте баллы!';
+                var text = 'За сообщения на форуме вам полагаются баллы. Мы не приветствуем флуд или флейм. Поэтому баллы будут начислять не чаще, чем 1 раз каждые 3 часа. Будьте внимательны, не нарушайте правила форума!';
+                var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                return message;
+              }
+          },
+          windowClass: 'modal-window modal-window_right',
+      });
+      return;
     }
 
 

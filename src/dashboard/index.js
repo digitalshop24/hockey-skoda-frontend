@@ -22,6 +22,7 @@ import forumpage from './forum-page/index';
 import forumtopic from './forum-topic/index';
 import Login from './login/index';
 import Modal from './modal/index';
+import ModalSpeed from './modal-speed/index';
 import newspage from './news-page/index';
 import success from './success/index';
 import prizenew from './prize-new/index';
@@ -97,6 +98,7 @@ export default angular.module('dashboard',
     ])
     .service('login', Login)
     .service('modal', Modal)
+    .service('modalSpeed', ModalSpeed)
     .service('notificationService', NotificationService)
     .config($stateProvider => {
         $stateProvider

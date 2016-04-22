@@ -2,12 +2,13 @@
 
 
 export default class ForecastCtrl {
-    constructor(table, modal, forecastService) {
+    constructor(table, modal, modalSpeed, forecastService) {
         this.table = table;
         this.service = forecastService;
         this.forecast = table.predictions;
         this.copyMatches();
         this.modal = modal;
+        this.modalSpeed = modalSpeed;
         this.canSendForecast = false;
     }
 
@@ -99,5 +100,19 @@ export default class ForecastCtrl {
             }
         }
 
+    }
+    openSpeed() {
+      this.modalSpeed.open({
+          resolve: {
+              message: () => {
+                var header = 'Делайте прогнозы и получайте баллы!';
+                var text = 'Вы можете сделать свой прогноз в сетке соревнований ЧМХ 2016. Возможность угадать результат каждого события открывается поэтапно по ходу чемпионата. Чтобы заработать максимальное количество баллов, регулярно посещайте эту страницу и делайте новые прогнозы!';
+                var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                return message;
+              }
+          },
+          windowClass: 'modal-window modal-window_right',
+      });
+      return;
     }
 }

@@ -2,7 +2,7 @@
 
 
 export default class ForecasttwoCtrl {
-    constructor(matches, companionshipService) {
+    constructor(matches, companionshipService, modalSpeed) {
         this.matches = matches.matches;
         this.userPredictions = matches.predictions;
         this.matches.forEach((match) => {
@@ -21,6 +21,7 @@ export default class ForecasttwoCtrl {
             });
         }
         this.service = companionshipService;
+        this.modalSpeed = modalSpeed;
     }
 
     forecast(match) {
@@ -28,5 +29,19 @@ export default class ForecasttwoCtrl {
             then((res) => {
                 match.isDisabled = true;
             });
+    }
+    openSpeed() {
+      this.modalSpeed.open({
+          resolve: {
+              message: () => {
+                var header = 'Делайте прогнозы и получайте баллы! ';
+                var text = 'На этой странице есть все ближайшие матчи, результат которых можно прогнозировать. Прогноз на каждый матч можно сделать только 1 раз. Вам необходимо выставить счет и нажать кнопку "Угадать". За прогноз счета в матче вам начисляются баллы. Если вы угадаете счет, то получите дополнительные бонусные баллы.';
+                var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                return message;
+              }
+          },
+          windowClass: 'modal-window modal-window_right',
+      });
+      return;
     }
 }
