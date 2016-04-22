@@ -2557,11 +2557,27 @@ $grey_about: #5d5d5d;
         color:$grey;
         margin-bottom: 10px;
       }
+      h4{
+        font-size:$p_size
+      }
       p {
         font-size: $p_size;
       }
       img {
         margin-bottom: 10px;
+      }
+      .little_comment{
+        background-image: url("img/resources/img/news/bg_comment.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 30px;
+        padding: 5px 0 0;
+        text-align: center;
+        font-size: 14px;
+        display: inline-block;
+        color:$black;
       }
     }
     .wrapp_timeline_main_page {
