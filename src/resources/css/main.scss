@@ -3986,7 +3986,69 @@ $grey_about: #5d5d5d;
     }
   }
 }
+.all-prizes{
+  background:$grey_lite;
+  padding:15px 0;
+  &-header{
+    text-align: center;
+    color:$black;
+    font-family: $extra_bold;
+    font-size:36px;
+    text-transform: uppercase;
+    margin:15px 0;
+  }
+  &-slider{
+    overflow: hidden;
+    padding:10px 0;
+  }
+  .item{
+    float:left;
+    width:20%;
+    text-align: center;
+  }
+  &-item{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    height:290px;
+    padding:0 20px;
+    img{
+      max-width:100%;
+      height:auto;
+      display: inline-block;
+      margin-bottom:-3px;
+      max-height:100%;
+    }
+    &--watch{
+      position: absolute;
+      width:175px;
+      height:175px;
+      background:rgba(255,255,255,0.91);
+      border-radius:50%;
+      display: inline-block;
+      text-align: center;
+      line-height: 175px;
+      left:50%;
+      top:50%;
+      margin:-87px 0 0 -87px;
+      opacity:0;
+      transition:opacity .3s ease;
+      .btn{
+        background:#fff;
+        line-height: 40px;
+        &:hover{
+          background:#000;
+        }
+      }
+    }
+    &:hover{
+      .all-prizes-item--watch{
+        opacity:1;
+      }
+    }
+  }
 
+}
 //-------------------------------------------------- end priznew
 
 
