@@ -45,6 +45,7 @@ export default class SocialCtrl {
             post.repostText = post.reposts + ' ' + this.getRepostText(post.network);
             post.iconUrl = this.getIconUrl(post.network);
             post.content = post.content ? post.content : "";
+            post.published_at = moment(post.published_at).format('DD.MM H:mm');
             if (post.content.length > 300) {
                 post.minContent = post.content.substring(0, 300) + '...';
                 post.showMinContent = true;
