@@ -140,7 +140,7 @@ export default angular.module('dashboard.suggestions.card-init', [])
                         }
                         // context.fillText(line, 0, 0);
                     }
-                     $('.suggestions-slider-for').slick({
+                    $('.suggestions-slider-for').slick({
                       slidesToShow: 1,
                       slidesToScroll: 1,
                       fade : true,

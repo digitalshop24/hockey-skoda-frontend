@@ -2141,16 +2141,20 @@ $grey_about: #5d5d5d;
 
 
 .wrapp_mainpage_tantam {
-  background-color: #f5f5f5;
+  background-color: #e6e6e6;
+  padding:10px 0 20px;
   .left {
     margin-left: 150px;
     padding-top: 40px;
     padding-bottom: 40px;
+    @media (max-width:1200px){
+      margin-left:0;
+    }
     .p_h {
       font-size: 1.5rem;
       position: relative;
       margin-top: 30px;
-      color: $black;
+      color: #6b6b6b;
       button {
         text-transform: uppercase;
         color: $green_main;
@@ -2167,27 +2171,46 @@ $grey_about: #5d5d5d;
     h4 {
       font-family: $light;
       display: inline;
+      font-size:24px;
+      color:#595959;
       span {
-        font-size: 2.5rem;
-        font-family: $bold;
+        font-size: 20px;
+        font-family: $extra_bold;
         color: $green_main;
         padding-left: 20px;
+        margin-right:5px;
       }
     }
     h2 {
       text-transform: uppercase;
       color: $green_main;
-      margin-top: 30px;
+      margin-top: 20px;
       font-family: $extra_bold;
+      font-size:48px;
     }
     p {
-      margin-top: 30px;
+      margin-top: 20px;
       // color: $grey;
       font-size: $p_size;
     }
   }
   img {
     margin: 0 auto;
+  }
+  &--hashtag{
+    color:$green_main;
+    margin-top:40px;
+    button{
+      color:$green_main;
+      text-transform: uppercase;
+      &:hover{
+        color:$green_main;
+      }
+    }
+  }
+  &--img{
+    margin-top:30px;
+    display: block;
   }
 }
 .wrapp_mainpage_game {
@@ -3986,7 +4009,89 @@ $grey_about: #5d5d5d;
     }
   }
 }
+.all-prizes{
+  background:$grey_lite;
+  padding:15px 0;
+  &-header{
+    text-align: center;
+    color:#010101;
+    font-family: $extra_bold;
+    font-size:36px;
+    text-transform: uppercase;
+    margin:15px 0;
+  }
+  &-slider{
+    overflow: hidden;
+    padding:20px 60px;
+    margin-bottom:0;
+    position: relative;
+    .slick-prev,
+    .slick-next{
+      z-index:5;
+      top:50%;
+      width:21px;
+      height:38px;
+      margin-top:-19px;
+    }
+    .slick-prev{
+      left:15px;
+      background:url('img/resources/img/arrow_left_strong.png');
+    }
+    .slick-next{
+      right:15px;
+      background:url('img/resources/img/arrow_right_strong.png')
+    }
+  }
+  .item{
+    text-align: center;
+    z-index: 1;
+    position: relative;
+  }
+  &-item{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    height:290px;
+    padding:0 20px;
+    line-height:290px;
+    img{
+      max-width:100%;
+      height:auto;
+      display: inline-block;
+      margin-bottom:-3px;
+      max-height:100%;
+      vertical-align: middle;
+    }
+    &--watch{
+      position: absolute;
+      width:175px;
+      height:175px;
+      background:rgba(255,255,255,0.91);
+      border-radius:50%;
+      display: inline-block;
+      text-align: center;
+      line-height: 175px;
+      left:50%;
+      top:50%;
+      margin:-87px 0 0 -87px;
+      opacity:0;
+      transition:opacity .3s ease;
+      .btn{
+        background:#fff;
+        line-height: 40px;
+        &:hover{
+          background:#000;
+        }
+      }
+    }
+    &:hover{
+      .all-prizes-item--watch{
+        opacity:1;
+      }
+    }
+  }
 
+}
 //-------------------------------------------------- end priznew
 
 
