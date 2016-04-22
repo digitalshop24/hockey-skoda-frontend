@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "angular-youtube-embed": "^1.1.1",
+    "babel-polyfill": "^6.7.4",
     "babel-runtime": "^6.2.0",
     "babelify": "^6.4.0",
     "browserify": "^10.2.6",
