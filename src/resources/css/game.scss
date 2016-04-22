@@ -1385,6 +1385,12 @@
   }
   label {
     display: block;
+    line-height: 120%;
+    overflow: hidden;
+    div{
+      overflow: hidden;
+      padding-top:6px;
+    }
   }
   input[type="radio"] + label span {
     display:inline-block;
@@ -1395,8 +1401,8 @@
     -moz-border-radius:  50%;
     border-radius:  50%;
     position:relative;
+    float:left;
   }
-
   input[type="radio"] + label span {
     background:none;
     border:1px solid #d9d9d9;
