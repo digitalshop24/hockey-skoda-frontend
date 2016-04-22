@@ -3,7 +3,6 @@
 import angular from 'angular';
 import PrizenewCtrl from './controller.js';
 import PrizenewService from './service.js';
-import slider from './slider/slider.js';
 
 export default angular.module('dashboard.prizenew', [])
     .service('prizenewService', PrizenewService)

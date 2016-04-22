@@ -3991,7 +3991,7 @@ $grey_about: #5d5d5d;
   padding:15px 0;
   &-header{
     text-align: center;
-    color:$black;
+    color:#010101;
     font-family: $extra_bold;
     font-size:36px;
     text-transform: uppercase;
@@ -3999,12 +3999,30 @@ $grey_about: #5d5d5d;
   }
   &-slider{
     overflow: hidden;
-    padding:10px 0;
+    padding:20px 60px;
+    margin-bottom:0;
+    position: relative;
+    .slick-prev,
+    .slick-next{
+      z-index:5;
+      top:50%;
+      width:21px;
+      height:38px;
+      margin-top:-19px;
+    }
+    .slick-prev{
+      left:15px;
+      background:url('img/resources/img/arrow_left_strong.png');
+    }
+    .slick-next{
+      right:15px;
+      background:url('img/resources/img/arrow_right_strong.png')
+    }
   }
   .item{
-    float:left;
-    width:20%;
     text-align: center;
+    z-index: 1;
+    position: relative;
   }
   &-item{
     display: inline-block;
@@ -4012,12 +4030,14 @@ $grey_about: #5d5d5d;
     text-align: center;
     height:290px;
     padding:0 20px;
+    line-height:290px;
     img{
       max-width:100%;
       height:auto;
       display: inline-block;
       margin-bottom:-3px;
       max-height:100%;
+      vertical-align: middle;
     }
     &--watch{
       position: absolute;
