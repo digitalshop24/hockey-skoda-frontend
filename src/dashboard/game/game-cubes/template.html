@@ -180,7 +180,7 @@
                                ng-disabled="!ctrl.firstQuestionTime" hidden>
                         <label for="{{ctrl.quiz + 'checkbox' + question.id}}">
                             <span></span>
-                            {{question.answer}}
+                            <div>{{question.answer}}</div>
                         </label>
                     </div>
                 </div>
@@ -267,7 +267,7 @@
                                ng-disabled="!ctrl.thirdQuestionTime">
                         <label for="{{ctrl.quiz + 'radio' + question.id}}">
                             <span></span>
-                            {{question.answer}}
+                            <div>{{question.answer}}</div>
                         </label>
                     </div>
                 </div>

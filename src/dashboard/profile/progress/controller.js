@@ -2,7 +2,7 @@
 
 
 export default class ProgressCtrl {
-    constructor(achievements, moment) {
+    constructor(achievements, moment, modalSpeed) {
         this.achievements = achievements;
         this.achievements.forEach((achievement) => {
             achievement.max_points = achievement.max_points || '&#8734;'; // infinity sign
@@ -12,5 +12,23 @@ export default class ProgressCtrl {
             achievement.currentBallAmount = achievement.current_points;
         });
         this.today = moment().format('DD MMMM');
+        this.modalSpeed = modalSpeed;
+    }
+    openSpeed() {
+        if(localStorage["modalSpeedProfile"] == null){
+            localStorage["modalSpeedProfile"] = "showed";
+            this.modalSpeed.open({
+                resolve: {
+                    message: () => {
+                      var header = 'Личный кабинет';
+                      var text = 'В личном кабинете отображается вся ваша активность на сайте.';
+                      var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                      return message;
+                    }
+                },
+                windowClass: 'modal-window modal-window_right',
+            });
+            return;
+        }
     }
 }

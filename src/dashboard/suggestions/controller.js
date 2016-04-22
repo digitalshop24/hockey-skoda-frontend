@@ -2,10 +2,11 @@
 
 
 export default class SuggestionsCtrl {
-    constructor($scope, suggestionService, shareModal) {
+    constructor($scope, suggestionService, shareModal, modalSpeed) {
         this.imageUrl = "";
         this.title = 'Hockey%20skoda%20%23%D1%85%D0%BE%D0%BA%D0%BA%D0%B5%D0%B9';
         this.desc = 'Моя открытка';
+        this.modalSpeed = modalSpeed;
         $scope.$on('suggestions:imageMerged', (event, data) => {
             this.sendButtonText = "Создание картинки...";
             this.isButtonDisabled = true;
@@ -26,5 +27,22 @@ export default class SuggestionsCtrl {
                     });
                 });
         });
+    }
+    openSpeed() {
+        if(localStorage["modalSpeedSuggestions"] == null){
+            localStorage["modalSpeedSuggestions"] = "showed";
+            this.modalSpeed.open({
+              resolve: {
+                  message: () => {
+                    var header = 'Пожелайте удачи своей сборной!';
+                    var text = 'Напишите пожелание нашей сборной и поделитесь им в социальной сети! За это вам будут начислены бонусные баллы.';
+                    var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                    return message;
+                  }
+              },
+              windowClass: 'modal-window modal-window_right',
+            });
+            return;
+        }
     }
 }

@@ -102,17 +102,20 @@ export default class ForecastCtrl {
 
     }
     openSpeed() {
-      this.modalSpeed.open({
-          resolve: {
-              message: () => {
-                var header = 'Делайте прогнозы и получайте баллы!';
-                var text = 'Вы можете сделать свой прогноз в сетке соревнований ЧМХ 2016. Возможность угадать результат каждого события открывается поэтапно по ходу чемпионата. Чтобы заработать максимальное количество баллов, регулярно посещайте эту страницу и делайте новые прогнозы!';
-                var message = '<h2>' + header + '</h2><p>' + text + '</p>';
-                return message;
-              }
-          },
-          windowClass: 'modal-window modal-window_right',
-      });
-      return;
+        if(localStorage["modalSpeedForecast"] == null){
+            localStorage["modalSpeedForecast"] = "showed";
+            this.modalSpeed.open({
+              resolve: {
+                  message: () => {
+                    var header = 'Делайте прогнозы и получайте баллы!';
+                    var text = 'Вы можете сделать свой прогноз в сетке соревнований ЧМХ 2016. Возможность угадать результат каждого события открывается поэтапно по ходу чемпионата. Чтобы заработать максимальное количество баллов, регулярно посещайте эту страницу и делайте новые прогнозы!';
+                    var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                    return message;
+                  }
+              },
+              windowClass: 'modal-window modal-window_right',
+            });
+            return;
+        }
     }
 }

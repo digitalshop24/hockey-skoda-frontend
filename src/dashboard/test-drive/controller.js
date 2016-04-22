@@ -2,12 +2,13 @@
 
 
 export default class TestDriveCtrl {
-    constructor(tdriveService, cities, cars, modal) {
+    constructor(tdriveService, cities, cars, modal, modalSpeed) {
         this.cities = cities;
         this.service = tdriveService;
         this.cars = cars;
         this.carId = cars[0].skoda_id;
         this.modal = modal;
+        this.modalSpeed = modalSpeed;
     }
 
     send() {
@@ -52,5 +53,22 @@ export default class TestDriveCtrl {
         this.service.getDealers(this.city.id).then((res)=> {
             this.dealers = res;
         });
+    }
+    openSpeed() {
+        if(localStorage["modalSpeedTDrive"] == null){
+            localStorage["modalSpeedTDrive"] = "showed";
+            this.modalSpeed.open({
+              resolve: {
+                  message: () => {
+                    var header = 'Тест-драйв SKODA';
+                    var text = 'Пройдя тест-драйв в любом дилерском центре, вы получите уникальный промокод. Введя этот промокод в личном кабинете и набрав необходимое количество баллов, вы получите право участвовать в суперигре!';
+                    var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                    return message;
+                  }
+              },
+              windowClass: 'modal-window modal-window_right',
+            });
+            return;
+        }
     }
 }

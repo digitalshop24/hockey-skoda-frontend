@@ -1383,8 +1383,24 @@
   input[type="radio"] {
     display:none;
   }
+  .checkbox,.radio{
+    overflow: hidden;
+  }
   label {
     display: block;
+    line-height: 120%;
+    overflow: hidden;
+    padding-left:40px;
+    padding-top:1px;
+    margin-top:24px;
+    span{
+      margin-right:15px !important;
+      float:left;
+    }
+    div{
+      overflow: hidden;
+      padding-top:6px;
+    }
   }
   input[type="radio"] + label span {
     display:inline-block;
@@ -1395,8 +1411,8 @@
     -moz-border-radius:  50%;
     border-radius:  50%;
     position:relative;
+    float:left;
   }
-
   input[type="radio"] + label span {
     background:none;
     border:1px solid #d9d9d9;
@@ -1670,7 +1686,7 @@
   padding-bottom:35px;
   &-item {
     width:100%;
-    height:82px;
+    min-height:82px;
     padding-left:60px;
     padding-right:53px;
     &:hover {
@@ -1716,4 +1732,73 @@
 }
 .modal-backdrop.in {
   z-index: 1002;
+}
+
+.modal-prize-info{
+  .modal-dialog{
+    width:690px;
+  }
+  .modal-content{
+    padding-top:50px;
+  }
+  &-content{
+    overflow: hidden;
+    p{
+      color:#535353;
+      font-size:14px;
+      line-height: 120%;
+    }
+    .btn{
+      margin:40px 0;
+      line-height: 40px;
+    }
+    h5{
+      color:$green_main;
+      font-size:24px;
+      font-family:$bold;
+    }
+  }
+  &--img{
+    text-align: center;
+    padding-left:15px;
+    img{
+      max-width: 100%;
+      height:auto;
+    }
+  }
+  &--header{
+    font-size: 36px;
+    line-height:120%;
+    font-family: $extra_bold;
+    color:$green_main;
+    text-transform: uppercase;
+    margin:20px 0 5px;
+  }
+  &-organizer{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    margin:15px 0 0;
+    img{
+      display: block;
+      max-width:100%;
+      height:auto;
+    }
+    a{
+      text-decoration: underline;
+      color:#fff;
+      font-family:$bold;
+      font-size:16px;
+      position: absolute;
+      top:50%;
+      left:50%;
+      margin:-8px 0 0 -32px;
+      line-height: 100%;
+      display: inline-block;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
 }

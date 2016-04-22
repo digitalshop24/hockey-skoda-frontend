@@ -41,18 +41,21 @@ export default class ForumCtrl {
         });
     }
     openSpeed() {
-      this.modalSpeed.open({
-          resolve: {
-              message: () => {
-                var header = 'Общайтесь и получайте баллы!';
-                var text = 'За сообщения на форуме вам полагаются баллы. Мы не приветствуем флуд или флейм. Поэтому баллы будут начислять не чаще, чем 1 раз каждые 3 часа. Будьте внимательны, не нарушайте правила форума!';
-                var message = '<h2>' + header + '</h2><p>' + text + '</p>';
-                return message;
-              }
-          },
-          windowClass: 'modal-window modal-window_right',
-      });
-      return;
+        if(localStorage["modalSpeedForum"] == null){
+            localStorage["modalSpeedForum"] = "showed";
+            this.modalSpeed.open({
+              resolve: {
+                  message: () => {
+                    var header = 'Общайтесь и получайте баллы!';
+                    var text = 'За сообщения на форуме вам полагаются баллы. Мы не приветствуем флуд или флейм. Поэтому баллы будут начислять не чаще, чем 1 раз каждые 3 часа. Будьте внимательны, не нарушайте правила форума!';
+                    var message = '<h2>' + header + '</h2><p>' + text + '</p>';
+                    return message;
+                  }
+              },
+              windowClass: 'modal-window modal-window_right',
+            });
+            return;
+        }
     }
 
 
