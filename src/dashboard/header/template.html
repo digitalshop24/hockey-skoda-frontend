@@ -66,6 +66,7 @@
                 <ul class="drilldown-sub">
                   <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Личный кабинет</a></li>
                   <a ui-sref="dashboard.profile.progress"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Кабинет</li></a>
+                  <a ui-sref="dashboard.profile.edit"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">О себе</li></a>
                   <a href="#"><li ng-click="ctrl.logout(); ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Выйти</li></a>
                 </ul>
               </li></a>
@@ -167,6 +168,9 @@
                     <ul>
                         <li ng-click="ctrl.state.go('dashboard.profile.progress')">
                             <a href="" >Личный кабинет</a>
+                        </li>
+                        <li ng-click="ctrl.state.go('dashboard.edit')">
+                            <a href="" >О себе</a>
                         </li>
                         <li ng-click="ctrl.logout()">
                             <a href="">Выход</a>
