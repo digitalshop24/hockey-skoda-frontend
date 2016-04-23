@@ -9,9 +9,16 @@ export default angular.module('dashboard.game.cubes.logic', [])
                 initialSlide: '='
             }, 
 
-            link: function ($scope) { 
+            link: function ($scope) {
 
                 angular.element(document).ready(() => {
+
+                    $('.game-two-while.notCrashed').click(function() {
+                        $(this).addClass('tres' + (Math.floor(Math.random() * (3)) + 1));
+                    });
+                    $('.game-two-green.notCrashed').click(function() {
+                        $(this).addClass('tres');
+                    });
 
                     $('.priz-slider1').slick({
                         infinite: true,
