@@ -16,8 +16,10 @@ export default class ShareCtrl {
         $scope.$watch(() => {
             return this.data;
         }, (newValue, oldValue) => {
-            this.resultData = newValue;
-            this.updateLinks();
+            if(newValue) {
+                this.resultData = newValue;
+                this.updateLinks();
+            }
         }, true);
 
         $rootScope.$on('$stateChangeSuccess', () => {
