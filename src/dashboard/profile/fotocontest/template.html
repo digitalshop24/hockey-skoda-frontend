@@ -2,7 +2,7 @@
 <div class="fotocontest_contant">
     <h4>Фотоконкурс</h4>
     <p>На этой странице пользоветель должен загрузить свою фоточку и расшарить ее в Инстаграм(а в другие соц. сети можно?). Юзер может шаритьнесколько фоточек (смотря соколько золоты ячее он выиграл)</p>
-	<div ng-show="ctrl.user.can_photo_competition">
+	<div>
 		<div class="download_foto">
 			<p>Принимаются файлы в формате .jpg .png .gif весом не более 5М каждый</p>
 			<button class="btn btn_secondary tiny button"  ngf-max-total-size="5MB" ngf-select="ctrl.loadPhoto($file)"> Загрузить свое фото</button>
@@ -17,10 +17,23 @@
 				<div class="wrapp_foto">
 					<img src="{{photo.image.small}}" alt="" class="img-responsive">
 				</div>
-				<button class="btn btn_secondary tiny">Участвовать</button>
+				<button class="btn btn_secondary tiny" ng-click="ctrl.participateInContest(photo)"
+						ng-bind="photo.statusText" ng-disabled="photo.is_published || ctrl.isUserPaticipating">Участвовать</button>
 				<p><a href="" ng-click="ctrl.deletePhoto(photo)" class="delet">Удалить</a></p>
 			</li>
 		</ul>
 	</div>
 
+</div>
+
+
+<div class="modal fade" id="share" role="dialog">
+	<div class="modal-dialog">
+
+		<div class="modal-content">
+			<p>Для участия в фото конкурсе Вам необходимо поделиться этой фотографией в любой из социальных сетей</p>
+			<share-buttons data="ctrl.data"></share-buttons>
+		</div>
+
+	</div>
 </div>
