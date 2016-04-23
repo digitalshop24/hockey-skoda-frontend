@@ -1,0 +1,64 @@
+@import "main";
+
+.myprizes{
+  width:100%;
+  display: table;
+  .thead{
+    display: table-row;
+    width:100%;
+  }
+  .th{
+    display: table-cell;
+    width:55%;
+    padding:10px 0;
+    font-size:1.4rem;
+    border-bottom:1px solid #ccc;
+    &:first-child{
+      width:45%;
+    }
+  }
+  .tr{
+    display: table-row;
+  }
+  .td{
+    display: table-cell;
+    vertical-align: middle;
+    width:55%;
+    padding:10px 0;
+    font-size:1.4rem;
+    text-align: center;
+    border-bottom:1px solid #ccc;
+    &:first-child{
+      width:45%;
+      text-align: left;
+      padding-right:10px;
+    }
+  }
+}
+.myprizes-title{
+  color:#000;
+  font-family:$bold
+}
+@media (max-width:1200px){
+  .myprizes{
+    display: block;
+    .thead{
+      display: none;
+    }
+    .tr{
+      display: block;
+      border-bottom:1px solid #ccc;
+    }
+    .td{
+      display: block;
+      width:100%;
+      border-bottom:none;
+      &:first-child{
+        width:100%;
+        padding-right:0;
+        text-align: center;
+
+      }
+    }
+  }
+}
