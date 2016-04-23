@@ -7,6 +7,7 @@ var source = require("vinyl-source-stream");
 var buffer = require("vinyl-buffer");
 var ngAnnotate = require("gulp-ng-annotate");
 var uglify = require("gulp-uglify");
+var generalConfig = require("../../app/config/build/index");
 
 module.exports = function (bundler, config) {
     var bundle = bundler
@@ -16,7 +17,7 @@ module.exports = function (bundler, config) {
         })
         .pipe(source(config.dest))
         .pipe(buffer())
-        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(sourcemaps.init({loadMaps: generalConfig.mode == 'dev'}))
         .pipe(ngAnnotate());
 
     /*if (!config.noMinify) {
