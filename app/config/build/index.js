@@ -31,6 +31,7 @@ var fonts = {
 };
 
 module.exports = {
+    mode: 'prod',
     pack: {
         src: sources.src,
         dest: sources.dest,
