@@ -145,7 +145,6 @@ export default class CubesCtrl {
                 this.state.go('dashboard.edit');
                 return;
             }
-            $('#'+ cell.id).addClass('tres' + (this.currentCell.cell_type == 'blue' ? (Math.floor(Math.random() * (3)) + 1) : ''));
             $('#myModal').modal('hide');
             $('#userData').modal('show');
             this.userData = this.user;
