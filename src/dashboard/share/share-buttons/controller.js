@@ -1,7 +1,7 @@
 'use strict';
 
 export default class ShareCtrl {
-    constructor(shareService, session, $location, $rootScope) {
+    constructor(shareService, session, $location, $rootScope, $scope) {
         this.shareService = shareService;
         this.$location = $location;
         this.session = session;
@@ -13,6 +13,12 @@ export default class ShareCtrl {
         this.updateLinks();
 
 
+        $scope.$watch(() => {
+            return this.data;
+        }, (newValue, oldValue) => {
+            this.resultData = newValue;
+            this.updateLinks();
+        }, true);
 
         $rootScope.$on('$stateChangeSuccess', () => {
             this.resultData = {};

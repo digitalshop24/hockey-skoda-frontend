@@ -9,6 +9,10 @@ export default angular.module('dashboard.profile.fotocontest', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.profile.fotocontest', {
+                meta: {
+                    title: 'Skoda Фотоконкурс',
+                    description: ''
+                },
                 template: require('./template.html'),
                 url: '/fotocontest',
                 controller: FotocontestCtrl,

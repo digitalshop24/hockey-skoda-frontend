@@ -9,6 +9,7 @@ export default class ProgressCtrl {
         this.state = $state;
         this.modal = modal;
         this.photos = photos;
+        this.shareData = {};
         this.isUserPaticipating = !!this.photos.find(photo => photo.is_published);
         this.photos.forEach(photo => {
             photo.statusText = photo.is_published ? 'Активна' : this.isUserPaticipating ? 'Участвовать' : 'Неактивна';
@@ -26,7 +27,7 @@ export default class ProgressCtrl {
                 this.modal.open({
                     resolve: {
                         message: () => {
-                            return 'Во время загрузки произошла ошибка!';
+                            return err.message || 'Во время загрузки произошла ошибка!';
                         }
                     }
                 });
@@ -44,13 +45,12 @@ export default class ProgressCtrl {
     }
 
     participateInContest(photo) {
-
         this.service.sharePhoto(photo.id)
             .then(res => {
                 photo.is_published = true;
                 photo.isUserPaticipating = true;
+                this.shareData.imgUrl = photo.image.original;
                 $('#share').modal('show');
-
             }).catch(err => {
                 this.modal.open({
                     resolve: {
