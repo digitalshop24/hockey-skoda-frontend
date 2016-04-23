@@ -22,7 +22,6 @@ export default class SocialCtrl {
             this.fbFilter = this.vkFilter = this.twitterFilter = this.instagramFilter = true;
         }
         this.allFilter = this.fbFilter && this.vkFilter && this.twitterFilter && this.instagramFilter;
-        this.instagramFilter = false;
         this.changeFilter();
 
         this.filterByNetworks = post => {
@@ -43,8 +42,10 @@ export default class SocialCtrl {
         posts.forEach(post => {
             post.iconClass = post.network;
             post.repostText = post.reposts + ' ' + this.getRepostText(post.network);
+            post.likesText = post.likes + ' лайков';
             post.iconUrl = this.getIconUrl(post.network);
             post.content = post.content ? post.content : "";
+            post.photoLengthText = post.photos ? (post.photos.length + ' фото') : '';
             post.published_at = moment(post.published_at).format('DD.MM H:mm');
             if (post.content.length > 300) {
                 post.minContent = post.content.substring(0, 300) + '...';

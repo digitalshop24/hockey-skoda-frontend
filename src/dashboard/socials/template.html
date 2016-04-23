@@ -45,7 +45,7 @@
                     <li>
                         <img src="img/resources/img/insta.png" alt="">
                         <input ng-model="ctrl.instagramFilter" ng-change="ctrl.changeFilter()" type="checkbox"
-                               name="toggle" class="sw" id="toggle-5" disabled>
+                               name="toggle" class="sw" id="toggle-5">
                         <label for="toggle-5"></label>
                         <span class="on">ON</span>
                         <span class="off">OFF</span>
@@ -131,13 +131,13 @@
                                 <div ng-repeat="photo in ::event.photos | limitTo:4">
                                     <img src="{{::photo.image.small}}"/>
                                 </div>
-                                <span ng-bind="{{::event.photos.length}} + ' фото'"></span>
+                                <span ng-bind="::event.photoLengthText"></span>
                             </slick>
                         </div>
 
                         <ul class="dop_info">
                             <li ng-show="::event.likes"><a href="" class="link_default"
-                                                         ng-bind="::event.likes + ' лайков'"></a></li>
+                                                         ng-bind="::event.likesText"></a></li>
                             <li ng-show="::event.reposts"><a href="" class="link_default" ng-bind="::event.repostText"></a>
                             </li>
                             <li ng-show="::event.post_link"><a class="link_default" href="{{event.post_link}}"
