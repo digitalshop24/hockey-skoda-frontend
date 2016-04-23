@@ -4588,6 +4588,9 @@ $grey_about: #5d5d5d;
       display: inline-block;
       color: #fff;
       background: #38b249;
+      .text-info{
+        color:#fff;
+      }
     }
     h3 {
       margin-bottom: 40px;
@@ -4632,10 +4635,12 @@ $grey_about: #5d5d5d;
             .day_grey {
               color: $grey;
             }
-
           }
         }
       }
+    }
+    .text-info{
+      color:#000;
     }
   }
   .right_calendar {
