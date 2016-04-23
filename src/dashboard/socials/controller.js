@@ -103,7 +103,7 @@ export default class SocialCtrl {
                 return 'img/resources/img/soc/f.png';
             case 'twitter':
                 return 'img/resources/img/soc/twiter.png';
-            case 'instagramm':
+            case 'instagram':
                 return 'img/resources/img/soc/insta.png';
         }
     }
