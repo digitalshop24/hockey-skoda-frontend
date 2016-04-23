@@ -2,34 +2,25 @@
 <div class="fotocontest_contant">
     <h4>Фотоконкурс</h4>
     <p>На этой странице пользоветель должен загрузить свою фоточку и расшарить ее в Инстаграм(а в другие соц. сети можно?). Юзер может шаритьнесколько фоточек (смотря соколько золоты ячее он выиграл)</p>
-    <div class="download_foto">
-    	<p>Принимаются файлы в формате .jpg .png .gif весом не более 5М каждый</p>
-    	<button class="btn btn_secondary tiny button"  ngf-max-total-size="5MB" ngf-select="ctrl.loadPhoto($file)"> Загрузить свое фото</button>
-    </div>
-    <h5>Мои фотографии</h5>
-    <ul class="my_foto text-center">
-    	<li ng-repeat="photo in ctrl.photos">
-	    	<p>
-	    		<img src="img/resources/img/like.png" alt="">
-	    		<span ng-bind="photo.likes">14444</span>
-	    	</p>
-	    	<div class="wrapp_foto">
-	    		<img src="{{photo.image.small}}" alt="" class="img-responsive">
-	    	</div>
-	    	<button class="btn btn_secondary tiny">Участвовать</button>
-	    	<p><a href="" ng-click="ctrl.deletePhoto(photo)" class="delet">Удалить</a></p>
-    	</li>
-    	<!--<li>
-	    	<p>
-	    		<img src="img/resources/img/like.png" alt="">
-	    		<span>14444</span>
-	    	</p>
-	    	<div class="wrapp_foto">
-	    		<img src="img/resources/img/bg_star.png" alt="" class="img-responsive">
-	    	</div>
-	    	<button class="btn btn_secondary tiny">Участвовать</button>
-	    	<p><a href="" class="delet">Удалить</a></p>
-    	</li>-->
-    	
-    </ul>
+	<div ng-show="ctrl.user.can_photo_competition">
+		<div class="download_foto">
+			<p>Принимаются файлы в формате .jpg .png .gif весом не более 5М каждый</p>
+			<button class="btn btn_secondary tiny button"  ngf-max-total-size="5MB" ngf-select="ctrl.loadPhoto($file)"> Загрузить свое фото</button>
+		</div>
+		<h5>Мои фотографии</h5>
+		<ul class="my_foto text-center">
+			<li ng-repeat="photo in ctrl.photos">
+				<p>
+					<img src="img/resources/img/like.png" alt="">
+					<span ng-bind="photo.likes">14444</span>
+				</p>
+				<div class="wrapp_foto">
+					<img src="{{photo.image.small}}" alt="" class="img-responsive">
+				</div>
+				<button class="btn btn_secondary tiny">Участвовать</button>
+				<p><a href="" ng-click="ctrl.deletePhoto(photo)" class="delet">Удалить</a></p>
+			</li>
+		</ul>
+	</div>
+
 </div>
