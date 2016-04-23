@@ -344,50 +344,49 @@
             <div class="game-modal-content">
                 <h2 class="vop">Верных ответов: {{ctrl.result.right_answers_count}}</h2>
 
-            </div>
+                <div class="otv-fre" ng-show="((ctrl.currentCell.cell_type == 'green' && ctrl.result.right_answers_count == 3)
+                    || ctrl.currentCell.cell_type == 'blue') && ctrl.result.prize && !ctrl.uspVictorina">
+                    <h3 class="title-priz"> {{ctrl.result.prize.name}}</h3>
+                    <div class="pr-block clearfix">
+                      <div class="img">
+                        <img src="{{ctrl.result.prize.image.small}}"/>
+                      </div>
+                      <div class="text-right">
+                        <p> {{ctrl.result.prize.description}}</p>
 
-            <div class="otv-fre" ng-show="((ctrl.currentCell.cell_type == 'green' && ctrl.result.right_answers_count == 3)
-                || ctrl.currentCell.cell_type == 'blue') && ctrl.result.prize && !ctrl.uspVictorina">
-                <h3 class="title-priz"> {{ctrl.result.prize.name}}</h3>
-                <div class="pr-block clearfix">
-                  <div class="img">
-                    <img src="{{ctrl.result.prize.image.small}}"/>
-                  </div>
-                  <div class="text-right">
-                    <p> {{ctrl.result.prize.description}}</p>
+                        <a class="btn btn_primary" ng-click="ctrl.goToPrizes()">Как получить приз</a>
+                      </div>
+                    </div>
 
-                    <a class="btn btn_primary" ng-click="ctrl.goToPrizes()">Как получить приз</a>
-                  </div>
+
                 </div>
 
 
-            </div>
+                <div ng-show="ctrl.currentCell.cell_type == 'green' && ctrl.result.right_answers_count != 3 && !ctrl.uspVictorina">
+                    <p>
+                    Ваш приз уже в личном кабинете. Но вы не прошли в участники фото-конкурса. Но у Вас есть еще один шанс пройти до фото-конкурса, для этого
+                        необходимо правильно ответить на 3 специальных вопроса от SKODA
+                    </p>
 
-
-            <div ng-show="ctrl.currentCell.cell_type == 'green' && ctrl.result.right_answers_count != 3 && !ctrl.uspVictorina">
-                <p>
-                Ваш приз уже в личном кабинете. Но вы не прошли в участники фото-конкурса. Но у Вас есть еще один шанс пройти до фото-конкурса, для этого
-                    необходимо правильно ответить на 3 специальных вопроса от SKODA
-                </p>
-
-                <div class="mobal-button priz otvet clearfix">
-                    <div class="mobal-button-right">
-                        <button type="click" ng-click="ctrl.startUSPVictorina()" class="btn btn_primary">Играть</button>
+                    <div class="mobal-button priz otvet clearfix">
+                        <div class="mobal-button-right">
+                            <button type="click" ng-click="ctrl.startUSPVictorina()" class="btn btn_primary">Играть</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div ng-show="ctrl.uspVictorina && ctrl.result.right_answers_count != 3">
-                <p>
-                    К сожалению, вы не прошли в фотоконкурс.
-                </p>
-            </div>
+                <div ng-show="ctrl.uspVictorina && ctrl.result.right_answers_count != 3">
+                    <p>
+                        К сожалению, вы не прошли в фотоконкурс.
+                    </p>
+                </div>
 
-            <div ng-show="ctrl.currentCell.cell_type == 'green' && ctrl.result.right_answers_count == 3">
-                <p>
-                    Поздравляем! Вы стали участником фотоконкурса.
-                    <a href="#" ng-click="ctrl.goToPhotocontest()">Подробности в личном кабинете.</a>
-                </p>
+                <div ng-show="ctrl.currentCell.cell_type == 'green' && ctrl.result.right_answers_count == 3">
+                    <p>
+                        Поздравляем! Вы стали участником фотоконкурса.
+                        <a href="#" ng-click="ctrl.goToPhotocontest()">Подробности в личном кабинете.</a>
+                    </p>
+                </div>
             </div>
         </div>
 

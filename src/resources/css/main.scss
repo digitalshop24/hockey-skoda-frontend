@@ -3103,6 +3103,9 @@ $grey_about: #5d5d5d;
       .download_promo {
         background-color: $grey;
         padding: 15px 40px;
+        @media (max-width:991px){
+          padding:15px;
+        }
         p {
           font-size: $p_size;
           width: auto;
@@ -3111,9 +3114,19 @@ $grey_about: #5d5d5d;
         }
         input {
           width: 50%;
+          @media (max-width:991px){
+            width:47%;
+          }
+          @media (max-width:768px){
+            width:100%;
+          }
         }
         .btn {
           margin-left: 10px;
+          @media (max-width:768px){
+            width:100%;
+            margin:15px 0 0;
+          }
         }
 
       }
@@ -4575,6 +4588,9 @@ $grey_about: #5d5d5d;
       display: inline-block;
       color: #fff;
       background: #38b249;
+      .text-info{
+        color:#fff;
+      }
     }
     h3 {
       margin-bottom: 40px;
@@ -4619,10 +4635,12 @@ $grey_about: #5d5d5d;
             .day_grey {
               color: $grey;
             }
-
           }
         }
       }
+    }
+    .text-info{
+      color:#000;
     }
   }
   .right_calendar {

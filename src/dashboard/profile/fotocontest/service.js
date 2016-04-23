@@ -13,6 +13,14 @@ export default class PhotocontestService {
         });
     }
 
+    sharePhoto(id) {
+        return this.api.post('/photo_game_posts/shared', {
+            photo_game_post_id: id
+        }).then((res) => {
+            return res.data;
+        });
+    }
+
     deleteImage(id) {
         return this.api.delete('/photo_game_posts/my_photo_game', {
             params: {

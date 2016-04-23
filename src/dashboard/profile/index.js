@@ -5,7 +5,6 @@ import progress from './progress/index';
 import fotocontest from './fotocontest/index';
 import mytestdrive from './testdrive/index';
 import supergame from './supergame/index';
-import edit from './edit/index';
 import prizes from './prizes/index';
 import ProfileCtrl from './controller.js';
 import ProfileService from './service.js';
@@ -16,7 +15,6 @@ export default angular.module('dashboard.profile', [
     fotocontest.name,
     supergame.name,
     mytestdrive.name,
-    edit.name,
     prizes.name
 ])
     .service('profileService', ProfileService)

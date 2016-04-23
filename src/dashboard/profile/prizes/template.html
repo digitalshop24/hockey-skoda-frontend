@@ -4,20 +4,18 @@
     <a ui-sref="dashboard.game.sectors">Викторина</a>
    <h5>Мои призы</h5>
     <p>Вы выиграли следующие призы! Мы сообщим Вам, когда они будут доставлены в выбранный Вами дилерский центр!</p>
-    <table>
-        <thead>
-            <tr>
-                <td>Название</td>
-                <td>Картинка</td>
-            </tr>
-         </thead>
-        <tr ng-repeat="item in ctrl.prizes">
-            <td><h6 ng-bind="item.prize.name"></h6></td>
-            <td>
+    <div class="myprizes">
+        <div class="thead">
+            <div class="th">Название</div>
+            <div class="th">Картинка</div>
+        </div>
+        <div class="tr" ng-repeat="item in ctrl.prizes">
+            <div class="td"><h6 class="myprizes-title" ng-bind="item.prize.name"></h6></div>
+            <div class="td">
                 <img src="{{item.prize.image.small}}" />
                 <p ng-bind="item.prize.description"></p>
-            </td>
-        </tr>
-    </table>
-    
+            </div>
+        </div>
+    </div>
+
 </div>
