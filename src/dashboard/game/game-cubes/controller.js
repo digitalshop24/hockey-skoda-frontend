@@ -241,7 +241,7 @@ export default class CubesCtrl {
 
                 if (this.firstAnswer[prop]) {
                     if (notFirstTime) {
-                        firstAns += ', ';
+                        firstAns += '; ';
                     }
                     firstAns += this.firstAnswer[prop];
                     notFirstTime = true;
