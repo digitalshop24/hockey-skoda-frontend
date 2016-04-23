@@ -1373,6 +1373,15 @@
         }
 
       }
+      p{
+        a{
+          color:$green_main;
+          text-decoration: underline;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
 }
