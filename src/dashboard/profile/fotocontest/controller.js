@@ -2,10 +2,11 @@
 
 
 export default class ProgressCtrl {
-    constructor(photocontestService, Upload, api, $state, modal, photos) {
+    constructor(photocontestService, Upload, api, $state, modal, photos, user) {
         this.service = photocontestService;
         this.Upload = Upload;
         this.api = api;
+        this.user = user;
         this.state = $state;
         this.modal = modal;
         this.photos = photos;
