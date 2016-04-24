@@ -149,7 +149,7 @@
               <div class="col-md-7">
                   <h3 class="modal-prize-info--header" ng-bind="ctrl.currentPrize.name">Билеты <br>Россия – Латвия</h3>
                   <p ng-bind="ctrl.currentPrize.description">Поддержи наших на стадионе!<br> Ты должен быть там!</p>
-                  <a href="#" class="btn btn_primary small">Участвовать!</a>
+                  <a href="#" class="btn btn_primary small" ng-click="ctrl.goToGame()">Участвовать!</a>
                   <h5>Кто разыгрывает?</h5>
                   <div class="modal-prize-info-organizer">
                       <img ng-click="ctrl.showSponsor(ctrl.currentPrize.sponsorId)" src="{{ctrl.currentPrize.sponsorImage.small}}" alt="">

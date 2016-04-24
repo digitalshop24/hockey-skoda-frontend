@@ -92,6 +92,12 @@ export default class PrizenewCtrl {
         this.$state.go('dashboard.prizenew', {id: id});
     }
 
+    goToGame() {
+        $('#modalInfo').modal('hide');
+        this.$state.go('dashboard.game.sectors');
+    }
+
+
     openInfo(prize){
         this.currentPrize = prize;
       $('#modalInfo').modal('show');
