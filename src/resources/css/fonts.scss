@@ -18,7 +18,12 @@
   font-weight: normal;
   src: url("fonts/SkodaPro-Regular.ttf") format("truetype");
 }
-
+@font-face {
+  font-family: "SkodaProMedium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/SkodaPro_Medium.ttf") format("truetype");
+}
 @font-face {
   font-family: "SkodaProLight";
   font-style: normal;

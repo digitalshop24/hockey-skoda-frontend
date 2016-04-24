@@ -7,13 +7,14 @@ $grey: #cccccc;
 $grey_dark: #555555;
 $grey_text: #999;
 //Additional colors
-$green_add_: #299926; 
+$green_add_: #299926;
 $green_add_pale: #a5d396;
-$red: #da0000; 
+$red: #da0000;
 $link_default_hover:#377220;
 //fonts
 $extra_bold: "SkodaProExtraBold", sans-serif;
 $bold: "SkodaProBold", sans-serif;
+$medium: "SkodaProMedium", sans-serif;
 $regular: "SkodaProRegular", sans-serif;
 $light: "SkodaProLight", sans-serif;
 $p_size: 1.4rem;
@@ -29,41 +30,41 @@ body {
 	overflow-x: hidden;
 	// height: 100%;
 	//overflow: hidden;
-} 
+}
 
 h1,h2,h3,h4,h5,h6,p,ul,li {
   margin:0;
-  padding:0; 
+  padding:0;
 }
 
 a, a:hover, a:focus {
-  	text-decoration: none; 
+  	text-decoration: none;
   	color: #000;
   	outline: none;
 }
 button, button:active, button:focus {
   outline: none !important;
 }
-ul { 
+ul {
   	list-style-type: none;
 }
 h1 {
   	font-size: 6rem;
 }
 h2 {
-	font-size: 5rem; 
+	font-size: 5rem;
 }
 h3 {
-  	font-size: 4rem; 
-} 
+  	font-size: 4rem;
+}
 h4 {
-  	font-size: 3rem; 
+  	font-size: 3rem;
 }
 h5 {
   	font-size: 2.5rem;
 }
 h6 {
-  	font-size: 2rem; 
+  	font-size: 2rem;
 }
 
 .overflow_hidden {
@@ -120,7 +121,7 @@ h6 {
   border: none;
   border-radius: 2px;
   font-family: $bold;
-}  
+}
 .main {
   height: 50px;
   min-width: 160px;
@@ -397,7 +398,7 @@ select {
   -webkit-appearance: none;
   /* for FF */
   -moz-appearance: none;
-  text-indent: 0.01px; 
+  text-indent: 0.01px;
   text-overflow: '';
   /* for IE */
   -ms-appearance: none;
@@ -415,11 +416,12 @@ select::-ms-expand {
 
 //----------------------------------------------------- toogle
 
-.on { 
+.on {
   position: absolute;
   margin-left: -62px;
   margin-top: 12.5px;
   z-index: 2;
+  top:0;
   color: $white;
   font-family: $bold;
 }
@@ -428,6 +430,7 @@ select::-ms-expand {
   margin-left: -38px;
   margin-top: 12.5px;
   z-index: 2;
+  top:0;
   color: $white;
   font-family: $bold;
 }
@@ -448,6 +451,7 @@ $sw-width: 60px;
         // box-shadow: inset 0 0 0px 2px #e4e4e4;
         border-radius: 60px;
         background-color: $grey;
+        cursor: pointer;
         &:before{
           content: "";
           position: absolute;
@@ -460,7 +464,7 @@ $sw-width: 60px;
           background: rgba(76,217,100,0);
           transition: .2s cubic-bezier(.24,0,.5,1);
         }
-        
+
         /* White toggle */
         &:after {
           content: " ";
@@ -491,11 +495,11 @@ $sw-width: 60px;
           background: $green_main;
           transition: width .2s cubic-bezier(0,0,0,.1) !important;
         }
-        
+
         & + label:after{
           left: 30px;
         }
-        
+
         & + label{
           box-shadow: inset 0 0 0px 25px #e4e4e4;
           transition: box-shadow 2.5s cubic-bezier(0,1.2,.94,.95)}

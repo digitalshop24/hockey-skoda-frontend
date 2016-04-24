@@ -37,6 +37,7 @@ export default class СalendarCtrl {
     }
 
     updateCalendar(day) {
+        this.selectCurrentWeek();
         const calendarDayIndex = this.calendar.findIndex(cell => cell.day == moment(day).format('YYYY-MM-DD'));
         if(calendarDayIndex == -1) {
             this.daysToShow = [];
@@ -96,6 +97,8 @@ export default class СalendarCtrl {
             }
 
         }
+
+
     }
 
     getDayMatchesByTimeId(day, time) {
@@ -136,6 +139,12 @@ export default class СalendarCtrl {
                 match.isSubscribed = false;
             })
         }
+    }
+    selectCurrentWeek(){
+        window.setTimeout(function () {
+            $('.well').find('.week-active').removeClass('week-active');
+            $('.well').find('.btn.active').parent().parent().addClass('week-active');
+        }, 1);
     }
 
 }

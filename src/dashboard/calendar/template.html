@@ -3,9 +3,19 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-center left_calendar">
 
-                <datepicker ng-model="ctrl.currentDate" max-date="ctrl.maxDate" min-date="ctrl.minDate" ng-change="ctrl.updateCalendar(ctrl.currentDate)" starting-day="1" max-mode="month" format-day-title="yyyy MMM" show-weeks="false" class="well well-sm"></datepicker>
+                <datepicker ng-model="ctrl.currentDate" max-date="ctrl.maxDate" min-date="ctrl.minDate" ng-change="ctrl.updateCalendar(ctrl.currentDate)" starting-day="1" max-mode="day" format-day-title="MMMM" show-weeks="false" select-week="true" class="well well-sm"></datepicker>
                 <div class="calen-text">
-                    <p>Напоминание о предстоящем матче будет отправлено вам по смс. Убедитесь что вы указали Ваш номер телефона в анкете. <a ui-sref="dashboard.edit">Указать телефон</a></p>
+                    <!-- <p>Напоминание о предстоящем матче будет отправлено вам по смс. Убедитесь что вы указали Ваш номер телефона в анкете. <a ui-sref="dashboard.edit">Указать телефон</a></p> -->
+                </div>
+                <div class="calen-winners-history">
+                    <div class="calen-winners-item">
+                        <h6>Выигрыш <span>10</span><img src="img/resources/img/balls.png" alt="" class="img_ball"></h6>
+                        <p>Вы правильно предположили исход <br> матча Россия — США (5:0)</p>
+                    </div>
+                    <div class="calen-winners-item">
+                        <h6>Выигрыш <span>1000</span><img src="img/resources/img/balls.png" alt="" class="img_ball"></h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quasi, suscipit pariatur totam blanditiis similique maiores consequatur eveniet. Expedita veritatis praesentium ullam perferendis dolorum mollitia nobis est, dicta inventore ab.</p>
+                    </div>
                 </div>
 
             </div>

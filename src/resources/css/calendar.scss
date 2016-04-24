@@ -1,0 +1,484 @@
+@import "default";
+
+.calendar {
+  .off {
+    // margin-top:-32px;
+  }
+  .tantam-share  {
+    margin: 0;
+    padding: 0;
+    border: none;
+    li {
+      border:none;
+    }
+  }
+}
+
+
+.calendar-slider {
+  width:118px;
+  background:#fff;
+  margin-bottom:0px;
+  min-height:120px;
+
+  .block {
+    border-top:6px solid #38b249;
+    background:#fff;
+    p {
+      margin-top:10px;
+      text-align:center;
+      color:#000;
+      font-family: $bold;
+      font-size:1.4rem;
+    }
+  }
+  .slick-dots {
+    position:relative;
+    bottom:0px;
+    margin-top:10px;
+  }
+  .slick-dots li button:before {
+    font-size:35px;
+    color:#38b249;
+  }
+}
+.right_calendar {
+  .active {
+    background:#38b249;
+    .block {
+      background:#38b249;
+      p {
+        color:#fff;
+      }
+    }
+    .slick-dots li button:before {
+      font-size:35px;
+      color:#fff;
+    }
+  }
+}
+
+.calendar .right_calendar .time_line tbody tr:nth-child(odd) .bor[rowspan] {
+  padding-right:0px;
+}
+.calendar .right_calendar .time_line tbody tr:nth-child(even) .bor[rowspan] {
+  padding-right:0px;
+}
+.bor {
+  padding-right:0px;
+}
+.notice_form {
+  margin: 33px 0;
+  h5 {
+    font-family: "SkodaProBold", sans-serif;
+    padding-top: 12px;
+    padding-left: 30px;
+    display: inline-block;
+    font-size: 2rem;
+  }
+  h6 {
+    line-height: 50px;
+  }
+
+  .small {
+    height: 50px;
+    position:relative;
+    top:-2px;
+  }
+  .in {
+    width:300px;
+    border:none;
+    background:#e6e6e6;
+    margin-right:10px;
+  }
+  .btn_non {
+    padding-top: 5px;
+    float:right;
+    color:$grey;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: $p_size
+  }
+}
+.bg_grey {
+  background-color: $grey_lite;
+}
+.calendar {
+  padding: 40px 0 40px 0;
+  .left_calendar {
+    padding-top:0;
+    .btn.active {
+      display: inline-block;
+      color: #fff;
+      background: #38b249;
+      .text-info{
+        color:#fff;
+      }
+    }
+    h3 {
+      margin-bottom: 40px;
+      font-family: "SkodaProBold", sans-serif;
+    }
+    .calen-text {
+      font-size:1.7rem;
+      text-align:left;
+    }
+    .tabel_calendar {
+      font-family: "SkodaProBold", sans-serif;
+      margin: 0 auto;
+      thead {
+        border-bottom: 2px solid $grey;
+        tr {
+          td {
+            border: none;
+            width: 36px;
+            height: 36px;
+          }
+        }
+      }
+      tbody {
+        border-bottom: 1px solid $grey;
+        tr {
+          .day_activ {
+            // background-image: url(../img/green_round.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-color: $green_main;
+            border-radius: 50%;
+          }
+          td {
+            border: none;
+            width: 36px;
+            height: 36px;
+            p {
+              position: relative;
+              z-index: 2;
+            }
+            .day_grey {
+              color: $grey;
+            }
+          }
+        }
+      }
+    }
+    .text-info{
+      color:#000;
+    }
+  }
+  .right_calendar {
+
+    .wrapp_toggle {
+      margin-bottom: 35px;
+      h5 {
+        font-family: "SkodaProBold", sans-serif;
+        position:relative;
+        top:-13px;
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-right:5px;
+      }
+      .toggle  {
+        display: inline-block;
+      }
+    }
+    .time_line {
+      color:$black;
+      text-transform: capitalize;
+      font-size:14px;
+      font-family: $medium;
+      thead {
+        tr {
+          td {
+            border-bottom: 1px solid $grey;
+            border-left: none;
+            border-right: none;
+            width:12.5%;
+          }
+          td:nth-child(1) {
+            width:12.5%;
+            border: none;
+          }
+        }
+      }
+      tbody {
+        tr{
+          td{
+            width:12.5%;
+            padding:0;
+            height: 30px;
+            border: 1px solid $grey;
+          }
+          .bor {
+            border:1px solid $grey !important;
+          }
+        }
+        tr:nth-child(odd) {
+          td {
+            border-bottom: 1px dotted $grey;
+          }
+          td.rowspan2 {
+            border:none;
+            text-align: right;
+            padding-right: 15px;
+            vertical-align: middle;
+            font-family: "SkodaProBold", sans-serif;
+          }
+        }
+        tr:nth-child(even) {
+          td {
+            border-top: none;
+          }
+          td.rowspan2 {
+            border:none;
+            text-align: right;
+            padding-right: 15px;
+            vertical-align: middle;
+
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+.check {
+  .text-slid {
+    display: block;
+  }
+  .cher-slid {
+    display: block;
+  }
+}
+.cher-slid {
+  background-color: #fff;
+  width: 100%;
+  height:auto;
+  color: #000;
+
+  font-size: 12px;
+  margin-top: -1px;
+  font-family: $bold;
+  input {
+    background: url(img/resources/img/chek.png) no-repeat;
+    display: none;
+  }
+  input[type=checkbox] {
+    display: none;
+  }
+  label {
+    width: 23px;
+    height: 23px;
+    position: relative;
+    display:block;
+    margin:0 auto;
+    margin-top:15px;
+  }
+  input[type="checkbox"] + span {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    background: url(img/resources/img/chek.jpg) no-repeat;
+    cursor: pointer;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    margin:0 auto;
+    display: block;
+
+  }
+  input[type="checkbox"]:checked + span   {
+    background: url(img/resources/img/check-box.jpg) no-repeat;
+  }
+  h6 {
+    display: block;
+    font-size: 12px;
+    text-align:center;
+    margin-top:10px;
+  }
+}
+.board:hover {
+  p {
+    display: none;
+  }
+  h6, input, label {
+    display: inline-block;
+  }
+}
+
+.board_activ {
+  position: absolute;
+  background-color: $green_main;
+  width: 11.9%;
+  height: 60px;
+  color: #fff;
+  border-top:3px solid $green_main;
+  font-size: 12px;
+  margin-top: -1px;
+  font-family: $bold;
+
+}
+
+.left_calendar{
+  padding:0;
+  .well{
+    background:transparent;
+    border:none;
+    border-bottom:1px solid $grey;
+    box-shadow: none;
+    padding:0 0 15px;
+    table{
+      outline:none;
+      width:100%;
+    }
+    thead{
+      th{
+        font-weight:normal;
+      }
+      tr:first-child{
+
+        th:first-child,
+        th:last-child{
+          .btn{
+            display: none;
+          }
+        }
+        th{
+          padding-bottom:50px;
+        }
+        .btn{
+          font-size:24px;
+          font-family:$bold;
+          color:$black;
+          opacity:1;
+          cursor: default;
+          background:none;
+          text-transform: capitalize;
+        }
+      }
+      tr:last-child{
+        border-bottom:3px solid $grey;
+        th{
+          padding-bottom:5px;
+        }
+        small{
+          font-size:14px;
+          font-family:$bold;
+          color:$black;
+          text-transform: capitalize;
+        }
+      }
+    }
+    tbody{
+      .btn{
+        background:transparent;
+        font-size:14px;
+        padding:10px 0;
+        border-radius: 0;
+        position: relative;
+        &.active{
+          background:transparent;
+          color:$green_main;
+          &:after{
+            content:'';
+            border:5px solid transparent;
+            border-bottom-color: $green_main;
+            display: inline-block;
+            position: absolute;
+            bottom:0;
+            left:50%;
+            margin-left:-5px;
+          }
+        }
+      }
+      .text-muted{
+        color:#aaaaaa;
+      }
+      td:first-child{
+        .btn{
+          border-left:3px solid transparent;
+          border-radius:50% 0 0 50%;
+        }
+      }
+      td:last-child{
+        .btn{
+          border-right:3px solid transparent;
+          border-radius: 0 50% 50% 0;
+        }
+      }
+      tr{
+        td{
+          .btn{
+            border:3px solid transparent;
+            border-right:none;
+            border-left:none;
+          }
+        }
+        &.week-active,
+        &:hover{
+          .btn{
+            background:#fff;
+          }
+        }
+        &:hover{
+          .btn{
+            border-color:#fff;
+          }
+        }
+        &.week-active{
+          .btn{
+            border-color:$green_main;
+          }
+        }
+
+      }
+    }
+  }
+}
+.calen-winners{
+  &-history{
+    margin-top:40px;
+  }
+  &-item{
+    margin:30px 0;
+    text-align: left;
+    position: relative;
+    padding-left:30px;
+    &:before{
+      content:'';
+      display: inline-block;
+      width:14px;
+      height:14px;
+      background:$green_main;
+      position: absolute;
+      left:0;
+      top:4px;
+      border-radius: 50%;
+    }
+    h6{
+      font-size:16px;
+      font-family:$extra_bold;
+      color:$green_main;
+      line-height:25px;
+      display: inline-block;
+      span{
+        margin:0 5px;
+      }
+      .img_ball{
+        float: right;
+      }
+    }
+    p{
+      display: block;
+      color:$black;
+      font-family: $regular;
+      font-size:14px;
+      line-height: 120%;
+      margin:7px 0;
+    }
+  }
+}
+
