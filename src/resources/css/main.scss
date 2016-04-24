@@ -6120,20 +6120,21 @@ $grey_about: #5d5d5d;
   position:relative;
   .nav-tabs {
     border:none;
+    padding:5px 15px;
     text-align:center;
     padding-bottom:30px;
     li {
       display: inline-block;
-      width:200px;
-      height: 39px;
-      border:2px solid #000;
-      border-radius:15px;
+      border:2px solid rgba(255,255,255,0);
+      
       margin:0 15px;
       float:none;
       background:rgba(255,255,255,0);
+      cursor:pointer;
       &:nth-child(2) {
         position:relative;
         margin: 0;
+        padding:5px 15px;
       }
       a {
         text-decoration: none;
@@ -6142,18 +6143,26 @@ $grey_about: #5d5d5d;
         font-family: $bold;
         text-align:center;
         background:rgba(255,255,255,0);
+
+        font-family: $regular;
+          background:rgba(255,255,255,0);
+          border:none;
+          text-decoration: none;
         &:hover {
           background:rgba(255,255,255,0);
           border:none;
         }
       }
       &.active {
-
-        border:2px solid rgba(255,255,255,0);
+        border:2px solid #000;
+        border-radius:15px;
         a {
-          font-family: $regular;
+
+          line-height: 18px;
+          font-size:1.7rem;
+          font-family: $bold;
+          text-align:center;
           background:rgba(255,255,255,0);
-          border:none;
           &:hover {
             background:rgba(255,255,255,0);
             border:none;
@@ -6196,9 +6205,9 @@ $grey_about: #5d5d5d;
     font-size: .85em;
     -moz-column-gap: 1.5em; /* Расстояние между колонками для Firefox */
     -webkit-column-gap: 1.5em; /* Расстояние между колонками  для Safari, Chrome и iOS */
-    -moz-column-count: 5;
-        -webkit-column-count: 5;
-        column-count: 5;
+    -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
 }
 
 /* Элементы в виде плиток с содержанием */
@@ -6325,7 +6334,8 @@ $grey_about: #5d5d5d;
                 width:18px;
                 height:18px;
                 margin:auto;
-                padding-top:9px;
+                padding-top:8px;
+                display: block;
               }
 
             }
@@ -7139,12 +7149,13 @@ nav {
 // ------------------------ TEODOR
 .teodor {
   width:100%;
-  min-height: 1159px;
+  min-height: 638px;
   background:url(img/resources/img/teodor/bg-teodor.jpg) no-repeat center center;
   background-size:cover;
   position:relative;
   &-tittle {
-    width:580px;
+    min-width:320px;
+    max-width:700px;
     padding:50px 40px 30px;
     position:relative;
     &:before {
@@ -7249,7 +7260,10 @@ nav {
     }
   }
   &-sokial {
-    margin-left:60px;
+    padding-left:40px;
+    min-width:320px;
+    max-width:700px;
+    text-align:center;
   }
   .bot-text {
     position:absolute;
@@ -7264,5 +7278,22 @@ nav {
 img.taggs {
   display: inline;
 }
+
+.prizes-teodor {
+  padding-top:0px;
+}
+
+
+
+.factSection-teodor {
+  margin-left:0px; 
+  background:#fff;
+
+}
+
+.factSection .fact-two-block:hover .fact-two-block-hov {
+  background:#ccc;
+}
+
 
 // ------------------------- END TEODOR
