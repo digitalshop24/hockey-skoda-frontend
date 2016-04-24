@@ -2,7 +2,7 @@
 
 
 export default class ProgressCtrl {
-    constructor(photocontestService, Upload, api, $state, modal, photos, user) {
+    constructor(photocontestService, Upload, api, $state, modal, photos, user, $rootScope) {
         this.service = photocontestService;
         this.Upload = Upload;
         this.api = api;
@@ -10,7 +10,7 @@ export default class ProgressCtrl {
         this.state = $state;
         this.modal = modal;
         this.photos = photos;
-        this.shareData = {};
+        this.$rootScope = $rootScope;
         this.isUserPaticipating = !!this.photos.find(photo => photo.is_published);
         this.photos.forEach(photo => {
             photo.statusText = photo.is_published ? 'Активна' : this.isUserPaticipating ? 'Неактивна' : 'Участвовать';
@@ -50,7 +50,9 @@ export default class ProgressCtrl {
             .then(res => {
                 photo.is_published = true;
                 photo.isUserPaticipating = true;
-                this.shareData.imgUrl = photo.image.original;
+                this.$rootScope.$broadcast('profile:fotocontest', {
+                    url: photo.image.original
+                });
                 $('#share').modal('show');
             }).catch(err => {
                 this.modal.open({
