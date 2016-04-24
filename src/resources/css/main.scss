@@ -5947,7 +5947,7 @@ $grey_about: #5d5d5d;
 .wrapp_menu_fact {
   .menu_line {
       // position: absolute;
-      position: fixed;
+      position: relative;
       top: -70px;
       background-color: $black;
       display: inline-block;
@@ -6214,9 +6214,9 @@ $grey_about: #5d5d5d;
     font-size: .85em;
     -moz-column-gap: 1.5em; /* Расстояние между колонками для Firefox */
     -webkit-column-gap: 1.5em; /* Расстояние между колонками  для Safari, Chrome и iOS */
-    -moz-column-count: 5;
-        -webkit-column-count: 5;
-        column-count: 5;
+    -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
 }
 
 /* Элементы в виде плиток с содержанием */
@@ -6343,7 +6343,8 @@ $grey_about: #5d5d5d;
                 width:18px;
                 height:18px;
                 margin:auto;
-                padding-top:9px;
+                display: block;
+                padding-top:8px;
               }
 
             }
@@ -7157,12 +7158,12 @@ nav {
 // ------------------------ TEODOR
 .teodor {
   width:100%;
-  min-height: 1159px;
-  background:url(img/resources/img/teodor/bg-teodor.jpg) no-repeat center center;
+  min-height: 638px;
+  background:url(img/resources/img/teodor/bg-teodor.jpg) no-repeat bottom right;
   background-size:cover;
   position:relative;
   &-tittle {
-    width:580px;
+    width:700px;
     padding:50px 40px 30px;
     position:relative;
     &:before {
@@ -7267,7 +7268,9 @@ nav {
     }
   }
   &-sokial {
-    margin-left:60px;
+    margin-left:40px;
+    width:700px;
+    text-align:center;
   }
   .bot-text {
     position:absolute;
@@ -7283,4 +7286,7 @@ img.taggs {
   display: inline;
 }
 
+.teodor-priz {
+  padding-top:0px;
+}
 // ------------------------- END TEODOR
