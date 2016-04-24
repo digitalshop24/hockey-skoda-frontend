@@ -10,11 +10,12 @@ module.exports = function (config) {
         config.forEach(function (styleConfig) {
             return gulp.src(styleConfig.src)
                 .pipe(sourcemaps.init())
-                .pipe(sass().on('error', sass.logError))
+                .pipe(concat(styleConfig.dest))
+                .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
                 .pipe(autoprefixer())
-                .pipe(uglifycss({
+               /* .pipe(uglifycss({
                     "max-line-len": 80
-                }))
+                }))*/
                 .pipe(concat(styleConfig.dest))
                 .pipe(sourcemaps.write("."))
                 .pipe(gulp.dest(styleConfig.publicPath));
