@@ -828,7 +828,6 @@ footer {
   color: $grey;
   right: 23%;
   margin-top: -26px;
-  position: absolute;
   z-index: 10;
   border: 1px solid $grey;
 }
@@ -845,7 +844,6 @@ footer {
   color: $grey;
   left: 24%;
   margin-top: -26px;
-  position: absolute;
   z-index: 10;
 }
 
@@ -916,6 +914,7 @@ footer {
   .wrapp_timeline_social {
     padding: 40px 100px;
     min-height: 100vh;
+    position: relative;
     .dop_timeline {
       width:3px;
       position:absolute;
@@ -926,6 +925,38 @@ footer {
       z-index: -1;
       margin-top: -41px;
 
+    }
+    &--hashtags{
+      display: inline-block;
+      width:100%;
+      text-align: center;
+      position: absolute;
+      margin-top:-23px;
+      left:0;
+      z-index:2;
+      a{
+        display: inline-block;
+        overflow: hidden;
+        margin:0 10px;
+      }
+      .tag_left_hokey,
+      .tag_right_hokey{
+        position: static;
+        margin-top:0;
+        @media (max-width:1200px){
+          font-size:14px;
+        }
+      }
+      &-active{
+
+      }
+      &-list{
+        display: inline-block;
+        width:100%;
+      }
+    }
+    .timeline{
+      z-index:1;
     }
   }
     .post_content {

@@ -61,16 +61,23 @@
 
 
     <div class="dop_timeline"></div>
-    <a ui-sref="dashboard.socials({hashtag: ''})">
-        <div ng-class="{'active_tag' : !ctrl.hashtag}" class="tag_right_hokey">Соц.сети хоккеистов</div>
-    </a>
-    <a ng-show="ctrl.hashtag && ctrl.hashtag.toLowerCase() != '#Хоккейвкаждом'.toLowerCase() " ui-sref="dashboard.socials({hashtag: ctrl.hashtag})">
-        <div ng-class="{'active_tag' : ctrl.hashtag && ctrl.hashtag.toLowerCase() != '#Хоккейвкаждом'.toLowerCase()}" class="tag_left_hokey" ng-bind="ctrl.hashtag" style="left: 5%;"></div>
-    </a>
-
-    <a ui-sref="dashboard.socials({hashtag: '#Хоккейвкаждом'})">
-        <div ng-class="{'active_tag' : ctrl.hashtag && ctrl.hashtag.toLowerCase() == '#Хоккейвкаждом'.toLowerCase()}" class="tag_left_hokey">#Хоккейвкаждом</div>
-    </a>
+    <div class="wrapp_timeline_social--hashtags">
+        <div class="wrapp_timeline_social--hashtags-list">
+            <div class="col-md-6 col-sm-6">
+                <a class="wrapp_timeline_social--hashtags-active" ng-show="ctrl.hashtag && ctrl.hashtag.toLowerCase() != '#Хоккейвкаждом'.toLowerCase() " ui-sref="dashboard.socials({hashtag: ctrl.hashtag})">
+                    <div ng-class="{'active_tag' : ctrl.hashtag && ctrl.hashtag.toLowerCase() != '#Хоккейвкаждом'.toLowerCase()}" class="tag_left_hokey" ng-bind="ctrl.hashtag" style="left: 5%;"></div>
+                </a>
+                <a ui-sref="dashboard.socials({hashtag: '#Хоккейвкаждом'})">
+                    <div ng-class="{'active_tag' : ctrl.hashtag && ctrl.hashtag.toLowerCase() == '#Хоккейвкаждом'.toLowerCase()}" class="tag_left_hokey">#Хоккейвкаждом</div>
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <a ui-sref="dashboard.socials({hashtag: ''})">
+                    <div ng-class="{'active_tag' : !ctrl.hashtag}" class="tag_right_hokey">Соц.сети хоккеистов</div>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <div class="dop_tag" ng-show="!ctrl.days.length" style="">
         <p><h4 class="color_tag">По хештегу {{ctrl.hashtag}} ничего не найдено</h4></p>
