@@ -6,7 +6,9 @@ export default angular.module('dashboard.scroll-init', [])
     .directive('scrollInit', function () {
         return {
             link: function () {
-                initTimeline();
+                angular.element(document).ready(function () {
+                    initTimeline();
+                });
             }
         }
     });

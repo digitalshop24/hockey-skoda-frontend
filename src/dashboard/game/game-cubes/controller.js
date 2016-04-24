@@ -145,7 +145,6 @@ export default class CubesCtrl {
                 this.state.go('dashboard.edit');
                 return;
             }
-            $('#'+ cell.id).addClass('tres' + (this.currentCell.cell_type == 'blue' ? (Math.floor(Math.random() * (3)) + 1) : ''));
             $('#myModal').modal('hide');
             $('#userData').modal('show');
             this.userData = this.user;
@@ -189,7 +188,7 @@ export default class CubesCtrl {
         this.firstQuestionTime = this.questionTime;
         this.firstInterval = this.$interval(() => {
             this.firstQuestionTime -= 1;
-            if (!this.firstQuestionTime) {
+            if (this.firstQuestionTime <= 0) {
                 this.$interval.cancel(this.firstInterval);
             }
 
@@ -207,7 +206,7 @@ export default class CubesCtrl {
         this.secondQuestionTime = this.questionTime;
         this.secondInterval = this.$interval(() => {
             this.secondQuestionTime -= 1;
-            if (!this.secondQuestionTime) {
+            if (this.secondQuestionTime <= 0) {
                 this.$interval.cancel(this.secondInterval);
             }
 
@@ -224,7 +223,7 @@ export default class CubesCtrl {
         this.thirdQuestionTime = this.questionTime;
         this.thirdInterval = this.$interval(() => {
             this.thirdQuestionTime -= 1;
-            if (!this.thirdQuestionTime) {
+            if (this.thirdQuestionTime <= 0) {
                 this.$interval.cancel(this.thirdInterval);
             }
 
