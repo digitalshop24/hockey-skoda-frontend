@@ -14,8 +14,8 @@
             <div class="td">
                 <img src="{{item.prize.image.small}}" />
                 <p ng-bind="item.prize.description"></p>
+                <button ng-show="item.prize.pdf && item.prize.pdf.original" ng-click="ctrl.save(item.prize.pdf.original)" class="btn btn_primary main tantam-button-save">Сохранить</button>
             </div>
         </div>
     </div>
-
 </div>
