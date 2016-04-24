@@ -1,4 +1,4 @@
-$green_main: #4ba82e;
+@import "default";
 .loader-container{
   position: fixed;
   z-index:1002;
@@ -56,4 +56,10 @@ $green_main: #4ba82e;
       background:$green_main;
     }
   }
+}
+.tantam-button-save{
+  margin-top:40px;
+  font-family:$light;
+  height:auto;
+  padding:15px 30px;
 }

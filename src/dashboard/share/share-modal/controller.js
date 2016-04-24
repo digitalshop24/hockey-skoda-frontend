@@ -17,5 +17,12 @@ export default class ModalCtrl {
             this.shareService.shareAttempt(this.data.type);
         }
     }
+    save(){
+        var a  = document.createElement('a');
+        var url = this.data.imgUrl;
+        a.href = url;
+        a.download = 'myTantam.png';
+        a.click();
+    }
 
 }

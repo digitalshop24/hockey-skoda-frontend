@@ -369,8 +369,7 @@ export default angular.module('dashboard.tantam-init', [])
                         var ctx = canvas.getContext('2d');
                         ctx.drawImage($img[0], leftImg, topImg, imgWidth, imgHeight);
                         ctx.drawImage(bgImg, 0, 0, bgWidth, bgHeight);
-                        var data = canvas.toDataURL();
-
+                        var data = canvas.toDataURL('image/png');
                         $rootScope.$broadcast('tantamareska:imageMerged', {
                             image: data
                         });
@@ -384,7 +383,7 @@ export default angular.module('dashboard.tantam-init', [])
                         window.open($(this).attr('href'),"","width=400,height=400");
                         return false;
                     });
-                    
+
                 });
             }
         }
