@@ -1597,6 +1597,29 @@ $grey_about: #5d5d5d;
   }
 }
 
+.main-collogo{
+  border:1px solid #e6e6e6;
+  overflow: hidden;
+  display: table;
+  padding:10px;
+  width:100%;
+  margin-top:25px;
+  &-img{
+    display: table-cell;
+    padding-right:20px;
+    width:190px;
+  }
+  &-content{
+    display: table-cell;
+    vertical-align: middle;
+    p{
+      font-family:$regular;
+      font-size:14px;
+      color:$black;
+      line-height: 120%;
+    }
+  }
+}
 
 .wrapp_slider_stars {
   .slick-next {

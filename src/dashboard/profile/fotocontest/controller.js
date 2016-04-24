@@ -13,7 +13,7 @@ export default class ProgressCtrl {
         this.shareData = {};
         this.isUserPaticipating = !!this.photos.find(photo => photo.is_published);
         this.photos.forEach(photo => {
-            photo.statusText = photo.is_published ? 'Активна' : this.isUserPaticipating ? 'Участвовать' : 'Неактивна';
+            photo.statusText = photo.is_published ? 'Активна' : this.isUserPaticipating ? 'Неактивна' : 'Участвовать';
         })
     }
 
