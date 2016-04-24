@@ -139,6 +139,12 @@ header {
           font-family: $bold;
         }
       }
+      .disebl {
+        span { 
+          color: $grey;
+          cursor: not-allowed;
+        }
+      }
       // li:nth-child(1) {
       //   padding-top: 16px !important;
       // }
@@ -6670,6 +6676,12 @@ nav {
         margin-right: 20px;
       }
     }
+    .disebl {
+        span { 
+          color: $grey;
+          cursor: not-allowed;
+        }
+      }
   }
 
   .drilldown li {
@@ -6700,6 +6712,7 @@ nav {
         color: $grey;
         cursor: not-allowed;
     }
+    
   }
   .li_sub {
     color: $green_main;
