@@ -34,7 +34,8 @@
             "bower_components/angular-scroll/angular-scroll.min.js",
             "bower_components/angular-timeline/dist/angular-timeline.js",
             "bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js",
-            "bower_components/angular-mask/dist/ngMask.min.js"
+            "bower_components/angular-mask/dist/ngMask.min.js",
+            "bower_components/ng-rollbar/ng-rollbar.min.js"
         ],
         "dest": "vendor.min.js"
     },

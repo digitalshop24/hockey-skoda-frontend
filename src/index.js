@@ -9,6 +9,7 @@ import errorPages from './error-pages/index';
 import session from './auth/session';
 import auth from './auth/auth';
 import skodaLocalStorage from './auth/dx-localstorage/index';
+import config from '../app/config/index';
 
 
 export default angular.module('app',
@@ -28,6 +29,7 @@ export default angular.module('app',
         'angular-timeline',
         'infinite-scroll',
         'ngMask',
+        'tandibar/ng-rollbar',
         skodaLocalStorage.name,
         errorPages.name,
         index.name,
@@ -73,9 +75,12 @@ export default angular.module('app',
         });
 
     })
-    .config(($locationProvider) => {
+    .config(($locationProvider, RollbarProvider) => {
         $locationProvider.html5Mode(true);
         NProgress.configure({trickleRate: 0.1, trickleSpeed: 200, showSpinner: false});
+        if (location.hostname !== 'localhost') {
+            RollbarProvider.init(config.rollbar);
+        }
     })
     .run(amMoment=> {
         amMoment.changeLocale('ru');
