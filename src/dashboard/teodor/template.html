@@ -51,21 +51,12 @@
 </section>
 
 
-<section class="factSection factSection-teodor">
+<section class="factSection factSection-teodor" infinite-scroll="ctrl.loadMore()" infinite-scroll-disabled='this.busy'>
 
     <div class="fact-tabs">
         <ul class="nav nav-tabs">
             <li class="active">
-                <a href="#home" data-target="#home" data-toggle="tab">#хоккейныйфакт</a>
-            </li>
-            <li >
-                <a href="#home2" data-target="#home2" data-toggle="tab">#skoda</a>
-            </li>
-            <li >
-                <a href="#home3" data-target="#home3" data-toggle="tab">#хоккейвкаждом</a>
-            </li>
-            <li >
-                <a href="#home4" data-target="#home4" data-toggle="tab">Факты от ŠKODA</a>
+                <a href="#home" data-target="#home" data-toggle="tab">#хоккейвкаждом</a>
             </li>
         </ul>
     </div>
@@ -74,356 +65,47 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="fact-two masonry">
-                      <div class="fact-two-block item" >
+                       <div class="fact-two-block item" ng-repeat="post in ctrl.posts">
                             <div class="fact-two-block-card">
                                 <div class="fact-two-block-act">
 
-                                    <div >
-                                        <div class="img">
-                                            <img src="img/resources/img/cheer.jpg" alt="">
+                                    <div ng-show="post.photos.length">
+                                        <div class="img" ng-repeat="photo in post.photos | limitTo:4">
+                                            <img src="{{photo.image.small}}" alt="">
                                         </div>
                                     </div>
                                     <div class="face clearfix">
                                         <div class="face-img-left"
-                                             style="background-image:url(img/resources/img/cheer-img.jpg);background-position:center center;background-size:cover;">
+                                             style="background-image:url({{post.profile_pic}});background-position:center center;background-size:cover;">
 
                                         </div>
                                         <div class="face-text-right">
-                                            <h3 >Михаил Клюшкин</h3>
+                                            <h3 ng-bind="post.profile_name">Михаил Клюшкин</h3>
 
                                             <p class="time-face"
-                                               >
+                                               ng-bind="post.published_at | amDateFormat:'DD.MM H:mm'">
                                                 1 апреля 15:23
                                             </p>
                                         </div>
                                     </div>
                                     <div class="fact-two-block-text">
-                                        <p> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam blanditiis perferendis tempore unde quos iure sequi, distinctio porro praesentium, recusandae explicabo maiores possimus, eius harum ex. Impedit, molestias, facilis.</span>
-                                        <span>Magni ratione incidunt quo necessitatibus aliquid, atque consequatur reprehenderit accusantium autem tempore, excepturi maiores! Pariatur, voluptatibus nisi minima ipsa, eaque quasi. Vero, adipisci assumenda fuga molestias facilis consequatur ex numquam.</span>
-                                        <span>Sed, maiores, dolor assumenda nisi repellendus, recusandae illum inventore officiis itaque ducimus distinctio placeat repellat atque accusamus excepturi. Voluptatem laudantium eius non nesciunt ipsa laborum, soluta dolore quibusdam animi tempore!</span></p>
+                                        <p ng-bind-html="post.content"></p>
                                     </div>
                                 </div>
                                 <div class="fact-two-block-hov">
                                     <div class="fact-two-block-hov-rote">
-                                      <a class="btn" href="" data-toggle="modal">Читать полностью</a>
+                                        <a class="btn" href="" data-toggle="modal" ng-click="ctrl.readMore(post)"
+                                           data-target="#fact-modal">Читать полностью</a>
 
                                         <div class="fact-social">
-                                            <share-buttons data="fact.shareData"></share-buttons>
+                                            <share-buttons data="post.shareData"></share-buttons>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="fact-two-block item" >
-                            <div class="fact-two-block-card">
-                                <div class="fact-two-block-act">
-
-                                    <div >
-                                        <div class="img">
-                                            <img src="img/resources/img/cheer.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="face clearfix">
-                                        <div class="face-img-left"
-                                             style="background-image:url(img/resources/img/cheer-img.jpg);background-position:center center;background-size:cover;">
-
-                                        </div>
-                                        <div class="face-text-right">
-                                            <h3 >Михаил Клюшкин</h3>
-
-                                            <p class="time-face"
-                                               >
-                                                1 апреля 15:23
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="fact-two-block-text">
-                                        <p> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam blanditiis perferendis tempore unde quos iure sequi, distinctio porro praesentium, recusandae explicabo maiores possimus, eius harum ex. Impedit, molestias, facilis.</span>
-                                        <span>Magni ratione incidunt quo necessitatibus aliquid, atque consequatur reprehenderit accusantium autem tempore, excepturi maiores! Pariatur, voluptatibus nisi minima ipsa, eaque quasi. Vero, adipisci assumenda fuga molestias facilis consequatur ex numquam.</span>
-                                        <span>Sed, maiores, dolor assumenda nisi repellendus, recusandae illum inventore officiis itaque ducimus distinctio placeat repellat atque accusamus excepturi. Voluptatem laudantium eius non nesciunt ipsa laborum, soluta dolore quibusdam animi tempore!</span></p>
-                                    </div>
-                                </div>
-                                <div class="fact-two-block-hov">
-                                    <div class="fact-two-block-hov-rote">
-                                      <a class="btn" href="" data-toggle="modal">Читать полностью</a>
-
-                                        <div class="fact-social">
-                                            <share-buttons data="fact.shareData"></share-buttons>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="fact-two-block item" >
-                            <div class="fact-two-block-card">
-                                <div class="fact-two-block-act">
-
-                                    <div >
-                                        <div class="img">
-                                            <img src="img/resources/img/cheer.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="face clearfix">
-                                        <div class="face-img-left"
-                                             style="background-image:url(img/resources/img/cheer-img.jpg);background-position:center center;background-size:cover;">
-
-                                        </div>
-                                        <div class="face-text-right">
-                                            <h3 >Михаил Клюшкин</h3>
-
-                                            <p class="time-face"
-                                               >
-                                                1 апреля 15:23
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="fact-two-block-text">
-                                        <p> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam blanditiis perferendis tempore unde quos iure sequi, distinctio porro praesentium, recusandae explicabo maiores possimus, eius harum ex. Impedit, molestias, facilis.</span>
-                                        <span>Magni ratione incidunt quo necessitatibus aliquid, atque consequatur reprehenderit accusantium autem tempore, excepturi maiores! Pariatur, voluptatibus nisi minima ipsa, eaque quasi. Vero, adipisci assumenda fuga molestias facilis consequatur ex numquam.</span>
-                                        <span>Sed, maiores, dolor assumenda nisi repellendus, recusandae illum inventore officiis itaque ducimus distinctio placeat repellat atque accusamus excepturi. Voluptatem laudantium eius non nesciunt ipsa laborum, soluta dolore quibusdam animi tempore!</span></p>
-                                    </div>
-                                </div>
-                                <div class="fact-two-block-hov">
-                                    <div class="fact-two-block-hov-rote">
-                                      <a class="btn" href="" data-toggle="modal">Читать полностью</a>
-
-                                        <div class="fact-social">
-                                            <share-buttons data="fact.shareData"></share-buttons>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="fact-two-block item" >
-                            <div class="fact-two-block-card">
-                                <div class="fact-two-block-act">
-
-                                    <div >
-                                        <div class="img">
-                                            <img src="img/resources/img/cheer.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="face clearfix">
-                                        <div class="face-img-left"
-                                             style="background-image:url(img/resources/img/cheer-img.jpg);background-position:center center;background-size:cover;">
-
-                                        </div>
-                                        <div class="face-text-right">
-                                            <h3 >Михаил Клюшкин</h3>
-
-                                            <p class="time-face"
-                                               >
-                                                1 апреля 15:23
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="fact-two-block-text">
-                                        <p> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam blanditiis perferendis tempore unde quos iure sequi, distinctio porro praesentium, recusandae explicabo maiores possimus, eius harum ex. Impedit, molestias, facilis.</span>
-                                        <span>Magni ratione incidunt quo necessitatibus aliquid, atque consequatur reprehenderit accusantium autem tempore, excepturi maiores! Pariatur, voluptatibus nisi minima ipsa, eaque quasi. Vero, adipisci assumenda fuga molestias facilis consequatur ex numquam.</span>
-                                        <span>Sed, maiores, dolor assumenda nisi repellendus, recusandae illum inventore officiis itaque ducimus distinctio placeat repellat atque accusamus excepturi. Voluptatem laudantium eius non nesciunt ipsa laborum, soluta dolore quibusdam animi tempore!</span></p>
-                                    </div>
-                                </div>
-                                <div class="fact-two-block-hov">
-                                    <div class="fact-two-block-hov-rote">
-                                      <a class="btn" href="" data-toggle="modal">Читать полностью</a>
-
-                                        <div class="fact-social">
-                                            <share-buttons data="fact.shareData"></share-buttons>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="fact-two-block item" >
-                            <div class="fact-two-block-card">
-                                <div class="fact-two-block-act">
-
-                                    <div >
-                                        <div class="img">
-                                            <img src="img/resources/img/cheer.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="face clearfix">
-                                        <div class="face-img-left"
-                                             style="background-image:url(img/resources/img/cheer-img.jpg);background-position:center center;background-size:cover;">
-
-                                        </div>
-                                        <div class="face-text-right">
-                                            <h3 >Михаил Клюшкин</h3>
-
-                                            <p class="time-face"
-                                               >
-                                                1 апреля 15:23
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="fact-two-block-text">
-                                        <p> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam blanditiis perferendis tempore unde quos iure sequi, distinctio porro praesentium, recusandae explicabo maiores possimus, eius harum ex. Impedit, molestias, facilis.</span>
-                                       </p>
-                                    </div>
-                                </div>
-                                <div class="fact-two-block-hov">
-                                    <div class="fact-two-block-hov-rote">
-                                      <a class="btn" href="" data-toggle="modal">Читать полностью</a>
-
-                                        <div class="fact-social">
-                                            <share-buttons data="fact.shareData"></share-buttons>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="fact-two-block item" >
-                            <div class="fact-two-block-card">
-                                <div class="fact-two-block-act">
-
-                                    <div >
-                                        <div class="img">
-                                            <img src="img/resources/img/cheer.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="face clearfix">
-                                        <div class="face-img-left"
-                                             style="background-image:url(img/resources/img/cheer-img.jpg);background-position:center center;background-size:cover;">
-
-                                        </div>
-                                        <div class="face-text-right">
-                                            <h3 >Михаил Клюшкин</h3>
-
-                                            <p class="time-face"
-                                               >
-                                                1 апреля 15:23
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="fact-two-block-text">
-                                        <p> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam blanditiis perferendis tempore unde quos iure sequi, distinctio porro praesentium, recusandae explicabo maiores possimus, eius harum ex. Impedit, molestias, facilis.</span>
-                                        <span>Magni rssumenda fuga molestias facilis consequatur ex numquam.</span>
-                                        <span>Sed, maiores, dolor assumenda nisi repellendus, recusandae illum inventore officiis itaque ducimus distinctio placeat repellat atque accusamus excepturi. Voluptatem laudantium eius non nesciunt ipsa laborum, soluta dolore quibusdam animi tempore!</span></p>
-                                    </div>
-                                </div>
-                                <div class="fact-two-block-hov">
-                                    <div class="fact-two-block-hov-rote">
-                                      <a class="btn" href="" data-toggle="modal">Читать полностью</a>
-
-                                        <div class="fact-social">
-                                            <share-buttons data="fact.shareData"></share-buttons>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="fact-two-block item" >
-                            <div class="fact-two-block-card">
-                                <div class="fact-two-block-act">
-
-                                    <div >
-                                        <div class="img">
-                                            <img src="img/resources/img/cheer.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="face clearfix">
-                                        <div class="face-img-left"
-                                             style="background-image:url(img/resources/img/cheer-img.jpg);background-position:center center;background-size:cover;">
-
-                                        </div>
-                                        <div class="face-text-right">
-                                            <h3 >Михаил Клюшкин</h3>
-
-                                            <p class="time-face"
-                                               >
-                                                1 апреля 15:23
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="fact-two-block-text">
-                                        <p> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam blanditiis perferendis tempore unde quos iure sequi, distinctio porro praesentium, recusandae explicabo maiores possimus, eius harum ex. Impedit, molestias, facilis.</span>
-                                        <span>Magni ratione incidunt quo necessitatibus aliquid, atque consequatur reprehenderit accusantium autem tempore, excepturi maiores! Pariatur, voluptatibus nisi minima ipsa, eaque quasi. Vero, adipisci assumenda fuga molestias facilis consequatur ex numquam.</span>
-                                        <span>Sed, maiores, dolor assumenda nisi repellendus, recusandae illum inventore officiis itaque ducimus distinctio placeat repellat atque accusamus excepturi. Voluptatem laudantium eius non nesciunt ipsa laborum, soluta dolore quibusdam animi tempore!</span></p>
-                                    </div>
-                                </div>
-                                <div class="fact-two-block-hov">
-                                    <div class="fact-two-block-hov-rote">
-                                      <a class="btn" href="" data-toggle="modal">Читать полностью</a>
-
-                                        <div class="fact-social">
-                                            <share-buttons data="fact.shareData"></share-buttons>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="fact-two-block item" >
-                            <div class="fact-two-block-card">
-                                <div class="fact-two-block-act">
-
-                                    <div >
-                                        <div class="img">
-                                            <img src="img/resources/img/cheer.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="face clearfix">
-                                        <div class="face-img-left"
-                                             style="background-image:url(img/resources/img/cheer-img.jpg);background-position:center center;background-size:cover;">
-
-                                        </div>
-                                        <div class="face-text-right">
-                                            <h3 >Михаил Клюшкин</h3>
-
-                                            <p class="time-face"
-                                               >
-                                                1 апреля 15:23
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="fact-two-block-text">
-                                        <p> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam blanditiis perferendis tempore unde quos iure sequi, distinctio porro praesentium, recusandae explicabo maiores possimus, eius harum ex. Impedit, molestias, facilis.</span>
-                                        <span>Magni ratione incidunt quo necessitatibus aliquid, atque consequatur reprehenderit accusantium autem tempore, excepturi maiores! Pariatur, voluptatibus nisi minima ipsa, eaque quasi. Vero, adipisci assumenda fuga molestias facilis consequatur ex numquam.</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="fact-two-block-hov">
-                                    <div class="fact-two-block-hov-rote">
-                                      <a class="btn" href="" data-toggle="modal">Читать полностью</a>
-
-                                        <div class="fact-social">
-                                            <share-buttons data="fact.shareData"></share-buttons>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       </div>
                     </div>   
-                </div>
-            </div>
-        </div>
-        <div id="home2" class="tab-pane fade in ">
-            <div class="container-fluid">
-                <div class="row">
-                    ieiiei
-                </div>
-            </div>
-        </div>
-        <div id="home3" class="tab-pane fade in ">
-            <div class="container-fluid">
-                <div class="row">
-                    bjbxkjbkj
-                </div>
-            </div>
-        </div>
-        <div id="home4" class="tab-pane fade in ">
-            <div class="container-fluid">
-                <div class="row">
-                    uounhdhndhao
                 </div>
             </div>
         </div>
@@ -441,36 +123,35 @@
             <button type="button" class="close" data-dismiss="modal"></button>
             <div class="fact-block">
                 <div class="fact-img">
-                    <slick >
-                        <div class="img" >
-                            <img src="img/resources/img/cheer.jpg" alt="">
+                    <slick ng-show="ctrl.currentPost.photos.length">
+                        <div class="img" ng-repeat="photo in ctrl.currentPost.photos | limitTo:4">
+                            <img src="{{photo.image.small}}" alt="">
                         </div>
                     </slick>
                 </div>
                 <div class="fact-block-text clearfix">
                     <div class="face clearfix">
                         <div class="face-img-left"
-                             style="background-image:url(img/resources/img/cheer-img.jpg);background-position:center center;background-size:cover;">
+                             style="background-image:url({{ctrl.currentPost.profile_pic}});background-position:center center;background-size:cover;">
 
                         </div>
 
                         <div class="face-text-right">
-                            <h3>Михаил Клюшкин</h3>
+                            <h3 ng-bind="ctrl.currentPost.profile_name">Михаил Клюшкин</h3>
 
                             <p class="time-face"
-                               >
+                               ng-bind="ctrl.currentPost.published_at | amDateFormat:'DD.MM H:mm'">
                                 1 апреля 15:23
                             </p>
                         </div>
 
                     </div>
                     <div class="fact-social">
-                        <share-buttons data="ctrl.currentFact.shareData"></share-buttons>
+                        <share-buttons data="ctrl.currentPost.shareData"></share-buttons>
                     </div>
                 </div>
                 <div class="modal-fact-text">
-                    <p ></p>
-
+                    <p ng-bind-html="ctrl.currentPost.content"></p>
                 </div>
             </div>
 
