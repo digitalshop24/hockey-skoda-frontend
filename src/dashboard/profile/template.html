@@ -58,11 +58,11 @@
 
                             <p ng-class="{'active' : $state.includes('dashboard.profile.prizes')}">Призы</p></a>
                     </li>
-                    
+
                 </ul>
             </div>
             <div class="col-sm-6 col-md-6 lk_content">
-               
+
                 <div class="content_wrapp">
                     <div ui-view="">
                     </div>
@@ -93,3 +93,16 @@
         </div>
     </div>
 </section>
+<div class="modal fade" id="share" role="dialog">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="error_message_registration">
+                <p>Для участия в фото конкурсе Вам необходимо поделиться этой фотографией в любой из социальных сетей</p>
+                <h4 class="share-modal-header">Выберите соц.сеть</h4>
+                <share-buttons data="ctrl.shareData"></share-buttons>
+            </div>
+        </div>
+
+    </div>
+</div>
