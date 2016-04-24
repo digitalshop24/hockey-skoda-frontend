@@ -29,6 +29,13 @@ export default angular.module('dashboard.calendar', [])
                         return [];
                     },
 
+                    achievements: ($stateParams, profileService, session) => {
+                        if(session.isAuthenticated) {
+                            return profileService.getLastAchievements();
+                        }
+                        return [];
+                    },
+
                     teams: (scheduleService) => {
                         return scheduleService.getTeams();
                     }

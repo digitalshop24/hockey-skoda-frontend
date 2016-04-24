@@ -3,7 +3,7 @@
 const COLUMN_AMOUNT = 7;
 
 export default class СalendarCtrl {
-    constructor(calendar, calendarService, subscriptions, teams) {
+    constructor(calendar, calendarService, subscriptions, teams, achievements) {
         calendar.forEach(day => {
            day.matches.forEach(match => {
                var subscr = subscriptions.find(subscr => subscr.match_id == match.id);
@@ -13,6 +13,7 @@ export default class СalendarCtrl {
                }
            });
         });
+        this.achievements = achievements;
         this.calendar = calendar;
         this.service = calendarService;
         this.timeGrid = this.createTimeGrid();

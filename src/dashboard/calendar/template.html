@@ -8,13 +8,9 @@
                     <!-- <p>Напоминание о предстоящем матче будет отправлено вам по смс. Убедитесь что вы указали Ваш номер телефона в анкете. <a ui-sref="dashboard.edit">Указать телефон</a></p> -->
                 </div>
                 <div class="calen-winners-history">
-                    <div class="calen-winners-item">
-                        <h6>Выигрыш <span>10</span><img src="img/resources/img/balls.png" alt="" class="img_ball"></h6>
-                        <p>Вы правильно предположили исход <br> матча Россия — США (5:0)</p>
-                    </div>
-                    <div class="calen-winners-item">
-                        <h6>Выигрыш <span>1000</span><img src="img/resources/img/balls.png" alt="" class="img_ball"></h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quasi, suscipit pariatur totam blanditiis similique maiores consequatur eveniet. Expedita veritatis praesentium ullam perferendis dolorum mollitia nobis est, dicta inventore ab.</p>
+                    <div class="calen-winners-item" ng-repeat="achievement in ctrl.achievements | limitTo: 5">
+                        <h6><span ng-bind="achievement.points">10</span><img src="img/resources/img/balls.png" alt="" class="img_ball"></h6>
+                        <p ng-bind="achievement.achievment_category.name"></p>
                     </div>
                 </div>
 
