@@ -2,9 +2,16 @@
 
 
 export default class PrizenewCtrl {
-    constructor(sponsors, user, session, login, id) {
+    constructor(sponsors, session, login, id, $state) {
         this.sponsors = sponsors;
-        this.user = user;
+        this.allPrizes = sponsors.map(sponsor => {
+            sponsor.prizes.forEach(prize => {
+                prize.sponsorId = sponsor.id;
+                prize.sponsorImage = sponsor.image;
+            });
+            return sponsor.prizes;
+        }).reduce((a,b) => a.concat(b));
+        this.$state = $state;
         this.session = session;
         this.login = login;
         this.currentSponsorIndex = id ? sponsors.findIndex(sp => sp.id == id) : 0 ;
@@ -79,8 +86,14 @@ export default class PrizenewCtrl {
             this.currentSponsor = this.sponsors[this.currentSponsorIndex];
         }
     }
-    openInfo(){
+
+    showSponsor(id) {
+        $('#modalInfo').modal('hide');
+        this.$state.go('dashboard.prizenew', {id: id});
+    }
+
+    openInfo(prize){
+        this.currentPrize = prize;
       $('#modalInfo').modal('show');
-      return;
     }
 }

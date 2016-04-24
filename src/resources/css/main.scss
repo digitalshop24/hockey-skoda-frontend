@@ -139,6 +139,12 @@ header {
           font-family: $bold;
         }
       }
+      .disebl {
+        span { 
+          color: $grey;
+          cursor: not-allowed;
+        }
+      }
       // li:nth-child(1) {
       //   padding-top: 16px !important;
       // }
@@ -616,14 +622,26 @@ footer {
         }
 
       }
+      @media (max-width:1200px){
+        margin-top:5px;
+      }
     }
     .tantam-share{
       margin-top:0;
     }
     .footer-copyring{
       margin-top:10px;
-      @media (max-width:767px){
-        margin:0;
+      font-size: $p_size;
+      font-family: $light;
+      color:#fff;
+      a{
+        color:#fff;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      @media (max-width:1200px){
+        margin-top:0;
       }
     }
     @media (max-width:767px){
@@ -1070,6 +1088,7 @@ footer {
         position: absolute;
         margin-left: -62px;
         margin-top: 12.5px;
+        top:0;
         z-index: 2;
         color: $white;
         font-family: $bold;
@@ -1081,6 +1100,7 @@ footer {
         z-index: 2;
         color: $white;
         font-family: $bold;
+        top:0;
       }
       img {
         position: absolute;
@@ -4532,325 +4552,6 @@ $grey_about: #5d5d5d;
 
 //-------------------------------------------------- calendar
 //-------------------------------------------------- calendar
-.calendar {
-  .off {
-    margin-top:-32px;
-  }
-  .tantam-share  {
-    margin: 0;
-    padding: 0;
-    border: none;
-    li {
-      border:none;
-    }
-  }
-}
-
-
-.calendar-slider {
-  width:118px;
-  background:#fff;
-  margin-bottom:0px;
-  min-height:120px;
-
-  .block {
-    border-top:6px solid #38b249;
-    background:#fff;
-    p {
-      margin-top:10px;
-      text-align:center;
-      color:#000;
-      font-family: $bold;
-      font-size:1.4rem;
-    }
-  }
-  .slick-dots {
-    position:relative;
-    bottom:0px;
-    margin-top:10px;
-  }
-  .slick-dots li button:before {
-    font-size:35px;
-    color:#38b249;
-  }
-}
-.right_calendar {
-  .active {
-    background:#38b249;
-    .block {
-      background:#38b249;
-      p {
-        color:#fff;
-      }
-    }
-    .slick-dots li button:before {
-      font-size:35px;
-      color:#fff;
-    }
-  }
-}
-
-.calendar .right_calendar .time_line tbody tr:nth-child(odd) .bor[rowspan] {
-  padding-right:0px;
-}
-.calendar .right_calendar .time_line tbody tr:nth-child(even) .bor[rowspan] {
-  padding-right:0px;
-}
-.bor {
-  padding-right:0px;
-}
-.notice_form {
-  margin: 33px 0;
-  h5 {
-    font-family: "SkodaProBold", sans-serif;
-    padding-top: 12px;
-    padding-left: 30px;
-    display: inline-block;
-    font-size: 2rem;
-  }
-  h6 {
-    line-height: 50px;
-  }
-
-  .small {
-    height: 50px;
-    position:relative;
-    top:-2px;
-  }
-  .in {
-    width:300px;
-    border:none;
-    background:#e6e6e6;
-    margin-right:10px;
-  }
-  .btn_non {
-    padding-top: 5px;
-    float:right;
-    color:$grey;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
-    font-size: $p_size
-  }
-}
-.bg_grey {
-  background-color: $grey_lite;
-}
-.calendar {
-  padding: 40px 0 40px 0;
-  .left_calendar {
-    padding-top:110px;
-    .btn.active {
-      display: inline-block;
-      color: #fff;
-      background: #38b249;
-      .text-info{
-        color:#fff;
-      }
-    }
-    h3 {
-      margin-bottom: 40px;
-      font-family: "SkodaProBold", sans-serif;
-    }
-    .calen-text {
-      font-size:1.7rem;
-      text-align:left;
-    }
-    .tabel_calendar {
-      font-family: "SkodaProBold", sans-serif;
-      margin: 0 auto;
-      thead {
-        border-bottom: 2px solid $grey;
-        tr {
-          td {
-            border: none;
-            width: 36px;
-            height: 36px;
-          }
-        }
-      }
-      tbody {
-        border-bottom: 1px solid $grey;
-        tr {
-          .day_activ {
-            // background-image: url(../img/green_round.png);
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            background-color: $green_main;
-            border-radius: 50%;
-          }
-          td {
-            border: none;
-            width: 36px;
-            height: 36px;
-            p {
-              position: relative;
-              z-index: 2;
-            }
-            .day_grey {
-              color: $grey;
-            }
-          }
-        }
-      }
-    }
-    .text-info{
-      color:#000;
-    }
-  }
-  .right_calendar {
-
-    .wrapp_toggle {
-      margin-bottom: 35px;
-      h5 {
-        font-family: "SkodaProBold", sans-serif;
-        position:relative;
-        top:-10px;
-        display: inline-block;
-        font-size: 1.8rem;
-
-      }
-      .toggle  {
-        display: inline-block;
-      }
-    }
-    .time_line {
-      color:$grey;
-      thead {
-        tr {
-          td {
-            border-bottom: 1px solid $grey;
-            border-left: none;
-            border-right: none;
-            width:12.5%;
-          }
-          td:nth-child(1) {
-            width:12.5%;
-            border: none;
-          }
-        }
-      }
-      tbody {
-        tr{
-          td{
-            width:12.5%;
-            padding:0;
-            height: 30px;
-            border: 1px solid $grey;
-          }
-          .bor {
-            border:1px solid $grey !important;
-          }
-        }
-        tr:nth-child(odd) {
-          td {
-            border-bottom: 1px dotted $grey;
-          }
-          td.rowspan2 {
-            border:none;
-            text-align: right;
-            padding-right: 15px;
-            vertical-align: middle;
-            font-family: "SkodaProBold", sans-serif;
-          }
-        }
-        tr:nth-child(even) {
-          td {
-            border-top: none;
-          }
-          td.rowspan2 {
-            border:none;
-            text-align: right;
-            padding-right: 15px;
-            vertical-align: middle;
-
-          }
-        }
-      }
-    }
-  }
-
-}
-
-
-.check {
-  .text-slid {
-    display: block;
-  }
-  .cher-slid {
-    display: block;
-  }
-}
-.cher-slid {
-  background-color: #fff;
-  width: 100%;
-  height:auto;
-  color: #000;
-
-  font-size: 12px;
-  margin-top: -1px;
-  font-family: $bold;
-  input {
-    background: url(img/resources/img/chek.png) no-repeat;
-    display: none;
-  }
-  input[type=checkbox] {
-    display: none;
-  }
-  label {
-    width: 23px;
-    height: 23px;
-    position: relative;
-    display:block;
-    margin:0 auto;
-    margin-top:15px;
-  }
-  input[type="checkbox"] + span {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 23px;
-    height: 23px;
-    background: url(img/resources/img/chek.jpg) no-repeat;
-    cursor: pointer;
-    border: 1px solid $grey;
-    border-radius: 3px;
-    margin:0 auto;
-    display: block;
-
-  }
-  input[type="checkbox"]:checked + span   {
-    background: url(img/resources/img/check-box.jpg) no-repeat;
-  }
-  h6 {
-    display: block;
-    font-size: 12px;
-    text-align:center;
-    margin-top:10px;
-  }
-}
-.board:hover {
-  p {
-    display: none;
-  }
-  h6, input, label {
-    display: inline-block;
-  }
-}
-
-.board_activ {
-  position: absolute;
-  background-color: $green_main;
-  width: 11.9%;
-  height: 60px;
-  color: #fff;
-  border-top:3px solid $green_main;
-  font-size: 12px;
-  margin-top: -1px;
-  font-family: $bold;
-
-}
-
 
 
 //-------------------------------------------------- end calendar
@@ -6975,6 +6676,12 @@ nav {
         margin-right: 20px;
       }
     }
+    .disebl {
+        span { 
+          color: $grey;
+          cursor: not-allowed;
+        }
+      }
   }
 
   .drilldown li {
@@ -7005,6 +6712,7 @@ nav {
         color: $grey;
         cursor: not-allowed;
     }
+    
   }
   .li_sub {
     color: $green_main;

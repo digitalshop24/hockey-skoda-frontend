@@ -22,13 +22,6 @@ export default angular.module('dashboard.prizenew', [])
                         return prizenewService.getPrizes();
                     },
 
-                    user: (session, profileService) => {
-                        if(session.isAuthenticated) {
-                            return profileService.getCurrentUser();
-                        }
-                        return {};
-                    },
-
                     id: $stateParams => {
                         return $stateParams.id;
                     }
