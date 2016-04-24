@@ -616,14 +616,26 @@ footer {
         }
 
       }
+      @media (max-width:1200px){
+        margin-top:5px;
+      }
     }
     .tantam-share{
       margin-top:0;
     }
     .footer-copyring{
       margin-top:10px;
-      @media (max-width:767px){
-        margin:0;
+      font-size: $p_size;
+      font-family: $light;
+      color:#fff;
+      a{
+        color:#fff;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      @media (max-width:1200px){
+        margin-top:0;
       }
     }
     @media (max-width:767px){
