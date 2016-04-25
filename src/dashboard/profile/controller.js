@@ -12,7 +12,7 @@ export default class ProfileCtrl {
         // hack, because photocontest modal doesn't work at contained in fotocontest module
         this.shareData = {};
         $scope.$on('profile:fotocontest', (event, data) => {
-            this.shareData.imgUrl = data.url;
+            this.shareData = data;
         });
     }
 
