@@ -959,6 +959,33 @@ footer {
     .timeline{
       z-index:1;
     }
+    .dop-block {
+      position:relative;
+      .dop-block-item {
+        width:50%;
+        float:left;
+         li {
+          timeline-badge {
+            left:100%;
+          }
+        }
+        &:nth-child(2n) {
+          position:relative;
+          margin-top:160px;
+          li {
+            timeline-badge {
+            left:0%;
+          }
+          }
+          
+        }
+       
+      }
+    }
+    ul.timeline li timeline-panel {
+        width: calc(100% - 45px);
+        width: -webkit-calc(100% - 45px);
+    }
   }
     .post_content {
       width:100% !important;
