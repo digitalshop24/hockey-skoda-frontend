@@ -1,43 +1,9 @@
 'use strict';
 
-
-// export default class TeodorCtrl {
-//     constructor(posts, $state, factService, page, perPage, tag) {
-//         this.posts = posts;
-//         this.state = $state;
-//         this.factService = factService;
-//         this.currentPage = page;
-//         this.perPage = perPage;
-//         this.tag = tag;
-
-//     }
-
-//     readMore(post) {
-//         this.state.transitionTo('dashboard.teodor', {id: post.post_id}, {notify: false});
-//         this.currentPost = post;
-//     }
-
-
-//     loadMore() {
-//         if (this.busy) return;
-//         this.busy = true;
-
-//         this.factService.getFacts(++this.currentPage, this.perPage, this.tag)
-//             .then((res) => {
-//                 this.posts = this.posts.concat(res);
-//                 this.busy = false;
-//             }).catch(err => {
-//                 this.busy = false;
-//             });
-
-//     }
-// }
-
 export default class TeodorCtrl {
-    constructor(posts, $scope, $localStorage, socialService, page, daysAmount, hashtag, hashtags) {
+    constructor(posts, $scope, $localStorage, socialService, page, daysAmount, hashtag, sponsors) {
         this.busy = false;
         this.hashtag = hashtag;
-        this.hashtags = hashtags;
         this.page = page;
         this.daysAmount = daysAmount;
         this.days = [];
@@ -45,6 +11,7 @@ export default class TeodorCtrl {
         this.events = posts;
         this.localStorage = $localStorage;
         this.handlePosts(this.events);
+        this.iceHockeySponsor = sponsors.find(sponsor => sponsor.id == 2);
 
         if (this.localStorage['socials-filters']) {
             ['fbFilter', 'vkFilter', 'twitterFilter', 'instagramFilter'].forEach(filterName => {
