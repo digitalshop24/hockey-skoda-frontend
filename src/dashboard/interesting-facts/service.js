@@ -20,6 +20,12 @@ export default class FactsService {
         })
     }
 
+    getFactById(id) {
+        return this.api.get(`/soc_posts/${id}`).then((res) => {
+            return res.data;
+        })
+    }
+
     getSkodaFacts(page, perPage) {
         return this.api.
             get('/posts/interesting_facts', {

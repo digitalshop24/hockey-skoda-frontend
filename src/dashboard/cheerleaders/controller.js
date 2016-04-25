@@ -13,7 +13,18 @@ export default class CheerCtrl {
         this.scope = $scope;
         this.$timeout = $timeout;
 
-        this.news.forEach(news => news.socialUrl = 'https://www.youtube.com/watch?v=' + news.video_code);
+        this.teams = [];
+        this.news.forEach(news => {
+            news.socialUrl = 'https://www.youtube.com/watch?v=' + news.video_code;
+            if(this.teams.indexOf(news.short_name) == -1) {
+                this.teams.push(news.short_name);
+            }
+        });
+        this.teams.push('Команды будут добавляться');
+
+        this.filterByAllTeams = (post) => {
+            return $scope.ctrl.filterTeam ? (post.short_name == $scope.ctrl.filterTeam)  : true;
+        };
 
         this.scope.$on('youtube.player.ready', ($event, player) => {
             const newsId = $('#' + player.id).parent().data('newsId');
