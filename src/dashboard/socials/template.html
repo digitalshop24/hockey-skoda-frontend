@@ -83,9 +83,9 @@
         <p><h4 class="color_tag">По хештегу {{ctrl.hashtag}} ничего не найдено</h4></p>
         <div>
             <ul>
-                <li ng-repeat="hashtag in ctrl.hashtags | limitTo:10"><a ui-sref="dashboard.socials({hashtag: '{{hashtag}}'})" ng-bind="hashtag"></a></li>
-                <li ng-show="!ctrl.openAddTags && ctrl.hashtags.length > 10"><a ng-click="ctrl.openAddTags = true"><img src="img/resources/img/three_dots.png" alt=""></a></li>
-                <li ng-show="ctrl.openAddTags" ng-repeat="hashtag in ctrl.hashtags | limitTo:ctrl.hashtags.length:10" ><a ui-sref="dashboard.socials({hashtag: '{{hashtag}}'})" ng-bind="hashtag"></a></li>
+                <li ng-repeat="hashtag in ctrl.hashtags | limitTo:1"><a ui-sref="dashboard.socials({hashtag: '{{hashtag}}'})" ng-bind="hashtag"></a></li>
+                <li ng-show="!ctrl.openAddTags && ctrl.hashtags.length > 1"><a ng-click="ctrl.openAddTags = true"><img src="img/resources/img/three_dots.png" alt=""></a></li>
+                <li ng-show="ctrl.openAddTags" ng-repeat="hashtag in ctrl.hashtags | limitTo:ctrl.hashtags.length:1" ><a ui-sref="dashboard.socials({hashtag: '{{hashtag}}'})" ng-bind="hashtag"></a></li>
             </ul>
         </div>
     </div>
@@ -108,13 +108,13 @@
                 </timeline-panel>
             </timeline-event>
 
-
-            <timeline-event ng-repeat="event in day.events | filter:ctrl.filterByNetworks as filtered" side="">
+        <div class="dop-block clearfix">
+            <timeline-event class="clearfix dop-block-item" ng-repeat="event in day.events | filter:ctrl.filterByNetworks | limitTo:2 as filtered" side="">
                 <timeline-badge class="{{::event.badgeClass}}">
                     <div style="background-image: url('{{::event.profile_pic}}');background-position:center center;background-size:cover; height: 50px; border-radius:50%;"></div>
-                    <!--<i class="" ></i>-->
+                 
                 </timeline-badge>
-                <timeline-panel class="{{::event.badgeClass}}">
+                <timeline-panel class="{{::event.badgeClass}} clearfix">
                     <timeline-heading>
                         <h4 ng-bind="::event.title"></h4>
                     </timeline-heading>
@@ -137,7 +137,7 @@
                             <slick infinite=true arrows=true>
                                 <div ng-repeat="photo in ::event.photos | limitTo:4">
                                     <img src="{{::photo.image.small}}"/>
-                                </div>
+                                </div> 
                                 <span ng-bind="::event.photoLengthText"></span>
                             </slick>
                         </div>
@@ -153,7 +153,60 @@
                     </div>
 
                 </timeline-panel>
-            </timeline-event>
+            </timeline-event> 
+
+
+        </div>
+       <div class="dop-block clearfix">
+            <timeline-event class="clearfix dop-block-item" ng-repeat="event in day.events | filter:ctrl.filterByNetworks | limitTo:2 as filtered" side="">
+                <timeline-badge class="{{::event.badgeClass}}">
+                    <div style="background-image: url('{{::event.profile_pic}}');background-position:center center;background-size:cover; height: 50px; border-radius:50%;"></div>
+                 
+                </timeline-badge>
+                <timeline-panel class="{{::event.badgeClass}} clearfix">
+                    <timeline-heading>
+                        <h4 ng-bind="::event.title"></h4>
+                    </timeline-heading>
+                    <div class="post_content">
+                        <div class="title">
+                            <a href="#"><img src="{{::event.iconUrl}}" alt="" class="img-responsive"></a>
+                            <a href="#" class="link_default"><h5
+                                    ng-bind="::event.published_at">13:32</h5></a>
+                            <a href="{{::event.profile_link}}" target="_blank" class="link_default"><p ng-bind="::event.profile_name">Александр Овечкин</p></a>
+                        </div>
+                        <div class="main_content">
+                            <p ng-show="event.showMinContent" ng-bind-html="::event.minContent"></p>
+                            <a href="" ng-show="event.showMinContent" ng-click="event.showMinContent = false;"
+                               style="color: #4ba82e;">Показать полностью</a>
+
+                            <p ng-show="!event.showMinContent" ng-bind-html="::event.content"></p>
+
+                        </div>
+                        <div ng-show="::event.photos.length">
+                            <slick infinite=true arrows=true>
+                                <div ng-repeat="photo in ::event.photos | limitTo:4">
+                                    <img src="{{::photo.image.small}}"/>
+                                </div> 
+                                <span ng-bind="::event.photoLengthText"></span>
+                            </slick>
+                        </div>
+
+                        <ul class="dop_info">
+                            <li ng-show="::event.likes"><a href="" class="link_default"
+                                                         ng-bind="::event.likesText"></a></li>
+                            <li ng-show="::event.reposts"><a href="" class="link_default" ng-bind="::event.repostText"></a>
+                            </li>
+                            <li ng-show="::event.post_link"><a class="link_default" href="{{event.post_link}}"
+                                                             target="_blank">Читать</a></li>
+                        </ul>
+                    </div>
+
+                </timeline-panel>
+            </timeline-event> 
+
+
+        </div>
+            
         </div>
 
     </timeline>
