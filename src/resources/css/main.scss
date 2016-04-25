@@ -594,6 +594,7 @@ footer {
       p{
         float:left;
         line-height:42px;
+        font-family: $bold;
         @media (max-width:991px){
           margin-right:30px;
         }
@@ -614,7 +615,7 @@ footer {
     .footer-copyring{
       margin-top:10px;
       font-size: $p_size;
-      font-family: $light;
+      font-family: $bold;
       color:#fff;
       a{
         color:#fff;
