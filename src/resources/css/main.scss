@@ -1299,6 +1299,9 @@ footer {
     padding: 20px 0 70px 0;
     select {
       margin-top: 15px;
+      option[label="Россия"]{
+        font-family:$bold;
+      }
     }
     .mounth_arrow {
       display:inline-block;
