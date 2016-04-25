@@ -12,7 +12,7 @@ export default class SocialService {
                 page: page,
                 days: days,
                 hashtag: tags
-            }
+            } 
         }).then(res => {
             return res.data;
         });
