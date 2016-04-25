@@ -6,10 +6,15 @@
                 <h2>КОМАНДЫ ПОДДЕРЖКИ</h2>
             </div>
             <div class="col-md-2">
-                <select class="input_default input_small">
-                    <option>Все команды</option>
+                <!--<select class="input_default input_small">
+                    <option></option>
                     <option>Команда 1</option>
                     <option>Команда 2</option>
+                </select>-->
+
+                <select class="input_default input_small" ng-options="team for team in ctrl.teams" ng-model="ctrl.filterTeam">
+                    <option selected value>Все команды</option>
+
                 </select>
             </div>
             <div class=" col-md-3 ">
@@ -30,7 +35,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="cheer-bor" ng-repeat="news in ctrl.news | filter:{name:ctrl.search}">
+            <div class="cheer-bor" ng-repeat="news in ctrl.news | filter:ctrl.filterByAllTeams | filter:{name:ctrl.search} as filtered">
                 <div class="cheer-im clearfix">
                     <div class="cheer-text modile">
                         <div class="cheer-title clearfix">
