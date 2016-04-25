@@ -2774,7 +2774,14 @@ $grey_about: #5d5d5d;
   }
   .wrapp_social_lent {
     background-color: $white;
-    min-height: 100vh;
+    height:100%;
+    padding-bottom:79px;
+    position: fixed;
+    right:-16px;
+    top:79px;
+    width:220px;
+    overflow-y: auto;
+    overflow-x: hidden;
     .soc_post {
       text-align: left;
       padding: 30px 5px 10px 10px;
