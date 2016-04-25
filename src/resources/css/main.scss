@@ -1139,6 +1139,16 @@ footer {
   .menu_border_bottom {
     border-bottom: 1px solid $grey;
   }
+  .pagination-sm > li:first-child > a, .pagination-sm > li:first-child > span {
+    color: $green_main !important;
+  }
+  .pagination-sm > li > a, .pagination-sm > li > span {
+    color: $green_main !important;
+  }
+  .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: $green_main !important;
+    border-color: $green_main !important;
+  }
   .wrapp_filt {
      padding: 20px 20px 40px 20px;
 
