@@ -19,9 +19,10 @@ export default class ProgressCtrl {
 
 
     loadPhoto(file) {
+        this.isLoad = true;
         if (file) {
             this.Upload.dataUrl(file, true).then((dataUrl) => {
-                return this.service.loadImage(dataUrl)
+                return this.service.loadImage(dataUrl);
             }).then(res => {
                 this.state.go('dashboard.profile.fotocontest', {}, {reload: true});
             }).catch(err => {
