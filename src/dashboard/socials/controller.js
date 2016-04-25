@@ -86,7 +86,7 @@ export default class SocialCtrl {
             filter[filterName] = this[filterName];
         });
         this.localStorage['socials-filters'].push(filter)
-    }
+    } 
 
     getRepostText(network) {
         if (network == 'twitter') {

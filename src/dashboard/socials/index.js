@@ -2,7 +2,7 @@
 
 import angular from 'angular';
 import SocialCtrl from './controller.js';
-import SocialService from './service.js';
+import SocialService from './service.js'; 
 
 
 export default angular.module('dashboard.socials', [])
