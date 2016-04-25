@@ -6158,7 +6158,7 @@ $grey_about: #5d5d5d;
       &:nth-child(2) {
         position:relative;
         margin: 0;
-        padding:5px 15px;
+        padding:0;
       }
       a {
         text-decoration: none;
@@ -6355,7 +6355,7 @@ $grey_about: #5d5d5d;
               .fa {
                 color:#fff;
                 font-size:18px;
-                width:18px;
+                width:22px;
                 height:18px;
                 margin:auto;
                 padding-top:8px;
@@ -7315,7 +7315,7 @@ img.taggs {
 
 }
 
-.factSection .fact-two-block:hover .fact-two-block-hov {
+.factSection-teodor .fact-two-block:hover .fact-two-block-hov {
   background:#ccc;
 }
 
