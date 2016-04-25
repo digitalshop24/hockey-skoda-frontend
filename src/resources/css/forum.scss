@@ -32,7 +32,110 @@
       font-size:14px;
       line-height: 120%;
       font-family:$regular;
-      margin-bottom:15px;
+      margin-bottom:25px;
+    }
+  }
+  &-questions{
+    text-align: center;
+    background:#fff;
+    color:$black;
+    padding:15px 0 25px;
+    &--header{
+      font-size: 24px;
+      font-family: $extra_bold;
+      text-transform: uppercase;
+      line-height: 120%;
+      margin:25px 0;
+    }
+    &--content{
+      display: inline-block;
+      max-width:650px;
+      width:100%;
+    }
+    &--stage{
+      font-size:18px;
+      line-height: 120%;
+      margin-bottom:10px;
+    }
+    &--img{
+      margin:10px 0 20px;
+      img{
+        display: block;
+        width:100%;
+        height:auto;
+      }
+      p{
+        color:$grey_text;
+        font-size:12px;
+        margin:7px 0;
+      }
+    }
+    &--text{
+      font-size:18px;
+      line-height: 120%;
+      text-align: left;
+      margin:20px 0;
+    }
+    .btn{
+      margin:20px 0;
+    }
+  }
+  &-answers{
+    text-align: left;
+    font-size:18px;
+    font-family: $bold;
+    line-height: 120%;
+    padding:20px 0;
+    border-bottom:1px solid $grey_lite;
+    margin-bottom:20px;
+    li{
+      margin:15px 0;
+    }
+    .radio-label{
+      padding-top:1px;
+      display: inline-block;
+      &_green{
+        span{
+          font-family: $extra_bold;
+          font-size:20px;
+          margin:0 5px 0 15px;
+          display: inline-block;
+          position: relative;
+          bottom:-2px;
+        }
+        img{
+          float: right;
+        }
+      }
+    }
+  }
+  &-result{
+    background:url("img/resources/img/forum/test-result-bg.jpg") top center repeat-x;
+    background-size:cover;
+    min-height:596px;
+    text-align: center;
+    color:$white;
+    padding:20px 0;
+    &--content{
+      display: inline-block;
+      width:100%;
+      max-width:383px;
+      background: $white;
+      color:$black;
+      margin:20px 0;
+      padding:15px 15px 40px;
+      p{
+        margin:20px 0;
+        font-size: 18px;
+        line-height: 180%;
+        .balls{
+          color:$green_main;
+          font-family: $extra_bold;
+          font-size:20px;
+          margin:0 5px;
+          line-height: 24px;
+        }
+      }
     }
   }
 }
