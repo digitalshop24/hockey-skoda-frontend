@@ -1,0 +1,94 @@
+h1,h2,h3,h4,h5,h6,p,ul,li {
+  margin:0;
+  padding:0;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+button, button:active, button:focus {
+  outline: none !important;
+}
+ul {
+    list-style-type: none;
+}
+h1 {
+    font-size: 6rem;
+}
+h2 {
+  font-size: 5rem;
+}
+h3 {
+    font-size: 4rem;
+}
+h4 {
+    font-size: 3rem;
+}
+h5 {
+    font-size: 2.5rem;
+}
+h6 {
+    font-size: 2rem;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
+
+.overflow_hidden {
+  overflow: hidden;
+}
+.bold {
+  font-weight: bold;
+}
+
+//this is class is no prodaction version(only css-framework)
+.green_main {
+  background-color: $green_main;
+  height: 100px;
+  width: 100px;
+}
+.green_add_ {
+  background-color: $green_add_;
+  height: 100px;
+  width: 100px;
+}
+.green_add_pale {
+  background-color: $green_add_pale;
+  height: 100px;
+  width: 100px;
+}
+.grey_lite {
+  background-color: $grey_lite;
+  height: 100px;
+  width: 100px;
+}
+.grey {
+  background-color: $grey;
+  height: 100px;
+  width: 100px;
+}
+.grey_dark {
+  background-color: $grey_dark;
+  height: 100px;
+  width: 100px;
+}
+.red {
+  background-color: $red;
+  height: 100px;
+  width: 100px;
+}
+
+//this is class is no prodaction version(only css-framework)
+
+
+//-----------------------------------------------------link
+.link_default {
+  color:$green_main !important;
+}
+.link_default:hover {
+  color: $link_default_hover !important;
+}
+
+//-----------------------------------------------------link end

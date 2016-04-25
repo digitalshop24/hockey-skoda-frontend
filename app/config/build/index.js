@@ -9,6 +9,7 @@ var sources = {
 };
 
 var styles = {
+    srcFile: "src/resources/css/style.scss",
     src: "src/**/*.scss",
     dest: "app.min.css"
 };
@@ -40,6 +41,7 @@ module.exports = {
     styles: [
         {
             src: styles.src,
+            srcFile : styles.srcFile,
             dest: styles.dest,
             publicPath: publicPath
         },

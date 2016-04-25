@@ -1,0 +1,36 @@
+.modal-window {
+  padding-top: 35px;
+  .modal-content .close{
+    text-indent: -9999px;
+  }
+}
+.modal-window_right{
+  padding-top:80px;
+  .modal-dialog{
+    margin:0;
+    float:right;
+    width:418px;
+  }
+  .modal-content{
+    padding:40px 70px 40px 40px;
+  }
+  .error_message_registration{
+    padding:0;
+    text-align: left;
+    color:#000;
+    h2{
+      font-weight: bold;
+      font-size:36px;
+      text-transform: uppercase;
+      margin-bottom:15px;
+    }
+    p{
+      font-size:14px;
+      line-height: 140%;
+      font-weight:normal;
+    }
+  }
+  .btn{
+    margin-top:30px;
+  }
+}

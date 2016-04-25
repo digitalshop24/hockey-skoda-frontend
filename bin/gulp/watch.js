@@ -4,10 +4,12 @@ var browserify = require("browserify");
 var watchify = require("watchify");
 var Bundler = require("./bundler.js");
 var notify = require('gulp-notify');
+var watch = require('gulp-watch');
 
 module.exports = function (config){
     return function(){
         _.each(config.tasks, function(src, task){
+            console.log(src + 'task' + [task]);
             gulp.watch(src, [task]);
         });
         var bundler = watchify(browserify({
