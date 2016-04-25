@@ -1,0 +1,38 @@
+.forum-test{
+  margin:10px 0 0;
+  &-start{
+    background:url("img/resources/img/forum/test-start-bg.jpg") bottom center repeat-x;
+    background-size:cover;
+    color:#fff;
+    text-align: center;
+    min-height:330px;
+    padding:20px 0;
+    &--header{
+      display: inline-block;
+      font-size:18px;
+      line-height: 24px;
+      span{
+        color:$green_main;
+        margin:0 5px 0 10px;
+        font-family: $extra_bold;
+        font-size: 20px;
+      }
+      img{
+        float:right;
+      }
+    }
+    &--question{
+      font-size:48px;
+      line-height: 120%;
+      font-family: $extra_bold;
+      margin:15px 0;
+      text-transform: uppercase;
+    }
+    &--desc{
+      font-size:14px;
+      line-height: 120%;
+      font-family:$regular;
+      margin-bottom:15px;
+    }
+  }
+}
