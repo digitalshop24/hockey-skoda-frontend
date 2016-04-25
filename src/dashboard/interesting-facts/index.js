@@ -45,6 +45,13 @@ export default angular.module('dashboard.facts', [])
                         return [];
 
                     },
+                    factById: ($stateParams, factService) => {
+                        if($stateParams.id) {
+                            return factService.getFactById($stateParams.id);
+                        }
+                        return undefined;
+                    },
+
                     page: ($stateParams) => {
                         return $stateParams.page;
                     },

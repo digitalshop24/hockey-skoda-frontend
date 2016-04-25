@@ -2,7 +2,7 @@
 
 
 export default class FactsCtrl {
-    constructor(facts, page, $state, factService, tag, $location, $stateParams, isSocialFacts, skodaFacts, skodaPerPage) {
+    constructor(facts, page, $state, factService, tag, $location, $stateParams, isSocialFacts, skodaFacts, skodaPerPage, factById) {
         this.facts = isSocialFacts ? facts : skodaFacts;
         if(!isSocialFacts) {
             this.facts.forEach(fact => {
@@ -26,6 +26,10 @@ export default class FactsCtrl {
                 url: startUrl + '/interesting-facts/' + post.post_id
             }
         });
+
+        if(factById) {
+            this.readMore(factById);
+        }
     }
 
     changeTag(info) {
@@ -44,6 +48,7 @@ export default class FactsCtrl {
     readMore(fact) {
         this.state.transitionTo('dashboard.facts', {id: fact.post_id}, {notify: false});
         this.currentFact = fact;
+        $('#fact-modal').modal('show');
     }
 
     getRepostText(network) {
