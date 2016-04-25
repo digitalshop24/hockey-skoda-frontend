@@ -46,13 +46,14 @@ export default class SocialCtrl {
             post.iconUrl = this.getIconUrl(post.network);
             post.content = post.content ? post.content : "";
             post.photoLengthText = post.photos ? (post.photos.length + ' фото') : '';
-            post.published_at = moment(post.published_at).format('DD.MM H:mm');
+            const publishTime = post.published_at;
+            post.published_at = moment(publishTime).format('DD.MM H:mm');
             if (post.content.length > 300) {
                 post.minContent = post.content.substring(0, 300) + '...';
                 post.showMinContent = true;
             }
 
-            const temp = moment(post.published_at).format('YYYY-MM-DD');
+            const temp = moment(publishTime).format('YYYY-MM-DD');
             var day = this.days.find(day => day.id == temp);
             if (day) {
                 day.events.push(post);
