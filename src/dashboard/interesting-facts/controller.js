@@ -23,7 +23,6 @@ export default class FactsCtrl {
             post.repostText = post.reposts + ' ' + this.getRepostText(post.network);
             post.iconUrl = this.getIconUrl(post.network);
             post.shareData = {
-                description: post.content,
                 url: startUrl + '/interesting-facts/' + post.post_id
             }
         });
