@@ -56,11 +56,15 @@ export default class SocialCtrl {
             const temp = moment(publishTime).format('YYYY-MM-DD');
             var day = this.days.find(day => day.id == temp);
             if (day) {
-                day.events.push(post);
+                if(day.coupleNewsBlocks[day.coupleNewsBlocks.length -1].length == 1) {
+                    day.coupleNewsBlocks[day.coupleNewsBlocks.length -1].push(post);
+                } else {
+                    day.coupleNewsBlocks.push([post]);
+                }
             } else {
                 this.days.push({
                     id: temp,
-                    events: [post]
+                    coupleNewsBlocks: [[post]]
                 });
             }
         });
