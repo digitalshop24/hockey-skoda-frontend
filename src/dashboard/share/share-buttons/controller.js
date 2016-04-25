@@ -37,7 +37,7 @@ export default class ShareCtrl {
 
 
         this.facebookShareLink = "https://www.facebook.com/sharer.php?src=sp&u=" + this.resultData.url + "&picture=" + this.resultData.imgUrl +
-            "&description=" + this.resultData.description + "&title=" + this.resultData.title + "&link" + this.resultData.url + "&name=" + this.resultData.url;
+            "&description=" + this.resultData.description + "&title=" + this.resultData.title + "&link=" + this.resultData.url + "&name=" + this.resultData.url;
 
         this.vkShareLink = "http://vk.com/share.php?url=" + this.resultData.url + "&title=" + this.resultData.title +
             "&description=" + this.resultData.description + "&image=" + this.resultData.imgUrl;

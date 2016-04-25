@@ -51,7 +51,8 @@ export default class ProgressCtrl {
                 photo.is_published = true;
                 photo.isUserPaticipating = true;
                 this.$rootScope.$broadcast('profile:fotocontest', {
-                    url: photo.image.original
+                    imgUrl: photo.image.original,
+                    description: 'хоккейвкаждом'
                 });
                 $('#share').modal('show');
             }).catch(err => {
