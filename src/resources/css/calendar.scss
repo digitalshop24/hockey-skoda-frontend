@@ -18,7 +18,7 @@
   background:#fff;
   margin-bottom:0px;
   min-height:120px;
-
+  overflow: hidden;
   .block {
     border-top:6px solid #38b249;
     background:#fff;
@@ -32,8 +32,8 @@
   }
   .slick-dots {
     position:relative;
-    bottom:5px;
-    margin:5px 0 0;
+    bottom:0;
+    margin:5px 0;
   }
   .slick-dots li button:before {
     font-size:20px;
@@ -255,7 +255,6 @@
   width: 100%;
   height:auto;
   color: #000;
-
   font-size: 12px;
   margin-top: -1px;
   font-family: $bold;
