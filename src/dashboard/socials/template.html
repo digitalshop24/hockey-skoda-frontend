@@ -126,11 +126,11 @@
                             <a href="{{::event.profile_link}}" target="_blank" class="link_default"><p ng-bind="::event.profile_name">Александр Овечкин</p></a>
                         </div>
                         <div class="main_content">
-                            <p ng-show="::event.showMinContent" ng-bind-html="::event.minContent"></p>
-                            <a href="" ng-show="::event.showMinContent" ng-click="event.showMinContent = false;"
+                            <p ng-show="event.showMinContent" ng-bind-html="::event.minContent"></p>
+                            <a href="" ng-show="event.showMinContent" ng-click="event.showMinContent = false;"
                                style="color: #4ba82e;">Показать полностью</a>
 
-                            <p ng-show="::!event.showMinContent" ng-bind-html="::event.content"></p>
+                            <p ng-show="!event.showMinContent" ng-bind-html="::event.content"></p>
 
                         </div>
                         <div ng-show="::event.photos.length">
