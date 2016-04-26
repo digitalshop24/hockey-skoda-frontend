@@ -1,0 +1,132 @@
+.main_video {
+   .slick-next {
+    background: rgba(0,0,0,0) url("img/resources/img/arrow_right_white.png") no-repeat 85% center;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+    top: 300px !important;
+  }
+  .slick-prev {
+    background: rgba(0, 0, 0, 0) url("img/resources/img/arrow_left_white.png") no-repeat 15% center;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    top: 300px !important;
+  }
+  .video_item {
+    min-height: 640px;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    // width: 57%;
+    div {
+      background-color: rgba(0, 0, 0, .5);
+      min-height: 640px;
+      h5 {
+        color: $white;
+        font-weight:bold;
+        padding-top: 150px;
+      }
+      img {
+        margin: 20px auto;
+        display: inline-block;
+      }
+      p {
+        color: $white;
+        font-size: $p_size;
+        padding-top: 10px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+    }
+    .share {
+      margin-top: 50px;
+    }
+    .play {
+      margin: 50px auto 0;
+    }
+  }
+}
+.desc_video {
+  padding: 30px 60px;
+  .bord_bottom {
+    border-bottom: 2px solid $grey;
+  }
+  h4 {
+      color: $green_main;
+      font-weight:bold;
+      padding: 10px 0;
+  }
+  p {
+    color: $grey;
+    padding: 10px 0;
+    font-size: $p_size;
+  }
+  .date {
+    color: $black;
+  }
+  input {
+    width: 100%;
+  }
+}
+.other_video {
+  padding: 0 60px;
+  .titel_tag {
+    font-size: $p_size;
+  }
+  .col-md-3 {
+
+    div {
+      height: 200px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin-top: 50px;
+    }
+    p {
+      padding: 10px 0;
+      font-size: $p_size;
+
+    }
+    .bold {
+      height: 100px;
+      cursor:pointer;
+    }
+  }
+  .btn_common {
+    margin: 30px 0 70px 0;
+  }
+  .tag_post {
+        border-bottom: 1px solid $grey;
+        padding-bottom: 10px;
+        li {
+          margin: 5px 15px 5px 0;
+          padding: 5px 10px;
+          background-color: $grey;
+          display: inline-block;
+          p {
+            text-transform: uppercase;
+            font-weight:bold;
+            font-size: $p_size - 0.2rem;
+            color: $green_main;
+            cursor: pointer;
+            height: auto;
+            margin:0;
+            padding:0;
+            span {
+              color: $white;
+              margin-left: 10px;
+            }
+            a{
+              color: $green_main;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+}
+

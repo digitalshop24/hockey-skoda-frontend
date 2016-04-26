@@ -1,0 +1,51 @@
+.regulations {
+  padding: 50px;
+  p {
+    padding: 5px 0;
+    font-size: $p_size+.1rem;
+  }
+  h2,h3 {
+    padding-bottom: 30px;
+  }
+  h5 {
+    padding: 30px 0 10px 0;
+  }
+  table {
+    width: 100%;
+    margin: 50px 0;
+    td {
+      border: 1px solid $grey;
+      padding: 10px;
+      text-align: center;
+    }
+    // td[colspan="5"],
+     .maintd {
+      border: 2px solid $green_main !important;
+      font-size: 2rem;
+    }
+
+  }
+}
+
+.faq {
+  padding: 50px;
+  p{
+    padding: 5px 0;
+    font-size: $p_size;
+  }
+  ul {
+    padding: 10px 0;
+    li {
+      font-size: $p_size;
+      padding: 5px 20px;
+    }
+  }
+  ol {
+    li {
+      list-style: disc;
+    }
+  }
+  table {
+    margin: 20px auto;
+  }
+}

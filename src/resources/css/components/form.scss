@@ -206,3 +206,168 @@ $sw-width: 60px;
     }
   }
 }
+
+//invalid
+input.ng-valid-required {
+  border-color: green;
+}
+
+input.ng-invalid, input.ng-invalid-minlength {
+  border-color: red;
+}
+
+input.ng-pristine + ul#strength {
+  display:none;
+}
+ul#strength {
+  display:inline;
+  list-style:none;
+  margin:0;
+  margin-left:15px;
+  padding:0;
+  vertical-align:2px;
+}
+.point:last {
+  margin:0 !important;
+}
+.point {
+  background:#DDD;
+  border-radius: 2px !important;
+  display: inline-block !important;
+  height: 5px !important;
+  margin: 0 1px !important;
+  width: 20px !important;
+}
+.form {
+  color: $grey_about;
+  h4 {
+    margin: 80px 0 60px 0;
+    color: #7d7d7d;
+    font-weight:300;
+  }
+  input {
+    margin-bottom: 38px;
+    display: block;
+    width:350px;
+  }
+  .left {
+    padding-left: 9%;
+  }
+  .form_grey {
+    background-color: #f1f1f1;
+    padding-bottom: 70px;
+  }
+  .form_white {
+    background-color: #fff;
+    padding-bottom: 70px;
+    ul {
+      margin-bottom: 30px;
+      li {
+        display:inline-block;
+        margin: 0 70px;
+      }
+      li:nth-child(1) {
+        margin-right: 70px;
+        margin-left: 0;
+      }
+      li:nth-child(4) {
+        margin-right: 0;
+        margin-left: 70px;
+      }
+    }
+
+  }
+  .btn {
+    margin: 50px 0;
+  }
+  input[type='checkbox'] {
+      width: auto;
+      display:none;
+    }
+    input[type="checkbox"] + label span {
+        display:inline-block;
+        width:30px;
+        height:30px;
+        margin:-1px 20px 0 0;
+        vertical-align:middle;
+        background:url(img/resources/img/check-box.png) left top no-repeat;
+        // border: 1px solid $black;
+        cursor:pointer;
+        //
+    }
+    input[type="checkbox"]:checked + label span {
+      background:url(img/resources/img/check-box-active.png)  left top no-repeat;
+    }
+
+    label {
+      margin-left: 50px;
+      margin-bottom: 36px;
+      font-size: $p_size;
+      font-weight:normal;
+      font-weight: 300;
+      color:$grey_dark;
+      margin-top: 50px;
+    }
+
+}
+
+.form_popup {
+  margin-left: 20px;
+  margin-right: 20px;
+  .left {
+    margin-top: 20px;
+    border-right: 2px solid $grey;
+    .soc_icon {
+      margin-top: 10px;
+      img {
+        display: inline-block;
+        padding-right: 4px;
+      }
+      a {
+        cursor: pointer;
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+        text-align: center;
+        line-height: 43px;
+        font-size: 18px;
+        background: #6a6b71;
+        color: #fff;
+        border-radius: 50%;
+        -webkit-transition: background .3s ease;
+        transition: background .3s ease;
+        &:hover {
+          background: #4ba82e;
+        }
+      }
+    }
+
+  }
+  .right {
+    margin-top: 20px;
+  }
+
+  h6 {
+    padding-top: 50px;
+    font-weight:bold;
+    font-size: 1.5rem;
+  }
+  input {
+    margin-top: 30px;
+    width: 80%
+  }
+  p {
+    padding-top: 20px;
+    a{
+      color: $grey;
+      text-decoration: underline;
+      font-size: $p_size - 0.1rem;
+    }
+
+  }
+
+  button {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+}

@@ -2,6 +2,7 @@
   border: none;
   border-radius: 2px;
   font-weight:bold;
+  font-family: $font-skoda;
 }
 .main {
   height: 50px;
@@ -221,4 +222,21 @@
   border: 1px solid $grey_dark;
   cursor:not-allowed;
   box-shadow: none;
+}
+
+.wrapp_btnn {
+  padding:36px 0 50px 0;
+  .btnn_text {
+    text-align:center;
+    .main {
+      width:168px;
+      height:48px;
+    }
+    span {
+      margin-left:20px;
+      position:relative;
+      top:3px;
+      color:$black;
+    }
+  }
 }

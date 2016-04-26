@@ -9,7 +9,7 @@
   float:left;
   h2 {
     font-size:5rem;
-    font-family: $bold;
+    font-weight: bold;
     color:#4ba82e;
     margin-top:100px;
   }
@@ -17,7 +17,7 @@
     margin-top:45px;
     p {
       font-size:1.7rem;
-      font-family: $light;
+      font-weight: 300;
       color:#000;
     }
 
@@ -27,7 +27,7 @@
   float:right;
   .title-p {
     font-size:3rem;
-    font-family: $light;
+    font-weight: 300;
     color:#000;
     margin-top:100px;
     margin-bottom:30px;
@@ -37,19 +37,19 @@
     text-align:right;
     p {
       font-size:5rem;
-      font-family: $light;
+      font-weight: 300;
       color:#000;
       text-align:right;
       line-height: 3.5rem;
     }
     .gren-bold {
-      font-family: $extra_bold;
+      font-weight: 900;
       color:#4ba82e;
       text-align:right;
     }
     span {
       font-size:1rem;
-      font-family: $regular;
+      font-weight: normal;
       color:#000;
       line-height: 10px;
     }
@@ -66,12 +66,12 @@
     width:100%;
     height:75px;
     margin-bottom:30px;
-    font-family: $light;
+    font-weight: 300;
     font-size: 3rem;
   }
   span {
     font-size:1.7rem;
-    font-family: $light;
+    font-weight: 300;
     color:#000;
   }
 }
@@ -132,7 +132,7 @@
       margin-left:-28px;
       cursor:pointer;
       &:after {
-        font-family: $light;
+        font-weight: 300;
         font-size:1.5rem;
         position:absolute;
         top:-385px;
@@ -520,17 +520,17 @@
       h3 {
         font-size: 5rem;
         color:#000;
-        font-family: $regular;
+        font-weight: normal;
         margin-top:135px;
         text-transform: uppercase;
         b{
-          font-family: $extra_bold;
+          font-weight: 900;
         }
       }
       p {
         font-size: 1.5rem;
         color:#000;
-        font-family: $regular;
+        font-weight: normal;
         margin-top:50px;
       }
     }
@@ -542,7 +542,7 @@
         a {
           font-size: 1.5rem;
           color:#000;
-          font-family: $light;
+          font-weight: 300;
           text-decoration: underline;
         }
       }
@@ -555,7 +555,7 @@
         margin-top:100px;
         p {
           font-size:1.8rem;
-          font-family: $bold;
+          font-weight: bold;
           color:#4ba82e;
 
           text-align:left;
@@ -565,7 +565,7 @@
           background:url(img/resources/img/icon-bal.png) no-repeat right center;
           span {
             font-size:5rem;
-            font-family: $extra_bold;
+            font-weight: 900;
             color:#000;
 
           }
@@ -584,17 +584,17 @@
           .opis-num {
             text-align:center;
             span {
-              font-family: $light;
+              font-weight: 300;
               font-size: 2rem;
               color:#595959;
               line-height: 25px;
             }
             .blue {
-              font-family: $bold;
+              font-weight: bold;
               color:#4ba3e1;
             }
             .opis-green {
-              font-family: $bold;
+              font-weight: bold;
               color:#3bad33;
             }
           }
@@ -608,7 +608,7 @@
           p {
 
             text-align:right;
-            font-family: $extra_bold;
+            font-weight: 900;
             font-size: 3rem;
             line-height: 26px;
             color:#000;
@@ -845,14 +845,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 .junior {
   padding-top:70px;
 
@@ -861,13 +853,13 @@
     padding-right:22px;
   }
   h2 {
-    font-family: $extra_bold;
+    font-weight: 900;
     font-size: 6rem;
     margin-bottom:20px;
     margin-top:65px;
   }
   p {
-    font-family: $regular;
+    font-weight: normal;
     font-size: 1.4rem;
     margin-bottom:15px;
   }
@@ -877,7 +869,7 @@
     &-tittle {
       margin-bottom:25px;
       h4 {
-        font-family: $light;
+        font-weight: 300;
         font-size: 3rem;
 
       }
@@ -890,7 +882,7 @@
         padding-right:20px;
         text-align:center;
         &-datte {
-          font-family: $regular;
+          font-weight: normal;
           font-size:1.4rem;
           color:#666666;
           display:block;
@@ -902,7 +894,7 @@
           display:block;
           line-height: 28px;
           text-align:center;
-          font-family: $regular;
+          font-weight: normal;
           font-size:1.4rem;
           color:#000;
           background:url(img/resources/img/icon-junior-col.png) no-repeat center center;
@@ -916,7 +908,7 @@
           a {
             text-decoration: none;
             font-size: 1.6rem;
-            font-family: $bold;
+            font-weight: bold;
             color:#000;
             line-height: 18px;
             display:block;
@@ -929,7 +921,7 @@
     width:200px;
     margin-top:150px;
     p {
-      font-family: $regular;
+      font-weight: normal;
       font-size: 1.4rem;
       margin-bottom:20px;
     }
@@ -984,7 +976,7 @@
       padding-top:40px;
       text-align:center;
       color:$white;
-      font-family: $bold;
+      font-weight: bold;
       font-size:3rem;
     }
     .play {
@@ -1003,7 +995,7 @@
       padding-top:20px;
       text-align:center;
       color:$white;
-      font-family: $bold;
+      font-weight: bold;
       font-size:2rem;
     }
     span {
@@ -1012,13 +1004,13 @@
     .time {
       text-align:center;
       color:$white;
-      font-family: $regular;
+      font-weight: normal;
       font-size:1.5rem;
     }
     .pod {
       text-align:center;
       color:$white;
-      font-family: $regular;
+      font-weight: normal;
       font-size:1.5rem;
       padding-top:40px;
     }
@@ -1046,7 +1038,7 @@
   }
   &-datte {
     span {
-      font-family: $light;
+      font-weight: 300;
       font-size: 1.1rem;
       color:#000;
       margin-bottom:5rem;
@@ -1055,14 +1047,14 @@
   &-tittle {
     h3 {
       font-size: 4rem;
-      font-family: $bold;
+      font-weight: bold;
       color:#000;
       margin-bottom:20px;
     }
   }
   &-text {
     p {
-      font-family: $regular;
+      font-weight: normal;
       font-size: 1.4rem;
       margin-bottom:15px;
     }
@@ -1071,7 +1063,7 @@
     padding-top:65px;
 
     h6 {
-      font-family: $light;
+      font-weight: 300;
       font-size: 3rem;
       color:#000;
       float:left;
@@ -1081,7 +1073,7 @@
       li {
         display:inline-block;
         a {
-          font-family: $regular;
+          font-weight: normal;
           font-size: 1.6rem;
           color:#000;
           background:none;
@@ -1091,7 +1083,7 @@
       }
       .active {
         a {
-          font-family: $bold;
+          font-weight: bold;
         }
       }
     }
@@ -1109,7 +1101,7 @@
     &-text {
       padding-top:12px;
       h4 {
-        font-family: $bold;
+        font-weight: bold;
         font-size: 1.7rem;
         color:#000;
       }
@@ -1125,7 +1117,7 @@
   background:#f1f1f1;
   .junior-tittle {
     max-width: 460px;
-    font-family: $extra_bold;
+    font-weight: 900;
     font-size: 5rem;
     color:#37aa35;
     padding-bottom:90px;
@@ -1149,7 +1141,7 @@
     height:203px;
     margin:0 auto;
     color:#4ba82e;
-    font-family: $extra_bold;
+    font-weight: 900;
     font-size: 1.7rem;
     text-align:center;
     line-height: 195px;
@@ -1187,7 +1179,7 @@
     }
     &-item {
       color:#4ba82e;
-      font-family: $extra_bold;
+      font-weight: 900;
       font-size: 5rem;
       text-align:center;
     }
@@ -1225,7 +1217,7 @@
       #p {
         text-align: center;
         padding-top: 24px;
-        font-family: "SkodaProLight", sans-serif;
+        font-weight: 300;
         color: #da0000;
         font-size: 3rem;
         line-height: 17px;
@@ -1234,7 +1226,7 @@
       span {
         text-align:center;
         padding-top:5px;
-        font-family: $light;
+        font-weight: 300;
         color:#595959;
         font-size: 1rem;
         display:block;
@@ -1275,17 +1267,17 @@
       h2 {
         padding-top:65px;
         color:#4ba82e;
-        font-family: $extra_bold;
+        font-weight: 900;
         font-size: 5rem;
         margin-bottom:36px;
         text-transform: uppercase;
       }
       .vop {
         color:#d9d9d9;
-        font-family: $light;
+        font-weight: 300;
         position:relative;
         b {
-          font-family: $extra_bold;
+          font-weight: 900;
         }
         .btn {
           position:absolute;
@@ -1298,10 +1290,10 @@
       }
       p {
         font-size: 1.6rem;
-        font-family: $regular;
+        font-weight: 400;
         margin-bottom:32px;
         b {
-          font-family: $bold;
+          font-weight: bold;
         }
         .green-tr {
           color:#4ba82e;
@@ -1319,7 +1311,7 @@
             margin-bottom:80px;
             .number {
               color:#4ba82e;
-              font-family: $light;
+              font-weight: 300;
               font-size: 5rem;
               float:left;
               width:28px;
@@ -1329,7 +1321,7 @@
             .text-right {
               float:left;
               color:#c8c8c8;
-              font-family: $light;
+              font-weight: 300;
               font-size: 1rem;
               text-align: left;
             }
@@ -1362,7 +1354,7 @@
           &-tittle {
             h5 {
               color:#000;
-              font-family: $bold;
+              font-weight: bold;
               font-size: 1.6rem;
               text-align:center;
             }
@@ -1495,7 +1487,7 @@
     height:77px;
     border:1px solid #a1a1a1;
     font-size: 2rem;
-    font-family: $light;
+    font-weight: 300;
     color:#a3a3a3;
     padding-left:25px;
     line-height: 77px;
@@ -1554,7 +1546,7 @@
         width: 100%;
     border: 1px solid #a1a1a1;
     font-size: 2rem;
-    font-family: "SkodaProLight",sans-serif;
+    font-weight: 300;
     color: #a3a3a3;
     padding-left: 25px;
     line-height: 40px;;
@@ -1583,7 +1575,7 @@
       margin-left: 50px;
       margin-bottom: 36px;
       font-size: $p_size;
-      font-family: $regular;
+      font-weight: normal;
       font-weight: 300;
       color:$grey_dark;
       margin-top: 50px;
@@ -1655,7 +1647,7 @@
       height:70px;
       line-height: 65px;
       color:#fff;
-      font-family: $bold;
+      font-weight: bold;
       font-size: 3rem;
     }
     .grenn {
@@ -1672,7 +1664,7 @@
     }
     p {
       color:#000;
-      font-family: $regular;
+      font-weight: normal;
       font-size: 1.2rem;
       text-align:center;
       position:relative;
@@ -1714,7 +1706,7 @@
       line-height: 82px;
       color:#595959;
       font-size: 1.6rem;
-      font-family: $regular;
+      font-weight: normal;
     }
     .active {
       color:#4ba82e;
@@ -1760,7 +1752,7 @@
     h5{
       color:$green_main;
       font-size:24px;
-      font-family:$bold;
+      font-weight: bold;
     }
   }
   &--img{
@@ -1774,7 +1766,7 @@
   &--header{
     font-size: 36px;
     line-height:120%;
-    font-family: $extra_bold;
+    font-weight: 900;
     color:$green_main;
     text-transform: uppercase;
     margin:20px 0 5px;
@@ -1793,7 +1785,7 @@
     a{
       text-decoration: underline;
       color:#fff;
-      font-family:$bold;
+      font-weight: bold;
       font-size:16px;
       position: absolute;
       top:50%;
