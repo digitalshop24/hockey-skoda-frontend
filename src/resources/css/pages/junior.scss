@@ -3,7 +3,7 @@
   padding-bottom:70px;
   .titel_news {
     font-weight: bold;
-    padding: 10px 0;
+    padding: 10px 0 51px 0;
     text-transform: uppercase;
   }
   .text_block {
@@ -17,7 +17,7 @@
     }
     p {
       font-size: 1.4rem;
-      padding: 30px 0;
+      padding: 5px 0;
     }
   }
   &-content {
@@ -56,13 +56,14 @@
     margin-bottom:15px;
   }
   &-news {
-    margin-top:85px;
+    margin-top:0px;
     width:340px;
     &-tittle {
       margin-bottom:25px;
       h4 {
-        font-weight:300;
+        font-weight:400;
         font-size: 3rem;
+        padding-bottom: 25px;
 
       }
     }
@@ -168,7 +169,7 @@
       padding-top:40px;
       text-align:center;
       color:$white;
-      font-weight:bold;
+      // font-weight:bold;
       font-size:3rem;
     }
     .play {
@@ -252,7 +253,7 @@
     }
   }
   &-galer {
-    padding-top:65px;
+    padding-top:0px;
 
     h6 {
       font-weight:300;
@@ -286,7 +287,7 @@
   &-galer-phote {
     width:48%;
     float:left;
-     min-height: 330px;
+    min-height: 260px;
      img {
       width:100%;
      }
