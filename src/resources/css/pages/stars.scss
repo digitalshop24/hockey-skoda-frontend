@@ -1,0 +1,110 @@
+.wrapp_search {
+  input {
+    float: left;
+    width:348px;
+    margin: 20px 0 24px 73px;
+    font-size: 1.6rem;
+  }
+  p {
+    display: inline;
+    float: right;
+    margin: 27px 76px 24px 0;
+    font-size: 1.6rem;
+    span {
+      font-weight:bold;
+      margin-left: 7px;
+    }
+  }
+}
+
+.wrapp_main_new {
+  background-image: url(img/resources/img/bg_star.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  .main_new {
+    // margin-left: 72px;
+    // padding: 150px 0;
+    .bg_stars{
+      padding: 160px 70px;
+      background-color: RGBA(0, 0, 0, 0.39);
+      height: 500px;
+    }
+    h2 {
+      text-transform: uppercase;
+      color: $white;
+    }
+    h6 {
+      margin: 30px 0 3px 0;
+      color: $white;
+    }
+    ul {
+      padding-top: 90px;
+      padding-bottom: 37px;
+      li {
+        font-size: 1.6rem;
+        font-weight:bold;
+      }
+    }
+  }
+}
+.wrapp_new {
+  .news {
+    margin-left: 70px;
+    margin-right: 70px;
+    .foto {
+      margin-top: 30px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 300px;
+      cursor:pointer;
+    }
+    .foto_set {
+      display:none;
+      position: absolute;
+      top: 30px;
+      width: 90%;
+      text-transform: uppercase;
+      color: #fff;
+      height: auto;
+      cursor: pointer;
+      background-color: RGBA(0, 0, 0, 0.3);
+      height: 300px;
+      padding-top: 50px;
+    }
+    .foto_set:hover {
+      display: inline-block;
+    }
+    .foto:hover +.foto_set {
+      display: inline-block;
+    }
+    .description {
+      width: 100%;
+      height: 150px;
+      background-color: $grey_lite;
+      h6 {
+        padding-top: 10px;
+        padding-left: 10px;
+        cursor:pointer;
+      }
+      p {
+        padding-top: 5px;
+        padding-left: 10px;
+        cursor:pointer;
+      }
+    }
+  }
+  .show_to {
+    margin: 50px 0 100px 0;
+    .btn_common {
+      margin-left: 18%;
+    }
+    span {
+      margin-left: 10px;
+      font-size: 1.2em;
+
+    }
+
+  }
+}

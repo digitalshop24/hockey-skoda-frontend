@@ -1,0 +1,123 @@
+.wrapp_shet {
+  // background-color: #f1f1f1;
+  min-height: 90vh;
+  .fix_bottom {
+    margin-bottom: 30px;
+  }
+  .share_btn {
+    position: absolute;
+    z-index: 1000;
+    right: 20px;
+  }
+  .mounth {
+    padding: 20px 0 70px 0;
+    select {
+      margin-top: 15px;
+      option[label="Россия"]{
+        font-weight: bold;
+      }
+    }
+    .mounth_arrow {
+      display:inline-block;
+      margin-top: 6px;
+      li {
+        display: inline-block;
+      }
+      li:nth-child(2,5) {
+        position: relative;
+        top: -7px;
+        margin: 0 0px;
+        padding: 10px 0;
+      }
+    }
+    ul {
+      display:inline-block;
+    }
+    p {
+      display:inline-block;
+      font-size: $p_size;
+    }
+    .group {
+      margin-right: 6px;
+      li:nth-child(1) {
+        position: relative;
+        top: 13px;
+      }
+      li:nth-child(2) {
+        position: relative;
+        bottom: -3px;
+      }
+    }
+  }
+  .tabel_game {
+    .date_game {
+      margin-bottom: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #cccccc;
+      h3 {
+        float: left;
+        color: #757575;
+      }
+      p {
+        font-size: 1.2rem;
+        margin-left: 30px;
+        color: #757575;
+      }
+      .b {
+        font-weight:bold;
+      }
+    }
+    .game {
+      margin-bottom: 30px;
+      // margin-left: 5px;
+      // margin-right: 5px;
+      h3 {
+        font-weight:bold;
+        padding-top: 30px;
+        letter-spacing: 10px;
+      }
+      h6 {
+        font-size: 1.7rem;
+        padding-top: 30px;
+      }
+      p {
+        font-size: $p_size;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+      }
+    }
+    .active {
+      background-color: $green_main;
+      h3 {
+        color: $white;
+      }
+      h6 {
+        color: $white;
+      }
+      p {
+        color: $white;
+      }
+    }
+    .last {
+      background-color: #e8e8e8;
+      h3 {
+        color: $green_main;
+      }
+      h6 {
+        color: $black;
+      }
+      p {
+        color: $grey_dark;
+      }
+    }
+    .next {
+      background-color: #f1f1f1;
+    }
+  }
+
+  .activeSchedule {
+    color: $green_main;
+  }
+
+}

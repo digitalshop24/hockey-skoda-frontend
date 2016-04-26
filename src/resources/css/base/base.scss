@@ -1,0 +1,15 @@
+body {
+  font-family: $font-skoda;
+  font-size: 12px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialised;
+  overflow-x: hidden;
+  // height: 100%;
+  //overflow: hidden;
+}
+
+#nprogress .bar {
+  background: #4ba82e;
+}

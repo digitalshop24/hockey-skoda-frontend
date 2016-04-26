@@ -1,0 +1,242 @@
+.btn {
+  border: none;
+  border-radius: 2px;
+  font-weight:bold;
+  font-family: $font-skoda;
+}
+.main {
+  height: 50px;
+  min-width: 160px;
+  padding: 0 25px;
+  font-size: 1.4em;
+}
+.small {
+  height: 40px;
+  min-width: 110px;
+  padding: 0 20px;
+  font-size: 1.2em;
+}
+.tiny {
+  height: 30px;
+  min-width: 90px;
+  padding: 0 15px;
+  font-size: 1.2em;
+}
+
+
+// btn_primary
+
+
+.btn_primary {
+  color: $white;
+  background-color: $green_main;
+}
+.btn_primary:hover {
+  background-color: $green_add_;
+  color: $white;
+}
+.btn_primary:active {
+  color: $white;
+  background-color: $green_main;
+}
+.btn_primary:focus {
+  color: $white;
+  background-color: $green_main;
+}
+
+
+
+//btn_secondary
+
+
+.btn_secondary {
+  color: $white;
+  background-color: $black;
+}
+.btn_secondary:hover {
+  background-color: $white;
+  color: $black;
+  border:1px solid $black;
+}
+.btn_secondary:active {
+  color: $white;
+  background-color: $black;
+}
+.btn_secondary:focus {
+  color: $white;
+  background-color: $black;
+}
+
+
+//btn_secondary inverse
+
+
+.btn_secondary_inverse {
+  color: $black;
+  background-color: $white;
+}
+.btn_secondary_inverse:hover {
+  background-color: $black;
+  color: $white;
+  border:1px solid $white;
+}
+.btn_secondary_inverse:active {
+  color: $black;
+  background-color: $white;
+}
+.btn_secondary_inverse:focus {
+  color: $black;
+  background-color: $white;
+}
+
+
+//btn_disable, primary and secondary
+
+
+.btn_disable {
+  background-color: $grey_lite;
+  color: $grey !important;
+}
+.btn_disable:hover {
+  background-color: $grey_lite;
+  color: $grey;
+  cursor:not-allowed;
+}
+.btn_disable:active {
+  background-color: $grey_lite !important;
+  color: $grey !important;
+  box-shadow: none !important;
+  border: 1px solid $grey !important;
+}
+.btn_disable:focus {
+  background-color: $grey_lite !important;
+  color: $grey !important;
+  box-shadow: none !important;
+   border: 1px solid $grey !important;
+}
+
+
+//common buttons
+
+
+.btn_common {
+  color: $black;
+  background-color: $white;
+  border: 1px solid $black;
+}
+.btn_common:hover {
+  background-color: $black;
+  color: $white;
+}
+.btn_common:active {
+  color: $black;
+  background-color: $white;
+  border: 1px solid $black;
+}
+.btn_common:focus {
+  color: $black;
+  background-color: $white;
+  border: 1px solid $black;
+}
+
+
+//common buttons inverse
+
+
+.btn_common_inverse {
+  color: $white;
+  background-color: $black;
+  border: 1px solid $white;
+}
+.btn_common_inverse:hover {
+  background-color: $white;
+  color: $black;
+}
+.btn_common_inverse:active {
+  color: $white;
+  background-color: $black;
+  border: 1px solid $white;
+}
+.btn_common_inverse:focus {
+  color: $white;
+  background-color: $black;
+  border: 1px solid $white;
+}
+
+//common buttons disable
+
+
+.btn_common_disable {
+  background-color: $white;
+  color: $grey;
+  border: 1px solid $grey;
+  cursor:not-allowed;
+}
+.btn_common_disable:hover {
+  background-color: $white;
+  color: $grey;
+  border: 1px solid $grey;
+  cursor:not-allowed;
+}
+.btn_common_disable:active {
+  background-color: $white;
+  color: $grey;
+  border: 1px solid $grey;
+  cursor:not-allowed;
+  box-shadow: none;
+}
+.btn_common_disable:focus {
+  background-color: $white;
+  color: $grey;
+  border: 1px solid $grey;
+  cursor:not-allowed;
+  box-shadow: none;
+}
+
+
+//common buttons disable
+
+
+.btn_common_disable_inveres {
+  background-color: $black;
+  color: $grey_dark;
+  border: 1px solid $grey_dark;
+  cursor:not-allowed;
+}
+.btn_common_disable_inveres:hover {
+  background-color: $black;
+  color: $grey_dark;
+  border: 1px solid $grey_dark;
+  cursor:not-allowed;
+}
+.btn_common_disable_inveres:active {
+  background-color: $black;
+  color: $grey_dark;
+  border: 1px solid $grey_dark;
+  cursor:not-allowed;
+  box-shadow: none;
+}
+.btn_common_disable_inveres:focus {
+  background-color: $black;
+  color: $grey_dark;
+  border: 1px solid $grey_dark;
+  cursor:not-allowed;
+  box-shadow: none;
+}
+
+.wrapp_btnn {
+  padding:36px 0 50px 0;
+  .btnn_text {
+    text-align:center;
+    .main {
+      width:168px;
+      height:48px;
+    }
+    span {
+      margin-left:20px;
+      position:relative;
+      top:3px;
+      color:$black;
+    }
+  }
+}

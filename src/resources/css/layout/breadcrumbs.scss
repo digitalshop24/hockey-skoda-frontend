@@ -1,0 +1,161 @@
+.wrapp_breadcrumbs {
+
+  .breadcrumbs_block {
+    padding:20px 0 15px 0;
+    border-bottom:2px solid #b2b5b7;
+    &_text {
+      padding-left:15px;
+      a {
+        color:#3bad33;
+        text-decoration: none;
+        display:inline-block;
+        position:relative;
+        font-size:1.7rem;
+        font-weight:bold;
+        &:after {
+          position:absolute;
+          right:-25px;
+          top:6px;
+          content:"";
+          background:url("img/resources/img/icon-breadcrumbs.png") no-repeat center center;
+          width:10px;
+          height:16px;
+        }
+      }
+      span {
+        color:#3bad33;
+        display:inline-block;
+        font-size:1.7rem;
+        font-weight:bold;
+        margin-left:35px;
+      }
+    }
+  }
+}
+.wrapp_visits {
+  .visits_block {
+    padding:35px 0 45px 0;
+    border-bottom:1px solid #b2b5b7;
+    position:relative;
+    &_title {
+      padding-left:15px;
+      position:relative;
+      h2 {
+        font-size:3rem;
+        font-weight:bold;
+        color:#3bad33;
+      }
+    }
+    .visits_number {
+      position:absolute;
+      right:0px;
+      width:220px;
+      top:0px;
+      &_item {
+        display:inline-block;
+        width:45%;
+        text-align:center;
+
+        p {
+          font-size: 3rem;
+          line-height:3rem;
+
+        }
+        span {
+          color:#757575;
+          font-size:1.3rem;
+        }
+      }
+    }
+  }
+  .im_block_visits {
+    padding-left:15px;
+    .main {
+    color:$white;
+    font-weight:bold;
+    width:110px;
+    height:40px;
+   }
+   .visits-block {
+    padding-top:45px;
+    width:320px;
+    display:inline-block;
+    margin-left:15px;
+    p {
+      font-size: 1.3rem;
+      color:#757575;
+      line-height:1.5rem;
+      position:relative;
+      &:nth-child(2) {
+        position:relative;
+        top:10px;
+      }
+    }
+   }
+  }
+}
+
+// undefined style
+.wrapp_content_bl {
+  .content_bor {
+    border-bottom:2px solid #b2b5b7;
+  }
+  .content_bl_br {
+    border-bottom:1px solid #b2b5b7;
+    padding:20px 0 40px 0;
+    &:nth-last-child(1) {
+      // border:none;
+    }
+    .content_bl_im {
+      padding:0 15px;
+      .photo {
+        width:160px;
+        .nam {
+          color:#b2b5b7;
+          font-size:1.4rem;
+        }
+        .img {
+          margin-bottom:15px;
+        }
+        .cricle {
+          border-radius: 90%;
+          background:#f1f1f1 url("img/resources/img/img-skode.png") no-repeat center center;
+          overflow:hidden;
+          width:160px;
+          height:160px;
+          position:relative;
+          p {
+            position:absolute;
+            width:85px;
+            height:45px;
+            top:50%;
+            bottom:0px;
+            left:0px;
+            right:0px;
+            margin:auto;
+            color:#999999;
+            font-size:1.3rem;
+            text-align:center;
+          }
+        }
+        .name {
+          p {
+            font-size:1.7rem;
+            color:#3bad33;
+            text-align:center;
+            font-weight:bold;
+          }
+        }
+      }
+      .date {
+        color:#b2b5b7;
+        font-size:1.3rem;
+        margin-bottom:20px;
+      }
+      p {
+        margin-bottom:20px;
+        font-size:1.3rem;
+      }
+    }
+  }
+}
