@@ -181,6 +181,7 @@
   .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
     background-color: $green_main !important;
     border-color: $green_main !important;
+    color: #fff !important;
   }
   .wrapp_filt {
      padding: 20px 20px 40px 20px;
