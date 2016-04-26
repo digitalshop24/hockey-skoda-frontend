@@ -21,8 +21,7 @@ export default class PrizenewCtrl {
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 1,
-                    asNavFor: '.main_slider_priz'
+                    slidesToScroll: 1
 
                 }
             },
@@ -30,8 +29,7 @@ export default class PrizenewCtrl {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1,
-                    asNavFor: '.main_slider_priz'
+                    slidesToScroll: 1
 
                 }
             },
@@ -40,8 +38,7 @@ export default class PrizenewCtrl {
                 breakpoint: 530,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1,
-                    asNavFor: '.main_slider_priz'
+                    slidesToScroll: 1
 
                 }
             }
