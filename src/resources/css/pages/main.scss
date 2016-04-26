@@ -846,3 +846,23 @@
   }
 }
 
+
+
+@media only screen and (max-width:$screen-md) {
+  .wrapp_mainpage_data {
+    select {
+      margin-bottom:30px;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width:$screen-sm) {
+  .wrapp_mainpage_slider {
+   .now_games {
+    display: none;
+   }
+  } 
+
+}
