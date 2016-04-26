@@ -1,6 +1,19 @@
 .junior {
   padding-top:70px;
   padding-bottom:70px;
+  .text_block {
+    h2 {
+      text-transform: uppercase;
+      padding: 30px 0;
+    }
+    h5 {
+      font-weight: bold;
+      padding-bottom: 30px;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
   &-content {
     padding-right:22px;
   }
