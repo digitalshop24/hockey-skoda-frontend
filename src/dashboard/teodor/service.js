@@ -1,12 +1,5 @@
 'use strict';
 
-// export default class teodorService {
-//     constructor(api) {
-//         this.api = api;
-//     }
-// }
-
-
 export default class TeodorService {
     constructor(api, $http) {
         this.api = api;
@@ -18,7 +11,8 @@ export default class TeodorService {
             params: {
                 page: page,
                 days: days,
-                hashtag: tags
+                hashtag: tags,
+                contains_all: true
             } 
         }).then(res => {
             return res.data;
