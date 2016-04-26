@@ -1304,6 +1304,9 @@
           float:left;
           width:46%;
           min-height:420px;
+          &_car{
+            min-height:200px;
+          }
           &:nth-last-of-type(odd) {
             margin-left:8%;
           }
