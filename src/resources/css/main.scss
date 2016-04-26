@@ -7371,3 +7371,82 @@ img.taggs {
 
 
 // ------------------------- END TEODOR
+
+
+
+
+
+// ------------------------- GAME-HOCKEY
+
+.wrapp_game-hockey {
+  padding-top:75px;
+  padding-bottom:50px;
+  .game-hockey-left {
+    h2 {
+      text-transform: uppercase;
+      color: $green_main;
+      font-family: $extra_bold;
+      font-size:48px;
+      display: inline-block;
+      span {
+        font-size: 20px;
+        font-family: $extra_bold;
+        color: $green_main;
+        padding-left: 20px;
+        margin-right:5px;
+        position:relative;
+        top:-7px;
+      }
+    }
+    img {
+      position:relative;
+      top:-12px;
+      display: inline-block;
+    }
+    .hesh {
+      text-transform: uppercase;
+      color: $green_main;
+      margin-left: 50px;
+      font-family: $bold;
+      font-size:12px;
+      display: inline-block;
+      position:relative;
+      top:-12px;
+    }
+    
+  }
+  .btn_primary {
+      width:166px;
+      height: 50px;
+      line-height: 40px;
+      font-size:16px;
+    }
+  .text-ot {
+
+  }
+  h4 {
+    font-size: 20px;
+    font-family: $bold;
+    color: $green_main;
+    margin-bottom:10px;
+  }
+  p {
+    font-size: 14px;
+    font-family: $regular;
+  }
+  .tulu-game {
+    padding:50px 0;
+  }
+}
+
+.game-hockey-tantam {
+  .left {
+    margin-left:0px;
+
+  }
+}
+
+
+
+
+// ------------------------- END GAME-HOCKEY
