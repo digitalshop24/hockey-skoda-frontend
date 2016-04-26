@@ -10,8 +10,8 @@ export default angular.module('dashboard.teodor', [])
         $stateProvider
             .state('dashboard.teodor', {
                 meta: {
-                    title: 'Личные странички соцсетей любимых хоккеистов',
-                    description: 'Следите за своими любимыми игроками не только на новостных порталах, но и в соцсетях. Узнавайте новое «из первых рук»!'
+                    title: 'Выиграй поездку на финал чемпионата мира по хоккею',
+                    description: 'Skoda Hockey 2016'
                 },
                 template: require('./template.html'),
                 url: '/teodor',
