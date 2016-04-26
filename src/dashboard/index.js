@@ -48,7 +48,7 @@ import rights from './rights/index';
 import share from './share/index';
 import regulations from './regulations/index';
 import teodor from './teodor/index';
-
+import flashGame from './flash-game/index';
 
 
 
@@ -94,7 +94,8 @@ export default angular.module('dashboard',
         share.name,
         regulations.name,
         passwordStrength.name,
-        teodor.name
+        teodor.name,
+        flashGame.name
     ])
     .service('login', Login)
     .service('modal', Modal)

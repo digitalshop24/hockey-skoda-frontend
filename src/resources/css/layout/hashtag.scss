@@ -1,0 +1,12 @@
+.hashtag{
+  display: inline-block;
+  img{
+    display: inline;
+  }
+  .btn{
+    color: $green_main;
+    margin-left:10px;
+    text-transform: uppercase;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,28 @@
+.ball{
+  font-weight: 900;
+  line-height: 24px;
+  display: inline-block;
+  padding:0;
+  font-size:20px;
+  span{
+    margin:0 5px;
+    display: inline-block;
+  }
+  img:first-child{
+    float:left;
+  }
+  img:last-child{
+    float:right;
+  }
+  &_plus{
+    color: $green_main;
+  }
+}
+
+
+.plus_ball {
+    color: $green_main;
+    font-weight:bold;
+    font-size: 2rem;
+    padding-left: 10px;
+}
