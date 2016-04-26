@@ -19,7 +19,7 @@ export default angular.module('dashboard.teodor', [])
                 controllerAs: 'ctrl',
                 params: {
                     page: 1,
-                    daysAmount: 1,
+                    daysAmount: 3,
                     hashtag: '#хоккейвкаждом,#этомояигра'
                 },
                 resolve: {
