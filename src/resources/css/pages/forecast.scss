@@ -222,6 +222,15 @@
     top:60px;
   &-item {
     margin-bottom:110px;
+    &-bl {
+        position: absolute;
+        right: 0px;
+        top: 223px;
+        width: 170px;
+        .bl-text {
+          display: inline-block;
+      }
+    }
     &:after {
       position: absolute;
       height: 150px;
@@ -250,7 +259,16 @@
     top:211px;
   &-item {
     margin-bottom:104px;
-
+    &-bl {
+        position: absolute;
+        right: 0px;
+        top: 149px;
+        width: 170px;
+        text-align: left;
+        .bl-text {
+          display: inline-block;
+      }
+    }
     &:after {
       display:none;
     }
