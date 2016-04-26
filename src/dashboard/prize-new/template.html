@@ -4,7 +4,7 @@
 
             <slick infinite="true" slides-to-show="4" slides-to-scroll="1" arrows="false" dots="false"
                    focusOnSelect="true"
-                   class="second_slider_priz text-center" as-nav-for=".main_slider_priz" swipe="true"
+                   class="second_slider_priz text-center" swipe="true"
                    responsive="ctrl.responsive">
 
                 <div class="itep_priz" ng-click="ctrl.changeSponsor(sponsor)" ng-repeat="sponsor in ctrl.sponsors"
@@ -47,7 +47,7 @@
             </section>
 
             <slick current-index="ctrl.currentSponsorIndex" on-after-change="ctrl.changeSponsor()" slides-to-show=1
-                   slides-to-scroll=1 arrows=true class="text-center main_slider_priz" as-nav-for=".second_slider_priz">
+                   slides-to-scroll=1 arrows=true class="text-center main_slider_priz">
                 <div ng-repeat="sponsor in ctrl.sponsors"><h6 ng-bind="sponsor.name"></h6></div>
             </slick>
 
@@ -71,7 +71,7 @@
                         <li></li>
                     </ul>
                     <button class="btn btn_primary tiny" ng-disabled="false"
-                            ui-sref="{{ctrl.currentSponsor.id == 2 ? 'dashboard.game.sectors' : 'dashboard.game.sectors'}}">
+                            ui-sref="{{ctrl.currentSponsor.id == 2 ? 'dashboard.teodor' : 'dashboard.game.sectors'}}">
                         Участвовать!
                     </button>
                     <!--  <button class="btn btn_primary tiny" ng-disabled="false" ui-sref="{{ctrl.currentSponsor.id == 2 ? 'dashboard.teodor' : 'dashboard.game.sectors'}}">Участвовать!</button> -->

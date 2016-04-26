@@ -1,0 +1,335 @@
+.forum-test{
+  margin:10px 0 0;
+  &-start{
+    background:url("img/resources/img/forum/test-start-bg.jpg") bottom center repeat-x;
+    background-size:cover;
+    color:#fff;
+    text-align: center;
+    min-height:330px;
+    padding:20px 0;
+    &--header{
+      display: inline-block;
+      font-size:18px;
+      line-height: 24px;
+      span{
+        color:$green_main;
+        margin:0 5px 0 10px;
+        font-weight: 900;
+        font-size: 20px;
+      }
+      img{
+        float:right;
+      }
+    }
+    &--question{
+      font-size:48px;
+      line-height: 120%;
+      font-weight: 900;
+      margin:15px 0;
+      text-transform: uppercase;
+    }
+    &--desc{
+      font-size:14px;
+      line-height: 120%;
+      font-weight: normal;
+      margin-bottom:25px;
+    }
+  }
+  &-questions{
+    text-align: center;
+    background:#fff;
+    color:$black;
+    padding:15px 0 25px;
+    &--header{
+      font-size: 24px;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 120%;
+      margin:25px 0;
+    }
+    &--content{
+      display: inline-block;
+      max-width:650px;
+      width:100%;
+    }
+    &--stage{
+      font-size:18px;
+      line-height: 120%;
+      margin-bottom:10px;
+    }
+    &--img{
+      margin:10px 0 20px;
+      img{
+        display: block;
+        width:100%;
+        height:auto;
+      }
+      p{
+        color:$grey_text;
+        font-size:12px;
+        margin:7px 0;
+      }
+    }
+    &--text{
+      font-size:18px;
+      line-height: 120%;
+      text-align: left;
+      margin:20px 0;
+    }
+    .btn{
+      margin:20px 0;
+    }
+  }
+  &-answers{
+    text-align: left;
+    font-size:18px;
+    font-weight: bold;
+    line-height: 120%;
+    padding:20px 0;
+    border-bottom:1px solid $grey_lite;
+    margin-bottom:20px;
+    li{
+      margin:15px 0;
+    }
+    .radio-label{
+      padding-top:1px;
+      display: inline-block;
+      &_green{
+        span{
+          font-weight: 900;
+          font-size:20px;
+          margin:0 5px 0 15px;
+          display: inline-block;
+          position: relative;
+          bottom:-2px;
+        }
+        img{
+          float: right;
+        }
+      }
+    }
+  }
+  &-result{
+    background:url("img/resources/img/forum/test-result-bg.jpg") top center repeat-x;
+    background-size:cover;
+    min-height:596px;
+    text-align: center;
+    color:$white;
+    padding:20px 0;
+    &--content{
+      display: inline-block;
+      width:100%;
+      max-width:383px;
+      background: $white;
+      color:$black;
+      margin:20px 0;
+      padding:15px 15px 40px;
+      p{
+        margin:20px 0;
+        font-size: 18px;
+        line-height: 180%;
+        .balls{
+          color:$green_main;
+          font-weight: 900;
+          font-size:20px;
+          margin:0 5px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.add_topic {
+  background-color: #efefef;
+  .textEdit {
+    padding: 0 10px;
+    margin-top: 50px;
+    .input_small {
+      width: 30%
+    }
+  }
+  button {
+    margin: 40px 10px;
+  }
+  p {
+    display: inline-block;
+    color: #757575;
+    position: relative;
+    top: 10px;
+    font-size: $p_size;
+    padding-bottom: 20px;
+    a {
+      color: $black;
+    }
+  }
+}
+.topics {
+  margin-top: 40px;
+  .post_hover:hover {
+    background-color:#f8f8f8;
+  }
+  .menu_border_bottom {
+    border-bottom: 1px solid $grey;
+  }
+  .pagination-sm > li:first-child > a, .pagination-sm > li:first-child > span {
+    color: $green_main !important;
+  }
+  .pagination-sm > li > a, .pagination-sm > li > span {
+    color: $green_main !important;
+  }
+  .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: $green_main !important;
+    border-color: $green_main !important;
+    color: #fff !important;
+  }
+  .wrapp_filt {
+     padding: 20px 20px 40px 20px;
+
+    ul{
+      li {
+        display: inline-block;
+        font-size: $p_size;
+        margin-left: 20px;
+        font-weight:bold;
+        a {
+          color: $grey;
+        }
+        .active {
+          color:$black;
+        }
+      }
+
+    }
+  }
+  .wrapp_topic {
+    // float: left;
+    padding: 20px 0 20px 35px;
+    width: 100%;
+    .count_m {
+      color: $green_main;
+    }
+    .hot_them {
+      color:#fc8a21;
+      img {
+        position: relative;
+        top: -3px;
+        margin-right: 5px;
+      }
+    }
+    .textEdit {
+      margin: 0 auto;
+      button {
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+    h4 {
+      font-weight:bold;
+      margin-bottom: 20px;
+    }
+    p {
+      color: $grey;
+      span {
+        color: $black;
+      }
+    }
+    ul {
+      margin-top: 20px;
+      display: inline-block;
+      margin-left: 20px;
+      li {
+        margin-bottom: 10px;
+        font-size: $p_size;
+        font-weight:bold;
+        display: inline-block;
+        margin-right: 10px;
+        width: 100%;
+        span {
+          width: 80%;
+
+        }
+        ul {
+          float: right;
+          margin-top: 0;
+          display: inline-block;
+          width: 19%;
+          text-align: right;
+          padding-right: 10px;
+          li {
+            display: inline-block;
+            margin-bottom: 0px;
+            width: 1px;
+            img {
+              position: relative;
+              left: -5px;
+            }
+            a {
+              font-weight:300;
+            }
+
+          }
+        }
+      }
+      li:nth-child(1) {
+        color: $grey;
+      }
+    }
+  }
+  .wrapp_topic_page, .wrapp_static_page {
+    margin-bottom: 50px;
+  }
+  .wrapp_col {
+      // float: right;
+      padding-top: 27px;
+      ul {
+        li {
+          display: inline-block;
+        }
+      }
+  }
+  .wrapp_static {
+    text-align: right;
+    margin-top: 10px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+    ul {
+      li {
+        display: inline-block;
+        font-size: 3rem;
+        color: $black;
+        text-align: center;
+        margin-left: 30px;
+        p {
+          color: $grey;
+          font-size: $p_size;
+        }
+      }
+    }
+  }
+  .load_more {
+    margin: 40px 0;
+  }
+}
+.wrapp_forum-topic {
+  padding:35px 0;
+  background:#efefef;
+  .main {
+    color:$white;
+    font-weight:bold;
+    width:170px;
+    height:48px;
+  }
+  .forum-block {
+    width:320px;
+    display:inline-block;
+    margin-left:15px;
+    p {
+      font-size: 1.3rem;
+      color:#757575;
+      line-height:1.5rem;
+      position:relative;
+      top:7px;
+    }
+  }
+}

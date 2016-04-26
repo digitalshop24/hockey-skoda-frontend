@@ -1,0 +1,155 @@
+.teodor {
+  width:100%;
+  min-height: 638px;
+  background:url(img/resources/img/teodor/bg-teodor.jpg) no-repeat center center;
+  background-size:cover;
+  position:relative;
+  &-tittle {
+    min-width:320px;
+    max-width:700px;
+    padding:50px 40px 30px;
+    position:relative;
+    &:before {
+      position:absolute;
+      left:0px;
+      top:47%;
+      content:'\201d';
+      font-size:3.5rem;
+      font-weight: 900;
+      color:#37aa35;
+    }
+    &:after {
+      position:absolute;
+      right:0px;
+      top:47%;
+      content:'\201e';
+      font-size:3.5rem;
+      font-weight: 900;
+      color:#37aa35;
+    }
+    h3 {
+      font-weight:300;
+      font-size:2rem;
+      color:#fff;
+      text-align:center;
+      line-height: 18px;
+      margin-bottom:10px;
+    }
+    h4 {
+      font-weight: 900;
+      font-size:3.5rem;
+      color:#37aa35;
+      text-align:center;
+      line-height: 38px;
+      text-transform: uppercase;
+      margin-bottom:20px;
+    }
+    h5 {
+      font-weight:normal;
+      font-size:2rem;
+      color:#fff;
+      text-align:center;
+      line-height: 28px;
+      margin-bottom:30px;
+    }
+    p {
+      font-weight:300;
+      font-style:italic;
+      font-size:1.7rem;
+      color:#fff;
+      text-align:center;
+      line-height: 22px;
+    }
+  }
+  &-phone {
+    width:390px;
+    height: 390px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.4);
+    margin-left:40px;
+    position:relative;
+    &-img {
+      width:154px;
+      height: 312px;
+      position:absolute;
+      left:0px;
+      top:40px;
+      background:url(img/resources/img/teodor/phone-img.png) no-repeat center center;
+    }
+    &-text {
+      width:178px;
+      position:absolute;
+      right:35px;
+      top:55px;
+      h2 {
+        font-size:4rem;
+        font-weight: 900;
+        color:#fff;
+        margin-bottom:20px;
+        line-height:35px;
+      }
+      p {
+        font-size:1.7rem;
+        font-weight:normal;
+        color:#000;
+        margin-bottom:40px;
+        line-height: 16px;
+      }
+      a {
+        width:135px;
+        height:41px;
+        display: block;
+        margin-bottom:15px;
+
+      }
+      .appstorn {
+        background:url(img/resources/img/teodor/app-storn.png) no-repeat center center;
+      }
+      .googleplay {
+        background:url(img/resources/img/teodor/google-play.png) no-repeat center center;
+      }
+    }
+  }
+  &-sokial {
+    padding-left:40px;
+    min-width:320px;
+    max-width:700px;
+    text-align:center;
+  }
+  .bot-text {
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    color:#000;
+    font-size:1.2rem;
+    font-weight:300;
+  }
+}
+
+img.taggs {
+  display: inline;
+}
+
+.prizes-teodor {
+  padding-top:0px;
+}
+
+
+
+.factSection-teodor {
+  margin-left:0px;
+  background:#fff;
+
+}
+
+.factSection-teodor .fact-two-block:hover .fact-two-block-hov {
+  background:#ccc;
+}
+
+
+.toggle-teodor ul li .on {
+  margin-top:43.5px;
+}
+.toggle-teodor ul li .off {
+  margin-top:44px !important;
+}

@@ -1,0 +1,178 @@
+.wrapp_blog_all {
+  min-height: 100vh;
+  .menu_line {
+      // position: absolute;
+      position: fixed;
+      top: -70px;
+      background-color: $black;
+      display: inline-block;
+      height:  120vh;
+      width: 100px;
+      ul {
+        margin-top: 40vh;
+        li {
+          margin-bottom: 30px;
+          img {
+            margin: 0 auto;
+          }
+          p {
+            color: $white;
+            font-size: $p_size;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+            top: 90px;
+            font-weight: 900;
+          }
+
+          .active_p {
+            color: $green_main;
+          }
+        }
+        .general_news_imgbg {
+          background-image: url('img/resources/img/news/ico_menu1_noactive_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .general_news_imgbg:hover {
+          background-image: url('img/resources/img/news/ico_menu1_active_notext.png');
+          p {
+            color: $green_main;
+          }
+        }
+        .facts_imgbg {
+          background-image: url('img/resources/img/news/ico_menu2_noactive_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .facts_imgbg:hover {
+          background-image: url('img/resources/img/news/ico_menu2_active_notext.png');
+           p {
+            color: $green_main;
+          }
+        }
+        .blog_imgbg {
+          background-image: url('img/resources/img/news/ico_menu3_active_notext.png');
+          background-size: auto;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          background-repeat: no-repeat;
+        }
+        .blog_imgbg:hover {
+          background-image: url('img/resources/img/news/ico_menu3_active_notext.png');
+           p {
+            color: $green_main;
+          }
+        }
+      }
+   }
+  .wrapp_blog_contant {
+    margin-left: 100px ;
+    background-color: #f1f1f1;
+    padding: 20px 40px;
+      .tag_post {
+        border-bottom: 1px solid $grey;
+        padding-bottom: 10px;
+        li {
+          margin: 5px 15px 5px 0;
+          padding: 5px 10px;
+          background-color: $white;
+          display: inline-block;
+          p {
+            text-transform: uppercase;
+            font-weight:bold;
+            font-size: $p_size - 0.2rem;
+            color: $green_main;
+            cursor: pointer;
+            span {
+              color: $grey;
+              margin-left: 10px;
+            }
+            a{
+              color: $green_main;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    .wrapp_blog_posts {
+      padding-top: 30px;
+      min-height: 650px;
+      .blog_post {
+        background-color: $white;
+
+        li{
+          display:inline-block;
+          width: 100%;
+          h3 {
+            font-size: 2.5rem;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-weight: normal;
+          }
+        }
+        /*li:nth-child(1) {
+          width: 30%;
+          float: left;
+          margin-top: 20px;
+          img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+          }
+        }*/
+        li:nth-child(1) {
+          width: 100%;
+          margin-top: 20px;
+          p {
+            font-size: $p_size + 0.3rem;;
+          }
+          .prof {
+            text-transform: uppercase;
+            font-size: $p_size - 0.1rem;
+          }
+        }
+        li:nth-child(2) {
+          margin-top: 25px;
+          padding-left: 30px;
+          h3 {
+            color: $green_main;
+          }
+        }
+        li:nth-child(3) {
+          margin-top: 25px;
+          padding-left: 30px;
+          p {
+            font-size: $p_size;
+            color: $grey;
+          }
+        }
+        li:nth-child(4) {
+          margin-top: 20px;
+          padding-left: 30px;
+          p{
+            font-size: $p_size - 0.1rem;
+          }
+        }
+        li:nth-child(5) {
+          margin-top: 20px;
+          img {
+            width: 100%;
+            margin: 0 auto;
+          }
+        }
+
+      }
+
+    }
+  }
+}

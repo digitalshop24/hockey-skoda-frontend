@@ -20,7 +20,7 @@ export default angular.module('dashboard.teodor', [])
                 params: {
                     page: 1,
                     daysAmount: 1,
-                    hashtag: '#хоккейвкаждом'
+                    hashtag: '#хоккейвкаждом #этомояигра'
                 },
                 resolve: {
                     posts: (teodorService, $stateParams) => {

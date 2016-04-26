@@ -1,0 +1,339 @@
+.prizes_use_date {
+ background:#ececec;
+ padding-left:47px;
+  .user_info {
+    p {
+      font-size: $p_size;
+      color: $black;
+      padding-top: 150px;
+      a {
+        font-weight:bold;
+      }
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-top: 50px;
+      float: left;
+      margin-right: 20px;
+    }
+    h5 {
+      color: $green_main;
+      margin-top: 60px;
+      font-weight:bold;
+    }
+    h6 {
+      color: $green_main;
+    }
+    h3 {
+      font-weight:bold;
+      color: $black;
+      padding: 10px 0;
+
+    }
+    .user-right {
+      width:430px;
+      float:right;
+      padding-top:82px;
+    }
+    .img {
+      float:left;
+      margin-right:25px;
+    }
+    .text-user {
+      float:left;
+    }
+  }
+  .text_titel {
+    padding-top: 50px;
+    // padding-bottom:50px;
+    h3 {
+      color: $green_main;
+      text-transform: uppercase;
+      font-weight: 900;
+      min-height: 90px;
+    }
+    p {
+      padding-top: 10px;
+      font-size: $p_size;
+      min-height: 250px;
+    }
+  }
+}
+
+.slider_prizes {
+  padding-top: 10px;
+  .slick-list {
+    overflow: inherit;
+  }
+  .how {
+    background-color: $black;
+    h6 {
+      color: $green_main;
+      padding: 80px 40px 40px 40px;
+      font-weight:bold;
+    }
+    p {
+      font-size: $p_size+0.1rem;
+      color: $white;
+      padding: 0 40px 80px 40px;
+    }
+    .pravil {
+      color: $red;
+      padding-left:20px;
+      cursor: pointer;
+      color: #4ba82e;
+    }
+    .desc {
+      color: $grey;
+      font-size: $p_size -0.1rem;
+    }
+  }
+  .main_slider_priz {
+    display: none;
+    .slick-slide  {
+      background-color: $grey;
+      padding-top: 35px;
+      height: 90px;
+    }
+     .slick-next {
+          background: rgba(0,0,0,1) url("img/resources/img/arrow_right_white.png") no-repeat 100% center;
+          right: 0px;
+          width: 40px;
+          height: 90px;
+          top: 10px;
+        }
+        .slick-prev {
+          background: rgba(0,0,0,1) url("img/resources/img/arrow_left_white.png") no-repeat 0% center;
+          left: 0px;
+          width: 40px;
+          height: 90px;
+          top: 10px;
+        }
+  }
+  .second_slider_priz {
+    margin-bottom: 0px;
+
+    .slick-center {
+      div {
+        background-color: rgba(75, 168, 46, 0.8) !important;
+        height: 150px;
+      }
+    }
+    .itep_priz {
+      height: 202px;
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0 0px;
+      position:relative;
+      cursor: pointer;
+      &::after {
+        position:absolute;
+        bottom:-3px;
+        left:0px;
+        content:'';
+        height: 3px;
+        width:100%;
+        transition: background 1000ms linear;
+        background:rgba(255,255,255,0);
+      }
+      &::before {
+        position:absolute;
+        bottom:-16px;
+        left:50%;
+        margin-left:-13px;
+        content:'';
+        height: 0px;
+        width:0px;
+      }
+      &:hover::after {
+        position:absolute;
+        bottom:-3px;
+        left:0px;
+        content:'';
+        height: 3px;
+        width:100%;
+        transition: background 1000ms linear;
+        background:#4ba82e;
+      }
+      &:hover::before {
+        position:absolute;
+        bottom:-16px;
+        left:50%;
+        margin-left:-13px;
+        content:'';
+        height: 13px;
+        width:27px;
+        background-image: url("img/resources/img/icon-treug.png") ;
+      }
+      div {
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 150px;
+      }
+      p {
+        color: $white;
+        padding-top: 60px;
+        font-size: $p_size + .2rem;
+      }
+    }
+
+  }
+  button {
+    position: absolute;
+    // right: 20%;
+    top: 210px;
+  }
+  .btn {
+      background:#4ba82e;
+      opacity: 1;
+      &:hover {
+        background:#409129;
+        opacity: 1;
+      }
+    }
+    .btn[disabled] {
+      background:#d9d9d9;
+    }
+  .info_priz {
+    li {
+      padding-top:2px;
+      padding-bottom: 2px;
+    }
+    li:nth-child(1) {
+      color: $grey;
+      span {
+        color: $black;
+        font-weight:bold;
+      }
+    }
+    li:nth-child(2) {
+      text-transform: uppercase;
+      color: $green_main;
+      font-weight: 900;
+      font-size: 2.4rem;
+      line-height: 29px;
+    }
+    li:nth-child(3) {
+      font-size: $p_size;
+      line-height: 16px;
+    }
+    li:nth-child(4) {
+      font-weight: 900;
+      font-size: 4rem;
+    }
+    li:nth-child(5) {
+      position: relative;
+      top: -16px;
+    }
+
+  }
+
+  .page_prizs_priz {
+    padding-top: 50px;
+    padding-bottom:25px;
+    .slick-slide img {
+        width: 250px;
+        margin: 0 auto;
+    }
+    .col-md-3 {
+      height: 300px;
+    }
+    .slick-dots {
+      li {
+        width: 10px;
+        height: 10px;
+        background-color: $grey;
+        border-radius: 50%;
+      }
+      .slick-active {
+        background-color: $green_main;
+      }
+    }
+  }
+}
+.all-prizes{
+  border-top:1px solid $grey_lite;
+  background:$white;
+  padding:15px 0;
+  &-header{
+    text-align: center;
+    color:#010101;
+    font-weight: 900;
+    font-size:36px;
+    text-transform: uppercase;
+    margin:15px 0;
+  }
+  &-slider{
+    overflow: hidden;
+    padding:20px 60px;
+    margin-bottom:0;
+    position: relative;
+    .slick-prev,
+    .slick-next{
+      z-index:5;
+      top:50%;
+      width:21px;
+      height:38px;
+      margin-top:-19px;
+    }
+    .slick-prev{
+      left:15px;
+      background:url('img/resources/img/arrow_left_strong.png');
+    }
+    .slick-next{
+      right:15px;
+      background:url('img/resources/img/arrow_right_strong.png')
+    }
+  }
+  .item{
+    text-align: center;
+    z-index: 1;
+    position: relative;
+  }
+  &-item{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    height:290px;
+    padding:0 20px;
+    line-height:290px;
+    img{
+      max-width:100%;
+      height:auto;
+      display: inline-block;
+      margin-bottom:-3px;
+      max-height:100%;
+      vertical-align: middle;
+    }
+    &--watch{
+      position: absolute;
+      width:175px;
+      height:175px;
+      background:rgba(236,236,236,0.91);
+      border-radius:50%;
+      display: inline-block;
+      text-align: center;
+      line-height: 175px;
+      left:50%;
+      top:50%;
+      margin:-87px 0 0 -87px;
+      opacity:0;
+      transition:opacity .3s ease;
+      .btn{
+        background:#fff;
+        line-height: 40px;
+        &:hover{
+          background:#000;
+        }
+      }
+    }
+    &:hover{
+      .all-prizes-item--watch{
+        opacity:1;
+      }
+    }
+  }
+
+}

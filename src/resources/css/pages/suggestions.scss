@@ -1,0 +1,253 @@
+// <!-- baner -->
+ .wrapp_baner__suggestions {
+  .baner__suggestions {
+    width:100%;
+    position:relative;
+    max-height:399px;
+    overflow:hidden;
+    img {
+      width:100%;
+    }
+    .absolute {
+      position:absolute;
+      bottom:0px;
+    }
+    h2 {
+      color:$white;
+      position: absolute;
+      bottom: 45px;
+      font-weight: bold;
+      font-size: 5rem;
+      left: 119px;
+    }
+  }
+ }
+
+// <!--end baner -->
+
+// <!-- jobs -->
+ .wrapp_jobs {
+  padding:20px 0;
+  p{
+    margin:15px;
+    font-size:20px;
+    color:$black;
+    line-height: 120%;
+    font-weight: normal;
+  }
+  .jobs_block {
+    text-align:center;
+    &_item {
+      display:inline-block;
+      position:relative;
+      width:210px;
+      text-align:center;
+      margin-right:227px;
+      .number {
+        font-size:5rem;
+        font-weight: 300;
+        color:$green_main;
+        line-height:7rem;
+      }
+      .text {
+        font-size: 1.4rem;
+        color:$black;
+        font-weight:bold;
+        text-transform: uppercase;
+      }
+      &:after {
+        position:absolute;
+        right:-104px;
+        top:25px;
+        width:24px;
+        height:46px;
+        content:"";
+        background:url("img/resources/img/icon_arrow_right.png") no-repeat center center;
+      }
+      &:nth-child(1) {
+        margin-right: 127px;
+        &:after {
+          right:-70px;
+        }
+      }
+      &:nth-child(3) {
+        margin-right:0px;
+        width:290px;
+        &:after {
+          display:none;
+        }
+      }
+    }
+  }
+ }
+// <!--end jobs -->
+
+// <!-- form_suggestions -->
+ .wrapp_form_suggestions {
+  margin-bottom:15px;
+  &_slider {
+    height:888px;
+    position:relative;
+    .draggable {
+      padding:0px !important;
+    }
+    .slider-for {
+      float:left;
+      width:71%;
+      height:100%;
+      background-color:#211f20;
+      img {
+        width:100%;
+      }
+    }
+    .slider-nav-center {
+      width:29%;
+      float:right;
+      height:100%;
+      background-color:#424242;
+      position:relative;
+    }
+    .slider-nav {
+      width:300px;
+      height:725px;
+      position:absolute;
+      top:0px;
+      bottom:0px;
+      left:0px;
+      right:0px;
+      margin:auto;
+      .item {
+        margin-bottom:20px;
+      }
+
+    }
+    .slick-arrow {
+      width:46px;
+      height:24px;
+      border:none;
+      font-size:0px;
+      position:relative;
+      left:50%;
+      margin-left:-23px;
+      z-index: 2;
+      background:url("img/resources/img/icon-arrow_top.png") no-repeat center center;
+    }
+    .slick-prev {
+      top:-35px;
+      background:url("img/resources/img/icon-arrow_top.png") no-repeat center center;
+   }
+    .slick-next {
+      bottom:-35px;
+      background:url("img/resources/img/icon-arrow-bottom.png") no-repeat center center;
+
+    }
+    .from_block {
+      position:absolute;
+      z-index: 2;
+      top:50px;
+      left:40px;
+      .input_small {
+        width:338px;
+        margin-bottom:15px;
+        display:block;
+      }
+      span {
+        margin-bottom:45px;
+        color:$white;
+        font-size:1.2rem;
+        font-weight:300;
+        display:block;
+      }
+      .tiny {
+        width:338px;
+      }
+      textarea {
+        width:338px;
+        height:138px;
+      }
+    }
+  }
+ }
+// <!--end form_suggestions -->
+
+.wrapp_form_suggestions_slider{
+  overflow: hidden;
+  .slick-prev,
+  .slick-next{
+    left:50%;
+    margin-left:-23px;
+    width:46px;
+    height:24px;
+  }
+  .slick-prev{
+    top:-25px;
+  }
+  .slick-next{
+    top:100%;
+    margin-top:30px;
+  }
+  // .item{
+  //  height:200px;
+  //  overflow: hidden;
+  //  padding:20px 0;
+  //  margin-bottom:0 !important;
+  //  img{
+  //    width:100%;
+  //    max-height:200%;
+  //  }
+  // }
+}
+.suggestions-slider > .slick-list{
+  // height:700px !important;
+}
+.suggestions-slider{
+  &.slider-nav{
+    position:relative;
+    height:auto;
+    margin-top:70px;
+    .item{
+      margin:0;
+    }
+
+  }
+  .item{
+    overflow: hidden;
+    height:240px;
+    padding:20px 0;
+    img{
+      width:100%;
+      max-height:120%;
+    }
+  }
+}
+.card-result{
+  text-align:center;
+  min-width:830px;
+  min-height:880px;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  overflow: hidden;
+  margin:20px;
+  display: none;
+  position: fixed;
+  top:100%;
+  left:0;
+}
+.select-img{
+
+}
+.card-canvas{
+
+}
+
+.quote{
+  font-family: Arial;
+  font-weight:bold;
+  font-size:60px;
+}
+.text{
+  font-size:22px;
+  font-style: italic;
+  line-height:24px;
+}
