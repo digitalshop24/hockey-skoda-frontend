@@ -1,6 +1,11 @@
 .junior {
   padding-top:70px;
   padding-bottom:70px;
+  .titel_news {
+    font-weight: bold;
+    padding: 10px 0;
+    text-transform: uppercase;
+  }
   .text_block {
     h2 {
       text-transform: uppercase;
@@ -12,6 +17,7 @@
     }
     p {
       font-size: 1.4rem;
+      padding: 30px 0;
     }
   }
   &-content {

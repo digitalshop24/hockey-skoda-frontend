@@ -32,8 +32,10 @@ export default class TeodorCtrl {
         if (this.busy) return;
         this.busy = true;
         this.socialService.getPosts(++this.page, this.daysAmount, this.hashtag).then(posts => {
-            this.handlePosts(posts);
-            this.busy = false;
+            if(posts && posts.length) {
+                this.handlePosts(posts);
+                this.busy = false;
+            }
         });
     }
 
