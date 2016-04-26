@@ -1,13 +1,13 @@
 'use strict';
 
 export default class TeodorCtrl {
-    constructor(posts, $scope, $localStorage, socialService, page, daysAmount, hashtag, sponsors) {
+    constructor(posts, $scope, $localStorage, teodorService, page, daysAmount, hashtag, sponsors) {
         this.busy = false;
         this.hashtag = hashtag;
         this.page = page;
         this.daysAmount = daysAmount;
         this.days = [];
-        this.socialService = socialService;
+        this.teodorService = teodorService;
         this.events = posts;
         this.localStorage = $localStorage;
         this.handlePosts(this.events);
@@ -31,7 +31,7 @@ export default class TeodorCtrl {
     loadMore() {
         if (this.busy) return;
         this.busy = true;
-        this.socialService.getPosts(++this.page, this.daysAmount, this.hashtag).then(posts => {
+        this.teodorService.getPosts(++this.page, this.daysAmount, this.hashtag).then(posts => {
             if(posts && posts.length) {
                 this.handlePosts(posts);
                 this.busy = false;
