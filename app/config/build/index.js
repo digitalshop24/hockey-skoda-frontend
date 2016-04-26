@@ -40,7 +40,7 @@ module.exports = {
     },
     styles: [
         {
-            src: styles.src,
+            src: styles.srcFile,
             srcFile : styles.srcFile,
             dest: styles.dest,
             publicPath: publicPath
