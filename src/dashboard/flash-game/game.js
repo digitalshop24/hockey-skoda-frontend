@@ -1,10 +1,12 @@
 'use strict';
 import angular from "angular";
 
-export default angular.module('dashboard.game-init', [])
+export default angular.module('dashboard.flash-game.game-init', [])
     .directive('gameInit', function ($rootScope) {
         return {
             link: function () {
+              angular.element(document).ready(function () {
+alert('gamesdssds!');
 
 function tu_detect_audio(_type) {
   var _au = document.createElement('audio');
@@ -3187,6 +3189,7 @@ tu_gameloop = tu_loop;
 tu_loop();
 
 
+});
             }
         }
     });

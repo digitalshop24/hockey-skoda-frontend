@@ -1,8 +1,8 @@
 'use strict';
 
 
-export default class TantamareskaCtrl {
-    constructor($scope, flashService) {
+export default class FlashGameCtrl {
+    constructor($scope, flashGameService) {
 
     }
 }
