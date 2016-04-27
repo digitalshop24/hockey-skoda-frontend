@@ -37,10 +37,10 @@
                 <p class="littel_date" ng-bind="ctrl.championatNews[0].published_at | amDateFormat:'DD MMMM'"></p>
                 <div class="img-block-br" ng-show="ctrl.rubric.api_path == 'stars'">
                     <div class="img-block" ng-repeat="lastNews in ctrl.championatNews | filter:{name:ctrl.search}">
-                        <a href="#">
+                        <a href="#" ui-sref="dashboard.newspage({id:lastNews.id, rubric:lastNews.rubric.api_path})">
                             <img src="{{lastNews.image.small}}" alt="">
                             <div class="img-block-text">
-                                <h2 ui-sref="dashboard.newspage({id:lastNews.id, rubric:lastNews.rubric.api_path})" ng-bind="lastNews.name">Анатолий Фирсов</h2>
+                                <h2 ng-bind="lastNews.name">Анатолий Фирсов</h2>
                                 <span ng-bind="lastNews.short_content">1941-2000</span>
                             </div>
                         </a>
