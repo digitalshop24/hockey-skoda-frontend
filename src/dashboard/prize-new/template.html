@@ -8,7 +8,8 @@
                    responsive="ctrl.responsive">
 
                 <div class="itep_priz" ng-click="ctrl.changeSponsor(sponsor)" ng-repeat="sponsor in ctrl.sponsors"
-                     style="background-image: url({{sponsor.image.small}})">
+                     >
+                     <img src="{{sponsor.image.small}}" alt="">
                 </div>
 
             </slick>
