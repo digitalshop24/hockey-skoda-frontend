@@ -64,6 +64,13 @@
 
 .slider_prizes {
   padding-top: 10px;
+  .second_slider_priz {
+    .itep_priz {
+      img {
+        width:100%;
+      }
+    }
+  }
   .slick-list {
     overflow: inherit;
   }
@@ -122,7 +129,7 @@
       }
     }
     .itep_priz {
-      height: 202px;
+      height: auto;
       background-position: 0 0;
       background-size: cover;
       background-repeat: no-repeat;
