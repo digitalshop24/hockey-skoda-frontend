@@ -5,7 +5,9 @@ import FlashGameCtrl from './controller.js';
 import FlashGameService from './service.js';
 import game from './game.js';
 
-export default angular.module('dashboard.flash-game', [])
+export default angular.module('dashboard.flash-game', [
+    game.name
+])
     .service('flashGameService', FlashGameService)
     .config(function ($stateProvider) {
         $stateProvider
