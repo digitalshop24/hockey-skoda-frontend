@@ -1,3 +1,4 @@
+
 <section class="slider_prizes">
     <div class="container-fluid">
         <div class="row">
@@ -21,6 +22,7 @@
                             <h3 ng-bind="ctrl.currentSponsor.name">Призы от <br> Škoda hockey</h3>
 
                             <p ng-bind-html="ctrl.currentSponsor.description"></p>
+                            <button ng-show="ctrl.currentSponsor.id == '15'" class="btn btn_primary small" style="position: static; margin-bottom: 15px;" ng-click="$state.go('dashboard.pogruzhenie')">Места проведения</button>
                         </div>
                         <div class="col-md-5  text-left user_info">
                             <p ng-show="!ctrl.session.isAuthenticated">Чтобы участвовать в розигрышах призов, необходимо
