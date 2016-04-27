@@ -8,7 +8,10 @@
     border: none;
     li {
       border:none;
-    }
+    } 
+  }
+  .btn-default[role="heading"] {
+    display: none;
   }
 }
 
