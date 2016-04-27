@@ -8,7 +8,17 @@
     border: none;
     li {
       border:none;
-    }
+    } 
+  }
+  .btn-default[role="heading"] {
+    display: none;
+  }
+  .title_m {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .title_m:first-letter {
+    text-transform: uppercase;
   }
 }
 
