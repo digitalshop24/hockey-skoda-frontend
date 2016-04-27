@@ -2,10 +2,11 @@
 
 
 export default class PrizesCtrl {
-    constructor(prizes, cities, tdriveService, prizesService, modal) {
+    constructor(prizes, cities, tdriveService, prizesService, modal, user) {
         this.prizes = prizes;
         this.cities = cities;
         this.modal = modal;
+        this.user = user;
         this.tdriveService = tdriveService;
         this.prizesService = prizesService;
     }
