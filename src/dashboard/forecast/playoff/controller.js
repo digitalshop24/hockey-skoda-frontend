@@ -13,11 +13,11 @@ export default class ForecastCtrl {
     }
 
     changeSelectTeam(match) {
-        this.canSendForecast =  match.blueteam && match.redteam;
+        this.canSendForecast =  (match.blueteam && match.redteam) || match.match_group == "third_winner" || match.match_group == "final_winner";
 
 
         if (this.canSendForecast) {
-            if (match.redteam.id == match.blueteam.id) {
+            if (match.blueteam && match.redteam && match.redteam.id == match.blueteam.id) {
                 match.blueteam = undefined;
                 this.modal.open({
                     resolve: {
@@ -69,9 +69,9 @@ export default class ForecastCtrl {
         for (let matchType in this.forecast) {
             const match = this.forecast[matchType]
             if (!match.disabled && match.can_predict) {
-                if (match.redteam && match.blueteam) {
+                if ((match.redteam && match.blueteam) || ((match.match_group == "third_winner" || match.match_group == "final_winner") && match.redteam)) {
                     match.redteam_id = match.redteam.id;
-                    match.blueteam_id = match.blueteam.id;
+                    match.blueteam_id = match.blueteam ? match.blueteam.id : undefined;
                     predictions.push(match);
                 }
             }
