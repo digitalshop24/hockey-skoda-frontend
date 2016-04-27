@@ -4,7 +4,7 @@
     <a ui-sref="dashboard.game.sectors">Викторина</a>
    <h5>Мои призы</h5>
     <p>Вы выиграли следующие призы! Мы сообщим Вам, когда они будут доставлены в выбранный Вами дилерский центр!</p>
-    <div>
+    <div ng-show="false && !ctrl.user.dealer">
         <form ng-submit="ctrl.saveDealer()" >
             <div class="row">
                 <div class="col-md-4 text-center">
