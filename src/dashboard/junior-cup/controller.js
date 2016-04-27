@@ -2,6 +2,7 @@
 
 
 export default class JuniorCtrl {
-    constructor() {
+    constructor(lastNews) {
+        this.lastNews = lastNews;
     }
 }

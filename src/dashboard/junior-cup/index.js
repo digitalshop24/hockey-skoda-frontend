@@ -12,6 +12,11 @@ export default angular.module('dashboard.junior', [])
                 template: require('./template.html'),
                 url: '/junior',
                 controller: JuniorCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                resolve : {
+                    lastNews: ($stateParams, mainService) => {
+                        return mainService.getLastNews('news', 1, 4, 'content_manager').then(res => res.posts);
+                    }
+                }
             });
     });
