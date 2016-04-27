@@ -27,6 +27,13 @@ export default class TestDriveCtrl {
         };
 
         this.service.sendRequest(data).then(()=> {
+            this.mobilephone = '';
+            this.mobilephone = '';
+            this.lastName = '';
+            this.firstName = '';
+            this.email = '';
+            this.dealer = undefined;
+            this.city = undefined;
             this.modal.open({
                 resolve: {
                     message: () => {
