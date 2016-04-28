@@ -95,7 +95,7 @@
     font-weight: 300;
     height:auto;
   }
-}
+} 
 
 .other_tantam{
   .box{
@@ -334,7 +334,7 @@
     h2 {
       text-transform: uppercase;
       color: $green_main;
-
+      font-weight: 900;
       font-size:48px;
       display: inline-block;
       span {
@@ -357,10 +357,12 @@
       color: $green_main;
       margin-left: 50px;
 
-      font-size:12px;
       display: inline-block;
       position:relative;
       top:-12px;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      font-weight: bold;
     }
     
   }
