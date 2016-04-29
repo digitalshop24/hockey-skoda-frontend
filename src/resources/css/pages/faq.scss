@@ -58,9 +58,36 @@
   }
   table {
     margin:0 0 50px 0;
+    text-align:left;
+      .maintd {
+      font-size:12px;
+      background: $green_main;
+      border:none !important;
+      color:#fff;
+      font-weight:bold;
+    }
+    td {
+      text-align: left;
+      padding-top:11px;
+      border:none;
+    }
+    tr {
+      &:nth-last-child(odd) {
+        background:#ececec;
+      }
+      .bg-1 {
+        background:#cccccc;
+      }
+      .bg-2 {
+        background:#e2e2e2;
+      }
+    }
   }
   span {
     display: block;
+  }
+  .ots {
+    margin-top:25px;
   }
 }
 
