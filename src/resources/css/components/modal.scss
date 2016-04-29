@@ -126,3 +126,45 @@
     margin-bottom:30px;
   }
 }
+
+//modal-photo
+.modal.modal-photo{
+  .modal-dialog{
+    width:100%;
+    max-width:1000px;
+  }
+  .modal-content{
+    padding:0;
+    img{
+      width:1000px;
+      height:auto;
+    }
+  }
+}
+.modal-photo-slider{
+  margin-bottom:0;
+  height:auto;
+  .slick-prev,
+  .slick-next{
+    width:24px;
+    height:47px;
+    background-position: center center;
+    top:50%;
+    margin-top:-23px;
+    left:auto;
+    right:auto;
+  }
+  .slick-prev{
+    background-image: url('img/resources/img/arrow_left_white.png');
+    right:100%;
+    margin-right:20px;
+  }
+  .slick-next{
+    background-image: url('img/resources/img/arrow_right_white.png');
+    left:100%;
+    margin-left:20px;
+  }
+  .item:not(:first-child){
+    display: none;
+  }
+}
