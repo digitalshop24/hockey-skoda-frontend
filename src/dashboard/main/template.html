@@ -333,7 +333,7 @@
                 </a>
             </div>
         </div>
-    </div> 
+    </div>
 </section>
 
 
@@ -373,3 +373,26 @@
     </div>
 
 </section>
+
+<!-- Modal info prize -->
+<div class="modal fade modal-competition" id="modalСompetition" role="dialog" ng-init="ctrl.openModal()">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-competition-wrapper">
+                <div class="modal-competition-img">
+                    <img src="img/resources/img/modal-competition.jpg" alt="">
+                </div>
+                <div class="modal-competition-content">
+                    <h4 class="modal-competition-heading">{{ctrl.compHeader}}</h4>
+                    <p class="modal-competition-text">{{ctrl.compText}}</p>
+                    <br>
+                    <button class="btn btn_primary small" ui-sref="{{ctrl.compButton.link}}" >{{ctrl.compButton.text}}</button>
+                </div>
+            </div>
+            <button type="button" class="close" ng-click="ctrl.close()" data-dismiss="modal"
+                    aria-label="Close"></button>
+        </div>
+
+    </div>
+</div>
