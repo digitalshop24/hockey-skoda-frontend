@@ -136,13 +136,4 @@ export default angular.module('app',
         $rootScope.$on('$stateChangeError', () => {
             NProgress.done();
         });
-    })
-    .run(($rootScope, $location, $window) => {
-
-        $window.ga('create', 'GTM-PMJGCQ', 'auto');
-
-        // track pageview on state change
-        $rootScope.$on('$stateChangeSuccess', function (event) {
-            $window.ga('send', 'pageview', $location.path());
-        });
     });
