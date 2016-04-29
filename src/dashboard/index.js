@@ -51,6 +51,7 @@ import teodor from './teodor/index';
 import pogruzhenie from './pogruzhenie/index';
 import hockeyGame from './hockey-game/index';
 import staticPage from './static-page/index';
+import photokonkurs from './photokonkurs/index';
 
 
 
@@ -100,7 +101,8 @@ export default angular.module('dashboard',
         teodor.name,
         pogruzhenie.name,
         hockeyGame.name,
-        staticPage.name
+        staticPage.name,
+        photokonkurs.name
     ])
     .service('login', Login)
     .service('modal', Modal)
