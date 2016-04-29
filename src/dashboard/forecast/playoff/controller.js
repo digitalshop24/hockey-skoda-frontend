@@ -2,12 +2,13 @@
 
 
 export default class ForecastCtrl {
-    constructor(table, modal, modalSpeed, forecastService) {
+    constructor(table, modal, modalSpeed, forecastService, $state) {
         this.table = table;
         this.service = forecastService;
         this.forecast = table.predictions;
         this.copyMatches();
         this.modal = modal;
+        this.state = $state;
         this.modalSpeed = modalSpeed;
         this.canSendForecast = false;
     }
@@ -51,8 +52,6 @@ export default class ForecastCtrl {
                 }
             }
         }
-
-        var a = "";
     }
 
     getOppositeMatch(match) {
@@ -77,13 +76,7 @@ export default class ForecastCtrl {
             }
         }
         this.service.sendPredictions(predictions).then(res => {
-            this.modal.open({
-                resolve: {
-                    message: () => {
-                        return '<h4 class = "modal-title">Ваш прогноз успешно отправлен!</h4>'
-                    }
-                }
-            });
+            this.state.go('dashboard.forecast.playoff',{}, {reload: true});
         });
 
     }
