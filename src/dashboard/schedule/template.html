@@ -74,6 +74,7 @@
             filter:ctrl.filterByPlayoffTeams | filter:ctrl.filterByCategory">
                     <div class="game last" ng-class="{'last':match.stage == 'completed', 'active' : match.stage == 'current',
                       'next' : match.stage == 'future'}">
+                        <p class="label text-center">ЧМХ 2016</p>
                         <h3 ng-show="match.stage != 'future'"
                             ng-bind="match.redteam_score + ':' + match.blueteam_score"></h3>
 

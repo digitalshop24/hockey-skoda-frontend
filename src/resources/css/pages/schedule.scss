@@ -86,6 +86,12 @@
         padding-bottom: 20px;
 
       }
+      .label {
+        color: #fff;
+        background-color: $grey_dark;
+        padding: 0px 5px;
+        border-radius: 0;
+      }
     }
     .active {
       background-color: $green_main;
