@@ -289,56 +289,17 @@ Hockey Cup — одно из крупнейших мероприятий все�
             <div class="junior-news-tittle">
               <h4>Другие новости</h4>
             </div>
-            <div class="junior-news-block clearfix">
+            <div class="junior-news-block clearfix" ng-repeat="news in ctrl.lastNews">
               <div class="junior-news-block-left">
-                <span class="junior-news-block-left-datte">
+                <span class="junior-news-block-left-datte" ng-bind="news.published_at | amDateFormat:'DD.MM H:mm'">
                   21:32
                 </span>
-                <span class="junior-news-block-left-col">
+                <span class="junior-news-block-left-col" ng-bind="news.comments_count">
                   0
                 </span>
               </div>
               <div class="junior-news-block-right">
-                <h5><a href="/news-page/news/836">Фетисов: почему 16-18-летние парни уезжают?</a> </h5>
-              </div>
-            </div>
-            <div class="junior-news-block clearfix">
-              <div class="junior-news-block-left">
-                <span class="junior-news-block-left-datte">
-                  21:08
-                </span>
-                <span class="junior-news-block-left-col">
-                  0
-                </span>
-              </div>
-              <div class="junior-news-block-right">
-                <h5><a href="/news-page/news/834">Фетисов: Ковальчук? Наша национальная забава – делать из героев монстров</a> </h5>
-              </div>
-            </div>
-            <div class="junior-news-block clearfix">
-              <div class="junior-news-block-left">
-                <span class="junior-news-block-left-datte">
-                  20:40
-                </span>
-                <span class="junior-news-block-left-col">
-                  0
-                </span>
-              </div>
-              <div class="junior-news-block-right">
-                <h5><a href="/news-page/news/833">Восемь игроков из НХЛ присоединятся к сборной России 17 апреля</a> </h5>
-              </div>
-            </div>
-            <div class="junior-news-block clearfix">
-              <div class="junior-news-block-left">
-                <span class="junior-news-block-left-datte">
-                  20:22
-                </span> 
-                <span class="junior-news-block-left-col">
-                  0
-                </span>
-              </div>
-              <div class="junior-news-block-right">
-                <h5><a href="/news-page/news/830">Нападающий ЦСКА Кугрышев отстранён до конца финальной серии Кубка Гагарина</a> </h5>
+                <h5><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name">Фетисов: почему 16-18-летние парни уезжают?</a> </h5>
               </div>
             </div>
           </div>

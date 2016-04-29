@@ -2,7 +2,7 @@
 
 
 export default class NewspageCtrl {
-    constructor(news, session, login, commentsInfo, newspageService, $document, page, $state, lastNews, championatNews) {
+    constructor(news, session, login, commentsInfo, newspageService, $document, page, $state, lastNews, championatNews, $scope) {
         this.news = news;
         this.rubric = news.rubric;
         this.session = session;
@@ -20,7 +20,16 @@ export default class NewspageCtrl {
         this.shareData = {
             title: this.news.name,
             description: this.news.short_content
+        };
+        if(this.rubric.api_path == 'stars') {
+            this.championatNews.shuffle()
         }
+
+
+        this.filterForStarsRubric = (post) => {
+            return $scope.ctrl.search ? (post.name.toLowerCase().indexOf($scope.ctrl.search.toLowerCase()) > -1 ||
+                post.short_content.toLowerCase().indexOf($scope.ctrl.search.toLowerCase()) > -1)  : true;
+        };
     }
 
     openEditor() {

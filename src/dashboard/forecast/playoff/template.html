@@ -140,10 +140,13 @@
                         <p class="bl-text">
                             3-е место
                         </p>
-                        
-                            <select  class="input_default input_small " data-size="12" >
-                                  <option disabled selected value> Выберите команду </option>
-                                </select>
+
+                        <select class="input_default input_small "
+                                ng-options="team.country for team in ctrl.forecast.third_winner.teams track by team.id"
+                                ng-model="ctrl.forecast.third_winner.redteam" ng-disabled="ctrl.forecast.third_winner.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.third_winner)">
+                            <option disabled="disabled"  value ng-show="ctrl.forecast.third_winner.redteam"
+                                    ng-bind="ctrl.forecast.third_winner.redteam.country || 'Выберите команду'"></option>
+                        </select>
                     </div>
                     
                     <div class="choice_one-item" >
@@ -182,10 +185,13 @@
                             <p class="bl-text">
                                 1-е место
                             </p>
-                        
-                            <select  class="input_default input_small " data-size="12" >
-                                  <option disabled selected value> Выберите команду </option>
-                                </select>
+
+                            <select class="input_default input_small "
+                                    ng-options="team.country for team in ctrl.forecast.final_winner.teams track by team.id"
+                                    ng-model="ctrl.forecast.final_winner.redteam" ng-disabled="ctrl.forecast.final_winner.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.final_winner)">
+                                <option disabled="disabled"  value ng-show="ctrl.forecast.final_winner.redteam"
+                                        ng-bind="ctrl.forecast.final_winner.redteam.country || 'Выберите команду'"></option>
+                            </select>
                         </div>
 
                         <div class="choice_one-item-bor">
@@ -334,10 +340,13 @@
                         <p class="bl-text">
                             3-е место
                         </p>
-                        
-                            <select  disabled="disabled" class="input_default input_small " data-size="12" >
-                                  <option disabled selected value> Выберите команду </option>
-                                </select>
+
+                            <select class="input_default input_small "
+                                    ng-options="team.country for team in ctrl.forecast.third_winner.teams track by team.id"
+                                    ng-model="ctrl.forecast.third_winner.redteam" ng-disabled="ctrl.forecast.third_winner.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.third_winner)">
+                                <option disabled="disabled"  value ng-show="ctrl.forecast.third_winner.redteam"
+                                        ng-bind="ctrl.forecast.third_winner.redteam.country || 'Выберите команду'"></option>
+                            </select>
                         </div>
                         <div class="choice_one-item" >
                             <div class="choice_one-item-bor">
@@ -377,9 +386,12 @@
                         <p class="bl-text">
                             1-е место
                         </p>
-                        
-                            <select  disabled="disabled" class="input_default input_small " data-size="12" >
-                                  <option disabled selected value> Выберите команду </option>
+
+                                <select class="input_default input_small "
+                                        ng-options="team.country for team in ctrl.forecast.final_winner.teams track by team.id"
+                                        ng-model="ctrl.forecast.final_winner.redteam" ng-disabled="ctrl.forecast.final_winner.disabled" ng-change="ctrl.changeSelectTeam(ctrl.forecast.final_winner)">
+                                    <option disabled="disabled"  value ng-show="ctrl.forecast.final_winner.redteam"
+                                            ng-bind="ctrl.forecast.final_winner.redteam.country || 'Выберите команду'"></option>
                                 </select>
                         </div>
 

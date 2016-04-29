@@ -16,6 +16,10 @@ export default angular.module('dashboard.profile.prizes', [])
                 resolve: {
                     prizes: prizesService => {
                         return prizesService.getPrizes();
+                    },
+
+                    cities: tdriveService => {
+                        return tdriveService.getCities();
                     }
                 }
             });

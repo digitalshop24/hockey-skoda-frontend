@@ -1,14 +1,16 @@
+
 <section class="slider_prizes">
     <div class="container-fluid">
         <div class="row">
 
-            <slick infinite="true" slides-to-show="4" slides-to-scroll="1" arrows="false" dots="false"
+            <slick infinite="false" slides-to-show="5" slides-to-scroll="1" arrows="false" dots="false"
                    focusOnSelect="true"
                    class="second_slider_priz text-center" swipe="true"
                    responsive="ctrl.responsive">
 
                 <div class="itep_priz" ng-click="ctrl.changeSponsor(sponsor)" ng-repeat="sponsor in ctrl.sponsors"
-                     style="background-image: url({{sponsor.image.small}})">
+                     >
+                     <img src="{{sponsor.image.small}}" alt="">
                 </div>
 
             </slick>
@@ -20,9 +22,10 @@
                             <h3 ng-bind="ctrl.currentSponsor.name">Призы от <br> Škoda hockey</h3>
 
                             <p ng-bind-html="ctrl.currentSponsor.description"></p>
+                            <button ng-show="ctrl.currentSponsor.id == '15'" class="btn btn_primary small" style="position: static; margin-bottom: 15px;" ng-click="$state.go('dashboard.pogruzhenie')">Места проведения</button>
                         </div>
                         <div class="col-md-5  text-left user_info">
-                            <p ng-show="!ctrl.session.isAuthenticated">Чтобы участвовать в розигрышах призов, необходимо
+                            <p ng-show="!ctrl.session.isAuthenticated && ctrl.currentSponsor.id != '15'">Чтобы участвовать в розигрышах призов, необходимо
                                 <br> <a
                                         ng-click="ctrl.login.open()" href="#">Авторизироваться или пройти
                                     регистрацию</a></p>

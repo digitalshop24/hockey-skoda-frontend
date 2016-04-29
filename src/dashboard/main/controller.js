@@ -67,7 +67,7 @@ export default class MainCtrl {
                 slidesToScroll: 1
               }
             }
-            
+
           ];
         }
 
@@ -79,5 +79,22 @@ export default class MainCtrl {
             });
         }*/
 
+    }
+    openModal(){
+        // guest
+        this.compHeader = 'КАК ВЫИГРАТЬ автомобиль?';
+        this.compText = 'Для начала Вам следует зарегистрироваться или войти в свой профиль. ';
+        this.compButton = {
+            text : 'Зарегистрироваться',
+            link : 'dashboard.registration'
+        }
+        //user
+        this.compHeader = 'КАК ВЫИГРАТЬ автомобиль?';
+        this.compText = 'Просим Вас внимательно ознакомиться с правилами розыгрыша. Желаем удачи!';
+        this.compButton = {
+            text : 'Читать правила',
+            link : 'dashboard.registration'
+        }
+        // $('#modalСompetition').modal('show');
     }
 }

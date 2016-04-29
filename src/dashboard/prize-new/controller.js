@@ -2,9 +2,10 @@
 
 
 export default class PrizenewCtrl {
-    constructor(sponsors, session, login, id, $state) {
+    constructor(sponsors, session, login, id, $state, $sce) {
         this.sponsors = sponsors;
         this.allPrizes = sponsors.map(sponsor => {
+            sponsor.description = $sce.trustAsHtml(sponsor.description);
             sponsor.prizes.forEach(prize => {
                 prize.sponsorId = sponsor.id;
                 prize.sponsorImage = sponsor.image;

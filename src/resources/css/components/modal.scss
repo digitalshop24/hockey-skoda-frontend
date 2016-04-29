@@ -4,7 +4,7 @@
     text-indent: -9999px;
   }
 }
-.modal-dialog.modal-window_right{
+.modal-window.modal-window_right{
   padding-top:80px;
   .modal-dialog{
     margin:0;
@@ -82,4 +82,47 @@
     }
    }
 
+}
+
+.modal-competition{
+  .modal-dialog{
+    width:810px;
+    .modal-content{
+      padding:0;
+    }
+  }
+  &-wrapper{
+    display: table;
+    width:100%;
+  }
+  &-img{
+    display: table-cell;
+    vertical-align: top;
+    width:405px;
+    img{
+      display: block;
+      width:100%;
+      height: auto;
+    }
+  }
+  &-content{
+    display: table-cell;
+    vertical-align: middle;
+    padding:30px 40px;
+  }
+  &-heading{
+    color:$green_main;
+    font-size:36px;
+    line-height: 120%;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom:10px;
+  }
+  &-text{
+    color:$black;
+    font-size:14px;
+    line-height: 120%;
+    font-weight: normal;
+    margin-bottom:30px;
+  }
 }

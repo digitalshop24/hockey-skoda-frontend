@@ -48,6 +48,9 @@ import rights from './rights/index';
 import share from './share/index';
 import regulations from './regulations/index';
 import teodor from './teodor/index';
+import pogruzhenie from './pogruzhenie/index';
+import hockeyGame from './hockey-game/index';
+import staticPage from './static-page/index';
 
 
 
@@ -94,7 +97,10 @@ export default angular.module('dashboard',
         share.name,
         regulations.name,
         passwordStrength.name,
-        teodor.name
+        teodor.name,
+        pogruzhenie.name,
+        hockeyGame.name,
+        staticPage.name
     ])
     .service('login', Login)
     .service('modal', Modal)
