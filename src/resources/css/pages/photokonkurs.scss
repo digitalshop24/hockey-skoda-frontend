@@ -1,0 +1,159 @@
+.wrapp_photokonkurs-title {
+	padding-top:50px;
+	padding-bottom:50px;
+	h1 {
+		text-transform: uppercase;
+     color: $green_main;
+     font-weight: 900;
+     font-size:48px;
+	}
+	p {
+		margin:15px 0;
+		font-size:14px;
+	}
+	a {
+		font-size:14px;
+		margin-right:40px;
+		font-weight: bold;
+		color: $green_main;
+		text-decoration: underline;
+	}
+}
+.wrapp_photokonkurs {
+	padding:50px;
+	background: #e6e6e6 url('img/resources/img/photokonkurs/bg-photokonkurs.png') no-repeat top center;
+	background-size:cover;
+	.photokonkurs-timer-block {
+		width:240px;
+		margin:0 auto;
+		overflow: hidden;
+		padding:25px 0; 
+		.photokonkurs-text {
+			font-size:14px;
+			text-align:center;
+		}
+		.photokonkurs-timer {
+			padding-top:25px;
+		}
+		.photokonkurs-timer-item {
+			width:65px;
+			float:left;
+			margin-right:15px;
+			position:relative;
+			p {
+				font-size:40px;
+				margin:0px;
+				line-height:36px;
+				text-align:center;
+			}
+			span {
+				font-size:14px;
+				font-weight: bold;
+				display: block;
+				
+				text-align:center;
+			}
+			&:after {
+				position:absolute;
+				right:-7px;
+				top:0;
+				content:':';
+				font-size:40px;
+				line-height:36px;
+
+
+			}
+			&:last-child::after {
+					display: none;
+				}
+		}
+	}
+	.photokonkurs-select {
+		width:140px;
+		height: 40px;
+		line-height: 40px;
+	}
+	.btn_common {
+		margin-left: 85px;
+	}
+	.photokonkurs-item-block {
+	
+		   margin: 1.5em 0;
+    padding: 0;
+    column-gap: 1.5em; /* Общее расстояние между колонками */
+    font-size: .85em;
+    -moz-column-gap: 1.5em; /* Расстояние между колонками для Firefox */
+    -webkit-column-gap: 1.5em; /* Расстояние между колонками  для Safari, Chrome и iOS */
+    -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+
+
+		padding:70px 0;
+	}
+	.photokonkurs-item-post {
+		 display: inline-block;
+		 margin-bottom:25px;
+		.photokonkurs-item-post-img {
+			img { 
+				width:100%;
+			}
+		}
+		.photokonkurs-item-post-text {
+			height:75px;
+			background:#fff;
+			.face {
+      padding:15px;
+      width:240px; 
+      float:left;
+      &-img-left {
+        float:left;
+        width:49px;
+        height: 49px;
+        margin-right:15px;
+        border-radius:50%;
+      }
+      &-text-right {
+        overflow: hidden;
+        h3 {
+          font-weight:bold;
+          font-size:1.6rem;
+          line-height:30px;
+          color:$black;
+
+        }
+        .time-face {
+          font-weight:normal;
+          font-size:1.2rem;
+          line-height:16px;
+          color:#666666;
+        }
+      }
+    }
+    .photokonkurs-item-post-text-like {
+    	float:right;
+    	padding:15px;
+    	.icon-photokonkurs {
+    		background:url(img/resources/img/photokonkurs/icon-photokonkurs-like.png) no-repeat center center;
+    		width:32px;
+    		height: 30px;
+    		display: inline-block;
+    		cursor:pointer;
+    		margin-right:20px;
+    		position:relative;
+    		top:7px;
+    	}
+    	.active {
+    		background:url(img/resources/img/photokonkurs/icon-photokonkurs-like-active.png) no-repeat center center;
+    	}
+    	.photo-like {
+    		font-size:14px;
+    		position:relative;
+    		cursor:pointer;
+
+    	}
+    }
+		}
+	}
+}
+
