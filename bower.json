@@ -35,6 +35,7 @@
     "ngInfiniteScroll": "~1.2.2",
     "angular-mask": "~3.0.16",
     "socket.io-client": "^1.4.5",
-    "ng-rollbar": "~1.9.1"
+    "ng-rollbar": "~1.9.1",
+    "angulartics-google-analytics": "~0.1.4"
   }
 }

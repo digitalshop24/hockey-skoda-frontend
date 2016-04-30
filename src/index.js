@@ -30,6 +30,9 @@ export default angular.module('app',
         'infinite-scroll',
         'ngMask',
         'tandibar/ng-rollbar',
+        'angulartics',
+        'angulartics.google.analytics',
+        'angulartics.google.tagmanager',
         skodaLocalStorage.name,
         errorPages.name,
         index.name,
@@ -81,6 +84,10 @@ export default angular.module('app',
         if (location.hostname !== 'localhost') {
             RollbarProvider.init(config.rollbar);
         }
+    })
+    .config(function ($analyticsProvider) {
+        $analyticsProvider.firstPageview(true); /* Records pages that don't use $state or $route */
+        $analyticsProvider.withBase(true);  /* Records full path */
     })
     .run(amMoment=> {
         amMoment.changeLocale('ru');
