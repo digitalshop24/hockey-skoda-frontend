@@ -1,77 +1,62 @@
-<!--<section class="forum-test">
-    <div class="forum-test-start" ng-show="start = true" ng-hide="test || result">
+<section class="forum-test" ng-show="ctrl.showQuizAnswers || (ctrl.user && ctrl.user.can_forum_victorin)">
+    <div class="forum-test-start" ng-show="!ctrl.showQuiz && !ctrl.showQuizAnswers">
         <div class="container">
-            <h6 class="forum-test-start&#45;&#45;header">
+            <h6 class="forum-test-start--header">
                 Викторина
                 <span>+10</span>
                 <img src="img/resources/img/balls.png" alt="">
             </h6>
-            <h3 class="forum-test-start&#45;&#45;question">
+            <h3 class="forum-test-start--question">
                 Раклет или тартифлет?
             </h3>
-            <p class="forum-test-start&#45;&#45;desc">
+            <p class="forum-test-start--desc">
                 Если вам еще не доводилось совершать Grand Tour of Switzerland, то,<br> чтобы разгадать этот тест, вам понадобятся самые разнообразные<br> знания в области литературы, спорта, истории и кинематографа. Удачи.
             </p>
-            <button class="btn btn_secondary small"  ng-click="start = false; test = true">Начать тест</button>
+            <button class="btn btn_secondary small"  ng-click="ctrl.startQuiz();">Начать тест</button>
             <br>
             <share-buttons data="ctrl.data"></share-buttons>
         </div>
     </div>
-    <div class="forum-test-questions" ng-show="test" ng-hide="start || result">
+    <div class="forum-test-questions" ng-show="ctrl.showQuiz">
         <div class="container">
-            <h5 class="forum-test-questions&#45;&#45;header">Раклет или тартифлет?</h5>
-            <div class="forum-test-questions&#45;&#45;content">
-                <span class="forum-test-questions&#45;&#45;stage">1 из 20</span>
-                <div class="forum-test-questions&#45;&#45;img">
-                    <img src="img/resources/img/forum/question.jpg" alt="">
-                    <p>Фото: Ivo Scholz / Switzerland Tourism</p>
+            <h5 class="forum-test-questions--header" ng-bind="ctrl.currentQuestion.body">Раклет или тартифлет?</h5>
+            <div class="forum-test-questions--content">
+                <span class="forum-test-questions--stage">{{ctrl.currentQuestionIndex + 1}} из 20</span>
+                <div class="forum-test-questions--img">
+                    <img src="{{ctrl.currentQuestion.image.small}}" alt="">
+                    <!--<p>Фото: Ivo Scholz / Switzerland Tourism</p>-->
                 </div>
-                <p class="forum-test-questions&#45;&#45;text">Это Цюрих, крупнейший город Швейцарии. Одна из самых дорогих торговых улиц в мире — Банхофштрассе, то есть «Вокзальная улица» — действительно начинается у вокзала. Вопрос: что находилось раньше на участке длиной 1,4 километра, где сейчас продают часы и драгоценности?</p>
+                <!--<p class="forum-test-questions&#45;&#45;text">Это Цюрих, крупнейший город Швейцарии. Одна из самых дорогих торгов
+                    ых улиц в мире — Банхофштрассе, то есть «Вокзальная улица» — действительно начинается у вокзала. Вопрос: что находилось раньше
+                    на участке длиной 1,4 километра, где сейчас продают часы и драгоценности?</p>-->
                 <ul class="forum-test-answers">
-                    <li>
+                    <li ng-repeat="question in ctrl.currentQuestion.answer_options">
                         <label class="radio_green">
-                            <input type="radio" name="answer">
-                            <p class="radio-label radio-label_red">Тоже торговая улица, просто не мощеная</p>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="radio_green">
-                            <input type="radio" name="answer">
-                            <p class="radio-label">Железнодорожные пути</p>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="radio_green">
-                            <input type="radio" name="answer">
-                            <p class="radio-label radio-label_green">Городской ров с лягушками <span>+20</span><img src="img/resources/img/balls.png" alt=""></p>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="radio_green">
-                            <input type="radio" name="answer">
-                            <p class="radio-label">Крепостной вал</p>
+                            <input type="radio" name="answer" ng-model="ctrl.answers[ctrl.currentQuestionIndex]" value="{{question.answer}}">
+                            <p class="radio-label" ng-bind="question.answer">Тоже торговая улица, просто не мощеная</p>
                         </label>
                     </li>
                 </ul>
-                <button class="btn btn_secondary small" ng-click="test=false; result = true">Следующий вопрос</button>
+                <button class="btn btn_secondary small" ng-click="ctrl.nextQuestion()" ng-show="!ctrl.isLastQuestion">Следующий вопрос</button>
+                <button class="btn btn_secondary small" ng-click="ctrl.checkAnswers()" ng-show="ctrl.isLastQuestion">Завершить тест</button>
             </div>
         </div>
     </div>
-    <div class="forum-test-result" ng-show="result"  ng-hide="start || test">
+    <div class="forum-test-result" ng-show="ctrl.showQuizAnswers">
         <div class="container">
-            <h3 class="forum-test-start&#45;&#45;question">
+            <!--<h3 class="forum-test-start&#45;&#45;question">
                 Раклет или тартифлет?
-            </h3>
-            <div class="forum-test-result&#45;&#45;content">
-                <p>Правильных ответов: 10 из 20</p>
-                <p>Заработано: <br><span class="balls">+20</span><img src="img/resources/img/balls.png" alt=""></p>
-                <button class="btn btn_secondary small" ng-click="start = true; result = false;">На главную</button>
+            </h3>-->
+            <div class="forum-test-result--content">
+                <p>Правильных ответов: {{ctrl.quizResult.right_answers_count}} из 20</p>
+                <p>Заработано: <br><span class="balls">+{{ctrl.quizResult.awarding_points}}</span><img src="img/resources/img/balls.png" alt=""></p>
+                <button class="btn btn_secondary small" ng-click="$state.go('dashboard.main')">На главную</button>
             </div>
             <br>
             <share-buttons data="ctrl.data"></share-buttons>
         </div>
     </div>
-</section>-->
+</section>
 <section class="add_topic" ng-init="ctrl.openSpeed()">
     <div class="container">
         <div class="row">
