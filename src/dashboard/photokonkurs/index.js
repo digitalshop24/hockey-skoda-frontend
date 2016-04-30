@@ -1,24 +1,21 @@
 'use strict';
 
 import angular from 'angular';
-import PhotokonkursCtrl from './controller.js';
-import PhotokonkursService from './service.js';
+import PhotocontestCtrl from './controller.js';
+import PhotocontestService from './service.js';
 
-export default angular.module('dashboard.photokonkurs', [])
-    .service('photokonkursService', PhotokonkursService)
+export default angular.module('dashboard.photocontest', [])
+    .service('generalPhotocontestService', PhotocontestService)
     .config(function ($stateProvider) {
         $stateProvider
-            .state('dashboard.photokonkurs', {
+            .state('dashboard.photocontest', {
                 template: require('./template.html'),
-                url: '/photokonkurs',
-                controller: PhotokonkursCtrl,
+                url: '/photocontest',
+                controller: PhotocontestCtrl,
                 controllerAs: 'ctrl',
                 resolve: {
-                    achieve: (session, hockeyGameService) => {
-                        if(session.isAuthenticated) {
-                            return hockeyGameService.getAchieve();
-                        }
-                        return {};
+                    photos: (generalPhotocontestService) => {
+                        return generalPhotocontestService.getAllPhotos();
                     }
                 }
             });
