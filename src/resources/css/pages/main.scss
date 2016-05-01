@@ -851,6 +851,14 @@
   background:#def3ff;
 }
 
+.pos-mobal {
+  position:absolute;
+  right:0px;
+  .modal-competition {
+    position:relative;
+    top:-150px;
+  }
+}
 
 
 @media only screen and (max-width:$screen-md) {

@@ -125,7 +125,9 @@ function initSlider() {
             arrows: true,
             asNavFor: '.slider-for_block'
         });
+
     });
+
+
 }
 
- 
