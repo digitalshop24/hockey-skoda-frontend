@@ -132,6 +132,7 @@
                     <button ng-show="!ctrl.isEditorOpen" ng-disabled="!ctrl.session.isAuthenticated"
                             ng-click="ctrl.openEditor()" class="btn btn_primary main">Комментировать
                     </button>
+                    <span ng-show="!match.isDisabled" class="green">+10 <i class="icon icon-bal"></i></span>
                     <p ng-show="!ctrl.session.isAuthenticated">Чтобы оставить комментарий нужно <br><a
                             ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
                 </div>
