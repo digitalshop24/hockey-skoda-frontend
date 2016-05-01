@@ -97,4 +97,24 @@ export default class MainCtrl {
         }
         // $('#modalСompetition').modal('show');
     }
+    openModalRegi(){
+        // guest
+        this.compHeaderRegi = 'КАК ВЫИГРАТЬ автомобиль?';
+        this.compTextRegi = 'Для начала Вам следует зарегистрироваться или войти в свой профиль. ';
+        this.compButtonRegi = {
+            text : 'Зарегистрироваться',
+            link : 'dashboard.registration'
+        }
+        //user
+        this.compHeaderRegi = 'Приглашаем ВАС На тест-драйв';
+        this.compTextRegi = 'Это необходимо для того, чтобы участвовать в розыгрыше одного из трех автомобилей SKODA';
+        this.compButtonRegi = {
+            text : 'Пройти тест-драйв',
+            link : 'dashboard.registration'
+        }
+        $('#modalRegi .close').click(function() {
+            $('#modalRegi').css('display', 'none');
+        });
+    }
+
 }
