@@ -201,6 +201,19 @@
 }
 .end_comment {
   padding-top: 50px;
+  .green {
+        color:#4ba82e;
+      }
+      .icon {
+        display: inline-block;
+        &-bal {
+          width:24px;
+          height: 24px;
+          background:url("img/resources/img/balls.png") no-repeat center center;
+          position:relative;
+          top:5px;
+        }
+      }
   .btn_common {
     margin-left: 20px
   }
