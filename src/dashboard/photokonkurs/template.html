@@ -73,7 +73,7 @@
                                 </div>
                             </div>
                             <div class="photokonkurs-item-post-text-like">
-                                <span class="photo-like" ng-click="ctrl.likePhoto(photo)"><i class="icon icon-photokonkurs"></i>{{photo.likes}}</span>
+                                <span class="photo-like" ng-class="{'active-like': photo.liked_last_day}" ng-click="ctrl.likePhoto(photo)"><i class="icon icon-photokonkurs"></i>{{photo.likes}}</span>
                             </div>
                         </div>
                     </div>
