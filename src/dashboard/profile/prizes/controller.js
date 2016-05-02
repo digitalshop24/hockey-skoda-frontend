@@ -9,6 +9,15 @@ export default class PrizesCtrl {
         this.user = user;
         this.tdriveService = tdriveService;
         this.prizesService = prizesService;
+
+        if(user.dealer && user.dealer_city) {
+            this.cities = [user.dealer_city];
+            this.city = this.cities[0];
+            this.dealers = [user.dealer];
+
+            this.dealer = this.dealers[0];
+            this.dealer.info = this.dealer.name;
+        }
     }
 
     loadDealer() {
