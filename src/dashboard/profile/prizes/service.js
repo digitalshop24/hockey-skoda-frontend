@@ -13,7 +13,7 @@ export default class PrizesService {
 
     chooseDealer(id) {
         return this.api.put('/users/my_prizes', {
-            dealer_id: id
+            skoda_id: id
         }).then((res) => {
             return res.data;
         });
