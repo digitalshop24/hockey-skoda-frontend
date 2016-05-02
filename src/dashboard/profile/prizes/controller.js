@@ -2,15 +2,16 @@
 
 
 export default class PrizesCtrl {
-    constructor(prizes, cities, tdriveService, prizesService, modal, user) {
+    constructor(prizes, cities, tdriveService, prizesService, modal, user, auth) {
         this.prizes = prizes;
         this.cities = cities;
         this.modal = modal;
         this.user = user;
+        this.auth = auth;
         this.tdriveService = tdriveService;
         this.prizesService = prizesService;
 
-        if(user.dealer && user.dealer_city) {
+        if (user.dealer && user.dealer_city) {
             this.cities = [user.dealer_city];
             this.city = this.cities[0];
             this.dealers = [user.dealer];
@@ -28,6 +29,8 @@ export default class PrizesCtrl {
 
     saveDealer() {
         this.prizesService.chooseDealer(this.dealer.skoda_id).then(res => {
+            this.user.dealer = res.dealer;
+            this.user.dealer_city = res.dealer_city;
             this.modal.open({
                 resolve: {
                     message: () => {
@@ -38,8 +41,8 @@ export default class PrizesCtrl {
         })
     }
 
-    save(href){
-        var a  = document.createElement('a');
+    save(href) {
+        var a = document.createElement('a');
         var url = href;
         a.href = url;
         a.download = 'myTantam.png';
