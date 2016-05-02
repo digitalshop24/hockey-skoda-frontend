@@ -4,7 +4,7 @@
     <a ui-sref="dashboard.game.sectors">Викторина</a>
    <h5>Мои призы</h5>
     <p>Вы выиграли следующие призы! Мы сообщим Вам, когда они будут доставлены в выбранный Вами дилерский центр!</p>
-    <div ng-show="false && !ctrl.user.dealer">
+    <div ng-show="!ctrl.user.dealer">
         <form ng-submit="ctrl.saveDealer()" >
             <div class="row">
                 <div class="col-md-4 text-center">
@@ -19,9 +19,9 @@
                         <option disabled selected value>Выберите дилера</option>
                     </select>
                 </div>
-            </div>
-            <div class="row">
-                <button type="submit" class="btn btn_primary main tantam-button-save">Сохранить</button>
+                <div class="col-md-4 text-center">
+                    <button type="submit" class="btn btn_primary tiny">Сохранить</button>
+                </div>
             </div>
         </form>
     </div>
