@@ -4,22 +4,22 @@
     <a ui-sref="dashboard.game.sectors">Викторина</a>
    <h5>Мои призы</h5>
     <p>Вы выиграли следующие призы! Мы сообщим Вам, когда они будут доставлены в выбранный Вами дилерский центр!</p>
-    <div ng-show="!ctrl.user.dealer">
+    <div>
         <form ng-submit="ctrl.saveDealer()" >
             <div class="row">
                 <div class="col-md-4 text-center">
                     <select name="city" ng-options="city.name for city in ctrl.cities | orderBy: 'name'"
-                            class="input_default input_small select_default" ng-change="ctrl.loadDealer()" ng-model="ctrl.city" required>
+                            class="input_default input_small select_default" ng-change="ctrl.loadDealer()" ng-disabled="ctrl.user.dealer" ng-model="ctrl.city" required>
                         <option disabled selected value>Выберите город</option>
                     </select>
                 </div>
                 <div class="col-md-4 text-center">
                     <select name="city" ng-options="dealer.info for dealer in ctrl.dealers | orderBy: 'info'"
-                            class="input_default input_small select_default" ng-model="ctrl.dealer" required>
+                            class="input_default input_small select_default" ng-model="ctrl.dealer" ng-disabled="ctrl.user.dealer" required>
                         <option disabled selected value>Выберите дилера</option>
                     </select>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center" ng-show="!ctrl.user.dealer">
                     <button type="submit" class="btn btn_primary tiny">Сохранить</button>
                 </div>
             </div>
