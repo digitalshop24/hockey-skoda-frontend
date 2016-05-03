@@ -13,7 +13,6 @@ var styles = {
     src: "src/**/*.scss",
     dest: "app.min.css"
 };
-
 var images = {
     "src": [
         "src/**/*.png",
