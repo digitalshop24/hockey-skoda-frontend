@@ -52,6 +52,7 @@ import pogruzhenie from './pogruzhenie/index';
 import hockeyGame from './hockey-game/index';
 import staticPage from './static-page/index';
 import photokonkurs from './photokonkurs/index';
+import startPopup from './start-popup/index';
 
 
 
@@ -102,7 +103,8 @@ export default angular.module('dashboard',
         pogruzhenie.name,
         hockeyGame.name,
         staticPage.name,
-        photokonkurs.name
+        photokonkurs.name,
+        startPopup.name
     ])
     .service('login', Login)
     .service('modal', Modal)

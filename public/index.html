@@ -28,56 +28,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div ui-view>
         </div>
- <!--    <div class="modal modal-competition" id="modalRegi" role="dialog" ng-init="ctrl.openModalRegi()" style="display: block;">
-        <div class="modal-dialog">
- 
-            <div class="modal-content">
-                <div class="modal-competition-wrapper">
-                    <div class="modal-competition-img">
-                        <img src="img/resources/img/modal-competition.jpg" alt="">
-                    </div>
-                    <div class="modal-competition-content">
-                        <h4 class="modal-competition-heading">Приглашаем ВАС На тест-драйв</h4>
-                        <p class="modal-competition-text">Это необходимо для того, чтобы участвовать в розыгрыше одного из трех автомобилей SKODA</p>
-                        <br>
-                        <button class="btn btn_primary small" ui-sref="dashboard.registration" >Пройти тест-драйв</button>
-                    </div>
-                </div>
-                <button  class="close" aria-hidden="true"></button>
-            </div>
-
-        </div> 
-    </div> -->
-    
-     <!--    <div class="modal modal-competition" id="modalRegi" role="dialog" ng-init="ctrl.openModalRegi()" style="display: block;">
-        <div class="modal-dialog">
- 
-            <div class="modal-content">
-                <div class="modal-competition-wrapper">
-                    <div class="modal-competition-img">
-                        <img src="img/resources/img/modal-competition.jpg" alt="">
-                    </div>
-                    <div class="modal-competition-content">
-                        <h4 class="modal-competition-heading">КАК ВЫИГРАТЬ автомобиль?</h4>
-                        <p class="modal-competition-text">Для начала Вам следует зарегистрироваться или войти в свой профиль. </p>
-                        <br>
-                        <button class="btn btn_primary small" ui-sref="dashboard.registration" >Зарегистрироваться</button>
-                    </div>
-                </div>
-                <button  class="close" aria-hidden="true"></button>
-            </div>
-
-        </div> 
-    </div> -->
+        <start-popup></start-popup>
 
         <script src="vendor.min.js" type="text/javascript"></script>
         <script src="app.min.js" type="text/javascript"></script>
         <script src="https://www.youtube.com/iframe_api"></script>
-
-        <script>
-            $('#modalRegi .close').click(function() {
-                $('#modalRegi').css('display', 'none');
-            });
-        </script>
     </body>
 </html>
