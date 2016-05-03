@@ -14,7 +14,7 @@ export default class ForecastCtrl {
     }
 
     changeSelectTeam(match) {
-        this.canSendForecast =  (match.blueteam && match.redteam) || match.match_group == "third_winner" || match.match_group == "final_winner";
+        this.canSendForecast = (match.blueteam && match.redteam) || match.match_group == "third_winner" || match.match_group == "final_winner";
 
 
         if (this.canSendForecast) {
@@ -30,37 +30,91 @@ export default class ForecastCtrl {
                 this.canSendForecast = false;
             }
         }
-        this.removeTeamFromOtherMatch(match);
+
+        if (match.match_group == "quarter_final") {
+            const quarters = this.getQuaters();
+            quarters.forEach(oppositeMatch => {
+                var find = this.forecastCopy.find(match => match.num == oppositeMatch.num && match.match_group == oppositeMatch.match_group);
+                oppositeMatch.teams = find.teams.slice(0);
+            });
+            quarters.forEach(match => {
+                this.removeTeamFromOtherMatch(match);
+            });
+            this.forecast.firstSemiFinal.teams = [];
+            this.forecast.secondSemiFinal.teams = [];
+            quarters.forEach(match => {
+                if (match.num == 1 || match.num == 2) {
+                    match.redteam ? this.forecast.firstSemiFinal.teams.push(match.redteam) : void 0;
+                    match.blueteam ? this.forecast.firstSemiFinal.teams.push(match.blueteam) : void 0;
+                } else {
+                    match.redteam ? this.forecast.secondSemiFinal.teams.push(match.redteam) : void 0;
+                    match.blueteam ? this.forecast.secondSemiFinal.teams.push(match.blueteam) : void 0;
+                }
+            });
+        } else if (match.match_group == "semi_final") {
+            this.forecast.third_winner.teams = [];
+            this.forecast.final.teams = [];
+            this.getSemiFinals().forEach(match => {
+                match.redteam ? this.forecast.third_winner.teams.push(match.redteam) : void 0;
+                match.blueteam ? this.forecast.third_winner.teams.push(match.blueteam) : void 0;
+
+                match.redteam ? this.forecast.final.teams.push(match.redteam) : void 0;
+                match.blueteam ? this.forecast.final.teams.push(match.blueteam) : void 0;
+            });
+        } else if (match.match_group == "final") {
+            this.forecast.final_winner.teams = [];
+            this.forecast.final.redteam ? this.forecast.final_winner.teams.push(this.forecast.final.redteam) : void 0;
+            this.forecast.final.blueteam ? this.forecast.final_winner.teams.push(this.forecast.final.blueteam) : void 0;
+        }
+
     }
 
     removeTeamFromOtherMatch(match) {
-        if(match.match_group != "quarter_final") {
-            return;
-        }
-        const oppositeMatch = this.getOppositeMatch(match);
-        var find = this.forecastCopy.find(match => match.num == oppositeMatch.num && match.match_group == oppositeMatch.match_group);
+        this.getQuartersOppositeMatches(match).forEach(oppositeMatch => {
+            const find = this.forecastCopy.find(match => match.num == oppositeMatch.num && match.match_group == oppositeMatch.match_group);
 
-        if (oppositeMatch.can_predict) {
-            oppositeMatch.teams = find.teams.slice(0);
-            const teams = oppositeMatch.teams;
-            if (teams) {
-                if (match.redteam) {
-                    teams.splice(teams.findIndex(team => team.id == match.redteam.id), 1);
-                }
-                if (match.blueteam) {
-                    teams.splice(teams.findIndex(team => team.id == match.blueteam.id), 1);
+            if (oppositeMatch.can_predict) {
+                const teams = oppositeMatch.teams;
+                if (teams) {
+                    if (match.redteam) {
+                        teams.splice(teams.findIndex(team => team.id == match.redteam.id), 1);
+                    }
+                    if (match.blueteam) {
+                        teams.splice(teams.findIndex(team => team.id == match.blueteam.id), 1);
+                    }
                 }
             }
-        }
+        });
     }
 
-    getOppositeMatch(match) {
+    getMatchArray() {
         const matches = [];
         for (let name in this.forecast) {
             matches.push(this.forecast[name]);
         }
-        const oppositeMatchIndex = match.num == 1 ? 2 : match.num == 2 ? 1 : match.num == 3 ? 4 : 3;
-        return matches.find(match => match.match_group == "quarter_final" && match.num == oppositeMatchIndex);
+        return matches;
+    }
+
+    getQuaters() {
+        const matches = this.getMatchArray();
+        return matches.filter(match => match.match_group == "quarter_final");
+    }
+
+    getSemiFinals() {
+        const matches = this.getMatchArray();
+        return matches.filter(match => match.match_group == "semi_final");
+    }
+
+    getQuartersOppositeMatches(match) {
+        const matchNumbers = [1, 2, 3, 4];
+        matchNumbers.splice(matchNumbers.indexOf(+match.num), 1);
+        return this.getQuaters().filter(match => matchNumbers.indexOf(+match.num) > -1);
+    }
+
+    getSemiFinalOppositeMatches(match) {
+        const matches = this.getMatchArray();
+        const oppositeMatchIndex = match.num == 1 ? 2 : 1;
+        return matches.find(match => match.match_group == "semi_final" && match.num == oppositeMatchIndex);
     }
 
     sendForecast() {
@@ -76,7 +130,7 @@ export default class ForecastCtrl {
             }
         }
         this.service.sendPredictions(predictions).then(res => {
-            this.state.go('dashboard.forecast.playoff',{}, {reload: true});
+            this.state.go('dashboard.forecast.playoff', {}, {reload: true});
         });
 
     }
@@ -94,21 +148,20 @@ export default class ForecastCtrl {
         }
 
     }
+
     openSpeed() {
-        if(localStorage["modalSpeedForecast"] == null){
+        if (localStorage["modalSpeedForecast"] == null) {
             localStorage["modalSpeedForecast"] = "showed";
             this.modalSpeed.open({
-              resolve: {
-                  message: () => {
-                    var header = 'Делайте прогнозы и получайте баллы!';
-                    var text = 'Вы можете сделать свой прогноз в сетке соревнований ЧМХ 2016. Возможность угадать результат каждого события открывается поэтапно по ходу чемпионата. Чтобы заработать максимальное количество баллов, регулярно посещайте эту страницу и делайте новые прогнозы!';
-                    var message = '<h2>' + header + '</h2><p>' + text + '</p>';
-                    return message;
-                  }
-              },
-              windowClass: 'modal-window modal-window_right',
+                resolve: {
+                    message: () => {
+                        var header = 'Делайте прогнозы и получайте баллы!';
+                        var text = 'Вы можете сделать свой прогноз в сетке соревнований ЧМХ 2016. Возможность угадать результат каждого события открывается поэтапно по ходу чемпионата. Чтобы заработать максимальное количество баллов, регулярно посещайте эту страницу и делайте новые прогнозы!';
+                        return '<h2>' + header + '</h2><p>' + text + '</p>';
+                    }
+                },
+                windowClass: 'modal-window modal-window_right'
             });
-            return;
         }
     }
 }
