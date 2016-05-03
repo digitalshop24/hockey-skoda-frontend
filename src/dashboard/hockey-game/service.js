@@ -8,4 +8,8 @@ export default class HockeyGameService {
     getAchieve() {
         this.api.post('/users/play_hockey_game');
     }
+
+    getAchieveFor2Minutes() {
+        this.api.post('/users/two_min_game');
+    }
 }
