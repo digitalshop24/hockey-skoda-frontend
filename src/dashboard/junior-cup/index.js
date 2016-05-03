@@ -16,6 +16,10 @@ export default angular.module('dashboard.junior', [])
                 resolve : {
                     lastNews: ($stateParams, mainService) => {
                         return mainService.getLastNews('news', 1, 4, 'content_manager').then(res => res.posts);
+                    },
+
+                    galleries: (juniorService) => {
+                        return juniorService.getGalleries();
                     }
                 }
             });
