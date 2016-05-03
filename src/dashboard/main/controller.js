@@ -112,9 +112,5 @@ export default class MainCtrl {
             text : 'Пройти тест-драйв',
             link : 'dashboard.registration'
         }
-        $('#modalRegi .close').click(function() {
-            $('#modalRegi').css('display', 'none');
-        });
     }
-
 }
