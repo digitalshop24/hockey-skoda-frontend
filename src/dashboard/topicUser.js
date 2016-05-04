@@ -9,4 +9,5 @@ export default class TopicUser {
         const lastNameAndFirstName = (this.last_name || '') + " " + (this.first_name || '');
         return lastNameAndFirstName.trim() ? lastNameAndFirstName : this.email;
     }
+
 }

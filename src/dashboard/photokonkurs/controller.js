@@ -11,5 +11,16 @@ export default class PhotocontestCtrl {
         this.service.likePhoto(photo.id).then(res => {
 
         });
+
+
+
+	$('.photo-like .fa').click(function() {
+        $(this).addClass('fa-heart');
+    });
+    $('.photokonkurs-item-post-img .fa').click(function() {
+        $(this).addClass('fa-heart');
+    });
     }
+
+    
 }
