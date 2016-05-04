@@ -13,7 +13,7 @@
 	</div>
 	<div ng-show="ctrl.user.can_photo_competition">
 		<p>Чтобы принять участие в фотоконкурсе, Вам необходимо сделать креативную фотографию на хоккейную тематику в Дилерском центре ŠKODA и загрузить ее в личный кабинет.</p>
-		<p>В случае, если посетители сайта оценят Вашу оригинальность и отдадут за Вас необходимое количество голосов, Вы попадете в следующий этап розыгрыша.</p>
+		<p>В случае, если посетители сайта оценят Вашу оригинальность и Вы попадете в ТОП 24 участников с наибольшим количеством лайков, станет доступен следующий этап розыгрыша.</p>
 	</div>
 	<div ng-show="ctrl.user.can_photo_competition">
 		<div class="download_foto">
@@ -30,7 +30,7 @@
 				<div class="wrapp_foto">
 					<img src="{{photo.image.small}}" alt="" class="img-responsive">
 				</div>
-				<button class="btn btn_secondary tiny" ng-click="ctrl.participateInContest(photo)"
+				<button class="btn btn_primary tiny" ng-click="ctrl.participateInContest(photo)"
 						ng-bind="photo.statusText" ng-disabled="photo.is_published || ctrl.isUserPaticipating">Участвовать</button>
 				<p><a href="" ng-click="ctrl.deletePhoto(photo)" class="delet">Удалить</a></p>
 			</li>
