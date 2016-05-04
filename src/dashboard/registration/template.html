@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 left">
-                        <h4>Как вас зовут?</h4>
+                        <h4>Как вас зовут?<span class="plus_ball">+10 <img src="img/resources/img/balls.png" alt=""></span></h4>
                         <input type="text" minlength="2" ng-model="ctrl.form.last_name" class="input_default input_small"
                                placeholder="Фамилия* (обязательное поле)" required>
                         <input type="text" minlength="2" ng-model="ctrl.form.first_name" class="input_default input_small"
@@ -39,7 +39,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 left">
-                        <h4>Можно вашу почту?<span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <h4>Можно вашу почту?</h4>
                         <input required="true" type="email" ng-model="ctrl.form.email" class="input_default input_small"
                                placeholder="E-mail* (обязательное поле)">
                     </div>
@@ -69,11 +69,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 left">
-                        <h4>Ваш возраст?<span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <h4>Ваш возраст?</h4>
                         <input type="number" min="0" ng-model="ctrl.form.age" class="input_default input_small" placeholder="">
                     </div>
                     <div class="col-md-6 left">
-                        <h4>Вы состоите в браке?<span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <h4>Вы состоите в браке?</h4>
                         <input type="text" ng-model="ctrl.form.marital_status" class="input_default input_small" placeholder="">
                     </div>
                 </div>
@@ -84,7 +84,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 left">
-                        <h4>Ваша машина?<span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <h4>Ваша машина?</h4>
                         <select style="width: 350px" class="input_default input_small"
                                 ng-options="car for car in ctrl.brands" ng-model="ctrl.form.current_car" ng-change="ctrl.isCurrentCarSkoda = ctrl.form.current_car == 'Skoda'">
                             <option disabled selected value>Выберите текущую</option>
@@ -92,7 +92,7 @@
                         </select>
                     </div>
                     <div class="col-md-6 left">
-                        <h4>А прошлая? <span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <h4>А прошлая? </h4>
                         <select style="width: 350px" class="input_default input_small"
                                 ng-options="car for car in ctrl.brands" ng-model="ctrl.form.last_car">
                             <option disabled selected value>Выберите прошлую</option>
