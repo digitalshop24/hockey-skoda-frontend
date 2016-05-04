@@ -35,7 +35,8 @@ export default class FactsCtrl {
     changeTag(info) {
         this.state.go('dashboard.facts', {
             tag: info.tag,
-            isSocialFacts: true
+            isSocialFacts: true,
+            id: undefined
         });
     }
 
