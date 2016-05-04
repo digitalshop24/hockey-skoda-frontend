@@ -1,4 +1,5 @@
-<section class="forum-test" ng-show="ctrl.showQuizAnswers || (ctrl.user && ctrl.user.can_forum_victorin)">
+<section class="forum-test" ng-show="ctrl.showQuizAnswers || ctrl.user">
+<!-- && ctrl.user.can_forum_victorin -->
     <div class="forum-test-start" ng-show="!ctrl.showQuiz && !ctrl.showQuizAnswers">
         <div class="container">
             <h6 class="forum-test-start--header">
