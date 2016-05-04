@@ -3,6 +3,7 @@
 import angular from 'angular';
 import PhotocontestCtrl from './controller.js';
 import PhotocontestService from './service.js';
+import click from './click.js';
 
 export default angular.module('dashboard.photocontest', [])
     .service('generalPhotocontestService', PhotocontestService)
