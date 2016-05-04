@@ -50,7 +50,17 @@
                       <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.forecast.companionship">Матчи</li></a>
                     </ul>
                 </li></a>
-              <a href="#" ui-sref="dashboard.prizenew"><li>Конкурсы</li></a>
+              <a href="#">
+              <li>
+                Конкурсы
+                <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
+                <ul class="drilldown-sub">
+                    <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Конкурсы</a></li>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.prizenew">Конкурс</li></a>
+                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.teodor">Конкурс IceChallenge 2</li></a>
+                    </ul>
+                 </li>   
+              </a>
               <a href="#" ui-sref="dashboard.forum"><li>Форум
                   <!--   <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
                     <ul class="drilldown-sub">
@@ -225,6 +235,7 @@
                                 <a ui-sref="dashboard.prizenew">
                                     <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isPrizeOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isForecastOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
                                         Конкурсы
+                                        <img src="img/resources/img/arrow_righ_mini.png" alt="">
                                     </li>
                                 </a>
                                 <a ui-sref="dashboard.forum">
@@ -256,6 +267,10 @@
                             </ul>
                             <ul ng-show="ctrl.isForumOpen">
                                 <!-- <a ui-sref="dashboard.forum" ng-click="ctrl.isMenuOpen = false" ><li>Форум</li></a> -->
+                            </ul>
+                            <ul ng-show="ctrl.isPrizeOpen">
+                                <a ui-sref="dashboard.prizenew" ng-click="ctrl.isMenuOpen = false"><li>Конкурс</li></a>
+                                <a ui-sref="dashboard.teodor" ng-click="ctrl.isMenuOpen = false"><li>Конкурс IceChallenge 2</li></a>
                             </ul>
 
                             <ul ng-show="ctrl.isSchedOpen">
