@@ -3,10 +3,8 @@
 import angular from 'angular';
 import NewspageCtrl from './controller.js';
 import NewspageService from './service.js';
-import social from './social/index.js';
 
 export default angular.module('dashboard.newspage', [
-    social.name
 ])
     .service('newspageService', NewspageService)
     .config(function ($stateProvider) {
