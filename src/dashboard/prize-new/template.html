@@ -25,7 +25,7 @@
                             <button ng-show="ctrl.currentSponsor.id == '15'" class="btn btn_primary small" style="position: static; margin-bottom: 15px;" ng-click="$state.go('dashboard.pogruzhenie')">Места проведения</button>
                         </div>
                         <div class="col-md-5  text-left user_info">
-                            <p ng-show="!ctrl.session.isAuthenticated && ctrl.currentSponsor.id != '15'">Чтобы участвовать в розигрышах призов, необходимо
+                            <p ng-show="!ctrl.session.isAuthenticated && ctrl.currentSponsor.id != '15' && ctrl.currentSponsor.id != '19'">Чтобы участвовать в розигрышах призов, необходимо
                                 <br> <a
                                         ng-click="ctrl.login.open()" href="#">Авторизироваться или пройти
                                     регистрацию</a></p>
