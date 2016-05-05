@@ -7,6 +7,8 @@ export default class FactsCtrl {
         if(!isSocialFacts) {
             this.facts.forEach(fact => {
                 fact.content = fact.name;
+                fact.profile_pic = '/img/resources/img/skoda-facts-logo.jpg';
+                fact.profile_name = 'Škoda';
                 fact.photos = [{image: fact.image}];
             })
         }
