@@ -3,7 +3,6 @@
 import angular from 'angular';
 import PhotocontestCtrl from './controller.js';
 import PhotocontestService from './service.js';
-import click from './click.js';
 
 export default angular.module('dashboard.photocontest', [])
     .service('generalPhotocontestService', PhotocontestService)
@@ -14,9 +13,19 @@ export default angular.module('dashboard.photocontest', [])
                 url: '/photocontest',
                 controller: PhotocontestCtrl,
                 controllerAs: 'ctrl',
+                params: {
+                    page: 1,
+                    perPage: 15
+                },
                 resolve: {
-                    photos: (generalPhotocontestService) => {
-                        return generalPhotocontestService.getAllPhotos();
+                    photos: (generalPhotocontestService, $stateParams) => {
+                        return generalPhotocontestService.getAllPhotos($stateParams.page, $stateParams.perPage);
+                    },
+                    currentPage: ($stateParams) => {
+                        return $stateParams.page;
+                    },
+                    perPage: ($stateParams) => {
+                        return $stateParams.perPage;
                     }
                 }
             });

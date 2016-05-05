@@ -12,43 +12,13 @@
         </div>
     </div>
 </section>
-<section class="wrapp_photokonkurs">
+<section class="wrapp_photokonkurs" infinite-scroll="ctrl.loadMore()" infinite-scroll-disabled='this.busy'>
     <div class="container">
-        <!--<div class="row">
-          <div class="col-md-12">
-            <div class="photokonkurs-timer-block">
-              <p class="photokonkurs-text">До определения <br> победителей осталось:</p>
-              <div class="photokonkurs-timer clearfix">
-                <div class="photokonkurs-timer-item">
-                  <p>10</p>
-                  <span>дней</span>
-                </div>
-                <div class="photokonkurs-timer-item">
-                  <p>07</p>
-                  <span>часов</span>
-                </div>
-                <div class="photokonkurs-timer-item">
-                  <p>23</p>
-                  <span>минуты</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>-->
+
         <div class="row">
-          <!--<div class="col-md-4">
-            <select class="selectpicker photokonkurs-select" data-size="12" >
-                    <option disabled selected value> Выберите команду </option>
 
-                  </select>
-          </div>-->
           <div class="col-md-3">
-            <a  ui-sref="dashboard.profile.fotocontest"  ><span class="btn btn_common small" id="uploadButton">Загрузить свое фото</span> </a> 
-
-           <!--  <span class="btn btn_common small" id="uploadButton">
-                        Загрузить свое фото
-                        <input type="file" accept="image/*" class="file-photo">
-                    </span> -->
+            <a  ui-sref="dashboard.profile.fotocontest"  ><span class="btn btn_common small" id="uploadButton">Загрузить свое фото</span> </a>
           </div>
           <div class="col-md-9">
             <span style="padding-top: 20px; font-size: 14px;">Будьте внимательны, проголосовать можно только 1 раз в сутки. </span>
@@ -61,7 +31,7 @@
                         <div class="photokonkurs-item-post-img">
                             <img src="{{photo.image.small}}" alt="">
                             <span class="bg-black-licke">
-                              <span class="photo-like"  ng-class="{'active-like': photo.liked_last_day}" ng-click="ctrl.likePhoto(photo)"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+                              <span class="photo-like"  ng-click="ctrl.likePhoto(photo)"><i class="fa fa-heart-o"  ng-class="{'fa-heart': photo.liked_last_day}" aria-hidden="true"></i></span>
                             </span>
                         </div>
                         <div class="photokonkurs-item-post-text">
@@ -80,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="photokonkurs-item-post-text-like" >
-                                <span class="photo-like"  ng-class="{'active-like': photo.liked_last_day}" ng-click="ctrl.likePhoto(photo)"><i class="fa fa-heart-o" aria-hidden="true"></i>{{photo.likes}}</span>
+                                <span class="photo-like" ng-click="ctrl.likePhoto(photo)"><i class="fa fa-heart-o" ng-class="{'fa-heart': photo.liked_last_day}" aria-hidden="true"></i>{{photo.likes}}</span>
                             </div>
                         </div>
                     </div>
