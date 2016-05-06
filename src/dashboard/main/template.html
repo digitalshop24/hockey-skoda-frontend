@@ -66,7 +66,7 @@
                 </div>
                 <div class="row ul_news">
 
-                     <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="news in ctrl.championatNews | limitTo: 6">
+                     <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="news in ctrl.championatNews | limitTo:10">
                         <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name"></a></p>
                         <span class="littel_time" ng-bind="news.published_at | amDateFormat:'H:mm'"></span>
                         <span class="little_comment" ng-bind="news.comments_count"></span>
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="col-md-4 hidden-sm hidden-xs">
-            <slick infinite=true slides-to-show=1 slides-to-scroll=1 >
+            <slick infinite=true slides-to-show=1 slides-to-scroll=1 dots=true>
                 <div>
                     <div class="preview_header_right">
                         <div class="wrapp_content">
@@ -85,14 +85,14 @@
                     </div>
                 </div>
                 <div>
-                    <div class="preview_header_right" style="background-image: url('img/resources/img/baner_IIHF.png'); background-size: 55%;">
-                        <div class="wrapp_content">
+                    <div class="preview_header_right" style="background-image: url('img/resources/img/baner_IIHF.png'); background-size: 55%;  background-color:#f7f7f7; background-position: 0px 40px;">
+                        <div class="wrapp_content" style="padding-left: 50%;">
                             <!-- <h6>Интересное</h6> -->
                             <h3 style="padding-bottom: 10px;">2016 IIHF</h3>
                             <p style="padding-bottom: 10px;">Офицальное приложение<br>ЧМХ 2016. Весь чемпионат<br>в твоем смартфоне!</p>
-                            <a href=""><img src="img/resources/img/apple_app.png" alt="" class="img-responsive" style="padding-bottom:10px;"></a>
-                            <a href=""><img src="img/resources/img/android_app.png" alt="" class="img-responsive" style="padding-bottom:10px;"></a>
-                            <a href=""><img src="img/resources/img/windows_app.png" alt="" class="img-responsive" ></a>
+                            <a href="https://itunes.apple.com/cz/app/2016-iihf/id1069017229?mt=8"><img src="img/resources/img/apple_app.png" alt="" class="img-responsive" style="padding-bottom:10px;"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.iihf.android2016"><img src="img/resources/img/android_app.png" alt="" class="img-responsive" style="padding-bottom:10px;"></a>
+                            <a href="https://www.microsoft.com/cs-cz/store/apps/2016-iihf/9nblggh58zvv"><img src="img/resources/img/windows_app.png" alt="" class="img-responsive" ></a>
                         </div>
                     </div>
                 </div>
@@ -106,6 +106,16 @@
                         <div class="main-collogo-content">
                             <p>Генеральный спонсор<br>Чемпионата Мира по хоккею 2016 г.</p>
                         </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="main-collogo">
+                        <div class="main-collogo-img" style="padding:0;">
+                           <a href="http://taxi2412.ru/"> <img src="img/resources/img/taksi.jpg" alt=""  class="img-responsive"></a>
+                        </div>
+                        <!-- <div class="main-collogo-content">
+                            <p><a href="http://taxi2412.ru/">Такси партнер Škoda</a></p>
+                        </div> -->
                     </div>
                 </div>
 
