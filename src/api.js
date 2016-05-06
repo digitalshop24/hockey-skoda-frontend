@@ -5,7 +5,7 @@ const EXTERNAL_SERVER_ERROR = 500;
 
 export default class Api {
     constructor($http, $state, session, login, $rootScope) {
-        this.api = "http://178.208.85.208:3333/api/v1";
+        this.api = "http://hockey-skoda.ru/api/v1";
         this.http = $http;
         this.state = $state;
         this.session = session;

@@ -43,7 +43,7 @@ export default angular.module('app',
     .service('auth', auth)
     .config(($authProvider) => {
 
-        const url = "http://178.208.85.208:3333/api/v1";
+        const url = "http://hockey-skoda.ru/api/v1";
         $authProvider.facebook({
             scope: ['email', 'public_profile'],
             url: url + '/auth/facebook',
