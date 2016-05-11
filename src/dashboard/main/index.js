@@ -13,8 +13,8 @@ export default angular.module('dashboard.main', [
         $stateProvider
             .state('dashboard.main', {
                 meta: {
-                    title: 'Болейте, играйте, выигрывайте вместе со SKODA! ',
-                    description: 'К Чемпионату мира по хоккею SKODA приготовила для вас массу интересных призов и активностей! Вперед, вы нужны стране!'
+                    title: 'Болейте, играйте, выигрывайте вместе со ŠKODA! ',
+                    description: 'К Чемпионату мира по хоккею ŠKODA приготовила для вас массу интересных призов и активностей! Вперед, вы нужны стране!'
                 },
                 template: require('./template.html'),
                 url: '/',
