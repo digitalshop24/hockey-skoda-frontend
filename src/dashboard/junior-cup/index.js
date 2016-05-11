@@ -15,7 +15,7 @@ export default angular.module('dashboard.junior', [])
                 controllerAs: 'ctrl',
                 resolve : {
                     lastNews: ($stateParams, mainService) => {
-                        return mainService.getLastNews('news', 1, 4, 'content_manager').then(res => res.posts);
+                        return mainService.getLastNews('jihc', 1, 4, 'content_manager').then(res => res.posts);
                     },
 
                     galleries: (juniorService) => {
