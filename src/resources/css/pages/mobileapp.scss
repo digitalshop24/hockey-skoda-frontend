@@ -1,0 +1,51 @@
+.mobile_app {
+	.bg_ {
+		position: absolute;
+		z-index: -1;
+	}
+	.first_s {
+		min-height: 702px;
+		padding: 50px;
+		h5 {
+			padding-top: 85px;
+		}
+		h2 {
+			font-weight: 900;
+			color: $black;
+			text-transform: uppercase;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		p {
+			font-size: 1.6rem;
+		}
+	}
+	.two_s {
+		padding: 50px;
+		ul {
+			li {
+				display:inline-block;
+				width: 23%;
+				margin: 0 auto;
+			}
+		}
+	}
+	
+}
+
+@media only screen and (max-width : 1280px) {
+	.mobile_app {
+		.bg_ {
+			position: relative;
+			z-index: -1;
+		}
+		.first_s { 
+			padding-bottom: 0px;
+			min-height: 2px;
+			h5 {
+				padding-top: 0px;
+			}
+
+		}
+	}
+}
