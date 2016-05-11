@@ -221,3 +221,9 @@
   //   padding-left: 30px;
   // }
 }
+
+@media only screen and (max-width:$screen-md) {
+  .wrapp_one_news {
+    margin-left:0px;
+  }
+}
