@@ -107,6 +107,7 @@ export default angular.module('dashboard',
         photokonkurs.name,
         startPopup.name,
         mobileapp.name,
+        country.name
     ])
     .service('login', Login)
     .service('modal', Modal)
