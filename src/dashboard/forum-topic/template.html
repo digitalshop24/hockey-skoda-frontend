@@ -79,6 +79,12 @@
             </section>
 
         </div>
+        <div class="row text-right">
+            <pagination ng-show="ctrl.showPagination" total-items="ctrl.topicMessagesAmount" rotate="false" ng-model="ctrl.page"
+                                ng-change="ctrl.changePage()" previous-text=" < " next-text=" > "
+                                max-size="5" items-per-page="ctrl.messagesPerPage"
+                                direction-links="true" class="pagination-sm"></pagination>
+        </div>
     </div>
 </section>
 
