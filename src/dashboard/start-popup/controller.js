@@ -31,7 +31,7 @@ export default class StartPopupCtrl {
                         this.buttonText = 'Участвовать';
                         this.goToState = 'dashboard.tdrive';
                         this.display = 'block';
-                        this.img = 'img/resources/img/modal-competition.jpg';
+                        this.img = 'img/resources/img/slider_news_tvorche.png';
                     }, 30 * 1000);
                 }
 
