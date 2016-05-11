@@ -4,8 +4,8 @@
 export default class TantamareskaCtrl {
     constructor($scope, tanService, shareModal, modalSpeed) {
         this.imageUrl = "";
-        this.title = 'Hockey%20skoda%20%23%D1%85%D0%BE%D0%BA%D0%BA%D0%B5%D0%B9';
-        this.desc = 'Моя тантамареска';
+        this.title = 'Моя тантамареска! #хоккейвкаждом #хоккей';
+        this.desc = 'Болейте, играйте и выигрывайте вместе с официальным спонсором Чемпионата Мира по хоккею - ŠKODA!';
         $scope.$on('tantamareska:imageMerged', (event, data) => {
             this.sendButtonText = "Создание картинки...";
             this.isButtonDisabled = true;
