@@ -20,6 +20,7 @@ export default class StartPopupCtrl {
                         this.buttonText = 'Пройти тест-драйв';
                         this.goToState = 'dashboard.tdrive';
                         this.display = 'block';
+                        this.img = 'img/resources/img/modal-competition.jpg';
                     }, 30 * 1000);
                 }
             });
