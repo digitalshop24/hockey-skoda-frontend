@@ -53,6 +53,7 @@ import hockeyGame from './hockey-game/index';
 import staticPage from './static-page/index';
 import photokonkurs from './photokonkurs/index';
 import startPopup from './start-popup/index';
+import mobileapp from './mobile-app/index';
 
 
 
@@ -104,7 +105,8 @@ export default angular.module('dashboard',
         hockeyGame.name,
         staticPage.name,
         photokonkurs.name,
-        startPopup.name
+        startPopup.name,
+        mobileapp.name
     ])
     .service('login', Login)
     .service('modal', Modal)
