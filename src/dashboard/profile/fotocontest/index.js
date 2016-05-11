@@ -10,7 +10,7 @@ export default angular.module('dashboard.profile.fotocontest', [])
         $stateProvider
             .state('dashboard.profile.fotocontest', {
                 meta: {
-                    title: 'Škoda Фотоконкурс',
+                    title: 'ŠKODA фотоконкурс',
                     description: ''
                 },
                 template: require('./template.html'),
