@@ -189,7 +189,7 @@
 	.wrapp_menu_fact {
 		.menu_line {
 			position:relative;
-			height: 100px;
+			height: 130px;
 			min-width:270px;
 			max-width:100%;
 			width:100%;
@@ -967,7 +967,18 @@
     }
   }
 }
+.wrapp_menu_fact {
+		.menu_line {
 
+			ul {
+
+				li {
+
+					margin:0 0;
+				}
+			}
+		}
+	}
  //wrapp_forecast_content_mob end
  }
 

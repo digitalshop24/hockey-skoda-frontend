@@ -917,6 +917,9 @@
   #modalRegi {
     display: none !important;
   }
+  .modal-dialog {
+    width:auto;
+  }
 }
 
 @media only screen and (max-width:600px) {
