@@ -13,8 +13,8 @@ export default angular.module('dashboard.tantamareska', [
         $stateProvider
             .state('dashboard.tantamareska', {
                 meta: {
-                    title: 'Забавные и необычные фото с вами в главной роли',
-                    description: 'Становитесь главными героями смешных фотографий на хоккейную тематику! Просто загрузите свое фото и вставьте лицо в соответствующее отверстие, чтобы получить действительно смешную картинку.'
+                    title: 'Моя тантамареска! #хоккейвкаждом #хоккей',
+                    description: 'Болейте, играйте и выигрывайте вместе с официальным спонсором Чемпионата Мира по хоккею - ŠKODA!'
                 },
                 template: require('./template.html'),
                 url: '/tantamareska',
