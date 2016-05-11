@@ -21,6 +21,7 @@ export default class CubesCtrl {
         this.session = session;
         this.id = id;
         this.user = user;
+        this.isUserSetDealer = user.dealer_city ? true : false;
         this.state = $state;
         this.auth = auth;
 
@@ -73,7 +74,7 @@ export default class CubesCtrl {
             this.ballsDeficit = this.currentCell.cell_type == 'green' ? this.user.points < GREEN_CELL_PRICE : this.user.points < BLUE_CELL_PRICE;
             this.service.getPrizes(this.currentCell.id).then((res) => {
 
-                if(this.currentCell.cell_type == 'blue') {
+                if (this.currentCell.cell_type == 'blue') {
                     this.prizes = res.prizes;
                     res.prizes.forEach(prize => {
                         if (prize.prize_category) {
@@ -140,7 +141,7 @@ export default class CubesCtrl {
 
     startGame() {
         if (!this.user.info_profile_filled) {
-            if(!this.user.email) {
+            if (!this.user.email) {
                 $('#myModal').modal('hide');
                 this.state.go('dashboard.edit');
                 return;
