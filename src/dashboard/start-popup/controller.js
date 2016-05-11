@@ -21,6 +21,7 @@ export default class StartPopupCtrl {
                         this.goToState = 'dashboard.tdrive';
                         this.display = 'block';
                         this.img = 'img/resources/img/modal-competition.jpg';
+                        this.imgstyle = "width:100%;"
                     }, 30 * 1000);
                 }
                 else {
@@ -32,6 +33,7 @@ export default class StartPopupCtrl {
                         this.goToState = 'dashboard.tdrive';
                         this.display = 'block';
                         this.img = 'img/resources/img/slider_news_tvorche.png';
+                        this.imgstyle = "width:75%;"
                     }, 30 * 1000);
                 }
 
@@ -47,6 +49,7 @@ export default class StartPopupCtrl {
                     this.goToState = 'dashboard.registration';
                     this.display = 'block';
                     this.img = 'img/resources/img/modal-competition.jpg';
+                    this.imgstyle = "width:100%;"
                 }, 10 * 1000);
             }
         }
