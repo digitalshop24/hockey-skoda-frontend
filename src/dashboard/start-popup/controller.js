@@ -20,8 +20,23 @@ export default class StartPopupCtrl {
                         this.buttonText = 'Пройти тест-драйв';
                         this.goToState = 'dashboard.tdrive';
                         this.display = 'block';
+                        this.img = 'img/resources/img/modal-competition.jpg';
+                        this.imgstyle = "width:100%;"
                     }, 30 * 1000);
                 }
+                else {
+                    $timeout(() => {
+                        $localStorage['tdrivePopupWasShown'] = true;
+                        this.headerText = 'Творческое задание';
+                        this.descrText = 'В розыгрыше автомобилей';
+                        this.buttonText = 'Участвовать';
+                        this.goToState = 'dashboard.tdrive';
+                        this.display = 'block';
+                        this.img = 'img/resources/img/slider_news_tvorche.png';
+                        this.imgstyle = "width:75%;"
+                    }, 30 * 1000);
+                }
+
             });
 
         } else {
@@ -33,6 +48,8 @@ export default class StartPopupCtrl {
                     this.buttonText = 'Зарегистрироваться';
                     this.goToState = 'dashboard.registration';
                     this.display = 'block';
+                    this.img = 'img/resources/img/modal-competition.jpg';
+                    this.imgstyle = "width:100%;"
                 }, 10 * 1000);
             }
         }
