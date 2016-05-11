@@ -2,10 +2,30 @@
 	.slick-slider {
 		margin:0;
 	}
+	.slick-dots {
+		top: 50vh;
+		li {
+			display: block;
+		}
+	}
+	.slick-dots li button::before {
+		font-size: 1rem;
+		opacity: 1;
+		color: $white;
+	}
+	.slick-dots li.slick-active button::before {
+		opacity: 1;
+		color: $green_main;
+	}
 	.slide {
 		background-repeat: no-repeat;
 		background-size: cover;
 		padding: 10vh 0;
+		h2 {
+			color: $white;
+			font-weight: 800;
+			padding-left: 108px;
+		}
 	}
 	.block_1 {
 		width: 66%;
