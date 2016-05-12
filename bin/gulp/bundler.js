@@ -18,11 +18,9 @@ module.exports = function (bundler, config) {
         .pipe(source(config.dest))
         .pipe(buffer())
         .pipe(sourcemaps.init({loadMaps: generalConfig.mode == 'dev'}))
-        .pipe(ngAnnotate());
+        .pipe(ngAnnotate())
+        .pipe(uglify({mangle : false}));
 
-    /*if (!config.noMinify) {
-        bundle.pipe(uglify({mangle : false}));
-    }*/
 
     bundle
         .pipe(sourcemaps.write("."))
