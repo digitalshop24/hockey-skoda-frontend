@@ -27,13 +27,13 @@ export default class StartPopupCtrl {
                 else {
                     $timeout(() => {
                         $localStorage['tdrivePopupWasShown'] = true;
-                        this.headerText = 'Творческое задание';
-                        this.descrText = 'В розыгрыше автомобилей';
-                        this.buttonText = 'Участвовать';
+                        this.headerText = 'Творческий этап розыгрыша автомобиля ';
+                        this.descrText = ' ';
+                        this.buttonText = 'Перейти на страницу';
                         this.goToState = 'dashboard.tdrive';
                         this.display = 'block';
                         this.img = 'img/resources/img/slider_news_tvorche.png';
-                        this.imgstyle = "width:75%;"
+                        this.imgstyle = "width:75%; margin: 0 auto;"
                     }, 30 * 1000);
                 }
 

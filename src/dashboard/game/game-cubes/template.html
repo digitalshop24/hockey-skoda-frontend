@@ -144,7 +144,7 @@
                 <div class="mobal-button priz clearfix">
                     <div class="mobal-button-left"></div>
                     <div class="mobal-button-right ">
-                        <button class="btn btn_primary" ng-disabled="(ctrl.currentCell.cell_type == 'green' && !ctrl.coupons) || ctrl.ballsDeficit" ng-click="ctrl.startGame()">Играть!</button>
+                        <button class="btn btn_primary" ng-disabled="(ctrl.currentCell.cell_type == 'green' && !ctrl.coupons) || ctrl.ballsDeficit || !ctrl.isUserSetDealer" ng-click="ctrl.startGame()">Играть!</button>
                     </div>
                     <div class="mobal-button-center" ng-show="(ctrl.currentCell.cell_type == 'blue' || ctrl.coupons) && !ctrl.ballsDeficit">
                         <p>Приготовьтесь отвечать на время</p>
@@ -154,6 +154,9 @@
                     </div>
                     <div class="mobal-button-center" ng-show="ctrl.ballsDeficit">
                         <p style="color: red">Вам не хватает баллов для игры</p>
+                    </div>
+                    <div class="mobal-button-center" ng-show="!ctrl.isUserSetDealer">
+                        <p style="color: red">Выберите диллера в <a style="color: red" ng-click="ctrl.goToTestDrives()" ui-sref="dashboard.profile.prizes">личном кабинете</a></p>
                     </div>
                 </div>
             </div>

@@ -192,6 +192,28 @@
               </div>
 
         </div>
+        
+    
+       <div class="row banner"  ng-show="!$state.includes('dashboard.general-news') && !$state.includes('dashboard.main-news')
+    && !$state.includes('dashboard.blog') && !$state.includes('dashboard.facts') && !$state.includes('dashboard.newspage')">
+          <div class="container">
+            <div class="row">
+              <!-- <div class="col-md-4 text-center"> -->
+               <!--  <img src="img/resources/img/baner.png" alt="" class="img-responsive"> -->
+                <!-- <img src="img/resources/img/prizes/prize2.png" alt="" class="img-responsive">
+              </div> -->
+              <div class="col-md-12 text-center">
+                <h4 style="padding-top: 20px;">Билеты Россия - Норвегия.</h4>
+                <h6 style="padding: 10px 0 20px 0;">РОЗЫГРЫШ 13.05, НА ФОРУМЕ, В 14:00. 3 КОМПЛЕКТА.</h6>
+                <button class="btn btn_primary small" ui-sref="dashboard.forumtopic({id: 355, page: 1})"  style=""> Участвовать</button>
+              </div>
+              <!-- <div class="col-md-2 text-center">
+                
+              </div> -->
+            </div>
+          </div>
+        </div>  
+  
     </div>
         <div class="dropdown_news " ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false" ng-mouseover="ctrl.isPNewsOpen = true;">
                             <ul >
@@ -299,10 +321,10 @@
                                 <a href="https://www.microsoft.com/ru-ru/store/apps/2016-iihf/9nblggh58zvv" target="_blank"><img src="img/resources/img/windows_app.png" alt="" class="img-responsive" ></a>
                                 <!-- <a href="" ui-sref="dashboard.prizenew" class="link_default" ng-click="ctrl.isMenuOpen = false">Смотреть</a> -->
                             </div>
-                            <div ng-show="ctrl.isForecastOpen"  style="background-image: url('img/resources/img/prizes/prize2.png')">
-                                <h4>Билеты на матч Россия-Норвегия</h4>
-                                <p>Набери  750 баллов и поучавствуй в розыгрыше билетов нашей сборной</p>
-                                <a href="" ui-sref="dashboard.prizenew" class="link_default" ng-click="ctrl.isMenuOpen = false">Смотреть</a>
+                            <div ng-show="ctrl.isForecastOpen"  style="background-image: url('img/resources/img/slider_news_tvorche.png')">
+                                <h4>Творческий <br> этап розыгрыша <br> автомобиля</h4>
+                                <p></p>
+                                <button href="" ui-sref="dashboard.forumtopic({id: 329, page: 1})" class="btn_primary btn small" ng-click="ctrl.isMenuOpen = false">Перейти на страницу</button>
                             </div>
                             <div ng-show="ctrl.isForumOpen"  style="background-image: url('img/resources/img/prizes/prize10.png')">
                                 <h4>Аквагрим для болельшиков</h4>
