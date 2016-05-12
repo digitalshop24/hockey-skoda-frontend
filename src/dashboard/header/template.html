@@ -192,18 +192,26 @@
               </div>
 
         </div>
-        <a ui-sref="dashboard.forumtopic({id: 329, page: 1})" ng-show="!$state.includes('dashboard.general-news') && !$state.includes('dashboard.main-news')
+        
+    
+        <div class="row banner"  ng-show="!$state.includes('dashboard.general-news') && !$state.includes('dashboard.main-news')
     && !$state.includes('dashboard.blog') && !$state.includes('dashboard.facts') && !$state.includes('dashboard.newspage')">
-        <div class="row banner" style="">
-          <div class="col-md-5 text-center">
-            <img src="img/resources/img/baner.png" alt="" class="img-responsive">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 text-center">
+                <img src="img/resources/img/baner.png" alt="" class="img-responsive">
+              </div>
+              <div class="col-md-6">
+                <h4 style="padding-top: 20px;">Творческое задание</h4>
+                <h4 style="padding-bottom: 30px;">В розыгрыше автомобиля</h4>
+              </div>
+              <div class="col-md-2 text-center">
+                <button class="btn btn_primary small" ui-sref="dashboard.forumtopic({id: 329, page: 1})" > Участвовать</button>
+              </div>
+            </div>
           </div>
-          <div class="col-md-7">
-            <h3 style="padding-top: 40px;">Творческое задание</h3>
-            <h3 style="padding-bottom: 30px;">В розыгрыше автомобиля</h3>
-          </div>
-        </div>
-        </a>
+        </div>  
+  
     </div>
         <div class="dropdown_news " ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false" ng-mouseover="ctrl.isPNewsOpen = true;">
                             <ul >
