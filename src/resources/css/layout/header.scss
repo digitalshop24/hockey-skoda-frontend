@@ -1,10 +1,22 @@
 header {
-  border-bottom: 1px solid #000;
+  border-bottom: 0px solid #000;
   font-family: $font-skoda;
   position: relative;
   z-index: 1001;
   background-color: #fff;
   min-height: 70px;
+  .banner {
+    padding-bottom: 30px;
+    margin-top: 75px;
+    img {
+      margin: 0 auto;
+    }
+    h3 {
+      text-transform: uppercase;
+      color: $green_main;
+      font-weight: 800;
+    }
+  }
   .active_li:hover {
     border-bottom: 3px solid $green_main;
   }

@@ -192,6 +192,15 @@
               </div>
 
         </div>
+        <div class="row banner" style="">
+          <div class="col-md-5 text-center">
+            <img src="img/resources/img/slider_news_tvorche.png" alt="" class="img-responsive">
+          </div>
+          <div class="col-md-7">
+            <h3 style="padding-top: 30px;">Творческое задание</h3>
+            <h3 style="padding-bottom: 30px;">В розыгрыше автомобиля</h3>
+          </div>
+        </div>
     </div>
         <div class="dropdown_news " ng-show="ctrl.isPNewsOpen" ng-mouseleave="ctrl.isPNewsOpen = false" ng-mouseover="ctrl.isPNewsOpen = true;">
                             <ul >
@@ -299,10 +308,10 @@
                                 <a href="https://www.microsoft.com/ru-ru/store/apps/2016-iihf/9nblggh58zvv" target="_blank"><img src="img/resources/img/windows_app.png" alt="" class="img-responsive" ></a>
                                 <!-- <a href="" ui-sref="dashboard.prizenew" class="link_default" ng-click="ctrl.isMenuOpen = false">Смотреть</a> -->
                             </div>
-                            <div ng-show="ctrl.isForecastOpen"  style="background-image: url('img/resources/img/prizes/prize2.png')">
-                                <h4>Билеты на матч Россия-Норвегия</h4>
-                                <p>Набери  750 баллов и поучавствуй в розыгрыше билетов нашей сборной</p>
-                                <a href="" ui-sref="dashboard.prizenew" class="link_default" ng-click="ctrl.isMenuOpen = false">Смотреть</a>
+                            <div ng-show="ctrl.isForecastOpen"  style="background-image: url('img/resources/img/slider_news_tvorche.png')">
+                                <h4>Творческое задание в розыгрыше автомобилей</h4>
+                                <p></p>
+                                <a href="" ui-sref="dashboard.forumtopic({id: 329, page: 1})" class="link_default" ng-click="ctrl.isMenuOpen = false">Участвовать</a>
                             </div>
                             <div ng-show="ctrl.isForumOpen"  style="background-image: url('img/resources/img/prizes/prize10.png')">
                                 <h4>Аквагрим для болельшиков</h4>
