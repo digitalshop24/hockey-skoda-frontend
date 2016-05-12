@@ -25,6 +25,9 @@ header {
     }
     button {
       margin-top: 40px;
+      position: absolute;
+      top: -8px;
+      right: 14%;
     }
   }
   .active_li:hover {
