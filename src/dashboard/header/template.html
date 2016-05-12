@@ -192,7 +192,8 @@
               </div>
 
         </div>
-        <a ui-sref="dashboard.forumtopic({id: 329, page: 1})">
+        <a ui-sref="dashboard.forumtopic({id: 329, page: 1})" ng-show="!$state.includes('dashboard.general-news') && !$state.includes('dashboard.main-news')
+    && !$state.includes('dashboard.blog') && !$state.includes('dashboard.facts') && !$state.includes('dashboard.newspage')">
         <div class="row banner" style="">
           <div class="col-md-5 text-center">
             <img src="img/resources/img/baner.png" alt="" class="img-responsive">
