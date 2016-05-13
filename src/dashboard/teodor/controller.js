@@ -12,6 +12,34 @@ export default class TeodorCtrl {
         this.localStorage = $localStorage;
         this.handlePosts(this.events);
         this.iceHockeySponsor = sponsors.find(sponsor => sponsor.id == 2);
+        this.responsive = [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+
+                }
+            },
+
+            {
+                breakpoint: 530,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+
+                }
+            }
+
+        ];
 
         if (this.localStorage['socials-filters']) {
             ['fbFilter', 'vkFilter', 'twitterFilter', 'instagramFilter'].forEach(filterName => {
