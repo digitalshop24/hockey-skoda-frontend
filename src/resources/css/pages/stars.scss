@@ -61,24 +61,38 @@
       cursor:pointer;
     }
     .foto_set {
-      display:none;
-      position: absolute;
-      top: 30px;
-      width: 90%;
+      // display:none;
+      // position: absolute;
+      // top: 30px;
+      // width: 90%;
       text-transform: uppercase;
       color: #fff;
-      height: auto;
       cursor: pointer;
-      background-color: RGBA(0, 0, 0, 0.3);
-      height: 300px;
+      // background-color: RGBA(0, 0, 0, 0.3);
+      // height: 300px;
       padding-top: 50px;
     }
-    .foto_set:hover {
+    .btn_links {
+      display:none;
+      position: absolute;
+      top: 29px;
+      height: 300px;
+      background-color: RGBA(0, 0, 0, 0.3);
+      width: 90%;
+      button {
+        position: absolute;
+        top: 240px;
+        // border-radius: 50px;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+    .btn_links:hover {
       display: inline-block;
     }
-    .foto:hover +.foto_set {
+    .foto:hover +.btn_links {
       display: inline-block;
     }
+    
     .description {
       width: 100%;
       height: 150px;
