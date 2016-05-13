@@ -15,48 +15,13 @@
     font-weight: 600;
     background-color: $white;
   }
-  .fio_teodor {
-      cursor: pointer;
-      &::after {
-        position:absolute;
-        bottom:-3px;
-        left:0px;
-        content:'';
-        height: 3px;
-        width:100%;
-        transition: background 1000ms linear;
-        background:rgba(255,255,255,0);
-      }
-      &::before {
-        position:absolute;
-        bottom:-16px;
-        left:50%;
-        margin-left:-13px;
-        content:'';
-        height: 0px;
-        width:0px;
-      }
-      &:hover::after {
-        position:absolute;
-        bottom:-3px;
-        left:0px;
-        content:'';
-        height: 3px;
-        width:100%;
-        transition: background 1000ms linear;
-        background:#4ba82e;
-      }
-      &:hover::before {
-        position:absolute;
-        bottom:-16px;
-        left:50%;
-        margin-left:-13px;
-        content:'';
-        height: 13px;
-        width:27px;
-        background-image: url("img/resources/img/icon-treug.png") ;
-      }
-    }  
+  .teodor_slide {
+    cursor: pointer;
+    border-bottom: 2px solid $white;
+  }  
+  .teodor_slide:hover {
+    border-bottom: 2px solid $green_main;
+  }
 
   &-tittle {
     min-width:320px;
