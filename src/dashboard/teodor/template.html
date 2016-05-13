@@ -1,45 +1,26 @@
 
-<section class="teodor">
+<section class="teodor" style="background-image: url('{{ctrl.activeChild.additional_image.original}}')">
     <slick infinite="false" slides-to-show="5" slides-to-scroll="1" arrows="true" dots="false" class="second_slider_priz text-center" swipe="true"  responsive="ctrl.responsive"  >
             <!-- <div class="itep_priz" ng-click="ctrl.changeSponsor(sponsor)" ng-repeat="sponsor in ctrl.sponsors">
                 <img src="{{sponsor.image.small}}" alt="">
             </div> -->
-            <div class="teodor_slide">
-                <img src="img/resources/img/teodor/test1.jpg" alt="" class="img-responsive">
-                <p class="fio_teodor">Федор Парамонов</p>
+            <div class="teodor_slide" ng-repeat="child in ctrl.children" ng-click="ctrl.chooseChild(child)">
+                <img src="{{child.image.small}}" alt="" class="img-responsive">
+                <p class="fio_teodor" ng-bind="child.name">Федор Парамонов</p>
             </div>
-             <div class="teodor_slide">
-                <img src="img/resources/img/teodor/test2.jpg" alt="" class="img-responsive">
-                <p class="fio_teodor">Федор Парамонов</p>
-            </div>
-             <div class="teodor_slide">
-                <img src="img/resources/img/teodor/test3.jpg" alt="" class="img-responsive">
-                <p class="fio_teodor">Федор Парамонов</p>
-            </div>
-             <div class="teodor_slide">
-                <img src="img/resources/img/teodor/test4.jpg" alt="" class="img-responsive">
-                <p class="fio_teodor">Федор Парамонов</p>
-            </div>
-             <div class="teodor_slide">
-                <img src="img/resources/img/teodor/test1.jpg" alt="" class="img-responsive">
-                <p class="fio_teodor">Федор Парамонов</p>
-            </div>
-            <div class="teodor_slide">
-                <img src="img/resources/img/teodor/test4.jpg" alt="" class="img-responsive">
-                <p class="fio_teodor">Федор Парамонов</p>
-            </div>
+
 
         </slick>
     <div class="container">
         <div class="row">
         
             <div class="teodor-tittle">
-                <h3>Федор Парамонов</h3>
-                <h4>мой номер 10!</h4>
-                <h5>Меня зовут Федор, и я очень люблю <br> хоккей и мечтаю стать хоккеистом. Потому <br> что это моя
+                <h3 ng-bind="ctrl.activeChild.name">Федор Парамонов</h3>
+                <h4 ng-bind="ctrl.activeChild.short_content">мой номер 10!</h4>
+                <h5 ng-bind="ctrl.activeChild.middle_content">Меня зовут Федор, и я очень люблю <br> хоккей и мечтаю стать хоккеистом. Потому <br> что это моя
                     самая любимая игра! </h5>
 
-                <p>Наш Федя мечтает стать хоккеистом. Сейчас ему 7 лет, и он уже отлично играет. Федор ходит на тренировки круглый год, не пропускает ни одной трансляции во время чемпионатов, знает по фамилиям составы многих сборных и, конечно, очень искренне болеет за наших. В его мечтах о профессиональной карьере мы поддерживаем Федю всей семьей! Наш папа приходит на самые важные матчи Фединой командысо своими друзьями. И вот эти взрослые дяди болеют с трибун за детскую команду так же громко и отчаянно, как будто они на играх Чемпионата мира.<br>
+                <p ng-bind="ctrl.activeChild.content">Наш Федя мечтает стать хоккеистом. Сейчас ему 7 лет, и он уже отлично играет. Федор ходит на тренировки круглый год, не пропускает ни одной трансляции во время чемпионатов, знает по фамилиям составы многих сборных и, конечно, очень искренне болеет за наших. В его мечтах о профессиональной карьере мы поддерживаем Федю всей семьей! Наш папа приходит на самые важные матчи Фединой командысо своими друзьями. И вот эти взрослые дяди болеют с трибун за детскую команду так же громко и отчаянно, как будто они на играх Чемпионата мира.<br>
 
     Я, мама, поддерживаю Федю вообще всегда, не только в победные моменты. Я с ним на каждой тренировке, поэтому знаю и о достижениях, и о промахах. И всегда честно говорю Феде, если знаю, что сегодня он мог бы сыграть лучше. Но независимо от того, как прошла тренировка, я каждый день хвалю Федю и говорю, что не сомневаюсь в том, что у него все получится.<br>
 

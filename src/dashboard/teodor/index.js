@@ -27,6 +27,10 @@ export default angular.module('dashboard.teodor', [])
                         return teodorService.getPosts($stateParams.page, $stateParams.daysAmount, $stateParams.hashtag);
                     },
 
+                    children: (teodorService) => {
+                        return teodorService.getChildren();
+                    },
+
                     sponsors: (prizenewService) => {
                         return prizenewService.getPrizes();
                     },
