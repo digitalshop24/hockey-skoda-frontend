@@ -1,6 +1,7 @@
 'use strict';
 
 export default class countryCtrl {
-    constructor() {
+    constructor(history) {
+        this.history = history;
     }
 }
