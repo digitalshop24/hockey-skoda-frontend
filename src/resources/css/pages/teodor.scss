@@ -1,9 +1,28 @@
+
+
 .teodor {
   width:100%;
   min-height: 638px;
   background:url(img/resources/img/teodor/bg-teodor.jpg) no-repeat center center;
   background-size:cover;
   position:relative;
+  slick {
+    background-color: $white;
+  }
+  .fio_teodor {
+    padding: 10px 0px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: $white;
+  }
+  .teodor_slide {
+    cursor: pointer;
+    border-bottom: 2px solid $white;
+  }  
+  .teodor_slide:hover {
+    border-bottom: 2px solid $green_main;
+  }
+
   &-tittle {
     min-width:320px;
     max-width:700px;
