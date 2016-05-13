@@ -19,8 +19,15 @@
                     <li> ></li>
                     <li><a href="" ng-bind="ctrl.news.name" class="link_default"></a></li>
                 </ul>
+                <div style="float:right;" class="hidden">
+                    <button class="btn small " style="border-radius: 50px; margin-top: 25px;">Биография</button>
+                   <button class="btn small btn_common" style="border-radius: 50px; margin-top: 25px;">Интервью</button>
+                </div>
+                <div> 
+                   <share-buttons data="{}"></share-buttons>
+                   
+                </div>
                 
-                   <div> <share-buttons data="{}"></share-buttons></div>
                 
                 <h3 ng-bind="ctrl.news.name"></h3>
 
