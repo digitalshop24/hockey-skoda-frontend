@@ -5,6 +5,7 @@ export default class StartPopupCtrl {
 
         const showRegPopup = $localStorage['regPopupWasShown'];
         const showTDrivePopup = $localStorage['tdrivePopupWasShown'];
+        const konkursPopupWasShown = $localStorage['konkursPopupWasShown'];
 
         this.$state = $state;
         this.display = 'none';
@@ -25,16 +26,18 @@ export default class StartPopupCtrl {
                     }, 30 * 1000);
                 }
                 else {
-                    $timeout(() => {
-                        $localStorage['tdrivePopupWasShown'] = true;
-                        this.headerText = 'Творческий этап розыгрыша автомобиля ';
-                        this.descrText = ' ';
-                        this.buttonText = 'Перейти на страницу';
-                        this.goToState = 'dashboard.tdrive';
-                        this.display = 'block';
-                        this.img = 'img/resources/img/slider_news_tvorche.png';
-                        this.imgstyle = "width:75%; margin: 0 auto;"
-                    }, 30 * 1000);
+                    if (!konkursPopupWasShown) {
+                        $timeout(() => {
+                            $localStorage['konkursPopupWasShown'] = true;
+                            this.headerText = 'Творческий этап розыгрыша автомобиля ';
+                            this.descrText = ' ';
+                            this.buttonText = 'Перейти на страницу';
+                            this.goToState = 'dashboard.forumtopic({id: 329, page: 1})';
+                            this.display = 'block';
+                            this.img = 'img/resources/img/slider_news_tvorche.png';
+                            this.imgstyle = "width:75%; margin: 0 auto;"
+                        }, 30 * 1000);
+                    }
                 }
 
             });
