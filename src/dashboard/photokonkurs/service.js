@@ -8,13 +8,8 @@ export default class PhotocontestService {
         this.api = api;
     }
 
-    getAllPhotos(page, perPage) {
-        return this.api.get('/photo_game_posts',{
-            params: {
-                page: page,
-                per_page: perPage
-            }
-        }).then((res) => {
+    getAllPhotos() {
+        return this.api.get('/photo_game_posts').then((res) => {
             res.data.forEach((post) => {
                 post.user = Object.assign(new TopicUser(), post.user);
             });
