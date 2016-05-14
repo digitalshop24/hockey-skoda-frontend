@@ -18,4 +18,10 @@ export default class TeodorService {
             return res.data;
         });
     }
+
+    getChildren() {
+        return this.api.get('/posts/kids').then(res => {
+            return res.data.posts;
+        });
+    }
 }

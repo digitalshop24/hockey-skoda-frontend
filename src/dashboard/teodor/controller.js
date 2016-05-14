@@ -1,7 +1,7 @@
 'use strict';
 
 export default class TeodorCtrl {
-    constructor(posts, $scope, $localStorage, teodorService, page, daysAmount, hashtag, sponsors) {
+    constructor(posts, $scope, $localStorage, teodorService, page, daysAmount, hashtag, sponsors, children) {
         this.busy = false;
         this.hashtag = hashtag;
         this.page = page;
@@ -9,9 +9,11 @@ export default class TeodorCtrl {
         this.days = [];
         this.teodorService = teodorService;
         this.events = posts;
+        this.children = children;
         this.localStorage = $localStorage;
         this.handlePosts(this.events);
         this.iceHockeySponsor = sponsors.find(sponsor => sponsor.id == 2);
+        this.activeChild = children[0];
         this.responsive = [
             {
                 breakpoint: 1200,
@@ -54,6 +56,10 @@ export default class TeodorCtrl {
         this.filterByNetworks = post => {
             return $scope.ctrl.networks.indexOf(post.network) != -1;
         };
+    }
+
+    chooseChild(child) {
+        this.activeChild = child;
     }
 
     loadMore() {

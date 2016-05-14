@@ -20,7 +20,16 @@
                     <li><a href="" ng-bind="ctrl.news.name" class="link_default"></a></li>
                 </ul>
                 
-                   <div> <share-buttons data="{}"></share-buttons></div>
+                <div style="float:right;" ng-show="$state.includes('dashboard.stars')">
+                    <button class="btn small " style="border-radius: 50px; margin-top: 25px;">Биография</button>
+                   <button class="btn small btn_common" style="border-radius: 50px; margin-top: 25px;">Интервью</button>
+                </div>
+
+                <div> 
+                   <share-buttons data="{}"></share-buttons>
+                   
+                </div>
+                
                 
                 <h3 ng-bind="ctrl.news.name"></h3>
 

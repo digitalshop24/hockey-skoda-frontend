@@ -13,16 +13,9 @@ export default angular.module('dashboard.photocontest', [])
                 url: '/photocontest',
                 controller: PhotocontestCtrl,
                 controllerAs: 'ctrl',
-                params: {
-                    page: 1,
-                    perPage: 15
-                },
                 resolve: {
-                    photos: (generalPhotocontestService, $stateParams) => {
-                        return generalPhotocontestService.getAllPhotos($stateParams.page, $stateParams.perPage);
-                    },
-                    currentPage: ($stateParams) => {
-                        return $stateParams.page;
+                    photos: (generalPhotocontestService) => {
+                        return generalPhotocontestService.getAllPhotos();
                     },
                     perPage: ($stateParams) => {
                         return $stateParams.perPage;
