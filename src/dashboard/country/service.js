@@ -7,6 +7,7 @@ export default class CountryService {
 
     getHistory() {
         return this.api.get('/history').then((res) => {
+        	console.log(res.data);
             return res.data;
         });
     }
