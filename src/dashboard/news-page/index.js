@@ -19,7 +19,8 @@ export default angular.module('dashboard.newspage', [
                     rubric: '',
                     commentPage: 1,
                     commentsPerPage: 40,
-                    comments: []
+                    comments: [],
+                    isInterview: false
                 },
                 resolve: {
                     news: ($stateParams, newspageService) => {
@@ -44,6 +45,10 @@ export default angular.module('dashboard.newspage', [
 
                     page: ($stateParams) => {
                         return $stateParams.commentPage;
+                    },
+
+                    isInterview: ($stateParams) => {
+                        return $stateParams.isInterview;
                     }
                 }
             });

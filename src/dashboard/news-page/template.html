@@ -20,9 +20,9 @@
                     <li><a href="" ng-bind="ctrl.news.name" class="link_default"></a></li>
                 </ul>
                 
-                <div style="float:right;" ng-show="$state.includes('dashboard.stars')">
-                    <button class="btn small " style="border-radius: 50px; margin-top: 25px;">Биография</button>
-                   <button class="btn small btn_common" style="border-radius: 50px; margin-top: 25px;">Интервью</button>
+                <div style="float:right;" ng-show="ctrl.rubric.api_path == 'stars' && ctrl.news.interview">
+                    <button class="btn small" ng-class="{'btn_common': !ctrl.isInterview}" style="border-radius: 50px; margin-top: 25px;" ng-click="ctrl.isInterview = false">Биография</button>
+                    <button class="btn small" ng-class="{'btn_common': ctrl.isInterview}" style="border-radius: 50px; margin-top: 25px;" ng-click="ctrl.isInterview = true">Интервью</button>
                 </div>
 
                 <div> 
@@ -33,7 +33,8 @@
                 
                 <h3 ng-bind="ctrl.news.name"></h3>
 
-                <div class="wrapp_text" ng-bind-html="ctrl.news.content"></div>
+                <div class="wrapp_text" ng-show="!ctrl.isInterview" ng-bind-html="ctrl.news.content"></div>
+                <div class="wrapp_text" ng-show="ctrl.isInterview" ng-bind-html="ctrl.news.interview"></div>
 
             </div>
             <div class="col-md-4 visible-md visible-lg">
