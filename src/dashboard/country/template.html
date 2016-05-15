@@ -1,6 +1,6 @@
 <section class="country">
     <slick dots=true> 
-        <div class="slide" style="background-image:url('img/resources/img/city_bg.jpg');" ng-repeat="country in ctrl.history">
+        <div class="slide" style="background-image:url('{{country.additional_image.original}}');" ng-repeat="country in ctrl.history">
             <div class="container">
                 <div class="row">
                     <h2 ng-bind="country.country">Германия</h2>
