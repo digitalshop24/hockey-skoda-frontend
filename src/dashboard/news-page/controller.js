@@ -2,7 +2,7 @@
 
 
 export default class NewspageCtrl {
-    constructor(news, session, login, commentsInfo, newspageService, $document, page, $state, lastNews, championatNews, $scope) {
+    constructor(news, session, login, commentsInfo, newspageService, $document, page, $state, lastNews, championatNews, $scope, isInterview) {
         this.news = news;
         this.rubric = news.rubric;
         this.session = session;
@@ -15,6 +15,7 @@ export default class NewspageCtrl {
         this.$document = $document;
         this.currentPage = page;
         this.state = $state;
+        this.isInterview = isInterview;
         this.rubricState = this.getRubricState(this.rubric.api_path);
         this.indexToShowLastNews = this.lastNews.length - 5;
         this.shareData = {

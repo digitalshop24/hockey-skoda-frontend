@@ -38,8 +38,8 @@
 
                     <div class="btn_links">
                         <h4 class="foto_set text-center" ng-bind="news.name" ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">The <br> great<br> one</h4>
-                        <button class="btn small btn_common " style="left: 10px;">Биография</button>
-                        <button class="btn small btn_common " style="right: 10px;">Интервью</button>
+                        <button class="btn small btn_common" ng-show="news.has_interview" style="left: 10px;" ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})">Биография</button>
+                        <button class="btn small btn_common" ng-show="news.has_interview" style="right: 10px;" ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path, isInterview: true})">Интервью</button>
                     </div>
 
                     <div class="description">
