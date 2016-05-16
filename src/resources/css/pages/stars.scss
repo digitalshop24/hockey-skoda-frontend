@@ -72,12 +72,18 @@
       top: 29px;
       height: 300px;
       background-color: RGBA(0, 0, 0, 0.3);
-      width: 90%;
+      width: 100%;
       button {
         position: absolute;
         top: 240px;
-        // border-radius: 50px;
-        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 1);
+        &:hover {
+          border:1px solid #ccc;
+          background-color:#ccc;
+          color:#000;
+        }
+
       }
     }
     .btn_links:hover {
@@ -114,5 +120,15 @@
 
     }
 
+  }
+}
+
+.news {
+  .col-md-3 {
+    padding-left:0px;
+    padding-right:0px;
+    margin-left:5px;
+    margin-right:5px;
+    width:24%;
   }
 }
