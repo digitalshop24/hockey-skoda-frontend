@@ -122,6 +122,17 @@
 
   }
 }
+.wrapp_new .news .btn_links button {
+  display: block;
+  position:relative;
+  margin:10px auto 0;
+  top:0px;
+  left: auto !important;
+  right:auto !important;
+}
+.wrapp_one_news .wrapp_text  img  {
+  width:100%;
+}
 @media only screen and (min-width : 1100px) { 
   .news {
     .col-md-3 {
