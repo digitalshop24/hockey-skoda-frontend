@@ -3,7 +3,7 @@
 .teodor {
   width:100%;
   min-height: 638px;
-  background:url(img/resources/img/teodor/bg-teodor.jpg) no-repeat center center;
+  background-color:black;
   background-size:cover;
   position:relative;
   slick {
@@ -25,7 +25,7 @@
 
   &-tittle {
     min-width:320px;
-    max-width:700px;
+    max-width:1170px;
     padding:50px 40px 30px;
     position:relative;
     &:before {
@@ -132,7 +132,7 @@
   &-sokial {
     padding-left:40px;
     min-width:320px;
-    max-width:700px;
+    max-width:1170px;
     text-align:center;
   }
   .bot-text {
@@ -171,4 +171,14 @@ img.taggs {
 }
 .toggle-teodor ul li .off {
   margin-top:44px !important;
+}
+
+.teodor slick {
+  margin-bottom:0px;
+}
+.im-container {
+  min-width:320px;
+  max-width:1600px;
+  margin:0 auto;
+  min-height:520px;
 }

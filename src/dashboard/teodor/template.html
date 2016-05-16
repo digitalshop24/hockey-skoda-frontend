@@ -1,5 +1,5 @@
 
-<section class="teodor" style="background-image: url('{{ctrl.activeChild.additional_image.original}}')">
+<section class="teodor" >
     <slick infinite="false" slides-to-show="5" slides-to-scroll="1" arrows="true" dots="false" class="second_slider_priz text-center" swipe="true"  responsive="ctrl.responsive"  >
             <!-- <div class="itep_priz" ng-click="ctrl.changeSponsor(sponsor)" ng-repeat="sponsor in ctrl.sponsors">
                 <img src="{{sponsor.image.small}}" alt="">
@@ -11,7 +11,8 @@
 
 
         </slick>
-    <div class="container">
+        <div class="im-container" style="background-image: url('{{ctrl.activeChild.additional_image.original}}'); background-size:cover; background-position:center top;">
+             <div class="container">
         <div class="row">
         
             <div class="teodor-tittle">
@@ -47,6 +48,8 @@
             </div>
         </div>
     </div>
+        </div>
+   
 </section>
 
 <!-- <section class="slider_prizes prizes-teodor">
