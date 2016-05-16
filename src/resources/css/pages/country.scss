@@ -111,3 +111,52 @@
 	} 
 	
 }
+
+.country .slick-dots {
+		display:none !important;
+	}
+
+@media only screen and (max-width : 1100px) {
+	.country .block_1 {
+		width:100%;
+		margin-right:0px;
+		margin-left:0px;
+	}
+	.country .slick-dots {
+		width:170px;
+	}
+	.country .block_2 {
+		margin-right:0px;
+		width:50%;
+	}
+	.country .block_3 {
+		margin-left:0px;
+		width:45%;
+	}
+	.country .block_4 {
+		margin-left:0px;
+		width:45%;
+	}
+}
+@media only screen and (max-width : 718px) {
+	.country .slick-dots {
+		display:none !important;
+	}
+	.country .row {
+		padding:0px !important;
+	}
+	.country .block_2 {
+		margin-right:0px;
+		width:100%;
+		float:none;
+		margin-left:0px;
+	}
+	.country .block_3 {
+		margin-left:0px;
+		width:100%;
+	}
+	.country .block_4 {
+		margin-left:0px;
+		width:100%;
+	}
+}
