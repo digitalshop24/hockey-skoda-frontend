@@ -3,6 +3,10 @@
 		position: absolute;
 		z-index: -1;
 	}
+	.block {
+		background-size:cover;
+		background-position:center top;
+	}
 	.first_s {
 		min-height: 702px;
 		padding: 50px;
@@ -46,6 +50,26 @@
 				padding-top: 0px;
 			}
 
+		}
+	}
+}
+@media only screen and (min-width : 1280px) {
+	.mobile_app .first_s {
+		min-height:950px;
+	}
+}
+@media only screen and (max-width : 738px) {
+	.mobile_app {
+		.first_s { 
+			padding-top:70%;
+
+		}
+	}
+	.mobile_app {
+		.block {
+			background-size:130%;
+			background-position:right top;
+			background-repeat:no-repeat;
 		}
 	}
 }
