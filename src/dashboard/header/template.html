@@ -26,7 +26,9 @@
                    <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
                   <ul class="drilldown-sub">
                     <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Интересное</a></li>
-                    <a ui-sref="dashboard.infographics"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Инфографика сборной России</li></a>
+                    <a ui-sref="dashboard.mobileapp"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Мобильное приложение</li></a>
+                    <a ui-sref="dashboard.infographics"><li ng-click="ctrl.
+                    isMenuMobileOpen = !ctrl.isMenuMobileOpen">Инфографика сборной России</li></a>
                     <a ui-sref="dashboard.tantamareska"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Тантамареска</li></a>
                     <a ui-sref="dashboard.hockey-game"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Аэрохоккей</li></a>
                     <a ui-sref="dashboard.suggestions"><li  ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Пожелание сборной</li></a>
@@ -300,8 +302,8 @@
                                 <a ui-sref="dashboard.schedule" ng-click="ctrl.isMenuOpen = false"><li>Расписание матчей</li></a>
                                 <a ui-sref="dashboard.calendar" ng-click="ctrl.isMenuOpen = false"><li> Календарь</li></a>
                             </ul>
-                            <ul ng-show="ctrl.isInterestingOpen">
-
+                            <ul ng-show="ctrl.isInterestingOpen">  
+                                <a ui-sref="dashboard.mobileapp" ng-click="ctrl.isMenuOpen = false"><li>Мобильное приложение</li></a>    
                                 <a ui-sref="dashboard.infographics" ng-click="ctrl.isMenuOpen = false"><li> Инфографика сборной России</li></a>
                                 <a ui-sref="dashboard.tantamareska" ng-click="ctrl.isMenuOpen = false"><li class=""> Тантамареска</li></a>
                                 <a ui-sref="dashboard.hockey-game" ng-click="ctrl.isMenuOpen = false"><li class=""> Аэрохоккей</li></a>
