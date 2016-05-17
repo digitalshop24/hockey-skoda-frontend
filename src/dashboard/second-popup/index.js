@@ -5,7 +5,7 @@ import StartPopupCtrl from './controller.js';
 
 
 export default angular.module('dashboard.second-popup', [])
-    .directive('startPopup', function () {
+    .directive('secondPopup', function () {
         return {
             bindToController: true,
             template: require('./template.html'),

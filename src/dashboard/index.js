@@ -55,6 +55,7 @@ import photokonkurs from './photokonkurs/index';
 import startPopup from './start-popup/index';
 import mobileapp from './mobile-app/index';
 import country from './country/index';
+import secondPopup from './second-popup/index';
 
 
 
@@ -107,7 +108,8 @@ export default angular.module('dashboard',
         photokonkurs.name,
         startPopup.name,
         mobileapp.name,
-        country.name
+        country.name,
+        secondPopup.name
     ])
     .service('login', Login)
     .service('modal', Modal)

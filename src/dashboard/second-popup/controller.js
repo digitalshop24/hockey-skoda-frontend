@@ -8,7 +8,7 @@ export default class SecondPopupCtrl {
         this.$state = $state;
         this.display = 'none';
 
-        if (this.$state.includes('dashboard.prizenew')) {
+        // if () {
                 $localStorage['prizePopap'] = true;
                 this.headerText = 'Стоимость супер-ячейки снижена до 750 баллов!';
                 this.descrText = '';
@@ -17,8 +17,7 @@ export default class SecondPopupCtrl {
                 this.display = 'block';
                 this.img = 'img/resources/img/modal-competition.jpg';
                 this.imgstyle = "width:100%;"
-            }, 10);
-        }
+        // }
 
 
     go() {
