@@ -1,13 +1,16 @@
 'use strict';
 
 export default class SecondPopupCtrl {
-    constructor(session, $localStorage, mytestdriveService, $timeout, $state) {
+    constructor(session, $localStorage, $timeout, $state) {
 
-        const prizePopap = $localStorage['prizePopap'];
+        const prizePopup = $localStorage['prizePopup'];
         this.$state = $state;
         this.display = 'none';
-        // if (true) {
-                $localStorage['prizePopap'] = true;
+
+
+        if (session.isAuthenticated && !prizePopup) {
+            $timeout(() => {
+                $localStorage['prizePopup'] = true;
                 this.headerText = 'Стоимость супер-ячейки снижена до 750 баллов!';
                 this.descrText = '';
                 this.buttonText = 'Участвовать';
@@ -15,7 +18,8 @@ export default class SecondPopupCtrl {
                 this.display = 'block';
                 this.img = 'img/resources/img/modal-competition.jpg';
                 this.imgstyle = "width:100%;"
-        // }
+            }, 10 * 1000);
+        }
     }
 
     go() {

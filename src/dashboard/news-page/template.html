@@ -33,6 +33,8 @@
                 
                 <h3 ng-bind="ctrl.news.name"></h3>
 
+                <!--<img src="{{ctrl.news.additional_image.medium}}" />-->
+
                 <div class="wrapp_text" ng-show="!ctrl.isInterview" ng-bind-html="ctrl.news.content"></div>
                 <div class="wrapp_text" ng-show="ctrl.isInterview" ng-bind-html="ctrl.news.interview"></div>
 
@@ -46,7 +48,7 @@
                 </form>
                 <p class="littel_date" ng-bind="ctrl.championatNews[0].published_at | amDateFormat:'DD MMMM'"></p>
                 <div class="img-block-br" ng-show="ctrl.rubric.api_path == 'stars'">
-                    <div class="img-block" ng-repeat="lastNews in ctrl.championatNews | filter: ctrl.filterForStarsRubric">
+                    <div class="img-block" ng-repeat="lastNews in ctrl.championatNews | filter: ctrl.filterForStarsRubric | limitTo: 10">
                         <a href="#" ui-sref="dashboard.newspage({id:lastNews.id, rubric:lastNews.rubric.api_path})">
                             <img src="{{lastNews.image.small}}" alt="">
                             <div class="img-block-text">

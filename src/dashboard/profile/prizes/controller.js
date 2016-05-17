@@ -43,8 +43,9 @@ export default class PrizesCtrl {
 
     save(href) {
         var a = document.createElement('a');
-        var url = href;
-        a.href = url;
+        a.target = '_blank'
+        document.body.appendChild(a);
+        a.href = href;
         a.download = 'myTantam.png';
         a.click();
     }
