@@ -1,7 +1,7 @@
 'use strict';
 
 import angular from "angular";
-import StartPopupCtrl from './controller.js';
+import SecondPopupCtrl from './controller.js';
 
 
 export default angular.module('dashboard.second-popup', [])
