@@ -8,7 +8,7 @@ const ROW_WEIGHT = 20;
 const GREEN_AMOUNT = 20;
 const BLUE_AMOUNT = 20;
 const BLUE_CELL_PRICE = 750;
-const GREEN_CELL_PRICE = 1500;
+const GREEN_CELL_PRICE = 750;
 
 export default class CubesCtrl {
     constructor(sectors, sector, coupons, cubesService, $interval, modal, $state, id, user, session, auth) {
