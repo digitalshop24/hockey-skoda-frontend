@@ -11,7 +11,6 @@ export default class StartPopupCtrl {
         this.display = 'none';
 
         if (session.isAuthenticated) {
-
             mytestdriveService.getCoupon().then(coupon => {
                 if (!coupon && !session.user.has_drive_request) {
                     $timeout(() => {
