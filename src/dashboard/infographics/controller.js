@@ -3,7 +3,7 @@
 
 export default class InfoCtrl {
     constructor() {
-    	this.infoRu = true;
+    	this.infoRu = 'ru';
     	console.log('this.infoRu', this.infoRu);
     }
 }
