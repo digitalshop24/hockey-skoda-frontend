@@ -2,6 +2,7 @@
 
 
 export default class RegsuccessCtrl {
-    constructor() {
+    constructor(confirmation) {
+        this.confirmation = confirmation;
     }
 }
