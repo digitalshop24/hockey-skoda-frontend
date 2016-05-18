@@ -33,7 +33,7 @@
                 
                 <h3 ng-bind="ctrl.news.name"></h3>
 
-                <img src="{{ctrl.news.additional_image.medium}}" class="img-responsive">
+                <img src="{{ctrl.news.additional_image.original}}" class="img-responsive" style="margin: 20px auto;">
 
                 <div class="wrapp_text" ng-show="!ctrl.isInterview" ng-bind-html="ctrl.news.content"></div>
                 <div class="wrapp_text" ng-show="ctrl.isInterview" ng-bind-html="ctrl.news.interview"></div>
