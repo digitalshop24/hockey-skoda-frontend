@@ -4,15 +4,16 @@
 
 <div class="conteiner-fluid">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-12" ng-init="ctrl.infoRu = true">
 			<!-- <select name="" id="" class="input_default input_medium" style="width: 350px; margin: 30px;">
 				<option value=""> Инфографик России</option>
 				<option value="" >Инфографик Чехии</option>
-			</select> -->			
-			<!-- <select class="input_default input_small">
-                <option value="" ng-model="ctrl.infoRu"> Инфографик России</option>
-                <option value ng-model="ctrl.infoCz">Все команды</option>
-            </select> -->
+			</select>	 -->		
+			<select ng-model="infoRu" class="input_default input_medium" style="width: 350px; margin: 30px;">
+		      <option value="true">Инфографика России</option>
+		      <option value="false">Инфографика Чехии</option>
+		    </select>
+		    <p>{{ctrl.infoRu}}</p>
 		</div>
 	</div>
 </div>
@@ -21,5 +22,6 @@
 
         <share-buttons data="{imgUrl: 'https://cloud.githubusercontent.com/assets/8914398/14587340/45f02382-04ba-11e6-87d0-f1419b8e0b8a.png'}"></share-buttons>
     </ul>
-    <img src="img/resources/img/infographics/Skoda_hockey_info.jpg" class="img-responsive" style="width: 100%; margin-top: 20px;">
+    <img src="img/resources/img/infographics/Skoda_hockey_info.jpg" class="img-responsive" style="width: 100%; margin-top: 20px;" ng-show="ctrl.infoRu">
+    <img src="img/resources/img/infographics/info_cz.png" class="img-responsive" style="width: 100%; margin-top: 20px;" ng-show="!ctrl.infoRu">
 </section>
