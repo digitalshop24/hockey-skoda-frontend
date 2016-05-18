@@ -68,7 +68,12 @@
                                 </div>
                                 <div class="col-md-9">
                                     <div class="date">
-                                        <p ng-bind="message.created_at | amDateFormat:'DD.MM.YYYY h:mm'"/>
+                                        <p ng-bind="message.created_at | amDateFormat:'DD.MM.YYYY h:mm'"/ style="">
+                                        <p class="plus" style="float:right; font-size:1.6rem;">
+                                            <span style="cursor:pointer;">-</span>
+                                            <span>10</span>
+                                            <span style="cursor:pointer;">+</span>
+                                        </p>
                                     </div>
                                     <p ng-bind-html="message.message"></p>
                                 </div>
