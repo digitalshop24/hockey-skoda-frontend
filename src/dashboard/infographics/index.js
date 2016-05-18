@@ -1,6 +1,8 @@
 'use strict';
 
 import angular from 'angular';
+import InfoCtrl from './controller.js';
+
 
 export default angular.module('dashboard.infographics', [])
     .config(function ($stateProvider) {
@@ -11,6 +13,8 @@ export default angular.module('dashboard.infographics', [])
                     description: 'Уделите внимание красивой инфографике успехов нашей команды за всю историю хоккея!'
                 },
                 template: require('./template.html'),
-                url: '/infographics/ru'
+                url: '/infographics',
+                controller: InfoCtrl,
+                controllerAs: 'ctrl'
             });
     });
