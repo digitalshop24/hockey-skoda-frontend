@@ -15,6 +15,14 @@ export default class ForumtopicService {
         })
     }
 
+    vote(id, mark) {
+        return this.api.post(`/forum/messages/${id}/vote`, {
+            value: mark
+        }).then((res) => {
+            return res.data;
+        })
+    }
+
     getTopicMessages(id, page, perPage) {
         return this.api.get(`/forum/topics/${id}/messages`, {
             params: {
