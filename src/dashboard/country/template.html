@@ -45,8 +45,9 @@
 <section class="country" >
     <div class="container-fluid">
       <div class="row">
-          <slick id="slider_main" class="single-item main_country"  dots='true' slides-to-show=1 as-nav-for=".other_tantam" slides-to-scroll=1   arrows='false' custom-paging = "ctrl.nav">
-            <div class="slide" style="background-image:url('{{country.additional_image.original}}');" ng-repeat="country in ctrl.history" data-thumb='{{country.year}}'>
+          <slick id="slider_main" class="single-item main_country"  dots='true' slides-to-show=1 as-nav-for=".other_tantam" slides-to-scroll=1   arrows='false' custom-paging = "ctrl.nav(slick, index)">
+            <div class="slide" style="background-image:url('{{country.additional_image.original}}');" data-year="{{country.year}}"  data-country="{{country.country}}"
+                 ng-repeat="country in ctrl.history" data-thumb='{{country.year}}'>
             <div class="container">
                 <div class="row">
                     <h2 ng-bind="country.country">Германия</h2>
@@ -54,7 +55,7 @@
                 <div class="row" style="padding: 0px 100px;">
                     <div class="col-md-8 block_1">
                         <div class="img clearfix">
-                          <img src="{{country.additional_image.original}}" alt="">
+                          <img src="{{country.central_image.original}}" alt="">
                         </div>
                         <div class="block_1-im">
                           <img src="{{country.image.small}}" alt="">
