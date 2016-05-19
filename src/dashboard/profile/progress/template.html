@@ -2,6 +2,9 @@
     <h4>Моя активность</h4>
     <p class="date" ng-bind="'Сегодня, ' + ctrl.today"/>
     <p>Чтобы набрать достаточное для розыгрыша призов количество баллов, Вам необходимо принять участие в активностях на сайте! Практически за каждое результативное действие Вам будут начисляться баллы!</p>
+    <!--<p ng-show="!ctrl.user.confirmed_at">Для завершение регистрации необходимо подтвердить e-mail. <a href="#" ng-click="ctrl.resendEmail()">Отправить повторно</a></p>
+-->
+
     <ul class="text-center">
         <slick slides-to-show=4 slides-to-scroll=2>
             <div ng-repeat="achievement in ctrl.achievements">

@@ -29,7 +29,7 @@
                     <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Интересное</a></li>
                     <a ui-sref="dashboard.mobileapp"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Мобильное приложение</li></a>
                     <a ui-sref="dashboard.infographics"><li ng-click="ctrl.
-                    isMenuMobileOpen = !ctrl.isMenuMobileOpen">Инфографика сборной России</li></a>
+                    isMenuMobileOpen = !ctrl.isMenuMobileOpen">Инфографика сборных</li></a>
                     <a ui-sref="dashboard.tantamareska"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Тантамареска</li></a>
                     <a ui-sref="dashboard.hockey-game"><li ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Аэрохоккей</li></a>
                     <a ui-sref="dashboard.suggestions"><li  ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen">Пожелание сборной</li></a>
@@ -198,7 +198,7 @@
         
     
        <div class="row banner"  ng-show="!$state.includes('dashboard.general-news') && !$state.includes('dashboard.main-news')
-    && !$state.includes('dashboard.blog') && !$state.includes('dashboard.facts') && !$state.includes('dashboard.newspage')">
+    && !$state.includes('dashboard.blog') && !$state.includes('dashboard.facts') && !$state.includes('dashboard.newspage') && !$state.includes('dashboard.photocontest')">
           <div class="container">
             <div class="row">
               <div class="col-md-4 text-center">
@@ -213,6 +213,28 @@
               <!-- <div class="col-md-2 text-center">
                   <button class="btn btn_primary small" ui-sref="dashboard.forumtopic({id: 329, page: 1})"  style=""> Участвовать</button>
               </div> -->
+            </div>
+          </div>
+        </div>  
+        <div class="row banner_mobile"  ng-show="$state.includes('dashboard.photocontest')" style="background-image: url('img/resources/img/banner_mobile.jpg')">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2 text-center">
+                <img src="img/resources/img/img_baner_mobile.png" alt="" class="img-responsive">
+              
+              </div>
+              <div class="col-md-4 text-left">
+                <h2 style="padding-top: 20px; cursor:pointer;" ui-sref="dashboard.mobileapp">2016 IIHF </h2>
+                <p ui-sref="dashboard.mobileapp" style="cursor:pointer;">Официальное приложение ЧМХ 2016 от ŠKODA</p>
+                <p ui-sref="dashboard.mobileapp" style="cursor:pointer;">Весь чемпионат в твоем телефоне</p>
+                
+              </div>
+              <div class="col-md-6 text-center" style="padding-top: 50px;">
+                  <a href="https://itunes.apple.com/ru/app/2016-iihf/id1069017229?mt=8" target="_blank"><img src="img/resources/img/apple_app.png" alt="" style="padding-right:10px;" class="img_baner_mobile"></a>
+                  <a href="https://play.google.com/store/apps/details?id=com.iihf.android2016" target="_blank"><img src="img/resources/img/android_app.png" alt="" style="padding-right:10px;" class="img_baner_mobile"></a>
+                  <a href="https://www.microsoft.com/ru-ru/store/apps/2016-iihf/9nblggh58zvv" target="_blank"><img src="img/resources/img/windows_app.png" alt="" class="img_baner_mobile"></a>
+              </div>
+             
             </div>
           </div>
         </div>  
@@ -307,7 +329,7 @@
                             </ul>
                             <ul ng-show="ctrl.isInterestingOpen">  
                                 <a ui-sref="dashboard.mobileapp" ng-click="ctrl.isMenuOpen = false"><li>Мобильное приложение</li></a>    
-                                <a ui-sref="dashboard.infographics" ng-click="ctrl.isMenuOpen = false"><li> Инфографика сборной России</li></a>
+                                <a ui-sref="dashboard.infographics" ng-click="ctrl.isMenuOpen = false"><li> Инфографика сборных</li></a>
                                 <a ui-sref="dashboard.tantamareska" ng-click="ctrl.isMenuOpen = false"><li class=""> Тантамареска</li></a>
                                 <a ui-sref="dashboard.hockey-game" ng-click="ctrl.isMenuOpen = false"><li class=""> Аэрохоккей</li></a>
                                 <a ui-sref="dashboard.suggestions" ng-click="ctrl.isMenuOpen = false"><li> Пожелание сборной</li></a>
@@ -316,7 +338,8 @@
                             </ul>
                         </div>
                         <div class="col-md-6 info_menu">
-                            <div ng-show="ctrl.isNewsOpen"  style="background-image: url('img/resources/img/baner_IIHF.png'); background-size: 45% auto; background-position: 90% 10px;">
+                            <div ng-show="ctrl.isNewsOpen"  style="background-image: url('img/resources/img/baner_IIHF.png'); background-size: 45% auto; background-position: 90% 10px; cursor:pointer;" 
+                            ui-sref="dashboard.mobileapp">
                                 <h4>2016 IIHF</h4>
                                 <p>Официальное приложение ЧМХ 2016,<br>
                                 Весь чемпионат в твоем смартфоне!</p>

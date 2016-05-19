@@ -10,8 +10,13 @@ export default angular.module('dashboard.registration-success', [])
         $stateProvider
             .state('dashboard.registration-success', {
                 template: require('./template.html'),
-                url: '/registration-success',
+                url: '/mail/users/confirmation?confirmation_token=',
                 controller: RegsuccessCtrl,
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
+                resolve: {
+                    confirmation: (regsuccessService, $stateParams) => {
+                        return regsuccessService.confirm($stateParams.confirmation_token);
+                    }
+                }
             });
     });

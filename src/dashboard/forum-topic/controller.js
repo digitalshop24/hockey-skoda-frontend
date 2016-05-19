@@ -20,6 +20,15 @@ export default class ForumtopicCtrl {
         this.showPagination = topic.messages_count > messagesPerPage;
     }
 
+    vote(message, mark) {
+        if(!message.mark) {
+            this.forumtopicService.vote(message.id, mark).then(res => {
+                message.rating += mark;
+                message.mark = mark;
+            });
+        }
+    }
+
     openEditor() {
         this.isEditorOpen = !this.isEditorOpen;
     }

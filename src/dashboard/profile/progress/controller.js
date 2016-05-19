@@ -2,7 +2,7 @@
 
 
 export default class ProgressCtrl {
-    constructor(achievements, moment, modalSpeed) {
+    constructor(achievements, moment, modalSpeed, user, progressService) {
         this.achievements = achievements;
         this.achievements.forEach((achievement) => {
             achievement.max_points = achievement.max_points || '&#8734;'; // infinity sign
@@ -13,7 +13,14 @@ export default class ProgressCtrl {
         });
         this.today = moment().format('DD MMMM');
         this.modalSpeed = modalSpeed;
+        this.user = user;
+        this.progressService = progressService;
     }
+
+    resendEmail() {
+        this.progressService.resendEmail();
+    }
+
     openSpeed() {
         if(localStorage["modalSpeedProfile"] == null){
             localStorage["modalSpeedProfile"] = "showed";

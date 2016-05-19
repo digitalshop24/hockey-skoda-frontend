@@ -103,7 +103,7 @@
 
                 <div class="row" ng-show="ctrl.isCurrentCarSkoda">
                     <div class="col-md-6 left">
-                        <h4>Укажите модель?<span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <h4>Укажите модель?<!-- <span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
                         <select style="width: 350px" class="input_default input_small"
                                 ng-options="car for car in ctrl.skodaCars" ng-model="ctrl.form.skoda_model">
                             <option disabled selected value>Выберите модель</option>
@@ -112,7 +112,7 @@
                     </div>
 
                     <div class="col-md-6 left">
-                        <h4>Идентификационный № ?<span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <h4>Идентификационный № ?<!-- <span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
                         <input type="text" ng-model="ctrl.form.vincode" class="input_default input_small" placeholder="VIN 17 Символов">
                     </div>
                 </div>

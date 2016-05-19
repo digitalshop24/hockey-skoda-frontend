@@ -30,6 +30,21 @@ header {
       right: 14%;
     }
   }
+  .banner_mobile {
+    margin-top: 78px;
+    background-color: #e6e6e6;
+    h2 {
+      color: $white;
+      font-weight: 800;
+    }
+    p {
+      color: $white;
+      font-size: 1.5rem;
+    }
+    .img_baner_mobile {
+      
+    }
+  }
   .active_li:hover {
     border-bottom: 3px solid $green_main;
   }
