@@ -4,10 +4,16 @@ import angular from 'angular';
 import config from './config';
 
 export default class AuthService {
-    constructor(api, session, $rootScope) {
+    constructor(api, session, $rootScope, profileService) {
         this.api = api;
         this.session = session;
         this.$rootScope = $rootScope;
+        if (session.isAuthenticated) {
+            profileService.getCurrentUser().then(res => {
+                res.token = session.token;
+                this.initSession({data: {user: res}});
+            })
+        }
     }
 
     register(credentials) {
@@ -35,7 +41,7 @@ export default class AuthService {
         this.$rootScope.$broadcast('user:updated', this.session.user);
     }
 
-    isGuest(){
+    isGuest() {
         return this.session.user.isGuest();
     }
 
