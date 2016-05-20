@@ -1,5 +1,5 @@
-<section class="country">
-    <slick dots=true> 
+<!-- <section class="country">
+    <slick dots=false > 
         <div class="slide" style="background-image:url('{{country.additional_image.original}}');" ng-repeat="country in ctrl.history">
             <div class="container">
                 <div class="row">
@@ -27,19 +27,92 @@
                     <div class="col-md-4 block_4 text-center">
                         <h5>Лучший бомбардир</h5>
                         <h3 ng-bind="country.best_bombardier">Джон Таварес</h3>
-                    </div>
+                    </div> 
                 </div>
 
             </div>
-           
         </div>
         <style>
-            .country .slick-dots li.slick-active::after {
+            .country .slick-dots li::after {
                 content: '{{country.year}}. {{country.country}}' !important;
             }
         </style>
 
-
     </slick>     
+
+</section> -->
+
+<section class="country" >
+    <div class="container-fluid">
+      <div class="row">
+          <slick id="slider_main" class="single-item main_country"  dots='true' slides-to-show=1 as-nav-for=".other_tantam" slides-to-scroll=1   arrows='false' custom-paging = "ctrl.nav(slick, index)">
+            <div class="slide" style="background-image:url('{{country.additional_image.original}}');" data-year="{{country.year}}"  data-country="{{country.country}}"
+                 ng-repeat="country in ctrl.history" data-thumb='{{country.year}}'>
+            <div class="container">
+                <div class="row">
+                    <h2 ng-bind="country.country">Германия</h2>
+                </div>
+                <div class="row" style="padding: 0px 100px;">
+                    <div class="col-md-8 block_1">
+                        <div class="img clearfix">
+                          <img src="{{country.central_image.original}}" alt="">
+                        </div>
+                        <div class="block_1-im">
+                          <img src="{{country.image.small}}" alt="">
+                          <h5>О чемпионате</h5>
+                          <p ng-bind="country.content">Первый матч был с игран в специально оборудованнай домащней арене Шальке-04 в Гельзенкирхенте</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 block_3 text-center">
+                        <h5>Голов забито</h5>
+                        <h3 ng-bind="country.goals">277</h3>
+                    </div>
+                    <div class="col-md-4 block_4 text-center">
+                        <h5>Лучший бомбардир</h5>
+                        <h3 ng-bind="country.best_bombardier">Джон Таварес</h3>
+                    </div> 
+                    <div class="col-md-4 block_2 text-center">
+                        <img src="img/resources/img/medals.png" alt="" class="img-responsive">
+                        <h5>Чемпионы:</h5>
+                        <h3 ng-bind="country.champion.country">Чехия</h3>
+                        <h5>Вице-чемпионы:</h5>
+                        <h3 ng-bind="country.vice_champion.country">Россия</h3>
+                        <h5>Третье место:</h5>
+                        <h3 ng-bind="country.third_place.country">Швеция</h3>
+                    </div>
+                    
+                    
+                </div>
+
+            </div> 
+          
+        </div> 
+        
+
+          </slick>
+          
+          <!-- <slick class="single-item-li other_tantam" vertical=true slides-to-show='country' focus-on-select="true" infinite="false" slides-to-scroll=1 arrows=false dots="true" as-nav-for=".main_country" arrows='false' focus-on-select="true" center-mode="false">
+              <div class="block-slid-2 box" ng-class="active" ng-repeat="country in ctrl.history">
+                  <div class="cricle"></div>
+                  <span>{{country.year}}. {{country.country}}</span>
+              </div>
+          </slick> -->
+           <div class="container arrow-con clearfix">
+            <div class="arrow-block" >
+              <slick class="single-item-arrow other_tantam other_tantam-arrow" slides-to-show='1' prev-arrow=".slick-prev" next-arrow=".slick-next"  infinite="false" slides-to-scroll=1 as-nav-for=".main_country" arrows='true' focus-on-select="true" center-mode="true">
+                  <div class="block-slid-2 box" ng-class="active" ng-repeat="country in ctrl.history">
+                      <span>{{country.year}}</span>
+                  </div>
+              </slick>
+                <button type="button" class="slick-prev">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="slick-next">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </button> 
+              </div>
+          </div>
+      </div>
+  </div>
 </section>
 

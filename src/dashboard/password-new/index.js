@@ -10,7 +10,7 @@ export default angular.module('dashboard.passwordnew', [])
         $stateProvider
             .state('dashboard.passwordnew', {
                 template: require('./template.html'),
-                url: '/users/password/edit?reset_password_token=',
+                url: '/mail/users/password/edit?reset_password_token=',
                 controller: PasswordnewCtrl,
                 controllerAs: 'ctrl',
                 resolve: {
