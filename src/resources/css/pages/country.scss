@@ -81,7 +81,7 @@
 	.block_1 {
 		width: 66%;
 		margin: 10px;
-		height: 750px;
+		height: 700px;
 		background-color: $white;
 		padding:0px;
 		&-im {
@@ -110,7 +110,7 @@
 		width: 29.8%;
 		margin: 10px;
 		
-		height: 417px;
+		height: 368px;
 		background-color: $white;
 		padding: 10px;
 		img {
@@ -163,15 +163,21 @@
 }
 
 .arrow-con {
-	position:relative;
-	background:#fff;
+	position: absolute;
+	background: #fff;
+	top: 0px;
+	margin: 0 auto;
+	left: 50%;
+	margin-left: -585px;
+	width:1170px !important;
+
 	.arrow-block {
 		position: absolute;
     width: 24.8%;
     height: 62px;
-    right: 101px;
-    margin: 10px;
-    top: -905px;
+    right: 110px;
+
+    top: 25px;
 	}
 	.single-item-arrow {
 		z-index: 222;
@@ -265,7 +271,9 @@
 @media only screen and (max-width : 1380px) {
 	.arrow-con {
 		.arrow-block {
-			top: -915px;
+			top: 35px;
+			margin: 0 auto;
+
 		}
 	}
 	.country .slick-dots {
@@ -296,15 +304,25 @@
 			width:100%;
 		}
 	.arrow-con .arrow-block {
-		top: -1700px;
-		right: 90px;
+
+		right: 110px;
 	}
 
 }
+@media (max-width: 992px) {
+	.arrow-con {
+		width: 970px !important;
+	}
+}
+@media (max-width: 768px) {
+	.arrow-con {
+		width: 750px !important;
+	}
+}
 @media only screen and (max-width:990px) {
 	.arrow-con .arrow-block {
-		top: -1653px;
-		right: 90px;
+
+
 		.ng-binding {
 			display: none;
 		}
