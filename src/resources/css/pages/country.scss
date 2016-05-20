@@ -86,6 +86,7 @@
 		padding:0px;
 		&-im {
 			padding:10px;
+
 		}
 		.img {
 			width:100%;
@@ -177,7 +178,7 @@
     height: 62px;
     right: 110px;
 
-    top: 25px;
+    top: 50px;
 	}
 	.single-item-arrow {
 		z-index: 222;
@@ -202,6 +203,9 @@
 	}
 	.ng-binding {
 		font-size:21px;
+	}
+	h2.ng-binding {
+		font-size:50px;
 	}
 	.slick-center {
 		font-size:0px;
