@@ -2,15 +2,18 @@
 
 
 export default class PhotocontestCtrl {
-    constructor(photos, generalPhotocontestService, session, progressService, modal) {
+    constructor(login, photos, generalPhotocontestService, session, progressService, modal) {
         this.photos = photos;
         this.service = generalPhotocontestService;
         this.user = session.user;
         this.progressService = progressService;
         this.modal = modal;
+        this.loginPopup = login;
+        this.session = session;
     }
 
     resendEmail() {
+        $('#myModal').modal('hide');
         this.progressService.resendEmail().then(res => {
             this.modal.open({
                 resolve: {
@@ -29,9 +32,12 @@ export default class PhotocontestCtrl {
             });
         });
     }
+    
 
     likePhoto(photo) {
-        if(this.user.confirmed_at) {
+        if(!this.session.isAuthenticated) {
+         this.loginPopup.open()
+        } else  if(this.user.confirmed_at) {
             this.service.likePhoto(photo.id).then(res => {
                 photo.liked_last_day = true;
                 photo.likes++;
@@ -39,6 +45,5 @@ export default class PhotocontestCtrl {
         } else {
             $('#myModal').modal('show');
         }
-
     }
 }

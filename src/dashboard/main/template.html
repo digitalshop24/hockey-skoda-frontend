@@ -79,17 +79,21 @@
             <slick infinite=true slides-to-show=1 slides-to-scroll=1 dots=true>
                     <div class="preview_header_right " style="background-image: url('none.png'); ">
                         <div class="wrapp_content text-center tvor" style="padding-left: 0;">
-                            <h3>Творческое задание  </h3>
-                            <h5 class="h5_titel">в розыгрыше <span style="color: #4ba82e;">автомобиля</span></h5>
-                            <img src="img/resources/img/slider_news_tvorche.png" alt="">
+                            <h3>Голосование началось!  </h3>
+                            <h5 class="h5_titel">(розыгрыш <span style="color: #4ba82e;">автомобиля</span>)</h5>
+                            <!-- <img src="img/resources/img/slider_news_tvorche.png" alt=""> -->
+                            <i class="fa fa-heart-o"  aria-hidden="true" style="font-size: 5rem; color:#4ba82e;"></i> 
+                            <h5 style="padding-bottom: 30px;" ng-bind="ctrl.likeAmount">1023</h5>
+
                              <ul>
-                                <p class="p_titel">Прием фотографий закончится через:</p>
-                                <li><h5><timer end-time="1463778000000">{{days}}</timer> :</h5><p>дней</p> </li>
+                                <p class="p_titel">До окончания голосования осталось:</p>
+                                <li><h5><timer end-time="1464393600000">{{days}}</timer> :</h5><p>дней</p> </li>
                                 
-                                <li><h5><timer end-time="1463778000000">{{hhours}}</timer>  :</h5><p>часов</p> </li>
+                                <li><h5><timer end-time="1464393600000">{{hhours}}</timer>  :</h5><p>часов</p> </li>
                                 
-                                <li><h5><timer end-time="1463778000000">{{mminutes}}</timer> </h5><p>минут</p> </li>
-                                <button class="btn btn_primary small" ui-sref="dashboard.forumtopic({id: 329, page: 1})">Участвовать</button>
+                                <li><h5><timer end-time="1464393600000">{{mminutes}}</timer> </h5><p>минут</p> </li>
+                                
+                                <button class="btn btn_primary small" ui-sref="dashboard.photocontest">Голосовать</button>
                              </ul>  
                             
                         </div>
