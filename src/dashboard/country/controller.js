@@ -6,7 +6,7 @@ export default class CountryCtrl {
         this.nav = function(slider, i) {
         	const year = $(slider.$slides[i]).data('year');
         	const country = $(slider.$slides[i]).data('country');
-            return '<a>'+year+ " -- " + country +'</a>';
+            return '<a>'+year+ " - " + country +'</a>';
         };
     }
 }
