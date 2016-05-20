@@ -38,6 +38,10 @@ export default angular.module('dashboard.main', [
                         return mainService.getSocPosts();
                     },
 
+                    likeAmount: mainService => {
+                        return mainService.getLikeAmount();
+                    },
+
                     lightingNews: ($stateParams, mainService) => {
                         return mainService.getLightingNews($stateParams.lightingNewsAmount);
                     },

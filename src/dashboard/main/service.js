@@ -66,6 +66,12 @@ export default class MainService {
         });
     }
 
+    getLikeAmount() {
+        return this.api.get("/photo_game_posts/likes_count").then((res) => {
+            return res.data.total;
+        });
+    }
+
     getLastNews(rubric, page, amount, origin) {
         return this.api.
             get(`/posts/${rubric}`, {

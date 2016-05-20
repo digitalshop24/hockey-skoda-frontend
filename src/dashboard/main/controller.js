@@ -3,7 +3,7 @@
 
 export default class MainCtrl {
     constructor(lightingNews, lastNewsInfo, mainService, page, lastNewsAmount, starsInfo, schedule,
-                $scope, teams, championatNewsInfo, mainSlides, hashtags, socPosts) {
+                $scope, teams, championatNewsInfo, mainSlides, hashtags, socPosts, likeAmount) {
         this.service = mainService;
         this.allTeams = teams.filter(team => team.short_name);
         this.mainSlides = mainSlides;
@@ -26,6 +26,7 @@ export default class MainCtrl {
         this.lastNews = lastNewsInfo.posts.reverse();
         this.stars = starsInfo.posts;
         this.page = page;
+        this.likeAmount = likeAmount;
         this.lastNewsAmount = lastNewsAmount;
         this.slidesToShow = 5;
         this.indexToShowLastNews = this.lastNews.length - this.slidesToShow;

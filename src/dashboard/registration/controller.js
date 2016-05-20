@@ -38,7 +38,7 @@ export default class RegistrationCtrl {
             return this.profileService.update(this.form);
         }).then(() => {
             this.form = {};
-            this.state.go('dashboard.profile');
+            this.state.go('dashboard.profile.progress');
         })
             .catch((err) => {
                 this.modal.open({
