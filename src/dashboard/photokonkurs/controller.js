@@ -8,11 +8,12 @@ export default class PhotocontestCtrl {
         this.user = session.user;
         this.progressService = progressService;
         this.modal = modal;
-        this.openLoginPopup = login;
+        this.loginPopup = login;
         this.session = session;
     }
 
     resendEmail() {
+        $('#myModal').modal('hide');
         this.progressService.resendEmail().then(res => {
             this.modal.open({
                 resolve: {
@@ -32,10 +33,10 @@ export default class PhotocontestCtrl {
         });
     }
     
-    
+
     likePhoto(photo) {
         if(!this.session.isAuthenticated) {
-         this.openLoginPopup.open()
+         this.loginPopup.open()
         } else  if(this.user.confirmed_at) {
             this.service.likePhoto(photo.id).then(res => {
                 photo.liked_last_day = true;
