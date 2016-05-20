@@ -4,23 +4,60 @@
 		margin:0;
 	}
 	.slick-dots {
-		top: 50vh;
+		width: 150px;
+		top: 80px;
+		left: 50px;
 		li {
 			display: block;
+			width:10px;
+			height:10px;
+			background:rgba(255,255,255,0);
+			border-radius:50%;
+			position:relative;
+			margin:15px 0;
+
 		}
 	}
-	.slick-dots li.slick-active::after {
+	.slick-dots li a {
 		position: absolute;
-		width: 130px;
+		width: 150px;
 		height: 23px;
-		left: 35px;
-		background-color: $white;
+		left: 20px;
+		background-color: rgba(255,255,255,0);
 		z-index: 1000;
 		content: '';
-		margin-top: -20px;
+		margin-top: -7px;
 		font-size: 1.4rem;
 		color: $green_main;
 		font-weight: 600;
+		display:block;
+		font-size:0px;
+		&:after {
+			position: absolute;
+			left: -19px;
+			width: 10px;
+			height: 10px;
+			content: '';
+			background: #fff;
+			border-radius: 50%;
+			top: 6px;
+		}
+
+	}
+	.slick-dots {
+		li.slick-active {
+			background:rgab(255,255,255,0);
+			a {
+				background-color: rgba(255,255,255,1);
+				display:block;
+				font-size:11px;
+
+				line-height: 23px;
+				&:after {
+					background:#4ba82e;
+				}
+			}
+		}
 	}
 	.slick-dots li button::before {
 		font-size: 1rem;
@@ -150,7 +187,7 @@
 	}
 }
 .country {
-	height:915px;
+	min-height:915px;
 	position:relative;
 	.single-item-arrow {
 		width:150px;
@@ -203,9 +240,9 @@
 	}
 
 	.main_country {
-		height:915px;
+		min-height:915px;
 		.slide {
-			height:915px;
+			min-height:915px;
 		}
 	}
 }
@@ -229,26 +266,27 @@
 
 
 @media only screen and (max-width : 1100px) {
-	.country .block_1 {
-		width:100%;
-		margin-right:0px;
-		margin-left:0px;
-	}
-	.country .slick-dots {
-		width:170px;
-	}
-	.country .block_2 {
-		margin-right:0px;
-		width:50%;
-	}
-	.country .block_3 {
-		margin-left:0px;
-		width:45%;
-	}
-	.country .block_4 {
-		margin-left:0px;
-		width:45%;
-	}
+		.country .block_1 {
+			width:100%;
+			margin-right:0px;
+			margin-left:0px;
+		}
+		.country .slick-dots {
+			width:100%;
+		}
+		.country .block_2 {
+			margin-right:0px;
+			width:100%;
+		}
+		.country .block_3 {
+			margin-left:0px;
+			width:100%;
+		}
+		.country .block_4 {
+			margin-left:0px;
+			width:100%;
+		}
+
 }
 @media only screen and (max-width : 718px) {
 	.country .slick-dots {
