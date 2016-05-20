@@ -15,7 +15,7 @@ export default class SecondPopupCtrl {
                 this.descrText = '';
                 this.buttonText = 'Участвовать';
                 this.goToState = 'dashboard.game.cubes';
-                this.display = 'block';
+                this.display = 'none';
                 this.img = 'img/resources/img/modal-competition.jpg';
                 this.imgstyle = "width:100%;"
             }, 10 * 1000);
