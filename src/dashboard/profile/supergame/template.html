@@ -9,7 +9,57 @@
 	    	</p>
     	<img src="img/resources/img/Layer-37.jpg" alt="" class="img-responsive">
     	<p style="margin-top: 10px;">Вы готовы к супер игре?!</p>
-    	<button class="btn btn_secondary tiny">Участвовать</button>
+    	<button class="btn btn_secondary tiny" ng-click="ctrl.startQuiz()">Участвовать</button>
     </div>
     
+</div>
+
+
+
+<div class="modal fade" id="question" role="dialog" data-keyboard="false" data-backdrop="static">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<button type="button" class="close" data-dismiss="modal"></button>
+			<div class="timer">
+				<p id='p' ng-bind="ctrl.availableTime"></p>
+				<span>сек</span>
+			</div>
+			<div class="game-modal-content">
+				<h2 class="vop">Вопрос <b>№{{ctrl.questionIndex}}</b></h2>
+
+				<p ng-bind="ctrl.question.body"></p>
+			</div>
+
+
+			<div class="otvet-ches">
+				<div class="otvet-ches-item" ng-repeat="answer in ctrl.question.answer_options">
+					<div class="radio active">
+						<input id="{{answer.id}}" type="radio" ng-model="ctrl.currentAnswer"
+							   name="radio2" value="{{answer.answer}}"
+							   ng-disabled="ctrl.isTimeOver">
+						<label for="{{answer.id}}">
+							<span></span>
+							<div>{{question.answer}}</div>
+						</label>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="mobal-button priz otvet clearfix">
+				<div class="mobal-button-left">
+
+				</div>
+				<div class="mobal-button-right " ng-click="ctrl.getNextQuestion()">
+					<button class="btn btn_primary">Далее</button>
+				</div>
+				<div class="mobal-button-center" ng-show="ctrl.isTimeOver && !ctrl.currentAnswer">
+					<p class="red-one width1">Вы не уложились в отведенное время</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
 </div>
