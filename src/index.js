@@ -1,7 +1,6 @@
 'use strict';
 
 import angular from 'angular';
-
 import index from './index/index';
 import dashboard from './dashboard/index';
 import Api from './api';
