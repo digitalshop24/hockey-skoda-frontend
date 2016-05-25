@@ -13,3 +13,13 @@ body {
 #nprogress .bar {
   background: #4ba82e;
 }
+
+.modal-backdrop.in {
+  position: relative !important;
+}
+.modal-open .modal {
+  margin-top: 170px;
+}
+.supergame {
+  margin-top: 160px;
+}
