@@ -28,7 +28,7 @@ export default class SupergameCtrl {
 
     retrieveNextQuestion() {
         this.$interval.cancel(this.timeInterval);
-        this.supergameService.getNextQuestion(res => {
+        this.supergameService.getNextQuestion().then(res => {
             this.questionIndex = res.question_number;
             this.userAnswerId = res.answer_id;
             this.question = res.question;
