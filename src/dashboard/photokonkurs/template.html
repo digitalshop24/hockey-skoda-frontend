@@ -30,7 +30,7 @@
                         <div class="photokonkurs-item-post-img">
                             <img src="{{photo.image.small}}" alt="">
                             <span class="bg-black-licke">
-                              <span class="photo-like"  ng-click="ctrl.likePhoto(photo)"><i class="fa fa-heart-o"  ng-class="{'fa-heart': photo.liked_last_day}" aria-hidden="true"></i></span>
+                              <span class="photo-like"><i class="fa fa-heart-o"  ng-class="{'fa-heart': photo.liked_last_day}" aria-hidden="true"></i></span>
                             </span>
                         </div>
                         <div class="photokonkurs-item-post-text clearfix">
@@ -49,7 +49,7 @@
                                 </div>
                             </div>
                             <div class="photokonkurs-item-post-text-like" >
-                                <span class="photo-like" ng-click="ctrl.likePhoto(photo)"><i class="fa fa-heart-o" ng-class="{'fa-heart': photo.liked_last_day}" aria-hidden="true"></i>{{photo.likes}}</span>
+                                <span class="photo-like"><i class="fa fa-heart-o" ng-class="{'fa-heart': photo.liked_last_day}" aria-hidden="true"></i>{{photo.likes}}</span>
                             </div>
                         </div>
                     </div>

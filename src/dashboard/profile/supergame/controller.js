@@ -89,6 +89,7 @@ export default class SupergameCtrl {
                 if (this.availableTime <= 0) {
                     this.isTimeOver = true;
                     this.$interval.cancel(this.timeInterval);
+                    this.getNextQuestion();
                 }
             }, 1000);
         });
@@ -154,6 +155,7 @@ export default class SupergameCtrl {
                 if (this.availableTime <= 0) {
                     this.isTimeOver = true;
                     this.$interval.cancel(this.timeInterval);
+                    this.getSuperFinalNextQuestion();
                 }
             }, 1000);
         });
