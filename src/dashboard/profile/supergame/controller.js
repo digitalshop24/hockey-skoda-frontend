@@ -1,13 +1,16 @@
 'use strict';
 
 const lastQuestionIndex = 42;
+const lastSuperFinalQuestionIndex = 10;
 const questionsPerTour = 7;
 const secondsForAnswer = 20;
 const timeBreakBetweenTours = 60;
 
 export default class SupergameCtrl {
-    constructor(supergameService, $interval) {
+    constructor(supergameService, superFinalService, $interval, session) {
         this.supergameService = supergameService;
+        this.superFinalService = superFinalService;
+        this.user = session.user;
         this.$interval = $interval;
         this.answers = [];
         this.questionIndex = 1;
@@ -16,6 +19,7 @@ export default class SupergameCtrl {
 
 
     startQuiz() {
+        this.isSuperFinal = false;
         this.getNextQuestion();
     }
 
@@ -27,6 +31,10 @@ export default class SupergameCtrl {
     }
 
     getNextQuestion() {
+        if(this.isSuperFinal) {
+            this.getSuperFinalNextQuestion();
+            return;
+        }
 
         if (this.isQuizFinished()) {
             this.supergameService.checkQuestion(this.userAnswerId, this.currentAnswer).then(res => {
@@ -104,5 +112,54 @@ export default class SupergameCtrl {
 
     closeQuestionModal() {
         $('#question').modal('hide');
+    }
+
+    startSuperfinalQuiz() {
+        this.isSuperFinal = true;
+        this.getSuperFinalNextQuestion();
+    }
+
+    getSuperFinalNextQuestion() {
+
+        if (this.isSuperFinalQuizFinished()) {
+            this.superFinalService.checkQuestion(this.userAnswerId, this.currentAnswer).then(res => {
+                this.closeQuestionModal();
+                this.openQuizResults();
+            });
+
+        } else {
+            if (this.currentAnswer) {
+                this.superFinalService.checkQuestion(this.userAnswerId, this.currentAnswer).then(res => {
+                    this.retrieveSuperfinalNextQuestion();
+                })
+            } else {
+                this.retrieveSuperfinalNextQuestion();
+            }
+        }
+    }
+
+
+    retrieveSuperfinalNextQuestion() {
+        this.$interval.cancel(this.timeInterval);
+        this.superFinalService.getNextQuestion().then(res => {
+            this.questionIndex = res.question_number;
+            this.userAnswerId = res.answer_id;
+            this.question = res.question;
+            this.isTimeOver = false;
+            this.openQuestionModal();
+            this.availableTime = secondsForAnswer;
+
+            this.timeInterval = this.$interval(() => {
+                this.availableTime -= 1;
+                if (this.availableTime <= 0) {
+                    this.isTimeOver = true;
+                    this.$interval.cancel(this.timeInterval);
+                }
+            }, 1000);
+        });
+    }
+
+    isSuperFinalQuizFinished() {
+        return this.questionIndex == lastSuperFinalQuestionIndex;
     }
 }
