@@ -94,7 +94,7 @@
     </div>
 </section>
 
-<section class="add_topic">
+<section class="add_topic" ng-show="!ctrl.topic.closed">
     <div class="container">
         <div class="row">
             <button ng-disabled="!ctrl.session.isAuthenticated" ng-show="!ctrl.isEditorOpen" ng-click="ctrl.openEditor()" type="button" class="btn btn_primary main"
