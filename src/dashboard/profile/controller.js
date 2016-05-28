@@ -106,8 +106,11 @@ export default class ProfileCtrl {
     }
 
     retrieveNextQuestion() {
+        this.currentAnswer = undefined;
         this.$interval.cancel(this.timeInterval);
+        this.isButtonDisabled = true;
         this.supergameService.getNextQuestion().then(res => {
+            this.isButtonDisabled = false;
             this.questionIndex = res.question_number;
             this.userAnswerId = res.answer_id;
             this.question = res.question;
@@ -168,8 +171,11 @@ export default class ProfileCtrl {
 
 
     retrieveSuperfinalNextQuestion() {
+        this.currentAnswer = undefined;
         this.$interval.cancel(this.timeInterval);
+        this.isButtonDisabled = true;
         this.superFinalService.getNextQuestion().then(res => {
+            this.isButtonDisabled = false;
             this.questionIndex = res.question_number;
             this.userAnswerId = res.answer_id;
             this.question = res.question;

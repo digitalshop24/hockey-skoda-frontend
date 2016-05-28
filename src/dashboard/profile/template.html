@@ -114,7 +114,7 @@
 
         <!-- Modal content-->
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal"></button>
+            <!--<button type="button" class="close" data-dismiss="modal"></button>-->
             <div class="timer">
                 <p id='p' ng-bind="ctrl.availableTime"></p>
                 <span>сек</span>
@@ -147,7 +147,7 @@
 
                 </div>
                 <div class="mobal-button-right " ng-click="ctrl.getNextQuestion()">
-                    <button class="btn btn_primary" ng-bind="ctrl.isQuizFinished() ? 'Завершить' : 'Далее'">Далее
+                    <button class="btn btn_primary" ng-bind="ctrl.isQuizFinished() ? 'Завершить' : 'Далее'" ng-disabled="ctrl.isButtonDisabled">Далее
                     </button>
                 </div>
                 <div class="mobal-button-center" ng-show="ctrl.isTimeOver && !ctrl.currentAnswer">
@@ -165,7 +165,7 @@
 
         <!-- Modal content-->
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal"></button>
+            <!--<button type="button" class="close" data-dismiss="modal"></button>-->
             <div class="timer">
                 <p id='p' ng-bind="ctrl.timeBreak"></p>
                 <span>сек</span>
