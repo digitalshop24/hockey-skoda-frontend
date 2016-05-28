@@ -55,13 +55,15 @@ export default class ProfileCtrl {
     }
 
     startNewTour() {
-        this.$interval.cancel(this.timeBreakInterval);
         this.questionIndex++;
         this.closeTourModal();
         this.getNextQuestion();
     }
 
     getNextQuestion() {
+        this.$interval.cancel(this.timeInterval);
+        this.$interval.cancel(this.timeBreakInterval);
+
         if (this.isSuperFinal) {
             this.getSuperFinalNextQuestion();
             return;
@@ -82,6 +84,7 @@ export default class ProfileCtrl {
             this.timeBreakInterval = this.$interval(() => {
                 this.timeBreak -= 1;
                 if (this.timeBreak <= 0) {
+                    this.$interval.cancel(this.timeBreakInterval);
                     this.startNewTour();
                 }
             }, 1000);
