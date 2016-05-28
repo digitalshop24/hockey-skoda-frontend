@@ -107,3 +107,103 @@
 
     </div>
 </div>
+
+
+<div class="modal fade supergame" id="question" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <div class="timer">
+                <p id='p' ng-bind="ctrl.availableTime"></p>
+                <span>сек</span>
+            </div>
+            <div class="game-modal-content">
+                <h2 class="vop">Вопрос <b>№{{ctrl.questionIndex}}</b></h2>
+
+                <p ng-bind="ctrl.question.body"></p>
+            </div>
+
+
+            <div class="otvet-ches">
+                <div class="otvet-ches-item" ng-repeat="answer in ctrl.question.answer_options">
+                    <div class="radio active">
+                        <input id="{{answer.id}}" type="radio" ng-model="ctrl.currentAnswer"
+                               name="radio2" value="{{answer.answer}}"
+                               ng-disabled="ctrl.isTimeOver">
+                        <label for="{{answer.id}}">
+                            <span></span>
+
+                            <div>{{answer.answer}}</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mobal-button priz otvet clearfix">
+                <div class="mobal-button-left">
+
+                </div>
+                <div class="mobal-button-right " ng-click="ctrl.getNextQuestion()">
+                    <button class="btn btn_primary" ng-bind="ctrl.isQuizFinished() ? 'Завершить' : 'Далее'">Далее
+                    </button>
+                </div>
+                <div class="mobal-button-center" ng-show="ctrl.isTimeOver && !ctrl.currentAnswer">
+                    <p class="red-one width1">Вы не уложились в отведенное время</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="modal fade supergame" id="tour" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <div class="timer">
+                <p id='p' ng-bind="ctrl.timeBreak"></p>
+                <span>сек</span>
+            </div>
+            <div class="game-modal-content">
+                <h2 class="vop">Тур № {{ctrl.currentTour}} завершен.</h2>
+
+                <p>Вы можете начать следующий тур прямо сейчас или сделать перерыв</p>
+            </div>
+
+            <div class="mobal-button priz otvet clearfix">
+                <div class="mobal-button-left">
+
+                </div>
+                <div class="mobal-button-right " ng-click="ctrl.startNewTour()">
+                    <button class="btn btn_primary">Старт</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="modal fade supergame" id="results" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <div class="game-modal-content">
+                <h5 style="padding-top: 20px;">Викторина завершена!</h5>
+                <br>
+                <p> Результаты будут сообщены Вам в течение 2х часов. А также размещены на форуме в соответствующей <a ui-sref="dashboard.forumtopic({id:550})">теме</a>.</p>
+                <p>Обязательно проверьте правильность email и номера телефона в личном кабинете! </p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
