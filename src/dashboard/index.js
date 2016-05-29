@@ -62,7 +62,6 @@ import secondPopup from './second-popup/index';
 export default angular.module('dashboard',
     [
         tdrive.name,
-        registration.name,
         main.name,
         profile.name,
         forum.name,
