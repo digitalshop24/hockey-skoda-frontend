@@ -17,6 +17,9 @@ export default angular.module('dashboard.forum', [])
                 url: '/forum',
                 controller: ForumCtrl,
                 controllerAs: 'ctrl',
+                access: {
+                    requiresLogin: true
+                },
                 params: {
                     notScrollToTop: false,
                     page: 1,
