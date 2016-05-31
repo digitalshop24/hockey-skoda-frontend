@@ -1,0 +1,32 @@
+.cap {
+  width:100%;
+  min-height:895px;
+  background:url('img/resources/img/cap/bg_cap.jpg') no-repeat center center;
+  background-size:cover;
+  position:relative;
+  &-content {
+    position:absolute;
+    height:301px;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    margin:auto;
+    h2 {
+      text-align:center;
+      color:#fff;
+      font-size:50px;
+      font-weight:bold;
+    }
+    p {
+      text-align:center;
+      color:#fff;
+      font-size:24px;
+      margin:30px 0 45px;
+    }
+    .btn {
+      margin:0 auto;
+      display:block;
+    }
+  }
+}

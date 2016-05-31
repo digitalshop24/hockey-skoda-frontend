@@ -56,15 +56,15 @@
                     </ul>
                 </li></a>
               <a href="#">
-              <li>
+              <li ui-sref="dashboard.cap">
                 Конкурсы
-                <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
-                <ul class="drilldown-sub">
-                    <li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Конкурсы</a></li>
-                      <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.prizenew">Конкурс</li></a>
-                     <!--  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.teodor">Конкурс IceChallenge 2</li></a> -->
-                    </ul>
-                 </li>   
+                <!--<img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">-->
+                <!--<ul class="drilldown-sub">-->
+                    <!--<li class="drilldown-back"><a href="#"><img src="img/resources/img/arrow_mob_menu.png" alt="">Конкурсы</a></li>-->
+                      <!--<a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.prizenew">Конкурс</li></a>-->
+                     <!--&lt;!&ndash;  <a href="#"><li class="li_sub" ng-click="ctrl.isMenuMobileOpen = !ctrl.isMenuMobileOpen" ui-sref="dashboard.teodor">Конкурс IceChallenge 2</li></a> &ndash;&gt;-->
+                    <!--</ul>-->
+                 </li>
               </a>
               <a href="#" ui-sref="dashboard.forum"><li>Форум
                   <!--   <img src="img/resources/img/arrow_righ_mini.png" alt="" class="img-responsive arrow_li">
@@ -125,8 +125,8 @@
 
                         </a>
                     </li> -->
-                    <li ng-class="{active_li_priz:$state.includes('dashboard.prizenew')}" class="active_li" style="position: absolute;top: 5px; height: 74px;" >
-                        <a href="" ui-sref="dashboard.prizenew" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false">
+                    <li ui-sref="dashboard.cap" class="active_li" style="position: absolute;top: 5px; height: 74px;" >
+                        <a href="" ui-sref="dashboard.cap" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false">
                             <span style="">Конкурсы</span>
 
                         </a>
@@ -238,7 +238,7 @@
                                         <img src="img/resources/img/arrow_righ_mini.png" alt="">
                                     </li>
                                 </a>
-                                <a ui-sref="dashboard.prizenew">
+                                <a ui-sref="dashboard.cap">
                                     <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isPrizeOpen = true; ctrl.isNewsOpen = ctrl.isForumOpen = ctrl.isForecastOpen = ctrl.isSchedOpen = ctrl.isInterestingOpen = false">
                                         Конкурсы
                                         <img src="img/resources/img/arrow_righ_mini.png" alt="">
@@ -277,7 +277,7 @@
                                 <!-- <a ui-sref="dashboard.forum" ng-click="ctrl.isMenuOpen = false" ><li>Форум</li></a> -->
                             </ul>
                             <ul ng-show="ctrl.isPrizeOpen">
-                                <a ui-sref="dashboard.prizenew" ng-click="ctrl.isMenuOpen = false"><li>Конкурс</li></a>
+                                <!--<a ui-sref="dashboard.cap" ng-click="ctrl.isMenuOpen = false"><li>Конкурс</li></a>-->
                                <!--  <a ui-sref="dashboard.teodor" ng-click="ctrl.isMenuOpen = false"><li>Конкурс IceChallenge 2</li></a> -->
                             </ul>
 
