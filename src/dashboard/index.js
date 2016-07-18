@@ -57,6 +57,7 @@ import mobileapp from './mobile-app/index';
 import country from './country/index';
 import cap from './cap/index';
 import secondPopup from './second-popup/index';
+import hockeyTest from './hockey-test/index';
 
 
 
@@ -110,7 +111,8 @@ export default angular.module('dashboard',
         mobileapp.name,
         country.name,
         cap.name,
-        secondPopup.name
+        secondPopup.name,
+        hockeyTest.name
     ])
     .service('login', Login)
     .service('modal', Modal)

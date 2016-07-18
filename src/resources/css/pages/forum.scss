@@ -137,6 +137,27 @@
         }
       }
     }
+    &--test-content{
+      display: inline-block;
+      width:100%;
+      max-width:646px;
+      background: $white;
+      color:$black;
+      margin:20px 0;
+      padding:15px 15px 40px;
+      p{
+        margin:20px 0;
+        font-size: 18px;
+        line-height: 180%;
+        .balls{
+          color:$green_main;
+          font-weight: 900;
+          font-size:20px;
+          margin:0 5px;
+          line-height: 24px;
+        }
+      }
+    }
   }
 }
 

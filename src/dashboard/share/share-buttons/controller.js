@@ -11,7 +11,7 @@ export default class ShareCtrl {
             this.resultData = {}
         }
         this.updateLinks();
-
+        console.log(this.resultData);
 
         $scope.$watch(() => {
             return this.data;

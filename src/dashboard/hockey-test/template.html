@@ -1,0 +1,78 @@
+<section class="forum-test">
+    <div class="forum-test-start" ng-show="!ctrl.showTest && !ctrl.showTestAnswers">
+        <div class="container">
+            <h6 class="forum-test-start--header">
+                Тест: Кто ты из NHL?
+                <span>+100</span>
+                <img src="img/resources/img/balls.png" alt="">
+            </h6>
+            <h3 class="forum-test-start--question">
+                Грецки или Фетисов?
+            </h3>
+            <p class="forum-test-start--desc">
+               	Ответив на 5 вопросов на хоккейную тематику, вы узнаете кем вы были бы в хоккее. Удачи!
+            </p>
+        </div>
+
+         <form ng-submit="ctrl.startTest()">
+         	<div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2 left">
+                        <h4>Ваш рост?</h4>
+                        <input type="number" ng-model="ctrl.form.height" class="input_default input_small" placeholder="" required>
+                    </div>
+                    <div class="col-md-4 left">
+                        <h4>Ваш вес?</h4>
+                        <input type="text" ng-model="ctrl.form.weight" class="input_default input_small" placeholder="" required>
+                    </div>
+                </div>
+                </br>
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2 left">
+                        <h4>Окружность груди?</h4>
+                        <input type="number" ng-model="ctrl.form.chest_length" class="input_default input_small" placeholder="" required>
+                    </div>
+                    <div class="col-md-4 left">
+                        <h4>Окружность талии?</h4>
+                        <input type="text" ng-model="ctrl.form.waist_length" class="input_default input_small" placeholder="" required>
+                    </div>
+                </div>
+            </div>
+            </br>
+            </br>
+         	<button type="submit" class="btn btn_primary main">Старт</button>
+         </form>
+    </div>
+    <div class="forum-test-questions" ng-show="ctrl.showTest">
+        <div class="container">
+            <h5 class="forum-test-questions--header" ng-bind="ctrl.currentQuestion.body">Раклет или тартифлет?</h5>
+            <div class="forum-test-questions--content">
+                <span class="forum-test-questions--stage">{{ctrl.currentQuestionIndex + 1}} из 5</span>
+                <ul class="forum-test-answers">
+                    <li ng-repeat="question in ctrl.currentQuestion.answers">
+                        <label class="radio_green">
+                            <input type="radio" name="answer" ng-model="ctrl.answers[ctrl.currentQuestionIndex]" value="{{question.answer}}">
+                            <p class="radio-label" ng-bind="question.answer">Тоже торговая улица, просто не мощеная</p>
+                        </label>
+                    </li>
+                </ul>
+                <button class="btn btn_secondary small" ng-click="ctrl.nextQuestion()" ng-show="!ctrl.isLastQuestion">Следующий вопрос</button>
+                <button class="btn btn_secondary small" ng-click="ctrl.checkAnswers()" ng-show="ctrl.isLastQuestion">Завершить тест</button>
+            </div>
+        </div>
+    </div>
+    <div class="forum-test-result" ng-show="ctrl.showTestAnswers">
+        <div class="container">
+            <div class="forum-test-result--test-content">
+                <p>Поздравляем, вы - {{ctrl.testResult.title}}!</p>
+                <p>{{ctrl.testResult.body}}</p>
+                <img src="{{ctrl.testResult.image.small}}" alt="">
+                </br>
+                </br>
+                <button class="btn btn_secondary small" ng-click="$state.go('dashboard.main')">На главную</button>
+            </div>
+            <br>
+            <share-buttons data="ctrl.data"></share-buttons>
+        </div>
+    </div>
+</section>
