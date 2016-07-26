@@ -42,6 +42,10 @@ export default angular.module('dashboard.main', [
                         return mainService.getLikeAmount();
                     },
 
+                    userIp: mainService => {
+                        return mainService.getIp();
+                    },
+
                     lightingNews: ($stateParams, mainService) => {
                         return mainService.getLightingNews($stateParams.lightingNewsAmount);
                     },

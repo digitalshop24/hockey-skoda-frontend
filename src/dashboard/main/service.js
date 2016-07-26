@@ -1,8 +1,9 @@
 'use strict';
 
 export default class MainService {
-    constructor(api) {
+    constructor(api, $http) {
         this.api = api;
+        this.http = $http;
     }
 
     getSlides() {
@@ -86,6 +87,38 @@ export default class MainService {
             })
             .catch(response => {
                 throw response.data.error;
+            });
+    }
+
+    getIp(){
+        return this.http.get('http://ipv4.myexternalip.com/json')
+            .then(function(result) {
+               return result.data.ip;
+            });
+    }
+
+    getSurvey(userIp){
+        return this.api.
+            get('/survey', {params: {user_ip: userIp}
+            })
+            .then(response => {
+                return response.data;
+            })
+            .catch(response => {
+                throw response.data.error;
+            });
+    }
+
+    sendSurveyAnswer(survey_id, answer_id, ip){
+        return this.api.
+            post('/survey/answer', {
+                survey_id: survey_id,
+                answer_id: answer_id,
+                user_ip: ip
+            }).then((res) => {
+            return res.data;
+            }).catch(err => {
+                throw err.data;
             });
     }
 }

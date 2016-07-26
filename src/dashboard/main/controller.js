@@ -3,7 +3,7 @@
 
 export default class MainCtrl {
     constructor(lightingNews, lastNewsInfo, mainService, page, lastNewsAmount, starsInfo, schedule,
-                $scope, teams, championatNewsInfo, mainSlides, hashtags, socPosts, likeAmount) {
+                $scope, teams, championatNewsInfo, mainSlides, hashtags, socPosts, likeAmount, userIp) {
         this.service = mainService;
         this.allTeams = teams.filter(team => team.short_name);
         this.mainSlides = mainSlides;
@@ -30,6 +30,21 @@ export default class MainCtrl {
         this.lastNewsAmount = lastNewsAmount;
         this.slidesToShow = 5;
         this.indexToShowLastNews = this.lastNews.length - this.slidesToShow;
+        this.userIp = userIp;
+        this.survey_answer;
+        this.showCongratulations = false;
+
+        this.service.getSurvey(this.userIp)
+            .then(survey => {
+                if (survey.id){
+                    this.survey = survey;
+                    this.showSurveyAnswers = this.survey.completed;
+                }else{
+                    this.survey = {};
+                    this.showSurveyAnswers = false;
+                }
+            });
+
 
         /* dirty hack */
         this.filterByTeam = (match) => {
@@ -71,6 +86,17 @@ export default class MainCtrl {
 
           ];
         }
+
+    sendSurvey() {
+        this.service.sendSurveyAnswer(this.survey.id, this.survey_answer, this.userIp)
+        .then(res => {
+            this.survey = res;
+            this.showCongratulations = true;
+            this.showSurveyAnswers = true;
+        }).catch(err => {
+
+        });
+    }
 
     loadMoreNews() {
         /*if ((this.newsCurrentIndex + this.slidesToShow) >= (this.page * this.lastNewsAmount)) {

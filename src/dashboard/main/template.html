@@ -74,9 +74,9 @@
                 </div>
             </div>
 
-            <div class="col-md-4 hidden-sm hidden-xs">
+            <div class="col-md-4">
 
-            <slick infinite=true slides-to-show=1 slides-to-scroll=1 dots=true>
+            <slick class="hidden-sm hidden-xs" infinite=true slides-to-show=1 slides-to-scroll=1 dots=true>
                     <!-- <div class="preview_header_right " style="background-image: url('none.png'); ">
                         <div class="wrapp_content text-center tvor" style="padding-left: 0;">
                             <h3>Голосование началось!  </h3>
@@ -115,7 +115,7 @@
                 
             </slick>  
 
-                <div class="">
+                <div class="hidden-sm hidden-xs">
                     <div class="main-collogo">
                         <div class="main-collogo-img">
                             <img src="img/resources/img/main/label.png" alt="" style="width: 250px;">
@@ -125,7 +125,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="">
+
+                <div class="" ng-show="ctrl.survey">
+                    <div class="main-collogo">
+                        <div class="main-collogo-content">
+                            <div ng-show="!ctrl.showSurveyAnswers">
+                                <p>{{ctrl.survey.question}}</p></br>                           
+                                <ul>
+                                    <li ng-repeat="answer in ctrl.survey.answer_options">
+                                        <label class="radio_green">
+                                            <input type="radio" name="answer" ng-model="ctrl.survey_answer" value="{{answer.id}}">
+                                            <p class="radio-label" ng-bind="answer.answer"></p>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <button class="btn btn_secondary small" ng-click="ctrl.sendSurvey()">Ответить</button>
+                            </div>
+                            <div ng-show="ctrl.showSurveyAnswers">
+                                <p>{{ctrl.survey.question}}</p></br> 
+                                <p ng-show="ctrl.showCongratulations">Ваш голос учтён!</p>
+                                <p ng-show="!ctrl.showCongratulations">Вы уже проголосовали!</p></br>
+                                <ul>
+                                    <li ng-repeat="answer in ctrl.survey.answer_options">
+                                        <small><em>{{answer.answer}}</em></small>
+                                        <progressbar class="active" animate="true" max="100" value="answer.answers_count" type="success"><i>{{answer.answers_count}}%</i></progressbar>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-sm hidden-xs">
                     <div class="main-collogo">
                         <div class="main-collogo-img" style="padding:0;">
                            <a ui-sref="dashboard.prizenew({id:'15'})"> <img src="img/resources/img/taksi.jpg" alt=""  class="img-responsive"></a>
