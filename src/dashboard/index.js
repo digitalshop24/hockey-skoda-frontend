@@ -112,7 +112,8 @@ export default angular.module('dashboard',
         country.name,
         cap.name,
         secondPopup.name,
-        hockeyTest.name
+        hockeyTest.name,
+        registration.name
     ])
     .service('login', Login)
     .service('modal', Modal)

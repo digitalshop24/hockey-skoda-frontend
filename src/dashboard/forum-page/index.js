@@ -14,9 +14,9 @@ export default angular.module('dashboard.forum-page', [])
                 url: '/forum/page/:id',
                 controller: ForumpageCtrl,
                 controllerAs: 'ctrl',
-                access: {
-                    requiresLogin: true
-                },
+                // access: {
+                //     requiresLogin: true
+                // },
                 params: {
                     page: 1,
                     topicsPerPage: config.forum.messagesPerPage,
