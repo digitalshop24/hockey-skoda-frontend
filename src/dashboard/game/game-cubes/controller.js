@@ -5,9 +5,9 @@ const MIN_DISTANCE = 1;
 const GREEN_WEIGHT = 2;
 const ROW_AMOUNT = 12;
 const ROW_WEIGHT = 20;
-const GREEN_AMOUNT = 20;
+const GREEN_AMOUNT = 0;
 const BLUE_AMOUNT = 20;
-const BLUE_CELL_PRICE = 750;
+const BLUE_CELL_PRICE = 100;
 const GREEN_CELL_PRICE = 750;
 
 export default class CubesCtrl {
