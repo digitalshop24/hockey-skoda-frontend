@@ -10,11 +10,11 @@
             </div>
         </div>
         <div class="game-two-block-title clearfix">
-            <div class="game-two-block-title-left">
+<!--             <div class="game-two-block-title-left">
                 <h3><b>Пробейся </b><br> к викторине!</h3>
                 <share-buttons data="{}"></share-buttons>
 
-            </div>
+            </div> -->
             <div class="game-two-block-title-right">
 
                 <div class="ball clearfix" ng-show="ctrl.session.isAuthenticated">
@@ -32,38 +32,39 @@
                   <p>Наберите баллов, чтобы открыть:</p>
                     <div class="opis-left">
                         <div class="opis-num">
-                            <span class="blue" ng-bind="ctrl.sector.not_crashed_blue_count"></span> /
-                            <span class="opis-green" ng-bind="ctrl.sector.not_crashed_green_count"></span>
+                            <span class="blue" ng-bind="ctrl.sector.not_crashed_blue_count"></span> 
+                            <!-- / -->
+                            <!-- <span class="opis-green" ng-bind="ctrl.sector.not_crashed_green_count"></span> -->
                         </div>
                         <span class="opis-grey">осталось</span>
                     </div>
-                    <div class="opis-right max">
+                    <!-- <div class="opis-right max">
                         <p>750</p>
                         <span class="opis-grey">балов</span>
-                    </div>
+                    </div> -->
                     <div class="opis-right  mini">
-                        <p>750</p>
+                        <p>100</p>
                         <span class="opis-grey">балов</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div>
+    <!-- <div>
         <br>
         <p class="text-center">Синие ячейки есть не в каждом секторе. Но они точно есть! Воспользуйтесь кругом с секторами для поиска и выигрывайте!</p>
-    </div>
+    </div> -->
     <div class="game-table clearfix">
         <div class="sector" ng-repeat="row in ctrl.table">
             <table>
                 <tr>
                     <td ng-repeat="cell in row.cells">
-                        <div ng-show="cell.type == 'green'" ng-click="ctrl.brokeCell(cell.value)" id="{{cell.value.id}}"
+<!--                         <div ng-show="cell.type == 'green'" ng-click="ctrl.brokeCell(cell.value)" id="{{cell.value.id}}"
                              class="game-two-item game-two-green col-4x4 {" style="background-image: url({{cell.value.small_image}})" ng-class="{'crashed' :cell.first.is_crashed, 'notCrashed': !cell.first.is_crashed, 'fakeCell': cell.first.is_gray}">
 
                             <div class="item-{{cell.classIndex}} item"
                                  ></div>
-                        </div>
+                        </div> -->
 
                         <div ng-show="cell.type == 'blue'" ng-click="ctrl.brokeCell(cell.first)" id="{{cell.first.id}}"
                              class="game-two-item game-two-while col-1x1 "

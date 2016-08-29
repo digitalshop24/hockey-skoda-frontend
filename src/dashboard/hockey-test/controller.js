@@ -1,6 +1,6 @@
 'use strict';
 
-const TEST_SIZE = 5;
+const TEST_SIZE = 10;
 
 export default class HockeyTestCtrl {
     constructor($scope, hockeyTestService, modal, forumService, modalSpeed, $state) {
