@@ -3,7 +3,7 @@
 const BLUE_WEIGHT = 1;
 const MIN_DISTANCE = 1;
 const GREEN_WEIGHT = 2;
-const ROW_AMOUNT = 12;
+const ROW_AMOUNT = 10;
 const ROW_WEIGHT = 20;
 const GREEN_AMOUNT = 0;
 const BLUE_AMOUNT = 20;
@@ -35,7 +35,8 @@ export default class CubesCtrl {
         const shuffleInRowAmount = this.shuffle([1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3]);
         for (let i = 1; i <= ROW_AMOUNT; i++) {
 
-            const greenIndexes = this.createGreenIndexes(shuffleInRowAmount[i - 1]);
+            //const greenIndexes = this.createGreenIndexes(shuffleInRowAmount[i - 1]);
+            const greenIndexes = this.createGreenIndexes();
             const row = [];
 
             for (let j = 0; j < ROW_WEIGHT;) {
@@ -140,17 +141,17 @@ export default class CubesCtrl {
     }
 
     startGame() {
-        if (!this.user.info_profile_filled) {
-            if (!this.user.email) {
-                $('#myModal').modal('hide');
-                this.state.go('dashboard.edit');
-                return;
-            }
-            $('#myModal').modal('hide');
-            $('#userData').modal('show');
-            this.userData = this.user;
-            return;
-        }
+        // if (!this.user.info_profile_filled) {
+        //     if (!this.user.email) {
+        //         $('#myModal').modal('hide');
+        //         this.state.go('dashboard.edit');
+        //         return;
+        //     }
+        //     $('#myModal').modal('hide');
+        //     $('#userData').modal('show');
+        //     this.userData = this.user;
+        //     return;
+        // }
 
         if (this.busy) return;
         this.busy = true;
