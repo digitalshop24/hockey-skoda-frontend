@@ -21,7 +21,7 @@ export default class СalendarCtrl {
         this.maxDate = moment(calendar[calendar.length -1].day).toDate();
         this.allMatches = true;
         this.subscribed = true;
-        this.currentDate = moment('2016-05-06T09:54:51');
+        this.currentDate = moment(new Date());
         this.allTeams = teams.filter(team => team.short_name);
 
         this.updateCalendar(this.currentDate);
