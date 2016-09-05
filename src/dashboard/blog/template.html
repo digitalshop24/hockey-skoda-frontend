@@ -25,10 +25,10 @@
                 <div class="col-xs-12 col-sm-12 col-md-4 text-left wrapp_blog_posts" ng-repeat="blog in ctrl.blogs">
 
                         <ul class="blog_post" ui-sref="dashboard.newspage({id:blog.id, rubric:blog.rubric.api_path})" style="cursor:pointer;">
-                            <li><h3><a ng-bind="blog.name"
+                            <li><h3><a ng-bind="blog.title === '' ? blog.name : blog.title"
                                        ui-sref="dashboard.newspage({id:blog.id, rubric:blog.rubric.api_path})"></a></h3>
                             </li>
-                            <li><p ng-bind="blog.short_content"></p></li>
+                            <li><p ng-bind="blog.description === '' ? blog.short_content : blog.description"></p></li>
                             <li><p ng-bind="blog.published_at | amDateFormat:'DD.MM H:mm'"></p></li>
                             <li><img src="{{blog.image.medium}}" alt="" class="img-responsive"></li>
                         </ul>
