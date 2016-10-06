@@ -73,13 +73,14 @@ export default class MainService {
         });
     }
 
-    getLastNews(rubric, page, amount, origin) {
+    getLastNews(rubric, page, amount, origin, main) {
         return this.api.
             get(`/posts/${rubric}`, {
                 params: {
                     per_page: amount,
                     page: page,
-                    origin: origin
+                    origin: origin,
+                    main: main
                 }
             })
             .then(response => {

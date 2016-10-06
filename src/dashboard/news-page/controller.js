@@ -25,6 +25,10 @@ export default class NewspageCtrl {
         if(this.rubric.api_path == 'stars') {
             this.championatNews.shuffle()
         }
+        this.meta = {
+            title: '123',
+            description: 'afsd'
+        };
 
 
         this.filterForStarsRubric = (post) => {

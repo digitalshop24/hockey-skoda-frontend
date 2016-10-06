@@ -23,7 +23,12 @@ export default angular.module('dashboard.newspage', [
                     isInterview: false
                 },
                 resolve: {
+                    /* @ngInject */
                     news: ($stateParams, newspageService) => {
+                        return newspageService.getNewsById($stateParams.rubric, $stateParams.id);
+                    },
+
+                    blogpost: function(newspageService, $stateParams) {
                         return newspageService.getNewsById($stateParams.rubric, $stateParams.id);
                     },
 
@@ -49,6 +54,15 @@ export default angular.module('dashboard.newspage', [
 
                     isInterview: ($stateParams) => {
                         return $stateParams.isInterview;
+                    }
+                },
+                meta: {
+                    /* @ngInject */
+                    title: function(blogpost) {
+                        return blogpost.title;
+                    },
+                    description: function(blogpost) {
+                        return blogpost.description;
                     }
                 }
             });

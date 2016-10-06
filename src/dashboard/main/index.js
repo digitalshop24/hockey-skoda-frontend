@@ -50,13 +50,13 @@ export default angular.module('dashboard.main', [
                         return mainService.getLightingNews($stateParams.lightingNewsAmount);
                     },
                     lastNewsInfo: ($stateParams, mainService) => {
-                        return mainService.getLastNews('news', $stateParams.page, $stateParams.lastNewsAmount, 'content_manager');
+                        return mainService.getLastNews('news', $stateParams.page, $stateParams.lastNewsAmount, null, true);
                     },
                     championatNewsInfo: ($stateParams, mainService) => {
-                        return mainService.getLastNews('news', 1, 10, 'championat');
+                        return mainService.getLastNews('news', 1, 10, 'championat', null);
                     },
                     starsInfo: ($stateParams, mainService) => {
-                        return mainService.getLastNews('stars', 1, 5);
+                        return mainService.getLastNews('stars', 1, 5, null, null);
                     },
                     schedule: mainService => {
                         return mainService.getSchedule('future');

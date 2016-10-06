@@ -4,7 +4,7 @@
 
 <h4 style="min-height: 70px;">
     <a ui-sref="dashboard.newspage({id:ctrl.generalNews.id, rubric:ctrl.generalNews.rubric.api_path})"
-       ng-bind="ctrl.generalNews.title === '' ? ctrl.generalNews.name : ctrl.generalNews.title" class="link_default"></a>
+       ng-bind="ctrl.generalNews.name" class="link_default"></a>
        &nbsp;
     <span class="little_comment" ng-bind="ctrl.generalNews.comments_count"></span>
 </h4>
