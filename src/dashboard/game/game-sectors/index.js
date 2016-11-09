@@ -8,7 +8,7 @@ export default angular.module('dashboard.game.sectors', [])
     .config(function ($stateProvider) {
         $stateProvider
             .state('dashboard.game.sectors', {
-                template: require('./template.html'),
+                template: require('./cap_template.html'),
                 url: '/game/sectors',
                 controller: SectorsCtrl,
                 controllerAs: 'ctrl'
