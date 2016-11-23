@@ -11,7 +11,7 @@ export default class HeaderCtrl {
         this.isMenuOpen = false;
         this.isNewsOpen = true;
         this.isForecastOpen = false;
-        this.isForumOpen = false;
+        this.isMobileappOpen = false;
         this.isPrizeOpen = false;
         this.isSchedOpen = false;
         this.isInterestingOpen = false;
@@ -19,6 +19,9 @@ export default class HeaderCtrl {
         this.isNotifOpen = false;
         this.isPNewsOpen = false;
         this.isLogoutMenuOpen = false;
+        this.isActivitiesOpen = false;
+        this.isAnalyticsOpen = false;
+        this.isOtherOpen = false;
 
         $interval(() => {
             if(this.session.isAuthenticated) {

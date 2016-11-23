@@ -1,5 +1,5 @@
 <section class="wrapp_mainpage_slider">
-<!--     <div class="now_games">
+     <div class="now_games">
         <ul>
             <li class="one_game_wrapp" ng-repeat="match in ctrl.schedule | limitTo:3">
                 <ul class="one_game">
@@ -12,28 +12,101 @@
                 </ul>
             </li>
         </ul>
-        <span>Завершен 1 период 14:45</span>
-    </div> -->
+        <!--<span>Завершен 1 период 14:45</span>-->
+    </div>
 
-    <div class="container-fluid">
-        <div class="row date_slider_news">
-            <!-- <div class="col-md-12"> -->
 
-            <!--<slick infinite=true arrows=true dots=true slides-to-show=1 slides-to-scroll=1 autoplay=true>-->
 
-                <div class="" ng-repeat="slide in ctrl.mainSlides">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="item-1">
-                                <div class="hidden-sm hidden-xs">
-                                    <h5 style="position:absolute; z-index:1; "><span> <img class="taggs" src="img/resources/img/hashtagIcon.png"> <button class="btn " ui-sref="dashboard.socials({hashtag: '#хоккейвкаждом'})">#хоккейвкаждом</button></span></h5>
+    <div class="container-fluid" style="width: 100%;">
+        <div class="row">
+            <div class="left_sidebar_menu col-sm-3">
+                <div class="row">
+                    <a ui-sref="dashboard.forecast.companionship">
+                        <div class="wrapp_block">
+                            <div class="block left_sidebar_item" style="background-image: url('img/resources/img/main/predicts.png');">
+                                <div class="bg_hover">
+                                    <h2>Прогнозы</h2>
                                 </div>
-                                <a href="{{slide.link}}"><img src="{{slide.image}}" alt="" class="img-responsive" style="width: 100%;"></a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row">
+                    <a ui-sref="dashboard.blog">
+                        <div class="wrapp_block">
+                            <div class="block left_sidebar_item" style="background-image: url('img/resources/img/main/analytics.png');">
+                                <div class="bg_hover">
+                                    <h2>Аналитика</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row">
+                    <a ui-sref="dashboard.general-news">
+                        <div class="wrapp_block">
+                            <div class="block left_sidebar_item" style="background-image: url('img/resources/img/main/news.png');">
+                                <div class="bg_hover">
+                                    <h2>Новости</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row">
+                    <a ui-sref="dashboard.schedule">
+                        <div class="wrapp_block">
+                            <div class="block left_sidebar_item" style="background-image: url('img/resources/img/main/schedule.png');">
+                                <div class="bg_hover">
+                                    <h2>Календарь</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row">
+                    <a ui-sref="dashboard.forum">
+                        <div class="wrapp_block">
+                            <div class="block left_sidebar_item" style="background-image: url('img/resources/img/main/forum.png');">
+                                <div class="bg_hover">
+                                    <h2>Форум</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row">
+                    <a ui-sref="dashboard.infographics">
+                        <div class="wrapp_block">
+                            <div class="block left_sidebar_item" style="background-image: url('img/resources/img/main/schedule.png');">
+                                <div class="bg_hover">
+                                    <h2>Инфографика</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="date_slider_news">
+
+                <!-- <div class="col-md-12"> -->
+
+                <!--<slick infinite=true arrows=true dots=true slides-to-show=1 slides-to-scroll=1 autoplay=true>-->
+
+                    <div ng-repeat="slide in ctrl.mainSlides">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="item-1">
+                                    <div class="hidden-sm hidden-xs">
+                                        <h5 style="position:absolute; z-index:1; "><span> <img class="taggs" src="img/resources/img/hashtagIcon.png"> <button class="btn " ui-sref="dashboard.socials({hashtag: '#хоккейвкаждом'})">#хоккейвкаждом</button></span></h5>
+                                    </div>
+                                    <a href="{{slide.link}}"><img src="{{slide.image}}" alt="" class="img-responsive" style="width: 100%;"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            <!--</slick>-->
+                <!--</slick>-->
+            </div>
         </div>
     </div>
 </section>
@@ -241,66 +314,66 @@
         </div>
     </div>
 </section>
-<section class="wrapp_mainpage_menublock">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 wrapp_block">
-                <div class="block" style="background-image: url('img/resources/img/main/menu6.jpg');">
-                    <div class="bg_hover">
-                        <h2><a ui-sref="dashboard.general-news">Новости</a></h2>
-                        <p>Здесь для Вас подобраны самые свежие новости об актуальных событиях в мире хоккея!</p>
-                        <p class="bold"><a href="" ui-sref="dashboard.general-news">Читать</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 wrapp_block">
-                <div class="block" style="background-image: url('img/resources/img/main/menu5.jpg');">
-                    <div class="bg_hover">
-                        <h2><a ui-sref="dashboard.forecast.playoff">Прогнозы</a></h2>
-                        <p>Прогнозируйте результаты матчей и всего турнира, получайте баллы и участвуйте в розыгрышах различных призов.</p>
-                        <p class="bold"><a href="" ui-sref="dashboard.forecast.playoff">Предположить</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 wrapp_block">
-                <div class="block" style="background-image: url('img/resources/img/main/menu1.jpg');">
-                    <div class="bg_hover">
-                        <h2><a ui-sref="dashboard.forum">Форум</a></h2>
-                        <p>Общайтесь с любителями хоккея, участвуйте в викторине, обсуждайте матчи и все «околохоккейное» на форуме!</p>
-                        <p class="bold"><a href="" ui-sref="dashboard.forum">Общаться</a></p>
-                    </div>
-                </div>
-            </div>
-                <div class="col-md-4 wrapp_block">
-                <div class="block" style="background-image: url('img/resources/img/main/menu3.jpg');">
-                    <div class="bg_hover">
-                        <h2><a href="" ui-sref="dashboard.blog" >Аналитика</a></h2>
-                        <p>Наши блогеры увлечены хоккеем также, как вы. Получайте эксклюзивную и важную информацию</p>
-                        <p class="bold"><a href="" ui-sref="dashboard.blog">Думать</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 wrapp_block">
-                <div class="block" style="background-image: url('img/resources/img/main/menu2.jpg');">
-                    <div class="bg_hover">
-                        <h2><a href="" ui-sref="dashboard.calendar">Календарь</a></h2>
-                        <p>Следите за всеми матчами, получайте напоминания в удобное время и не пропускайте ни одной игры!</p>
-                        <p class="bold"><a href="" ui-sref="dashboard.calendar">Планировать</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 wrapp_block">
-                <div class="block" style="background-image: url('img/resources/img/main/menu4.jpg');">
-                    <div class="bg_hover">
-                        <h2><a href="" ui-sref="dashboard.infographics">Инфографика</a></h2>
-                        <p>Мы создали для Вас иллюстрированную историю выступлений сборной России на всех Чемпионатах мира. </p>
-                        <p class="bold"><a href="" ui-sref="dashboard.infographics">Изучать</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!--<<section class="wrapp_mainpage_menublock">-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-4 wrapp_block">-->
+                <!--<div class="block" style="background-image: url('img/resources/img/main/menu6.jpg');">-->
+                    <!--<div class="bg_hover">-->
+                        <!--<h2><a ui-sref="dashboard.general-news">Новости</a></h2>-->
+                        <!--<p>Здесь для Вас подобраны самые свежие новости об актуальных событиях в мире хоккея!</p>-->
+                        <!--<p class="bold"><a href="" ui-sref="dashboard.general-news">Читать</a></p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-4 wrapp_block">-->
+                <!--<div class="block" style="background-image: url('img/resources/img/main/menu5.jpg');">-->
+                    <!--<div class="bg_hover">-->
+                        <!--<h2><a ui-sref="dashboard.forecast.companionship">Прогнозы</a></h2>-->
+                        <!--<p>Прогнозируйте результаты матчей и всего турнира, получайте баллы и участвуйте в розыгрышах различных призов.</p>-->
+                        <!--<p class="bold"><a href="" ui-sref="dashboard.forecast.companionship">Предположить</a></p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-4 wrapp_block">-->
+                <!--<div class="block" style="background-image: url('img/resources/img/main/menu1.jpg');">-->
+                    <!--<div class="bg_hover">-->
+                        <!--<h2><a ui-sref="dashboard.forum">Форум</a></h2>-->
+                        <!--<p>Общайтесь с любителями хоккея, участвуйте в викторине, обсуждайте матчи и все «околохоккейное» на форуме!</p>-->
+                        <!--<p class="bold"><a href="" ui-sref="dashboard.forum">Общаться</a></p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+                <!--<div class="col-md-4 wrapp_block">-->
+                <!--<div class="block" style="background-image: url('img/resources/img/main/menu3.jpg');">-->
+                    <!--<div class="bg_hover">-->
+                        <!--<h2><a href="" ui-sref="dashboard.blog" >Аналитика</a></h2>-->
+                        <!--<p>Наши блогеры увлечены хоккеем также, как вы. Получайте эксклюзивную и важную информацию</p>-->
+                        <!--<p class="bold"><a href="" ui-sref="dashboard.blog">Думать</a></p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-4 wrapp_block">-->
+                <!--<div class="block" style="background-image: url('img/resources/img/main/menu2.jpg');">-->
+                    <!--<div class="bg_hover">-->
+                        <!--<h2><a href="" ui-sref="dashboard.calendar">Календарь</a></h2>-->
+                        <!--<p>Следите за всеми матчами, получайте напоминания в удобное время и не пропускайте ни одной игры!</p>-->
+                        <!--<p class="bold"><a href="" ui-sref="dashboard.calendar">Планировать</a></p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-4 wrapp_block">-->
+                <!--<div class="block" style="background-image: url('img/resources/img/main/menu4.jpg');">-->
+                    <!--<div class="bg_hover">-->
+                        <!--<h2><a href="" ui-sref="dashboard.infographics">Инфографика</a></h2>-->
+                        <!--<p>Мы создали для Вас иллюстрированную историю выступлений сборной России на всех Чемпионатах мира. </p>-->
+                        <!--<p class="bold"><a href="" ui-sref="dashboard.infographics">Изучать</a></p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
 <!-- <section class="wrapp_mainpage_present">
     <div class="container-fluid">
         <div class="row">
@@ -349,7 +422,7 @@
         </div>
     </div>
 </section> -->
-<section class="wrapp_slider_stars">
+<!--<section class="wrapp_slider_stars">
     <div class="container-fluid">
         <div class="row">
                 <slick infinite=true arrows=true slides-to-show=1 slides-to-scroll=1>
@@ -364,28 +437,28 @@
                  </slick>
         </div>
     </div>
-</section>
-<section class="wrapp_mainpage_timeline" >
-    <div class="container-fluid">
-        <div class="row">
-            <div class="timeline_horisond"></div>
-            <div class="timeline-slider">
-                <div class="slide" ng-repeat="post in ctrl.socPosts">
-                    <div class="wrapp_soc_li">
-                        <p class="time" ng-bind="post.published_at | amDateFormat:'DD.MM'"></p>
-                        <i class="fa fa-{{post.network}}-square fa-2x" aria-hidden="true"></i>
-                       <!-- <a href="#"><img  src="img/resources/img/green_insta.png" alt="" class="img-responsive "></a>-->
-                        <a href="#"><img src="{{post.profile_pic}}" alt="" class="img-responsive"></a>
-                        <p class="tag"><a href="{{post.profile_link}}" target="_blank" ng-bind="post.profile_name"></a></p>
-                        <p class="messege" ng-bind="post.content"></p>
-                        <img ng-show="post.photos.length" src="{{post.photos[0].image.thumb}}" alt="" class="foto_soc">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="wrapp_mainpage_tantam">
+</section>-->
+<!--<section class="wrapp_mainpage_timeline" >-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="row">-->
+            <!--<div class="timeline_horisond"></div>-->
+            <!--<div class="timeline-slider">-->
+                <!--<div class="slide" ng-repeat="post in ctrl.socPosts">-->
+                    <!--<div class="wrapp_soc_li">-->
+                        <!--<p class="time" ng-bind="post.published_at | amDateFormat:'DD.MM'"></p>-->
+                        <!--<i class="fa fa-{{post.network}}-square fa-2x" aria-hidden="true"></i>-->
+                       <!--&lt;!&ndash; <a href="#"><img  src="img/resources/img/green_insta.png" alt="" class="img-responsive "></a>&ndash;&gt;-->
+                        <!--<a href="#"><img src="{{post.profile_pic}}" alt="" class="img-responsive"></a>-->
+                        <!--<p class="tag"><a href="{{post.profile_link}}" target="_blank" ng-bind="post.profile_name"></a></p>-->
+                        <!--<p class="messege" ng-bind="post.content"></p>-->
+                        <!--<img ng-show="post.photos.length" src="{{post.photos[0].image.thumb}}" alt="" class="foto_soc">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
+<!--<section class="wrapp_mainpage_tantam">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-5">
@@ -405,9 +478,9 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
 
-<section class="wrapp_mainpage_tantam wrapp_hockey_blcok">
+<!--<section class="wrapp_mainpage_tantam wrapp_hockey_blcok">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-5">
@@ -427,7 +500,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
 
 
 <!--<section class="wrapp_mainpage_game">
@@ -448,16 +521,16 @@
         </div>
     </div>
 </section>-->
-<section class="wrapp_mainpage_end">
+<!--<section class="wrapp_mainpage_end">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3><!-- #хоккейвкаждом --></h3>
+                <h3><!-- #хоккейвкаждом </h3>
 
-                <h1><!-- Škoda hockey edition --></h1>
+                <h1><!-- Škoda hockey edition </h1>
                  <ul class="text-left">
-                   <!--  <img src="img/resources/img/main/label.png" alt="" class="img-responsive"> -->
-                    <span><!-- В качестве официального спонсора<br> ŠKODA поддержала Чемпионат мира<br> по хоккею IIHF 22 раза --></span>
+                   <!--  <img src="img/resources/img/main/label.png" alt="" class="img-responsive">
+                    <span><!-- В качестве официального спонсора<br> ŠKODA поддержала Чемпионат мира<br> по хоккею IIHF 22 раза </span>
                 </ul>
             </div>
 
@@ -465,7 +538,7 @@
 
     </div>
 
-</section>
+</section>-->
 
 
  <!-- Modal info prize -->

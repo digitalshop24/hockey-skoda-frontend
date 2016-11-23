@@ -32,8 +32,8 @@
                 
                 
                 <h3 ng-bind="ctrl.news.name"></h3>
-
-                <img src="{{ctrl.news.additional_image.original}}" class="img-responsive" style="margin: 20px auto;">
+                <img src="{{ctrl.news.additional_image.original}}" class="img-responsive" style="margin: 20px auto;"
+                     ng-if="ctrl.news.additional_image.original != 'http://s3-eu-central-1.amazonaws.com/skodahockey/noimage/posts/additional_images/missing_original.jpg'">
 
                 <div class="wrapp_text" ng-show="!ctrl.isInterview" ng-bind-html="ctrl.news.content"></div>
                 <div class="wrapp_text" ng-show="ctrl.isInterview" ng-bind-html="ctrl.news.interview"></div>

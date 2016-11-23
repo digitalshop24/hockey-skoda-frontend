@@ -4,14 +4,15 @@
 
   }
   .now_games {
-    padding: 15px 5px;
+    padding: 10px 5px;
     position: absolute;
     z-index: 1;
-    right: 25px;
+    right: 35px;
     background-color: rgba(0,0,0,0.7);
-    // top: 100px;
+    top: 100px;
     span {
       width: 100px;
+      color: white;
     }
     ul {
       display: inline-block;
@@ -26,8 +27,8 @@
           color: $white;
           display: inline-block;
           img {
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
           }
         }
         li:nth-child(1) {
@@ -39,7 +40,7 @@
           text-align: center;
         }
         li:nth-child(3) {
-          padding: 0 15px;
+          padding: 0 10px;
         }
         li:nth-child(6) {
           color: $grey;
@@ -47,6 +48,33 @@
           font-weight:normal;
         }
       }
+    }
+  }
+
+  .left_sidebar_menu {
+    float: left;
+    width: 30%;
+    border-right: 1px solid white;
+    .left_sidebar_item {
+      height:15.5vh;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-size: 100% 100%;
+      border-bottom: 1px solid white;
+      min-height: 100px;
+      position: relative;
+      h2 {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 10px;
+      }
+    }
+    .left_sidebar_item:hover {
+      opacity: 0.8;
     }
   }
 
@@ -78,6 +106,8 @@
     border: 0;
   }
   .date_slider_news {
+    width: 70%;
+    float: right;
     .slick-dots {
       bottom: -5px;
       li {
@@ -918,9 +948,18 @@
 
 @media only screen and (max-width:$screen-sm) {
   .wrapp_mainpage_slider {
-   .now_games {
-    display: none;
-   }
+     .now_games {
+      display: none;
+     }
+    .left_sidebar_menu {
+      .left_sidebar_item {
+        height: 6vh;
+        min-height: 20px;
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
   } 
   .wrapp_slider_stars {
     .slick-prev, .slick-next {
@@ -958,14 +997,23 @@
 }
 
 @media only screen and (max-width:600px) {
+  .wrapp_mainpage_slider {
+    .left_sidebar_menu {
+      .left_sidebar_item {
+        height: 4.5vh;
+        h2 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
   .wrapp_mainpage_present {
     ul {
       li {
         width:100%;
       }
     }
-  }  
-
+  }
 }
 
 

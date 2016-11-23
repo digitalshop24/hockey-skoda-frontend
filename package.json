@@ -32,6 +32,7 @@
     "gulp-autoprefixer": "^2.3.1",
     "gulp-babel": "^5.3.0",
     "gulp-concat": "https://registry.npmjs.org/gulp-concat/-/gulp-concat-2.5.2.tgz",
+    "gulp-install": "^0.6.0",
     "gulp-ng-annotate": "^0.5.3",
     "gulp-notify": "https://registry.npmjs.org/gulp-notify/-/gulp-notify-2.2.0.tgz",
     "gulp-sourcemaps": "^1.6.0",
