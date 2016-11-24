@@ -1,0 +1,2512 @@
+[33mcommit 99fd6cf0d45af7cc72fa65dbeb16f894148ce16c[m
+Author: reiro <reiro123@gmail.com>
+Date:   Wed Nov 23 19:18:14 2016 +0300
+
+    november update
+
+[33mcommit 1edd1506c84d204d87227936259e1e421d2aa5b1[m
+Author: reiro <reiro123@gmail.com>
+Date:   Wed Nov 9 13:41:37 2016 +0300
+
+    fixes
+
+[33mcommit fd4057c165874672ea24e728c2c82060d86048be[m
+Author: reiro <reiro123@gmail.com>
+Date:   Thu Oct 6 13:45:20 2016 +0300
+
+    updates. posts edit.
+
+[33mcommit 283933743e7e77b5f6157748953ddc5c89e1a951[m
+Author: reiro <reiro123@gmail.com>
+Date:   Mon Sep 5 09:35:17 2016 +0300
+
+    change posts Name to Title. ShortContent to description.
+
+[33mcommit eeb1f96a3393ccdf2d49f59ec366085f7efe7ff8[m
+Author: reiro <reiro123@gmail.com>
+Date:   Fri Sep 2 11:42:48 2016 +0300
+
+    1073 fix text
+
+[33mcommit 73b3fbe8b414f3fabf40a782f5f12294ba3ccf78[m
+Author: reiro <reiro123@gmail.com>
+Date:   Fri Sep 2 11:38:13 2016 +0300
+
+    calendar-1077 set current date
+
+[33mcommit 34fa355e9b6bf4612ec91a72e238dc9d5d758f5a[m
+Merge: 875b0e6 7ecb5fa
+Author: asd <reiro123@mail.ru>
+Date:   Fri Sep 2 10:46:52 2016 +0300
+
+    Merge pull request #1079 from digitalshop24/1075-fixes
+    
+    change links to game on the menu
+
+[33mcommit 7ecb5fab0abca6787463808f75f0bb4c2f410e08[m
+Author: reiro <reiro123@gmail.com>
+Date:   Thu Sep 1 15:15:49 2016 +0300
+
+    change links to game on the menu
+
+[33mcommit 875b0e621a79e9abbdc4ea5c34dfac853b2b3879[m
+Merge: e3ee052 6e95e7d
+Author: asd <reiro123@mail.ru>
+Date:   Mon Aug 29 15:46:34 2016 +0300
+
+    Merge pull request #1076 from digitalshop24/1075-fixes
+    
+    open games. remove all green cells. remove user_info pop-up
+
+[33mcommit 6e95e7d1ed28402a9cdaee8bd5fc56d72dec49da[m
+Author: reiro <reiro123@gmail.com>
+Date:   Mon Aug 29 15:44:33 2016 +0300
+
+    open games. remove all green cells. remove user_info pop-up
+
+[33mcommit 64ebeceda5af27f5885a067445c8e942002ce1f9[m
+Author: reiro <reiro123@gmail.com>
+Date:   Wed Aug 24 16:53:19 2016 +0300
+
+    1075 fixes
+
+[33mcommit e3ee052449503645be8101675ba101b2d63a3d56[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Mon Aug 22 18:08:07 2016 +0300
+
+    'fix'
+
+[33mcommit 762b93724c7c1f7a7fdda71ae8f3fb77d8c9aa8b[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu Aug 18 16:42:56 2016 +0300
+
+    'add_fix'
+
+[33mcommit 8303227abec13f085c9e7c800bf0e827802239fc[m
+Author: Reiro <reiro123@gmail.com>
+Date:   Tue Jul 26 11:22:18 2016 +0300
+
+    Add surveys module. Check user IP before loading survey.
+
+[33mcommit fc103265fb2279928fddf2c22ec05460b37f80bf[m
+Author: Reiro <reiro123@gmail.com>
+Date:   Mon Jul 18 10:45:49 2016 +0300
+
+    add hocke-test module.
+
+[33mcommit 963ce609ed92f9443a7efa15a639bc1b40d20793[m
+Merge: 65188e9 6957b6d
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Tue May 31 14:52:07 2016 +0300
+
+    Merge pull request #1058 from digitalshop24/1056
+    
+    'cap'
+
+[33mcommit 6957b6d174ba4beebd038e0751919e7a1688ebf1[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Tue May 31 14:29:01 2016 +0300
+
+    'cap'
+
+[33mcommit 65188e9647f91c494986cfd466af36efab866b1b[m
+Merge: ee3f1f8 9571894
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Tue May 31 10:57:25 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 9571894ed73a113f3fbad72cbeadcf4e274f349f[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Tue May 31 10:57:02 2016 +0300
+
+    updated regulations
+
+[33mcommit 0a713214539e2e4173f39d022cfcb3d435fc6b0b[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sun May 29 14:44:46 2016 +0300
+
+    removed registration
+    (cherry picked from commit ee3f1f8)
+
+[33mcommit ee3f1f8573932645fe116e352c658f661b048319[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sun May 29 14:44:46 2016 +0300
+
+    removed registration
+
+[33mcommit 5b532c641f68e2d7860059114c57743182be0892[m
+Merge: ab63436 896d3d4
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sun May 29 11:54:51 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 896d3d423dde26d83a661aeafeeeedf8c184b8b9[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sun May 29 11:54:25 2016 +0300
+
+    added 8.2 regulation
+
+[33mcommit ab6343642adb552af96d57ab6b05b4a3224a4ea0[m
+Merge: 7e497fe 7111480
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sun May 29 01:27:01 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 7111480a6230399c983dbe158787557a4f909d7e[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sun May 29 01:25:53 2016 +0300
+
+    removed banner
+
+[33mcommit 7e497fe1d5211c3c61fbbd6f3964f7354a991c26[m
+Merge: b9564d5 293ed00
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sun May 29 01:15:22 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 293ed00bf50e234dd563e11b8cd3d4629743bb34[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sun May 29 01:15:10 2016 +0300
+
+    fixed quiz
+
+[33mcommit b9564d51aefe33338df5088ded70bd27bb8c0c8f[m
+Merge: 35a2c50 507a6fe
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sat May 28 20:28:52 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 507a6fe4c6a4c9dda2f77e15ddf3ae7e126158c2[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sat May 28 20:28:32 2016 +0300
+
+    #1052
+
+[33mcommit 35a2c50e8fbde91ac6e21432063ecb416bdde6f4[m
+Merge: 46aba44 59d2cf8
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Sat May 28 15:47:34 2016 +0300
+
+    Merge pull request #1054 from digitalshop24/staging
+    
+    hide comment block if topic is closed
+
+[33mcommit 59d2cf8ebc919ac444c16b2d60bc7bdcde33d4a1[m
+Author: Zhenya Savushkin <savik94mail@gmail.com>
+Date:   Sat May 28 15:14:08 2016 +0300
+
+    hide comment block if topic is closed
+
+[33mcommit 46aba44bd008cd9a9b28e69cd6259724c4480ce6[m
+Merge: 8e337ac 5c226c1
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sat May 28 11:08:17 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 5c226c1112fac49c5b164d1b79fa345198931636[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sat May 28 11:07:59 2016 +0300
+
+    show next question when time is over
+
+[33mcommit 8e337acf0673ae98cd53ddaf0393aecfaf077a06[m
+Merge: 31fd701 4e8fec6
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Fri May 27 20:45:27 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 4e8fec67f0cae9db6f69cf9722c344cf90bd2142[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Fri May 27 20:41:57 2016 +0300
+
+    show next question when time is over
+
+[33mcommit 5e3803cfb5f628ad786fcf1df7acbd64e3d28ba8[m
+Author: Zhenya Savushkin <savik94mail@gmail.com>
+Date:   Fri May 27 16:57:00 2016 +0300
+
+    removed like actions
+
+[33mcommit 9765e9d7c95151b2e40e803a6573ed49a8fe647f[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 27 14:13:10 2016 +0300
+
+    remove baner
+
+[33mcommit 7db73feb108f860e247a5e8fc9993c37f44d6374[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 27 13:50:11 2016 +0300
+
+    add text
+
+[33mcommit 1645c8b0d161eaec0a538535ed824d17e1e8e2f2[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 27 13:47:00 2016 +0300
+
+    add profile z-index
+
+[33mcommit 1582fc98525d8da0bd81b6f3cfc97b323991d396[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 27 12:48:00 2016 +0300
+
+    ŠKODA
+
+[33mcommit 883c3d8cf53a9ff19db6c321aa781738ada98554[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 27 12:47:16 2016 +0300
+
+    add new baner
+
+[33mcommit d63041b4513d07eee174e1becb9d2f0acc353176[m
+Merge: bb20b2b f6b0b51
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 27 12:02:27 2016 +0300
+
+    Merge branch 'staging' of https://github.com/digitalshop24/hockey-skoda-frontend into staging
+
+[33mcommit bb20b2b15a8161b7d18534c677f0d04b6c0d1ab7[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 27 12:02:06 2016 +0300
+
+    add text
+
+[33mcommit 31fd70137e92e770af35515171c852b83b518433[m
+Merge: 8638078 f6b0b51
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Fri May 27 10:51:24 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit f6b0b51960862bb1d4813e4427deb75de99963ba[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Fri May 27 10:50:34 2016 +0300
+
+    added superfinal
+
+[33mcommit cc4fa25e7bb7bf3611e45a9ff9e034f95c6f5269[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 26 14:37:38 2016 +0300
+
+    add text
+
+[33mcommit ab6e5a225756f1d6b6478a62322e6e55b622c29e[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 26 14:13:19 2016 +0300
+
+    add style supergame
+
+[33mcommit 863807812e85a3bcce04d40f66aed826c8b7f041[m
+Merge: 63683d2 05a5841
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Wed May 25 23:48:01 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 05a5841fb8bc33cae7f9e2cd800b785185e64d09[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Wed May 25 23:47:09 2016 +0300
+
+    #1017
+
+[33mcommit 4fe585975cc245aeaa3762b1960791ae6cbd7c63[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 25 23:15:58 2016 +0300
+
+    add new class supergame
+
+[33mcommit 9181991ca5f7732586b3b94ef71ca2292185aca3[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 25 22:53:09 2016 +0300
+
+    fix modal supergame lk
+
+[33mcommit c625a729a28d27fd65a9a287c77d7b690bf78a2b[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Wed May 25 22:39:32 2016 +0300
+
+    fixed quiz
+
+[33mcommit 63683d2c23f5779e5497c85c360caaf4cfc025f4[m
+Merge: db14c2e 8bb5396
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 25 17:22:58 2016 +0300
+
+    Merge pull request #1051 from digitalshop24/staging
+    
+    add btn
+
+[33mcommit 8bb5396b3e6187358ae676470177a4a377347780[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 25 17:21:43 2016 +0300
+
+    add btn
+
+[33mcommit db14c2ec1094ae48f4adf5c1502f8d92ff9d9093[m
+Merge: e1d1382 de98de1
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 25 17:10:01 2016 +0300
+
+    Merge pull request #1050 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit de98de1ddb34d582c2aeb629dd67b7a6d5dfd5b0[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 25 17:07:57 2016 +0300
+
+    ad
+
+[33mcommit cb0898cbb65f010da97cf8ea4fa1e710079d1990[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 25 13:13:07 2016 +0300
+
+    fix super game page
+
+[33mcommit aac3a11c06d6dd5ce6ce036ac13794ee440aeef0[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 25 13:00:41 2016 +0300
+
+    height menu
+
+[33mcommit 468603f6ec5d2abcd4574682e000f75cfe41a4e2[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 25 12:54:16 2016 +0300
+
+    new p menu
+
+[33mcommit 73add860670fa73dcaaf7f181bfe55fcae15c065[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 25 12:31:42 2016 +0300
+
+    add
+
+[33mcommit 4d621e1b0b4538a849eb614d185438af70674778[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Tue May 24 23:36:28 2016 +0300
+
+    #1017
+
+[33mcommit c80f25c72537dfc52eaa3f640e7bfa502f99e849[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 23:24:14 2016 +0300
+
+    add text and btn
+
+[33mcommit 3b106db6458010a6f8e4d4c4e38ebddc4f448aef[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 22:10:51 2016 +0300
+
+    remove btn
+
+[33mcommit e18c7fe98766ec6c039c91f913f5632bc0aa4aba[m
+Merge: be61d9c 996daf3
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 21:03:28 2016 +0300
+
+    Merge remote-tracking branch 'origin/staging' into staging
+    
+    # Conflicts:
+    #	src/dashboard/registration/controller.js
+
+[33mcommit e1d1382fcc0a9d9e706b44c7de33a1cc68373c19[m
+Merge: e68824a 996daf3
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Fri May 20 19:55:37 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 996daf39308d44c4dd168856761feb44e3afb7b7[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Fri May 20 19:55:12 2016 +0300
+
+    #1046
+
+[33mcommit be61d9c4dc6282d373410132d18d2516e5529798[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 19:03:10 2016 +0300
+
+    fix registr
+
+[33mcommit b1e80b5f618064399f1d7a31abf168d35ce30884[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 19:01:50 2016 +0300
+
+    add link regist
+
+[33mcommit d76bcb7341a5eaab36e260ffb28863074b1e70d2[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 18:46:30 2016 +0300
+
+    add
+
+[33mcommit 3685588ad7d68c964bf6c0ab432040367efee25d[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 18:01:13 2016 +0300
+
+    add
+
+[33mcommit 745c0e83ff41a79e15227fb78419ff749a3c63f8[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 17:38:19 2016 +0300
+
+    add popup
+
+[33mcommit 37474c54557261a114a9b9fcf07321bcc7910601[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 16:33:55 2016 +0300
+
+    add heart
+
+[33mcommit 4c27fa94b3519e4ebed97025d929a4e8b931b17e[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 15:51:25 2016 +0300
+
+    add link
+
+[33mcommit 0f828a6649f87786c9206cbe297b885accba077c[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 15:49:42 2016 +0300
+
+    style popup
+
+[33mcommit 511a0f0537602e0a79a92254b7488b461f016e95[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 15:46:20 2016 +0300
+
+    add
+
+[33mcommit 45ce0815b6ee5bad2724543cad7a8e09a121a50d[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 15:43:13 2016 +0300
+
+    add foto
+
+[33mcommit 45736e82f421fb63eae5e41a3d0df7affde68b5f[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 15:24:10 2016 +0300
+
+    add new edit
+
+[33mcommit e68824a59afb2440a6d84b499929874f65529664[m
+Merge: 82f4a01 7fe0d4a
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 13:42:16 2016 +0300
+
+    Merge pull request #1045 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 7fe0d4a1becc4ddd3dfa4116f06d01f055c0beef[m
+Merge: 1500de6 76f8d85
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 20 12:58:52 2016 +0300
+
+    Merge pull request #1044 from digitalshop24/2000-page3
+    
+    'page4'
+
+[33mcommit 76f8d85018a056c12db216198e68825eab826782[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 20 12:57:11 2016 +0300
+
+    'page4'
+
+[33mcommit 1500de65bd89cf66238ad42168f32770152f5fb8[m
+Merge: 1675354 12f25cc
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 20 12:45:03 2016 +0300
+
+    Merge pull request #1043 from digitalshop24/2000-page2
+    
+    'page-3'
+
+[33mcommit 12f25cc33bfaf1f21fc594854670f2dabe29e769[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 20 12:43:59 2016 +0300
+
+    'page-3'
+
+[33mcommit 16753541a3f65076b5062f844b8199d578b8b946[m
+Merge: b30d6c2 7c97d6e
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 20 11:57:44 2016 +0300
+
+    Merge pull request #1042 from digitalshop24/2000-page1
+    
+    'page1'
+
+[33mcommit 7c97d6ed9e51695744911f46e57af5dac547e9e4[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 20 11:57:00 2016 +0300
+
+    'page1'
+
+[33mcommit b30d6c2b9776831ea988e385c82f571656bdff86[m
+Merge: 9a916ad 60472d2
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 20 11:52:28 2016 +0300
+
+    Merge pull request #1041 from digitalshop24/2000-page
+    
+    'page-naws'
+
+[33mcommit 60472d24383d42c6cb4a901e7f853b4c347af64b[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 20 11:47:42 2016 +0300
+
+    'page-naws'
+
+[33mcommit 9a916ad161e8e97bdf80ee76fb83ab98fe895c9e[m
+Merge: 7d50ee6 4f7cc45
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 11:06:46 2016 +0300
+
+    Merge pull request #1040 from digitalshop24/2000
+    
+    2000
+
+[33mcommit 4f7cc45dd516569bbe9e12118ea24fb0faf0ca93[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 20 10:58:07 2016 +0300
+
+    'page'
+
+[33mcommit 07edce504f953ae63e0839a5b74ce7b512092616[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 20 10:54:17 2016 +0300
+
+    'page'
+
+[33mcommit 2fd46dbdda1348af6ac3199aa7ad7a396444afe8[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 20 10:53:51 2016 +0300
+
+    'page'
+
+[33mcommit 66d5c5b175772a773f319dcd9a98043e898029b6[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 20 10:49:07 2016 +0300
+
+    page
+
+[33mcommit 82f4a0107f17993e9f88bd30c15158c6352774c0[m
+Merge: 17da603 7d50ee6
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 10:45:57 2016 +0300
+
+    Merge pull request #1039 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 7d50ee6df10e405b0c696e932b6cbdc0ac828183[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 20 10:40:04 2016 +0300
+
+    fix timer main
+
+[33mcommit 609f61fa70a0b574641cf8ccdd01211f92b4f17e[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 19 21:55:03 2016 +0300
+
+    #1031
+
+[33mcommit 4263ae1920b4250f4617dc0955f9c46f750bf368[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 19 21:07:33 2016 +0300
+
+    #1036
+
+[33mcommit f8865129b64d9ace1974aee497749a94eabc151f[m
+Merge: 9b62dbb 933eb5f
+Author: Zhenya Savushkin <savik94mail@gmail.com>
+Date:   Thu May 19 20:30:15 2016 +0300
+
+    Merge pull request #1038 from digitalshop24/1015
+    
+    #1015
+
+[33mcommit 933eb5fe6bb47d5b704c4d745950634cbb919d18[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 19 15:35:06 2016 +0300
+
+    add4
+
+[33mcommit 8564951989e9b882c7192d3a0f84ad8e1d501158[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Thu May 19 14:37:26 2016 +0300
+
+    ver
+
+[33mcommit 17da6030f721e30b9d3a8508327b1d8152d749a7[m
+Merge: 4ed4d3d 9b62dbb
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 19 12:51:46 2016 +0300
+
+    Merge pull request #1035 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 9b62dbb4b9264549a0588f54e6d5cb84050d5240[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 19 11:37:17 2016 +0300
+
+    add green color caneldar
+
+[33mcommit 53ca3a0b390451e4ef2c9a27d29f003d90dd8e4b[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 19 11:31:35 2016 +0300
+
+    add new time
+
+[33mcommit 5f4c2fb960110db5401deffa61e7c6599fd5a33e[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 19 00:26:27 2016 +0300
+
+    #1031
+
+[33mcommit 2b0c1bb1789580415bb3628f170fbfa9cfa769a5[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 19 00:08:10 2016 +0300
+
+    #824
+
+[33mcommit 1925fd5da8e37321ce29947897933f5e6a291014[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 19:52:34 2016 +0300
+
+    add plus forum
+
+[33mcommit 2dea836d0dcea43af9e4d4c773b8302144595d78[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 17:12:05 2016 +0300
+
+    add titel
+
+[33mcommit f0ca7d0d948d8fc29c3bf3bef9c4337d2fa352b7[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 16:29:03 2016 +0300
+
+    remove ball registration
+
+[33mcommit 093fab6850ce3d3bb68b3b98944191de4743e750[m
+Merge: e168e7f c50419e
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 16:26:58 2016 +0300
+
+    Merge pull request #1034 from digitalshop24/#1020
+    
+    add baner photocontest
+
+[33mcommit c50419e0bece8983ae1cf07f20ee16339264e208[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 16:26:11 2016 +0300
+
+    --
+
+[33mcommit b7a8fea9a0615b7df6e9166d3804edf1dbb0053b[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 16:24:07 2016 +0300
+
+    add baner photocontest
+
+[33mcommit e168e7f5dc7d25af0873f5aa908455858e252fb3[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 15:31:39 2016 +0300
+
+    fix img
+
+[33mcommit 9ab7564fdcdfcd5153a335760e87c9a32f909b43[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 15:07:23 2016 +0300
+
+    add img
+
+[33mcommit 84c47c8eece0b3ebbf07ad2f9c90eaff4ae9c9d9[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 14:59:22 2016 +0300
+
+    add link menu
+
+[33mcommit 1e44940bcd5cd9d05203e259d0d8f9a7b6750321[m
+Merge: d68d123 34ff7de
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 14:53:49 2016 +0300
+
+    Merge pull request #1033 from digitalshop24/#1022-
+    
+    #1022
+
+[33mcommit 34ff7de5375852772643f5a048d728e592a40fdb[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 14:51:28 2016 +0300
+
+    fix infograf
+
+[33mcommit 2f1b2c2024fabc4538cc1eebd2d348e9c3066abb[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 14:50:46 2016 +0300
+
+    add select
+
+[33mcommit bfc9f08c984279bbf4fc363a1f899fa103749706[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 14:03:34 2016 +0300
+
+    add select
+
+[33mcommit 2bda9fe6d32bff40e00afba6706f48a0cb801fdc[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 18 12:01:32 2016 +0300
+
+    add link popup
+
+[33mcommit 4ed4d3d7a932f1021c3a1a566e7834caee4455c0[m
+Merge: 895413a d68d123
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Tue May 17 20:38:09 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit d68d123e0fe5b8a05a366d73d93fe6f90d999d41[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Tue May 17 20:37:20 2016 +0300
+
+    fixed prize popup
+
+[33mcommit e55d6985bd4b8e1872c288b4481c2846edd94330[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Tue May 17 20:00:51 2016 +0300
+
+    #1028
+
+[33mcommit dcc7850618b1782924b3eef90717554541c18785[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Tue May 17 19:50:22 2016 +0300
+
+    fixed prize popup
+
+[33mcommit 895413a512359dc2c5f2c1799ac0a75f1cdb8beb[m
+Merge: e4e1b7c b42248b
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 19:49:18 2016 +0300
+
+    Merge pull request #1029 from digitalshop24/staging
+    
+    fix
+
+[33mcommit b42248bc33080ab65a1b2d4daf38b0ad9563b62d[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 19:47:48 2016 +0300
+
+    fix
+
+[33mcommit e4e1b7cccc15a9938555be252486ea5963da1d6a[m
+Merge: 8bb6922 096f874
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 19:29:49 2016 +0300
+
+    Merge pull request #1027 from digitalshop24/staging
+    
+    add fix bag
+
+[33mcommit 096f874f6590af269881365c9032ab624fbf47bf[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 19:27:52 2016 +0300
+
+    add fix bag
+
+[33mcommit 8bb692222b66e6d0833fd4dbaa4340bb1bd6b41c[m
+Merge: b6828d6 44cc72b
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 19:05:36 2016 +0300
+
+    Merge pull request #1026 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 44cc72b8d77e13fa0f8c639480b457dabb387ac9[m
+Merge: c8bccdc b6828d6
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 19:03:29 2016 +0300
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into staging
+    
+    # Conflicts:
+    #	src/dashboard/country/template.html
+    #	src/dashboard/footer/template.html
+
+[33mcommit c8bccdc4d498cffb594b4749c91a4f8117b6d12b[m
+Merge: 45ef5f4 5fedf62
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 18:46:15 2016 +0300
+
+    Merge pull request #1025 from digitalshop24/#1022
+    
+    add select
+
+[33mcommit 45ef5f43542e6ee9c5b87a3281217a9e733191da[m
+Merge: 8c0003e 23de268
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 18:45:34 2016 +0300
+
+    Merge pull request #1024 from digitalshop24/#1010
+    
+    #1010
+
+[33mcommit 23de2689e2ad86ef7b3d42224e8d4d8487a3e6ac[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 18:43:33 2016 +0300
+
+    hidden popup
+
+[33mcommit 5fedf62b29d3f93c56ef91ce679e4b37d1d5e8e3[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 18:38:09 2016 +0300
+
+    add select
+
+[33mcommit 8df338122b26403bcec570d7a4ee321619d8e949[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 16:43:45 2016 +0300
+
+    add directive
+
+[33mcommit 193879a741dcdb45e957d918bd5a62fb797d39ba[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 16:22:24 2016 +0300
+
+    add popup fix
+
+[33mcommit 768b37e92a865e15fd25a377101847357697743e[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 16:13:54 2016 +0300
+
+    fix popup
+
+[33mcommit 9690f3d439d2056cce1db887b5f77eac4c823993[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 16:06:07 2016 +0300
+
+    add
+
+[33mcommit 9ac479d1f2e1464105fd5fb997a771cc9e2bf150[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 16:01:48 2016 +0300
+
+    add popup
+
+[33mcommit 8c0003e4a5ef7166479d233752526bdb4267cf3a[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 15:25:40 2016 +0300
+
+    fix
+
+[33mcommit 2f944983ff9479b2e84efc0e9dd15cd499b02661[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 15:15:50 2016 +0300
+
+    add link
+
+[33mcommit 9ed40ae4b991ccb3c31bc6e0ec34869083ae0569[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 14:34:21 2016 +0300
+
+    add popup
+
+[33mcommit 8cb9fc2f0a7afe8c2b2e71b34860c55bec391e8a[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 14:08:29 2016 +0300
+
+    add second popap
+
+[33mcommit 567c12cbaa4829c4ad6e8a054ed13770f01ea34d[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Tue May 17 13:44:24 2016 +0300
+
+    game 750b
+
+[33mcommit 62628efdfc47d4925dd8a3dc77f1ecb3c4606d44[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Sat May 14 14:16:14 2016 +0300
+
+    min fix
+
+[33mcommit b6828d68f9e9cba40a58b4ae2ecc8f50e5896249[m
+Merge: 92a172d 6002b14
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 19:55:20 2016 +0300
+
+    Merge pull request #1014 from digitalshop24/928
+    
+    mob
+
+[33mcommit 6002b149bd856a0830c73ec4b995c7aea753d4f8[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 19:53:22 2016 +0300
+
+    mob
+
+[33mcommit 92a172da54179b598c43cfaf6328178578c3094f[m
+Merge: edb9ac7 5d5ccbc
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 18:05:19 2016 +0300
+
+    Merge pull request #1013 from digitalshop24/993
+    
+    photo-mob
+
+[33mcommit 5d5ccbccdd112a4bb7eb92e763fb897bfc09e754[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 18:04:20 2016 +0300
+
+    photo-mob
+
+[33mcommit edb9ac779d90923b93a8479e1155d17d61dfc42d[m
+Merge: 658a0c6 ad7c0fe
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 17:29:03 2016 +0300
+
+    Merge pull request #1012 from digitalshop24/1002-mo
+    
+    mob-4
+
+[33mcommit ad7c0fe29378c49cc0e38b90e5a8e67f48328532[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 17:27:48 2016 +0300
+
+    mob-4
+
+[33mcommit 658a0c6ef0e98a412cad2bd27c61430a96e504a0[m
+Merge: 17da981 f1bdeb6
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 16:21:19 2016 +0300
+
+    Merge pull request #1009 from digitalshop24/1002
+    
+    mob-3
+
+[33mcommit f1bdeb69eb6acc698e21931b32772cca0b9a2aa0[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 16:19:53 2016 +0300
+
+    mob-3
+
+[33mcommit 17da9814626760c80a1e7c6068f3c33c50e9d0d5[m
+Merge: c0095a5 829bc5f
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 16:12:39 2016 +0300
+
+    Merge pull request #1008 from digitalshop24/1002
+    
+    mob-2
+
+[33mcommit 829bc5f966f1af976e77b4b986fcd904e2ea303b[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 16:11:30 2016 +0300
+
+    mob-2
+
+[33mcommit c0095a58f6813ada32880f5a7a787338a20f0b33[m
+Merge: e8ca719 94e2f54
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 15:25:46 2016 +0300
+
+    Merge pull request #1007 from digitalshop24/1002
+    
+    mob-1
+
+[33mcommit 94e2f54a9f1c9b4a2ddd54a1449a81a990eabdf3[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 15:24:35 2016 +0300
+
+    mob-1
+
+[33mcommit e8ca719a6d4e8a5435352335ecbe49e0f4cbe86f[m
+Merge: ef39b83 396861a
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 14:47:00 2016 +0300
+
+    Merge pull request #1006 from digitalshop24/1002
+    
+    1002
+
+[33mcommit 20c817a6696cd4f7b4e5343cb26ccc1ca3668f03[m
+Merge: dc26d96 396861a
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 14:44:13 2016 +0300
+
+    Merge pull request #1005 from digitalshop24/1002
+    
+    teodor
+
+[33mcommit 396861aad586047f35752af1cc48885b83515cd7[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 14:43:01 2016 +0300
+
+    teodor
+
+[33mcommit ef39b83f6ba5ab4debd2248b800ef8f9291f228d[m
+Merge: 2ebbba1 7abea19
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 13:44:15 2016 +0300
+
+    Merge pull request #1004 from digitalshop24/937
+    
+    937
+
+[33mcommit dc26d9669844521df4b199e5748de4c680a68fd1[m
+Merge: 31f3bdb 7abea19
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 13:40:35 2016 +0300
+
+    Merge pull request #1003 from digitalshop24/937
+    
+    mobil
+
+[33mcommit 7abea19d9d498cad96cec7211d50fc924cd95bdf[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Mon May 16 13:38:10 2016 +0300
+
+    mobil
+
+[33mcommit 31f3bdb54f0d3553cb24183c062018a816af497b[m
+Author: Zhenya Savushkin <savik94mail@gmail.com>
+Date:   Sun May 15 22:05:08 2016 +0300
+
+    added image
+    (cherry picked from commit 2ebbba1)
+
+[33mcommit cc0cc8eaca7aaa1ebfe119abdfcbb85e31845138[m
+Author: Zhenya Savushkin <savik94mail@gmail.com>
+Date:   Sun May 15 22:01:37 2016 +0300
+
+    changed background country page
+    (cherry picked from commit bd8f835)
+
+[33mcommit 2ebbba14a2a6f002352da54742400f227aa139af[m
+Author: Zhenya Savushkin <savik94mail@gmail.com>
+Date:   Sun May 15 22:05:08 2016 +0300
+
+    added image
+
+[33mcommit bd8f8355deac62a2712f3765442317bd904ae334[m
+Author: Zhenya Savushkin <savik94mail@gmail.com>
+Date:   Sun May 15 22:01:37 2016 +0300
+
+    changed background country page
+
+[33mcommit 7986ae993a8129225ed6e2282bcc089a29650b70[m
+Merge: fa21f68 65f3b3a
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sun May 15 21:33:13 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 65f3b3a950a34ef7a9075d3bed09e5ba7ca0b69c[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Sun May 15 21:32:51 2016 +0300
+
+    #970
+
+[33mcommit fa21f687871377cc7a5ffcf7271bcc9c3e3b6095[m
+Merge: 75fc52a 95f4a3b
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Sat May 14 14:15:37 2016 +0300
+
+    Merge pull request #1001 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 95f4a3be6aab5d65915a63c1e951e7eda16071c5[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 23:01:25 2016 +0300
+
+    add
+
+[33mcommit 5f51534b7cc63394a627e9b25d0b44e5794b77cd[m
+Merge: c506df6 be189b6
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 21:45:01 2016 +0300
+
+    Merge pull request #997 from digitalshop24/#970
+    
+    add btn stars
+
+[33mcommit be189b609511b79647c0679f1b6a5cc2fb4aff6c[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 21:42:51 2016 +0300
+
+    add btn
+
+[33mcommit b1109f3a80a6293968fc57a0cf54624f5ba9a9f0[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 21:29:43 2016 +0300
+
+    add btn stars
+
+[33mcommit c506df60e6879c6456a917773c4c8689a705d930[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Fri May 13 21:16:42 2016 +0300
+
+    #983
+
+[33mcommit 64e2ee76287c93bc5910f564da9a9c89911ae228[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Fri May 13 21:10:39 2016 +0300
+
+    #983
+
+[33mcommit aaed94f6afdf3cb4936351a01542807da9b8b789[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 13:42:44 2016 +0300
+
+    add hidden new
+
+[33mcommit 364f75732c69c19d7ff35d2ddc4a155db6f17a1d[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Fri May 13 20:53:56 2016 +0300
+
+    #967
+
+[33mcommit ee10ab6a6a5c1e2fb1ceaea5ee9d0a2eab3aa5db[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Fri May 13 20:44:13 2016 +0300
+
+    #992
+
+[33mcommit 75fc52abb63ea5b4ed107f0112dbcacb55c54d61[m
+Merge: 2f6d62c d15d8b5
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 13:47:47 2016 +0300
+
+    Merge pull request #996 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit d15d8b542fda4c9d0dd2b7e50acba00e7ccff98f[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 13:40:39 2016 +0300
+
+    add localstorage popap
+
+[33mcommit b92a7845feb92a20150e84b04840921d3cc7fdff[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 13:31:38 2016 +0300
+
+    add link
+
+[33mcommit de8854ce6de8dd858c41789713fa50964aa0fa61[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 13:14:04 2016 +0300
+
+    new banner
+
+[33mcommit ae86be378c3f2d730da2cec3b0adf5b0eb76b398[m
+Merge: 6654ffd 106fcf9
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 13:06:18 2016 +0300
+
+    Merge pull request #995 from digitalshop24/#937--
+    
+    #937
+
+[33mcommit 2f6d62c0596e2c47898c4ae4399811d53ed55ead[m
+Merge: 24e6c1c 106fcf9
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 13:03:06 2016 +0300
+
+    Merge pull request #994 from digitalshop24/#937--
+    
+    #937
+
+[33mcommit 106fcf915eb4b486fcb87e6f9f6d720fa257a89f[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 13:01:46 2016 +0300
+
+    add
+
+[33mcommit f03d2c01a2434472be9293f1d1f54a41764c38e3[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 12:56:53 2016 +0300
+
+    add city and
+
+[33mcommit 6654ffd4f0845d951206b5140383ee7e68d19348[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 12:21:36 2016 +0300
+
+    remove text teodor
+
+[33mcommit 14bed900f9002302e8dcfc2f48d9b0761230949e[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 11:53:44 2016 +0300
+
+    fix link
+
+[33mcommit e71086f0f13a809987859899ef929605ed4d6ce6[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 11:44:26 2016 +0300
+
+    add color
+
+[33mcommit 7422d44ea2fa942fe0e873de2d064d2363dba599[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 11:40:23 2016 +0300
+
+    add
+
+[33mcommit c79b7f7f81352d88ae8b553591a13837429f09b9[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 11:30:34 2016 +0300
+
+    add
+
+[33mcommit ff3909f331e8da274503bdd49e1333ae350621b6[m
+Merge: bffb6b2 8258001
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 10:46:34 2016 +0300
+
+    Merge pull request #990 from digitalshop24/#958
+    
+    #958
+
+[33mcommit 82580014162d6dd06667bb3d6b373a250889e058[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 10:44:35 2016 +0300
+
+    add hover
+
+[33mcommit 24e6c1cca502b71ab7353044482785f19adc1470[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 13 10:08:32 2016 +0300
+
+    add
+
+[33mcommit 33e1a6cfd8eeb8a93159fc7754d365cd2ff34258[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 17:40:57 2016 +0300
+
+    add http
+
+[33mcommit 1643095bcf7a8b1487ad393fc98c38f1dd611622[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 12 20:23:32 2016 +0300
+
+    added minify bundler
+
+[33mcommit ea015b16c89f06feaf14af992264678cf2a3a8bc[m
+Merge: 96fc7d3 bffb6b2
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 12 20:21:46 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit bffb6b2495a2ab56d4c3d8c02606dc059135f187[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 12 20:21:15 2016 +0300
+
+    #986
+
+[33mcommit 96fc7d39c3807cada66101568e7edf9c77af151f[m
+Merge: 230647d f337cc1
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 17:29:55 2016 +0300
+
+    Merge pull request #987 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit f337cc19f24c17dee0418df3ce3468118b5f2c5b[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 17:09:16 2016 +0300
+
+    add text
+
+[33mcommit 1b71f9b1c25334b66e091c67890b8b370104c673[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 17:07:32 2016 +0300
+
+    fix text
+
+[33mcommit 6674230a577100cadcae273b86f48a742f8fe256[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 16:59:47 2016 +0300
+
+    add link
+
+[33mcommit 7d0265c5cabcf2ff8f303852b657d838273ee3d9[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 16:55:49 2016 +0300
+
+    fix time
+
+[33mcommit 2c494cebd90c5652d2cc47788d0487c1974a1c1c[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 16:36:55 2016 +0300
+
+    add time
+
+[33mcommit be4e559971d66d8f65718f1c64abb89cbf54c6d3[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 16:27:45 2016 +0300
+
+    add hidden slide main page
+
+[33mcommit 12d07bd34d63526471f224ac42635cf7f9492776[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 16:24:01 2016 +0300
+
+    fix btn
+
+[33mcommit ce15c22cad1412aa9ee0cc22bb93d3551c1fc350[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 16:18:39 2016 +0300
+
+    hidden slide main banner
+
+[33mcommit 0239d72469c0e008967517058423e96dc3b47306[m
+Merge: 48e9ade 73d510f
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 16:14:24 2016 +0300
+
+    Merge pull request #985 from digitalshop24/#980-
+    
+    add
+
+[33mcommit 73d510f8258e4addea1740a1cd9ab32c40245616[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 16:12:45 2016 +0300
+
+    add
+
+[33mcommit 48e9ade1fecfb67beea1272e0bfb12783de398fd[m
+Merge: 10b0e20 575a938
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 16:12:42 2016 +0300
+
+    Merge pull request #984 from digitalshop24/#980-
+    
+    add link
+
+[33mcommit 575a9383ddbd2f0b9524feabf7ae03024032c3b4[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 16:02:39 2016 +0300
+
+    add link
+
+[33mcommit 10b0e208c43cb50e60f89c851b6030fc90f67536[m
+Merge: 4292cb2 c8bd264
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 16:02:30 2016 +0300
+
+    Merge pull request #982 from digitalshop24/#980-
+    
+    add
+
+[33mcommit c8bd26405ba398b87ee031d13605381005bb9ddf[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 16:01:17 2016 +0300
+
+    add
+
+[33mcommit 4292cb271d2a8392b7bdadf43f77e7ecdc4dd5ee[m
+Merge: 2f32265 691c82a
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 15:57:08 2016 +0300
+
+    Merge pull request #981 from digitalshop24/#980-
+    
+    add new banner
+
+[33mcommit 691c82ade490e93178abad4d78a6eb92e62fe13d[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 15:55:25 2016 +0300
+
+    add new banner
+
+[33mcommit 592121e63c4298e5ee3246afd2f62cd068924af0[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 15:40:20 2016 +0300
+
+    add slider
+
+[33mcommit 2f32265a1f626420a92062d6fc89f9ac44a9c79c[m
+Merge: 3a42ec2 7211b55
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 14:00:49 2016 +0300
+
+    Merge pull request #977 from digitalshop24/#962-
+    
+    add
+
+[33mcommit 7211b55685a78176bfb7e5835dd2eae50eb7e2f3[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 13:58:59 2016 +0300
+
+    add
+
+[33mcommit 3a42ec2c52ded0afc30cf41a078ab1164f1899fb[m
+Merge: 51749b2 4077070
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 13:56:09 2016 +0300
+
+    Merge pull request #976 from digitalshop24/#966
+    
+    fix now
+
+[33mcommit 40770707af289ec8c638f70f2050d6244b727770[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 13:55:20 2016 +0300
+
+    fix now
+
+[33mcommit 51749b29279d5f171b682eae220678f23268ff3c[m
+Merge: 4fc1e5d 9677ba7
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 13:47:13 2016 +0300
+
+    Merge pull request #975 from digitalshop24/#966
+    
+    966
+
+[33mcommit 9677ba744371622bd8e10f293aac49c39bbb3613[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 13:45:42 2016 +0300
+
+    add fix baner
+
+[33mcommit 4fc1e5da40f0c9a24be78682ddcafef0358c98b8[m
+Merge: 0eef78b 57a80b8
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 13:12:01 2016 +0300
+
+    Merge pull request #974 from digitalshop24/#966
+    
+    hidden baner news
+
+[33mcommit 57a80b8d45f5cdf686776370f2bb4fc15cae4c32[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 13:09:04 2016 +0300
+
+    hidden baner news
+
+[33mcommit 0eef78bc69c1bd8f8ab8075ed17ccdf8b34c7f86[m
+Merge: ddab980 f01bd58
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 13:02:53 2016 +0300
+
+    Merge pull request #973 from digitalshop24/#966
+    
+    #966
+
+[33mcommit f01bd58c3ed220e91460f03532d3ab1c93060fdd[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 13:01:57 2016 +0300
+
+    fix style
+
+[33mcommit e0655f96194ee73fe4f2fb213752a55f9f69add8[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 13:00:33 2016 +0300
+
+    add link
+
+[33mcommit 24979c11278b20cc3ff48a152d9cd4f17755f4c6[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 12:59:15 2016 +0300
+
+    add text
+
+[33mcommit 84fd42c42df8a41c22ca25f487312b44301a1be0[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 12:57:58 2016 +0300
+
+    add banner
+
+[33mcommit 2f1f03f50baf012b41c170a9b3898ef7f3ba9d03[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 12 12:43:35 2016 +0300
+
+    add baner
+
+[33mcommit ddab9808dcb174f488204396f003f316147807a3[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Wed May 11 20:25:36 2016 +0300
+
+    added user dealer check
+
+[33mcommit 230647d9027d00641a8f0252b0dc45812b9d1575[m
+Merge: 80d9f27 abb95c9
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Wed May 11 19:43:31 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit abb95c9ad9b0bc61ac8ac4246462ebba542824ec[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Wed May 11 19:43:12 2016 +0300
+
+    fixed calendar score bug
+
+[33mcommit f5a7af03d39778b90d5f0260010563fb0f1847a1[m
+Merge: 44cbfd1 3d487ae
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 18:20:15 2016 +0300
+
+    Merge pull request #965 from digitalshop24/#962
+    
+    962
+
+[33mcommit 3d487aeebbdd564a1888ada592075acc4aa62c93[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 18:18:59 2016 +0300
+
+    add fix img
+
+[33mcommit 44cbfd126f1ebe6d99827c46d5b77229d6679e46[m
+Merge: 5d150f5 a44410b
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 18:11:33 2016 +0300
+
+    Merge pull request #964 from digitalshop24/#956
+    
+    #956
+
+[33mcommit 5d150f5225845ca9e1ca90a0a4d2e31c020f5ca5[m
+Merge: c8ae5e0 d0e2469
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 18:11:19 2016 +0300
+
+    Merge pull request #963 from digitalshop24/#962
+    
+    #962
+
+[33mcommit d0e246900ff5262965772946c7c00b3d23a5eb21[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 18:10:31 2016 +0300
+
+    add fix
+
+[33mcommit fd9be898d8bff02565bc222b2a94b5f2589b872c[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 18:07:07 2016 +0300
+
+    add
+
+[33mcommit 5f3e5c29da7e6922e940da4e096df71665d8ed80[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 18:03:56 2016 +0300
+
+    add new popap
+
+[33mcommit 80d9f2704b7b01c22881b37661a48123eaee44de[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 17:51:03 2016 +0300
+
+    add
+
+[33mcommit c510a9ee144fbab4eae75920a9cf89ecc23e13e7[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 17:49:17 2016 +0300
+
+    fix Skoda
+
+[33mcommit 1328f6510995c0c4f1a6db7e7ef2633547966238[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 17:47:42 2016 +0300
+
+    add popap
+
+[33mcommit aa267ba0259d58aef9c6bb9ad3e87e2db2fa5d94[m
+Merge: 5d0f455 c8ae5e0
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 17:32:58 2016 +0300
+
+    Merge pull request #960 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit a44410b12110d939409aca138aecd26785ab97e3[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 17:32:02 2016 +0300
+
+    add fix
+
+[33mcommit 834dadc0c6e3005effe1b05c63a417dd64abd061[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 17:30:07 2016 +0300
+
+    add slide
+
+[33mcommit c8ae5e02c0fe42d3e16b53fec8f24a21314289b8[m
+Merge: 374b1bb 16009a2
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 16:51:54 2016 +0300
+
+    Merge pull request #957 from digitalshop24/#935
+    
+    add titel
+
+[33mcommit 16009a2b571c2328a701cde7a0b80364878b72c5[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 16:50:45 2016 +0300
+
+    add titel
+
+[33mcommit 5d0f45542b9cb2ffa9b0d2a7bfbe2b655757de61[m
+Merge: 11652bd 374b1bb
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 16:32:37 2016 +0300
+
+    Merge pull request #955 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 374b1bbb9ed903a29b735574513c1fd64bdf463e[m
+Merge: 3213d12 4fde97b
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 16:31:17 2016 +0300
+
+    Merge pull request #954 from digitalshop24/#923-
+    
+    #923
+
+[33mcommit 4fde97b189dd5ffaf32344d51c450bfa0b5bc70c[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 16:30:23 2016 +0300
+
+    add
+
+[33mcommit d4bcfa51460a7c8e5831ca20a32267d1d3cc7ebc[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 16:25:43 2016 +0300
+
+    add new pagin
+
+[33mcommit 3213d125ebaf785efc970bc1e5145d58f49e44c4[m
+Merge: f195dd7 38980f3
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 16:18:53 2016 +0300
+
+    Merge pull request #953 from digitalshop24/#927
+    
+    add meta
+
+[33mcommit 38980f3bf591f214d2e373f440892d5784fe39be[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 16:17:36 2016 +0300
+
+    add meta
+
+[33mcommit f195dd716d90d6b41f3f2f062eb4a68241941603[m
+Merge: f1c4d7a 93e3bba
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 16:16:37 2016 +0300
+
+    Merge pull request #952 from digitalshop24/#935
+    
+    add title
+
+[33mcommit 93e3bba230bb7128445c92708e04eb8c70a1bbe2[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 16:15:10 2016 +0300
+
+    add title
+
+[33mcommit f1c4d7a7fee6d6368b11797ee45b6be41f16ca75[m
+Merge: 6c7abb8 55cfef9
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 16:11:48 2016 +0300
+
+    Merge pull request #951 from digitalshop24/#943-
+    
+    add fix jihc
+
+[33mcommit 55cfef975511a8458258c46abbce8dbd0f11d5fa[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 16:10:41 2016 +0300
+
+    add fix jihc
+
+[33mcommit 6c7abb8bbe8397ad66a94dc3b95aa56a87436abf[m
+Merge: ae14e8d 683194f
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 15:57:02 2016 +0300
+
+    Merge pull request #949 from digitalshop24/#946
+    
+    #946
+
+[33mcommit 683194ff0a9deed7dd52bb0a6fa2be5388595a80[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 15:56:04 2016 +0300
+
+    add text
+
+[33mcommit e6251ccac43d4387563ac918b371f2c1d510a1b3[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 15:48:58 2016 +0300
+
+    add new titel
+
+[33mcommit e9d9e9e18e91f775ada01986373e7937cadf3daf[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 15:48:19 2016 +0300
+
+    add lne-height
+
+[33mcommit 11652bd970d6a9e10883a1be5662351c9b685773[m
+Merge: f477f23 ae14e8d
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 15:09:27 2016 +0300
+
+    Merge pull request #948 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit ae14e8d1958deb5661f2c61c518434c82bbaf208[m
+Merge: b8ceb01 bbb1d6e
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 15:08:18 2016 +0300
+
+    Merge pull request #947 from digitalshop24/#937-
+    
+    add fix
+
+[33mcommit bbb1d6edc97aa63683bb3355984a5677e2bafa64[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 15:07:14 2016 +0300
+
+    add fix
+
+[33mcommit b8ceb01abcb887b8aa8a54ac3a0f63aea2b73f03[m
+Merge: 956579e baad876
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 14:45:10 2016 +0300
+
+    Merge pull request #945 from digitalshop24/#942
+    
+    fix
+
+[33mcommit baad8763fdc5a2aaa1c8462cf7c57e8c0fd8ad8d[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 14:44:17 2016 +0300
+
+    fix
+
+[33mcommit 956579e8faf1820db097efd042ec129cba591475[m
+Merge: 4b96562 fb5b8f2
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 14:42:29 2016 +0300
+
+    Merge pull request #944 from digitalshop24/#937-
+    
+    #937
+
+[33mcommit fb5b8f203bd001e54dbe98eb9ca8fa3473ad228f[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 14:40:49 2016 +0300
+
+    add index
+
+[33mcommit c181f95dcace109e73db245f0ade0d29ee504f7d[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 14:40:38 2016 +0300
+
+    add new page
+
+[33mcommit f477f2317bf8274bcfd0f06e993d5117b8f6b2d3[m
+Merge: b17892a 4b96562
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 12:42:04 2016 +0300
+
+    Merge pull request #941 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 4b965624cbcac4376c32b33ad659501048453cf6[m
+Merge: e9bb845 93127cf
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 12:41:43 2016 +0300
+
+    Merge pull request #940 from digitalshop24/#928-add-page-mobileapp
+    
+    add new img
+
+[33mcommit 93127cf60fd4b0aaa58232294c816f479a770948[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 12:40:32 2016 +0300
+
+    add new img
+
+[33mcommit b17892ad21d467285b8ebe9637533612731caeb9[m
+Merge: 09de68e e9bb845
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 12:38:41 2016 +0300
+
+    Merge pull request #939 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit e9bb845eba5f33be3f7a7a2567728979606bd76d[m
+Merge: 66e6124 4efed7a
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 12:37:27 2016 +0300
+
+    Merge pull request #938 from digitalshop24/#931-
+    
+    hidden
+
+[33mcommit 4efed7ae855ff4f550e220f4da2f9abd203afe1d[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 12:34:20 2016 +0300
+
+    hidden
+
+[33mcommit 66e6124cd5f6718e831003b509e118841fe9de9f[m
+Merge: ce77b3c 8d5eeed
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 12:23:31 2016 +0300
+
+    Merge pull request #936 from digitalshop24/#928-add-page-mobileapp
+    
+    add page mobile app
+
+[33mcommit 8d5eeed65689bb8e95132b311e056f1181118d1f[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 11 12:18:41 2016 +0300
+
+    add page mobile app
+
+[33mcommit 09de68e37d02d2cdf16043bcf288732e2d95e168[m
+Merge: 8c2734c fff8d54
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Wed May 11 11:21:29 2016 +0300
+
+    Merge pull request #933 from digitalshop24/500-priz
+    
+    500 priz
+
+[33mcommit ce77b3ce047a5d74d355fbfde34f4b6f29ad5ccc[m
+Merge: 33457ed fff8d54
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Wed May 11 11:20:01 2016 +0300
+
+    Merge pull request #932 from digitalshop24/500-priz
+    
+    5 sponsor
+
+[33mcommit fff8d54a1ce157202dc7bcbe122ae9fa4739d7f7[m
+Author: julian88888888 <888julian888@gmail.com>
+Date:   Wed May 11 11:18:19 2016 +0300
+
+    5 sponsor
+
+[33mcommit 33457ed194e7e2be482fde233cee3a57dbe9c63a[m
+Merge: 18605ac 6a32fb7
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 6 19:47:27 2016 +0300
+
+    Merge pull request #921 from digitalshop24/913
+    
+    table color
+
+[33mcommit 8c2734c8780a32ee57e30a4b4cdf4ab43f3c8095[m
+Merge: f991d13 6a32fb7
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 6 19:45:59 2016 +0300
+
+    Merge pull request #920 from digitalshop24/913
+    
+    table color
+
+[33mcommit 6a32fb714a0684018e2822bc502974e153b44b49[m
+Author: julian88888888 <888julian888@gmail.com>
+Date:   Fri May 6 19:44:22 2016 +0300
+
+    table color
+
+[33mcommit f991d13c9d0101f7b737be1f784df3e3dc37eb95[m
+Merge: e379a25 18605ac
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 6 17:25:05 2016 +0300
+
+    Merge pull request #919 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 18605ac01a8b2886a9a45a01a1945b2ee05bb0a8[m
+Merge: f15772e a0e1c83
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 6 17:24:39 2016 +0300
+
+    Merge pull request #918 from digitalshop24/#910-new-psd
+    
+    add new link
+
+[33mcommit a0e1c836222a268c1be3fbf573ca541e5ef80e29[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 6 17:22:28 2016 +0300
+
+    add new link
+
+[33mcommit e379a259e8c8a557e0d5a89aab1a9f5d79937a8e[m
+Merge: 39de821 f15772e
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 6 16:38:29 2016 +0300
+
+    Merge pull request #917 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit f15772e0bb9808d123911ca0d36db38705825dec[m
+Merge: 6744868 c537b5d
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 6 16:36:12 2016 +0300
+
+    Merge pull request #916 from digitalshop24/#910-new-psd
+    
+    #910 new psd
+
+[33mcommit c537b5d8c34d00c4c7bd4e8f4933508229172e64[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 6 16:33:28 2016 +0300
+
+    add
+
+[33mcommit 67448687a8de79caa6f00849ca5969e10764d6d0[m
+Merge: 33c8d0d 5631190
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 6 16:09:57 2016 +0300
+
+    Merge pull request #915 from digitalshop24/912
+    
+    photoconcurs1
+
+[33mcommit 5631190312ce87c586ae390e4fcb949a4f825ce7[m
+Author: julian88888888 <888julian888@gmail.com>
+Date:   Fri May 6 16:08:50 2016 +0300
+
+    photoconcurs1
+
+[33mcommit 33c8d0d562708039a428e79050e947e65ae6b42d[m
+Merge: bfdb6a5 90bc49e
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Fri May 6 15:50:22 2016 +0300
+
+    Merge pull request #914 from digitalshop24/912
+    
+    photoconcurs
+
+[33mcommit 90bc49e165810d122125f70d8a78a794de94eeef[m
+Author: julian88888888 <888julian888@gmail.com>
+Date:   Fri May 6 15:47:41 2016 +0300
+
+    photoconcurs
+
+[33mcommit 11355c0a11ac0e06f45df1beef5559bb71a7e173[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 6 14:38:16 2016 +0300
+
+    add slider
+
+[33mcommit 870fb94a42a02458bee42e698ac33654b8be0ad9[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 6 14:12:30 2016 +0300
+
+    add too
+
+[33mcommit 040da64905c8b1bf5f2ed3d0180dcda1dd002cd1[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Fri May 6 14:12:11 2016 +0300
+
+    add new item menu header
+
+[33mcommit 39de821f2c2a88a12161db1a3714ecaa9e4f3ad0[m
+Merge: 9b404b3 bfdb6a5
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Fri May 6 13:11:06 2016 +0300
+
+    Merge branch 'staging'
+    
+    Conflicts:
+    	src/api.js
+    	src/index.js
+
+[33mcommit bfdb6a53e239c3f27e2f9d1f49eb97fd3201256f[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Fri May 6 13:10:21 2016 +0300
+
+    changed api url
+
+[33mcommit 9b404b39c3e4b424e63293c1e01f50f5ee0d0f13[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 5 23:41:09 2016 +0300
+
+    fixed
+    (cherry picked from commit cd538ba)
+
+[33mcommit cd538ba240dd033679cd5baf8851de8634f0006e[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 5 23:41:09 2016 +0300
+
+    fixed
+
+[33mcommit b31701364048a0c044fcb6ef68c741ef04838d79[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 5 23:06:23 2016 +0300
+
+    add new url api
+
+[33mcommit 5200b6303697b42c354037a05418500062affba4[m
+Merge: 084fd3e 335bce9
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 5 19:22:52 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 335bce913f3b2bb52ace4e09e71af7d41733a45e[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 5 19:22:27 2016 +0300
+
+    #845
+
+[33mcommit 2c52da6e4bcf8aab141d46b8bf67dbac196dbe5c[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 5 19:16:52 2016 +0300
+
+    added infinity scroll
+
+[33mcommit 084fd3e5c5bfca2fdd912cced5f3aa292dcad594[m
+Merge: 0acd73a 32cf0f0
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 5 16:40:01 2016 +0300
+
+    Merge pull request #903 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 32cf0f06e2381ddc40735c5cc54124c4741df24c[m
+Merge: 88e5d72 a6fcc10
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 5 16:39:23 2016 +0300
+
+    Merge pull request #902 from digitalshop24/#901
+    
+    add text
+
+[33mcommit a6fcc10e58f819191433da27299deb481bbb81e4[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 5 16:37:38 2016 +0300
+
+    add text
+
+[33mcommit 0acd73af5bf79ce9afda0b87844a4e86b0da670f[m
+Merge: 9e306e0 88e5d72
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 5 14:47:05 2016 +0300
+
+    Merge pull request #899 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 88e5d72c0d76c0ba6bd576c7269c52b2b7c2da40[m
+Merge: 11140a0 f847b05
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 5 14:46:42 2016 +0300
+
+    Merge pull request #898 from digitalshop24/#895
+    
+    add style
+
+[33mcommit f847b056bb332bc97ccf989ee79eda58c0cc8b7c[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 5 14:43:00 2016 +0300
+
+    add style
+
+[33mcommit 9e306e03336f34a78f6a7b8df9a19bc3a0148df7[m
+Merge: 4abce07 11140a0
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 5 14:18:36 2016 +0300
+
+    Merge pull request #897 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 11140a0d10adc44ea5b47eccfd9f46bd07382796[m
+Merge: af5f36a da64277
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 5 14:18:13 2016 +0300
+
+    Merge pull request #896 from digitalshop24/#895
+    
+    fix col-md-12
+
+[33mcommit da64277ebb59bc292f1fb259b3aa75de099e2e75[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 5 14:16:31 2016 +0300
+
+    fix col-md-12
+
+[33mcommit 4abce07bec971050cefb1496b6118becd5a7afd9[m
+Merge: f905b33 af5f36a
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Thu May 5 12:26:39 2016 +0300
+
+    Merge pull request #894 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit af5f36a975096350e29883cd49c3b5866b87bb8f[m
+Merge: 4bc39f3 aa69088
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Thu May 5 12:00:52 2016 +0300
+
+    Merge pull request #893 from digitalshop24/891
+    
+    img news
+
+[33mcommit aa69088db3ed0b660e3cff5f5e1bfc4c1bcd01ea[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Thu May 5 11:58:36 2016 +0300
+
+    img news
+
+[33mcommit f905b33a4a7438ad2ac65429dbfa60ee1d96d50f[m
+Merge: 22b929c 4bc39f3
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 5 09:16:49 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 4bc39f3e3fa2e8314947dd3d63ccc09ca9e721f8[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 5 09:16:26 2016 +0300
+
+    enabled forum quiz
+
+[33mcommit 22b929cf47898aa131afaafcedd874264bd7eb59[m
+Merge: b7e19c2 088cd28
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 5 08:51:23 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 088cd284bc516827fdb936a4ac77812f0ecba8b1[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Thu May 5 08:42:16 2016 +0300
+
+    removed legacy code
+
+[33mcommit b7e19c287670104ea8dc693b342e534754a7f1be[m
+Merge: 9ba619b 55e184f
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Wed May 4 20:40:49 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 55e184ffbdaf8c02161eba7cc425291cdef84df7[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Wed May 4 20:40:35 2016 +0300
+
+    #890
+
+[33mcommit 9ba619bd0887116c9bf139f52bfe8b7c83d98e7f[m
+Merge: 12b03d9 69498ca
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Wed May 4 20:18:44 2016 +0300
+
+    Merge branch 'staging'
+
+[33mcommit 12b03d971d0b5b3069c42db8c785440a6fd15921[m
+Author: Savushkin Zhenya <savik94mail@gmail.com>
+Date:   Wed May 4 19:44:21 2016 +0300
+
+    changed build mode
+
+[33mcommit 2decc2da24523c9190f3915e15cb773a57abad18[m
+Merge: 77b767b 203072d
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Wed May 4 19:00:50 2016 +0300
+
+    Merge pull request #892 from digitalshop24/839
+    
+    photoconkurs licke
+
+[33mcommit 69498ca94292809a2f70b480acaa08e9f6852664[m
+Merge: 90427d6 203072d
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Wed May 4 17:17:32 2016 +0300
+
+    Merge pull request #888 from digitalshop24/839
+    
+    photoconkurs licke
+
+[33mcommit 203072ddbf1c351916fae7e8834fcc3f3840264e[m
+Author: Julian88888888 <888julian888@gmail.com>
+Date:   Wed May 4 17:16:06 2016 +0300
+
+    photoconkurs licke
+
+[33mcommit 77b767b74b1793139a76682567405225e3077ea8[m
+Merge: 49d6923 90427d6
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 16:52:44 2016 +0300
+
+    Merge pull request #887 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 90427d689275cde0224a32d4b80b443bc7447ed3[m
+Merge: 08f8735 ff6366f
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 16:52:29 2016 +0300
+
+    Merge pull request #886 from digitalshop24/876
+    
+    876
+
+[33mcommit ff6366f87726bb7f50731f4a508cce18ff3c3218[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 16:51:39 2016 +0300
+
+    add font-size
+
+[33mcommit 021f9c892501603823ee5f490598567d91d740bc[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 16:49:03 2016 +0300
+
+    add
+
+[33mcommit 49d6923c38fb9dd906c3a32a9d28fb913bf86379[m
+Merge: 796e4a8 08f8735
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 15:37:36 2016 +0300
+
+    Merge pull request #885 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 08f8735354a58cf8ca0673f7371b145e867ba93d[m
+Merge: cbd722c 8b57b05
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 15:36:47 2016 +0300
+
+    Merge pull request #884 from digitalshop24/876
+    
+    remove balls
+
+[33mcommit cbd722ca23cbadc4f53c2a5edbbc6f8851f7d9db[m
+Merge: 6187b2a 6e993b8
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 15:36:15 2016 +0300
+
+    Merge pull request #883 from digitalshop24/#882-
+    
+    add link
+
+[33mcommit 8b57b056c65f63480c98a340b910c60d026a79da[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 15:35:48 2016 +0300
+
+    remove balls
+
+[33mcommit 6e993b87a150a0c91e6ffe04fecf1ce265d52761[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 15:32:15 2016 +0300
+
+    add link
+
+[33mcommit 796e4a83c71a3b823a0b5ed94dd6395ec83908f1[m
+Merge: c253df2 6187b2a
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 14:33:36 2016 +0300
+
+    Merge pull request #881 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit 6187b2a2a91be0f688ee69b6bccc1e80cfdbcdfe[m
+Merge: 9ef388a 8589df9
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 14:33:04 2016 +0300
+
+    Merge pull request #880 from digitalshop24/open-forum-v
+    
+    open
+
+[33mcommit 8589df9d77668b0df1ceb281461a3699b8e5cf14[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 14:31:03 2016 +0300
+
+    open
+
+[33mcommit 9ef388a6616e6d467dad5b100eced0c656cef45a[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 14:10:24 2016 +0300
+
+    add fix
+
+[33mcommit c253df282f83318ab02d0fd6719587b8a756d514[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 14:08:21 2016 +0300
+
+    add fix
+
+[33mcommit 4f360881c20e834e29d2de1575e577deec5f6e2f[m
+Merge: d20a13c a5dfcc7
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 13:28:37 2016 +0300
+
+    Merge pull request #879 from digitalshop24/staging
+    
+    Staging
+
+[33mcommit a5dfcc7a2dbcd96313eab249e4827b3dbdf89bba[m
+Merge: bbb8655 c342133
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 13:27:30 2016 +0300
+
+    Merge pull request #878 from digitalshop24/#869
+    
+    add new prizes
+
+[33mcommit c3421338ad5536495e75e269d49278872d1964cc[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 13:26:49 2016 +0300
+
+    add new prizes
+
+[33mcommit bbb8655a23b68a17a7209799c239e8cd08c123ad[m
+Merge: a192197 97b9b3f
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 13:09:09 2016 +0300
+
+    Merge pull request #877 from digitalshop24/#862-
+    
+    add new titel
+
+[33mcommit 97b9b3fc910244ee4384807fa3c52f73bc5ef092[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 13:08:18 2016 +0300
+
+    add new titel
+
+[33mcommit a192197a4109c1b8a48cd5c347d8d75a92f6557b[m
+Merge: 7603401 52110b7
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 12:50:35 2016 +0300
+
+    Merge pull request #875 from digitalshop24/#873
+    
+    add aquagrim
+
+[33mcommit 52110b76b9669cc46b05bfad5eb4161432dc86c0[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 12:49:42 2016 +0300
+
+    add aquagrim
+
+[33mcommit 760340186b7b09a9ab0bed2b9a73cc53cbe172c8[m
+Merge: 87ea47e 1e588d6
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 12:46:42 2016 +0300
+
+    Merge pull request #874 from digitalshop24/#853-
+    
+    add text
+
+[33mcommit 1e588d6127e52ee90f8326782773cafa221fc580[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 12:45:19 2016 +0300
+
+    add text
+
+[33mcommit 87ea47e171b169487c2be216e8bc11c15191ceba[m
+Merge: 744eb3f 3fa3a30
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 12:29:15 2016 +0300
+
+    Merge pull request #872 from digitalshop24/#863
+    
+    add fix
+
+[33mcommit 3fa3a306d94c7f131fd04699135d7956f881fe6d[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 12:28:11 2016 +0300
+
+    add fix
+
+[33mcommit 744eb3fc1a1c547df9bdab07911d1b3108e1c901[m
+Merge: a4da125 cc4e412
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 12:17:01 2016 +0300
+
+    Merge pull request #871 from digitalshop24/#779-
+    
+    add link
+
+[33mcommit cc4e412e41b5c20dd4d34efd27ea39f4aa8f0a63[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 12:12:00 2016 +0300
+
+    add link
+
+[33mcommit a4da1259a4d55c35a13175d4906186d1846a98fc[m
+Merge: 00ed68f 8bae3bd
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 12:05:17 2016 +0300
+
+    Merge pull request #870 from digitalshop24/#865
+    
+    add new label main page
+
+[33mcommit 8bae3bd7896a474dce474a2c21b05a8d88053c8e[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 12:04:24 2016 +0300
+
+    add new label main page
+
+[33mcommit 00ed68f1f87b1f66f18d7203643dc58272c6efe4[m
+Merge: 1bdea3b bd32ba9
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 12:00:43 2016 +0300
+
+    Merge pull request #868 from digitalshop24/#866
+    
+    add header table style
+
+[33mcommit bd32ba993810f5aade8e41b3b48ea7cf7b648795[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 11:57:51 2016 +0300
+
+    add header table style
+
+[33mcommit 1bdea3b52e4622ed31fd26d08860004bfd75d546[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 11:55:38 2016 +0300
+
+    add gitignore
+
+[33mcommit 4c5e4fa761baae12cc354f273db7561c7625d42a[m
+Merge: ce36272 0f406cd
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 11:54:24 2016 +0300
+
+    Merge pull request #867 from digitalshop24/#866
+    
+    add new style pogruzhenie
+
+[33mcommit 0f406cd47afc0e2887dd4bd1d3858f0b0caa150f[m
+Author: gitwhatislove <whatislove0505@gmail.com>
+Date:   Wed May 4 11:52:07 2016 +0300
+
+    add new style pogruzhenie

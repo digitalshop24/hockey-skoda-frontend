@@ -126,10 +126,12 @@
   }
   .item-1 {
     color: $white;
+
     h5 {
       font-weight:300;
       margin: 30px 0 20px 0;
       position:absolute;
+      display:none;
       z-index:1;
       margin-left: 75px;
       span {
@@ -302,6 +304,7 @@
   }
   .hash_tag {
     padding-top: 20px;
+    display:none;
     p {
       font-size: $p_size;
     }
@@ -749,6 +752,11 @@
     margin-left: 13%;
   }
 }
+.text-left {
+  .btn_primary {
+  display:none;
+  }
+}
 
 .wrapp_mainpage_tantam {
   background-color: #e6e6e6;
@@ -761,6 +769,7 @@
       min-width:220px;
       height:60px;
       font-size: 1.7em;
+      display:none;
     }
     @media (max-width:1200px){
       margin-left:0;
@@ -937,7 +946,21 @@
     padding-bottom:5px;
   }
 
-
+@media screen and (max-width:973px) {
+  .wrapp_mainpage_slider {
+    .left_sidebar_menu {
+      float:none;
+      width:100%;
+    }
+    .date_slider_news {
+    float:none;
+    width:100%;
+    }
+    .now_games {
+    display:none;
+    }
+  }
+}
 @media only screen and (max-width:$screen-md) {
   .wrapp_mainpage_data {
     select {
