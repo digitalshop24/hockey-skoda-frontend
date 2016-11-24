@@ -62,7 +62,7 @@
       background-position: center;
       background-size: 100% 100%;
       border-bottom: 1px solid white;
-      min-height: 100px;
+      min-height: 124px;
       position: relative;
       h2 {
         color: white;
@@ -945,6 +945,15 @@
     padding-top:5px;
     padding-bottom:5px;
   }
+.wrapp_mainpage_slider {
+    .date_slider_news {
+    height:620px;
+    img {
+    width:auto;
+    height:620px;
+    }
+  }
+}
 
 @media screen and (max-width:973px) {
   .wrapp_mainpage_slider {
@@ -955,6 +964,11 @@
     .date_slider_news {
     float:none;
     width:100%;
+    height:auto;
+    img {
+    width:100%;
+    height:auto;
+    }
     }
     .now_games {
     display:none;
