@@ -946,6 +946,13 @@
     padding-top:5px;
     padding-bottom:5px;
   }
+.wrapp_mainpage_slider {
+    .date_slider_news {
+    img {
+    width:auto;
+    }
+  }
+}
 
 @media screen and (max-width:973px) {
   .wrapp_mainpage_slider {
@@ -956,6 +963,11 @@
     .date_slider_news {
     float:none;
     width:100%;
+    height:auto;
+    img {
+    width:100%;
+    height:auto;
+    }
     }
     .now_games {
     display:none;

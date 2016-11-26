@@ -245,14 +245,20 @@
                                     </li>
                                 </a>
                                 <a ui-sref="dashboard.mobileapp">
-                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isMobileappOpen = true; ctrl.isOtherOpen = ctrl.isAnalyticsOpen = ctrl.isNewsOpen = ctrl.isForecastOpen = ctrl.isPrizeOpen = ctrl.isInterestingOpen = false">
+                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isMobileappOpen = true; ctrl.isOtherOpen = ctrl.isOtherOpen1 = ctrl.isAnalyticsOpen = ctrl.isNewsOpen = ctrl.isForecastOpen = ctrl.isPrizeOpen = ctrl.isInterestingOpen = false">
                                         Мобильное приложение
                                          <!--<img src="img/resources/img/arrow_righ_mini.png" alt="">-->
                                     </li>
                                 </a>
                                 <a ui-sref="dashboard.facts">
-                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isOtherOpen = true; ctrl.isAnalyticsOpen = ctrl.isNewsOpen = ctrl.isForecastOpen = ctrl.isPrizeOpen = ctrl.isInterestingOpen = false">
+                                    <li ng-click="ctrl.isMenuOpen = false" ng-mouseover="ctrl.isOtherOpen = true; ctrl.isAnalyticsOpen = ctrl.isOtherOpen1 = ctrl.isNewsOpen = ctrl.isForecastOpen = ctrl.isPrizeOpen = ctrl.isInterestingOpen = false">
                                         Другое
+                                         <img src="img/resources/img/arrow_righ_mini.png" alt="">
+                                    </li>
+                                </a>
+                                <a ui-sref="dashboard.facts">
+                                    <li ng-click="ctrl.isMenuOpen1 = false" ng-mouseover="ctrl.isOtherOpen1 = true; ctrl.isAnalyticsOpen = ctrl.isOtherOpen = ctrl.isNewsOpen = ctrl.isForecastOpen = ctrl.isPrizeOpen = ctrl.isInterestingOpen = false">
+                                        Архив
                                          <img src="img/resources/img/arrow_righ_mini.png" alt="">
                                     </li>
                                 </a>
@@ -286,9 +292,11 @@
                             <ul ng-show="ctrl.isOtherOpen">
                                 <a ui-sref="dashboard.socials" ng-click="ctrl.isMenuOpen = false"><li class=""> Соц.сети хоккеистов</li></a>
                                 <a ui-sref="dashboard.country" ng-click="ctrl.isMenuOpen = false"><li>История ЧМХ</li></a>
-                                <a ui-sref="dashboard.cheer" ng-click="ctrl.isPNewsOpen = false"><li>Команда поддержки</li></a>
                                 <a ui-sref="dashboard.teodor" ng-click="ctrl.isPNewsOpen = false"><li>Истории детей #хоккейвкаждом</li></a>
                                 <a ui-sref="dashboard.infographics" ng-click="ctrl.isMenuOpen = false"><li> Инфографика сборных</li></a>
+                            </ul>
+                            <ul ng-show="ctrl.isOtherOpen1">
+                                <a ui-sref="dashboard.cheer" ng-click="ctrl.isPNewsOpen1 = false"><li>Команда поддержки</li></a>
                             </ul>
                         </div>
                         <div class="col-md-6 info_menu">
