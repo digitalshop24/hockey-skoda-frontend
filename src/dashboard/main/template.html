@@ -196,36 +196,37 @@
                     <!--</div>-->
                 <!--</div>-->
 
-                <div class="" ng-show="ctrl.survey">
-                    <div class="main-collogo">
-                        <div class="main-collogo-content">
-                            <div ng-show="!ctrl.showSurveyAnswers">
-                                <!-- <p>{{ctrl.survey.question}}</p></br>                            -->
-                                <p>Подробнее о хоккеистах <a href="/forum/topics/563/page/1">тут</a>.</p></br>
-                                <ul>
-                                    <li ng-repeat="answer in ctrl.survey.answer_options">
-                                        <label class="radio_green">
-                                            <input type="radio" name="answer" ng-model="ctrl.survey_answer" value="{{answer.id}}">
-                                            <p class="radio-label" ng-bind="answer.answer"></p>
-                                        </label>
-                                    </li>
-                                </ul>
-                                <button class="btn btn_secondary small" ng-click="ctrl.sendSurvey()">Ответить</button>
-                            </div>
-                            <div ng-show="ctrl.showSurveyAnswers">
-                                <p>{{ctrl.survey.question}}</p></br> 
-                                <p ng-show="ctrl.showCongratulations">Ваш голос учтён!</p>
-                                <p ng-show="!ctrl.showCongratulations">Вы уже проголосовали!</p></br>
-                                <ul>
-                                    <li ng-repeat="answer in ctrl.survey.answer_options">
-                                        <small><em>{{answer.answer}}</em></small>
-                                        <progressbar class="active" animate="true" max="100" value="answer.answers_count" type="success"><i>{{answer.answers_count}}%</i></progressbar>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!--<div class="" ng-show="ctrl.survey">-->
+                    <!--<div class="main-collogo">-->
+                        <!--<div class="main-collogo-content">-->
+                            <!--<div ng-show="!ctrl.showSurveyAnswers">-->
+                                <!--&lt;!&ndash; <p>{{ctrl.survey.question}}</p></br>                            &ndash;&gt;-->
+                                <!--<p>Подробнее о хоккеистах <a href="/forum/topics/563/page/1">тут</a>.</p></br>-->
+                                <!--<ul>-->
+                                    <!--<li ng-repeat="answer in ctrl.survey.answer_options">-->
+                                        <!--<label class="radio_green">-->
+                                            <!--<input type="radio" name="answer" ng-model="ctrl.survey_answer" value="{{answer.id}}">-->
+                                            <!--<p class="radio-label" ng-bind="answer.answer"></p>-->
+                                        <!--</label>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                                <!--<button class="btn btn_secondary small" ng-click="ctrl.sendSurvey()">Ответить</button>-->
+                            <!--</div>-->
+                            <!--<div ng-show="ctrl.showSurveyAnswers">-->
+                                <!--<p>{{ctrl.survey.question}}</p></br> -->
+                                <!--<p ng-show="ctrl.showCongratulations">Ваш голос учтён!</p>-->
+                                <!--<p ng-show="!ctrl.showCongratulations">Вы уже проголосовали!</p></br>-->
+                                <!--<ul>-->
+                                    <!--<li ng-repeat="answer in ctrl.survey.answer_options">-->
+                                        <!--<small><em>{{answer.answer}}</em></small>-->
+                                        <!--<progressbar class="active" animate="true" max="100" value="answer.answers_count" type="success"><i>{{answer.answers_count}}%</i></progressbar>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
                 <div class="hidden-sm hidden-xs hidden">
                     <div class="main-collogo">
                         <div class="main-collogo-img" style="padding:0;">

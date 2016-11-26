@@ -44,4 +44,36 @@ export default class ForumtopicService {
             return res.data;
         })
     }
+
+    getIp(){
+        return this.http.get('http://ipv4.myexternalip.com/json')
+            .then(function(result) {
+                return result.data.ip;
+            });
+    }
+
+    getSurvey(userIp){
+        return this.api.
+            get('/survey', {params: {user_ip: userIp}
+            })
+            .then(response => {
+                return response.data;
+            })
+            .catch(response => {
+                throw response.data.error;
+            });
+    }
+
+    sendSurveyAnswer(survey_id, answer_id, ip){
+        return this.api.
+            post('/survey/answer', {
+                survey_id: survey_id,
+                answer_id: answer_id,
+                user_ip: ip
+            }).then((res) => {
+                return res.data;
+            }).catch(err => {
+                throw err.data;
+            });
+    }
 }
