@@ -34,9 +34,8 @@ export default class MainCtrl {
         this.survey_answer;
         this.showCongratulations = false;
 
-        console.log(mainSlides);
         this.mainSlides = [{
-            image: 'img/resources/img/main/1.png',
+            image: 'img/resources/img/main/1_900x500.png',
             link: "http://hockey-skoda.ru/cap"
         },
         {

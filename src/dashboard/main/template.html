@@ -19,73 +19,47 @@
 
     <div class="container-fluid" style="width: 100%;">
         <div class="row">
-            <div class="left_sidebar_menu col-sm-3">
-                <div class="row">
+            <div class="left_sidebar_menu" style="position: relative;">
                     <a ui-sref="dashboard.forecast.companionship">
-                        <div class="wrapp_block">
-                            <div class="block left_sidebar_item" style="background-image: url('img/resources/img/main/predicts.png');">
+                            <div class="block left_sidebar_item img-responsive">
+                                <img src="img/resources/img/main/schedule.png" class="stretch"/>
                                 <div class="bg_hover">
                                     <h2>Материалы</h2>
                                 </div>
                             </div>
-                        </div>
                     </a>
-                </div>
-                <div class="row">
-                    <a ui-sref="dashboard.blog">
-                        <div class="wrapp_block">
-                            <div class="block left_sidebar_item" style="background-image: url('img/resources/img/main/schedule.png');">
+                    <a ui-sref="dashboard.schedule">
+                            <div class="block left_sidebar_item">
+                                <img src="img/resources/img/main/predicts.png" class="stretch"/>
                                 <div class="bg_hover">
-                                    <h2>Расписания</h2>
+                                    <h2>Расписание</h2>
                                 </div>
                             </div>
-                        </div>
                     </a>
-                </div>
-                <div class="row">
                     <a ui-sref="dashboard.general-news">
-                        <div class="wrapp_block">
-                            <div class="block left_sidebar_item" style="background-image: url('img/resources/img/main/news.png');">
+                            <div class="block left_sidebar_item">
+                                <img src="img/resources/img/main/news.png" class="stretch"/>
                                 <div class="bg_hover">
                                     <h2>Новости</h2>
                                 </div>
                             </div>
-                        </div>
                     </a>
-                </div>
-                <div class="row">
-                    <a ui-sref="dashboard.schedule">
-                        <div class="wrapp_block">
-                            <div class="block left_sidebar_item" style="background-image: url('img/resources/img/main/analytics.png');">
+                    <a ui-sref="dashboard.blog">
+                            <div class="block left_sidebar_item">
+                                <img src="img/resources/img/main/analytics.png" class="stretch"/>
                                 <div class="bg_hover">
-                                    <h2>Активность</h2>
+                                    <h2>Активности</h2>
                                 </div>
                             </div>
-                        </div>
                     </a>
-                </div>
-                <div class="row">
                     <a ui-sref="dashboard.forum">
-                        <div class="wrapp_block">
-                            <div class="block left_sidebar_item" style="background-image: url('img/resources/img/main/forum.png');">
+                            <div class="block left_sidebar_item">
+                                <img src="img/resources/img/main/forum.png" class="stretch"/>
                                 <div class="bg_hover">
                                     <h2>Форум</h2>
                                 </div>
                             </div>
-                        </div>
                     </a>
-                </div>
-                <!-- <div class="row">
-                    <a ui-sref="dashboard.infographics">
-                        <div class="wrapp_block">
-                            <div class="block left_sidebar_item" style="background-image: url('img/resources/img/main/schedule.png');">
-                                <div class="bg_hover">
-                                    <h2>Инфографика</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div> -->
             </div>
             <div class="date_slider_news">
 
@@ -93,19 +67,23 @@
 
                 <!--<slick infinite=true arrows=true dots=true slides-to-show=1 slides-to-scroll=1 autoplay=true>-->
 
-                    <div ng-repeat="slide in ctrl.mainSlides">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="item-1">
-                                    <div class="hidden-sm hidden-xs">
-                                        <h5 style="position:absolute; z-index:1; "><span> <img class="taggs" src="img/resources/img/hashtagIcon.png"> <button class="btn " ui-sref="dashboard.socials({hashtag: '#хоккейвкаждом'})">#хоккейвкаждом</button></span></h5>
-                                    </div>
-                                    <a href="{{slide.link}}"><img src="{{slide.image}}" alt="" class="img-responsive" style="width: 100%;"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!--<div ng-repeat="slide in ctrl.mainSlides">-->
+                        <!--<div class="container-fluid">-->
+                            <!--<div class="row">-->
+                                <!--<div class="item-1">-->
+                                    <!--<div class="hidden-sm hidden-xs">-->
+                                        <!--<h5 style="position:absolute; z-index:1; "><span> <img class="taggs" src="img/resources/img/hashtagIcon.png"> <button class="btn " ui-sref="dashboard.socials({hashtag: '#хоккейвкаждом'})">#хоккейвкаждом</button></span></h5>-->
+                                    <!--</div>-->
+                                    <!--<a href="{{slide.link}}"><img src="{{slide.image}}" alt="" class="img-responsive" style="width: 100%;"></a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 <!--</slick>-->
+
+                <div class="">
+                    <a href="{{ctrl.mainSlides[0].link}}"><img src="{{ctrl.mainSlides[0].image}}" alt="" class="img-responsive" style="width: 100%;"></a>
+                </div>
             </div>
         </div>
     </div>
@@ -125,18 +103,18 @@
                     </div>
 
                 </div>
-                <div class="row hash_tag">
-                        <div class="col-md-1 text-center">
-                            <p>Хэштеги</p>
-                        </div>
-                        <div class="col-md-11">
-                            <ul>
-                                <li ng-repeat="hashtag in ctrl.hashtags | limitTo:10"><a ui-sref="dashboard.socials({hashtag: '{{hashtag}}'})" ng-bind="hashtag"></a></li>
-                                <li ng-show="!ctrl.openAddTags && ctrl.hashtags.length > 10"><a ng-click="ctrl.openAddTags = true"><img src="img/resources/img/three_dots.png" alt=""></a></li>
-                                <li ng-show="ctrl.openAddTags" ng-repeat="hashtag in ctrl.hashtags | limitTo:ctrl.hashtags.length:10" ><a ui-sref="dashboard.socials({hashtag: '{{hashtag}}'})" ng-bind="hashtag"></a></li>
-                            </ul>
-                        </div>
-                </div>
+                <!--<div class="row hash_tag">-->
+                        <!--<div class="col-md-1 text-center">-->
+                            <!--<p>Хэштеги</p>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-11">-->
+                            <!--<ul>-->
+                                <!--<li ng-repeat="hashtag in ctrl.hashtags | limitTo:10"><a ui-sref="dashboard.socials({hashtag: '{{hashtag}}'})" ng-bind="hashtag"></a></li>-->
+                                <!--<li ng-show="!ctrl.openAddTags && ctrl.hashtags.length > 10"><a ng-click="ctrl.openAddTags = true"><img src="img/resources/img/three_dots.png" alt=""></a></li>-->
+                                <!--<li ng-show="ctrl.openAddTags" ng-repeat="hashtag in ctrl.hashtags | limitTo:ctrl.hashtags.length:10" ><a ui-sref="dashboard.socials({hashtag: '{{hashtag}}'})" ng-bind="hashtag"></a></li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                <!--</div>-->
                 <div class="row ul_news">
 
                      <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="news in ctrl.championatNews | limitTo:4">
@@ -207,16 +185,16 @@
                 
             <!--</slick>  -->
 
-                <div class="hidden-sm hidden-xs">
-                    <div class="main-collogo">
-                        <div class="main-collogo-img">
-                            <img src="img/resources/img/main/label.png" alt="" style="width: 250px;">
-                        </div>
-                        <div class="main-collogo-content">
-                            <p>Генеральный спонсор<br>Чемпионата Мира по хоккею 2016 г.</p>
-                        </div>
-                    </div>
-                </div>
+                <!--<div class="hidden-sm hidden-xs">-->
+                    <!--<div class="main-collogo">-->
+                        <!--<div class="main-collogo-img">-->
+                            <!--<img src="img/resources/img/main/label.png" alt="" style="width: 250px;">-->
+                        <!--</div>-->
+                        <!--<div class="main-collogo-content">-->
+                            <!--<p>Генеральный спонсор<br>Чемпионата Мира по хоккею 2016 г.</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
 
                 <div class="" ng-show="ctrl.survey">
                     <div class="main-collogo">

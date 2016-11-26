@@ -53,17 +53,17 @@
 
   .left_sidebar_menu {
     float: left;
-    width: 30%;
+    width: 33.333%;
     border-right: 1px solid white;
+    margin-top: 15px;
     .left_sidebar_item {
-      height:15.5vh;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      background-size: 100% 100%;
       border-bottom: 1px solid white;
-      min-height: 100px;
       position: relative;
+      .stretch {
+        margin: auto;
+        height:100%;
+        width: 100%;
+      }
       h2 {
         color: white;
         font-weight: bold;
@@ -106,7 +106,8 @@
     border: 0;
   }
   .date_slider_news {
-    width: 70%;
+    width: 66.667%;
+    margin-top: 8px;
     float: right;
     .slick-dots {
       bottom: -5px;
@@ -976,11 +977,11 @@
      }
     .left_sidebar_menu {
       .left_sidebar_item {
-        height: 6vh;
-        min-height: 20px;
-        h2 {
-          font-size: 2rem;
-        }
+        //height: 6vh;
+        //min-height: 20px;
+        //h2 {
+        //  font-size: 2rem;
+        //}
       }
     }
   } 
@@ -1023,10 +1024,10 @@
   .wrapp_mainpage_slider {
     .left_sidebar_menu {
       .left_sidebar_item {
-        height: 4.5vh;
-        h2 {
-          font-size: 1.2rem;
-        }
+        //height: 4.5vh;
+        //h2 {
+        //  font-size: 1.2rem;
+        //}
       }
     }
   }

@@ -99,12 +99,12 @@ function initSlider() {
             ]
         });
 
-        $('.date_slider_news').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false
-        });
+        // $('.date_slider_news').slick({
+        //     infinite: true,
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1,
+        //     dots: false
+        // });
 
         // forecast slider
         $('.slider-for_block').slick({
