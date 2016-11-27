@@ -58,6 +58,7 @@ import country from './country/index';
 import cap from './cap/index';
 import secondPopup from './second-popup/index';
 import hockeyTest from './hockey-test/index';
+import opros from './opros/index';
 
 
 
@@ -92,6 +93,7 @@ export default angular.module('dashboard',
         cheer.name,
         calendar.name,
         faq.name,
+        opros.name,
         infographics.name,
         socials.name,
         consent.name,
