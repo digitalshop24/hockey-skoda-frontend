@@ -79,13 +79,13 @@ header {
     -webkit-box-shadow: 0px 2px 7px -1px rgba(0,0,0,0.38);
     -moz-box-shadow: 0px 2px 7px -1px rgba(0,0,0,0.38);
     box-shadow: 0px 2px 7px -1px rgba(0,0,0,0.38);
-
+    min-height:84px;
     img {
       display: inline-block !important;
       margin: 0 auto;
     }
     ul {
-      display: inline;
+      display: none;
       width: 100%;
       .hidden_lgg {
           display: none;

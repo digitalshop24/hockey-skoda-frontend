@@ -56,6 +56,7 @@
     width: 33.333%;
     border-right: 1px solid white;
     margin-top: 15px;
+    position:relative;
     .left_sidebar_item {
       border-bottom: 1px solid white;
       position: relative;
@@ -71,13 +72,88 @@
         top: 50%;
         transform: translateY(-50%);
         margin-left: 10px;
+        a {
+          color: white;
+          font-weight: bold;
+          text-decoration:none;
+        }
+      }
+
+      &:hover {
+        .left_sidebar_item_hover {
+          display:block;
+        }
+        img {
+          opacity:0.8;
+        }
       }
     }
     .left_sidebar_item:hover {
-      opacity: 0.8;
+      
+    }
+
+  }
+  .left_sidebar_item_hover {
+    position: absolute;
+    display:none;
+    top: 0;
+    left: 100%;
+    background: #4ba82e;
+    z-index: 2;
+    padding: 10px 15px;
+    ul {
+      li {
+        a {
+          font-size:2.5rem;
+          color:#fff;
+          cursor:pointer;
+          &:hover {
+            opacity:0.8;
+          }
+        }
+        .left_sidebar_item_hover_ul {
+          position:absolute;
+          right:-100%;
+          width:100%;
+          top:0px;
+          background:#4ba82e;
+          padding: 10px 15px;
+        }
+      }
+    }
+    .li2 {
+      position:relative;
+      .left_sidebar_item_hover_ul {
+        display:none;
+
+      }
+      &:hover {
+        .left_sidebar_item_hover_ul {
+          display:block;
+        }
+      }
+    }
+    &.height1 {
+      height:100%;
+    }
+    &.height2 {
+      height:300%;
+      ul {
+        li {
+          margin-bottom:5px;
+        }
+      }
+    }
+    &.height3 {
+      height:300%;
+      top:-200%;
+      ul {
+        li {
+          margin-bottom:5px;
+        }
+      }
     }
   }
-
   .date_slider_mainpage {
 
   }
@@ -972,6 +1048,40 @@
     .now_games {
     display:none;
     }
+    .left_sidebar_menu {
+      .left_sidebar_item {
+
+      .left_sidebar_item_hover {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #4ba82e;
+        z-index: 2;
+        padding: 10px 15px;
+        width: 100%;
+        &.height2 {
+          height:auto;
+        }
+        &.height1 {
+          height:100%;
+        }
+        &.height3 {
+          height:auto;
+        }
+        .left_sidebar_item_hover_ul {
+          display:block;
+          padding-left:25px;
+          top:0px;
+          right:0px;
+          position:relative;
+        }
+      }
+      &:hover {
+
+      }
+    }
+    }
+    
   }
 }
 @media only screen and (max-width:$screen-md) {
