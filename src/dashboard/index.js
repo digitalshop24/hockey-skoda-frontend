@@ -59,6 +59,7 @@ import cap from './cap/index';
 import secondPopup from './second-popup/index';
 import hockeyTest from './hockey-test/index';
 import opros from './opros/index';
+import konkurskpk from './konkurs-kpk/index';
 
 
 
@@ -94,6 +95,7 @@ export default angular.module('dashboard',
         calendar.name,
         faq.name,
         opros.name,
+        konkurskpk.name,
         infographics.name,
         socials.name,
         consent.name,
