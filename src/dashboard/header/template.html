@@ -97,8 +97,8 @@
     <div class="container-fluid hidden-xs hidden-sm">
         <div class="row">
             <div class="col-sm-12 col-md-12 left_head text-left">
-                <a ui-sref="dashboard.main" class="logo" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false; ctrl.isActivitiesOpen = false; ctrl.isLogoutMenuOpen = false"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
-                <ul>
+                 <a ui-sref="dashboard.main" class="logo" ng-click="ctrl.isPNewsOpen = false; ctrl.isMenuOpen = false; ctrl.isActivitiesOpen = false; ctrl.isLogoutMenuOpen = false"><img src="img/resources/img/logo.png" alt="" class="img-responsive"></a>
+                <!--<ul>
                     <li ng-mouseover="ctrl.isMenuOpen = true; ctrl.isPNewsOpen = false; ctrl.isLogoutMenuOpen = false; ctrl.isActivitiesOpen = false;"  class="active_li">
                         <a href="" ui-sref="dashboard.general-news">
                             <span>Материалы</span>
@@ -125,7 +125,7 @@
                             <span>Форум</span>
                         </a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
             <div class="right_head text-center hidden-xs">
                 <ul>
@@ -144,13 +144,13 @@
                         </a>
                     </li>
 
-                    <li class="active_li" ng-mouseleave="ctrl.isNotifOpen = false" ng-mouseover="ctrl.isNotifOpen = true">
+                    <!-- <li class="active_li" ng-mouseleave="ctrl.isNotifOpen = false" ng-mouseover="ctrl.isNotifOpen = true">
                         <a href="" >
                             <img src="img/resources/img/notifi.png" alt="" class="img-responsive">
                             <span ng-show="ctrl.notifications.length" ng-bind="ctrl.notifications.length"></span>
                         </a>
 
-                    </li>
+                    </li> -->
                     <!-- <li >
                         <a href="">
                             <img src="img/resources/img/search.png" alt="" class="img-responsive">
@@ -170,7 +170,7 @@
               </div>
               <div class="notifi"  ng-show="ctrl.session.isAuthenticated && ctrl.isLogoutMenuOpen" ng-mouseleave="ctrl.isLogoutMenuOpen = false" ng-mouseover="ctrl.isLogoutMenuOpen = true">
                     <ul>
-                        <li ng-click="ctrl.state.go('dashboard.profile.progress')">
+                        <li ng-click="ctrl.state.go('dashboard.profile.fotocontest')">
                             <a href="" >Личный кабинет</a>
                         </li>
                         <li ng-click="ctrl.state.go('dashboard.edit')">
