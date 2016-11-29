@@ -13,19 +13,18 @@
 		
 	</div>
 	<div class="text-center">
-		<h5>Прием фотографий для участия в конкурсе окончен. Вы можете проголосовать за понравившуюся фотографию! </h5>
-		<button class="btn btn_primary tiny text-center" ui-sref="dashboard.photocontest">Голосовать</button>
+		<button class="btn btn_primary tiny text-center" ui-sref="dashboard.photocontest">Посмотреть все работы</button>
 	</div>
 	<div ng-show="ctrl.user.can_photo_competition">
-		<p>Чтобы принять участие в фотоконкурсе, Вам необходимо сделать креативную фотографию на хоккейную тематику в Дилерском центре ŠKODA и загрузить ее в личный кабинет.</p>
-		<p>В случае, если посетители сайта оценят Вашу оригинальность и Вы попадете в ТОП 24 участников с наибольшим количеством лайков, станет доступен следующий этап розыгрыша.</p>
+		<p>Чтобы принять участие в розыгрыше билетов на матчи Кубка первого канала, Вам необходимо придумать креативное пожелание для нашей сборной и загрузить его в личном кабинете. В конкурсе может участвовать только одна работа от одного пользователя.</p>
+		<p>Лучшие работы будут выбраны специальным жюри и опубликованы на сайте.</p>
 	</div>
 	<div ng-show="ctrl.user.can_photo_competition">
 		<div class="download_foto">
 			<!-- <p>Принимаются файлы в формате .jpg .png весом не более 5М каждый</p> -->
 			<!-- <button class="btn btn_secondary tiny button" ngf-pattern="'image/*'" ngf-accept="'image/*'"  ngf-max-total-size="5MB" ngf-select="ctrl.loadPhoto($file)"> Загрузить свое фото</button> -->
 		</div>
-		<h5>Мои фотографии</h5>
+		<h5>Мои работы</h5>
 		<ul class="my_foto text-center">
 			<li ng-repeat="photo in ctrl.photos">
 				<p>
