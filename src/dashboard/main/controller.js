@@ -34,14 +34,7 @@ export default class MainCtrl {
         this.survey_answer;
         this.showCongratulations = false;
 
-        this.mainSlides = [{
-            image: 'img/resources/img/main/1_900x500.png',
-            link: "http://hockey-skoda.ru/cap"
-        },
-        {
-            image: 'img/resources/img/main/2.png',
-            link: "http://hockey-skoda.ru/cap"
-        }]
+
 
         this.service.getSurvey(this.userIp)
             .then(survey => {
