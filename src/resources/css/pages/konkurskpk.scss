@@ -1,0 +1,16 @@
+
+
+.konkurskpk {
+	width:100%;
+	background:#000;
+	padding:50px 0;
+	&__block {
+		min-width:270px;
+		max-width:1170px;
+		margin:0 auto;
+		&_titel {
+			color:#4ba82e;
+			font-size:22px;
+		}
+	}
+}
