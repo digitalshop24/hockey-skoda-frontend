@@ -1,24 +1,121 @@
-<section class="forum-test" >
-    <div class="forum-test-start" >
+<section class="forum-test">
+    <div class="forum-test-start" ng-show="!ctrl.showQuiz && !ctrl.showQuizAnswers">
         <div class="container">
             <h6 class="forum-test-start--header">
                 Викторина
-                <!-- <span>+10</span>
-                <img src="img/resources/img/balls.png" alt=""> -->
+                <!--<span>+10</span>-->
+                <!--<img src="img/resources/img/balls.png" alt="">-->
             </h6>
             <h3 class="forum-test-start--question">
-                Грецки или Фетисов?
-            </h3> 
+                Пройдите викторину и получите призы от Skoda!
+            </h3>
             <p class="forum-test-start--desc">
-                Уважаемые участники конкурса, данную викторину вы можете пройти только 1 раз. <br> Ответив на 20 вопросов на хоккейную тематику, вы можете набрать 200 баллов. Удачи!
+                Уважаемые участники конкурса, данную викторину вы можете пройти только 1 раз. <br> Ответив на 20 вопросов на хоккейную тематику, вы можете выиграть уникальные призы. Удачи!
             </p>
-            <button class="btn btn_secondary small"  ng-click="ctrl.startQuiz();">Старт</button>
+            <button class="btn btn_secondary small" ng-show="ctrl.user" ng-click="ctrl.getPrizes();">Старт</button>
+            <!-- && ctrl.user.can_kpk_victorina-->
             <br>
             <share-buttons data="ctrl.data"></share-buttons>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog" data-keyboard="false" data-backdrop="static" >
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <div class="game-modal-content">
+                    <h2>а теперь викторина!</h2>
+
+                    <div class="priz clearfix">
+                        <div class="priz-item" ng-repeat="category in ctrl.categories">
+                            <div class="priz-item-text clearfix">
+                                <div class="number" ng-bind="category.right_answers_count">
+                                </div>
+                                <div class="text-right">
+                                    Правильных <br> ответа
+                                </div>
+                            </div>
+
+                            <div class="priz-slider1">
+                                <div class="priz-slider1-block" ng-repeat="prize in category.prizes">
+                                    <div class="priz-item-img">
+                                        <img src="{{prize.image.thumb}}" alt="">
+                                    </div>
+                                    <div class="priz-item-tittle">
+                                        <h5 ng-bind="prize.name"></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mobal-button priz clearfix">
+                        <div class="mobal-button-left"></div>
+                        <div class="mobal-button-right ">
+                            <button class="btn btn_primary" ng-click="ctrl.startQuiz();">Играть!</button>
+                        </div>
+                        <div class="mobal-button-center">
+                            <p>Приготовьтесь отвечать на время</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="questionsModal" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <div class="timer">
+                    <p id='p' ng-bind="ctrl.firstQuestionTime">15</p>
+                    <span>сек</span>
+                </div>
+                <div class="game-modal-content">
+                    <h2 class="vop">Вопрос <b>{{ctrl.currentQuestionIndex + 1}} из 20</b></h2>
+
+                    <p ng-bind="ctrl.currentQuestion.body"></p>
+                </div>
+
+                <ul class="otvet-ches">
+                    <li class="otvet-ches-item" ng-repeat="question in ctrl.currentQuestion.answers">
+                        <label class="radio_green">
+                            <input type="radio" name="answer" ng-model="ctrl.answers[ctrl.currentQuestionIndex]" value="{{question.answer}}" ng-disabled="!ctrl.firstQuestionTime">
+                            <p class="radio-label" ng-bind="question.answer">Тоже торговая улица, просто не мощеная</p>
+                        </label>
+                    </li>
+                </ul>
+
+                <div class="mobal-button priz otvet clearfix">
+                    <div class="mobal-button-left">
+
+                    </div>
+                    <div class="mobal-button-right">
+                        <button class="btn btn_primary" ng-click="ctrl.nextQuestion()" ng-show="!ctrl.isLastQuestion">Далее</button>
+                        <button class="btn btn_primary" ng-click="ctrl.checkAnswers()" ng-show="ctrl.isLastQuestion">Готово</button>
+                    </div>
+                    <div class="mobal-button-center" ng-show="!ctrl.questionTime">
+                        <p class="red-one width1">Вы не уложились в отведенное время</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
+    <div class="forum-test-questions" ng-show="ctrl.showQuizAnswers">
+        <div class="container">
+            <div class="forum-test-result--content" style="max-width: 950px;">
+                <p>Вы набрали {{ctrl.quizResult.right_answers_count}} баллов.</p>
+                <p>Поздравляем! Вы выиграли "<b>{{ctrl.quizResult.prize.name}}</b>".</p>
+                <button class="btn btn_secondary small" ng-click="$state.go('dashboard.profile.prizes')">Забрать приз!</button>
+            </div>
+            <br>
+            <share-buttons data="ctrl.data"></share-buttons>
+        </div>
+    </div>
 </section>
-
-
