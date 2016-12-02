@@ -54,9 +54,9 @@ export default class KonkurskpkCtrl {
 
     startQuiz() {
         if (this.busy) return;
-        this.busy = true;
+        this.busy = true; 
         $('#myModal').modal('hide');
-        var text = '<p>Вы не можете пройти викторину более 1 раза. </p> <p>Но можете участвовать в творческом задании и побороться за главный приз - билеты на хоккей!</p>';
+        var text = '<p>Добрый день! Повторное участие в Викторине невозможно. Но у Вас все еще есть шанс выиграть главный приз – билеты на хоккей! Более подробную информацию можно получить по <a ng-click="ctrl.close()" href="/profile/fotocontest"> ссылке</a> .</p>';
         this.service.startQuiz(this.prizes).
             then((res) => {
                 this.busy = false;
