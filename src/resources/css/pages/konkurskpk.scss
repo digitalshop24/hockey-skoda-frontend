@@ -14,3 +14,80 @@
 .konkurskpk-vic .forum-test-start--question {
 	font-size:34px;
 }
+
+.modal-dialog .modal-content .game-modal-content h2 {
+    padding-top: 10px;
+    color: #4ba82e;
+    font-weight: 900;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.modal-dialog .modal-content .game-modal-content .priz-item-text {
+    margin-bottom: 10px;
+}
+.modal-dialog .modal-content .game-modal-content .priz-item {
+    float: left;
+    width: 46%;
+    min-height: 280px;
+}
+.mobal-button {
+    padding-top: 0px;
+}
+.modal-dialog .modal-content .game-modal-content .priz-item-img {
+	text-align:center;
+}
+.modal-open .modal {
+	padding-top:0px;
+}
+.modal-dialog .modal-content {
+	padding:5px 0 15px 0;
+}
+.modal-dialog .modal-content .game-modal-content {
+	margin: 0 auto;
+    min-width: 270px;
+    max-width: 665px;
+}
+.modal-dialog {
+	margin-top:5px;
+}
+
+@media screen and (max-width:775px) {
+	.modal-dialog .modal-content .game-modal-content .priz-item {
+		width: 100%;
+    min-height: 280px;
+	    float: none;
+	}
+    
+    .modal-dialog .modal-content .game-modal-content .priz-item:nth-last-of-type(odd) {
+    margin-left: 0;
+	}
+	.modal-dialog .modal-content .game-modal-content {
+		width:auto;
+	}
+	.modal-dialog .modal-content .game-modal-content h2 {
+    font-size: 3rem;
+    padding-left:10px;
+}
+.mobal-button {
+	text-align:center;
+}
+.mobal-button-right {
+	float:none;
+}
+.mobal-button-center {
+	width:100%;
+	text-align:center;
+}
+.modal-dialog .modal-content .game-modal-content .priz-item-text {
+	text-align:center;
+}
+.modal-dialog .modal-content .game-modal-content .priz-item-text .number {
+	float:none;
+	display:inline-block;
+}
+.modal-dialog .modal-content .game-modal-content .priz-item-text .text-right {
+	float:none;
+	display:inline-block;
+}
+}

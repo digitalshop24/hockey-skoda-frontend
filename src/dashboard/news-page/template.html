@@ -2,9 +2,9 @@
     <div class="menu_line ">
         <ul>
             <ul>
-               <a ui-sref="dashboard.general-news"><li class="general_news_imgbg"><p >События</p></li></a>
-                <a ui-sref="dashboard.facts"><li class="fix_one_news_hover" ><p class="">Факты</p></li></a>
-                <a ui-sref="dashboard.blog"><li class="blog_imgbg"><p >Аналитика</p></li></a>
+               <a ui-sref="dashboard.general-news"><li class="general_news_imgbg"><p >новости</p></li></a>
+                <!-- <a ui-sref="dashboard.facts"><li class="fix_one_news_hover" ><p class="">Факты</p></li></a>
+                <a ui-sref="dashboard.blog"><li class="blog_imgbg"><p >Аналитика</p></li></a> -->
             </ul>
         </ul>
     </div>
@@ -144,7 +144,7 @@
                     <button ng-show="!ctrl.isEditorOpen" ng-disabled="!ctrl.session.isAuthenticated"
                             ng-click="ctrl.openEditor()" class="btn btn_primary main">Комментировать
                     </button>
-                    <span ng-show="!match.isDisabled" class="green">+10 <i class="icon icon-bal"></i></span>
+                   <!--  <span ng-show="!match.isDisabled" class="green">+10 <i class="icon icon-bal"></i></span> -->
                     <p ng-show="!ctrl.session.isAuthenticated">Чтобы оставить комментарий нужно <br><a
                             ng-click="ctrl.login.open()" href="#">Авторизироваться</a></p>
                 </div>
