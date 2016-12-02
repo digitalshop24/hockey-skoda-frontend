@@ -56,6 +56,7 @@ export default class KonkurskpkCtrl {
         if (this.busy) return;
         this.busy = true;
         $('#myModal').modal('hide');
+        var text = '<p>Вы не можете пройти викторину более 1 раза. </p> <p>Но можете участвовать в творческом задании и побороться за главный приз - билеты на хоккей!</p>';
         this.service.startQuiz(this.prizes).
             then((res) => {
                 this.busy = false;
@@ -71,7 +72,7 @@ export default class KonkurskpkCtrl {
                 this.modal.open({
                     resolve: {
                         message: () => {
-                            return err.message || 'Ошибка!';
+                            return text || 'Ошибка!';
                         }
                     }
                 });
@@ -98,7 +99,7 @@ export default class KonkurskpkCtrl {
             this.showQuiz = false;
             this.showQuizAnswers = true;
             this.quizResult = res;
-            this.user.can_kpk_victorin = false;
+            this.user.can_kpk_victorin = true;
             this.session.user = this.user;
         }).catch(err => {
             this.modal.open({
