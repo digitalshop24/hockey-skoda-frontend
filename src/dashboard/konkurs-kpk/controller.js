@@ -99,7 +99,7 @@ export default class KonkurskpkCtrl {
             this.showQuiz = false;
             this.showQuizAnswers = true;
             this.quizResult = res;
-            this.user.can_kpk_victorin = true;
+            this.user.can_kpk_victorin = false;
             this.session.user = this.user;
         }).catch(err => {
             this.modal.open({
