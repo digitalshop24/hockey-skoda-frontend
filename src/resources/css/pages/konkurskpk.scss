@@ -100,3 +100,10 @@
 	display:inline-block;
 }
 }
+
+@media screen and (min-width:992px) {
+	.konkurskpk-vic {
+
+	    min-height: calc(100vh - 376px);
+	}
+}
