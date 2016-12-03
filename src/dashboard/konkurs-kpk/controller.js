@@ -56,7 +56,8 @@ export default class KonkurskpkCtrl {
         if (this.busy) return;
         this.busy = true; 
         $('#myModal').modal('hide');
-        var text = '<p>Добрый день! Повторное участие в Викторине невозможно. Но у Вас все еще есть шанс выиграть главный приз – билеты на хоккей! Более подробную информацию можно получить по <a ng-click="ctrl.close()" href="/profile/fotocontest"> ссылке</a> .</p>';
+        
+        var text = '<p>Добрый день! Повторное участие в Викторине невозможно. Но у Вас все еще есть шанс выиграть главный приз – билеты на хоккей! Более подробную информацию можно получить по <a  href="/profile/fotocontest"> ссылке</a> .</p>';
         this.service.startQuiz(this.prizes).
             then((res) => {
                 this.busy = false;
@@ -78,7 +79,6 @@ export default class KonkurskpkCtrl {
                 });
             });
     }
-
     nextQuestion() {
         this.currentQuestionIndex++;
         this.currentQuestion = this.questions[this.currentQuestionIndex];

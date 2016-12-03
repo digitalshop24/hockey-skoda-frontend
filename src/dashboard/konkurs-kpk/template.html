@@ -7,14 +7,14 @@
                 <p>Поздравляем! Вы выиграли "<b>{{ctrl.quizResult.prize.name}}</b>".</p>
                 <p>Хотите выиграть билеты на Хоккей? Пройдите по <a href="" ui-sref="dashboard.profile.fotocontest"> ссылке</a> сейчас и выполните творческое задание!
 
-         </p>
+         </p> 
                 <button class="btn btn_secondary small" ng-click="$state.go('dashboard.profile.fotocontest')">Загрузить пожелание</button>
             </div>
             <br>
             <share-buttons data="ctrl.data"></share-buttons> 
         </div>
     </div>
-    <div class="konkurskpk">
+    <div class="konkurskpk"  ng-show="!ctrl.showQuiz && !ctrl.showQuizAnswers">
         <section class="slider_prizes">
     <div class="container-fluid">
 
@@ -125,7 +125,7 @@
 
         </div>
     </div>
-
+    
     <div class="modal fade" id="questionsModal" role="dialog" data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog">
 
