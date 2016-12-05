@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="wrapp_titel">
-                        <h4>Регистрация <span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <h4>Регистрация <!-- <span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
                         <h2>Расскажите <br> ŠKODA о себе</h2>
                         <p>Потратьте всего несколько минут! <br>Чем больше полей регистрации вы заполните, <br>тем больше стартовых очков будет на вашем счету.<br> Ваши данные нужны для того, чтобы вы без <br>проблем получили выигранные призы и подарки.</p>
                     </div>
@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 left">
-                        <h4>Как вас зовут?<span class="plus_ball">+10 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <h4>Как вас зовут?<!-- <span class="plus_ball">+10 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
                         <input type="text" minlength="2" ng-model="ctrl.form.last_name" class="input_default input_small"
                                placeholder="Фамилия* (обязательное поле)" required>
                         <input type="text" minlength="2" ng-model="ctrl.form.first_name" class="input_default input_small"
@@ -37,7 +37,7 @@
                                placeholder="Отчество">
                     </div>
                     <div class="col-md-6 left">
-                        <h4>Где Вы проживаете?<span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <h4>Где Вы проживаете?<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
                         <input type="text" ng-model="ctrl.form.zip_code" class="input_default input_small" placeholder="Индекс">
                         <input type="text" minlength="2" ng-model="ctrl.form.city" class="input_default input_small" placeholder="Город* (обязательное поле)" required>
                         <input type="text" ng-model="ctrl.form.address" class="input_default input_small"
@@ -55,7 +55,7 @@
                                placeholder="E-mail* (обязательное поле)">
                     </div>
                     <div class="col-md-6 left">
-                        <h4>И телефон?<span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span></h4>
+                        <h4>И телефон?<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
                         <input type="phone" ng-model="ctrl.form.phone" class="input_default input_small"  mask="+7(999) 999-9999"
                                placeholder="+7">
                     </div>
@@ -114,7 +114,7 @@
 
                 <div class="row" ng-show="ctrl.isCurrentCarSkoda">
                     <div class="col-md-6 left">
-                        <h4>Укажите модель?&lt;!&ndash; <span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span> &ndash;&gt;</h4>
+                        <h4>Укажите модель?&lt;!&ndash; <!-- <span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span> --> &ndash;&gt;</h4>
                         <select style="width: 350px" class="input_default input_small"
                                 ng-options="car for car in ctrl.skodaCars" ng-model="ctrl.form.skoda_model">
                             <option disabled selected value>Выберите модель</option>
@@ -123,7 +123,7 @@
                     </div>
 
                     <div class="col-md-6 left">
-                        <h4>Идентификационный № ?&lt;!&ndash; <span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span> &ndash;&gt;</h4>
+                        <h4>Идентификационный № ?&lt;!&ndash; <!-- <span class="plus_ball">+50 <img src="img/resources/img/balls.png" alt=""></span> --> &ndash;&gt;</h4>
                         <input type="text" ng-model="ctrl.form.vincode" class="input_default input_small" placeholder="VIN 17 Символов">
                     </div>
                 </div>
