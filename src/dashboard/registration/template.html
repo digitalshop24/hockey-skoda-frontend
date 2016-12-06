@@ -38,10 +38,10 @@
                     </div>
                     <div class="col-md-6 left">
                         <h4>Где Вы проживаете?<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
-                        <input type="text" ng-model="ctrl.form.zip_code" class="input_default input_small" placeholder="Индекс">
+                        <input type="text" ng-model="ctrl.form.zip_code" class="input_default input_small" placeholder="Индекс" required>
                         <input type="text" minlength="2" ng-model="ctrl.form.city" class="input_default input_small" placeholder="Город* (обязательное поле)" required>
                         <input type="text" ng-model="ctrl.form.address" class="input_default input_small"
-                               placeholder="Адрес">
+                               placeholder="Адрес" required>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                     <div class="col-md-6 left">
                         <h4>И телефон?<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
                         <input type="phone" ng-model="ctrl.form.phone" class="input_default input_small"  mask="+7(999) 999-9999"
-                               placeholder="+7">
+                               placeholder="+7" required>
                     </div>
                 </div>
                 <div class="row">
