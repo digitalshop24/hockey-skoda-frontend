@@ -16,17 +16,40 @@ export default class GeneralNewsCtrl {
         this.currentMonthIndex = new Date().getMonth() + 1;
         this.slickCurrentMonthIndex = month - 1;
         this.mobileCurrentIndex = month - 1;
-        this.monthNames = ['апрель', 'май',
+        this.monthNames = ['январь', 'февраль', 'март', 'апрель', 'май',
             'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
-        Array.from(new Array(this.currentMonthIndex - 3), (e, i) => i + 3).forEach((monthIndex, index) => { // april is lowest border
-            var humanMonthIndex = monthIndex + 1;
+        this.monthIndexes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        this.firstDate = new Date(2016, 3, 1);
+        this.currentDate = new Date();
+        this.startYear = this.firstDate.getFullYear();
+        this.startMonth = this.firstDate.getMonth() + 1;
+        this.monthDiff = function(d1, d2) {
+            var months;
+            months = (d2.getFullYear() - d1.getFullYear()) * 12;
+            months -= d1.getMonth();
+            months += d2.getMonth() + 1;
+            return months <= 0 ? 0 : months;
+        };
+        this.countMonths = this.monthDiff(this.firstDate, this.currentDate);
+        this.monthYearIndexes = [];
+
+        for(var i=0; i < this.countMonths; i++){
+            var additionalYear = Math.floor((this.startMonth + i - 1) / 12);
+            var monthIndex = this.startMonth + i > 12 ? this.startMonth + i - 12 : this.startMonth + i;
+            this.monthYearIndexes.push({month: monthIndex, year: (this.startYear + additionalYear)});
+        }
+
+        this.monthYearIndexes.forEach((monthYearIndex, index) => { // april is lowest border
+            var humanMonthIndex = monthYearIndex.month;
             const viewIndex = humanMonthIndex < 10 ? '0' + humanMonthIndex : humanMonthIndex;
             this.months.push({
                 monthIndex: humanMonthIndex,
                 viewIndex: viewIndex,
-                name: this.monthNames[index]
+                name: this.monthNames[monthYearIndex.month - 1],
+                year: monthYearIndex.year
             })
         });
+
         this.mobileMonths = this.months.slice(0);
         this.months = this.months.reverse();
         this.daysWithNews = daysWithNews;
@@ -64,12 +87,11 @@ export default class GeneralNewsCtrl {
     }
 
     changeMonth(month) {
-        if (month.monthIndex <= moment().month() + 1) {
-            this.state.go('dashboard.general-news', {
-                month: month.monthIndex,
-                loadExactlyDayNews: false
-            }, {reload: true});
-        }
+        this.state.go('dashboard.general-news', {
+            month: month.monthIndex,
+            year: month.year,
+            loadExactlyDayNews: false
+        }, {reload: true});
     }
 
     changeMobileMonth() {

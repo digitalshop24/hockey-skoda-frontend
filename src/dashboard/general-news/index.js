@@ -26,6 +26,7 @@ export default angular.module('dashboard.general-news',
                 },
                 params: {
                     month: "",
+                    year: "",
                     daysWithNews: [],
                     day: "",
                     loadExactlyDayNews: false
@@ -33,14 +34,16 @@ export default angular.module('dashboard.general-news',
                 resolve: {
                     daysWithNews: ($stateParams, newsService) => {
                         const monthIndex = $stateParams.month ? $stateParams.month : moment().month() + 1;
+                        const fullYear = $stateParams.year ? $stateParams.year : moment().year();
                         $stateParams.month = monthIndex;
                         const momentMonthIndex = monthIndex - 1;
-                        return newsService.getDaysContainedNewsByDate(moment().month(momentMonthIndex).format('YYYY-MM'));
+                        $stateParams.year = fullYear;
+                        return newsService.getDaysContainedNewsByDate(moment().year(fullYear).month(momentMonthIndex).format('YYYY-MM'));
                     },
                     news: ($stateParams, newsService, daysWithNews, moment) => {
                         if ($stateParams.loadExactlyDayNews) {
                             const momentMonthIndex = $stateParams.month - 1;
-                            const dayWithNews = moment().month(momentMonthIndex).date($stateParams.day).format('YYYY-MM-DD');
+                            const dayWithNews = moment().year($stateParams.year).month(momentMonthIndex).date($stateParams.day).format('YYYY-MM-DD');
                             return newsService.getNewsByDate(dayWithNews);
                         } else {
                             if (daysWithNews.length) {
@@ -54,6 +57,10 @@ export default angular.module('dashboard.general-news',
 
                     tweets: newsService => {
                         return newsService.getTweets();
+                    },
+
+                    year: ($stateParams, news) => {
+                        return $stateParams.year;
                     },
 
                     month: ($stateParams, news) => {
