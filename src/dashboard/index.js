@@ -60,8 +60,8 @@ import secondPopup from './second-popup/index';
 import hockeyTest from './hockey-test/index';
 import opros from './opros/index';
 import konkurskpk from './konkurs-kpk/index';
-
-
+import formaIgra from './forma-igra/index';
+import formaMasterClass from './forma-master-class/index';
 
 export default angular.module('dashboard',
     [
@@ -117,7 +117,9 @@ export default angular.module('dashboard',
         cap.name,
         secondPopup.name,
         hockeyTest.name,
-        registration.name
+        registration.name,
+        formaIgra.name,
+        formaMasterClass.name
     ])
     .service('login', Login)
     .service('modal', Modal)

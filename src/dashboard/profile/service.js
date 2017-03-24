@@ -29,6 +29,26 @@ export default class ProfileService {
             });
     }
 
+    create_forma_igra(data) {
+        return this.api.post('/users/forma-igra', data)
+            .then((res) => {
+                return res.data;
+            })
+            .catch(err => {
+                    throw err.data;
+            });
+    }
+
+    create_forma_master_class(data) {
+        return this.api.post('/users/forma-master-class', data)
+            .then((res) => {
+                return res.data;
+            })
+            .catch(err => {
+                    throw err.data;
+            });
+    }
+
     getAchievements() {
         return this.api.get('/users/achievments/progress').then((res) => {
             return res.data;

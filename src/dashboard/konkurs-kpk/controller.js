@@ -46,7 +46,6 @@ export default class KonkurskpkCtrl {
         this.firstInterval = this.$interval(() => {
             this.firstQuestionTime -= 1;
             if (this.firstQuestionTime <= 0) {
-                console.log(this.firstQuestionTime);
                 this.$interval.cancel(this.firstInterval);
             }
         }, 1000);

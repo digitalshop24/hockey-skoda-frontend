@@ -1,0 +1,142 @@
+<form ng-submit="ctrl.send()" ng-init="ctrl.form = { policy_agreed: true}">
+    <section style="margin-top: 40px; margin-bottom: 30px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="wrapp_titel">
+                        <h2>Информация</h2>
+                        <p>Обратите внимание, что к мастер-классам допускаются дети, проживающие в Москве или находящиеся в Москве в даты проведении мастер-классов.</p>
+                        <p>Вы можете принять участие в мастер-классе, если Ваш ребенок:</p>
+                        <p> - попадает в одну из двух возрастных категорий: от 7 до 9 лет, от 10 до 12 летб
+                        <p> - умеет кататься на коньках,
+                        <p> - имеет в наличие коньки, налокотники, наколенники.
+                        <p>В связи с тем, что запись на мастер-класс свободная и бесплатная, к участию будут приглашены первые 30 человек, подавших заявку и соответствующие всем указанным критериям.
+
+                        <p><b>Время проведения мастер-классов: (время добавится позже!)</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <aside class="form">
+        <div class="form_grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4> ФИО сопровождающих родителей/родственников<!-- <span class="plus_ball">+10 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        <input type="text" minlength="2" ng-model="ctrl.form.last_name" class="input_default input_small"
+                               placeholder="Фамилия* (обязательное поле)" required>
+                        <input type="text" minlength="2" ng-model="ctrl.form.first_name" class="input_default input_small"
+                               placeholder="Имя* (обязательное поле)" required>
+                        <input type="text" minlength="2" ng-model="ctrl.form.middle_name" class="input_default input_small"
+                               placeholder="Отчество">
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>Где Вы проживаете?<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        <input type="text" minlength="2" ng-model="ctrl.form.city" class="input_default input_small" placeholder="Город* (обязательное поле)" required>
+                        <input type="text" ng-model="ctrl.form.address" class="input_default input_small"
+                               placeholder="Адрес" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4> ФИО ребенка<!-- <span class="plus_ball">+10 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        <input type="text" minlength="2" ng-model="ctrl.forma.child_last_name" class="input_default input_small"
+                               placeholder="Фамилия* (обязательное поле)" required>
+                        <input type="text" minlength="2" ng-model="ctrl.forma.child_first_name" class="input_default input_small"
+                               placeholder="Имя* (обязательное поле)" required>
+                        <input type="text" minlength="2" ng-model="ctrl.forma.child_middle_name" class="input_default input_small"
+                               placeholder="Отчество">
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>Доп инфо</h4>
+                        <!--<datetimepicker ng-model="ctrl.forma.child_birthday" date-format="dd-MMM-yyyy"-->
+                                        <!--data-datetimepicker-config="{ startView:'day', minView:'day' }">-->
+                        <!--</datetimepicker>-->
+                        <select class="input_default input_small" ng-model="ctrl.forma.when" style="width: 350px;"
+                                ng-options="data for data in ctrl.master_class_data">
+                            <option selected value>Все даты</option>
+                        </select>
+                        <div class="block">
+                            <input type="checkbox" ng-model="ctrl.forma.can_skate" id="can_skate" required>
+                            <label style="margin-left: 0px;" for="can_skate"><span></span>Ребенок умеет кататься на коньках</label>
+                        </div>
+                        <div class="block">
+                            <input type="checkbox" ng-model="ctrl.forma.has_equipment" id="has_equipment" required>
+                            <label style="margin-left: 0px;" for="has_equipment"><span></span>В наличии есть коньки, налокотники, наколенники</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form_white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4>Email</h4>
+                        <input required="true" type="email" ng-model="ctrl.form.email" class="input_default input_small"
+                               placeholder="E-mail* (обязательное поле)">
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>Телефон<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        <input type="phone" ng-model="ctrl.form.phone" class="input_default input_small"  mask="+7(999) 999-9999"
+                               placeholder="+7" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4>Пароль?</h4>
+                        <input required="true" type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"
+                               placeholder="Пароль* (мин. 8 символов)">
+                        <ul id="strength" check-strength model="ctrl.form.password"></ul>
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>Повторите пароль?</h4>
+                        <input required="true" type="password" minlength="8" ng-model="ctrl.form.confirmPassword" class="input_default input_small"
+                               placeholder="Пароль* (мин. 8 символов)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form_grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                         <div class="block">
+                                   <input type="checkbox" ng-model="ctrl.form.policy_agreed" id="c1">
+                                   <label for="c1"><span></span><a href="" ui-sref="dashboard.regulations">С правилами конкурса ознакомлен</a></label>
+                        </div>                        <div class="block">
+                           <input type="checkbox" ng-model="ctrl.form.policy_agreed" id="c2">
+                          <label for="c2"><span></span><a href="" ng-click="ctrl.openModal();" >Согласен на обработку личных данных и получение рекламной информации.</a></label>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button class="btn btn_common main">Отправить</button>
+                </div>
+            </div>
+        </div>
+        <div class="form_white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h4>Мы хотим с вами дружить в соцсетях<span class="plus_ball"> </span></h4>
+                        <ul>
+                            <li><a href="#"><img src="img/resources/img/fb.png" alt="" class="img-responsive"></a></li>
+                            <li><a href="#"><img src="img/resources/img/insta.png" alt="" class="img-responsive"></a>
+                            </li>
+                            <li><a href="#"><img src="img/resources/img/twiter.png" alt="" class="img-responsive"></a>
+                            </li>
+                            <li><a href="#"><img src="img/resources/img/vk.png" alt="" class="img-responsive"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</form>

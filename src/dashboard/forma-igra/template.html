@@ -1,0 +1,107 @@
+<form ng-submit="ctrl.send()" ng-init="ctrl.form = { policy_agreed: true}">
+    <section style="margin-top: 40px; margin-bottom: 30px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="wrapp_titel">
+                        <h2>Информация</h2>
+                        <p><b>Пройдите регистрацию и получите бесплатный пригласительный на матч!</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <aside class="form">
+        <div class="form_grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4>Как вас зовут?<!-- <span class="plus_ball">+10 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        <input type="text" minlength="2" ng-model="ctrl.form.last_name" class="input_default input_small"
+                               placeholder="Фамилия* (обязательное поле)" required>
+                        <input type="text" minlength="2" ng-model="ctrl.form.first_name" class="input_default input_small"
+                               placeholder="Имя* (обязательное поле)" required>
+                        <h4>Дата матча<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        <select class="input_default input_small" ng-model="ctrl.forma.when" style="width: 350px;"
+                                ng-options="match.when as match.when | amDateFormat:'DD.MM.YY - HH:mm' for match in ctrl.matches | orderBy: 'when':true">
+                            <option selected value>Все матчи</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>Где Вы проживаете?<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        <input type="text" minlength="2" ng-model="ctrl.form.city" class="input_default input_small" placeholder="Город* (обязательное поле)" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form_white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4>Email</h4>
+                        <input required="true" type="email" ng-model="ctrl.form.email" class="input_default input_small"
+                               placeholder="E-mail* (обязательное поле)">
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>Телефон<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        <input type="phone" ng-model="ctrl.form.phone" class="input_default input_small"  mask="+7(999) 999-9999"
+                               placeholder="+7" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4>Пароль?</h4>
+                        <input required="true" type="password" minlength="8" ng-model="ctrl.form.password" class="input_default input_small"
+                               placeholder="Пароль* (мин. 8 символов)">
+                        <ul id="strength" check-strength model="ctrl.form.password"></ul>
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>Повторите пароль?</h4>
+                        <input required="true" type="password" minlength="8" ng-model="ctrl.form.confirmPassword" class="input_default input_small"
+                               placeholder="Пароль* (мин. 8 символов)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form_grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                         <div class="block">
+                                   <input type="checkbox" ng-model="ctrl.form.policy_agreed" id="c1">
+                                   <label for="c1"><span></span><a href="" ui-sref="dashboard.regulations">С правилами конкурса ознакомлен</a></label>
+                        </div>                        <div class="block">
+                           <input type="checkbox" ng-model="ctrl.form.policy_agreed" id="c2">
+                          <label for="c2"><span></span><a href="" ng-click="ctrl.openModal();" >Согласен на обработку личных данных и получение рекламной информации.</a></label>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button class="btn btn_common main">Отправить</button>
+                </div>
+            </div>
+        </div>
+        <div class="form_white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h4>Мы хотим с вами дружить в соцсетях<span class="plus_ball"> </span></h4>
+                        <ul>
+                            <li><a href="#"><img src="img/resources/img/fb.png" alt="" class="img-responsive"></a></li>
+                            <li><a href="#"><img src="img/resources/img/insta.png" alt="" class="img-responsive"></a>
+                            </li>
+                            <li><a href="#"><img src="img/resources/img/twiter.png" alt="" class="img-responsive"></a>
+                            </li>
+                            <li><a href="#"><img src="img/resources/img/vk.png" alt="" class="img-responsive"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</form>

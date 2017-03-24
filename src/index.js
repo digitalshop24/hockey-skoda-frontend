@@ -110,7 +110,6 @@ export default angular.module('app',
 
         $rootScope.$on('$stateChangeSuccess', (event, toState) => {
             if (toState.meta) {
-                console.log(toState);
                 $rootScope.metaTitle = toState.meta.title;
                 $rootScope.metaDescription = toState.meta.description;
             }
