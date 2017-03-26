@@ -62,6 +62,7 @@ import opros from './opros/index';
 import konkurskpk from './konkurs-kpk/index';
 import formaIgra from './forma-igra/index';
 import formaMasterClass from './forma-master-class/index';
+import tournamentTable from './tournament-table/index'
 
 export default angular.module('dashboard',
     [
@@ -119,7 +120,8 @@ export default angular.module('dashboard',
         hockeyTest.name,
         registration.name,
         formaIgra.name,
-        formaMasterClass.name
+        formaMasterClass.name,
+        tournamentTable.name
     ])
     .service('login', Login)
     .service('modal', Modal)
