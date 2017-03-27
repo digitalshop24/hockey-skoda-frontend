@@ -2,12 +2,16 @@
 
 
 export default class FormaMasterClassCtrl {
-    constructor(auth, modal, profileService, $state, matches) {
+    constructor(auth, modal, profileService, $state, moscowUsers) {
         this.auth = auth;
         this.modal = modal;
         this.profileService = profileService;
         this.state = $state;
         this.master_class_data = ['2017-03-10', '2017-04-10'];
+        this.moscowUsers = moscowUsers.num;
+        this.forma = {};
+        this.forma.can_skate = false;
+        this.forma.has_equipment = false;
     }
 
     openModal() {

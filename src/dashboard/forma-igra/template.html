@@ -23,7 +23,7 @@
                                placeholder="Имя* (обязательное поле)" required>
                         <h4>Дата матча<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
                         <select class="input_default input_small" ng-model="ctrl.forma.when" style="width: 350px;"
-                                ng-options="match.when as match.when | amDateFormat:'DD.MM.YY - HH:mm' for match in ctrl.matches | orderBy: 'when':true">
+                                ng-options="match.when as match.when | amDateFormat:'DD.MM.YY - HH:mm' for match in ctrl.matches | orderBy: 'when':true" ng-required="true">
                             <option selected value>Все матчи</option>
                         </select>
                     </div>

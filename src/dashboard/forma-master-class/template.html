@@ -1,5 +1,21 @@
 <form ng-submit="ctrl.send()" ng-init="ctrl.form = { policy_agreed: true}">
-    <section style="margin-top: 40px; margin-bottom: 30px;">
+    <section ng-show="ctrl.moscowUsers >= 30" style="margin-top: 40px; margin-bottom: 30px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="wrapp_titel">
+                        <h2>Добрый день!</h2>
+                        <p>К сожалению, запись на мастер-класс окончена. Все места забронированы.</p>
+                        <p>Но даже если Вы не успели записаться – это не повод расстраиваться.
+                            Ведь по окончанию мастер-класса для всех желающих будет организована автограф-сессия со звездой и розыгрыш памятных призов с автографами, в которой Вы и Ваш ребенок могут принять участие! Будем рады видеть Вас в любой из дней.</p>
+                        <p>Для того, чтобы попасть на трибуны и принять участие в дополнительных активностях,
+                            пожалуйста, зарегистрируйтесь по <b><a href="" ui-sref="dashboard.forma-igra">ссылке</a></b>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section ng-show="ctrl.moscowUsers < 30" style="margin-top: 40px; margin-bottom: 30px;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -18,7 +34,7 @@
             </div>
         </div>
     </section>
-    <aside class="form">
+    <aside class="form" ng-show="ctrl.moscowUsers < 30">
         <div class="form_grey">
             <div class="container">
                 <div class="row">
@@ -32,14 +48,6 @@
                                placeholder="Отчество">
                     </div>
                     <div class="col-md-6 left">
-                        <h4>Где Вы проживаете?<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
-                        <input type="text" minlength="2" ng-model="ctrl.form.city" class="input_default input_small" placeholder="Город* (обязательное поле)" required>
-                        <input type="text" ng-model="ctrl.form.address" class="input_default input_small"
-                               placeholder="Адрес" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 left">
                         <h4> ФИО ребенка<!-- <span class="plus_ball">+10 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
                         <input type="text" minlength="2" ng-model="ctrl.forma.child_last_name" class="input_default input_small"
                                placeholder="Фамилия* (обязательное поле)" required>
@@ -48,21 +56,35 @@
                         <input type="text" minlength="2" ng-model="ctrl.forma.child_middle_name" class="input_default input_small"
                                placeholder="Отчество">
                     </div>
+                </div>
+                <div class="row">
                     <div class="col-md-6 left">
-                        <h4>Доп инфо</h4>
-                        <!--<datetimepicker ng-model="ctrl.forma.child_birthday" date-format="dd-MMM-yyyy"-->
-                                        <!--data-datetimepicker-config="{ startView:'day', minView:'day' }">-->
-                        <!--</datetimepicker>-->
+                        <h4>Где Вы проживаете?<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        <input type="text" minlength="2" ng-model="ctrl.form.city" class="input_default input_small" placeholder="Город* (обязательное поле)" required>
+                        <input type="text" ng-model="ctrl.form.address" class="input_default input_small"
+                               placeholder="Адрес" required>
+                    </div>
+                    <div class="col-md-6 left">
+                        <h4>Дата рождения ребёнка</h4>
+                        <input type="date" class="input_default input_small" ng-model="ctrl.forma.child_birthday"
+                               value="2010-01-01" min="1980-01-01" max="2017-12-31" required />
+
+                        <h4>Дата мастер класса</h4>
                         <select class="input_default input_small" ng-model="ctrl.forma.when" style="width: 350px;"
-                                ng-options="data for data in ctrl.master_class_data">
+                                ng-options="data for data in ctrl.master_class_data" required>
                             <option selected value>Все даты</option>
                         </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 left">
+                        <h4>Дополнительная информация</h4>
                         <div class="block">
-                            <input type="checkbox" ng-model="ctrl.forma.can_skate" id="can_skate" required>
+                            <input type="checkbox" ng-model="ctrl.forma.can_skate" id="can_skate">
                             <label style="margin-left: 0px;" for="can_skate"><span></span>Ребенок умеет кататься на коньках</label>
                         </div>
                         <div class="block">
-                            <input type="checkbox" ng-model="ctrl.forma.has_equipment" id="has_equipment" required>
+                            <input type="checkbox" ng-model="ctrl.forma.has_equipment" id="has_equipment">
                             <label style="margin-left: 0px;" for="has_equipment"><span></span>В наличии есть коньки, налокотники, наколенники</label>
                         </div>
                     </div>

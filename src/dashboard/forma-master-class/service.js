@@ -5,12 +5,8 @@ export default class FormaMasterClassService {
         this.api = api;
     }
 
-    getSchedule(stage) {
-        return this.api.get('/schedule/index', {
-            params: {
-                stage: stage
-            }
-        })
+    getMoscowCount(stage) {
+        return this.api.get('/users/forma-master-class-users')
         .then(response => {
             return response.data;
         });

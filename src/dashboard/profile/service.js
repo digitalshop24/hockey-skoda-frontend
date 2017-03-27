@@ -40,7 +40,7 @@ export default class ProfileService {
     }
 
     create_forma_master_class(data) {
-        return this.api.post('/users/forma-master-class', data)
+        return this.api.post('/users/master-class', data)
             .then((res) => {
                 return res.data;
             })

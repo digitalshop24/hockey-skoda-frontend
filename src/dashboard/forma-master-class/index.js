@@ -21,8 +21,8 @@ export default angular.module('dashboard.forma-master-class', [
                 controller: FormaMasterClassCtrl,
                 controllerAs: 'ctrl',
                 resolve: {
-                    matches: (formaMasterClassService, $stateParams) => {
-                        return formaMasterClassService.getSchedule('complete');
+                    moscowUsers: (formaMasterClassService, $stateParams) => {
+                        return formaMasterClassService.getMoscowCount();
                     }
                 }
             });
