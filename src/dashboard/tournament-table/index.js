@@ -25,9 +25,7 @@ export default angular.module('dashboard.tournament-table', [])
          var i=1;
          $(".quaterfinal-pair-participant").each(function(){
              var siblingWidth=$(this).children("span").width();
-             console.log("sibling  "+siblingWidth);
              var pseudoWidth=$(this).width()-siblingWidth-40;
-             console.log("pseudo  "+pseudoWidth);
              var pseudoWidthExtended=pseudoWidth+9;
              ;
              if(i<9){
