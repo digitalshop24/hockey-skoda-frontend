@@ -23,11 +23,15 @@ export default angular.module('dashboard.tournament-table', [])
     /*better rewrite as directive,that sets pseudo-element width ,depending on sibling span width*/
      $(document).ready(function(){
          var i=1;
+         var viewportWidth=$( window ).width();
          $(".quaterfinal-pair-participant").each(function(){
              var siblingWidth=$(this).children("span").width();
-             var pseudoWidth=$(this).width()-siblingWidth-40;
-             var pseudoWidthExtended=pseudoWidth+9;
-             ;
+            if(viewportWidth<768){
+                 pseudoWidth=$(this).width()-siblingWidth-5;
+            } else{
+                var pseudoWidth=$(this).width()-siblingWidth-40;
+            }
+            var pseudoWidthExtended=pseudoWidth+9;
              if(i<9){
                 $('head').append("<style>.quaterfinal-pair-participant-"+i+":after{width:"+pseudoWidth+"px;}</style>");
             } else{
@@ -35,4 +39,6 @@ export default angular.module('dashboard.tournament-table', [])
              };
              i++
         });
+         
+
      });

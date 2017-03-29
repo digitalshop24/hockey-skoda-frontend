@@ -85,7 +85,22 @@
 	.wrapp_mainpage_end {
 		min-height: 500px;
 	}
+	.tournament-table{
+		width:100%;
+		&-content{
+			width:100%;
+		}
+		.group{
+			box-sizing:border-box;
+			&__a{
+				padding-left:10px;
 
+			}
+			&__b{
+				padding-right:10px;
+			}
+		}
+	}
 }
 
 
@@ -206,6 +221,19 @@
 	.factSection {
 		padding:50px 0;
 		margin-left:0px;
+	}
+	.tournament-table{
+		&-content{
+			.semifinal-pair-score{
+				&-aGroup{
+					right:14%;
+				}
+				&-bGroup{
+					left:22%;
+				}
+			}
+			
+		}
 	}
 }
 
@@ -431,6 +459,60 @@
 		   column-count: 3;
 		}
 	}
+	.tournament-table{
+		width:100%;
+		&-content{
+			box-sizing:border-box;
+			width:100%;
+			h2{
+				font-size:3rem;
+			}
+			.group{
+				&-title{
+					font-size:24px;
+				}
+				&__a{
+					padding-left:5px;
+				}
+				&__b{
+					padding-right:5px;
+				}
+				.quaterfinal{
+					&-pair{
+						span{
+							font-size:16px;
+							img{
+								width: 20px;
+								margin:0 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.quaterfinal{
+			width:60%;
+			&-pair{
+				&-score{
+					font-size:24px;
+				}
+			}
+		}
+		.semifinal{
+			width:40%;
+			&-pair{
+				&-score{
+					font-size:20px;
+					&-bGroup{
+						left: 26%;
+					}
+					&-aGroup{
+						right:19%;
+					}
+				}
+			}
+		}		
+	}
 }
 
 @media only screen and (max-width : 664px) {
@@ -512,6 +594,8 @@
 	 	display:none !important;
 	 }
 
+
+
 @media only screen and (max-width : 635px) {
 
 .col-xs-mob {
@@ -556,6 +640,16 @@
 				   column-count: 2;
 				}
 			}
+	.tournament-table{
+		.semifinal-pair{
+			&-participant{
+				img{
+					width:25px;
+					top:10px;
+				}
+			}
+		}
+	}
 }
 @media only screen and (max-width : 600px) {
 	  .timeline { left: 5%; }
@@ -594,6 +688,62 @@
 			width: 90%
 		}
 	}
+	
+	.tournament-table{
+		&-content{
+			.group{
+				height:500px;
+				&-title{
+					font-size:16px;
+				}
+			}
+			.quaterfinal{
+				&-pair{
+					span{
+						font-size:11px!important;
+					}
+					&-score{
+						top:40px;
+						font-size:15px;
+						&-bGroup{
+							left:-28%;
+						}
+
+						&-aGroup{
+						}
+					}
+				}
+			}
+			.semifinal-pair{
+				&-score{
+					width:30px;
+					top:115px;
+					font-size:15px;
+					letter-spacing:0px;
+			
+					&-aGroup{
+						right:6%;
+					}
+					&-bGroup{
+						left:2%;
+					}
+				}
+			}
+			.decoration-line{
+				&-semifinal{
+					&:after{
+						top:50px;
+						height:45px;
+					}
+					&-bottom{
+						&:after{
+							top:0px;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 /* Custom, iPhone Retina */
@@ -612,6 +762,7 @@
 			}
 		}
 	}
+	
 }
 
 
