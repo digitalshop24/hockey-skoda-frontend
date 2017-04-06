@@ -4,6 +4,8 @@ import angular from 'angular';
 import JuniorCtrl from './controller.js';
 import JuniorService from './service.js';
 
+
+
 export default angular.module('dashboard.junior', [])
     .service('juniorService', JuniorService)
     .config(function ($stateProvider) {
@@ -23,4 +25,6 @@ export default angular.module('dashboard.junior', [])
                     }
                 }
             });
-    });
+});
+
+

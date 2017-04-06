@@ -1,4 +1,4 @@
-<form ng-submit="ctrl.send()" ng-init="ctrl.form = { policy_agreed: true}">
+<form class="form-master-class" ng-submit="ctrl.send()" ng-init="ctrl.form = { policy_agreed: true}">
     <section ng-show="ctrl.moscowUsers >= 30" style="margin-top: 40px; margin-bottom: 30px;">
         <div class="container-fluid">
             <div class="row">
@@ -15,7 +15,7 @@
             </div>
         </div>
     </section>
-    <section ng-show="ctrl.moscowUsers < 30" style="margin-top: 40px; margin-bottom: 30px;">
+    <section ng-show="ctrl.moscowUsers < 30" style="margin-top: 40px; margin-bottom: 30px; text-align: center;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -70,8 +70,8 @@
                                value="2010-01-01" min="1980-01-01" max="2017-12-31" required />
 
                         <h4>Дата мастер класса</h4>
-                        <select class="input_default input_small" ng-model="ctrl.forma.when" style="width: 350px;"
-                                ng-options="data for data in ctrl.master_class_data" required>
+                        <select   class="input_default input_small date-picker" ng-model="ctrl.forma.when" 
+                                ng-options="data for data in ctrl.master_class_data" required >
                             <option selected value>Все даты</option>
                         </select>
                     </div>
@@ -143,7 +143,7 @@
                 </div>
             </div>
         </div>
-        <div class="form_white">
+        <!-- <div class="form_white">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -159,6 +159,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </aside>
 </form>

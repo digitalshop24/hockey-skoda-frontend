@@ -9,6 +9,19 @@
   .wrapp_mainpage_end {
     min-height: 980px;
   }
+  .form-master-class{
+  	.date-picker{
+  		width:350px;
+  	}
+  }
+  .form-igra{
+  	.date-picker{
+		width:350px;
+  	}
+  	.wrapp_titel{
+		text-align: center;
+  	}
+  }
 
 }
 @media only screen and (max-width : 1920px) {
@@ -239,6 +252,20 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	.form-master-class{
+		.date-picker{
+			width:90%;
+			display:block;
+			margin:0 auto;
+		}
+	}
+	.form-igra{
+		.date-picker{
+			width:90%;
+			display:block;
+			margin:0 auto;
+		}
+	}
 	.wrapp_mainpage_slider {
 		.item {
 			min-height: 325px;
@@ -253,7 +280,17 @@
 		}
 
 	}
-
+	.junior{
+		&-buttons{
+			text-align: center;
+			height:160px;
+		}
+		&-galer-phote{
+			margin:0;
+			margin-bottom:20px;
+			width:100%;
+		}
+	}
 	/*Disable Animation on Mobile Devices*/
 	.animated {
 		/*CSS transitions*/
@@ -513,6 +550,59 @@
 			}
 		}		
 	}
+	.grey-junior{
+		.decoration-line{
+			 &-1:after{
+      width:40%;
+    }
+    &-2:after{
+      width:30%;
+    }
+     &-3:after{
+      width:15%;
+    }
+     &-4:after{
+      width:15%;
+    }
+     &-5:after{
+      width:40%;
+    }
+     &-6:after{
+      width:30%;
+    }
+     &-7:after{
+      width:7%;
+    }
+     &-8:after{
+      width:25%;
+    }
+     &-9:after{
+      width:25%;
+    }
+     &-10:after{
+      width:25%;
+    }
+     &-11:after{
+      width:35%;
+    }
+     &-12:after{
+      width:10%;
+    }
+     &-13:after{
+      width:10%;
+    }
+     &-14:after{
+      width:20%;
+    }
+     &-15:after{
+      width:30%;
+    }
+     &-16:after{
+      width:40%;
+    }
+		}
+	}
+
 }
 
 @media only screen and (max-width : 664px) {
@@ -657,6 +747,11 @@
 	.wrapp_mainpage_end {
 		height: 250px;
 		min-height: 250px;
+	}
+	.grey-junior {
+  		.junior-tittle {
+		    max-width: 460px;
+	  		}
 	}
 }
 

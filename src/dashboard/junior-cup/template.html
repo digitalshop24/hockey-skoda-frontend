@@ -10,7 +10,6 @@
                         Всероссийский Детский Турнир по хоккею
                         состоялся в Москве</h5>
 
-                    <p>Москва, 25 апреля 2016 г. – В минувшие выходные в Ледовом дворце
                         «Арена «Мытищи» прошел турнир ŠKODA Junior Ice Hockey Cup. Это
                         были два дня яркого хоккейного праздника, наполненные
                         бескомпромиссной борьбой и спортивным духом. Серия игр прошла
@@ -18,180 +17,80 @@
                         хоккейных состязаниях приняли участие 8 сильнейших юниорских
                         команд со всей страны. Мероприятие прошло при участии легенды
                         хоккея Владислава Третьяка и Руководителя марки ŠKODA в России
-                        Любомира Наймана.</p>
 
                 </div>
 
             </div>
             <div class="col-md-7">
-
-                <div class="junior-galer clearfix">
-                    <div class="junior-galer-block clearfix">
-                        <h6>Фотогалерея</h6>
-                        <ul class="nav" id="myTab">
-                            <li ng-repeat="gallery in ctrl.galleries" ng-class="{'active': gallery.name == 2016 }"><a
-                                    data-target="#{{gallery.name}}" data-toggle="tab" ng-bind="gallery.name">2012</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-content">
-                        <div class="tab-pane clearfix" ng-class="{'active': gallery.name == 2016 }"
-                             id="{{gallery.name}}" ng-repeat="gallery in ctrl.galleries">
-                            <p>Кликните для просмотра альбома </p>
-
-                            <div class="junior-galer-phote"
-                                 ng-class="{'junior-galer-phote-hover': yearGallery.images.length}"
-                                 ng-click="ctrl.openModal(yearGallery)" ng-repeat="yearGallery in gallery.galleries">
-                                <div class="img">
-                                    <img src="{{yearGallery.preview.small}}" alt="">
-                                </div>
-                                <div class="junior-galer-phote-text">
-                                    <h4 ng-bind="yearGallery.name">Салават Юлаев</h4>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
+                <img src="img/resources/img/junior.jpg" alt="" style="width:100%;">
 
             </div>
+
+            <div class="col-md-12 junior-buttons">
+                <button ui-sref="dashboard.forma-master-class" class="btn btn_secondary">Регистрация на мастер класс</button>
+                <button ui-sref="dashboard.forma-igra" class="btn btn_secondary">Получить пригласительный на турнир</button>
+            </div>
+            
             <div class="col-md-12 text-left text_block">
-                <p>Турнир по хоккею открыл нападающий московского «Динамо», трехкратный
-                    чемпион мира и пятикратный чемпион России Алексей Терещенко.
-                    Участниками ŠKODA Junior Ice Hockey Cup 2016 стали 8 молодежных команд
-                    из городов от Калининграда до Екатеринбурга. Командой­победителем по
-                    итогам финального матча стала московская «Русь», обыграв
-                    екатеринбургский «Спартаковец» со счетом 3:1. Третье место взял
-                    альметьевский «Нефтянник». В рамках турнира также были награждены
-                    игроки в категориях «Лучший бомбардир», «Лучший нападающий», «Лучший
-                    защитник» и «Лучший вратарь».<br><br>
-                    Поддержать юных спортсменов приехали президент Федерации хоккея
-                    России Владислав Третьяк и Руководитель марки ŠKODA в России Любомир
-                    Найман. Именитые гости поздравили команды с успешным завершением
-                    турнира, вручили победителям заслуженные медали и кубок чемпионов.
-                    Главным сюрпризом для юных чемпионов стало приглашение на матчи
-                    предстоящего Чемпионата мира по хоккею. Игроки всех команд получили
-                    памятные сувениры и смогли взять автограф у высокопоставленных гостей.<br><br>
-                    «Я горжусь всеми участниками игр, – отметил на торжественном закрытии турнира
-                    Любомир Найман. – Их страсть и любовь к хоккею непременно приведут к отличным
-                    результатам. Мы стремимся поддержать хоккеистов­юниоров и
-                    популяризовать детские спортивные дисциплины. Турнир ŠKODA Junior Ice
-                    Hockey Cup – это отличная площадка для состязания талантливых юных
-                    спортсменов со всей России в хоккее, одном из самых быстрых и техничных
-                    видов спорта».<br><br>
-                    «Мне, как президенту Федерации хоккея России, особенно приятно видеть столько
-                    энтузиазма в глазах начинающих спортсменов. Верю, что когда­нибудь участники
-                    турнира смогут выступить на чемпионате мира – возможно, и в родной стране. Ну а
-                    пока будем все вместе радоваться успехам ребят и болеть за сборную России», –
-                    прокомментировал Владислав Третьяк.<br><br>
-                    Во всех матчах юные хоккеисты вели бескомпромиссную борьбу и страсти
-                    были накалены до предела. Серии буллитов, силовые атаки, эффектные
-                    передачи и общее ощущение командного духа среди игроков – все это
-                    передало юным участникам и гостям настроение настоящего хоккейного
-                    праздника.<br><br>
-                    «Здесь все организовано, как будто это мини­чемпионат мира, – поделился своими
-                    впечатлениями нападающий первого звена «Руси» Герман Шуленин. – Да и на таких
-                    больших аренах мы играем нечасто, так что это дополнительно вдохновляет».<br><br>
-                    Уже не первый год ŠKODA поддерживает детский спорт. ŠKODA Junior Ice
-                    Hockey Cup — одно из крупнейших мероприятий всероссийского масштаба,
-                    которое вносит неоценимый вклад в популяризацию детского и молодежного
-                    спорта. Турнир полностью соответствует олимпийскому формату, игры
-                    проходят на лучших площадках страны, а к участию привлекаются
-                    выдающиеся спортсмены и профессионалы своего дела. Оказывая
-                    поддержку детскому хоккею, марка ŠKODA в первую очередь стремится
-                    помочь вывести маленьких спортсменов на дорогу в большой
-                    профессиональный спорт.<br><br>
-                    ŠKODA имеет долгую и успешную историю спонсорства спортивных
-                    дисциплин. В 2016 году марка в 24­й раз поддерживает Чемпионат мира по
-                    хоккею IIHF, являясь официальным главным спонсором. История столь
-                    долговременного сотрудничества была отмечена книгой рекордов Гиннесса.
-                    Помимо этого, c августа 2010 года ŠKODA AUTO Россия является
-                    официальным партнером Федерации хоккея России и мужской Национальной
-                    сборной России по хоккею.</p>
-            </div>
-            <div class="col-md-6">
-                <div class="junior-news">
-                    <div class="junior-news-tittle">
-                        <h4>Другие новости</h4>
-                    </div>
-                    <div class="junior-news-block clearfix" ng-repeat="news in ctrl.lastNews">
-                        <div class="junior-news-block-left">
-                <span class="junior-news-block-left-datte" ng-bind="news.published_at | amDateFormat:'DD.MM H:mm'">
-                  21:32
-                </span>
-                <span class="junior-news-block-left-col" ng-bind="news.comments_count">
-                  0
-                </span>
-                        </div>
-                        <div class="junior-news-block-right">
-                            <h5><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})"
-                                   ng-bind="news.name">Фетисов: почему 16-18-летние парни уезжают?</a></h5>
-                        </div>
-                    </div>
-                </div>
+                <p>В 2017 году ŠKODA, при официальной поддержке Федерации Хоккея России в пятый, юбилейный раз, собирает юных хоккеистов со всей России, чтобы они смогли продемонстрировать свое мастерство на льду. <br> <br>
 
+Дорогие друзья, мы с радостью приглашаем Вас и Ваших детей на финальные игры всероссийского детского турнира по хоккею с шайбой ŠKODA Junior Ice Hockey Cup.
+ <br><br>
+В пятый, юбилейный раз, финал Турнира пройдет в лучшем Ледовом дворце России! <br>
+Ждем вас на финальных играх 22 и 23 апреля в «ВТБ Ледовый дворец», который находится по адресу ул. Автозаводская, д. 23 <br>
+<img src="img/resources/img/map.jpg" alt="" style="width:100%;">
+Будем рады видеть Вас и Ваших детей на трибунах ŠKODA Junior Ice Hockey Cup 2017. <br>
+Приезжайте и поддержите наших юных хоккеистов! <br> <br>
+
+В программе мероприятия: 
+
+    <span style="display:block; margin-left:5%;">активности для юных зрителей <br>
+    автограф-сессия от звезд российского хоккея </span> <br>
+
+Вход бесплатный, для получения пригласительного билета необходимо пройти регистрацию <br>
+<a href="http://hockey-skoda.ru/junior">http://hockey-skoda.ru/junior</a> <br>
+
+По любым вопросам обращайтесь по адресу: info@hockey-skoda.ru</p>
             </div>
             <div class="col-md-6">
-                <h4 class="text-left">Список команд</h4>
+                <h4 class="text-left">Предворительное расписание игр</h4>
                 <table class="junior-team-table">
                     <thead>
                     <tr>
-                        <td>Место</td>
-                        <td>Название команды</td>
-                        <td>Город</td>
+                        <td>22 апреля</td>
+                        <td>Групповой этап турнира</td>
                     </tr>
                     </thead>
                     <tr>
-                        <td>1</td>
-                        <td>Русь</td>
-                        <td>Москва</td>
+                        <td style="color:#333;;">9:00 - 10:45</td>
+                        <td>Игра</td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>Спартаковец</td>
-                        <td>Екатеренбург</td>
+                        <td style="color:#333;;">11:00 - 12:45</td>
+                        <td>Игра</td>
+
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>Нефтяник</td>
-                        <td>Альметьевск</td>
+                        <td>23 апреля</td>
+                        <td style="color:#4ba82e;font-weight:bold;">Финальный этап турнира</td>
+
                     </tr>
                     <tr>
-                        <td>4</td>
-                        <td>Локомотив</td>
-                        <td>Ярославль</td>
+                        <td style="color:#333;;">10:30 - 12:15</td>
+                        <td>Матч за 5 место</td>
+
                     </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Сибирь</td>
-                        <td>Новосибирск</td>
+                     <tr>
+                        <td style="color:#333;;">12:30 - 14:15</td>
+                        <td>Финал</td>
+
                     </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Атлант</td>
-                        <td>Мытищи</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Светлогорец</td>
-                        <td>Светлогорск</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Юность</td>
-                        <td>Краснодар</td>
+                      <tr>
+                        <td style="color:#333;;">14:45 – 15:45</td>
+                        <td>Церемония закрытия на льду</td>
+
                     </tr>
                 </table>
-            </div>
-            <div class="col-md-12 text-center">
-                <div class="junior-share" style="margin: 0 auto;">
-                    <p>Рассказать друзьям:</p>
-
-                    <div class="junior-share-block clearfix">
-                        <share-buttons data="{}"></share-buttons>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -202,26 +101,171 @@
 
     <section class="wrapp_shet">
         <div class="container">
-            <div class="row">
-                <h3 class="junior-tittle">Календарь игр Кубка юниоров</h3>
-                <button ui-sref="dashboard.tournament-table" class="btn  main btn_primary">Перейти к турнирной таблице</button>
-                <div class="mounth">
-                    <div class="col-md-6">
-                        <ul class="mounth_arrow">
-                            <li>
-                                <img src="img/resources/img/arrow_left.png" alt="" class="img-responsive">
-                            </li>
-                            <li>
-                                <h3>Все матчи</h3>
-                            </li>
-                            <li>
-                                <img src="img/resources/img/arrow_right.png" alt="" class="img-responsive">
-                            </li>
-                        </ul>
+                <h3 class="junior-tittle">Календарь игр Junior Ice Hockey Cup</h3>
+            <div class="tournament-table-content center-block">
+                <div class="date-picker center-block">
+                    <div class="year">
+                        <span class="year-unit year-unit__divider">2016</span>
+                        <span class="year-unit year-unit__chosen">2017</span>
+                    </div>
+                    <div class="month">
+                        <img src="img/resources/img/arrow_left.png" alt="" >
+                        <span>Март</span>
+                        <img src="img/resources/img/arrow_right.png" alt="" >
                     </div>
                 </div>
+                <div class="group group__a">
+                    <span class="group-title">Конференция "Запад"</span>
+                    <div class="quaterfinal quaterfinal-aGroup">
+                        <div class="quaterfinal-pair">
+                            <div  class=" quaterfinal-pair-participant  quaterfinal-pair-participant-1 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-aGroup decoration-line-1 decoration-line-winner decoration-line-top decoration-line-agroup" widthCalculate>
+                                <span>1<img src="img\resources\img\tournament-table\logo-1.png">ЦСКА</span>
+                            </div>
+                            <div  class="quaterfinal-pair-participant quaterfinal-pair-participant-2 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-aGroup decoration-line-2  decoration-line-bottom decoration-line-agroup">
+                                <span>8<img src="img\resources\img\tournament-table\logo-2.png" >Йокерит</span>
+                            </div>
+                            <div class="quaterfinal-pair-score quaterfinal-pair-score-aGroup">
+                                4-0
+                            </div>
+                        </div>
+                        <div class="quaterfinal-pair">
+                            <div class=" quaterfinal-pair-participant quaterfinal-pair-participant-3 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-aGroup decoration-line-3 decoration-line-winner decoration-line-top decoration-line-agroup">
+                            <span>4 <img src="img\resources\img\tournament-table\logo-3.png">Локомотив</span>
+                            </div>
+                            <div class="quaterfinal-pair-participant quaterfinal-pair-participant-4 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-aGroup decoration-line-4  decoration-line-bottom decoration-line-agroup">
+                                <span>5<img src="img\resources\img\tournament-table\logo-4.png" >Динамо Мн</span>
+                            </div>
+                            <div class="quaterfinal-pair-score quaterfinal-pair-score-aGroup">
+                                4-1
+                            </div>
+                        </div>
+                        <div class="quaterfinal-pair">
+                            <div class=" quaterfinal-pair-participant quaterfinal-pair-participant-5 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-aGroup decoration-line-5 decoration-line-winner decoration-line-top decoration-line-agroup">
+                            <span>2<img src="img\resources\img\tournament-table\logo-5.png"> СКА</span>
+                            </div>
+                            <div class="quaterfinal-pair-participant quaterfinal-pair-participant-6 decoration-line decoration-line-quaterfinal  decoration-line-quaterfinal-aGroup decoration-line-6  decoration-line-bottom decoration-line-agroup">
+                                <span>  7<img src="img\resources\img\tournament-table\logo-6.png" >Витязь</span>
+                            </div>
+                            <div class="quaterfinal-pair-score quaterfinal-pair-score-aGroup">
+                                4-0
+                            </div>
+                        </div>
+                        <div class="quaterfinal-pair">
+                            <div class=" quaterfinal-pair-participant quaterfinal-pair-participant-7 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-aGroup decoration-line-7 decoration-line-winner decoration-line-top decoration-line-agroup">
+                                    <span>3 <img src="img\resources\img\tournament-table\logo-7.png">Динамо МСК</span>
+                            </div>
+                            <div class="quaterfinal-pair-participant quaterfinal-pair-participant-8 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-aGroup decoration-line-8  decoration-line-bottom decoration-line-agroup">
+                                <span> 6<img src="img\resources\img\tournament-table\logo-8.png" alt="">Торпедо</span>
+                            </div>
+                            <div class="quaterfinal-pair-score quaterfinal-pair-score-aGroup">
+                                4-1
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="semifinal semifinal-aGroup">
+                        <div class="semifinal-pair">
+                            <div class="semifinal-pair-participant decoration-line  decoration-line-semifinal decoration-line-semifinal-aGroup   decoration-line-top decoration-line-agroup">
+                                <img src="img\resources\img\tournament-table\logo-1.png" alt="">
+                            </div>
+                            <div class="semifinal-pair-participant decoration-line  decoration-line-semifinal decoration-line-semifinal-bottom decoration-line-semifinal-aGroup  decoration-line-bottom decoration-line-agroup">
+                                <img src="img\resources\img\tournament-table\logo-3.png" alt="">
+                            </div>
+                            <div class="semifinal-pair-score semifinal-pair-score-aGroup">  
+                            2-2
+                            </div>
+                        </div>
+                        <div class="semifinal-pair">
+                            <div class="semifinal-pair-participant decoration-line  decoration-line-semifinal decoration-line-semifinal-aGroup decoration-line-winner decoration-line-top decoration-line-agroup">
+                                <img src="img\resources\img\tournament-table\logo-5.png" alt="">
+                            </div>
+                            <div class="semifinal-pair-participant decoration-line  decoration-line-semifinal decoration-line-semifinal-bottom  decoration-line-semifinal-aGroup  decoration-line-bottom decoration-line-agroup">
+                                <img src="img\resources\img\tournament-table\logo-7.png" alt="">
+                            </div>
+                            <div class="semifinal-pair-score semifinal-pair-score-aGroup">  
+                            3-1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group group__b">
+                    <span class="group-title">Конференция "Восток"</span>
+                    <div class="quaterfinal quaterfinal-bGroup">
+                        <div class="quaterfinal-pair">
+                            <div class=" quaterfinal-pair-participant quaterfinal-pair-participant-9 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-bGroup decoration-line-9 decoration-line-winner decoration-line-top decoration-line-bgroup">
+                                <span>Авангард <img src="img\resources\img\tournament-table\logo-9.png">2</span>
+                            </div>
+                            <div class="quaterfinal-pair-participant quaterfinal-pair-participant-10 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-bGroup decoration-line-10  decoration-line-bottom decoration-line-bgroup">
+                                <span> Адмирал<img src="img\resources\img\tournament-table\logo-10.png" alt=""> 7</span>
+                            </div>
+                            <div class="quaterfinal-pair-score quaterfinal-pair-score-bGroup">
+                                4-2
+                            </div>
+                        </div>
+                        <div class="quaterfinal-pair">
+                            <div class=" quaterfinal-pair-participant quaterfinal-pair-participant-11 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-bGroup decoration-line-11 decoration-line-winner decoration-line-top decoration-line-bgroup">
+                                <span>Ак Барс <img src="img\resources\img\tournament-table\logo-11.png">3</span>
+                            </div>
+                            <div  class="quaterfinal-pair-participant quaterfinal-pair-participant-12 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-bGroup decoration-line-12  decoration-line-bottom decoration-line-bgroup">
+                                <span>Салават Юлаев<img src="img\resources\img\tournament-table\logo-12.png" alt=""> 6</span>
+                            </div>
+                            <div class="quaterfinal-pair-score quaterfinal-pair-score-bGroup">
+                                4-1
+                            </div>
+                        </div>
+                        <div class="quaterfinal-pair">
+                            <div class=" quaterfinal-pair-participant quaterfinal-pair-participant-13 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-bGroup decoration-line-13 decoration-line-winner decoration-line-top decoration-line-bgroup">
+                                <span>Металлург Мг <img src="img\resources\img\tournament-table\logo-13.png">1</span>
+                            </div>
+                            <div class="quaterfinal-pair-participant quaterfinal-pair-participant-14 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-bGroup decoration-line-14  decoration-line-bottom decoration-line-bgroup">
+                                <span>Куньлунь РС<img src="img\resources\img\tournament-table\logo-14.png" alt="">8</span>
+                            </div>
+                            <div class="quaterfinal-pair-score quaterfinal-pair-score-bGroup">
+                                4-1
+                            </div>
+                        </div>
+                        <div class="quaterfinal-pair">
+                            <div class=" quaterfinal-pair-participant quaterfinal-pair-participant-15 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-bGroup decoration-line-15  decoration-line-top decoration-line-bgroup">
+                                <span>Трактор <img src="img\resources\img\tournament-table\logo-15.png"> 4</span>
+                            </div>
+                            <div class="quaterfinal-pair-participant quaterfinal-pair-participant-16 decoration-line decoration-line-quaterfinal decoration-line-quaterfinal-bGroup decoration-line-16  decoration-line-winner  decoration-line-bottom decoration-line-bgroup">
+                                <span>Барыс<img src="img\resources\img\tournament-table\logo-16.png" alt="">5</span>
+                            </div>
+                            <div class="quaterfinal-pair-score quaterfinal-pair-score-bGroup">
+                                2-4
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="semifinal semifinal-bGroup">
+                        <div class="semifinal-pair">
+                            <div class="semifinal-pair-participant  decoration-line decoration-line-semifinal  decoration-line-semifinal-bGroup   decoration-line-top decoration-line-bgroup">
+                                <img src="img\resources\img\tournament-table\logo-9.png" alt="">
+                            </div>
+                            <div class="semifinal-pair-participant  decoration-line decoration-line-semifinal  decoration-line-semifinal-bottom decoration-line-semifinal-bGroup   decoration-line-winner  decoration-line-bottom decoration-line-bgroup">
+                                <img src="img\resources\img\tournament-table\logo-11.png" alt="">
+                            </div>
+                            <div class="semifinal-pair-score semifinal-pair-score-bGroup">  
+                            1-2
+                            </div>
+                        </div>
+                        <div class="semifinal-pair">
+                            <div class="semifinal-pair-participant decoration-line decoration-line-semifinal decoration-line-semifinal-bGroup  decoration-line-winner decoration-line-top decoration-line-bgroup">
+                                <img src="img\resources\img\tournament-table\logo-13.png" alt="">
+                            </div>
+                            <div class="semifinal-pair-participant decoration-line decoration-line-semifinal  decoration-line-semifinal-bottom decoration-line-semifinal-bGroup   decoration-line-bottom decoration-line-bgroup">
+                                <img src="img\resources\img\tournament-table\logo-16.png" alt="">
+                            </div>
+                            <div class="semifinal-pair-score semifinal-pair-score-bGroup">  
+                            3-0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="float:none;"></div>
             </div>
-            <div class="row fix_bottom">
+        </div>
+            <!-- <div class="row fix_bottom">
                 <div class="tabel_game">
                     <div class="col-md-12 date_game">
                         <h3>23</h3>
@@ -387,9 +431,128 @@
                     </div>
 
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
+
+</div>
+<div class="row info-row">
+        <div class="container " style="background-color:white;">
+        <div class="col-md-6">
+                <div class="junior-news">
+                    <div class="junior-news-tittle">
+                        <h4>Другие новости</h4>
+                    </div>
+                    <div class="junior-news-block clearfix" ng-repeat="news in ctrl.lastNews">
+                        <div class="junior-news-block-left">
+                <span class="junior-news-block-left-datte" ng-bind="news.published_at | amDateFormat:'DD.MM H:mm'">
+                  21:32
+                </span>
+                <span class="junior-news-block-left-col" ng-bind="news.comments_count">
+                  0
+                </span>
+                        </div>
+                        <div class="junior-news-block-right">
+                            <h5><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})"
+                                   ng-bind="news.name">Фетисов: почему 16-18-летние парни уезжают?</a></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        <div class="col-md-6">
+                <h4 class="text-left">Список команд</h4>
+                <table class="junior-team-table">
+                    <thead>
+                    <tr>
+                        <td>Место</td>
+                        <td>Название команды</td>
+                        <td>Город</td>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>1</td>
+                        <td>Русь</td>
+                        <td>Москва</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Спартаковец</td>
+                        <td>Екатеренбург</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Нефтяник</td>
+                        <td>Альметьевск</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Локомотив</td>
+                        <td>Ярославль</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Сибирь</td>
+                        <td>Новосибирск</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Атлант</td>
+                        <td>Мытищи</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Светлогорец</td>
+                        <td>Светлогорск</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Юность</td>
+                        <td>Краснодар</td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+    <div class="container gallery-row" >
+           <div class="junior-galer clearfix">
+                    <div class="junior-galer-block clearfix">
+                        <h6>Фотогалерея</h6>
+                        <ul class="nav" id="myTab">
+                            <li ng-repeat="gallery in ctrl.galleries" ng-class="{'active': gallery.name == 2016 }"><a
+                                    data-target="#{{gallery.name}}" data-toggle="tab" ng-bind="gallery.name">2012</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane clearfix" ng-class="{'active': gallery.name == 2016 }"
+                             id="{{gallery.name}}" ng-repeat="gallery in ctrl.galleries">
+
+                            <div class="junior-galer-phote"
+                                 ng-class="{'junior-galer-phote-hover': yearGallery.images.length}"
+                                 ng-click="ctrl.openModal(yearGallery)" ng-repeat="yearGallery in gallery.galleries">
+                                <div class="img">
+                                    <img src="{{yearGallery.preview.small}}" alt="">
+                                </div>
+                                <div class="junior-galer-phote-text">
+                                    <h4 ng-bind="yearGallery.name">Салават Юлаев</h4>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            <div class="col-md-12 text-center">
+                <div class="junior-share" style="margin: 0 auto;">
+                    <p>Рассказать друзьям:</p>
+
+                    <div class="junior-share-block clearfix">
+                        <share-buttons data="{}"></share-buttons>
+                    </div>
+                </div>
+            </div>
+    </div>
+
 </div>
 
 <!-- Modal photo-->
