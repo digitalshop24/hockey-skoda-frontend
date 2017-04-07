@@ -25,6 +25,4 @@ export default angular.module('dashboard.junior', [])
                     }
                 }
             });
-});
-
-
+    });
