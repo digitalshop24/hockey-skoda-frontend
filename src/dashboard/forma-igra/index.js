@@ -22,7 +22,7 @@ export default angular.module('dashboard.forma-igra', [
                 controllerAs: 'ctrl',
                 resolve: {
                     matches: (formaIgraService, $stateParams) => {
-                        return formaIgraService.getSchedule('complete');
+                        return formaIgraService.getSchedule('future');
                     }
                 }
             });
