@@ -8,6 +8,7 @@
 
 .junior {
 
+
   &-buttons{
     height:80px;
     line-height: 80px;
@@ -167,6 +168,7 @@
       }
 
     }
+
   }
 
     .cheer {
@@ -374,6 +376,13 @@
     }
   }
 
+      &-schedule-table{
+    width:100%;
+    td:first-child{
+      width:18%;
+      font-weight:bold;
+    }
+  }
 }
 
 

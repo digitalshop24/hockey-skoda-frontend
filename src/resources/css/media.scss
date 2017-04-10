@@ -290,6 +290,12 @@
 			margin-bottom:20px;
 			width:100%;
 		}
+		&-schedule-table{
+    		
+    		td:first-child{
+      		width:30%;
+    	}
+  }
 	}
 	/*Disable Animation on Mobile Devices*/
 	.animated {
