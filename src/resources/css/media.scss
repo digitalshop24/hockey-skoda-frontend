@@ -291,7 +291,9 @@
 			width:100%;
 		}
 		&-schedule-table{
-    		
+			&-1,&-2{
+				float:none;
+			}
     		td:first-child{
       		width:30%;
     	}

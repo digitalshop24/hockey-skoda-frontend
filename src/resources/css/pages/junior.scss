@@ -49,6 +49,7 @@
   }
   &-content {
     padding-right:22px;
+    margin-top:25px;
   }
   table {
     font-size: $p_size;
@@ -375,11 +376,40 @@
       
     }
   }
+  &-schedule-list{
+    ul{
+          margin-left:40px;
+          font-weight:bold;
+       li{
+        font-size:1.4rem;
+        position:   relative;
+        &:before{
 
+          display:  inline-block;
+          position:absolute;
+          left: -15px;
+          top: 8px;
+          content:"";
+          width:5px;
+          height:5px;
+          background-color:#4ba82e;
+          border-radius:5px;
+        }
+       }
+      }
+
+  }
       &-schedule-table{
     width:100%;
+    &-1{
+      float:left;
+    }
+    &-2{
+      float:right;
+      margin-top:72px;
+    }
     td:first-child{
-      width:18%;
+      width:20%;
       font-weight:bold;
     }
   }
