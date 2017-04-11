@@ -1,5 +1,5 @@
-<form class="form-master-class" ng-submit="ctrl.send()" ng-init="ctrl.form = { policy_agreed: true}">
-    <section ng-show="ctrl.moscowUsers >= 30" style="margin-top: 40px; margin-bottom: 30px;">
+<form class="form-master-class" ng-submit="ctrl.session.isAuthenticated ? ctrl.send_master_class() : ctrl.send()" ng-init="ctrl.form = { policy_agreed: true}">
+    <section ng-show="ctrl.moscowUsers >= 30" style="margin-top: 40px; margin-bottom: 30px; padding-left: 9%; margin-left: 25px;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -15,20 +15,42 @@
             </div>
         </div>
     </section>
-    <section ng-show="ctrl.moscowUsers < 30" style="margin-top: 40px; margin-bottom: 30px; text-align: center;">
+    <section ng-show="ctrl.moscowUsers < 30" style="margin-top: 40px; margin-bottom: 30px; text-align: left; padding-left: 9%; margin-left: 25px;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="wrapp_titel">
-                        <h2>Информация</h2>
-                        <p>Обратите внимание, что к мастер-классам допускаются дети, проживающие в Москве или находящиеся в Москве в даты проведении мастер-классов.</p>
-                        <p>Вы можете принять участие в мастер-классе, если Ваш ребенок:</p>
-                        <p> - попадает в одну из двух возрастных категорий: от 7 до 9 лет, от 10 до 12 летб
-                        <p> - умеет кататься на коньках,
-                        <p> - имеет в наличие коньки, налокотники, наколенники.
-                        <p>В связи с тем, что запись на мастер-класс свободная и бесплатная, к участию будут приглашены первые 30 человек, подавших заявку и соответствующие всем указанным критериям.
-
-                        <p><b>Время проведения мастер-классов: (время добавится позже!)</b></p>
+                        <p><b>Открытые мастер-классы от звезд Российского хоккея в рамках ŠKODA Junior Ice Hockey Cup 2017.</b></p>
+                        </br>
+                        <p>Дорогие друзья!</p>
+                        </br>
+                        <p>Мы рады пригласить Ваших детей принять участие в открытых мастер-классах от звезд Российского Хоккея Алексея Яшина и Алексея Морозова.</p>
+                        </br>
+                        <p><b>22 Апреля. 15.30 – 16.30 мастер-класс с Алексеем Яшиным для детей в возрасте 10-12 лет.</b></p>
+                        <p><b>23 Апреля. 17.00 – 18.00 мастер-класс с Алексеем Морозовым для детей в возрасте 7-9 лет.</b></p>
+                        </br>
+                        <p><b>Для участия в мастер-классе мы набираем по 29 игроков (25 полевых и 4 вратаря) на каждую из указанных дат.</b></p>
+                        <p><b>Для того, чтобы принять участие в мастер-классе необходимо зарегистрироваться. Если у Вас уже есть аккаунт на нашем сайте, пожалуйста, сначала авторизируйтесь на сайте.</b></p>
+                        </br>
+                        <p><b>Условия участия в мастер-классах:</b></p>
+                        </br>
+                        <p>22 Апреля 2017: открытый мастер-класс с Алексеем Яшиным для детей в возрасте 10-12 лет.</p>
+                        </br>
+                        <p>Проживание в Москве/МО либо присутствие в Москве в указанную дату</p>
+                        <p>Умение твердо стоять на коньках</p>
+                        <p>Минимальное умение играть в хоккей (любительский/начинающий уровни допускаются)</p>
+                        <p>Наличие собственной экипировки (коньки, клюшка, шлем с маской, защита: наличие экипировки проверяется до выхода на лед!)</p>
+                        <p>Соответствие указанному возрасту (при себе иметь свидетельство о рождение)</p>
+                        <p>Сопровождение одного из родителей (родитель в обязательном порядке должен иметь при себе паспорт для подписания соглашения о безопасности).</p>
+                        </br>
+                        <p>23 Апреля 2017: открытый мастер-класс с Алексеем Морозовым для детей в возрасте 7-9 лет.</p>
+                        </br>
+                        <p>Проживание в Москве/МО либо присутствие в Москве в указанную дату</p>
+                        <p>Умение твердо стоять на коньках</p>
+                        <p>Минимальное умение играть в хоккей (любительский/начинающий уровни допускаются)</p>
+                        <p>Наличие собственной экипировки (коньки, клюшка, шлем с маской, защита: наличие экипировки проверяется до выхода на лед!)</p>
+                        <p>Соответствие указанному возрасту (при себе иметь свидетельство о рождение)</p>
+                        <p>Сопровождение одного из родителей (родитель в обязательном порядке должен иметь при себе паспорт для подписания соглашения о безопасности).</p>
                     </div>
                 </div>
             </div>
@@ -47,8 +69,9 @@
                         <input type="text" minlength="2" ng-model="ctrl.form.middle_name" class="input_default input_small"
                                placeholder="Отчество">
                     </div>
-                    <div class="col-md-6 left">
+                    <div class="col-md-6 left" >
                         <h4> ФИО ребенка<!-- <span class="plus_ball">+10 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        </br></br>
                         <input type="text" minlength="2" ng-model="ctrl.forma.child_last_name" class="input_default input_small"
                                placeholder="Фамилия* (обязательное поле)" required>
                         <input type="text" minlength="2" ng-model="ctrl.forma.child_first_name" class="input_default input_small"
@@ -63,44 +86,54 @@
                         <input type="text" minlength="2" ng-model="ctrl.form.city" class="input_default input_small" placeholder="Город* (обязательное поле)" required>
                         <input type="text" ng-model="ctrl.form.address" class="input_default input_small"
                                placeholder="Адрес" required>
+                        <h4>Дата мастер класса</h4>
+                        <select class="input_default input_small date-picker" ng-model="ctrl.forma.when"
+                                  ng-options="key as value for (key , value) in ctrl.master_class_data" required >
+                            <option selected value>Все даты</option>
+                        </select>
                     </div>
                     <div class="col-md-6 left">
                         <h4>Дата рождения ребёнка</h4>
                         <input type="date" class="input_default input_small" ng-model="ctrl.forma.child_birthday"
                                value="2010-01-01" min="1980-01-01" max="2017-12-31" required />
-
-                        <h4>Дата мастер класса</h4>
-                        <select   class="input_default input_small date-picker" ng-model="ctrl.forma.when" 
-                                ng-options="data for data in ctrl.master_class_data" required >
-                            <option selected value>Все даты</option>
+                        </br></br>
+                        <h4>Категория игрока</h4>
+                        <select class="input_default input_small date-picker" ng-model="ctrl.forma.player_category"
+                                ng-options="key as value for (key , value) in ctrl.player_categories" required >
                         </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 left">
-                        <h4>Дополнительная информация</h4>
+                        <h4>Подтверждаем, что</h4>
                         <div class="block">
                             <input type="checkbox" ng-model="ctrl.forma.can_skate" id="can_skate">
-                            <label style="margin-left: 0px;" for="can_skate"><span></span>Ребенок умеет кататься на коньках</label>
+                            <label style="margin-left: 0px;" for="can_skate"><span></span>ребенок умеет твердо стоять на коньках</label>
+                        </div>
+                        <div class="block">
+                            <input type="checkbox" ng-model="ctrl.forma.can_play" id="can_play">
+                            <label style="margin-left: 0px;" for="can_play"><span></span>присутствует минимальное умение играть в хоккей (любительский/начинающий уровни допускаются)</label>
                         </div>
                         <div class="block">
                             <input type="checkbox" ng-model="ctrl.forma.has_equipment" id="has_equipment">
-                            <label style="margin-left: 0px;" for="has_equipment"><span></span>В наличии есть коньки, налокотники, наколенники</label>
+                            <label style="margin-left: 0px;" for="has_equipment"><span></span>в наличии собственная экипировка (коньки, клюшка, шлем с маской, защита)</label>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="form_white">
+        <div class="form_white" ng-if="!ctrl.session.isAuthenticated">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 left">
-                        <h4>Email</h4>
+                        <h4 style="margin-bottom: 20px;">Email</h4>
+                        <div style="margin-bottom: 20px;">пожалуйста, введите корректный email (необходим для подтверждения участия).</div>
                         <input required="true" type="email" ng-model="ctrl.form.email" class="input_default input_small"
                                placeholder="E-mail* (обязательное поле)">
                     </div>
                     <div class="col-md-6 left">
-                        <h4>Телефон<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        <h4 style="margin-bottom: 20px;">Телефон<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        <div style="margin-bottom: 20px;">пожалуйста, введите корректный номер телефона (необходим для подтверждения участия накануне мастер-класса).</div>
                         <input type="phone" ng-model="ctrl.form.phone" class="input_default input_small"  mask="+7(999) 999-9999"
                                placeholder="+7" required>
                     </div>
@@ -139,7 +172,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <button class="btn btn_common main">Отправить</button>
+                    <button ng-disabled="!(ctrl.forma.can_play && ctrl.forma.can_skate && ctrl.forma.has_equipment)" class="btn btn_common main">Отправить</button>
                 </div>
             </div>
         </div>

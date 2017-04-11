@@ -2,12 +2,13 @@
 
 
 export default class FormaIgraCtrl {
-    constructor(auth, modal, profileService, $state, matches) {
+    constructor(auth, session, modal, profileService, $state, matches) {
         this.auth = auth;
         this.modal = modal;
         this.profileService = profileService;
         this.state = $state;
         this.matches = [];
+        this.session = session;
         for (var i = 0; i < matches.length; i++) {
             this.matches.push.apply(this.matches, matches[i].matches);
         }
@@ -59,7 +60,13 @@ export default class FormaIgraCtrl {
                     }
                 }
             });
-
         });
+    }
+    
+    send_forma_igra() {
+        this.profileService.create_forma_igra(this.forma);
+        this.form = {};
+        this.forma = {};
+        this.state.go('dashboard.main');
     }
 }

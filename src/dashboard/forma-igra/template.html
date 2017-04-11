@@ -1,10 +1,11 @@
-<form class="form-igra" ng-submit="ctrl.send()" ng-init="ctrl.form = { policy_agreed: true}">
+<form class="form-igra" ng-submit="ctrl.session.isAuthenticated ? ctrl.send_forma_igra() : ctrl.send()" ng-init="ctrl.form = { policy_agreed: true}">
     <section style="margin-top: 40px; margin-bottom: 30px;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="wrapp_titel">
                         <p style="font-size:20px;"><b>Пройдите регистрацию и получите бесплатный пригласительный на матч!</b></p>
+                        <p>Если у Вас уже есть аккаунт на нашем сайте, пожалуйста, сначала авторизируйтесь на сайте.</p>
                     </div>
                 </div>
             </div>
@@ -15,10 +16,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 left">
-                        <h4>Как вас зовут?<!-- <span class="plus_ball">+10 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
-                        <input type="text" minlength="2" ng-model="ctrl.form.last_name" class="input_default input_small"
+                        <h4 ng-if="!ctrl.session.isAuthenticated">Как вас зовут?<!-- <span class="plus_ball">+10 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
+                        <input type="text" minlength="2" ng-if="!ctrl.session.isAuthenticated" ng-model="ctrl.form.last_name" class="input_default input_small"
                                placeholder="Фамилия* (обязательное поле)" required>
-                        <input type="text" minlength="2" ng-model="ctrl.form.first_name" class="input_default input_small"
+                        <input type="text" minlength="2" ng-if="!ctrl.session.isAuthenticated" ng-model="ctrl.form.first_name" class="input_default input_small"
                                placeholder="Имя* (обязательное поле)" required>
                         <h4>Дата матча<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
                         <select class="input_default input_small date-picker" ng-model="ctrl.forma.when" 
@@ -26,14 +27,14 @@
                             <option selected value>Все матчи</option>
                         </select>
                     </div>
-                    <div class="col-md-6 left">
+                    <div class="col-md-6 left" ng-if="!ctrl.session.isAuthenticated">
                         <h4>Где Вы проживаете?<!-- <span class="plus_ball">+30 <img src="img/resources/img/balls.png" alt=""></span> --></h4>
                         <input type="text" minlength="2" ng-model="ctrl.form.city" class="input_default input_small" placeholder="Город* (обязательное поле)" required>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="form_white">
+        <div class="form_white" ng-if="!ctrl.session.isAuthenticated">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 left">
@@ -63,7 +64,7 @@
             </div>
         </div>
 
-        <div class="form_grey">
+        <div class="form_grey" ng-if="!ctrl.session.isAuthenticated">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">

@@ -2,16 +2,22 @@
 
 
 export default class FormaMasterClassCtrl {
-    constructor(auth, modal, profileService, $state, moscowUsers) {
+    constructor(auth, modal, session, profileService, $state, moscowUsers) {
         this.auth = auth;
         this.modal = modal;
         this.profileService = profileService;
         this.state = $state;
-        this.master_class_data = ['2017-03-10', '2017-04-10'];
+        this.master_class_data = {
+            '2017-04-22' : '22 Апреля. 15.30 – 16.30 (для детей 10-12 лет)',
+            '2017-04-23' : '23 Апреля. 17.00 – 18.00 (для детей 7-9 лет)'
+        };
+        this.player_categories = { 'field_player' : 'полевой игрок', 'goalkeeper' : 'вратарь'}
         this.moscowUsers = moscowUsers.num;
         this.forma = {};
+        this.forma.can_play = false;
         this.forma.can_skate = false;
         this.forma.has_equipment = false;
+        this.session = session;
     }
 
     openModal() {
@@ -46,6 +52,9 @@ export default class FormaMasterClassCtrl {
             delete this.form.confirmPassword;
             return this.profileService.update(this.form);
         }).then(() => {
+            this.forma["parent_first_name"] = this.form.first_name;
+            this.forma["parent_last_name"] = this.form.last_name;
+            this.forma["parent_middle_name"] = this.form.middle_name;
             this.profileService.create_forma_master_class(this.forma);
         }).then(() => {
             this.form = {};
@@ -62,5 +71,16 @@ export default class FormaMasterClassCtrl {
                 });
 
             });
+    }
+
+    send_master_class() {
+        this.forma["parent_first_name"] = this.form.first_name;
+        this.forma["parent_last_name"] = this.form.last_name;
+        this.forma["parent_middle_name"] = this.form.middle_name;
+
+        this.profileService.create_forma_master_class(this.forma);
+        this.form = {};
+        this.forma = {};
+        this.state.go('dashboard.main');
     }
 }
