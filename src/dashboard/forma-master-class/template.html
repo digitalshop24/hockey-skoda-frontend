@@ -1,8 +1,8 @@
 <form class="form-master-class" ng-submit="ctrl.session.isAuthenticated ? ctrl.send_master_class() : ctrl.send()" ng-init="ctrl.form = { policy_agreed: true}">
-    <section ng-show="ctrl.moscowUsers >= 30" style="margin-top: 40px; margin-bottom: 30px; padding-left: 9%; margin-left: 25px;">
-        <div class="container-fluid">
+    <section ng-show="!ctrl.show_registration" style="margin-top: 40px; margin-bottom: 30px;">
+        <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div style="padding-left: 9%;" class="col-md-12">
                     <div class="wrapp_titel">
                         <h2>Добрый день!</h2>
                         <p>К сожалению, запись на мастер-класс окончена. Все места забронированы.</p>
@@ -15,10 +15,10 @@
             </div>
         </div>
     </section>
-    <section ng-show="ctrl.moscowUsers < 30" style="margin-top: 40px; margin-bottom: 30px; text-align: left; padding-left: 9%; margin-left: 25px;">
-        <div class="container-fluid">
+    <section ng-show="ctrl.show_registration" style="margin-top: 40px; margin-bottom: 30px; text-align: left;">
+        <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div style="padding-left: 9%;" class="col-md-12">
                     <div class="wrapp_titel">
                         <p><b>Открытые мастер-классы от звезд Российского хоккея в рамках ŠKODA Junior Ice Hockey Cup 2017.</b></p>
                         </br>
@@ -56,7 +56,7 @@
             </div>
         </div>
     </section>
-    <aside class="form" ng-show="ctrl.moscowUsers < 30">
+    <aside class="form" ng-show="ctrl.show_registration">
         <div class="form_grey">
             <div class="container">
                 <div class="row">
@@ -89,7 +89,6 @@
                         <h4>Дата мастер класса</h4>
                         <select class="input_default input_small date-picker" ng-model="ctrl.forma.when"
                                   ng-options="key as value for (key , value) in ctrl.master_class_data" required >
-                            <option selected value>Все даты</option>
                         </select>
                     </div>
                     <div class="col-md-6 left">
@@ -97,10 +96,6 @@
                         <input type="date" class="input_default input_small" ng-model="ctrl.forma.child_birthday"
                                value="2010-01-01" min="1980-01-01" max="2017-12-31" required />
                         </br></br>
-                        <h4>Категория игрока</h4>
-                        <select class="input_default input_small date-picker" ng-model="ctrl.forma.player_category"
-                                ng-options="key as value for (key , value) in ctrl.player_categories" required >
-                        </select>
                     </div>
                 </div>
                 <div class="row">

@@ -5,7 +5,7 @@ export default class FormaMasterClassService {
         this.api = api;
     }
 
-    getMoscowCount(stage) {
+    getDayCount() {
         return this.api.get('/users/forma-master-class-users')
         .then(response => {
             return response.data;
