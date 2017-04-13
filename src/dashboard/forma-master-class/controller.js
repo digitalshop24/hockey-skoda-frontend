@@ -8,11 +8,11 @@ export default class FormaMasterClassCtrl {
         this.profileService = profileService;
         this.state = $state;
         this.master_class_data = {};
-        this.show_registration = (day_nums.day_1 < 30 || day_nums.day_2 < 30);
-        if (day_nums.day_1 < 30) {
+        this.show_registration = (day_nums.day_1 < 45 || day_nums.day_2 < 45);
+        if (day_nums.day_1 < 45) {
             this.master_class_data['2017-04-22'] = '22 Апреля. 15.30 – 16.30 (для детей 10-12 лет)'
         }
-        if (day_nums.day_2 < 30) {
+        if (day_nums.day_2 < 45) {
             this.master_class_data['2017-04-23'] = '23 Апреля. 17.00 – 18.00 (для детей 7-9 лет)'
         }
         this.forma = {};
