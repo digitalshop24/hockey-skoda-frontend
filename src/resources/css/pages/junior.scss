@@ -436,6 +436,52 @@
        background-color: #fff;
      }
   }
+  .matches-table{
+    .grey-cell{
+      background-color:#ececec;
+    }
+    .winner{
+      color:#4ba82e;
+      font-weight:bold;
+    }
+    thead{
+      tr:nth-last-child(Odd){
+        background-color:#fff;
+      }
+    }
+    tbody{
+      tr:nth-last-child(Odd){
+        background-color: #fff;
+      }
+      tr td:first-child{
+        color:#4ba82e;
+        font-weight:bold;
+      }
+    }
+    td{
+      text-align:center;
+      &:first-child{
+        text-align:left;
+      }
+    }
+  }
+  .score-table{
+    tbody{
+      tr:nth-last-child(Odd){
+        background-color: #fff;
+      }
+      tr td:first-child{
+        color:#4ba82e;
+        font-weight:bold;
+      }
+    }
+    td{
+      text-align:center;
+      &:first-child{
+        text-align:left;
+      }
+    } 
+  }
 }
 
 
