@@ -437,7 +437,7 @@
                         </table>
                      </div>
                 </div> 
-                <div class="junior-schedule-list">
+                <!-- <div class="junior-schedule-list">
                     <p style="font-weight:bold;">
                         Будем рады видеть Вас и Ваших детей на трибунах ŠKODA Junior Ice Hockey Cup 2017. 
                         Приезжайте и поддержите наших юных хоккеистов! <br> <br>
@@ -460,7 +460,7 @@
                 <button ui-sref="dashboard.forma-master-class" class="btn btn_secondary">Регистрация на мастер класс</button>
                 <button ui-sref="dashboard.forma-igra" class="btn btn_secondary">Получить пригласительный на турнир</button>
 
-            </div>
+            </div> -->
             <!-- <div class="col-md-6 block-center" style="text-align: center;float: none;margin: 0 auto; clear: both;">
                     <h4 class="" style="font-weight:bold;">Список команд</h4>
                     <table class="junior-team-table">
@@ -513,7 +513,7 @@
                         </tr>
                     </table>
                 </div> -->
-            <img src="img/resources/img/map.jpg" alt="" style="width:100%;">
+            <!-- <img src="img/resources/img/map.jpg" alt="" style="width:100%;"> -->
         </div>
     </div>
 </section>
@@ -522,7 +522,7 @@
 
 
     <section class="wrapp_shet" >
-        <div class="container" >
+        <div class="container" ng-model="selection">
                 <h3 class="junior-tittle">Календарь игр Junior Ice Hockey Cup</h3>
                 <div class="date-picker center-block">
                     <div class="year">
@@ -535,7 +535,7 @@
                         <img src="img/resources/img/arrow_right.png" alt="" >
                     </div>
                 </div>
-            <!-- <div class="tournament-table-content center-block"  >
+            <div class="tournament-table-content center-block" ng-switch on="selection">
                 <div class="group group__a">
                     <span class="group-title">Конференция "Запад"</span>
                     <div class="quaterfinal quaterfinal-aGroup">
@@ -685,8 +685,8 @@
                     </div>
                 </div>
                 <div style="float:none;"></div>
-            </div>  -->
-            <div class="container" >
+            </div>  
+            <div class="container" ng-switch on="selection">
                 <div class="row fix_bottom">
                     <div class="tabel_game">
                         <div class="col-md-12 date_game">
@@ -835,7 +835,7 @@
                 </div> 
             </div>
                 <div style="float:none;"></div>
-            </div> 
+        </div> 
         </div>
         </div>
     </section>

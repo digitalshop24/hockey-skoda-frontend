@@ -54,7 +54,7 @@ export default class ProgressCtrl {
                     imgUrl: photo.image.original,
                     description: 'хоккейвкаждом'
                 });
-                $('#share').modal('show');
+                // $('#share').modal('show');
             }).catch(err => {
                 this.modal.open({
                     resolve: {
