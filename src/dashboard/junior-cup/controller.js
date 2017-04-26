@@ -39,4 +39,14 @@ export default class JuniorCtrl {
             }
         });
     }
+
+    yearIsChecked($event){
+        var target=$(event.currentTarget);
+        if(!(target.hasClass("year-unit__chosen"))){
+            target.addClass("year-unit__chosen");
+            target.siblings(".year-unit").removeClass("year-unit__chosen");
+        }
+
+    }
 }
+
