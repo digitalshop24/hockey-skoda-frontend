@@ -192,7 +192,7 @@
                      <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="news in ctrl.championatNews | limitTo:4">
                         <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name"></a></p>
                         <span class="littel_time" ng-bind="news.published_at | amDateFormat:'H:mm'"></span>
-                        <span class="little_comment" ng-bind="news.comments_count"></span>
+                        <!-- <span class="little_comment" ng-bind="news.comments_count"></span> -->
                     </div>
                 </div>
                 <!-- <div class="row hidden-xs" style="background-image: url('img/resources/img/baner_main.jpg'); background-repeat: no-repeat;  background-size: 100% 80px; margin: 20px 0 10px; min-height: 80px;">
@@ -211,7 +211,7 @@
                      <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="news in ctrl.championatNews.slice(4,10) | limitTo:6">
                         <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name"></a></p>
                         <span class="littel_time" ng-bind="news.published_at | amDateFormat:'H:mm'"></span>
-                        <span class="little_comment" ng-bind="news.comments_count"></span>
+                        <!-- <span class="little_comment" ng-bind="news.comments_count"></span> -->
                     </div>
                 </div>
             </div>
