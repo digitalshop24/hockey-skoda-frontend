@@ -14,7 +14,7 @@
 		<!-- <button class="btn btn_primary tiny text-center" ui-sref="dashboard.photocontest">Посмотреть все работы</button> -->
 	</div>
 	<div ng-show="ctrl.user.can_photo_competition">
-		<p>Чтобы принять участие в розыгрыше билетов на матчи Кубка первого канала, Вам необходимо придумать креативное пожелание для нашей сборной и загрузить его в личном кабинете. В конкурсе может участвовать только одна работа от одного пользователя.</p>
+		<p>Чтобы принять участие в розыгрыше билетов на Чемпионат мира по хоккею, Вам необходимо нарисовать креативный рисунок на тему "Моя хоккейная семья" и загрузить его в формате jpg. В конкурсе может участвовать только одна работа от одного пользователя.</p>
 		<p>Лучшие работы будут выбраны специальным жюри и опубликованы на сайте.</p>
 	</div>
 	<div ng-show="ctrl.user.can_photo_competition">
@@ -25,10 +25,10 @@
 		<h5>Мои работы</h5>
 		<ul class="my_foto text-center">
 			<li ng-repeat="photo in ctrl.photos">
-				<p>
+				<!-- <p>
 					<img src="img/resources/img/like.png" alt="">
 					<span ng-bind="photo.likes">14444</span>
-				</p>
+				</p> -->
 				<div class="wrapp_foto">
 					<img src="{{photo.image.small}}" alt="" class="img-responsive">
 				</div>

@@ -434,6 +434,42 @@
       font-size: 14px;
     }
   }
+  .news_preview{
+    display: inline-block;
+    height:450px;
+    margin:60px;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 35px 30px 35px;
+    text-align: justify;
+    &_title{
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2.6rem;
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+      margin-bottom:30px;
+    }
+    &_text{
+      position:relative;
+      z-index:2;
+      font-style: italic;
+      color: #fff;
+      font-size: 2.4rem;
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    }
+    .filter{
+      z-index: 1;
+      position: absolute;
+      left: 76px;
+      top: 60px;
+      width: calc(100% - 150px);
+      height: 450px;
+      background-color: rgba(0,0,0,0.4);
+    }
+  }
 }
 
 .main-collogo{
