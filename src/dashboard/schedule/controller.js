@@ -9,6 +9,7 @@ export default class ScheduleCtrl {
             schedule = schedule.reverse();
         }
         this.schedule = schedule;
+        this.monthNames = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
         this.allTeams = teams.filter(team => team.short_name);
         this.playoffTeams = teams.filter(team => !team.short_name);
         this.$state = $state;
@@ -62,6 +63,10 @@ export default class ScheduleCtrl {
         };
     }
 
+    filterMonthName(month) {
+        return this.monthNames[new Date(month).getMonth()];
+    };
+    
     changeStage(stage) {
         this.$state.go('dashboard.schedule',{stage: stage});
     }

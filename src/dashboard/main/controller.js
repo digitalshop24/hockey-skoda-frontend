@@ -20,7 +20,7 @@ export default class MainCtrl {
             }
         });
         this.socPosts = temp;
-        this.lightingNews = lightingNews;
+        this.lightingNews = lightingNews[0];
         this.lastNewsInfo = lastNewsInfo;
         this.championatNews = championatNewsInfo.posts;
         this.lastNews = lastNewsInfo.posts.reverse();

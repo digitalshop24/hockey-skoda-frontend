@@ -192,7 +192,8 @@
                      <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="news in ctrl.championatNews | limitTo:4">
                         <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name"></a></p>
                         <span class="littel_time" ng-bind="news.published_at | amDateFormat:'H:mm'"></span>
-                        <!-- <span class="little_comment" ng-bind="news.comments_count"></span> -->
+                         <span class="littel_date" ng-bind="news.published_at | amDateFormat:'DD.MM'"></span>
+                         <!--<span class="little_comment" ng-bind="news.comments_count"></span>-->
                     </div>
                 </div>
                 <!-- <div class="row hidden-xs" style="background-image: url('img/resources/img/baner_main.jpg'); background-repeat: no-repeat;  background-size: 100% 80px; margin: 20px 0 10px; min-height: 80px;">
@@ -211,21 +212,23 @@
                      <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="news in ctrl.championatNews.slice(4,10) | limitTo:6">
                         <p class="littel_news"><a ui-sref="dashboard.newspage({id:news.id, rubric:news.rubric.api_path})" ng-bind="news.name"></a></p>
                         <span class="littel_time" ng-bind="news.published_at | amDateFormat:'H:mm'"></span>
-                        <!-- <span class="little_comment" ng-bind="news.comments_count"></span> -->
+                         <span class="littel_date" ng-bind="news.published_at | amDateFormat:'DD.MM'"></span>
+                         <!-- <span class="little_comment" ng-bind="news.comments_count"></span> -->
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 hidden-sm hidden-xs">
-                    <!-- <a href="" class="news_preview" style="background-image: url(http://skodahockey.s3-eu-central-1.amazonaws.com/posts/images/000/021/134/medium/146596.jpg?1493354414);">
+                    <a ui-sref="dashboard.newspage({id:ctrl.lightingNews.id, rubric:ctrl.lightingNews.rubric.api_path})"
+                       class="news_preview" style="background-image: url({{ctrl.lightingNews.image.medium}});">
                         <div class="filter"></div>
                         <div   class="news_preview_title">
-                            Олег Знарок: «Как мне связка Мозякин – Ткачев? Хорошо? Ну вот вы и ответили на свой вопрос»
+                            {{ctrl.lightingNews.name}}
                         </div>
                         <div class="news_preview_text ">
-                            Но на ЧМ поедут все равно НХЛовцы
+                            {{ctrl.lightingNews.short_content}}
                         </div>
-                    </a> -->
+                    </a>
 
             <!--<slick class="hidden-sm hidden-xs" infinite=true slides-to-show=1 slides-to-scroll=1 dots=true>-->
                     <!-- <div class="preview_header_right " style="background-image: url('none.png'); ">

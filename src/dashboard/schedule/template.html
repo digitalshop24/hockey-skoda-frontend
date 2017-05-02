@@ -64,10 +64,11 @@
                 <div class="col-md-12 date_game">
                     <h3 ng-bind="day.matches[0].when | amDateFormat:'DD'"></h3>
 
-                    <p class="b" ng-bind="day.matches[0].when | amDateFormat:'MMMM'"></p>
+                    <p class="b" ng-bind="ctrl.filterMonthName(day.matches[0].when)"></p>
 
                     <p>({{(day.matches | filter:ctrl.filterByAllTeams |
-                        filter:ctrl.filterByPlayoffTeams | filter:ctrl.filterByCategory).length}} игры)</p>
+                        filter:ctrl.filterByPlayoffTeams | filter:ctrl.filterByCategory).length}} {{(day.matches | filter:ctrl.filterByAllTeams |
+                        filter:ctrl.filterByPlayoffTeams | filter:ctrl.filterByCategory).length > 4 ? 'Игр' : 'Игры'}})</p>
                 </div>
                 <div class="col-md-3 text-center"
                      ng-repeat="match in day.matches | filter:ctrl.filterByAllTeams |
