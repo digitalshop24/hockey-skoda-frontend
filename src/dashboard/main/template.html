@@ -220,13 +220,15 @@
 
             <div class="col-md-4 hidden-sm hidden-xs">
                     <a ui-sref="dashboard.newspage({id:ctrl.lightingNews.id, rubric:ctrl.lightingNews.rubric.api_path})"
-                       class="news_preview" style="background-image: url({{ctrl.lightingNews.image.medium}});">
-                        <div class="filter"></div>
-                        <div   class="news_preview_title">
-                            {{ctrl.lightingNews.name}}
-                        </div>
-                        <div class="news_preview_text ">
-                            {{ctrl.lightingNews.short_content}}
+                       class="news_preview" >
+                        <div class="wrapper" style="background-image: url({{ctrl.lightingNews.image.medium}});">
+                          <div class="filter"></div>
+                          <div   class="news_preview_title">
+                              {{ctrl.lightingNews.name}}
+                          </div>
+                          <div class="news_preview_text ">
+                              {{ctrl.lightingNews.short_content}}
+                          </div>
                         </div>
                     </a>
 

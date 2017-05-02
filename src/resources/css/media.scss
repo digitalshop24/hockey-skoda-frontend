@@ -41,6 +41,16 @@
   .wrapp_mainpage_end {
     min-height: 800px;
   }
+  .wrapp_news_preview {
+  	.news_preview{
+  		&_title{
+			font-size:2.2rem;
+  		}
+  		&_text{
+			font-size:2rem;
+  		}
+  	}
+  }
 }
 @media only screen and (max-width : 1450px) {
   .wrapp_mainpage_slider {
@@ -51,6 +61,17 @@
   .wrapp_mainpage_end {
     min-height: 700px;
   }
+}
+@media only screen and (max-width : 1300px){
+	.wrapp_news_preview {
+  	.news_preview{
+  		&_title{
+			font-size:1.8rem;
+  		}
+  		&_text{
+			font-size:1.6rem;
+  		}
+  	}
 }
 
 @media only screen and (max-width : 1200px) {
@@ -1144,7 +1165,7 @@
 	}
 }
 
- @media only screen and (max-width : 600px) {
+@media only screen and (max-width : 600px) {
 		 	.wrapp_forecast_all {
 		float:none;
 		width:100%;
@@ -1201,26 +1222,26 @@
     .text {
       color: $green_main;
     }
-  }
+  	}
 	}
 
  //wrapp_forecast_content_mob
 
-.wrapp_forecast_content_mob {
-  .forecast_slider {
-    .slick-list {
-    }
-    .slider-nav_forecast {
-      .nav_block {
-      	padding-top:35px;
-        h4 {
-          font-size:3rem;
-        }
-      }
-    }
-  }
-}
-.wrapp_menu_fact {
+	.wrapp_forecast_content_mob {
+	  .forecast_slider {
+	    .slick-list {
+	    }
+	    .slider-nav_forecast {
+	      .nav_block {
+	      	padding-top:35px;
+	        h4 {
+	          font-size:3rem;
+	        }
+	      }
+	    }
+	  }
+	}
+	.wrapp_menu_fact {
 		.menu_line {
 
 			ul {
@@ -1233,39 +1254,40 @@
 		}
 	}
  //wrapp_forecast_content_mob end
- }
+}
 
-	@media only screen and (max-width : 590px) {
-		.visits_number {
-			display:none;
-		}
-		.wrapp_visits .im_block_visits .visits-block {
-			padding:0px;
-			width:auto;
-		}
-		.wrapp_forum-topic .forum-block {
-			width:auto;
-		}
-		.wrapp_visits .im_block_visits {
-			padding:0px;
-		}
-		.wrapp_visits .im_block_visits .visits-block {
-			margin:0px;
-		}
-		.wrapp_breadcrumbs {
-			display:none;
-		}
-		.wrapp_content_bl .content_bl_br .content_bl_im .photo {
-			margin:0 auto;
-		}
+@media only screen and (max-width : 590px) {
+	.visits_number {
+		display:none;
 	}
+	.wrapp_visits .im_block_visits .visits-block {
+		padding:0px;
+		width:auto;
+	}
+	.wrapp_forum-topic .forum-block {
+		width:auto;
+	}
+	.wrapp_visits .im_block_visits {
+		padding:0px;
+	}
+	.wrapp_visits .im_block_visits .visits-block {
+		margin:0px;
+	}
+	.wrapp_breadcrumbs {
+		display:none;
+	}
+	.wrapp_content_bl .content_bl_br .content_bl_im .photo {
+		margin:0 auto;
+	}
+}
 
 
- @media only screen and (max-width : 450px) {
+@media only screen and (max-width : 450px) {
  	.orecast_two-12_block {
 		width:100%;
  	}
- }
+}
+
 @media only screen and (min-width : 1920px) {
  	.wrapp_mainpage_present {
 		ul {
@@ -1308,4 +1330,5 @@
 			}
  		}
 	}
+}
 }
