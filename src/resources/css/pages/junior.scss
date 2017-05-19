@@ -7,7 +7,30 @@
 
 
 .junior {
-
+  .proceed_to_gallery{
+    width: 90%;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    font-size: 35px;
+    color: #4ba82e;
+    border: 2px solid #4ba82e;
+    line-height: 46px;
+    height: 50px;
+    vertical-align: middle;
+    left: 0px;
+    right: 0px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    transition:all .3s;
+    &:hover{
+      background-color: #4ba82e;
+      color:white;
+    }
+  }
 
   &-buttons{
     height:80px;
@@ -329,7 +352,7 @@
   &-galer-phote {
     margin: 0 1%;
     width: 23%;
-    float:left;
+    float:left!important;
     min-height: 260px;
      img {
       width:100%;
@@ -341,9 +364,6 @@
         font-size: 1.7rem;
         color:#000;
       }
-    }
-    &:nth-child(2n) {
-      float:right;
     }
     &-hover {
       cursor:pointer;

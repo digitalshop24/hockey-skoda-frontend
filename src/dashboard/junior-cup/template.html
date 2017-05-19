@@ -13,8 +13,9 @@
                 </div>
 
             </div>
-            <div class="col-md-7">
+            <div class="col-md-7" >
                 <img src="img/resources/img/junior.jpg" alt="" style="width:100%;">
+                <div class="proceed_to_gallery" ng-click="ctrl.gotoGallery()">Смотреть фотоотчет >></div>
 
             </div>
 
@@ -945,18 +946,18 @@
  -->
             </div> 
     </div>
-    <div class="container gallery-row" >
+    <div class="container gallery-row" id="gallery-row">
            <div class="junior-galer clearfix">
                     <div class="junior-galer-block clearfix">
                         <h6>Фотогалерея</h6>
                         <ul class="nav" id="myTab">
-                            <li ng-repeat="gallery in ctrl.galleries" ng-class="{'active': gallery.name == 2016 }"><a
+                            <li ng-repeat="gallery in ctrl.galleries" ng-class="{'active': gallery.name == 2017 }"><a
                                     data-target="#{{gallery.name}}" data-toggle="tab" ng-bind="gallery.name">2012</a>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-content">
-                        <div class="tab-pane clearfix" ng-class="{'active': gallery.name == 2016 }"
+                        <div class="tab-pane clearfix" ng-class="{'active': gallery.name == 2017 }"
                              id="{{gallery.name}}" ng-repeat="gallery in ctrl.galleries">
                             <div class="junior-galer-phote"
                                  ng-class="{'junior-galer-phote-hover': yearGallery.images.length}"

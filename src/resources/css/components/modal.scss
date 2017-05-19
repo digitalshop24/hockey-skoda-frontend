@@ -146,21 +146,22 @@
   height:auto;
   .slick-prev,
   .slick-next{
-    width:24px;
-    height:47px;
+    width: 32px;
+    height: 63px;
     background-position: center center;
     top:50%;
     margin-top:-23px;
     left:auto;
     right:auto;
+    background-size:cover;
   }
   .slick-prev{
-    background-image: url('img/resources/img/arrow_left_white.png');
+    background-image: url('img/resources/img/arrow_left_green.png');
     right:100%;
     margin-right:20px;
   }
   .slick-next{
-    background-image: url('img/resources/img/arrow_right_white.png');
+    background-image: url('img/resources/img/arrow_right_green.png');
     left:100%;
     margin-left:20px;
   }

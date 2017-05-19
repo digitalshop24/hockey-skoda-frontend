@@ -48,5 +48,25 @@ export default class JuniorCtrl {
         }
 
     }
+
+    gotoGallery(){
+        $(document).ready(function(){
+        var e=$(".gallery-row");
+        var coords=e.offset().top-100;
+        $('body,html').animate({
+                scrollTop: coords
+            }, 1000);
+            return false;
+        });
+    
+
+    }
+    
 }
+
+
+
+
+
+
 
